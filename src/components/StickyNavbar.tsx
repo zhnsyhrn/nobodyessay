@@ -10,8 +10,8 @@ const StickyNavbar = () => {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
+    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border px-4 sm:px-6 py-3 sm:py-4">
+      <div className="max-w-4xl mx-auto">
         <div className="flex items-center justify-between">
           <Link to="/" onClick={closeMenu}>
             <h1 className="font-display text-lg sm:text-xl font-medium hover:text-muted-foreground transition-colors">

@@ -27,7 +27,7 @@ const Index = () => {
       </div>
 
       {/* Featured Writings */}
-      <section className="py-0 sm:py-0 px-4 sm:px-6">
+      <section className="py-0 sm:py-0 px-4 sm:px-6 mb-12 sm:mb-16">
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 sm:mb-12 gap-4">
             <h3 className="font-display text-xl sm:text-2xl font-medium">
@@ -68,7 +68,7 @@ const Index = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6 bg-muted/30 mt-12 sm:mt-16">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 bg-muted/30">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="font-display text-xl sm:text-2xl font-medium mb-4 sm:mb-6">
             More to Explore
