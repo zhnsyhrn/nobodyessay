@@ -1,6 +1,8 @@
 import { useParams, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { getEssayBySlug } from "@/data/essays";
+import StickyNavbar from "@/components/StickyNavbar";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 const Post = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -26,27 +28,7 @@ const Post = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="border-b border-border">
-        <div className="max-w-4xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <Link to="/" className="font-display text-xl font-medium hover:text-muted-foreground transition-colors">
-              nobody.essay
-            </Link>
-            <div className="flex items-center space-x-8">
-              <Link to="/writings" className="font-display text-sm hover:text-muted-foreground transition-colors">
-                Writings
-              </Link>
-              <Link to="/about" className="font-display text-sm hover:text-muted-foreground transition-colors">
-                About
-              </Link>
-              <a href="#contact" className="font-display text-sm hover:text-muted-foreground transition-colors">
-                Contact
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <StickyNavbar />
 
       {/* Article Header */}
       <article className="py-12 px-6 fade-in">
@@ -132,6 +114,7 @@ const Post = () => {
           </p>
         </div>
       </footer>
+      <ScrollToTopButton />
     </div>
   );
 };

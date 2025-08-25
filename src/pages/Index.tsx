@@ -2,31 +2,15 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { getFeaturedEssays } from "@/data/essays";
+import StickyNavbar from "@/components/StickyNavbar";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 
 const Index = () => {
   const featuredWritings = getFeaturedEssays();
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="border-b border-border">
-        <div className="max-w-4xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <h1 className="font-display text-xl font-medium">nobody.essay</h1>
-            <div className="flex items-center space-x-8">
-              <Link to="/writings" className="font-display text-sm hover:text-muted-foreground transition-colors">
-                Writings
-              </Link>
-              <Link to="/about" className="font-display text-sm hover:text-muted-foreground transition-colors">
-                About
-              </Link>
-              <a href="#contact" className="font-display text-sm hover:text-muted-foreground transition-colors">
-                Contact
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <StickyNavbar />
 
       {/* Hero Section */}
       <section className="py-20 px-6 fade-in">
@@ -125,6 +109,7 @@ const Index = () => {
           </p>
         </div>
       </footer>
+      <ScrollToTopButton />
     </div>
   );
 };
