@@ -11,27 +11,24 @@ const StickyNavbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 lg:py-5">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           <Link to="/" onClick={closeMenu}>
-            <h1 className="font-display text-lg sm:text-xl lg:text-2xl font-medium hover:text-muted-foreground transition-colors">
+            <h1 className="font-display text-lg sm:text-xl font-medium hover:text-muted-foreground transition-colors">
               nobody.essay
             </h1>
           </Link>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8 lg:space-x-12">
-            <Link to="/writings" className="font-display text-sm lg:text-base hover:text-muted-foreground transition-colors py-2 px-1 relative group">
-              <span>Writings</span>
-              <span className="absolute inset-x-0 bottom-0 h-0.5 bg-foreground scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+            <Link to="/writings" className="font-display text-sm hover:text-muted-foreground transition-colors py-2">
+              Writings
             </Link>
-            <Link to="/about" className="font-display text-sm lg:text-base hover:text-muted-foreground transition-colors py-2 px-1 relative group">
-              <span>About</span>
-              <span className="absolute inset-x-0 bottom-0 h-0.5 bg-foreground scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+            <Link to="/about" className="font-display text-sm hover:text-muted-foreground transition-colors py-2">
+              About
             </Link>
-            <a href="#contact" className="font-display text-sm lg:text-base hover:text-muted-foreground transition-colors py-2 px-1 relative group">
-              <span>Contact</span>
-              <span className="absolute inset-x-0 bottom-0 h-0.5 bg-foreground scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+            <a href="#contact" className="font-display text-sm hover:text-muted-foreground transition-colors py-2">
+              Contact
             </a>
           </div>
 
