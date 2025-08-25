@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { Share2, Twitter, Facebook, Link as LinkIcon } from "lucide-react";
 import { getEssayBySlug } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
@@ -33,49 +34,70 @@ const Post = () => {
       <StickyNavbar />
 
       {/* Article Header */}
-      <article className="py-12 px-6 fade-in">
+      <article className="py-8 sm:py-12 px-4 sm:px-6 fade-in">
         <div className="max-w-3xl mx-auto">
-          <div className="mb-8">
-            <Link to="/writings">
-              <Button variant="ghost" className="font-display text-sm p-0 h-auto mb-6 hover:bg-transparent hover:text-foreground">
-                ← Back to all writings
-              </Button>
-            </Link>
+          <div className="mb-6 sm:mb-8">
+            {/* Breadcrumb Navigation */}
+            <Breadcrumb className="mb-6">
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  <BreadcrumbLink asChild>
+                    <Link to="/" className="font-typewriter text-sm hover:text-foreground transition-colors">
+                      Home
+                    </Link>
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbLink asChild>
+                    <Link to="/writings" className="font-typewriter text-sm hover:text-foreground transition-colors">
+                      Writings
+                    </Link>
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                  <BreadcrumbPage className="font-typewriter text-sm text-muted-foreground">
+                    {essay.title}
+                  </BreadcrumbPage>
+                </BreadcrumbItem>
+              </BreadcrumbList>
+            </Breadcrumb>
             
-            <div className="flex items-center justify-between text-sm text-muted-foreground font-typewriter mb-6">
-              <div className="flex items-center space-x-4">
-                <span>{essay.date}</span>
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-0 text-sm text-muted-foreground font-typewriter mb-6">
+              <div className="flex items-center space-x-3 sm:space-x-4">
+                <span className="text-xs sm:text-sm">{essay.date}</span>
                 <span>•</span>
                 <span className="bg-muted px-2 py-1 rounded text-xs">
                   {essay.category}
                 </span>
               </div>
-              <span>{essay.readTime}</span>
+              <span className="text-xs sm:text-sm">{essay.readTime}</span>
             </div>
             
-            <h1 className="font-display text-4xl font-light mb-6 tracking-tight leading-tight">
+            <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl font-light mb-4 sm:mb-6 tracking-tight leading-tight">
               {essay.title}
             </h1>
             
-            <p className="font-typewriter text-lg text-muted-foreground leading-relaxed">
+            <p className="font-typewriter text-base sm:text-lg text-muted-foreground leading-relaxed">
               {essay.excerpt}
             </p>
             
             {/* Author Info and Social Share */}
-            <div className="flex items-center justify-between pt-6 mt-6 border-t border-border">
-              <div className="flex items-center space-x-4">
-                <Avatar className="h-12 w-12">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-4 sm:pt-6 mt-4 sm:mt-6 border-t border-border">
+              <div className="flex items-center space-x-3 sm:space-x-4">
+                <Avatar className="h-10 w-10 sm:h-12 sm:w-12">
                   <AvatarImage src="/lovable-uploads/307c85f4-d33f-45a4-83d5-c8d95c1b4a07.png" alt="Author" />
-                  <AvatarFallback>ZS</AvatarFallback>
+                  <AvatarFallback>ZS</AvatarFallback>  
                 </Avatar>
                 <div>
-                  <p className="font-display text-sm font-medium">Zahin S.</p>
-                  <p className="font-typewriter text-xs text-muted-foreground">Nobody Author</p>
+                  <p className="font-display text-sm sm:text-base font-medium">Zahin S.</p>
+                  <p className="font-typewriter text-xs sm:text-sm text-muted-foreground">Nobody Author</p>
                 </div>
               </div>
               
               {/* Social Share Buttons */}
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 sm:space-x-3">
                 <Button
                   variant="ghost"
                   size="sm"
@@ -84,9 +106,9 @@ const Post = () => {
                     const text = `Check out "${essay.title}" by Zahin S.`;
                     window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
                   }}
-                  className="p-2 h-8 w-8"
+                  className="p-2 sm:p-3 h-9 w-9 sm:h-10 sm:w-10 touch-manipulation"
                 >
-                  <Twitter size={14} />
+                  <Twitter size={16} />
                 </Button>
                 <Button
                   variant="ghost"
@@ -95,9 +117,9 @@ const Post = () => {
                     const url = window.location.href;
                     window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
                   }}
-                  className="p-2 h-8 w-8"
+                  className="p-2 sm:p-3 h-9 w-9 sm:h-10 sm:w-10 touch-manipulation"
                 >
-                  <Facebook size={14} />
+                  <Facebook size={16} />
                 </Button>
                 <Button
                   variant="ghost"
@@ -106,19 +128,19 @@ const Post = () => {
                     navigator.clipboard.writeText(window.location.href);
                     // You could add a toast notification here
                   }}
-                  className="p-2 h-8 w-8"
+                  className="p-2 sm:p-3 h-9 w-9 sm:h-10 sm:w-10 touch-manipulation"
                 >
-                  <LinkIcon size={14} />
+                  <LinkIcon size={16} />
                 </Button>
               </div>
             </div>
             
             {/* Divider */}
-            <div className="border-t border-border mt-6"></div>
+            <div className="border-t border-border mt-4 sm:mt-6"></div>
           </div>
 
           {/* Article Content */}
-          <div className="prose prose-lg max-w-none">
+          <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none">
             <div 
               className="font-typewriter leading-relaxed"
               style={{ color: '#919191' }}
@@ -127,12 +149,12 @@ const Post = () => {
                   .split('\n\n')
                   .map(paragraph => {
                     if (paragraph.startsWith('## ')) {
-                      return `<h2 class="font-display text-2xl font-medium mt-12 mb-6 text-foreground">${paragraph.slice(3)}</h2>`;
+                      return `<h2 class="font-display text-xl sm:text-2xl font-medium mt-8 sm:mt-12 mb-4 sm:mb-6 text-foreground">${paragraph.slice(3)}</h2>`;
                     }
                     if (paragraph.trim() === '') {
                       return '';
                     }
-                    return `<p class="mb-6 leading-relaxed" style="color: #919191">${paragraph}</p>`;
+                    return `<p class="mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base" style="color: #919191">${paragraph}</p>`;
                   })
                   .join('')
               }}
@@ -140,19 +162,19 @@ const Post = () => {
           </div>
 
           {/* Article Footer */}
-          <div className="mt-16 pt-8 border-t border-border">
-            <div className="flex items-center justify-between">
+          <div className="mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-border">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 sm:gap-0">
               <Link to="/writings">
-                <Button variant="ghost" className="font-display">
+                <Button variant="ghost" className="font-display touch-manipulation min-h-[44px]">
                   ← More writings
                 </Button>
               </Link>
               
-              <div className="text-right">
+              <div className="sm:text-right">
                 <p className="font-typewriter text-sm text-muted-foreground mb-2">
                   Found this piece meaningful?
                 </p>
-                <p className="font-typewriter text-xs text-muted-foreground">
+                <p className="font-typewriter text-xs sm:text-sm text-muted-foreground">
                   Share it with someone who might appreciate it.
                 </p>
               </div>
@@ -162,12 +184,12 @@ const Post = () => {
       </article>
 
       {/* Footer */}
-      <footer className="border-t border-border py-12 px-6">
+      <footer className="border-t border-border py-8 sm:py-12 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="font-typewriter text-sm text-muted-foreground mb-4">
+          <p className="font-typewriter text-sm sm:text-base text-muted-foreground mb-4">
             "The best way to find out if you can trust somebody is to trust them."
           </p>
-          <p className="font-display text-sm text-muted-foreground">
+          <p className="font-display text-xs sm:text-sm text-muted-foreground">
             © 2024 nobody.essay — All thoughts are freely given
           </p>
         </div>
