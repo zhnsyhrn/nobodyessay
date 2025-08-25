@@ -27,9 +27,6 @@ const StickyNavbar = () => {
             <Link to="/about" className="font-display text-sm hover:text-muted-foreground transition-colors py-2">
               About
             </Link>
-            <a href="#contact" className="font-display text-sm hover:text-muted-foreground transition-colors py-2">
-              Contact
-            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -62,13 +59,6 @@ const StickyNavbar = () => {
               >
                 About
               </Link>
-              <a 
-                href="#contact" 
-                onClick={closeMenu}
-                className="font-display text-base hover:text-muted-foreground transition-colors py-3 px-2 rounded-md hover:bg-muted/50 min-h-[44px] flex items-center"
-              >
-                Contact
-              </a>
             </div>
           </div>
         )}

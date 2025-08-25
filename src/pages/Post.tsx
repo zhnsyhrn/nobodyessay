@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { getEssayBySlug } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
@@ -58,12 +59,25 @@ const Post = () => {
             <p className="font-typewriter text-lg text-muted-foreground leading-relaxed">
               {essay.excerpt}
             </p>
+            
+            {/* Author Info */}
+            <div className="flex items-center space-x-4 pt-6 mt-6 border-t border-border">
+              <Avatar className="h-12 w-12">
+                <AvatarImage src="/lovable-uploads/307c85f4-d33f-45a4-83d5-c8d95c1b4a07.png" alt="Author" />
+                <AvatarFallback>JD</AvatarFallback>
+              </Avatar>
+              <div>
+                <p className="font-display text-sm font-medium">John Doe</p>
+                <p className="font-typewriter text-xs text-muted-foreground">Writer & Thinker</p>
+              </div>
+            </div>
           </div>
 
           {/* Article Content */}
           <div className="prose prose-lg max-w-none">
             <div 
-              className="font-typewriter leading-relaxed text-foreground"
+              className="font-typewriter leading-relaxed"
+              style={{ color: '#919191' }}
               dangerouslySetInnerHTML={{ 
                 __html: essay.content
                   .split('\n\n')
@@ -74,7 +88,7 @@ const Post = () => {
                     if (paragraph.trim() === '') {
                       return '';
                     }
-                    return `<p class="mb-6 leading-relaxed">${paragraph}</p>`;
+                    return `<p class="mb-6 leading-relaxed" style="color: #919191">${paragraph}</p>`;
                   })
                   .join('')
               }}
