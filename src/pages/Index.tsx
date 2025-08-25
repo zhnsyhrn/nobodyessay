@@ -79,7 +79,7 @@ const Index = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6 bg-muted/30">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 bg-muted/30 mt-12 sm:mt-16">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="font-display text-xl sm:text-2xl font-medium mb-4 sm:mb-6">
             More to Explore

@@ -9,7 +9,7 @@ const About = () => {
       <StickyNavbar />
 
       {/* About Content */}
-      <section className="py-20 px-6 fade-in">
+      <section className="py-20 px-4 sm:px-6 fade-in" style={{ backgroundColor: '#F3F3F3' }}>
         <div className="max-w-4xl mx-auto">
           <h1 className="font-display text-4xl font-light mb-12 text-center tracking-tight">
             About the Writer
@@ -56,7 +56,7 @@ const About = () => {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border py-12 px-6 mt-16">
+      <footer className="border-t border-border py-12 px-4 sm:px-6 mt-16">
         <div className="max-w-4xl mx-auto text-center">
           <p className="font-typewriter text-sm text-muted-foreground mb-4">
             "The best way to find out if you can trust somebody is to trust them."
