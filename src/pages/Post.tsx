@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Share2, Twitter, Facebook, Link as LinkIcon } from "lucide-react";
 import { getEssayBySlug } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
@@ -60,17 +61,60 @@ const Post = () => {
               {essay.excerpt}
             </p>
             
-            {/* Author Info */}
-            <div className="flex items-center space-x-4 pt-6 mt-6 border-t border-border">
-              <Avatar className="h-12 w-12">
-                <AvatarImage src="/lovable-uploads/307c85f4-d33f-45a4-83d5-c8d95c1b4a07.png" alt="Author" />
-                <AvatarFallback>JD</AvatarFallback>
-              </Avatar>
-              <div>
-                <p className="font-display text-sm font-medium">John Doe</p>
-                <p className="font-typewriter text-xs text-muted-foreground">Writer & Thinker</p>
+            {/* Author Info and Social Share */}
+            <div className="flex items-center justify-between pt-6 mt-6 border-t border-border">
+              <div className="flex items-center space-x-4">
+                <Avatar className="h-12 w-12">
+                  <AvatarImage src="/lovable-uploads/307c85f4-d33f-45a4-83d5-c8d95c1b4a07.png" alt="Author" />
+                  <AvatarFallback>ZS</AvatarFallback>
+                </Avatar>
+                <div>
+                  <p className="font-display text-sm font-medium">Zahin S.</p>
+                  <p className="font-typewriter text-xs text-muted-foreground">Nobody Author</p>
+                </div>
+              </div>
+              
+              {/* Social Share Buttons */}
+              <div className="flex items-center space-x-2">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => {
+                    const url = window.location.href;
+                    const text = `Check out "${essay.title}" by Zahin S.`;
+                    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+                  }}
+                  className="p-2 h-8 w-8"
+                >
+                  <Twitter size={14} />
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => {
+                    const url = window.location.href;
+                    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
+                  }}
+                  className="p-2 h-8 w-8"
+                >
+                  <Facebook size={14} />
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => {
+                    navigator.clipboard.writeText(window.location.href);
+                    // You could add a toast notification here
+                  }}
+                  className="p-2 h-8 w-8"
+                >
+                  <LinkIcon size={14} />
+                </Button>
               </div>
             </div>
+            
+            {/* Divider */}
+            <div className="border-t border-border mt-6"></div>
           </div>
 
           {/* Article Content */}
