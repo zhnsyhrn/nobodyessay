@@ -5,19 +5,23 @@ import { Link } from "react-router-dom";
 import { getFeaturedEssays } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+
 const Index = () => {
   const featuredWritings = getFeaturedEssays();
-  return <div className="min-h-screen bg-background">
+
+  return (
+    <div className="min-h-screen bg-background">
       <StickyNavbar />
 
       {/* Hero Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 fade-in">
         <div className="max-w-4xl mx-auto text-left">
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight" style={{ fontWeight: 500 }}>I do design and write. Everything's Documented Here.</h2>
-          <p className="text-base sm:text-lg max-w-2xl leading-relaxed" style={{
-            fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#606060'
-          }}>It's how thoughts turn to scripture and ideas go viral.</p>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight">
+            I do design and write. Everything's documented here. Everything.
+          </h2>
+          <p className="font-display text-base sm:text-lg max-w-2xl leading-relaxed px-2" style={{ color: '#606060' }}>
+            It's how thoughts turn to scripture and ideas go viral.
+          </p>
         </div>
       </section>
 
@@ -27,7 +31,7 @@ const Index = () => {
       </div>
 
       {/* Featured Writings */}
-      <section className="py-0 sm:py-0 px-4 sm:px-6 mb-12 sm:mb-16">
+      <section className="py-0 sm:py-0 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 sm:mb-12 gap-4">
             <h3 className="font-display text-xl sm:text-2xl font-medium">
@@ -41,7 +45,8 @@ const Index = () => {
           </div>
           
           <div className="space-y-8 sm:space-y-12">
-            {featuredWritings.map((writing, index) => <Card key={index} className="p-4 sm:p-6 lg:p-8 border-border hover:border-foreground/20 transition-colors">
+            {featuredWritings.map((writing, index) => (
+              <Card key={index} className="p-4 sm:p-6 lg:p-8 border-border hover:border-foreground/20 transition-colors">
                 <div className="space-y-3 sm:space-y-4">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-sm text-muted-foreground font-typewriter">
                     <span>{writing.date}</span>
@@ -57,18 +62,22 @@ const Index = () => {
                   </p>
                   
                   <Link to={`/writings/${writing.slug}`}>
-                    <Button variant="ghost" className="font-display text-sm p-0 h-auto hover:bg-transparent hover:text-foreground min-h-[44px] flex items-center">
+                    <Button 
+                      variant="ghost" 
+                      className="font-display text-sm p-0 h-auto hover:bg-transparent hover:text-foreground min-h-[44px] flex items-center"
+                    >
                       Read more →
                     </Button>
                   </Link>
                 </div>
-              </Card>)}
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6 bg-muted/30">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 bg-muted/30 mt-12 sm:mt-16">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="font-display text-xl sm:text-2xl font-medium mb-4 sm:mb-6">
             More to Explore
@@ -105,6 +114,8 @@ const Index = () => {
         </div>
       </footer>
       <ScrollToTopButton />
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
