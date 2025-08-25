@@ -16,7 +16,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 fade-in">
         <div className="max-w-4xl mx-auto text-left">
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight" style={{ lineHeight: '56px' }}>
             I do design and write. Everything's documented here.
           </h2>
           <p className="font-display text-base sm:text-lg max-w-2xl leading-relaxed px-2" style={{ color: '#606060' }}>

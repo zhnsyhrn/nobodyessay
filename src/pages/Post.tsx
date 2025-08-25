@@ -48,7 +48,7 @@ const Post = () => {
               <span className="text-xs sm:text-sm">{essay.readTime}</span>
             </div>
             
-            <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl font-light mb-4 sm:mb-6 tracking-tight leading-tight">
+            <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight">
               {essay.title}
             </h1>
             
