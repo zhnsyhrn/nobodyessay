@@ -11,6 +11,104 @@ export interface Essay {
 
 export const essays: Essay[] = [
   {
+    slug: "design-in-the-wilderness",
+    title: "Design in the Wilderness",
+    excerpt: "This is my story of working to drive change when no one cared — small efforts that made a big impact. Inspired by the former Malaysian AG's My Story: Justice in the Wilderness.",
+    date: "May 18, 2025",
+    readTime: "6 min read",
+    category: "DesignOps",
+    content: `I'm not planning to write a book or a lengthy article or an academic journal. But this is a small step toward documenting my contributions and achievements at work.
+
+I believe designers should write too.
+
+> Every little steps counts, so document them before you forgot.
+
+I am doing my best to follow the advice given by my UX mentor, Marcus Chia.
+
+He is a 'real mentor' with a proven industry experience, leading a small team of designers at UX Army.
+
+I'm proud to say that I was first introduced to UI design when I attended his workshop at the University of Malaya in May 2020. (I gave a talk on how to design using Adobe Illustrator on the first day of the workshop.)
+
+*[Workshop photo from University of Malaya, May 2020 - showing participants learning UI design fundamentals]*
+
+From there, I started finding my way to pivot from graphic design into this industry.
+
+Now, here I am as a UI/UX Designer. From starting out at a small software house to working at a FinTech startup owned by a publicly listed company.
+
+It was not an easy journey, but I quickly adapted and learned in fast-paced environments. At every company I joined, there was a new thing to learn, not only in designing but also in managing resources, documentation, and thought processes while working with a dynamic team, especially to push your ideas or convince others to follow your recommendations.
+
+> The laziest thing for a designer to do is to update their portfolio.
+
+Most designers focus on output and pixel perfection in their portfolios, but they rarely include the raw process behind it, like sketches, rough ideas, stakeholder discussions, or any form of thinking process before the design outputs. For example:
+
+- Design explorations.
+- Showcase your design thinking and process.
+- Results (metrics, launch, feedback from users or stakeholders).
+- Communicate how you solve real user and business problems.
+- Reflection: what you learned, what you'd improve.
+
+**Optional But Strong Add-ons:**
+
+- Design system contributions.
+- Side projects or concept work.
+
+They'll always show beautiful mockups with graphics to impress viewers. It's good, not as bad as you might think. However, the problem with this method is that it's common among the majority of designers, and they're all showing similar visuals too.
+
+You don't have to show everything, but at least highlight the impact of your contribution. Whether it's to the product, the business, or your team, even as an Individual Contributor (IC), it matters. Show your process, not just the outcome. Recruiters want to understand how you think.
+
+There's no one size fits all. You need to figure out by yourself. Think or seek advice!
+
+So there are many ways to document your work. One example is by building a personal website with a dedicated page to showcase the details of your projects.
+
+Sample for best portfolio showcases:
+
+- [mizko.net](https://www.mizko.net)
+- [bento.me/storm](https://bento.me/storm)
+- [haolunyang.com](https://www.haolunyang.com)
+
+But building a website is lengthy process even though you are using available web templates in the marketplace. You'll need to find your domain and prepare a few hundred ringgit to purchase it including the web hosting like [Hostinger](https://hostinger.my/?REFERRALCODE=1ZAHIN52).
+
+For now, I'm planning to use Lovable and build my site called Nobody Essay as my main canvas to spit out my thoughts because it is easier for me to launch quickly with a simple MVP ([Minimum Viable Product](https://www.productplan.com/glossary/minimum-viable-product/)).
+
+At the very least, when recruiters view my work, they'll be able to understand my thinking process through my writing.
+
+They'll see what my thinking process is and how I make decisions to deliver solutions and create impact, even if it seems small to others.
+
+This way, strangers—especially potential employers (yes, that's you!)—can get a quick surface-level impression of who I am before scheduling an interview.
+
+## Why I choose this topic?
+
+Inspired by the former Malaysian AG's My Story: Justice in the Wilderness.
+
+I want readers to imagine what it's like working in a team with no design leadership. Even after multiple behind‑the‑scenes discussions to address the problems, nothing was done to move things forward.
+
+There isn't even an internal chat group for designers too.
+
+It's a sarcastic writing style meant to highlight the lack of drive or initiative within the organisation to improve the designers' work process. No resource planning, no roadmap for continuous improvement, nothing.
+
+If this issue isn't addressed properly, it can lead to a chaotic work process and negatively impact the team's productivity.
+
+In the upcoming series, I'll share specific problems I encountered, why I took action to improve them, and what the real consequences are if these issues continue to be ignored.
+
+It's like a symptom. If you wait too long, it only gets messier and harder to fix.
+
+Leadership requires either a gut feeling or just big balls to actually make a change.
+
+I've experienced good design leadership before. Last year, I had the chance to work with the UX Principal at Great Eastern Singapore even though as a contract designer. He offered thoughtful guidance, shared insights, and established a clear process for the team to follow.
+
+He didn't spoon‑feed us—he challenged us, guided us, and put a clear process in place. His methodology is thought provoking questions. From design to administrative works like documentation, etc.
+
+Still, working in a leadership vacuum taught me a lot. It is good for me to explore and play around with initiative works. I seized every opportunity to drive small reforms even though that might not look significant to others but made a real difference in how we worked.
+
+> Design Reformist!
+
+As I work closely with the Biz Platform squad, I led the initiative to improve the work process by introducing a few small plans and process so that everyone especially new joiners know what to expect and adapt to the team quickly.
+
+My upcoming essay the first series of "Design in the Wilderness" is on Figma File Management.
+
+Stay tuned!`
+  },
+  {
     slug: "on-the-nature-of-solitude",
     title: "Jakob's Law: [ Confusing = Frustating ]",
     excerpt: "Users spend most of their time on other websites, so they expect your process flow to work like the ones they already know",
