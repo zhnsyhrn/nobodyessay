@@ -5,25 +5,18 @@ import { Link } from "react-router-dom";
 import { getFeaturedEssays } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
-
 const Index = () => {
   const featuredWritings = getFeaturedEssays();
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <StickyNavbar />
 
       {/* Hero Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 fade-in">
         <div className="max-w-4xl mx-auto text-left">
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight">
-            nobody.essay
-          </h2>
-          <p className="font-display text-base sm:text-lg max-w-2xl leading-relaxed px-2" style={{ color: '#606060' }}>
-            A collection of thoughts, observations, and reflections on the human condition. 
-            Written by someone who believes that the most profound truths often emerge 
-            from the quietest corners of existence.
-          </p>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight">I do design and write. I documenting everything through writings. Enjoy.</h2>
+          <p className="font-display text-base sm:text-lg max-w-2xl leading-relaxed px-2" style={{
+          color: '#606060'
+        }}>Every designers should write to articulate their thoughts. It's like your actual scriptures and spread the message. The best way to find out if you want to know somebody is through their writings.</p>
         </div>
       </section>
 
@@ -47,8 +40,7 @@ const Index = () => {
           </div>
           
           <div className="space-y-8 sm:space-y-12">
-            {featuredWritings.map((writing, index) => (
-              <Card key={index} className="p-4 sm:p-6 lg:p-8 border-border hover:border-foreground/20 transition-colors">
+            {featuredWritings.map((writing, index) => <Card key={index} className="p-4 sm:p-6 lg:p-8 border-border hover:border-foreground/20 transition-colors">
                 <div className="space-y-3 sm:space-y-4">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-sm text-muted-foreground font-typewriter">
                     <span>{writing.date}</span>
@@ -64,16 +56,12 @@ const Index = () => {
                   </p>
                   
                   <Link to={`/writings/${writing.slug}`}>
-                    <Button 
-                      variant="ghost" 
-                      className="font-display text-sm p-0 h-auto hover:bg-transparent hover:text-foreground min-h-[44px] flex items-center"
-                    >
+                    <Button variant="ghost" className="font-display text-sm p-0 h-auto hover:bg-transparent hover:text-foreground min-h-[44px] flex items-center">
                       Read more →
                     </Button>
                   </Link>
                 </div>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -116,8 +104,6 @@ const Index = () => {
         </div>
       </footer>
       <ScrollToTopButton />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
