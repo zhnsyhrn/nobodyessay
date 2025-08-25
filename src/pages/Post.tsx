@@ -1,7 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { Share2, Twitter, Facebook, Link as LinkIcon } from "lucide-react";
 import { getEssayBySlug } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
@@ -37,32 +36,6 @@ const Post = () => {
       <article className="py-8 sm:py-12 px-4 sm:px-6 fade-in">
         <div className="max-w-3xl mx-auto">
           <div className="mb-6 sm:mb-8">
-            {/* Breadcrumb Navigation */}
-            <Breadcrumb className="mb-6">
-              <BreadcrumbList>
-                <BreadcrumbItem>
-                  <BreadcrumbLink asChild>
-                    <Link to="/" className="font-typewriter text-sm hover:text-foreground transition-colors">
-                      Home
-                    </Link>
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator />
-                <BreadcrumbItem>
-                  <BreadcrumbLink asChild>
-                    <Link to="/writings" className="font-typewriter text-sm hover:text-foreground transition-colors">
-                      Writings
-                    </Link>
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator />
-                <BreadcrumbItem>
-                  <BreadcrumbPage className="font-typewriter text-sm text-muted-foreground">
-                    {essay.title}
-                  </BreadcrumbPage>
-                </BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb>
             
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-0 text-sm text-muted-foreground font-typewriter mb-6">
               <div className="flex items-center space-x-3 sm:space-x-4">
@@ -79,7 +52,7 @@ const Post = () => {
               {essay.title}
             </h1>
             
-            <p className="font-typewriter text-base sm:text-lg text-muted-foreground leading-relaxed">
+            <p className="text-base sm:text-lg leading-relaxed" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060' }}>
               {essay.excerpt}
             </p>
             
