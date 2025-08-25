@@ -17,10 +17,10 @@ const Index = () => {
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 fade-in">
         <div className="max-w-4xl mx-auto text-left">
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight">
-            I do design and write. Everything's documented here. Everything.
+            I do design and write. Everything's documented here.
           </h2>
           <p className="font-display text-base sm:text-lg max-w-2xl leading-relaxed px-2" style={{ color: '#606060' }}>
-            It's how thoughts turn to scripture and ideas go viral.
+            Want to really know someone? Skip the selfies—read their scribbles.
           </p>
         </div>
       </section>
