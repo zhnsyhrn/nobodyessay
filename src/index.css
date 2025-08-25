@@ -10,22 +10,22 @@ All colors MUST be HSL.
   :root {
     /* Pure black and white theme for minimalist writing portfolio */
     --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    --foreground: 0 0% 28%; /* #474747 for primary text */
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    --card-foreground: 0 0% 28%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover-foreground: 0 0% 28%;
 
-    --primary: 0 0% 0%;
+    --primary: 0 0% 28%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary-foreground: 0 0% 28%;
 
     --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 40%;
+    --muted-foreground: 0 0% 57%; /* #919191 for body text */
 
     --accent: 0 0% 4%;
     --accent-foreground: 0 0% 96%;
@@ -35,7 +35,7 @@ All colors MUST be HSL.
 
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 0 0% 0%;
+    --ring: 0 0% 28%;
 
     --radius: 0rem;
 
@@ -102,17 +102,21 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-mono;
+    @apply bg-background text-muted-foreground font-mono;
+    font-size: 14px;
   }
 
   /* Typography classes for the writing portfolio */
   .font-display {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: hsl(var(--foreground));
   }
 
   .font-typewriter {
     font-family: 'Space Mono', monospace;
     letter-spacing: 0.02em;
+    color: hsl(var(--muted-foreground));
+    font-size: 14px;
   }
 
   /* Custom animations for subtle interactions */
