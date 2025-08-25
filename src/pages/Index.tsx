@@ -13,11 +13,11 @@ const Index = () => {
       {/* Hero Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 fade-in">
         <div className="max-w-4xl mx-auto text-left">
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight" style={{ fontWeight: 500 }}>Explore My Designs. Read My Words. See It All.</h2>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight" style={{ fontWeight: 500 }}>I do design and write. I document everything here.</h2>
           <p className="text-base sm:text-lg max-w-2xl leading-relaxed" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
             color: '#606060'
-          }}>The best way to know someone is through their words. Writing is like our scripture—it carries our message.</p>
+          }}>Every designers should write because the best way to know someone is through their words.</p>
         </div>
       </section>
 
