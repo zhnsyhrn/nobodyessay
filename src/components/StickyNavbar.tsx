@@ -25,7 +25,7 @@ const StickyNavbar = () => {
               Writings
             </Link>
             <Link to="/about" className="font-display text-sm hover:text-muted-foreground transition-colors py-2">
-              About
+              Manifesto
             </Link>
           </div>
 
@@ -57,7 +57,7 @@ const StickyNavbar = () => {
                 onClick={closeMenu}
                 className="font-display text-base hover:text-muted-foreground transition-colors py-3 px-2 rounded-md hover:bg-muted/50 min-h-[44px] flex items-center"
               >
-                About
+                Manifesto
               </Link>
             </div>
           </div>
