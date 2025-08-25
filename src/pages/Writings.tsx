@@ -13,12 +13,12 @@ const Writings = () => {
       <StickyNavbar />
 
       {/* Header */}
-      <section className="py-20 px-6 fade-in">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 fade-in">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="font-display text-4xl font-light mb-6 tracking-tight">
+          <h1 className="font-display text-3xl sm:text-4xl font-light mb-4 sm:mb-6 tracking-tight">
             All Writings
           </h1>
-          <p className="font-typewriter text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="font-typewriter text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed px-2">
             A chronological collection of thoughts, observations, and reflections. 
             Each piece an attempt to capture something fleeting in the permanence of words.
           </p>
@@ -26,35 +26,35 @@ const Writings = () => {
       </section>
 
       {/* All Writings */}
-      <section className="pb-16 px-6">
+      <section className="pb-12 sm:pb-16 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="space-y-12">
+          <div className="space-y-8 sm:space-y-12">
             {allWritings.map((writing, index) => (
-              <Card key={index} className="p-8 border-border hover:border-foreground/20 transition-colors">
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between text-sm text-muted-foreground font-typewriter">
-                    <div className="flex items-center space-x-4">
+              <Card key={index} className="p-4 sm:p-6 lg:p-8 border-border hover:border-foreground/20 transition-colors">
+                <div className="space-y-3 sm:space-y-4">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-4 text-sm text-muted-foreground font-typewriter">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                       <span>{writing.date}</span>
-                      <span>•</span>
-                      <span className="bg-muted px-2 py-1 rounded text-xs">
+                      <span className="hidden sm:inline">•</span>
+                      <span className="bg-muted px-2 py-1 rounded text-xs inline-block w-fit">
                         {writing.category}
                       </span>
                     </div>
-                    <span>{writing.readTime}</span>
+                    <span className="text-xs sm:text-sm">{writing.readTime}</span>
                   </div>
                   
-                  <h2 className="font-display text-xl font-medium">
+                  <h2 className="font-display text-lg sm:text-xl font-medium leading-tight">
                     {writing.title}
                   </h2>
                   
-                  <p className="font-typewriter text-muted-foreground leading-relaxed">
+                  <p className="font-typewriter text-muted-foreground leading-relaxed text-sm sm:text-base">
                     {writing.excerpt}
                   </p>
                   
                   <Link to={`/writings/${writing.slug}`}>
                     <Button 
                       variant="ghost" 
-                      className="font-display text-sm p-0 h-auto hover:bg-transparent hover:text-foreground"
+                      className="font-display text-sm p-0 h-auto hover:bg-transparent hover:text-foreground min-h-[44px] flex items-center"
                     >
                       Read more →
                     </Button>
@@ -64,12 +64,12 @@ const Writings = () => {
             ))}
           </div>
 
-          <div className="text-center mt-16">
-            <p className="font-typewriter text-muted-foreground text-sm mb-6">
+          <div className="text-center mt-12 sm:mt-16">
+            <p className="font-typewriter text-muted-foreground text-sm mb-4 sm:mb-6">
               More writings coming soon...
             </p>
             <Link to="/">
-              <Button variant="ghost" className="font-display">
+              <Button variant="ghost" className="font-display min-h-[44px] px-4">
                 ← Back to home
               </Button>
             </Link>
@@ -78,12 +78,12 @@ const Writings = () => {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border py-12 px-6">
+      <footer className="border-t border-border py-8 sm:py-12 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="font-typewriter text-sm text-muted-foreground mb-4">
+          <p className="font-typewriter text-sm text-muted-foreground mb-3 sm:mb-4 leading-relaxed px-2">
             "The best way to find out if you can trust somebody is to trust them."
           </p>
-          <p className="font-display text-sm text-muted-foreground">
+          <p className="font-display text-xs sm:text-sm text-muted-foreground">
             © 2024 nobody.essay — All thoughts are freely given
           </p>
         </div>

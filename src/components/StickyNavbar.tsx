@@ -1,27 +1,77 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const StickyNavbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="max-w-4xl mx-auto px-6 py-4">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
-          <Link to="/">
-            <h1 className="font-display text-xl font-medium hover:text-muted-foreground transition-colors">
+          <Link to="/" onClick={closeMenu}>
+            <h1 className="font-display text-lg sm:text-xl font-medium hover:text-muted-foreground transition-colors">
               nobody.essay
             </h1>
           </Link>
-          <div className="flex items-center space-x-8">
-            <Link to="/writings" className="font-display text-sm hover:text-muted-foreground transition-colors">
+          
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+            <Link to="/writings" className="font-display text-sm hover:text-muted-foreground transition-colors py-2">
               Writings
             </Link>
-            <Link to="/about" className="font-display text-sm hover:text-muted-foreground transition-colors">
+            <Link to="/about" className="font-display text-sm hover:text-muted-foreground transition-colors py-2">
               About
             </Link>
-            <a href="#contact" className="font-display text-sm hover:text-muted-foreground transition-colors">
+            <a href="#contact" className="font-display text-sm hover:text-muted-foreground transition-colors py-2">
               Contact
             </a>
           </div>
+
+          {/* Mobile Menu Button */}
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={toggleMenu}
+            className="md:hidden p-2 h-10 w-10"
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          </Button>
         </div>
+
+        {/* Mobile Navigation Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden mt-4 pb-4 border-t border-border">
+            <div className="flex flex-col space-y-3 pt-4">
+              <Link 
+                to="/writings" 
+                onClick={closeMenu}
+                className="font-display text-base hover:text-muted-foreground transition-colors py-3 px-2 rounded-md hover:bg-muted/50 min-h-[44px] flex items-center"
+              >
+                Writings
+              </Link>
+              <Link 
+                to="/about" 
+                onClick={closeMenu}
+                className="font-display text-base hover:text-muted-foreground transition-colors py-3 px-2 rounded-md hover:bg-muted/50 min-h-[44px] flex items-center"
+              >
+                About
+              </Link>
+              <a 
+                href="#contact" 
+                onClick={closeMenu}
+                className="font-display text-base hover:text-muted-foreground transition-colors py-3 px-2 rounded-md hover:bg-muted/50 min-h-[44px] flex items-center"
+              >
+                Contact
+              </a>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
