@@ -11,42 +11,58 @@ export interface Essay {
 export const essays: Essay[] = [
   {
     slug: "on-the-nature-of-solitude",
-    title: "On the Nature of Solitude",
-    excerpt: "In the quiet spaces between thoughts, we find not emptiness but fullness—a recognition that solitude is not the absence of company, but the presence of self.",
-    date: "March 15, 2024",
+    title: "Jakob's Law: [ Confusing = Frustating ]",
+    excerpt: "Users spend most of their time on other websites, so they expect your process flow to work like the ones they already know",
+    date: "Aug 24, 2025",
     readTime: "8 min read",
-    category: "Philosophy",
-    content: `In the quiet spaces between thoughts, we find not emptiness but fullness—a recognition that solitude is not the absence of company, but the presence of self.
+    category: "UX Laws",
+    content: `Jakob’s Law > This is the basic principle in UX Design.
 
-There is a particular quality to the silence that settles over a room when you are alone with your thoughts. It is not the stark emptiness that we often fear, but rather a kind of fullness—heavy with possibility, dense with the accumulated weight of unspoken words and unexplored ideas.
+The key for good app or platform is familiarity.
 
-I have spent many evenings in this silence, watching the way shadows move across walls as the sun sets, listening to the distant hum of a world that continues to turn despite my temporary withdrawal from it. In these moments, solitude reveals itself not as isolation but as a form of communion—with oneself, with the present moment, with the subtle rhythms that govern our inner lives.
+<blockquote> “Familiarity enables the transfer of experience between similar products or services, allowing us to be productive without first learning how a system works. When we encounter familiar interface patterns and conventions, we intuitively understand them based on previous experience.” - Laws of UX </blockquote>
 
-## The Paradox of Presence
+Each of us here loves to talk to somebody they know. None of us likes to randomly bump into a stranger and say ‘Hello!’ without a reason. Even when there’s a new colleague joining our team, we take some time to get to know them.
 
-We live in an age that has forgotten how to be alone. Every pocket of silence is immediately filled with the blue glow of screens, every moment of potential reflection interrupted by the urgent ping of notifications. We have become afraid of our own company, suspicious of the thoughts that arise when we are left to our own devices.
+The same rule applies for a process flow.
 
-Yet it is precisely in these unguarded moments that we encounter ourselves most honestly. Without the performance of social interaction, without the need to curate our responses or manage our image, we are free to simply be. This being is not always comfortable—sometimes it is messy, contradictory, filled with thoughts we would rather not acknowledge. But it is authentic in a way that our public selves rarely are.
+We don’t want to go through something strange or unusual. It is frustrating because we need to learn a new thing again just to get things done.
 
-The paradox is this: in learning to be alone, we become more fully present to others. The person who has sat with their own silence, who has learned to tolerate the discomfort of their unedited thoughts, brings a different quality of attention to their relationships. They listen not to respond but to understand. They offer presence rather than performance.
+We go to an app or website for a reason. Either we want to sign up and try a new tool or log in to pay our summon.
 
-## The Geography of Inner Space
+We expect everything to be the same based on our previous experiences.
 
-Solitude has its own geography. There are the shallow waters where we skim the surface of our thoughts, distracted by the day's events, planning tomorrow's tasks. Then there are the deeper currents, where memories surface unbidden and insights emerge like fish breaking the surface of a still pond.
+A simple example is login flow.
 
-Learning to navigate this inner terrain requires practice. It asks us to sit with uncertainty, to resist the urge to immediately categorize or solve whatever arises. Sometimes the most profound realizations come not through active thinking but through a kind of receptive waiting—creating space for understanding to emerge in its own time.
+The logic or expectation for a user to log in to their account is that they need to input these two or three things:
 
-## The Gift of Voluntary Solitude
+<ul> Username </ul>
+<ul> Password </ul>
 
-There is a difference between loneliness and chosen solitude. Loneliness is the ache of unwanted separation, the feeling of being cut off from connection. Solitude, by contrast, is a choice—a deliberate stepping back from the social world to encounter something essential within ourselves.
+It is unusual if the platform requires users to log in by filling out more than two inputs — full name, username, birthday, and password.
 
-This distinction matters because it transforms the experience entirely. When we choose solitude, we approach it with intention rather than resignation. We bring curiosity rather than fear. We create conditions for insight rather than simply enduring isolation.
+Another scenario for your better understanding is what if they forget their password?
 
-The gift of voluntary solitude is that it teaches us we are never truly alone. In the deepest sense, we carry within us the capacity for companionship—with our thoughts, our memories, our dreams, our deepest values. We learn that we can be good company for ourselves.
+For users, when they key in the password but the system tells them their password is incorrect after a few attempts, their mental model is that they want to click a 'forgot password' button somewhere on the login screen.
 
-In a world that constantly demands our attention, that profits from our distraction, the choice to be alone becomes a radical act. It is a declaration of faith in our own inner life, a commitment to the belief that some of the most important conversations we will ever have are the ones we have with ourselves.
+Then, they will expect to receive a verification code through their registered email or mobile number and click the reset password link.
 
-The silence is waiting. Not empty, but full. Not absent, but present. Not nothing, but everything we have been too busy to notice.`
+The keyword here is account verification as part of the security process to reset their account password.
+
+It is common to them when they encounter a similar scenario with other platforms and they expect the same process flow when clicking the “forgot password” button.
+
+So when designing the business or process flow, including the interface design like the button placement for the forgot password button, it must follow the same pattern as what others have done.
+
+Designing for the product or digital experience is not the same as graphic design or crafting a masterpiece of art.
+
+The creativity in UI/UX design is to make the overall experience fun, exciting, and easy to use. We can’t reinvent the wheel, even though we are building an AI digital banking app, because the basic principle of Jakob’s Law is still applicable everywhere, including the retail experience.
+
+Otherwise, no matter how cool your product is, if the overall flow is odd and unusual, your product will suck.
+
+No matter how cool your backend technology is, no one cares if they find your app or platform too complex to use.
+
+Thus, [Confusing = Frustating].
+
   },
   {
     slug: "digital-ghosts-and-modern-memory",
