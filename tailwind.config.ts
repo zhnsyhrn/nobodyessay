@@ -18,6 +18,11 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'display': ['Roboto', 'system-ui', 'sans-serif'],
+				'typewriter': ['Courier New', 'Monaco', 'Menlo', 'monospace'],
+				'mono': ['Courier New', 'Monaco', 'Menlo', 'monospace'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
