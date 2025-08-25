@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 import { Link } from "react-router-dom";
 import { getFeaturedEssays } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
@@ -14,11 +15,11 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 fade-in">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-light mb-4 sm:mb-6 tracking-tight">
+        <div className="max-w-4xl mx-auto text-left">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight">
             nobody.essay
           </h2>
-          <p className="font-typewriter text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed px-2">
+          <p className="font-display text-base sm:text-lg max-w-2xl leading-relaxed px-2" style={{ color: '#606060' }}>
             A collection of thoughts, observations, and reflections on the human condition. 
             Written by someone who believes that the most profound truths often emerge 
             from the quietest corners of existence.
@@ -26,8 +27,13 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Divider */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <Separator className="mb-12 sm:mb-16" />
+      </div>
+
       {/* Featured Writings */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6">
+      <section className="py-0 sm:py-0 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 sm:mb-12 gap-4">
             <h3 className="font-display text-xl sm:text-2xl font-medium">
