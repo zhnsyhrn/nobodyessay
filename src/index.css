@@ -107,11 +107,11 @@ All colors MUST be HSL.
 
   /* Typography classes for the writing portfolio */
   .font-display {
-    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   }
 
   .font-typewriter {
-    font-family: 'Courier New', 'Monaco', 'Menlo', monospace;
+    font-family: 'Space Mono', monospace;
     letter-spacing: 0.02em;
   }
 

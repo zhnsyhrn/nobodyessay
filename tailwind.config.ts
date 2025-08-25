@@ -19,9 +19,9 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'display': ['Roboto', 'system-ui', 'sans-serif'],
-				'typewriter': ['Courier New', 'Monaco', 'Menlo', 'monospace'],
-				'mono': ['Courier New', 'Monaco', 'Menlo', 'monospace'],
+				'display': ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+				'typewriter': ['Space Mono', 'monospace'],
+				'mono': ['Space Mono', 'monospace'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
