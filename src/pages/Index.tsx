@@ -82,8 +82,8 @@ const Index = () => {
       </section>
 
       {/* Gallery Slider */}
-      <section className="py-2 sm:py-4 px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto">
+      <section className="py-2 sm:py-4">
+        <div className="w-full">
           <Carousel
             opts={{
               align: "start",
