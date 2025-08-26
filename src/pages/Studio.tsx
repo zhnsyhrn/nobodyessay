@@ -75,7 +75,7 @@ const Studio = () => {
           >
             <CarouselContent className="-ml-2 md:-ml-4">
               {allImages.map((image, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3">
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2">
                   <div className="aspect-[4/3] overflow-hidden rounded-lg bg-muted">
                     <img
                       src={image}
