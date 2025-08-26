@@ -67,10 +67,10 @@ const StickyNavbar = () => {
             variant="ghost"
             size="sm"
             onClick={toggleMenu}
-            className="md:hidden p-2 h-10 w-10"
+            className="md:hidden p-3 h-12 w-12 touch-manipulation"
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </Button>
         </div>
 

@@ -17,6 +17,7 @@ import galleryImage6 from "@/assets/gallery-06.jpg";
 import galleryImage7 from "@/assets/gallery-07.jpg";
 import galleryImage8 from "@/assets/gallery-08.jpg";
 import galleryImage9 from "@/assets/gallery-09.jpg";
+
 const Studio = () => {
   // Carousel state
   const [api, setApi] = useState<CarouselApi>();
@@ -35,38 +36,52 @@ const Studio = () => {
       setCurrent(api.selectedScrollSnap() + 1);
     });
   }, [api]);
-  return <div className="min-h-screen bg-background">
+
+  return (
+    <div className="min-h-screen bg-background">
       <StickyNavbar />
 
       {/* Hero Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 fade-in">
+      <section className="py-8 sm:py-12 lg:py-20 px-4 sm:px-6 fade-in">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="font-display text-3xl sm:text-4xl lg:text-6xl font-medium mb-4 sm:mb-6 tracking-tight" style={{
-          lineHeight: '72px'
-        }}>Here is my collection of designs and experiments. Turning briefs into real things, even the ones that change halfway.</h1>
-          <p className="font-display text-base sm:text-lg max-w-2xl mx-auto leading-relaxed" style={{
-          color: '#606060'
-        }}>Your unsolicited critique is expected, your approval is optional, and your silence will be taken as applause. Don’t worry, I already judged it harsher than you ever will. Scroll, skim, judge… I’ll act surprised either way.</p>
+          <h1 className="font-display text-2xl sm:text-4xl lg:text-6xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">
+            Here is my collection of designs and experiments. Turning briefs into real things, even the ones that change halfway.
+          </h1>
+          <p className="font-display text-sm sm:text-lg max-w-2xl mx-auto leading-relaxed text-muted-foreground">
+            Your unsolicited critique is expected, your approval is optional, and your silence will be taken as applause. Don't worry, I already judged it harsher than you ever will. Scroll, skim, judge… I'll act surprised either way.
+          </p>
         </div>
       </section>
 
       {/* Gallery Slider */}
       <section className="pb-8 sm:pb-12 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
-          <Carousel opts={{
-          align: "start",
-          loop: true
-        }} plugins={[Autoplay({
-          delay: 3000,
-          stopOnInteraction: false,
-          stopOnMouseEnter: false
-        })]} setApi={setApi} className="w-full relative">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true
+            }}
+            plugins={[Autoplay({
+              delay: 3000,
+              stopOnInteraction: false,
+              stopOnMouseEnter: false
+            })]}
+            setApi={setApi}
+            className="w-full relative"
+          >
             <CarouselContent className="-ml-2 md:-ml-4">
-              {allImages.map((image, index) => <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2">
+              {allImages.map((image, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2">
                   <div className="aspect-[4/3] overflow-hidden rounded-lg bg-muted">
-                    <img src={image} alt={`Design project ${index + 1}`} className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy" />
+                    <img
+                      src={image}
+                      alt={`Design project ${index + 1}`}
+                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                      loading="lazy"
+                    />
                   </div>
-                </CarouselItem>)}
+                </CarouselItem>
+              ))}
             </CarouselContent>
             <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10" />
             <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10" />
@@ -74,45 +89,57 @@ const Studio = () => {
           
           {/* Dot indicators */}
           <div className="flex justify-center mt-4 space-x-2">
-            {Array.from({
-            length: Math.ceil(allImages.length / 2)
-          }).map((_, index) => <button key={index} className={`w-2 h-2 rounded-full transition-colors duration-200 ${Math.ceil(current / 2) === index + 1 || current === 0 && index === 0 ? "bg-foreground" : "bg-muted-foreground/30"}`} onClick={() => api?.scrollTo(index * 2)} aria-label={`Go to slide ${index + 1}`} />)}
+            {Array.from({ length: Math.ceil(allImages.length / 2) }).map((_, index) => (
+              <button
+                key={index}
+                className={`w-2 h-2 rounded-full transition-colors duration-200 ${
+                  Math.ceil(current / 2) === index + 1 || (current === 0 && index === 0)
+                    ? "bg-foreground"
+                    : "bg-muted-foreground/30"
+                }`}
+                onClick={() => api?.scrollTo(index * 2)}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
       </section>
 
       {/* Projects Grid */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6" style={{
-      backgroundColor: '#FBFBFB'
-    }}>
+      <section className="py-12 sm:py-16 px-4 sm:px-6 bg-muted/30">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-display text-2xl sm:text-3xl font-medium mb-8 sm:mb-12 text-center">
             Featured Projects
           </h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
-            {[1, 2, 3, 4, 5, 6].map(project => <div key={project} className="group cursor-pointer">
+            {[1, 2, 3, 4, 5, 6].map(project => (
+              <div key={project} className="group cursor-pointer">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-muted">
-                  <img src={allImages[(project - 1) % allImages.length]} alt={`Project ${project}`} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-                  <div className="absolute inset-0 bg-[#2F2F2F]/0 group-hover:bg-[#2F2F2F]/75 transition-colors duration-300" />
+                  <img
+                    src={allImages[(project - 1) % allImages.length]}
+                    alt={`Project ${project}`}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-background/0 group-hover:bg-background/75 transition-colors duration-300" />
                   <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h3 className="font-display text-lg font-medium mb-2 text-white">
+                    <h3 className="font-display text-lg font-medium mb-2 text-foreground">
                       Project {project}
                     </h3>
-                    <p className="font-typewriter text-white/90 text-sm">
+                    <p className="font-typewriter text-muted-foreground text-sm">
                       Design exploration and creative process documentation.
                     </p>
                   </div>
                 </div>
-              </div>)}
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* More to Explore */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6" style={{
-      backgroundColor: '#F3F3F3'
-    }}>
+      <section className="py-12 sm:py-16 px-4 sm:px-6 bg-muted/20">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="font-display text-xl sm:text-2xl font-medium mb-4 sm:mb-6">
             More to Explore
@@ -122,14 +149,14 @@ const Studio = () => {
             Discover more essays and reflections, or learn about the person behind these words.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-            <Link to="/writings">
-              <Button className="font-display min-h-[44px] px-6 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
+            <Link to="/writings" className="w-full sm:w-auto">
+              <Button className="font-display min-h-[48px] px-6 w-full">
                 All Writings
               </Button>
             </Link>
-            <Link to="/about">
-              <Button variant="ghost" className="font-display min-h-[44px] px-6 w-full sm:w-auto">
+            <Link to="/about" className="w-full sm:w-auto">
+              <Button variant="ghost" className="font-display min-h-[48px] px-6 w-full">
                 About the Writer
               </Button>
             </Link>
@@ -139,6 +166,8 @@ const Studio = () => {
 
       <Footer />
       <ScrollToTopButton />
-    </div>;
+    </div>
+  );
 };
+
 export default Studio;

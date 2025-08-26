@@ -41,24 +41,20 @@ const Index = () => {
       <StickyNavbar />
 
       {/* Hero Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 fade-in pb-4 sm:pb-6">
+      <section className="py-8 sm:py-12 lg:py-20 px-4 sm:px-6 fade-in pb-4 sm:pb-6">
         <div className="max-w-4xl mx-auto text-left">
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight" style={{
-          lineHeight: '56px'
-        }}>I do design and write. Everything's documented here. Because what's the point if I don't overshare?</h2>
-          <p className="font-display text-base sm:text-lg max-w-2xl leading-relaxed px-2 mb-8" style={{
-          color: '#606060'
-        }}>I'd learned to code this site using AI so that I can show my collection of works.</p>
+          <h2 className="font-display text-2xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">I do design and write. Everything's documented here. Because what's the point if I don't overshare?</h2>
+          <p className="font-display text-sm sm:text-lg max-w-2xl leading-relaxed px-1 sm:px-2 mb-6 sm:mb-8 text-muted-foreground">I'd learned to code this site using AI so that I can show my collection of works.</p>
           
           {/* Navigation Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 px-2">
-            <Link to="/studio">
-              <Button className="font-display min-h-[44px] px-6 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 px-1 sm:px-2">
+            <Link to="/studio" className="w-full sm:w-auto">
+              <Button className="font-display min-h-[48px] px-6 w-full touch-manipulation">
                 The Evidence
               </Button>
             </Link>
-            <Link to="/writings">
-              <Button variant="light" className="font-display min-h-[44px] px-6 w-full sm:w-auto">
+            <Link to="/writings" className="w-full sm:w-auto">
+              <Button variant="light" className="font-display min-h-[48px] px-6 w-full touch-manipulation">
                 Read My Thoughts
               </Button>
             </Link>
