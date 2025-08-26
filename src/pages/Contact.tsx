@@ -21,20 +21,21 @@ const Contact = () => {
             {/* Content Column */}
             <div className="space-y-6">
               <div className="space-y-4">
-                <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
+                <h1 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">
                   Contact
                 </h1>
-                <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
+                <p className="font-mono text-lg sm:text-lg max-w-2xl leading-[27px] sm:leading-relaxed px-1 sm:px-2 mb-6 sm:mb-8" style={{ 
+                  color: '#606060'
+                }}>
                   Send me a message on Linkedin or an email at muhammadzahien@gmail.com
                 </p>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 px-1 sm:px-2">
                 <Button 
                   onClick={handleLinkedinClick}
                   variant="default"
-                  size="lg"
-                  className="flex items-center gap-2"
+                  className="font-display min-h-[48px] px-6 w-full touch-manipulation shadow-lg hover:shadow-xl hover:shadow-primary/25 transition-all duration-300 flex items-center gap-2"
                 >
                   <Linkedin className="h-5 w-5" />
                   LinkedIn
@@ -42,9 +43,8 @@ const Contact = () => {
                 
                 <Button 
                   onClick={handleEmailClick}
-                  variant="outline"
-                  size="lg"
-                  className="flex items-center gap-2"
+                  variant="light"
+                  className="font-display min-h-[48px] px-6 w-full touch-manipulation flex items-center gap-2"
                 >
                   <Mail className="h-5 w-5" />
                   Email
