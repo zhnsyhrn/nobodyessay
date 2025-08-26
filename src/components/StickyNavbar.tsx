@@ -1,13 +1,21 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const StickyNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
+
+  const isActiveRoute = (path: string) => {
+    if (path === '/about' && location.pathname === '/about') return true;
+    if (path === '/writings' && location.pathname.startsWith('/writings')) return true;
+    if (path === '/studio' && location.pathname === '/studio') return true;
+    return false;
+  };
 
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border px-4 sm:px-6 py-3 sm:py-4">
@@ -22,13 +30,34 @@ const StickyNavbar = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
-            <Link to="/writings" className="font-display text-sm hover:text-muted-foreground transition-colors py-2">
+            <Link 
+              to="/writings" 
+              className={`font-display text-sm transition-colors py-2 ${
+                isActiveRoute('/writings') 
+                  ? 'text-foreground font-medium' 
+                  : 'hover:text-muted-foreground'
+              }`}
+            >
               Writings
             </Link>
-            <Link to="/studio" className="font-display text-sm hover:text-muted-foreground transition-colors py-2">
+            <Link 
+              to="/studio" 
+              className={`font-display text-sm transition-colors py-2 ${
+                isActiveRoute('/studio') 
+                  ? 'text-foreground font-medium' 
+                  : 'hover:text-muted-foreground'
+              }`}
+            >
               Studio
             </Link>
-            <Link to="/about" className="font-display text-sm hover:text-muted-foreground transition-colors py-2">
+            <Link 
+              to="/about" 
+              className={`font-display text-sm transition-colors py-2 ${
+                isActiveRoute('/about') 
+                  ? 'text-foreground font-medium' 
+                  : 'hover:text-muted-foreground'
+              }`}
+            >
               Manifesto
             </Link>
           </div>
@@ -52,21 +81,33 @@ const StickyNavbar = () => {
               <Link 
                 to="/writings" 
                 onClick={closeMenu}
-                className="font-display text-base hover:text-muted-foreground transition-colors py-3 px-2 rounded-md hover:bg-muted/50 min-h-[44px] flex items-center"
+                className={`font-display text-base transition-colors py-3 px-2 rounded-md min-h-[44px] flex items-center ${
+                  isActiveRoute('/writings')
+                    ? 'text-foreground font-medium bg-muted/80'
+                    : 'hover:text-muted-foreground hover:bg-muted/50'
+                }`}
               >
                 Writings
               </Link>
               <Link 
                 to="/studio" 
                 onClick={closeMenu}
-                className="font-display text-base hover:text-muted-foreground transition-colors py-3 px-2 rounded-md hover:bg-muted/50 min-h-[44px] flex items-center"
+                className={`font-display text-base transition-colors py-3 px-2 rounded-md min-h-[44px] flex items-center ${
+                  isActiveRoute('/studio')
+                    ? 'text-foreground font-medium bg-muted/80'
+                    : 'hover:text-muted-foreground hover:bg-muted/50'
+                }`}
               >
                 Studio
               </Link>
               <Link 
                 to="/about" 
                 onClick={closeMenu}
-                className="font-display text-base hover:text-muted-foreground transition-colors py-3 px-2 rounded-md hover:bg-muted/50 min-h-[44px] flex items-center"
+                className={`font-display text-base transition-colors py-3 px-2 rounded-md min-h-[44px] flex items-center ${
+                  isActiveRoute('/about')
+                    ? 'text-foreground font-medium bg-muted/80'
+                    : 'hover:text-muted-foreground hover:bg-muted/50'
+                }`}
               >
                 Manifesto
               </Link>

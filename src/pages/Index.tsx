@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { getFeaturedEssays } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import Footer from "@/components/Footer";
 import { Instagram, Linkedin } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
@@ -86,24 +87,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-border py-8 sm:py-12 px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="font-display text-xs sm:text-sm text-muted-foreground">
-              © 2025 | byzahin. All rights reserved. — All thoughts are freely given
-            </p>
-            <div className="flex gap-4">
-              <a href="https://www.instagram.com/byzahin_/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="Instagram">
-                <Instagram size={20} />
-              </a>
-              <a href="https://www.linkedin.com/in/zahinsyahiran/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="LinkedIn">
-                <Linkedin size={20} />
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
       <ScrollToTopButton />
     </div>;
 };

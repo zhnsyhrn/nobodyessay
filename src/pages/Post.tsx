@@ -5,6 +5,7 @@ import { Share2, Twitter, Facebook, Link as LinkIcon } from "lucide-react";
 import { getEssayBySlug } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import Footer from "@/components/Footer";
 import DOMPurify from "dompurify";
 
 const Post = () => {
@@ -157,14 +158,7 @@ const Post = () => {
         </div>
       </article>
 
-      {/* Footer */}
-      <footer className="border-t border-border py-8 sm:py-12 px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="font-display text-xs sm:text-sm text-muted-foreground">
-            © 2025 | byzahin. All rights reserved. — All thoughts are freely given
-          </p>
-        </div>
-      </footer>
+      <Footer />
       <ScrollToTopButton />
     </div>
   );
