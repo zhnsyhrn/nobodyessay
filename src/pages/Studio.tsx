@@ -1,5 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Autoplay from "embla-carousel-autoplay";
@@ -102,6 +104,32 @@ const Studio = () => {
                   </div>
                 </div>
               </div>)}
+          </div>
+        </div>
+      </section>
+
+      {/* More to Explore */}
+      <section className="py-12 sm:py-16 px-4 sm:px-6 mt-12 sm:mt-16" style={{ backgroundColor: '#F3F3F3' }}>
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="font-display text-xl sm:text-2xl font-medium mb-4 sm:mb-6">
+            More to Explore
+          </h3>
+          
+          <p className="font-typewriter text-muted-foreground leading-relaxed mb-6 sm:mb-8 max-w-2xl mx-auto px-2 text-sm sm:text-base">
+            Discover more essays and reflections, or learn about the person behind these words.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+            <Link to="/writings">
+              <Button className="font-display min-h-[44px] px-6 w-full sm:w-auto">
+                All Writings
+              </Button>
+            </Link>
+            <Link to="/about">
+              <Button variant="ghost" className="font-display min-h-[44px] px-6 w-full sm:w-auto">
+                About the Writer
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

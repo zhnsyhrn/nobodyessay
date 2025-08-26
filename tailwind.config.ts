@@ -22,6 +22,7 @@ export default {
 				'display': ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
 				'typewriter': ['Space Mono', 'monospace'],
 				'mono': ['Space Mono', 'monospace'],
+				'lyon': ['Lyon Text', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
