@@ -110,7 +110,7 @@ const Studio = () => {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6">
+      <section className="py-12 sm:py-16 px-4 sm:px-6" style={{ backgroundColor: '#FBFBFB' }}>
         <div className="max-w-6xl mx-auto">
           <h2 className="font-display text-2xl sm:text-3xl font-medium mb-8 sm:mb-12 text-center">
             Featured Projects
