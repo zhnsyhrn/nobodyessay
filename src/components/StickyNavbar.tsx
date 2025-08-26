@@ -25,6 +25,9 @@ const StickyNavbar = () => {
             <Link to="/writings" className="font-display text-sm hover:text-muted-foreground transition-colors py-2">
               Writings
             </Link>
+            <Link to="/studio" className="font-display text-sm hover:text-muted-foreground transition-colors py-2">
+              Studio
+            </Link>
             <Link to="/about" className="font-display text-sm hover:text-muted-foreground transition-colors py-2">
               Manifesto
             </Link>
@@ -52,6 +55,13 @@ const StickyNavbar = () => {
                 className="font-display text-base hover:text-muted-foreground transition-colors py-3 px-2 rounded-md hover:bg-muted/50 min-h-[44px] flex items-center"
               >
                 Writings
+              </Link>
+              <Link 
+                to="/studio" 
+                onClick={closeMenu}
+                className="font-display text-base hover:text-muted-foreground transition-colors py-3 px-2 rounded-md hover:bg-muted/50 min-h-[44px] flex items-center"
+              >
+                Studio
               </Link>
               <Link 
                 to="/about" 
