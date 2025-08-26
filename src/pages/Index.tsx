@@ -47,21 +47,15 @@ const Index = () => {
       <section className="py-8 sm:py-12 lg:py-20 px-4 sm:px-6 fade-in pb-4 sm:pb-6">
         <div className="max-w-4xl mx-auto text-left">
           <h2 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">I do design and write. Everything's documented here. Because what's the point if I don't overshare?</h2>
-          <p className="font-mono text-lg sm:text-lg max-w-2xl leading-[27px] sm:leading-relaxed px-1 sm:px-2 mb-6 sm:mb-8" style={{ 
-            color: '#606060'
-          }}>I'd learned to code this site using AI so that I can show my collection of works.</p>
+          <p style={{
+          color: '#606060'
+        }} className="font-mono text-lg sm:text-lg max-w-2xl leading-[27px] sm:leading-relaxed px-1 mb-6 sm:mb-8 sm:px-0">I'd learned to code this site using AI so that I can show my collection of works.</p>
           
           {/* Navigation Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 px-1 sm:px-2">
             <Link to="/studio" className="w-full sm:w-auto">
               <div className="relative">
-                <GlowingEffect
-                  spread={40}
-                  glow={true}
-                  disabled={false}
-                  proximity={80}
-                  inactiveZone={0.3}
-                />
+                <GlowingEffect spread={40} glow={true} disabled={false} proximity={80} inactiveZone={0.3} />
                 <Button className="font-display min-h-[48px] px-6 w-full touch-manipulation shadow-lg hover:shadow-xl hover:shadow-primary/25 transition-all duration-300">
                   The Evidence
                 </Button>
