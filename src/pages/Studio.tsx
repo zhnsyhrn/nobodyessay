@@ -116,24 +116,26 @@ const Studio = () => {
             Featured Projects
           </h2>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
             {[1, 2, 3, 4, 5, 6].map((project) => (
               <div key={project} className="group cursor-pointer">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-muted mb-4">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-muted">
                   <img
                     src={allImages[(project - 1) % allImages.length]}
                     alt={`Project ${project}`}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                  <div className="absolute inset-0 bg-[#2F2F2F]/0 group-hover:bg-[#2F2F2F]/75 transition-colors duration-300" />
+                  <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <h3 className="font-display text-lg font-medium mb-2 text-white">
+                      Project {project}
+                    </h3>
+                    <p className="font-typewriter text-white/90 text-sm">
+                      Design exploration and creative process documentation.
+                    </p>
+                  </div>
                 </div>
-                <h3 className="font-display text-lg font-medium mb-2">
-                  Project {project}
-                </h3>
-                <p className="font-typewriter text-muted-foreground text-sm">
-                  Design exploration and creative process documentation.
-                </p>
               </div>
             ))}
           </div>
