@@ -65,9 +65,9 @@ const Studio = () => {
             }}
             plugins={[
               Autoplay({
-                delay: 4000,
-                stopOnInteraction: true,
-                stopOnMouseEnter: true,
+                delay: 3000,
+                stopOnInteraction: false,
+                stopOnMouseEnter: false,
               }),
             ]}
             setApi={setApi}
