@@ -17,7 +17,6 @@ import galleryImage6 from "@/assets/gallery-06.jpg";
 import galleryImage7 from "@/assets/gallery-07.jpg";
 import galleryImage8 from "@/assets/gallery-08.jpg";
 import galleryImage9 from "@/assets/gallery-09.jpg";
-
 const Studio = () => {
   // Carousel state
   const [api, setApi] = useState<CarouselApi>();
@@ -36,23 +35,17 @@ const Studio = () => {
       setCurrent(api.selectedScrollSnap() + 1);
     });
   }, [api]);
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <StickyNavbar />
 
       {/* Hero Section */}
       <section className="py-8 sm:py-12 lg:py-20 px-4 sm:px-6 fade-in">
         <div className="max-w-6xl mx-auto text-left sm:text-center">
-          <h1 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">
-            Here is my collection of designs and experiments. Turning briefs into real things, even the ones that change halfway.
-          </h1>
+          <h1 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">My collection of designs and experiments. Turning briefs into real things, even the ones that change halfway.</h1>
           <p className="font-mono sm:text-lg max-w-2xl sm:mx-auto leading-[27px] sm:leading-[29px]" style={{
-            fontSize: '18px',
-            color: '#606060'
-          }}>
-            Your unsolicited critique is expected, your approval is optional, and your silence will be taken as applause. Don't worry, I already judged it harsher than you ever will. Scroll, skim, judge… I'll act surprised either way.
-          </p>
+          fontSize: '18px',
+          color: '#606060'
+        }}>Your unsolicited critique is expected, your approval is optional, and your silence will be taken as applause. Scroll, skim, judge… I'll act surprised either way.</p>
         </div>
       </section>
 
@@ -60,15 +53,9 @@ const Studio = () => {
       <section className="py-12 sm:py-16 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">          
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
-            {[1, 2, 3, 4, 5, 6].map(project => (
-              <div key={project} className="group cursor-pointer">
+            {[1, 2, 3, 4, 5, 6].map(project => <div key={project} className="group cursor-pointer">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-muted">
-                  <img
-                    src={allImages[(project - 1) % allImages.length]}
-                    alt={`Project ${project}`}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
+                  <img src={allImages[(project - 1) % allImages.length]} alt={`Project ${project}`} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                   <div className="absolute inset-0 bg-background/0 group-hover:bg-background/75 transition-colors duration-300" />
                   <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <h3 className="font-display text-lg font-medium mb-2 text-foreground">
@@ -79,8 +66,7 @@ const Studio = () => {
                     </p>
                   </div>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -113,8 +99,6 @@ const Studio = () => {
 
       <Footer />
       <ScrollToTopButton />
-    </div>
-  );
+    </div>;
 };
-
 export default Studio;
