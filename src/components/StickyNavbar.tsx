@@ -74,45 +74,56 @@ const StickyNavbar = () => {
           </Button>
         </div>
 
-        {/* Mobile Navigation Menu */}
+        {/* Mobile Navigation Menu Overlay */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border">
-            <div className="flex flex-col space-y-3 pt-4">
-              <Link 
-                to="/writings" 
-                onClick={closeMenu}
-                className={`font-display text-base transition-colors py-3 px-2 rounded-md min-h-[44px] flex items-center ${
-                  isActiveRoute('/writings')
-                    ? 'text-foreground font-medium bg-muted/80'
-                    : 'hover:text-muted-foreground hover:bg-muted/50'
-                }`}
-              >
-                Writings
-              </Link>
-              <Link 
-                to="/studio" 
-                onClick={closeMenu}
-                className={`font-display text-base transition-colors py-3 px-2 rounded-md min-h-[44px] flex items-center ${
-                  isActiveRoute('/studio')
-                    ? 'text-foreground font-medium bg-muted/80'
-                    : 'hover:text-muted-foreground hover:bg-muted/50'
-                }`}
-              >
-                Studio
-              </Link>
-              <Link 
-                to="/about" 
-                onClick={closeMenu}
-                className={`font-display text-base transition-colors py-3 px-2 rounded-md min-h-[44px] flex items-center ${
-                  isActiveRoute('/about')
-                    ? 'text-foreground font-medium bg-muted/80'
-                    : 'hover:text-muted-foreground hover:bg-muted/50'
-                }`}
-              >
-                Manifesto
-              </Link>
+          <>
+            {/* Backdrop */}
+            <div 
+              className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 md:hidden"
+              onClick={closeMenu}
+            />
+            
+            {/* Menu Panel */}
+            <div className="fixed top-[73px] left-0 right-0 z-50 md:hidden bg-background border-b border-border shadow-lg">
+              <div className="max-w-4xl mx-auto px-4 py-4">
+                <div className="flex flex-col space-y-3">
+                  <Link 
+                    to="/writings" 
+                    onClick={closeMenu}
+                    className={`font-display text-base transition-colors py-3 px-2 rounded-md min-h-[44px] flex items-center ${
+                      isActiveRoute('/writings')
+                        ? 'text-foreground font-medium bg-muted/80'
+                        : 'hover:text-muted-foreground hover:bg-muted/50'
+                    }`}
+                  >
+                    Writings
+                  </Link>
+                  <Link 
+                    to="/studio" 
+                    onClick={closeMenu}
+                    className={`font-display text-base transition-colors py-3 px-2 rounded-md min-h-[44px] flex items-center ${
+                      isActiveRoute('/studio')
+                        ? 'text-foreground font-medium bg-muted/80'
+                        : 'hover:text-muted-foreground hover:bg-muted/50'
+                    }`}
+                  >
+                    Studio
+                  </Link>
+                  <Link 
+                    to="/about" 
+                    onClick={closeMenu}
+                    className={`font-display text-base transition-colors py-3 px-2 rounded-md min-h-[44px] flex items-center ${
+                      isActiveRoute('/about')
+                        ? 'text-foreground font-medium bg-muted/80'
+                        : 'hover:text-muted-foreground hover:bg-muted/50'
+                    }`}
+                  >
+                    Manifesto
+                  </Link>
+                </div>
+              </div>
             </div>
-          </div>
+          </>
         )}
       </div>
     </nav>
