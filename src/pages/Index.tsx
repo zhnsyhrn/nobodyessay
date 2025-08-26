@@ -43,8 +43,8 @@ const Index = () => {
       {/* Hero Section */}
       <section className="pt-4 pb-6 sm:py-12 lg:py-20 px-3 sm:px-6 fade-in min-h-[calc(100vh-80px)] sm:min-h-0 flex items-center">
         <div className="max-w-4xl mx-auto text-left w-full">
-          <h2 className="font-display text-2xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">I do design and write. Everything's documented here. Because what's the point if I don't overshare?</h2>
-          <p className="font-display text-sm sm:text-lg max-w-2xl leading-relaxed mb-6 sm:mb-8 text-muted-foreground">I'd learned to code this site using AI so that I can show my collection of works.</p>
+          <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">I do design and write. Everything's documented here. Because what's the point if I don't overshare?</h2>
+          <p className="font-display text-base sm:text-xl max-w-2xl leading-relaxed mb-6 sm:mb-8 text-muted-foreground">I'd learned to code this site using AI so that I can show my collection of works.</p>
           
           {/* Navigation Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
