@@ -27,12 +27,6 @@ const Studio = () => {
     galleryImage6, galleryImage7, galleryImage8, galleryImage9
   ];
 
-  // Group images into pairs for 2-column layout
-  const imagePairs = [];
-  for (let i = 0; i < allImages.length; i += 2) {
-    imagePairs.push([allImages[i], allImages[i + 1]].filter(Boolean));
-  }
-
   // Carousel setup
   useEffect(() => {
     if (!api) return;
@@ -61,58 +55,56 @@ const Studio = () => {
         </div>
       </section>
 
-      {/* Two Column Image Slider */}
+      {/* Gallery Slider */}
       <section className="pb-8 sm:pb-12 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="relative">
-            <Carousel
-              setApi={setApi}
-              className="w-full"
-              plugins={[
-                Autoplay({
-                  delay: 4000,
-                  stopOnInteraction: true,
-                  stopOnMouseEnter: true,
-                }),
-              ]}
-            >
-              <CarouselContent>
-                {imagePairs.map((pair, index) => (
-                  <CarouselItem key={index}>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                      {pair.map((image, imageIndex) => (
-                        <div key={imageIndex} className="relative aspect-[4/3] overflow-hidden rounded-lg bg-muted">
-                          <img
-                            src={image}
-                            alt={`Design project ${index * 2 + imageIndex + 1}`}
-                            className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                            loading="lazy"
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white border-white/20 hover:border-white" />
-              <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white border-white/20 hover:border-white" />
-            </Carousel>
-            
-            {/* Carousel Dots */}
-            <div className="flex justify-center gap-2 mt-4">
-              {Array.from({ length: count }).map((_, index) => (
-                <button
-                  key={index}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    index + 1 === current 
-                      ? "bg-foreground scale-125" 
-                      : "bg-muted-foreground/30 hover:bg-muted-foreground/60"
-                  }`}
-                  onClick={() => api?.scrollTo(index)}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            plugins={[
+              Autoplay({
+                delay: 4000,
+                stopOnInteraction: true,
+                stopOnMouseEnter: true,
+              }),
+            ]}
+            setApi={setApi}
+            className="w-full relative"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {allImages.map((image, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3">
+                  <div className="aspect-[4/3] overflow-hidden rounded-lg bg-muted">
+                    <img
+                      src={image}
+                      alt={`Design project ${index + 1}`}
+                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+                </CarouselItem>
               ))}
-            </div>
+            </CarouselContent>
+            <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10" />
+            <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10" />
+          </Carousel>
+          
+          {/* Dot indicators */}
+          <div className="flex justify-center mt-4 space-x-2">
+            {Array.from({ length: Math.ceil(allImages.length / 2) }).map((_, index) => (
+              <button
+                key={index}
+                className={`w-2 h-2 rounded-full transition-colors duration-200 ${
+                  Math.ceil(current / 2) === index + 1 || (current === 0 && index === 0)
+                    ? "bg-foreground" 
+                    : "bg-muted-foreground/30"
+                }`}
+                onClick={() => api?.scrollTo(index * 2)}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
       </section>
