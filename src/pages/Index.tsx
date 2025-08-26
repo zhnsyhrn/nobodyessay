@@ -41,13 +41,13 @@ const Index = () => {
       <StickyNavbar />
 
       {/* Hero Section */}
-      <section className="py-8 sm:py-12 lg:py-20 px-4 sm:px-6 fade-in pb-4 sm:pb-6">
-        <div className="max-w-4xl mx-auto text-left">
+      <section className="pt-4 pb-6 sm:py-12 lg:py-20 px-3 sm:px-6 fade-in min-h-[calc(100vh-80px)] sm:min-h-0 flex items-center">
+        <div className="max-w-4xl mx-auto text-left w-full">
           <h2 className="font-display text-2xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">I do design and write. Everything's documented here. Because what's the point if I don't overshare?</h2>
-          <p className="font-display text-sm sm:text-lg max-w-2xl leading-relaxed px-1 sm:px-2 mb-6 sm:mb-8 text-muted-foreground">I'd learned to code this site using AI so that I can show my collection of works.</p>
+          <p className="font-display text-sm sm:text-lg max-w-2xl leading-relaxed mb-6 sm:mb-8 text-muted-foreground">I'd learned to code this site using AI so that I can show my collection of works.</p>
           
           {/* Navigation Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 px-1 sm:px-2">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <Link to="/studio" className="w-full sm:w-auto">
               <Button className="font-display min-h-[48px] px-6 w-full touch-manipulation">
                 The Evidence
@@ -63,7 +63,7 @@ const Index = () => {
       </section>
 
       {/* Gallery Slider */}
-      <section className="py-2 sm:py-4">
+      <section className="pb-6 sm:py-4 px-3 sm:px-0">
         <div className="w-full">
           <Carousel opts={{
           align: "start",
@@ -72,8 +72,8 @@ const Index = () => {
           delay: 3000,
           stopOnInteraction: true
         })]} setApi={setApi} className="w-full relative">
-            <CarouselContent className="-ml-2 md:-ml-4">
-              {galleryImages.map((image, index) => <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/3">
+            <CarouselContent className="-ml-1 sm:-ml-2 md:-ml-4">
+              {galleryImages.map((image, index) => <CarouselItem key={index} className="pl-1 sm:pl-2 md:pl-4 basis-1/3">
                   <div className="aspect-square overflow-hidden rounded-lg">
                     <img src={image} alt={`Gallery image ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
                   </div>
