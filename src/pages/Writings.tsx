@@ -14,7 +14,7 @@ const Writings = () => {
         <div className="max-w-4xl mx-auto text-left">
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight" style={{
           lineHeight: '56px'
-        }}>If you’re here, you’re already curious. Welcome to my thoughts.</h2>
+        }}>Thoughts too long for a tweet, too short for a book. Thinking out loud, quietly.</h2>
           <p className="font-display text-base sm:text-lg max-w-2xl leading-relaxed px-2" style={{
           color: '#606060'
         }}>
