@@ -13,10 +13,13 @@ const Writings = () => {
       {/* Header */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 fade-in">
         <div className="max-w-4xl mx-auto text-left">
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight" style={{
-          lineHeight: '56px'
+          <h2 className="font-display sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight" style={{
+          fontSize: '34px',
+          lineHeight: '43px'
         }}>Thoughts too long for a tweet, too short for a book. Thinking out loud, quietly.</h2>
-          <p className="font-display text-base sm:text-lg max-w-2xl leading-relaxed px-2" style={{
+          <p className="font-display sm:text-lg max-w-2xl leading-relaxed px-2" style={{
+          fontSize: '18px',
+          lineHeight: '29px',
           color: '#606060'
         }}>
             If you're here, you're already curious. Welcome to my thoughts!

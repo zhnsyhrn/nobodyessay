@@ -43,11 +43,17 @@ const Studio = () => {
 
       {/* Hero Section */}
       <section className="py-8 sm:py-12 lg:py-20 px-4 sm:px-6 fade-in">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="font-display text-2xl sm:text-4xl lg:text-6xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">
+        <div className="max-w-6xl mx-auto text-left sm:text-center">
+          <h1 className="font-display sm:text-4xl lg:text-6xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight" style={{
+            fontSize: '34px',
+            lineHeight: '43px'
+          }}>
             Here is my collection of designs and experiments. Turning briefs into real things, even the ones that change halfway.
           </h1>
-          <p className="font-display text-sm sm:text-lg max-w-2xl mx-auto leading-relaxed text-muted-foreground">
+          <p className="font-display sm:text-lg max-w-2xl sm:mx-auto leading-relaxed text-muted-foreground" style={{
+            fontSize: '18px',
+            lineHeight: '29px'
+          }}>
             Your unsolicited critique is expected, your approval is optional, and your silence will be taken as applause. Don't worry, I already judged it harsher than you ever will. Scroll, skim, judge… I'll act surprised either way.
           </p>
         </div>
