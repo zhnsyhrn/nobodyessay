@@ -47,74 +47,19 @@ const Studio = () => {
           <h1 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">
             Here is my collection of designs and experiments. Turning briefs into real things, even the ones that change halfway.
           </h1>
-          <p className="font-display text-sm sm:text-lg max-w-2xl sm:mx-auto leading-relaxed text-muted-foreground" style={{
+          <p className="font-mono sm:text-lg max-w-2xl sm:mx-auto leading-relaxed" style={{
             fontSize: '18px',
-            lineHeight: '29px'
+            lineHeight: '29px',
+            color: '#606060'
           }}>
             Your unsolicited critique is expected, your approval is optional, and your silence will be taken as applause. Don't worry, I already judged it harsher than you ever will. Scroll, skim, judge… I'll act surprised either way.
           </p>
         </div>
       </section>
 
-      {/* Gallery Slider */}
-      <section className="pb-8 sm:pb-12 px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true
-            }}
-            plugins={[Autoplay({
-              delay: 3000,
-              stopOnInteraction: false,
-              stopOnMouseEnter: false
-            })]}
-            setApi={setApi}
-            className="w-full relative"
-          >
-            <CarouselContent className="-ml-2 md:-ml-4">
-              {allImages.map((image, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2">
-                  <div className="aspect-[4/3] overflow-hidden rounded-lg bg-muted">
-                    <img
-                      src={image}
-                      alt={`Design project ${index + 1}`}
-                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                      loading="lazy"
-                    />
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10" />
-            <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10" />
-          </Carousel>
-          
-          {/* Dot indicators */}
-          <div className="flex justify-center mt-4 space-x-2">
-            {Array.from({ length: Math.ceil(allImages.length / 2) }).map((_, index) => (
-              <button
-                key={index}
-                className={`w-2 h-2 rounded-full transition-colors duration-200 ${
-                  Math.ceil(current / 2) === index + 1 || (current === 0 && index === 0)
-                    ? "bg-foreground"
-                    : "bg-muted-foreground/30"
-                }`}
-                onClick={() => api?.scrollTo(index * 2)}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Projects Grid */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6 bg-muted/30">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="font-display text-2xl sm:text-3xl font-medium mb-8 sm:mb-12 text-center">
-            Featured Projects
-          </h2>
-          
+      <section className="py-12 sm:py-16 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto">          
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
             {[1, 2, 3, 4, 5, 6].map(project => (
               <div key={project} className="group cursor-pointer">
