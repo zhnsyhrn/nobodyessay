@@ -26,11 +26,11 @@ const Studio = () => {
   const [rightCurrent, setRightCurrent] = useState(0);
   const [rightCount, setRightCount] = useState(0);
 
-  // Left column images (first half)
-  const leftImages = [galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5];
+  // Left column images (4 images)
+  const leftImages = [galleryImage1, galleryImage2, galleryImage3, galleryImage4];
   
-  // Right column images (second half)
-  const rightImages = [galleryImage6, galleryImage7, galleryImage8, galleryImage9, galleryImage1];
+  // Right column images (5 images)
+  const rightImages = [galleryImage5, galleryImage6, galleryImage7, galleryImage8, galleryImage9];
 
   // Left carousel setup
   useEffect(() => {
@@ -64,7 +64,7 @@ const Studio = () => {
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 fade-in">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="font-display text-3xl sm:text-4xl lg:text-6xl font-medium mb-4 sm:mb-6 tracking-tight" style={{ lineHeight: '72px' }}>
-            Design Studio
+            Featured Projects
           </h1>
           <p className="font-display text-base sm:text-lg max-w-2xl mx-auto leading-relaxed" style={{ color: '#606060' }}>
             A curated collection of design projects, creative explorations, and visual narratives.
@@ -144,7 +144,7 @@ const Studio = () => {
                       <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-muted">
                         <img
                           src={image}
-                          alt={`Design project ${index + 6}`}
+                          alt={`Design project ${index + 5}`}
                           className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                           loading="lazy"
                         />
