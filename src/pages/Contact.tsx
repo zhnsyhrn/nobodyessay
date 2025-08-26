@@ -44,8 +44,8 @@ const Contact = () => {
             <div className="flex justify-center">
               <div className="w-full max-w-md aspect-square bg-muted rounded-lg flex items-center justify-center p-8">
                 <img 
-                  src="/lovable-uploads/e058676f-a0f2-441a-983c-a931949d96b8.png" 
-                  alt="byzahin logo" 
+                  src="/lovable-uploads/318ce04d-e3cb-473d-81bc-63e4c917981c.png" 
+                  alt="Profile photo" 
                   className="w-48 h-48 rounded-full object-cover shadow-lg"
                 />
               </div>
