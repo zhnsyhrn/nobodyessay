@@ -7,8 +7,14 @@ const StickyNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const closeMenu = () => setIsMenuOpen(false);
+  const toggleMenu = () => {
+    console.log('Menu toggle clicked, current state:', isMenuOpen);
+    setIsMenuOpen(!isMenuOpen);
+  };
+  const closeMenu = () => {
+    console.log('Menu closed');
+    setIsMenuOpen(false);
+  };
 
   const isActiveRoute = (path: string) => {
     if (path === '/about' && location.pathname === '/about') return true;
@@ -76,12 +82,15 @@ const StickyNavbar = () => {
 
         {/* Mobile Navigation Menu Overlay - Full Page */}
         {isMenuOpen && (
-          <div className="fixed inset-0 z-[100] md:hidden bg-white flex flex-col">
+          <div 
+            className="fixed inset-0 z-[9999] md:hidden flex flex-col"
+            style={{ backgroundColor: '#ffffff' }}
+          >
             {/* Header with close button */}
-            <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-border">
+            <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-gray-200">
               <Link to="/" onClick={closeMenu} className="flex items-center space-x-3">
                 <img src="/lovable-uploads/e058676f-a0f2-441a-983c-a931949d96b8.png" alt="byzahin" className="w-8 h-8 rounded-full object-cover" />
-                <h1 className="font-display text-lg sm:text-xl font-medium">
+                <h1 className="font-display text-lg sm:text-xl font-medium text-black">
                   byzahin
                 </h1>
               </Link>
@@ -89,7 +98,7 @@ const StickyNavbar = () => {
                 variant="ghost"
                 size="sm"
                 onClick={closeMenu}
-                className="p-3 h-12 w-12 touch-manipulation"
+                className="p-3 h-12 w-12 touch-manipulation text-black hover:bg-gray-100"
                 aria-label="Close menu"
               >
                 <X size={24} />
@@ -97,15 +106,15 @@ const StickyNavbar = () => {
             </div>
 
             {/* Menu Content - Centered */}
-            <div className="flex-1 flex flex-col justify-center px-4 sm:px-6">
+            <div className="flex-1 flex flex-col justify-center px-4 sm:px-6" style={{ backgroundColor: '#ffffff' }}>
               <div className="flex flex-col space-y-8">
                 <Link 
                   to="/writings" 
                   onClick={closeMenu}
-                  className={`font-display text-3xl transition-colors py-6 text-center min-h-[80px] flex items-center justify-center ${
+                  className={`font-display text-3xl transition-colors py-6 text-center min-h-[80px] flex items-center justify-center text-black hover:text-gray-600 ${
                     isActiveRoute('/writings')
-                      ? 'text-foreground font-medium'
-                      : 'text-foreground hover:text-muted-foreground'
+                      ? 'font-medium'
+                      : ''
                   }`}
                 >
                   Writings
@@ -113,10 +122,10 @@ const StickyNavbar = () => {
                 <Link 
                   to="/studio" 
                   onClick={closeMenu}
-                  className={`font-display text-3xl transition-colors py-6 text-center min-h-[80px] flex items-center justify-center ${
+                  className={`font-display text-3xl transition-colors py-6 text-center min-h-[80px] flex items-center justify-center text-black hover:text-gray-600 ${
                     isActiveRoute('/studio')
-                      ? 'text-foreground font-medium'
-                      : 'text-foreground hover:text-muted-foreground'
+                      ? 'font-medium'
+                      : ''
                   }`}
                 >
                   Studio
@@ -124,10 +133,10 @@ const StickyNavbar = () => {
                 <Link 
                   to="/about" 
                   onClick={closeMenu}
-                  className={`font-display text-3xl transition-colors py-6 text-center min-h-[80px] flex items-center justify-center ${
+                  className={`font-display text-3xl transition-colors py-6 text-center min-h-[80px] flex items-center justify-center text-black hover:text-gray-600 ${
                     isActiveRoute('/about')
-                      ? 'text-foreground font-medium'
-                      : 'text-foreground hover:text-muted-foreground'
+                      ? 'font-medium'
+                      : ''
                   }`}
                 >
                   Manifesto
