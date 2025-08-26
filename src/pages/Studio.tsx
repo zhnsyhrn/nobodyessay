@@ -47,9 +47,8 @@ const Studio = () => {
           <h1 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">
             Here is my collection of designs and experiments. Turning briefs into real things, even the ones that change halfway.
           </h1>
-          <p className="font-mono sm:text-lg max-w-2xl sm:mx-auto leading-relaxed" style={{
+          <p className="font-mono sm:text-lg max-w-2xl sm:mx-auto leading-[27px] sm:leading-[29px]" style={{
             fontSize: '18px',
-            lineHeight: '29px',
             color: '#606060'
           }}>
             Your unsolicited critique is expected, your approval is optional, and your silence will be taken as applause. Don't worry, I already judged it harsher than you ever will. Scroll, skim, judge… I'll act surprised either way.
