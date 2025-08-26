@@ -27,12 +27,6 @@ const Studio = () => {
     galleryImage6, galleryImage7, galleryImage8, galleryImage9
   ];
 
-  // Group images into pairs for 2-column layout
-  const imagePairs = [];
-  for (let i = 0; i < allImages.length; i += 2) {
-    imagePairs.push([allImages[i], allImages[i + 1]].filter(Boolean));
-  }
-
   // Carousel setup
   useEffect(() => {
     if (!api) return;
@@ -77,19 +71,15 @@ const Studio = () => {
               ]}
             >
               <CarouselContent>
-                {imagePairs.map((pair, index) => (
+                {allImages.map((image, index) => (
                   <CarouselItem key={index}>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                      {pair.map((image, imageIndex) => (
-                        <div key={imageIndex} className="relative aspect-[4/3] overflow-hidden rounded-lg bg-muted">
-                          <img
-                            src={image}
-                            alt={`Design project ${index * 2 + imageIndex + 1}`}
-                            className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                            loading="lazy"
-                          />
-                        </div>
-                      ))}
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-muted max-w-2xl mx-auto">
+                      <img
+                        src={image}
+                        alt={`Design project ${index + 1}`}
+                        className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                        loading="lazy"
+                      />
                     </div>
                   </CarouselItem>
                 ))}
