@@ -58,11 +58,8 @@ const About = () => {
       {/* Footer */}
       <footer className="border-t border-border py-12 px-4 sm:px-6 mt-16">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="font-typewriter text-sm text-muted-foreground mb-4">
-            "The best way to find out if you can trust somebody is to trust them."
-          </p>
           <p className="font-display text-sm text-muted-foreground">
-            © 2024 nobody.essay — All thoughts are freely given
+            © 2025 | byzahin. All rights reserved. — All thoughts are freely given
           </p>
         </div>
       </footer>
