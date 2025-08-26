@@ -5,9 +5,32 @@ import { Link } from "react-router-dom";
 import { getFeaturedEssays } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
+// Import gallery images
+import gallery01 from "@/assets/gallery-01.jpg";
+import gallery02 from "@/assets/gallery-02.jpg";
+import gallery03 from "@/assets/gallery-03.jpg";
+import gallery04 from "@/assets/gallery-04.jpg";
+import gallery05 from "@/assets/gallery-05.jpg";
+import gallery06 from "@/assets/gallery-06.jpg";
+import gallery07 from "@/assets/gallery-07.jpg";
+import gallery08 from "@/assets/gallery-08.jpg";
+import gallery09 from "@/assets/gallery-09.jpg";
 
 const Index = () => {
   const featuredWritings = getFeaturedEssays();
+  
+  const galleryImages = [
+    gallery01, gallery02, gallery03, gallery04, gallery05,
+    gallery06, gallery07, gallery08, gallery09
+  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -25,17 +48,45 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Gallery Slider */}
+      <section className="py-8 sm:py-12 px-4 sm:px-6">
+        <div className="max-w-4xl mx-auto">
+          <Carousel
+            opts={{
+              align: "start",
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {galleryImages.map((image, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/3">
+                  <div className="aspect-square overflow-hidden rounded-lg">
+                    <img
+                      src={image}
+                      alt={`Gallery image ${index + 1}`}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
+      </section>
+
       {/* Divider */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <Separator className="mb-12 sm:mb-16" />
       </div>
 
-      {/* Featured Writings */}
+      {/* Latest Writings */}
       <section className="py-0 sm:py-0 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 sm:mb-12 gap-4">
             <h3 className="font-display text-xl sm:text-2xl font-medium">
-              Featured Writings
+              Latest Writings
             </h3>
             <Link to="/writings">
               <Button variant="ghost" className="font-display text-sm min-h-[44px] px-4">
@@ -48,16 +99,22 @@ const Index = () => {
             {featuredWritings.map((writing, index) => (
               <Card key={index} className="p-4 sm:p-6 lg:p-8 border-border hover:border-foreground/20 transition-colors">
                 <div className="space-y-3 sm:space-y-4">
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-sm text-muted-foreground font-typewriter">
-                    <span>{writing.date}</span>
-                    <span>{writing.readTime}</span>
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-4 text-sm text-muted-foreground font-typewriter">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                      <span>{writing.date}</span>
+                      <span className="hidden sm:inline">•</span>
+                      <span className="bg-muted px-2 py-1 rounded text-xs inline-block w-fit">
+                        {writing.category}
+                      </span>
+                    </div>
+                    <span className="text-xs sm:text-sm">{writing.readTime}</span>
                   </div>
                   
-                  <h4 className="font-display text-lg sm:text-xl font-medium leading-tight">
+                  <h2 className="font-display text-lg sm:text-xl font-medium leading-tight">
                     {writing.title}
-                  </h4>
+                  </h2>
                   
-                  <p className="font-typewriter text-muted-foreground leading-relaxed text-sm sm:text-base">
+                  <p className="font-typewriter text-muted-foreground leading-relaxed text-sm sm:text-base mb-2">
                     {writing.excerpt}
                   </p>
                   
