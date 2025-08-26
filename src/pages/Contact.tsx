@@ -42,11 +42,12 @@ const Contact = () => {
             
             {/* Image Column */}
             <div className="flex justify-center">
-              <div className="w-full max-w-md aspect-square bg-muted rounded-lg flex items-center justify-center">
-                <div className="text-center space-y-2">
-                  <div className="w-16 h-16 bg-muted-foreground/20 rounded-full mx-auto"></div>
-                  <p className="text-sm text-muted-foreground">Image placeholder</p>
-                </div>
+              <div className="w-full max-w-md aspect-square bg-muted rounded-lg flex items-center justify-center p-8">
+                <img 
+                  src="/lovable-uploads/e058676f-a0f2-441a-983c-a931949d96b8.png" 
+                  alt="byzahin logo" 
+                  className="w-48 h-48 rounded-full object-cover shadow-lg"
+                />
               </div>
             </div>
           </div>
