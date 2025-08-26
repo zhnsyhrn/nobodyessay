@@ -1,3 +1,4 @@
+import React from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -12,6 +13,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 // Import gallery images
 import gallery01 from "@/assets/gallery-01.jpg";
@@ -26,11 +28,27 @@ import gallery09 from "@/assets/gallery-09.jpg";
 
 const Index = () => {
   const featuredWritings = getFeaturedEssays();
+  const [api, setApi] = React.useState<any>();
+  const [current, setCurrent] = React.useState(0);
+  const [count, setCount] = React.useState(0);
   
   const galleryImages = [
     gallery01, gallery02, gallery03, gallery04, gallery05,
     gallery06, gallery07, gallery08, gallery09
   ];
+
+  React.useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -49,13 +67,21 @@ const Index = () => {
       </section>
 
       {/* Gallery Slider */}
-      <section className="py-8 sm:py-12 px-4 sm:px-6">
+      <section className="py-4 sm:py-6 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           <Carousel
             opts={{
               align: "start",
+              loop: true,
             }}
-            className="w-full"
+            plugins={[
+              Autoplay({
+                delay: 3000,
+                stopOnInteraction: true,
+              }),
+            ]}
+            setApi={setApi}
+            className="w-full relative"
           >
             <CarouselContent className="-ml-2 md:-ml-4">
               {galleryImages.map((image, index) => (
@@ -70,9 +96,24 @@ const Index = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10" />
+            <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10" />
           </Carousel>
+          
+          {/* Dot indicators */}
+          <div className="flex justify-center mt-4 space-x-2">
+            {Array.from({ length: Math.ceil(galleryImages.length / 3) }).map((_, index) => (
+              <button
+                key={index}
+                className={`w-2 h-2 rounded-full transition-colors duration-200 ${
+                  Math.ceil(current / 3) === index + 1 || (current === 0 && index === 0)
+                    ? "bg-foreground" 
+                    : "bg-muted-foreground/30"
+                }`}
+                onClick={() => api?.scrollTo(index * 3)}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
