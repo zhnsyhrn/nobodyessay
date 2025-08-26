@@ -167,25 +167,6 @@ No matter how cool your backend technology is, no one cares if they find your ap
 Thus, [Confusing = Frustating].`
   },
   {
-    slug: "digital-ghosts-and-modern-memory",
-    title: "Digital Ghosts and Modern Memory",
-    excerpt: "Our devices store more than data; they preserve fragments of who we were, creating digital fossils of our former selves in the sedimentary layers of forgotten files.",
-    date: "February 28, 2024", 
-    readTime: "12 min read",
-    category: "Technology",
-    content: `Our devices store more than data; they preserve fragments of who we were, creating digital fossils of our former selves in the sedimentary layers of forgotten files.
-
-Last week, while searching for a document buried somewhere in my computer's depths, I stumbled upon a folder I had forgotten existed. Nested within it were screenshots from conversations long ended, drafts of emails never sent, photos of people whose names I could no longer recall with certainty. These digital artifacts felt like archaeological evidence of a life I had lived but somehow left behind.
-
-In this accidental excavation, I found myself confronting a peculiar feature of modern existence: we are the first generation to live alongside the accumulated digital detritus of our entire adult lives. Every device we own contains multitudes—not just the intentional archives of important documents and cherished photos, but the involuntary accumulation of digital exhale: cached files, browser histories, metadata that records not just what we did but when and where and how long we lingered.
-
-## The Archaeology of Self
-
-Our digital devices have become unintentional museums of the self. Unlike physical objects, which require conscious preservation, digital artifacts persist by default. The embarrassing selfie, the angry tweet, the playlist that perfectly captured a mood from three years ago—they all exist in a state of potential resurrection, waiting to be rediscovered by our future selves.
-
-This creates a strange relationship with our own past. Memory, traditionally, was selective. We remembered what mattered, what our minds chose to encode and preserve. Time naturally edited our experiences, softening harsh edges and highlighting significant moments. But digital memory is indiscriminate. It preserves everything with equal fidelity: the profound and the mundane, the intentional and the accidental.`
-  },
-  {
     slug: "the-weight-of-unwritten-words",
     title: "The Weight of Unwritten Words",
     excerpt: "Every word we choose carries the shadow of all the words we didn't. In this selective silence lies both the power and the burden of expression.",
