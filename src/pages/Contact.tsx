@@ -42,11 +42,11 @@ const Contact = () => {
             
             {/* Image Column */}
             <div className="flex justify-center">
-              <div className="w-full max-w-md aspect-square bg-muted rounded-lg flex items-center justify-center p-8">
+              <div className="w-full max-w-md aspect-square bg-muted rounded-lg overflow-hidden">
                 <img 
-                  src="/lovable-uploads/318ce04d-e3cb-473d-81bc-63e4c917981c.png" 
+                  src="/lovable-uploads/85dfff20-5584-4879-821e-0d913def0dc1.png" 
                   alt="Profile photo" 
-                  className="w-48 h-48 rounded-full object-cover shadow-lg"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
