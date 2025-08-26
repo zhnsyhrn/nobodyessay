@@ -43,6 +43,13 @@ const Index = () => {
       {/* Hero Section */}
       <section className="py-8 sm:py-12 lg:py-20 px-4 sm:px-6 fade-in pb-4 sm:pb-6">
         <div className="max-w-4xl mx-auto text-left">
+          {/* Information Banner */}
+          <div className="mb-6 sm:mb-8 p-3 sm:p-4 bg-muted/50 border border-border rounded-lg">
+            <p className="font-mono text-sm sm:text-base text-muted-foreground text-center">
+              🚧 This website is currently in progress. More content coming soon!
+            </p>
+          </div>
+          
           <h2 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">I do design and write. Everything's documented here. Because what's the point if I don't overshare?</h2>
           <p className="font-mono text-lg sm:text-lg max-w-2xl leading-[27px] sm:leading-relaxed px-1 sm:px-2 mb-6 sm:mb-8" style={{ 
             color: '#606060'
