@@ -11,6 +11,7 @@ import InfoBanner from "@/components/InfoBanner";
 import { Instagram, Linkedin } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 // Import gallery images
 import gallery01 from "@/assets/gallery-01.jpg";
@@ -53,9 +54,18 @@ const Index = () => {
           {/* Navigation Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 px-1 sm:px-2">
             <Link to="/studio" className="w-full sm:w-auto">
-              <Button className="font-display min-h-[48px] px-6 w-full touch-manipulation shadow-lg hover:shadow-xl hover:shadow-primary/25 transition-all duration-300">
-                The Evidence
-              </Button>
+              <div className="relative">
+                <GlowingEffect
+                  spread={40}
+                  glow={true}
+                  disabled={false}
+                  proximity={80}
+                  inactiveZone={0.3}
+                />
+                <Button className="font-display min-h-[48px] px-6 w-full touch-manipulation shadow-lg hover:shadow-xl hover:shadow-primary/25 transition-all duration-300">
+                  The Evidence
+                </Button>
+              </div>
             </Link>
             <Link to="/writings" className="w-full sm:w-auto">
               <Button variant="light" className="font-display min-h-[48px] px-6 w-full touch-manipulation">
