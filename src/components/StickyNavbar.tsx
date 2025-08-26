@@ -35,6 +35,7 @@ const StickyNavbar = () => {
     if (path === '/about' && location.pathname === '/about') return true;
     if (path === '/writings' && location.pathname.startsWith('/writings')) return true;
     if (path === '/studio' && location.pathname === '/studio') return true;
+    if (path === '/contact' && location.pathname === '/contact') return true;
     return false;
   };
 
@@ -80,6 +81,16 @@ const StickyNavbar = () => {
               }`}
             >
               Manifesto
+            </Link>
+            <Link 
+              to="/contact" 
+              className={`font-display text-sm transition-colors py-2 ${
+                isActiveRoute('/contact') 
+                  ? 'text-foreground font-medium' 
+                  : 'hover:text-muted-foreground'
+              }`}
+            >
+              Contact
             </Link>
           </div>
 
@@ -169,6 +180,20 @@ const StickyNavbar = () => {
                   }`}
                 >
                   Manifesto
+                </Link>
+                
+                <Separator className="bg-gray-200" />
+                
+                <Link 
+                  to="/contact" 
+                  onClick={closeMenu}
+                  className={`font-display text-3xl transition-colors py-8 text-center flex items-center justify-center text-black hover:text-gray-600 ${
+                    isActiveRoute('/contact')
+                      ? 'font-medium'
+                      : ''
+                  }`}
+                >
+                  Contact
                 </Link>
               </div>
             </div>
