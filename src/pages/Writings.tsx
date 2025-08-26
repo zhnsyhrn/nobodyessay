@@ -14,13 +14,12 @@ const Writings = () => {
 
       {/* Header */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 fade-in">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="font-display text-3xl sm:text-4xl font-light mb-4 sm:mb-6 tracking-tight">
-            All Writings
-          </h1>
-          <p className="font-typewriter text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed px-2">
-            A chronological collection of thoughts, observations, and reflections. 
-            Each piece an attempt to capture something fleeting in the permanence of words.
+        <div className="max-w-4xl mx-auto text-left">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight" style={{ lineHeight: '56px' }}>
+            All my writings in one place.
+          </h2>
+          <p className="font-display text-base sm:text-lg max-w-2xl leading-relaxed px-2" style={{ color: '#606060' }}>
+            A chronological collection of thoughts, observations, and reflections.
           </p>
         </div>
       </section>

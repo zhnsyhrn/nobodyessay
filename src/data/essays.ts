@@ -165,23 +165,6 @@ Otherwise, no matter how cool your product is, if the overall flow is odd and un
 No matter how cool your backend technology is, no one cares if they find your app or platform too complex to use.
 
 Thus, [Confusing = Frustating].`
-  },
-  {
-    slug: "the-weight-of-unwritten-words",
-    title: "The Weight of Unwritten Words",
-    excerpt: "Every word we choose carries the shadow of all the words we didn't. In this selective silence lies both the power and the burden of expression.",
-    date: "January 12, 2024",
-    readTime: "6 min read",
-    category: "Writing",
-    content: `Every word we choose carries the shadow of all the words we didn't. In this selective silence lies both the power and the burden of expression.
-
-I am sitting at my desk, cursor blinking against the white expanse of an empty document, and I am aware—as I always am when I write—of the weight of what remains unsaid. For every sentence that makes it onto the page, dozens of others fall away, abandoned in the space between thought and expression. They accumulate like snow in the margins of consciousness: the more precise phrase that escaped me, the better metaphor that arrived too late, the deeper truth I couldn't quite reach.
-
-Writing is as much about choosing what not to say as it is about finding the words themselves. Each decision to include creates an equal and opposite decision to exclude. The result is that every piece of writing exists in relationship to its own absence, defined as much by what it leaves out as by what it contains.
-
-## The Archaeology of Omission
-
-There is an entire archaeology to be found in what writers choose not to say. In the spaces between paragraphs, in the thoughts that hover just outside the frame, in the experiences that inform the work but never explicitly appear within it. Sometimes the most powerful element of a piece is what the writer trusted the reader to understand without being told.`
   }
 ];
 
