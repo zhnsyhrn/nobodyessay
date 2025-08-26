@@ -42,10 +42,10 @@ const Studio = () => {
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="font-display text-3xl sm:text-4xl lg:text-6xl font-medium mb-4 sm:mb-6 tracking-tight" style={{
           lineHeight: '72px'
-        }}>Turning briefs into real things, even the ones that change halfway.</h1>
+        }}>Here is my collection of designs and experiments. Turning briefs into real things, even the ones that change halfway.</h1>
           <p className="font-display text-base sm:text-lg max-w-2xl mx-auto leading-relaxed" style={{
           color: '#606060'
-        }}>Here’s my collection of designs and experiments. Your unsolicited critique is expected, your approval is optional, and your silence will be taken as applause.</p>
+        }}>Your unsolicited critique is expected, your approval is optional, and your silence will be taken as applause. Don’t worry, I already judged it harsher than you ever will. Scroll, skim, judge… I’ll act surprised either way.</p>
         </div>
       </section>
 
