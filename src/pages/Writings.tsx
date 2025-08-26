@@ -18,7 +18,7 @@ const Writings = () => {
           <p className="font-display text-base sm:text-lg max-w-2xl leading-relaxed px-2" style={{
           color: '#606060'
         }}>
-            A chronological collection of thoughts, observations, and reflections.
+            If you're here, you're already curious. Welcome to my thoughts!
           </p>
         </div>
       </section>
@@ -44,7 +44,9 @@ const Writings = () => {
                     {writing.title}
                   </h2>
                   
-                  <p className="font-typewriter text-muted-foreground leading-relaxed text-sm sm:text-base">
+                  <p className="font-typewriter leading-relaxed text-sm sm:text-base" style={{
+                    color: '#606060'
+                  }}>
                     {writing.excerpt}
                   </p>
                   

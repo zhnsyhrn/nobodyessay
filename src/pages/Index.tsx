@@ -155,7 +155,9 @@ const Index = () => {
                     {writing.title}
                   </h2>
                   
-                  <p className="font-typewriter text-muted-foreground leading-relaxed text-sm sm:text-base mb-2">
+                  <p className="font-typewriter leading-relaxed text-sm sm:text-base mb-2" style={{
+                    color: '#606060'
+                  }}>
                     {writing.excerpt}
                   </p>
                   
