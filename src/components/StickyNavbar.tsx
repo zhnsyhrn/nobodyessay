@@ -76,7 +76,7 @@ const StickyNavbar = () => {
 
         {/* Mobile Navigation Menu Overlay - Full Page */}
         {isMenuOpen && (
-          <div className="fixed inset-0 z-[100] md:hidden bg-background flex flex-col">
+          <div className="fixed inset-0 z-[100] md:hidden bg-white flex flex-col">
             {/* Header with close button */}
             <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-border">
               <Link to="/" onClick={closeMenu} className="flex items-center space-x-3">
