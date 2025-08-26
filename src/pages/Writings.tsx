@@ -13,7 +13,7 @@ const Writings = () => {
       {/* Header */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 fade-in">
         <div className="max-w-4xl mx-auto text-left">
-          <h2 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight">Thoughts too long for a tweet, too short for a book. Thinking out loud, quietly.</h2>
+          <h2 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">Thoughts too long for a tweet, too short for a book. Thinking out loud, quietly.</h2>
           <p className="font-display text-base sm:text-lg max-w-2xl leading-relaxed px-2" style={{
           fontSize: '18px',
           lineHeight: '29px',
