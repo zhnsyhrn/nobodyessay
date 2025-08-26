@@ -5,6 +5,7 @@ import { Share2, Twitter, Facebook, Link as LinkIcon } from "lucide-react";
 import { getEssayBySlug } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import DOMPurify from "dompurify";
 
 const Post = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -118,18 +119,18 @@ const Post = () => {
               className="font-typewriter leading-relaxed"
               style={{ color: '#919191' }}
               dangerouslySetInnerHTML={{ 
-                __html: essay.content
+                __html: DOMPurify.sanitize(essay.content
                   .split('\n\n')
                   .map(paragraph => {
                     if (paragraph.startsWith('## ')) {
-                      return `<h2 class="font-display text-xl sm:text-2xl font-medium mt-8 sm:mt-12 mb-4 sm:mb-6 text-foreground">${paragraph.slice(3)}</h2>`;
+                      return `<h2 class="font-display text-xl sm:text-2xl font-medium mt-8 sm:mt-12 mb-4 sm:mb-6 text-foreground">${DOMPurify.sanitize(paragraph.slice(3))}</h2>`;
                     }
                     if (paragraph.trim() === '') {
                       return '';
                     }
-                    return `<p class="mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base" style="color: #919191">${paragraph}</p>`;
+                    return `<p class="mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base" style="color: #919191">${DOMPurify.sanitize(paragraph)}</p>`;
                   })
-                  .join('')
+                  .join(''))
               }}
             />
           </div>
@@ -159,11 +160,8 @@ const Post = () => {
       {/* Footer */}
       <footer className="border-t border-border py-8 sm:py-12 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="font-typewriter text-sm sm:text-base text-muted-foreground mb-4">
-            "The best way to find out if you can trust somebody is to trust them."
-          </p>
           <p className="font-display text-xs sm:text-sm text-muted-foreground">
-            © 2024 nobody.essay — All thoughts are freely given
+            © 2025 | byzahin. All rights reserved. — All thoughts are freely given
           </p>
         </div>
       </footer>
