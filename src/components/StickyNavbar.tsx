@@ -76,7 +76,7 @@ const StickyNavbar = () => {
 
         {/* Mobile Navigation Menu Overlay - Full Page */}
         {isMenuOpen && (
-          <div className="fixed inset-0 z-[100] md:hidden bg-background">
+          <div className="fixed inset-0 z-[100] md:hidden bg-background flex flex-col">
             {/* Header with close button */}
             <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-border">
               <Link to="/" onClick={closeMenu} className="flex items-center space-x-3">
@@ -96,13 +96,13 @@ const StickyNavbar = () => {
               </Button>
             </div>
 
-            {/* Menu Content */}
-            <div className="h-full overflow-y-auto px-4 sm:px-6 py-8">
-              <div className="flex flex-col space-y-6">
+            {/* Menu Content - Centered */}
+            <div className="flex-1 flex flex-col justify-center px-4 sm:px-6">
+              <div className="flex flex-col space-y-8">
                 <Link 
                   to="/writings" 
                   onClick={closeMenu}
-                  className={`font-display text-2xl transition-colors py-6 px-4 rounded-lg min-h-[80px] flex items-center border-b border-border ${
+                  className={`font-display text-3xl transition-colors py-6 text-center min-h-[80px] flex items-center justify-center ${
                     isActiveRoute('/writings')
                       ? 'text-foreground font-medium'
                       : 'text-foreground hover:text-muted-foreground'
@@ -113,7 +113,7 @@ const StickyNavbar = () => {
                 <Link 
                   to="/studio" 
                   onClick={closeMenu}
-                  className={`font-display text-2xl transition-colors py-6 px-4 rounded-lg min-h-[80px] flex items-center border-b border-border ${
+                  className={`font-display text-3xl transition-colors py-6 text-center min-h-[80px] flex items-center justify-center ${
                     isActiveRoute('/studio')
                       ? 'text-foreground font-medium'
                       : 'text-foreground hover:text-muted-foreground'
@@ -124,7 +124,7 @@ const StickyNavbar = () => {
                 <Link 
                   to="/about" 
                   onClick={closeMenu}
-                  className={`font-display text-2xl transition-colors py-6 px-4 rounded-lg min-h-[80px] flex items-center border-b border-border ${
+                  className={`font-display text-3xl transition-colors py-6 text-center min-h-[80px] flex items-center justify-center ${
                     isActiveRoute('/about')
                       ? 'text-foreground font-medium'
                       : 'text-foreground hover:text-muted-foreground'
