@@ -13,9 +13,10 @@ const StickyNavbar = () => {
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border px-4 sm:px-6 py-3 sm:py-4">
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center justify-between">
-          <Link to="/" onClick={closeMenu}>
+          <Link to="/" onClick={closeMenu} className="flex items-center space-x-3">
+            <img src="/lovable-uploads/e058676f-a0f2-441a-983c-a931949d96b8.png" alt="byzahin" className="w-8 h-8 rounded-full object-cover" />
             <h1 className="font-display text-lg sm:text-xl font-medium hover:text-muted-foreground transition-colors">
-              nobody.essay
+              byzahin
             </h1>
           </Link>
           
