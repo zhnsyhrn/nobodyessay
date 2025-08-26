@@ -45,7 +45,7 @@ const Studio = () => {
         }}>Turning briefs into real things, even the ones that change halfway.</h1>
           <p className="font-display text-base sm:text-lg max-w-2xl mx-auto leading-relaxed" style={{
           color: '#606060'
-        }}>A collection of design projects, creative explorations, and visual narratives.</p>
+        }}>Thank you for checking out my creative canvas. These are collection of design projects, creative explorations, and visual narratives.</p>
         </div>
       </section>
 
@@ -109,7 +109,9 @@ const Studio = () => {
       </section>
 
       {/* More to Explore */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6 mt-12 sm:mt-16" style={{ backgroundColor: '#F3F3F3' }}>
+      <section className="py-12 sm:py-16 px-4 sm:px-6 mt-12 sm:mt-16" style={{
+      backgroundColor: '#F3F3F3'
+    }}>
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="font-display text-xl sm:text-2xl font-medium mb-4 sm:mb-6">
             More to Explore
