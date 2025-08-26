@@ -30,6 +30,9 @@ All colors MUST be HSL.
     --accent: 0 0% 4%;
     --accent-foreground: 0 0% 96%;
 
+    --button-light: 0 0% 92%; /* #EBEBEB */
+    --button-light-foreground: 0 0% 18%;
+
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
@@ -78,6 +81,9 @@ All colors MUST be HSL.
 
     --accent: 0 0% 96%;
     --accent-foreground: 0 0% 4%;
+
+    --button-light: 0 0% 15%; /* Dark mode equivalent */
+    --button-light-foreground: 0 0% 92%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;

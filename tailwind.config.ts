@@ -58,6 +58,10 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				'button-light': {
+					DEFAULT: 'hsl(var(--button-light))',
+					foreground: 'hsl(var(--button-light-foreground))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
