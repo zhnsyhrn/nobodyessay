@@ -1,11 +1,26 @@
 import { Link, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 
 const StickyNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+
+  // Prevent background scrolling when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
 
   const toggleMenu = () => {
     console.log('Menu toggle clicked, current state:', isMenuOpen);
@@ -106,12 +121,12 @@ const StickyNavbar = () => {
             </div>
 
             {/* Menu Content - Centered */}
-            <div className="flex-1 flex flex-col justify-center px-4 sm:px-6" style={{ backgroundColor: '#ffffff' }}>
-              <div className="flex flex-col space-y-8">
+            <div className="flex-1 flex flex-col justify-center items-center px-4 sm:px-6" style={{ backgroundColor: '#ffffff' }}>
+              <div className="flex flex-col w-full max-w-sm">
                 <Link 
                   to="/writings" 
                   onClick={closeMenu}
-                  className={`font-display text-3xl transition-colors py-6 text-center min-h-[80px] flex items-center justify-center text-black hover:text-gray-600 ${
+                  className={`font-display text-3xl transition-colors py-8 text-center flex items-center justify-center text-black hover:text-gray-600 ${
                     isActiveRoute('/writings')
                       ? 'font-medium'
                       : ''
@@ -119,10 +134,13 @@ const StickyNavbar = () => {
                 >
                   Writings
                 </Link>
+                
+                <Separator className="bg-gray-200" />
+                
                 <Link 
                   to="/studio" 
                   onClick={closeMenu}
-                  className={`font-display text-3xl transition-colors py-6 text-center min-h-[80px] flex items-center justify-center text-black hover:text-gray-600 ${
+                  className={`font-display text-3xl transition-colors py-8 text-center flex items-center justify-center text-black hover:text-gray-600 ${
                     isActiveRoute('/studio')
                       ? 'font-medium'
                       : ''
@@ -130,10 +148,13 @@ const StickyNavbar = () => {
                 >
                   Studio
                 </Link>
+                
+                <Separator className="bg-gray-200" />
+                
                 <Link 
                   to="/about" 
                   onClick={closeMenu}
-                  className={`font-display text-3xl transition-colors py-6 text-center min-h-[80px] flex items-center justify-center text-black hover:text-gray-600 ${
+                  className={`font-display text-3xl transition-colors py-8 text-center flex items-center justify-center text-black hover:text-gray-600 ${
                     isActiveRoute('/about')
                       ? 'font-medium'
                       : ''
