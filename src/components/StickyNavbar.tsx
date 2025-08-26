@@ -76,16 +76,16 @@ const StickyNavbar = () => {
 
         {/* Mobile Navigation Menu Overlay */}
         {isMenuOpen && (
-          <div className="fixed inset-0 top-[73px] z-50 md:hidden bg-background border-t border-border">
-            <div className="h-full overflow-y-auto px-4 py-6">
+          <div className="fixed inset-0 top-0 z-[60] md:hidden bg-background/95 backdrop-blur-sm">
+            <div className="mt-[73px] h-full overflow-y-auto px-4 py-6 border-t border-border">
               <div className="flex flex-col space-y-4">
                 <Link 
                   to="/writings" 
                   onClick={closeMenu}
-                  className={`font-display text-lg transition-colors py-4 px-4 rounded-md min-h-[56px] flex items-center border-b border-border ${
+                  className={`font-display text-xl transition-colors py-6 px-4 rounded-lg min-h-[64px] flex items-center border border-border ${
                     isActiveRoute('/writings')
-                      ? 'text-foreground font-medium bg-muted'
-                      : 'hover:text-muted-foreground hover:bg-muted/30'
+                      ? 'text-foreground font-medium bg-muted border-foreground'
+                      : 'text-foreground hover:bg-muted/50 hover:border-foreground/20'
                   }`}
                 >
                   Writings
@@ -93,10 +93,10 @@ const StickyNavbar = () => {
                 <Link 
                   to="/studio" 
                   onClick={closeMenu}
-                  className={`font-display text-lg transition-colors py-4 px-4 rounded-md min-h-[56px] flex items-center border-b border-border ${
+                  className={`font-display text-xl transition-colors py-6 px-4 rounded-lg min-h-[64px] flex items-center border border-border ${
                     isActiveRoute('/studio')
-                      ? 'text-foreground font-medium bg-muted'
-                      : 'hover:text-muted-foreground hover:bg-muted/30'
+                      ? 'text-foreground font-medium bg-muted border-foreground'
+                      : 'text-foreground hover:bg-muted/50 hover:border-foreground/20'
                   }`}
                 >
                   Studio
@@ -104,10 +104,10 @@ const StickyNavbar = () => {
                 <Link 
                   to="/about" 
                   onClick={closeMenu}
-                  className={`font-display text-lg transition-colors py-4 px-4 rounded-md min-h-[56px] flex items-center border-b border-border ${
+                  className={`font-display text-xl transition-colors py-6 px-4 rounded-lg min-h-[64px] flex items-center border border-border ${
                     isActiveRoute('/about')
-                      ? 'text-foreground font-medium bg-muted'
-                      : 'hover:text-muted-foreground hover:bg-muted/30'
+                      ? 'text-foreground font-medium bg-muted border-foreground'
+                      : 'text-foreground hover:bg-muted/50 hover:border-foreground/20'
                   }`}
                 >
                   Manifesto
