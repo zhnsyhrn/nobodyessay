@@ -98,8 +98,16 @@ const StickyNavbar = () => {
         {/* Mobile Navigation Menu Overlay - Full Page */}
         {isMenuOpen && (
           <div 
-            className="fixed inset-0 z-[9999] md:hidden flex flex-col"
-            style={{ backgroundColor: '#ffffff' }}
+            className="fixed inset-0 z-[9999] md:hidden flex flex-col bg-white"
+            style={{ 
+              backgroundColor: '#ffffff',
+              minHeight: '100vh',
+              minWidth: '100vw',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0
+            }}
           >
             {/* Header with close button */}
             <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-gray-200">
