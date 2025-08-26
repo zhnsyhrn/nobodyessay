@@ -2,11 +2,13 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import InfoBanner from "@/components/InfoBanner";
 
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <StickyNavbar />
+      <InfoBanner />
 
       {/* About Content */}
       <section className="py-20 px-4 sm:px-6 fade-in" style={{ backgroundColor: '#F3F3F3' }}>

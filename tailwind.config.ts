@@ -62,6 +62,11 @@ export default {
 					DEFAULT: 'hsl(var(--button-light))',
 					foreground: 'hsl(var(--button-light-foreground))'
 				},
+				warning: {
+					DEFAULT: 'hsl(var(--warning))',
+					border: 'hsl(var(--warning-border))',
+					foreground: 'hsl(var(--warning-foreground))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

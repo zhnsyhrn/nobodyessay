@@ -5,10 +5,12 @@ import { essays } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
+import InfoBanner from "@/components/InfoBanner";
 const Writings = () => {
   const allWritings = essays;
   return <div className="min-h-screen bg-background">
       <StickyNavbar />
+      <InfoBanner />
 
       {/* Header */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 fade-in">
