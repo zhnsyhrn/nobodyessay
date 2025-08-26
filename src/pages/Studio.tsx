@@ -45,7 +45,7 @@ const Studio = () => {
         }}>Turning briefs into real things, even the ones that change halfway.</h1>
           <p className="font-display text-base sm:text-lg max-w-2xl mx-auto leading-relaxed" style={{
           color: '#606060'
-        }}>Thank you for checking out my creative canvas. These are collection of design projects, creative explorations, and visual narratives. Please go judge yourself!</p>
+        }}>Thank you for checking out my creative canvas. These are the collection of design projects, creative explorations, and visual narratives. Please go judge yourself!</p>
         </div>
       </section>
 
