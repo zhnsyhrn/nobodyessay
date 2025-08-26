@@ -74,18 +74,38 @@ const StickyNavbar = () => {
           </Button>
         </div>
 
-        {/* Mobile Navigation Menu Overlay */}
+        {/* Mobile Navigation Menu Overlay - Full Page */}
         {isMenuOpen && (
-          <div className="fixed inset-0 top-0 z-[60] md:hidden bg-background/95 backdrop-blur-sm">
-            <div className="mt-[73px] h-full overflow-y-auto px-4 py-6 border-t border-border">
-              <div className="flex flex-col space-y-4">
+          <div className="fixed inset-0 z-[100] md:hidden bg-background">
+            {/* Header with close button */}
+            <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-border">
+              <Link to="/" onClick={closeMenu} className="flex items-center space-x-3">
+                <img src="/lovable-uploads/e058676f-a0f2-441a-983c-a931949d96b8.png" alt="byzahin" className="w-8 h-8 rounded-full object-cover" />
+                <h1 className="font-display text-lg sm:text-xl font-medium">
+                  byzahin
+                </h1>
+              </Link>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={closeMenu}
+                className="p-3 h-12 w-12 touch-manipulation"
+                aria-label="Close menu"
+              >
+                <X size={24} />
+              </Button>
+            </div>
+
+            {/* Menu Content */}
+            <div className="h-full overflow-y-auto px-4 sm:px-6 py-8">
+              <div className="flex flex-col space-y-6">
                 <Link 
                   to="/writings" 
                   onClick={closeMenu}
-                  className={`font-display text-xl transition-colors py-6 px-4 rounded-lg min-h-[64px] flex items-center border border-border ${
+                  className={`font-display text-2xl transition-colors py-6 px-4 rounded-lg min-h-[80px] flex items-center border-b border-border ${
                     isActiveRoute('/writings')
-                      ? 'text-foreground font-medium bg-muted border-foreground'
-                      : 'text-foreground hover:bg-muted/50 hover:border-foreground/20'
+                      ? 'text-foreground font-medium'
+                      : 'text-foreground hover:text-muted-foreground'
                   }`}
                 >
                   Writings
@@ -93,10 +113,10 @@ const StickyNavbar = () => {
                 <Link 
                   to="/studio" 
                   onClick={closeMenu}
-                  className={`font-display text-xl transition-colors py-6 px-4 rounded-lg min-h-[64px] flex items-center border border-border ${
+                  className={`font-display text-2xl transition-colors py-6 px-4 rounded-lg min-h-[80px] flex items-center border-b border-border ${
                     isActiveRoute('/studio')
-                      ? 'text-foreground font-medium bg-muted border-foreground'
-                      : 'text-foreground hover:bg-muted/50 hover:border-foreground/20'
+                      ? 'text-foreground font-medium'
+                      : 'text-foreground hover:text-muted-foreground'
                   }`}
                 >
                   Studio
@@ -104,10 +124,10 @@ const StickyNavbar = () => {
                 <Link 
                   to="/about" 
                   onClick={closeMenu}
-                  className={`font-display text-xl transition-colors py-6 px-4 rounded-lg min-h-[64px] flex items-center border border-border ${
+                  className={`font-display text-2xl transition-colors py-6 px-4 rounded-lg min-h-[80px] flex items-center border-b border-border ${
                     isActiveRoute('/about')
-                      ? 'text-foreground font-medium bg-muted border-foreground'
-                      : 'text-foreground hover:bg-muted/50 hover:border-foreground/20'
+                      ? 'text-foreground font-medium'
+                      : 'text-foreground hover:text-muted-foreground'
                   }`}
                 >
                   Manifesto
