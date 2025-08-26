@@ -55,7 +55,7 @@ const Index = () => {
       <StickyNavbar />
 
       {/* Hero Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 fade-in">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 fade-in pb-4 sm:pb-6">
         <div className="max-w-4xl mx-auto text-left">
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight" style={{ lineHeight: '56px' }}>
             I do design and write. Everything's documented here.
@@ -67,7 +67,7 @@ const Index = () => {
       </section>
 
       {/* Gallery Slider */}
-      <section className="py-4 sm:py-6 px-4 sm:px-6">
+      <section className="py-2 sm:py-4 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           <Carousel
             opts={{
@@ -118,8 +118,8 @@ const Index = () => {
       </section>
 
       {/* Divider */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        <Separator className="mb-12 sm:mb-16" />
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <Separator />
       </div>
 
       {/* Latest Writings */}
@@ -203,11 +203,8 @@ const Index = () => {
       {/* Footer */}
       <footer className="border-t border-border py-8 sm:py-12 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="font-typewriter text-sm text-muted-foreground mb-3 sm:mb-4 leading-relaxed px-2">
-            "The best way to find out if you can trust somebody is to trust them."
-          </p>
           <p className="font-display text-xs sm:text-sm text-muted-foreground">
-            © 2024 nobody.essay — All thoughts are freely given
+            © 2025 | byzahin. All rights reserved. — All thoughts are freely given
           </p>
         </div>
       </footer>
