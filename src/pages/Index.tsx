@@ -12,18 +12,18 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import Autoplay from "embla-carousel-autoplay";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 
-// Portfolio design images - Using existing uploaded images
+// Portfolio design images - Your latest design portfolio work
 const portfolioImages = [
-  "/lovable-uploads/e058676f-a0f2-441a-983c-a931949d96b8.png", // Design Portfolio Work 1
-  "/lovable-uploads/85dfff20-5584-4879-821e-0d913def0dc1.png", // Design Portfolio Work 2
-  "/lovable-uploads/7818744d-3050-4496-824e-8c4c7a8b1a4e.png", // Design Portfolio Work 3
-  "/lovable-uploads/c528a13e-2b16-4074-9369-d55af61f04ac.png", // Design Portfolio Work 4
-  "/lovable-uploads/1dcf470c-2ae1-4041-9270-802a1b166480.png", // Design Portfolio Work 5
-  "/lovable-uploads/c931605e-784c-4a52-ae00-b9eb94d0be58.png", // Design Portfolio Work 6
-  "/lovable-uploads/75943d99-0ed4-4445-9bdd-80d0bab01e5f.png", // Design Portfolio Work 7
-  "/lovable-uploads/02594b85-35a5-4f5e-b0f9-c93ee3f201a7.png", // Design Portfolio Work 8
-  "/lovable-uploads/2fbd8484-6091-4de8-8f0d-0c7c7ded5fb0.png", // Design Portfolio Work 9
-  "/lovable-uploads/b0b84054-8135-427f-8108-9f34cecc6fa7.png"  // Design Portfolio Work 10
+  "/lovable-uploads/8522cb15-bd11-4bf2-9180-619939a55e10.png", // Dealn mobile app UI
+  "/lovable-uploads/53e0e815-137f-432c-b911-7b4e350825c9.png", // Verdant Solar marketing design
+  "/lovable-uploads/3f6db57e-8fa8-4856-8053-b49d12f800a6.png", // PolicyStreet insurance app
+  "/lovable-uploads/788b5ed7-7c3b-45d4-9514-30ed5c61b691.png", // Banking app interface
+  "/lovable-uploads/dae15990-3155-4b7d-b781-466cb9ae3574.png", // Health tracking app UI
+  "/lovable-uploads/b738fc37-b9ee-4bea-9dca-797cef546f3a.png", // Coffee packaging design
+  "/lovable-uploads/514634dc-ae1c-4362-8cb4-ebdea96fd21e.png", // Corporate website design
+  "/lovable-uploads/4982d9b9-bf59-4d92-b1df-f4df6aefa746.png", // Financial goal tracking UI
+  "/lovable-uploads/a88214a6-39ca-471c-aee2-8eadc8dafa6f.png", // Legal firm branding
+  "/lovable-uploads/6944a474-3ed4-4943-ac6d-b1d7bcf575ec.png"  // Spark mobile app onboarding
 ];
 const Index = () => {
   const featuredWritings = getFeaturedEssays();
