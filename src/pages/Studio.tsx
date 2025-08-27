@@ -58,36 +58,36 @@ const Studio = () => {
             {[
               {
                 title: "South Sabah Al-Ahmad Masterplan",
-                location: "2040 - Southern Kuwait, Kuwait",
+                slug: "south-sabah-masterplan",
                 description: "Comprehensive urban development planning for sustainable community growth"
               },
               {
                 title: "Changfeng Mixed Use Development", 
-                location: "2035 - Shanghai, China",
+                slug: "changfeng-mixed-use",
                 description: "Integrated commercial and residential complex with modern architectural design"
               },
               {
                 title: "Metropolitan Transit Hub",
-                location: "2038 - Dubai, UAE", 
+                slug: "metropolitan-transit-hub",
                 description: "Multi-modal transportation center connecting various transit systems"
               },
               {
                 title: "Waterfront Cultural District",
-                location: "2036 - Singapore",
+                slug: "waterfront-cultural-district",
                 description: "Arts and culture destination featuring museums, galleries, and performance venues"
               },
               {
                 title: "Sustainable Office Complex",
-                location: "2039 - London, UK",
+                slug: "sustainable-office-complex",
                 description: "Energy-efficient commercial development with innovative green building technologies"
               },
               {
                 title: "Smart City Innovation Park",
-                location: "2041 - Tokyo, Japan",
+                slug: "smart-city-innovation-park",
                 description: "Technology-focused development promoting innovation and digital transformation"
               }
             ].map((project, index) => (
-              <div key={index} className="group cursor-pointer">
+              <Link key={index} to={`/projects/${project.slug}`} className="group cursor-pointer">
                 <div className="aspect-video overflow-hidden rounded-lg bg-muted">
                   <img 
                     src={allImages[index % allImages.length]} 
@@ -123,7 +123,7 @@ const Studio = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
