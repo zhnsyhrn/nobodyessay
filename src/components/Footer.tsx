@@ -24,7 +24,7 @@ const Footer = () => {
             </a>
           </div>
           <p className="font-display text-xs sm:text-sm text-muted-foreground">
-            © 2025 | byzahin. All rights reserved. — All thoughts are freely given
+            byzahin © 2025 | All rights reserved.
           </p>
         </div>
       </div>

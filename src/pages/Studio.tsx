@@ -54,10 +54,10 @@ const Studio = () => {
         <div className="max-w-6xl mx-auto">          
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
             {[
-              {
+                {
                 title: "MoneyX App",
                 slug: "moneyx-savings-goals-manual-entry",
-                description: "Manual entry savings goals feature"
+                description: "App feature UIUX design"
               },
               {
                 title: "Changfeng Mixed Use Development", 
@@ -88,7 +88,7 @@ const Studio = () => {
               <Link key={index} to={`/projects/${project.slug}`} className="group cursor-pointer">
                 <div className="aspect-video overflow-hidden rounded-lg bg-muted">
                   <img 
-                    src={index === 0 ? "/lovable-uploads/c528a13e-2b16-4074-9369-d55af61f04ac.png" : allImages[index % allImages.length]} 
+                    src={index === 0 ? "/lovable-uploads/38a4617f-499b-49dd-accd-4531551d30ac.png" : allImages[index % allImages.length]}
                     alt={project.title} 
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
                     loading="lazy"
