@@ -100,7 +100,7 @@ const Studio = () => {
                       <h3 className="font-display text-lg font-medium text-black mb-1">
                         {project.title}
                       </h3>
-                      <p className="font-mono text-sm text-gray-700">
+                      <p className="font-mono text-sm text-gray-700 truncate">
                         {project.description}
                       </p>
                     </div>
