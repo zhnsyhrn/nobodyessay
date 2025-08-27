@@ -2,6 +2,7 @@ import React from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Link } from "react-router-dom";
 import { getFeaturedEssays } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
@@ -47,10 +48,10 @@ const Index = () => {
       {/* Hero Section */}
       <section className="py-8 sm:py-12 lg:py-20 px-4 sm:px-6 fade-in pb-4 sm:pb-6">
         <div className="max-w-4xl mx-auto text-left">
-          <h2 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">I do design and write. Everything's documented here. Because what's the point if I don't overshare?</h2>
+          <h2 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">I do design and write. Everything's documented here.</h2>
           <p style={{
           color: '#606060'
-        }} className="font-mono text-lg sm:text-lg max-w-2xl leading-[27px] sm:leading-relaxed px-1 mb-6 sm:mb-8 sm:px-0">I'd learned to code this site using AI so that I can show my collection of works.</p>
+        }} className="font-jakarta text-lg sm:text-lg max-w-2xl leading-[27px] sm:leading-relaxed px-1 mb-6 sm:mb-8 sm:px-0">I'd learned to code this site using AI so that I can show my collection of works. Because what's the point if I don't overshare?</p>
           
           {/* Navigation Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 px-1 sm:px-2">
@@ -83,9 +84,18 @@ const Index = () => {
         })]} setApi={setApi} className="w-full relative">
             <CarouselContent className="-ml-2 md:-ml-4">
               {galleryImages.map((image, index) => <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/3">
-                  <div className="aspect-square overflow-hidden rounded-lg">
-                    <img src={image} alt={`Design portfolio work ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
-                  </div>
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <div className="aspect-square overflow-hidden rounded-lg cursor-pointer">
+                        <img src={image} alt={`Design portfolio work ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                      </div>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-4xl w-full p-0 border-0">
+                      <div className="relative">
+                        <img src={image} alt={`Design portfolio work ${index + 1}`} className="w-full h-auto rounded-lg" />
+                      </div>
+                    </DialogContent>
+                  </Dialog>
                 </CarouselItem>)}
             </CarouselContent>
           </Carousel>

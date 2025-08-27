@@ -23,6 +23,7 @@ export default {
 				'typewriter': ['Space Mono', 'monospace'],
 				'mono': ['Space Mono', 'monospace'],
 				'lyon': ['Lyon Text', 'serif'],
+				'jakarta': ['Plus Jakarta Sans', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
