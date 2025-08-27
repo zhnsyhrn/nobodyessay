@@ -141,7 +141,7 @@ const ProjectDetail = () => {
         </div>
 
         {/* Header Section */}
-        <div className="mb-12">
+        <div className="mb-4">
           <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
             <h1 className="font-display text-3xl sm:text-4xl font-medium mb-4 sm:mb-0 sm:mr-8">
               {project.title}
