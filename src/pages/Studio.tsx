@@ -52,7 +52,7 @@ const Studio = () => {
       {/* Projects Grid */}
       <section className="py-12 sm:py-16 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">          
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 gap-6 lg:gap-8">
             {[
                 {
                 title: "MoneyX App",
