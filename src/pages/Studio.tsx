@@ -17,6 +17,7 @@ import galleryImage6 from "@/assets/gallery-06.jpg";
 import galleryImage7 from "@/assets/gallery-07.jpg";
 import galleryImage8 from "@/assets/gallery-08.jpg";
 import galleryImage9 from "@/assets/gallery-09.jpg";
+import moneyxMainImage from "@/assets/moneyx-01.png";
 const Studio = () => {
   // Carousel state
   const [api, setApi] = useState<CarouselApi>();
@@ -55,9 +56,9 @@ const Studio = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
             {[
               {
-                title: "South Sabah Al-Ahmad Masterplan",
-                slug: "south-sabah-masterplan",
-                description: "Comprehensive urban development planning for sustainable community growth"
+                title: "MoneyX App",
+                slug: "moneyx-savings-goals-manual-entry",
+                description: "Manual entry savings goals feature"
               },
               {
                 title: "Changfeng Mixed Use Development", 
@@ -88,7 +89,7 @@ const Studio = () => {
               <Link key={index} to={`/projects/${project.slug}`} className="group cursor-pointer">
                 <div className="aspect-video overflow-hidden rounded-lg bg-muted">
                   <img 
-                    src={allImages[index % allImages.length]} 
+                    src={index === 0 ? moneyxMainImage : allImages[index % allImages.length]} 
                     alt={project.title} 
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
                     loading="lazy" 

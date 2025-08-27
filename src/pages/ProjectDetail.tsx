@@ -17,8 +17,28 @@ import galleryImage6 from "@/assets/gallery-06.jpg";
 import galleryImage7 from "@/assets/gallery-07.jpg";
 import galleryImage8 from "@/assets/gallery-08.jpg";
 
+// Import MoneyX project images
+import moneyxImage1 from "@/assets/moneyx-01.png";
+import moneyxImage2 from "@/assets/moneyx-02.png";
+import moneyxImage3 from "@/assets/moneyx-03.png";
+import moneyxImage4 from "@/assets/moneyx-04.png";
+
 // Sample project data - you can replace this with actual data
 const projectsData = {
+  "moneyx-savings-goals-manual-entry": {
+    title: "MoneyX App",
+    websiteUrl: "https://moneyx.com.my/",
+    overview: "I worked on this new feature for 2 months together with a Product Manager, Business Analyst, and Lead UX Designer. I had the opportunity to lead the design process and decision of their overall feature experience, setting up design direction, and components creation. This project assigned to me a month after officially joining the team. The goal was to keep users engaged and encourage them to explore other features within the app that are linked to the net worth simulation.",
+    projectInfo: {
+      "Project / Company": "MoneyX, Hextar Technologies Solutions Berhad",
+      "Type": "App UX/UI, Product Design",
+      "Role / Project Ownership": "App feature design owner",
+      "Contribution": "User interface, component design research, experience and feature functionality, end-to-end flow screen design",
+      "Project Lead / Product Manager(s)": "Shan Yi T.",
+      "Value Added": "Component assets creation, user flow optimisation",
+      "Credits": "Yudhis (3D Icons), Toshi Feryanshah (Lead UX Designer)"
+    }
+  },
   "south-sabah-masterplan": {
     title: "South Sabah Al-Ahmad Masterplan",
     websiteUrl: "https://example.com/project1",
@@ -195,16 +215,10 @@ const ProjectDetail = () => {
         {/* Project Gallery */}
         <div className="mb-12">
           <div className="grid grid-cols-1 gap-6">
-            {[
-              galleryImage1,
-              galleryImage2,
-              galleryImage3,
-              galleryImage4,
-              galleryImage5,
-              galleryImage6,
-              galleryImage7,
-              galleryImage8
-            ].map((image, index) => (
+            {(slug === 'moneyx-savings-goals-manual-entry' 
+              ? [moneyxImage1, moneyxImage2, moneyxImage3, moneyxImage4]
+              : [galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5, galleryImage6, galleryImage7, galleryImage8]
+            ).map((image, index) => (
               <div key={index} className="aspect-video overflow-hidden rounded-lg bg-muted">
                 <img
                   src={image}
