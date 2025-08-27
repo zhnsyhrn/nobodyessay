@@ -162,7 +162,7 @@ const ProjectDetail = () => {
         </div>
 
         {/* Project Information */}
-        <div className="mb-12 mt-8">
+        <div className="mb-12 mt-4">
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="project-info">
               <AccordionTrigger className="font-display text-xl font-medium">
@@ -194,7 +194,6 @@ const ProjectDetail = () => {
 
         {/* Project Gallery */}
         <div className="mb-12">
-          <h2 className="font-display text-2xl font-medium mb-8">Project Gallery</h2>
           <div className="grid grid-cols-1 gap-6">
             {[
               galleryImage1,
@@ -219,9 +218,9 @@ const ProjectDetail = () => {
         </div>
 
         {/* Navigation */}
-        <div className="mt-16 pt-8 border-t border-border text-center">
+        <div className="mt-16 text-center">
           <Link to="/studio">
-            <Button variant="outline" size="lg">
+            <Button variant="light" size="lg" className="font-display">
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to All Projects
             </Button>
