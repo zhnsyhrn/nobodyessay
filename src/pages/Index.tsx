@@ -12,18 +12,18 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import Autoplay from "embla-carousel-autoplay";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 
-// Portfolio design images - Your uploaded design work
+// Portfolio design images - Using existing uploaded images
 const portfolioImages = [
-  "/lovable-uploads/5e22d04c-6828-4453-8808-32c27baf6300.png", // Dealn mobile app UI
-  "/lovable-uploads/87978cbd-e470-43d1-8333-9b508eb0b9c2.png", // Verdant Solar marketing design
-  "/lovable-uploads/b4c34ae3-5a20-4ed1-8698-0dc1ee592864.png", // PolicyStreet insurance app
-  "/lovable-uploads/fb470af7-08a0-44be-9c12-d70835933af9.png", // Banking app interface
-  "/lovable-uploads/3f87fe59-00ad-4e23-ab43-17deef621121.png", // Health tracking app UI
-  "/lovable-uploads/142e34cc-19ad-4a3d-81d0-cb0541aa6d36.png", // Coffee packaging design
-  "/lovable-uploads/a0a6813e-77fb-4198-98df-6a3b6567f65e.png", // Corporate website design
-  "/lovable-uploads/500eeae1-3838-468e-88fb-9ec65fbd80bb.png", // Financial goal tracking UI
-  "/lovable-uploads/b7be53e6-a0c5-4056-9aec-355fee6e1d3c.png", // Legal firm branding
-  "/lovable-uploads/8a85e726-bd5e-4bb2-9714-dca0e7968541.png"  // Spark mobile app onboarding
+  "/lovable-uploads/e058676f-a0f2-441a-983c-a931949d96b8.png", // Design Portfolio Work 1
+  "/lovable-uploads/85dfff20-5584-4879-821e-0d913def0dc1.png", // Design Portfolio Work 2
+  "/lovable-uploads/7818744d-3050-4496-824e-8c4c7a8b1a4e.png", // Design Portfolio Work 3
+  "/lovable-uploads/c528a13e-2b16-4074-9369-d55af61f04ac.png", // Design Portfolio Work 4
+  "/lovable-uploads/1dcf470c-2ae1-4041-9270-802a1b166480.png", // Design Portfolio Work 5
+  "/lovable-uploads/c931605e-784c-4a52-ae00-b9eb94d0be58.png", // Design Portfolio Work 6
+  "/lovable-uploads/75943d99-0ed4-4445-9bdd-80d0bab01e5f.png", // Design Portfolio Work 7
+  "/lovable-uploads/02594b85-35a5-4f5e-b0f9-c93ee3f201a7.png", // Design Portfolio Work 8
+  "/lovable-uploads/2fbd8484-6091-4de8-8f0d-0c7c7ded5fb0.png", // Design Portfolio Work 9
+  "/lovable-uploads/b0b84054-8135-427f-8108-9f34cecc6fa7.png"  // Design Portfolio Work 10
 ];
 const Index = () => {
   const featuredWritings = getFeaturedEssays();
