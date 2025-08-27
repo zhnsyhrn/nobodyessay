@@ -88,38 +88,38 @@ const Studio = () => {
               }
             ].map((project, index) => (
               <div key={index} className="group cursor-pointer">
-                <div className="relative aspect-video overflow-hidden rounded-lg bg-muted">
+                <div className="aspect-video overflow-hidden rounded-lg bg-muted">
                   <img 
                     src={allImages[index % allImages.length]} 
                     alt={project.title} 
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
                     loading="lazy" 
                   />
-                  <div className="absolute bottom-0 left-0 right-0 p-6" style={{ backgroundColor: '#F5F5F5' }}>
-                    <div className="flex items-center justify-between">
-                      <div className="flex-1">
-                        <h3 className="font-display text-lg font-medium text-black mb-1">
-                          {project.title}
-                        </h3>
-                        <p className="font-mono text-sm text-gray-700">
-                          {project.description}
-                        </p>
-                      </div>
-                      <div className="ml-4">
-                        <svg 
-                          width="20" 
-                          height="20" 
-                          viewBox="0 0 24 24" 
-                          fill="none" 
-                          stroke="currentColor" 
-                          strokeWidth="2" 
-                          strokeLinecap="round" 
-                          strokeLinejoin="round"
-                          className="text-gray-600"
-                        >
-                          <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                        </svg>
-                      </div>
+                </div>
+                <div className="p-6 rounded-b-lg" style={{ backgroundColor: '#F5F5F5' }}>
+                  <div className="flex items-center justify-between">
+                    <div className="flex-1">
+                      <h3 className="font-display text-lg font-medium text-black mb-1">
+                        {project.title}
+                      </h3>
+                      <p className="font-mono text-sm text-gray-700">
+                        {project.description}
+                      </p>
+                    </div>
+                    <div className="ml-4">
+                      <svg 
+                        width="20" 
+                        height="20" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        strokeWidth="2" 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round"
+                        className="text-gray-600"
+                      >
+                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                      </svg>
                     </div>
                   </div>
                 </div>
