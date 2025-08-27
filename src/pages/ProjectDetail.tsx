@@ -157,7 +157,7 @@ const ProjectDetail = () => {
       <StickyNavbar />
       
       {/* Main Content */}
-      <div className="w-full py-12 px-4 sm:px-6 lg:px-12 xl:px-16">
+      <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6">
         {/* Back Navigation */}
         <div className="mb-8">
           <Link to="/studio" className="inline-flex items-center text-muted-foreground hover:text-foreground transition-colors">
