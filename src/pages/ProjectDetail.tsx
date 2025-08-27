@@ -154,7 +154,7 @@ const ProjectDetail = () => {
             </Button>
           </div>
           
-          <div className="border-b border-border pb-6">
+          <div className="border-b border-border pb-2">
             <p className="text-base sm:text-lg leading-relaxed" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060' }}>
               {project.overview}
             </p>
