@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
-import InfoBanner from "@/components/InfoBanner";
 import Autoplay from "embla-carousel-autoplay";
 
 // Sample project images - you can replace these with actual project images
@@ -38,7 +37,6 @@ const Studio = () => {
   }, [api]);
   return <div className="min-h-screen bg-background">
       <StickyNavbar />
-      <InfoBanner />
 
       {/* Hero Section */}
       <section className="py-8 sm:py-12 lg:py-20 px-4 sm:px-6 fade-in">

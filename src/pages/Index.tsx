@@ -7,7 +7,6 @@ import { getFeaturedEssays } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
-import InfoBanner from "@/components/InfoBanner";
 import { Instagram, Linkedin } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
@@ -41,7 +40,6 @@ const Index = () => {
   }, [api]);
   return <div className="min-h-screen bg-background">
       <StickyNavbar />
-      <InfoBanner />
 
       {/* Hero Section */}
       <section className="py-8 sm:py-12 lg:py-20 px-4 sm:px-6 fade-in pb-4 sm:pb-6">
