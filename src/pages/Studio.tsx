@@ -17,7 +17,6 @@ import galleryImage6 from "@/assets/gallery-06.jpg";
 import galleryImage7 from "@/assets/gallery-07.jpg";
 import galleryImage8 from "@/assets/gallery-08.jpg";
 import galleryImage9 from "@/assets/gallery-09.jpg";
-import moneyxMainImage from "@/assets/moneyx-01.png";
 const Studio = () => {
   // Carousel state
   const [api, setApi] = useState<CarouselApi>();
@@ -89,10 +88,10 @@ const Studio = () => {
               <Link key={index} to={`/projects/${project.slug}`} className="group cursor-pointer">
                 <div className="aspect-video overflow-hidden rounded-lg bg-muted">
                   <img 
-                    src={index === 0 ? moneyxMainImage : allImages[index % allImages.length]} 
+                    src={index === 0 ? "/lovable-uploads/c528a13e-2b16-4074-9369-d55af61f04ac.png" : allImages[index % allImages.length]} 
                     alt={project.title} 
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
-                    loading="lazy" 
+                    loading="lazy"
                   />
                 </div>
                 <div className="p-6 rounded-b-lg" style={{ backgroundColor: '#F5F5F5' }}>

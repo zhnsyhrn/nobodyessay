@@ -17,11 +17,17 @@ import galleryImage6 from "@/assets/gallery-06.jpg";
 import galleryImage7 from "@/assets/gallery-07.jpg";
 import galleryImage8 from "@/assets/gallery-08.jpg";
 
-// Import MoneyX project images
-import moneyxImage1 from "@/assets/moneyx-01.png";
-import moneyxImage2 from "@/assets/moneyx-02.png";
-import moneyxImage3 from "@/assets/moneyx-03.png";
-import moneyxImage4 from "@/assets/moneyx-04.png";
+// MoneyX project images (using public URLs)
+const moneyxImages = [
+  "/lovable-uploads/7818744d-3050-4496-824e-8c4c7a8b1a4e.png", // Components & Wireframes
+  "/lovable-uploads/c528a13e-2b16-4074-9369-d55af61f04ac.png", // Dashboard Core Experiences
+  "/lovable-uploads/1dcf470c-2ae1-4041-9270-802a1b166480.png", // Goal Creation
+  "/lovable-uploads/c931605e-784c-4a52-ae00-b9eb94d0be58.png", // Transactions
+  "/lovable-uploads/75943d99-0ed4-4445-9bdd-80d0bab01e5f.png", // UI Flow
+  "/lovable-uploads/02594b85-35a5-4f5e-b0f9-c93ee3f201a7.png", // Interface Flow
+  "/lovable-uploads/2fbd8484-6091-4de8-8f0d-0c7c7ded5fb0.png", // Categories & Charts
+  "/lovable-uploads/b0b84054-8135-427f-8108-9f34cecc6fa7.png"  // Final Flow
+];
 
 // Sample project data - you can replace this with actual data
 const projectsData = {
@@ -216,7 +222,7 @@ const ProjectDetail = () => {
         <div className="mb-12">
           <div className="grid grid-cols-1 gap-6">
             {(slug === 'moneyx-savings-goals-manual-entry' 
-              ? [moneyxImage1, moneyxImage2, moneyxImage3, moneyxImage4]
+              ? moneyxImages
               : [galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5, galleryImage6, galleryImage7, galleryImage8]
             ).map((image, index) => (
               <div key={index} className="aspect-video overflow-hidden rounded-lg bg-muted">
