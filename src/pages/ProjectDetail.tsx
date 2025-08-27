@@ -162,7 +162,7 @@ const ProjectDetail = () => {
         </div>
 
         {/* Project Information */}
-        <div className="mb-12 mt-4">
+        <div className="mb-12 mt-2">
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="project-info">
               <AccordionTrigger className="font-display text-xl font-medium">
