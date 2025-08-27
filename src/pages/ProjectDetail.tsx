@@ -169,9 +169,9 @@ const ProjectDetail = () => {
                 Project Information
               </AccordionTrigger>
               <AccordionContent>
-                <div className="space-y-6 pt-4">
+                <div className="space-y-3 pt-4">
                   {Object.entries(project.projectInfo).map(([key, value], index, array) => (
-                    <div key={key} className={`pb-4 ${index < array.length - 1 ? 'border-b border-border/50' : ''}`}>
+                    <div key={key} className={`pb-2 ${index < array.length - 1 ? 'border-b border-border/50' : ''}`}>
                       <div className="flex flex-col sm:flex-row sm:items-start">
                         <div className="w-full sm:w-48 mb-2 sm:mb-0">
                           <span className="font-mono text-sm text-muted-foreground uppercase tracking-wide">
