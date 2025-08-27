@@ -162,7 +162,7 @@ const ProjectDetail = () => {
         </div>
 
         {/* Project Information */}
-        <div className="mb-12">
+        <div className="mb-12 mt-8">
           <Accordion type="single" collapsible className="w-full">
             <AccordionItem value="project-info">
               <AccordionTrigger className="font-display text-xl font-medium">
@@ -170,8 +170,8 @@ const ProjectDetail = () => {
               </AccordionTrigger>
               <AccordionContent>
                 <div className="space-y-6 pt-4">
-                  {Object.entries(project.projectInfo).map(([key, value]) => (
-                    <div key={key} className="border-b border-border/50 pb-4">
+                  {Object.entries(project.projectInfo).map(([key, value], index, array) => (
+                    <div key={key} className={`pb-4 ${index < array.length - 1 ? 'border-b border-border/50' : ''}`}>
                       <div className="flex flex-col sm:flex-row sm:items-start">
                         <div className="w-full sm:w-48 mb-2 sm:mb-0">
                           <span className="font-mono text-sm text-muted-foreground uppercase tracking-wide">
