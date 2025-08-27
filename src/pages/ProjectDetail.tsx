@@ -195,7 +195,7 @@ const ProjectDetail = () => {
         {/* Project Gallery */}
         <div className="mb-12">
           <h2 className="font-display text-2xl font-medium mb-8">Project Gallery</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6">
             {[
               galleryImage1,
               galleryImage2,
