@@ -88,22 +88,19 @@ const Studio = () => {
               }
             ].map((project, index) => (
               <div key={index} className="group cursor-pointer">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-muted">
+                <div className="relative aspect-video overflow-hidden rounded-lg bg-muted">
                   <img 
                     src={allImages[index % allImages.length]} 
                     alt={project.title} 
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
                     loading="lazy" 
                   />
-                  <div className="absolute bottom-0 left-0 right-0 p-6" style={{ backgroundColor: '#EBEBEB' }}>
+                  <div className="absolute bottom-0 left-0 right-0 p-6" style={{ backgroundColor: '#F5F5F5' }}>
                     <div className="flex items-center justify-between">
                       <div className="flex-1">
                         <h3 className="font-display text-lg font-medium text-black mb-1">
                           {project.title}
                         </h3>
-                        <p className="font-mono text-sm text-gray-600 mb-1">
-                          {project.location}
-                        </p>
                         <p className="font-mono text-sm text-gray-700">
                           {project.description}
                         </p>
