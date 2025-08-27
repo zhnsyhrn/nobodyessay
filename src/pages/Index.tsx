@@ -12,18 +12,18 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import Autoplay from "embla-carousel-autoplay";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 
-// Portfolio design images
+// Portfolio design images - Your uploaded design work
 const portfolioImages = [
-  "/lovable-uploads/7818744d-3050-4496-824e-8c4c7a8b1a4e.png", // UI Components & Wireframes
-  "/lovable-uploads/c528a13e-2b16-4074-9369-d55af61f04ac.png", // Dashboard Design
-  "/lovable-uploads/1dcf470c-2ae1-4041-9270-802a1b166480.png", // Goal Creation Interface
-  "/lovable-uploads/c931605e-784c-4a52-ae00-b9eb94d0be58.png", // Transaction Flows
-  "/lovable-uploads/75943d99-0ed4-4445-9bdd-80d0bab01e5f.png", // Mobile UI Flow
-  "/lovable-uploads/02594b85-35a5-4f5e-b0f9-c93ee3f201a7.png", // Interface Design
-  "/lovable-uploads/2fbd8484-6091-4de8-8f0d-0c7c7ded5fb0.png", // Data Visualization
-  "/lovable-uploads/b0b84054-8135-427f-8108-9f34cecc6fa7.png", // User Experience Flow
-  "/lovable-uploads/307c85f4-d33f-45a4-83d5-c8d95c1b4a07.png", // Brand Design
-  "/lovable-uploads/318ce04d-e3cb-473d-81bc-63e4c917981c.png"  // Product Design
+  "/lovable-uploads/e058676f-a0f2-441a-983c-a931949d96b8.png", // Design Portfolio Work 1
+  "/lovable-uploads/85dfff20-5584-4879-821e-0d913def0dc1.png", // Design Portfolio Work 2
+  "/lovable-uploads/7818744d-3050-4496-824e-8c4c7a8b1a4e.png", // Design Portfolio Work 3
+  "/lovable-uploads/c528a13e-2b16-4074-9369-d55af61f04ac.png", // Design Portfolio Work 4
+  "/lovable-uploads/1dcf470c-2ae1-4041-9270-802a1b166480.png", // Design Portfolio Work 5
+  "/lovable-uploads/c931605e-784c-4a52-ae00-b9eb94d0be58.png", // Design Portfolio Work 6
+  "/lovable-uploads/75943d99-0ed4-4445-9bdd-80d0bab01e5f.png", // Design Portfolio Work 7
+  "/lovable-uploads/02594b85-35a5-4f5e-b0f9-c93ee3f201a7.png", // Design Portfolio Work 8
+  "/lovable-uploads/2fbd8484-6091-4de8-8f0d-0c7c7ded5fb0.png", // Design Portfolio Work 9
+  "/lovable-uploads/b0b84054-8135-427f-8108-9f34cecc6fa7.png"  // Design Portfolio Work 10
 ];
 const Index = () => {
   const featuredWritings = getFeaturedEssays();
