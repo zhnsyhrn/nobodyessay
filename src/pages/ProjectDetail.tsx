@@ -1,10 +1,21 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
 import { ExternalLink, ArrowLeft } from "lucide-react";
+
+// Import gallery images
+import galleryImage1 from "@/assets/gallery-01.jpg";
+import galleryImage2 from "@/assets/gallery-02.jpg";
+import galleryImage3 from "@/assets/gallery-03.jpg";
+import galleryImage4 from "@/assets/gallery-04.jpg";
+import galleryImage5 from "@/assets/gallery-05.jpg";
+import galleryImage6 from "@/assets/gallery-06.jpg";
+import galleryImage7 from "@/assets/gallery-07.jpg";
+import galleryImage8 from "@/assets/gallery-08.jpg";
 
 // Sample project data - you can replace this with actual data
 const projectsData = {
@@ -144,30 +155,67 @@ const ProjectDetail = () => {
           </div>
           
           <div className="border-b border-border pb-6">
-            <p className="font-mono text-muted-foreground leading-relaxed">
+            <p className="text-base sm:text-lg leading-relaxed" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060' }}>
               {project.overview}
             </p>
           </div>
         </div>
 
         {/* Project Information */}
-        <div className="space-y-8">
-          {Object.entries(project.projectInfo).map(([key, value]) => (
-            <div key={key} className="border-b border-border/50 pb-4">
-              <div className="flex flex-col sm:flex-row sm:items-start">
-                <div className="w-full sm:w-48 mb-2 sm:mb-0">
-                  <span className="font-mono text-sm text-muted-foreground uppercase tracking-wide">
-                    {key}
-                  </span>
+        <div className="mb-12">
+          <Accordion type="single" collapsible className="w-full">
+            <AccordionItem value="project-info">
+              <AccordionTrigger className="font-display text-xl font-medium">
+                Project Information
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="space-y-6 pt-4">
+                  {Object.entries(project.projectInfo).map(([key, value]) => (
+                    <div key={key} className="border-b border-border/50 pb-4">
+                      <div className="flex flex-col sm:flex-row sm:items-start">
+                        <div className="w-full sm:w-48 mb-2 sm:mb-0">
+                          <span className="font-mono text-sm text-muted-foreground uppercase tracking-wide">
+                            {key}
+                          </span>
+                        </div>
+                        <div className="flex-1">
+                          <p className="font-mono text-foreground">
+                            {value}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                <div className="flex-1">
-                  <p className="font-mono text-foreground">
-                    {value}
-                  </p>
-                </div>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+
+        {/* Project Gallery */}
+        <div className="mb-12">
+          <h2 className="font-display text-2xl font-medium mb-8">Project Gallery</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              galleryImage1,
+              galleryImage2,
+              galleryImage3,
+              galleryImage4,
+              galleryImage5,
+              galleryImage6,
+              galleryImage7,
+              galleryImage8
+            ].map((image, index) => (
+              <div key={index} className="aspect-video overflow-hidden rounded-lg bg-muted">
+                <img
+                  src={image}
+                  alt={`${project.title} - Image ${index + 1}`}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Navigation */}
