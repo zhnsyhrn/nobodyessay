@@ -14,17 +14,25 @@ import Autoplay from "embla-carousel-autoplay";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 // Portfolio design images - Your latest design portfolio work
-const portfolioImages = [
-  "/lovable-uploads/8522cb15-bd11-4bf2-9180-619939a55e10.png", // Dealn mobile app UI
-  "/lovable-uploads/53e0e815-137f-432c-b911-7b4e350825c9.png", // Verdant Solar marketing design
-  "/lovable-uploads/3f6db57e-8fa8-4856-8053-b49d12f800a6.png", // PolicyStreet insurance app
-  "/lovable-uploads/788b5ed7-7c3b-45d4-9514-30ed5c61b691.png", // Banking app interface
-  "/lovable-uploads/dae15990-3155-4b7d-b781-466cb9ae3574.png", // Health tracking app UI
-  "/lovable-uploads/b738fc37-b9ee-4bea-9dca-797cef546f3a.png", // Coffee packaging design
-  "/lovable-uploads/514634dc-ae1c-4362-8cb4-ebdea96fd21e.png", // Corporate website design
-  "/lovable-uploads/4982d9b9-bf59-4d92-b1df-f4df6aefa746.png", // Financial goal tracking UI
-  "/lovable-uploads/a88214a6-39ca-471c-aee2-8eadc8dafa6f.png", // Legal firm branding
-  "/lovable-uploads/6944a474-3ed4-4943-ac6d-b1d7bcf575ec.png"  // Spark mobile app onboarding
+const portfolioImages = ["/lovable-uploads/8522cb15-bd11-4bf2-9180-619939a55e10.png",
+// Dealn mobile app UI
+"/lovable-uploads/53e0e815-137f-432c-b911-7b4e350825c9.png",
+// Verdant Solar marketing design
+"/lovable-uploads/3f6db57e-8fa8-4856-8053-b49d12f800a6.png",
+// PolicyStreet insurance app
+"/lovable-uploads/788b5ed7-7c3b-45d4-9514-30ed5c61b691.png",
+// Banking app interface
+"/lovable-uploads/dae15990-3155-4b7d-b781-466cb9ae3574.png",
+// Health tracking app UI
+"/lovable-uploads/b738fc37-b9ee-4bea-9dca-797cef546f3a.png",
+// Coffee packaging design
+"/lovable-uploads/514634dc-ae1c-4362-8cb4-ebdea96fd21e.png",
+// Corporate website design
+"/lovable-uploads/4982d9b9-bf59-4d92-b1df-f4df6aefa746.png",
+// Financial goal tracking UI
+"/lovable-uploads/a88214a6-39ca-471c-aee2-8eadc8dafa6f.png",
+// Legal firm branding
+"/lovable-uploads/6944a474-3ed4-4943-ac6d-b1d7bcf575ec.png" // Spark mobile app onboarding
 ];
 const Index = () => {
   const featuredWritings = getFeaturedEssays();
@@ -51,7 +59,7 @@ const Index = () => {
           <h2 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">I do design and write. Everything's documented here.</h2>
           <p style={{
           color: '#606060'
-        }} className="font-jakarta text-lg sm:text-lg max-w-2xl leading-[27px] sm:leading-relaxed px-1 mb-6 sm:mb-8 sm:px-0">I'd learned to code this site using AI so that I can show my collection of works. Because what's the point if I don't overshare?</p>
+        }} className="font-jakarta text-lg sm:text-lg max-w-2xl leading-[27px] sm:leading-relaxed px-1 mb-6 sm:mb-8 sm:px-0">I'd learned to code this site using AI so that I can show my collection of works.</p>
           
           {/* Navigation Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 px-1 sm:px-2">
