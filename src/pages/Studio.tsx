@@ -39,18 +39,15 @@ const Studio = () => {
       <StickyNavbar />
 
       {/* Hero Section */}
-      <section className="py-8 sm:py-12 lg:py-20 px-4 sm:px-6 fade-in">
+      <section className="py-8 sm:py-12 px-4 sm:px-6 fade-in lg:py-[40px]">
         <div className="max-w-6xl mx-auto text-left sm:text-center">
           <h1 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">Turning briefs into real things, even the ones that change halfway.</h1>
-          <p className="font-jakarta sm:text-lg max-w-2xl sm:mx-auto leading-[27px] sm:leading-[29px]" style={{
-          fontSize: '18px',
-          color: '#606060'
-        }}>Your unsolicited critique is expected, your approval is optional, and your silence will be taken as applause. Scroll, skim, judge… I'll act surprised either way.</p>
+          
         </div>
       </section>
 
       {/* Projects Grid */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6">
+      <section className="py-12 px-4 sm:px-6 sm:py-[60px]">
         <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16">          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
             {[{
