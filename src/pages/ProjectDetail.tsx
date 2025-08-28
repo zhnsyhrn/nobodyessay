@@ -18,20 +18,25 @@ import galleryImage7 from "@/assets/gallery-07.jpg";
 import galleryImage8 from "@/assets/gallery-08.jpg";
 
 // MoneyX project images (using public URLs)
-const moneyxImages = [
-  "/lovable-uploads/7818744d-3050-4496-824e-8c4c7a8b1a4e.png", // Components & Wireframes
-  "/lovable-uploads/c528a13e-2b16-4074-9369-d55af61f04ac.png", // Dashboard Core Experiences
-  "/lovable-uploads/1dcf470c-2ae1-4041-9270-802a1b166480.png", // Goal Creation
-  "/lovable-uploads/c931605e-784c-4a52-ae00-b9eb94d0be58.png", // Transactions
-  "/lovable-uploads/75943d99-0ed4-4445-9bdd-80d0bab01e5f.png", // UI Flow
-  "/lovable-uploads/02594b85-35a5-4f5e-b0f9-c93ee3f201a7.png", // Interface Flow
-  "/lovable-uploads/2fbd8484-6091-4de8-8f0d-0c7c7ded5fb0.png", // Categories & Charts
-  "/lovable-uploads/b0b84054-8135-427f-8108-9f34cecc6fa7.png"  // Final Flow
+const moneyxImages = ["/lovable-uploads/7818744d-3050-4496-824e-8c4c7a8b1a4e.png",
+// Components & Wireframes
+"/lovable-uploads/c528a13e-2b16-4074-9369-d55af61f04ac.png",
+// Dashboard Core Experiences
+"/lovable-uploads/1dcf470c-2ae1-4041-9270-802a1b166480.png",
+// Goal Creation
+"/lovable-uploads/c931605e-784c-4a52-ae00-b9eb94d0be58.png",
+// Transactions
+"/lovable-uploads/75943d99-0ed4-4445-9bdd-80d0bab01e5f.png",
+// UI Flow
+"/lovable-uploads/02594b85-35a5-4f5e-b0f9-c93ee3f201a7.png",
+// Interface Flow
+"/lovable-uploads/2fbd8484-6091-4de8-8f0d-0c7c7ded5fb0.png",
+// Categories & Charts
+"/lovable-uploads/b0b84054-8135-427f-8108-9f34cecc6fa7.png" // Final Flow
 ];
 
 // Knock Knock Cafe project images
-const knockKnockImages = [
-  "/lovable-uploads/727cdb13-e96f-4680-8771-62fb1f9b98ef.png" // Coffee packaging design
+const knockKnockImages = ["/lovable-uploads/727cdb13-e96f-4680-8771-62fb1f9b98ef.png" // Coffee packaging design
 ];
 
 // Sample project data - you can replace this with actual data
@@ -80,7 +85,7 @@ const projectsData = {
   },
   "changfeng-mixed-use": {
     title: "Changfeng Mixed Use Development",
-    websiteUrl: "https://example.com/project2", 
+    websiteUrl: "https://example.com/project2",
     overview: "Integrated commercial and residential complex with modern architectural design in the heart of Shanghai. This development bridges traditional Chinese architecture with contemporary urban living needs.",
     projectInfo: {
       "Project / Company": "Shanghai Development Group",
@@ -133,16 +138,17 @@ const projectsData = {
       "Value Added": "Achieved 90% energy efficiency compared to traditional office buildings",
       "Credits": "UK Green Building Council, Mayor of London's Office"
     }
-  },
+  }
 };
-
 const ProjectDetail = () => {
-  const { slug } = useParams<{ slug: string }>();
+  const {
+    slug
+  } = useParams<{
+    slug: string;
+  }>();
   const project = slug ? projectsData[slug as keyof typeof projectsData] : null;
-
   if (!project) {
-    return (
-      <div className="min-h-screen bg-background">
+    return <div className="min-h-screen bg-background">
         <StickyNavbar />
         <div className="max-w-4xl mx-auto py-20 px-4 text-center">
           <h1 className="font-display text-2xl mb-4">Project not found</h1>
@@ -153,12 +159,9 @@ const ProjectDetail = () => {
             </Button>
           </Link>
         </div>
-      </div>
-    );
+      </div>;
   }
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <StickyNavbar />
       
       {/* Main Content */}
@@ -186,7 +189,10 @@ const ProjectDetail = () => {
           </div>
           
           <div className="border-b border-border pb-2">
-            <p className="text-base sm:text-lg leading-relaxed" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060' }}>
+            <p className="text-base sm:text-lg leading-relaxed" style={{
+            fontFamily: 'Plus Jakarta Sans, sans-serif',
+            color: '#606060'
+          }}>
               {project.overview}
             </p>
           </div>
@@ -201,8 +207,7 @@ const ProjectDetail = () => {
               </AccordionTrigger>
               <AccordionContent>
                 <div className="space-y-3 pt-4">
-                  {Object.entries(project.projectInfo).map(([key, value], index, array) => (
-                    <div key={key} className={`pb-2 ${index < array.length - 1 ? 'border-b border-border/50' : ''}`}>
+                  {Object.entries(project.projectInfo).map(([key, value], index, array) => <div key={key} className={`pb-2 ${index < array.length - 1 ? 'border-b border-border/50' : ''}`}>
                       <div className="flex flex-col sm:flex-row sm:items-start">
                         <div className="w-full sm:w-48 mb-2 sm:mb-0">
                           <span className="font-mono text-sm text-muted-foreground uppercase tracking-wide">
@@ -210,13 +215,12 @@ const ProjectDetail = () => {
                           </span>
                         </div>
                         <div className="flex-1">
-                          <p className="font-mono text-foreground">
+                          <p className="font-mono text-foreground text-sm">
                             {value}
                           </p>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </AccordionContent>
             </AccordionItem>
@@ -226,21 +230,9 @@ const ProjectDetail = () => {
         {/* Project Gallery */}
         <div className="mb-12">
           <div className="grid grid-cols-1 gap-6">
-            {(slug === 'moneyx-savings-goals-manual-entry' 
-              ? moneyxImages
-              : slug === 'knock-knock-cafe-kuala-terengganu'
-              ? knockKnockImages
-              : [galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5, galleryImage6, galleryImage7, galleryImage8]
-            ).map((image, index) => (
-              <div key={index} className="aspect-video overflow-hidden rounded-lg bg-muted">
-                <img
-                  src={image}
-                  alt={`${project.title} - Image ${index + 1}`}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  loading="lazy"
-                />
-              </div>
-            ))}
+            {(slug === 'moneyx-savings-goals-manual-entry' ? moneyxImages : slug === 'knock-knock-cafe-kuala-terengganu' ? knockKnockImages : [galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5, galleryImage6, galleryImage7, galleryImage8]).map((image, index) => <div key={index} className="aspect-video overflow-hidden rounded-lg bg-muted">
+                <img src={image} alt={`${project.title} - Image ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>)}
           </div>
         </div>
 
@@ -257,8 +249,6 @@ const ProjectDetail = () => {
 
       <Footer />
       <ScrollToTopButton />
-    </div>
-  );
+    </div>;
 };
-
 export default ProjectDetail;
