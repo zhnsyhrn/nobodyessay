@@ -13,14 +13,8 @@ const Writings = () => {
       {/* Header */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 fade-in">
         <div className="max-w-4xl mx-auto text-left">
-          <h2 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">Thoughts too long for a tweet, too short for a book. Thinking out loud, quietly.</h2>
-          <p className="font-jakarta sm:text-lg max-w-2xl leading-relaxed px-2 sm:leading-[29px]" style={{
-          fontSize: '18px',
-          lineHeight: '27px',
-          color: '#606060'
-        }}>
-            If you're here, you're already curious. Welcome to my thoughts!
-          </p>
+          <h2 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">If you're here, you're already curious. Read my thoughts.</h2>
+          
         </div>
       </section>
 
@@ -46,8 +40,8 @@ const Writings = () => {
                   </h2>
                   
                   <p className="font-typewriter leading-relaxed text-sm sm:text-base" style={{
-                    color: '#606060'
-                  }}>
+                color: '#606060'
+              }}>
                     {writing.excerpt}
                   </p>
                   
