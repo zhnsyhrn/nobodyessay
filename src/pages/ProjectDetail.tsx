@@ -31,7 +31,7 @@ const moneyxImages = [
 
 // Knock Knock Cafe project images
 const knockKnockImages = [
-  "/lovable-uploads/63448ecf-8a17-4295-82ef-153389961193.png" // Coffee packaging design
+  "/lovable-uploads/727cdb13-e96f-4680-8771-62fb1f9b98ef.png" // Coffee packaging design
 ];
 
 // Sample project data - you can replace this with actual data

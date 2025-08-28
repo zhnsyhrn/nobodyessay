@@ -88,7 +88,9 @@ const Studio = () => {
               <Link key={index} to={`/projects/${project.slug}`} className="group cursor-pointer">
                 <div className="aspect-video overflow-hidden rounded-lg bg-muted">
                   <img 
-                    src={index === 0 ? "/lovable-uploads/38a4617f-499b-49dd-accd-4531551d30ac.png" : allImages[index % allImages.length]}
+                    src={index === 0 ? "/lovable-uploads/38a4617f-499b-49dd-accd-4531551d30ac.png" : 
+                         index === 1 ? "/lovable-uploads/727cdb13-e96f-4680-8771-62fb1f9b98ef.png" : 
+                         allImages[index % allImages.length]}
                     alt={project.title} 
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
                     loading="lazy"
