@@ -29,6 +29,11 @@ const moneyxImages = [
   "/lovable-uploads/b0b84054-8135-427f-8108-9f34cecc6fa7.png"  // Final Flow
 ];
 
+// Knock Knock Cafe project images
+const knockKnockImages = [
+  "/lovable-uploads/63448ecf-8a17-4295-82ef-153389961193.png" // Coffee packaging design
+];
+
 // Sample project data - you can replace this with actual data
 const projectsData = {
   "moneyx-savings-goals-manual-entry": {
@@ -43,6 +48,20 @@ const projectsData = {
       "Project Lead / Product Manager(s)": "Shan Yi T.",
       "Value Added": "Component assets creation, user flow optimisation",
       "Credits": "Yudhis (3D Icons), Toshi Feryanshah (Lead UX Designer)"
+    }
+  },
+  "knock-knock-cafe-kuala-terengganu": {
+    title: "Knock Knock Cafe",
+    websiteUrl: "https://share.google/iyxthFbyCnHGwy5zD",
+    overview: "This is the outcome of a minor branding and design project I worked on for a small local café in Kampung Cina, Kuala Terengganu, located just steps away from the iconic Pasar Payang Central Market. The café already stands out, with 42 reviews and an impressive 4.8-star average rating from happy customers. Full story, read here.",
+    projectInfo: {
+      "Project / Company": "Knock Knock Cafe, Kuala Terengganu, Terengganu, Malaysia",
+      "Type": "Art direction, Logo & brand design",
+      "Role / Project Ownership": "Lead designer",
+      "Contribution": "Design research, logo creation, brand identity concept",
+      "Project Lead / Product Manager(s)": "Zahin Syahiran",
+      "Value Added": "Design consultation",
+      "Credits": "Not available"
     }
   },
   "south-sabah-masterplan": {
@@ -115,20 +134,6 @@ const projectsData = {
       "Credits": "UK Green Building Council, Mayor of London's Office"
     }
   },
-  "smart-city-innovation-park": {
-    title: "Smart City Innovation Park",
-    websiteUrl: "https://example.com/project6",
-    overview: "Technology-focused development promoting innovation and digital transformation in Tokyo. A living laboratory for smart city technologies and sustainable urban solutions.",
-    projectInfo: {
-      "Project / Company": "Tokyo Innovation Authority",
-      "Type": "Technology Park & Innovation Hub",
-      "Role / Project Ownership": "Smart Systems Designer & Innovation Strategist",
-      "Contribution": "IoT infrastructure, smart building systems, innovation ecosystem design",
-      "Project Lead / Product Manager(s)": "Hiroshi Yamamoto, Anna Kowalski",
-      "Value Added": "Created Japan's first fully integrated smart city testbed",
-      "Credits": "Ministry of Digital Affairs Japan, Tokyo Metropolitan Government"
-    }
-  }
 };
 
 const ProjectDetail = () => {
@@ -223,6 +228,8 @@ const ProjectDetail = () => {
           <div className="grid grid-cols-1 gap-6">
             {(slug === 'moneyx-savings-goals-manual-entry' 
               ? moneyxImages
+              : slug === 'knock-knock-cafe-kuala-terengganu'
+              ? knockKnockImages
               : [galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5, galleryImage6, galleryImage7, galleryImage8]
             ).map((image, index) => (
               <div key={index} className="aspect-video overflow-hidden rounded-lg bg-muted">

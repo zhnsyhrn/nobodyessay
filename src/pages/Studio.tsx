@@ -83,11 +83,6 @@ const Studio = () => {
                 title: "Sustainable Office Complex",
                 slug: "sustainable-office-complex",
                 description: "Energy-efficient commercial development with innovative green building technologies"
-              },
-              {
-                title: "Smart City Innovation Park",
-                slug: "smart-city-innovation-park",
-                description: "Technology-focused development promoting innovation and digital transformation"
               }
             ].map((project, index) => (
               <Link key={index} to={`/projects/${project.slug}`} className="group cursor-pointer">
