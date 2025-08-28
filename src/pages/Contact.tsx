@@ -22,9 +22,7 @@ const Contact = () => {
                 </h1>
                 <p style={{
                 color: '#606060'
-              }} className="font-mono text-lg sm:text-lg max-w-2xl leading-[27px] sm:leading-relaxed px-1 mb-6 sm:mb-8 sm:px-0">
-                  Send me a message on Linkedin or an email at muhammadzahien@gmail.com
-                </p>
+              }} className="font-mono text-lg max-w-2xl leading-[27px] sm:leading-relaxed px-1 mb-6 sm:mb-8 sm:px-0 text-zinc-400 sm:text-sm">SEND ME A MESSAGE ON LINKEDIN OR AN EMAIL.</p>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 px-1 sm:px-2">
@@ -43,11 +41,7 @@ const Contact = () => {
             {/* Image Column */}
             <div className="flex justify-center">
               <div className="w-full max-w-md aspect-square bg-muted rounded-lg overflow-hidden">
-                <img 
-                  src="/lovable-uploads/85dfff20-5584-4879-821e-0d913def0dc1.png" 
-                  alt="Profile photo" 
-                  className="w-full h-full object-cover"
-                />
+                <img src="/lovable-uploads/85dfff20-5584-4879-821e-0d913def0dc1.png" alt="Profile photo" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
