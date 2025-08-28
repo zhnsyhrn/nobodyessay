@@ -52,12 +52,17 @@ const Studio = () => {
       {/* Projects Grid */}
       <section className="py-12 sm:py-16 px-4 sm:px-6">
         <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16">          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
             {[
                 {
                 title: "MoneyX App",
                 slug: "moneyx-savings-goals-manual-entry",
                 description: "App feature UIUX design"
+              },
+              {
+                title: "Knock Knock Cafe",
+                slug: "knock-knock-cafe-kuala-terengganu", 
+                description: "Art direction & brand design"
               },
               {
                 title: "Changfeng Mixed Use Development", 
@@ -123,32 +128,6 @@ const Studio = () => {
                 </div>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* More to Explore */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6 bg-muted/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h3 className="font-display text-xl sm:text-2xl font-medium mb-4 sm:mb-6">
-            More to Explore
-          </h3>
-          
-          <p className="font-typewriter text-muted-foreground leading-relaxed mb-6 sm:mb-8 max-w-2xl mx-auto px-2 text-sm sm:text-base">
-            Discover more essays and reflections, or learn about the person behind these words.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
-            <Link to="/writings" className="w-full sm:w-auto">
-              <Button className="font-display min-h-[48px] px-6 w-full">
-                All Writings
-              </Button>
-            </Link>
-            <Link to="/about" className="w-full sm:w-auto">
-              <Button variant="ghost" className="font-display min-h-[48px] px-6 w-full">
-                About the Writer
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
