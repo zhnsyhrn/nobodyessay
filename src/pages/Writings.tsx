@@ -11,7 +11,7 @@ const Writings = () => {
       <StickyNavbar />
 
       {/* Header */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 fade-in">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 fade-in lg:py-[60px]">
         <div className="max-w-4xl mx-auto text-left">
           <h2 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">If you're here, you're already curious. Read my thoughts.</h2>
           
