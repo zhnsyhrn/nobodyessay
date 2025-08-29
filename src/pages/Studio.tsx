@@ -61,9 +61,13 @@ const Studio = () => {
             title: "PolicyStreet - InsurTech",
             slug: "policystreet-car-insurance-platform",
             description: "Insurance marketplace platform"
+          }, {
+            title: "Referral Program Design",
+            slug: "moneyx-moneyxbiz-referral-program",
+            description: "Insurance marketplace platform"
           }].map((project, index) => <Link key={index} to={`/projects/${project.slug}`} className="group cursor-pointer">
                 <div className="aspect-video overflow-hidden rounded-lg bg-muted">
-                  <img src={index === 0 ? "/lovable-uploads/38a4617f-499b-49dd-accd-4531551d30ac.png" : index === 1 ? "/lovable-uploads/727cdb13-e96f-4680-8771-62fb1f9b98ef.png" : index === 2 ? "/lovable-uploads/8537072c-4ef3-428b-8003-c4c1877fac8c.png" : allImages[index % allImages.length]} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                  <img src={index === 0 ? "/lovable-uploads/38a4617f-499b-49dd-accd-4531551d30ac.png" : index === 1 ? "/lovable-uploads/727cdb13-e96f-4680-8771-62fb1f9b98ef.png" : index === 2 ? "/lovable-uploads/8537072c-4ef3-428b-8003-c4c1877fac8c.png" : index === 3 ? "/lovable-uploads/3203ca77-96ca-4347-9e77-4a9c89891bfb.png" : allImages[index % allImages.length]} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                 </div>
                 <div className="p-6 rounded-b-lg" style={{
               backgroundColor: '#F5F5F5'

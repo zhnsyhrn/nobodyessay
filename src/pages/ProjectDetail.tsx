@@ -48,6 +48,11 @@ const policyStreetImages = [
   "/lovable-uploads/bbfa2e07-10f8-41ed-91a7-5b3c0cdb3c1c.png"
 ];
 
+// Referral Program project images
+const referralProgramImages = [
+  "/lovable-uploads/3203ca77-96ca-4347-9e77-4a9c89891bfb.png"
+];
+
 // Sample project data - you can replace this with actual data
 const projectsData = {
   "moneyx-savings-goals-manual-entry": {
@@ -161,6 +166,20 @@ const projectsData = {
       "Value Added": "Achieved 90% energy efficiency compared to traditional office buildings",
       "Credits": "UK Green Building Council, Mayor of London's Office"
     }
+  },
+  "moneyx-moneyxbiz-referral-program": {
+    title: "Referral Program Design",
+    websiteUrl: "https://moneyx.com.my/referral",
+    overview: "The idea of this module is to design and implement a Revenue Sharing Model concept for all business owners that comes onto our platform and strengthen the unique selling point (USP) of the MoneyX Biz platform as an important factor that ought to be considered in a B2B aggregator platform including for MoneyX App. It took around 3-4 weeks to design, followed by 2-3 months for development and testing. The process started from 23/12/2024 till 8/1/2025 for full development.",
+    projectInfo: {
+      "Project / Company": "MoneyX, Hextar Technologies Solutions Berhad",
+      "Type": "Web Portal, UIUX Design, Admin Dashboard",
+      "Role / Project Ownership": "Lead designer for this project",
+      "Contribution": "High-fidelity design, design research, assets creation",
+      "Project Lead / Product Manager(s)": "Shan Yi T., Megan Kwan",
+      "Value Added": "Functional logics, tech specs",
+      "Credits": "Yudhis (3D Icons)"
+    }
   }
 };
 const ProjectDetail = () => {
@@ -255,7 +274,7 @@ const ProjectDetail = () => {
       {/* Project Gallery - Full Width */}
       <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16 mb-12">
         <div className="grid grid-cols-1 gap-6">
-          {(slug === 'moneyx-savings-goals-manual-entry' ? moneyxImages : slug === 'knock-knock-cafe-kuala-terengganu' ? knockKnockImages : slug === 'policystreet-car-insurance-platform' ? policyStreetImages : [galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5, galleryImage6, galleryImage7, galleryImage8]).map((image, index) => <div key={index} className="aspect-video overflow-hidden rounded-lg bg-muted">
+          {(slug === 'moneyx-savings-goals-manual-entry' ? moneyxImages : slug === 'knock-knock-cafe-kuala-terengganu' ? knockKnockImages : slug === 'policystreet-car-insurance-platform' ? policyStreetImages : slug === 'moneyx-moneyxbiz-referral-program' ? referralProgramImages : [galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5, galleryImage6, galleryImage7, galleryImage8]).map((image, index) => <div key={index} className="aspect-video overflow-hidden rounded-lg bg-muted">
               <img src={image} alt={`${project.title} - Image ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
             </div>)}
         </div>
