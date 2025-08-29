@@ -54,18 +54,13 @@ const Studio = () => {
         <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16">          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
             {[{
-            title: "MoneyX App",
-            slug: "moneyx-savings-goals-manual-entry",
-            description: "App feature UIUX design",
-            hasDetails: true
+            title: "Great Eastern Takaful Malaysia",
+            slug: "great-eastern-takaful",
+            description: "UX Audit",
+            hasDetails: false
           }, {
             title: "PolicyStreet - InsurTech",
             slug: "policystreet-car-insurance-platform",
-            description: "Insurance marketplace platform",
-            hasDetails: true
-          }, {
-            title: "Referral Program Design",
-            slug: "moneyx-moneyxbiz-referral-program",
             description: "Insurance marketplace platform",
             hasDetails: true
           }, {
@@ -74,14 +69,19 @@ const Studio = () => {
             description: "Art direction & brand design",
             hasDetails: true
           }, {
+            title: "MoneyX App - Fintech",
+            slug: "moneyx-savings-goals-manual-entry",
+            description: "App feature UIUX design",
+            hasDetails: true
+          }, {
             title: "Aqa Group of Companies",
             slug: "aqa-group-companies",
             description: "Website redesign",
             hasDetails: false
           }, {
-            title: "Great Eastern Takaful Malaysia",
-            slug: "great-eastern-takaful",
-            description: "UX Audit",
+            title: "Verdant Solar",
+            slug: "verdant-solar",
+            description: "Social media graphics",
             hasDetails: false
           }, {
             title: "Deal Experience Platform (DXP)",
@@ -89,21 +89,21 @@ const Studio = () => {
             description: "SaaS tools design",
             hasDetails: false
           }, {
-            title: "Verdant Solar",
-            slug: "verdant-solar",
-            description: "Social media graphics",
-            hasDetails: false
+            title: "Referral Program Design",
+            slug: "moneyx-moneyxbiz-referral-program",
+            description: "Insurance marketplace platform",
+            hasDetails: true
           }].map((project, index) => {
             const getImageSrc = (index: number) => {
               const images = [
-                "/lovable-uploads/38a4617f-499b-49dd-accd-4531551d30ac.png",
-                "/lovable-uploads/8537072c-4ef3-428b-8003-c4c1877fac8c.png",
-                "/lovable-uploads/3203ca77-96ca-4347-9e77-4a9c89891bfb.png",
-                "/lovable-uploads/727cdb13-e96f-4680-8771-62fb1f9b98ef.png",
-                "/lovable-uploads/6a5cb6e1-03b7-4408-acc9-3a920fc02038.png",
-                "/lovable-uploads/69a2f54d-177c-4bcd-9167-0e4939d7b7fb.png",
-                "/lovable-uploads/56229a8c-fdd0-4e96-bf18-1fe4c4b566b2.png",
-                "/lovable-uploads/b4780aa0-32a0-449d-b039-b83cc167691e.png"
+                "/lovable-uploads/69a2f54d-177c-4bcd-9167-0e4939d7b7fb.png", // Great Eastern
+                "/lovable-uploads/8537072c-4ef3-428b-8003-c4c1877fac8c.png", // PolicyStreet
+                "/lovable-uploads/727cdb13-e96f-4680-8771-62fb1f9b98ef.png", // Knock Knock Cafe
+                "/lovable-uploads/38a4617f-499b-49dd-accd-4531551d30ac.png", // MoneyX App
+                "/lovable-uploads/6a5cb6e1-03b7-4408-acc9-3a920fc02038.png", // Aqa Group
+                "/lovable-uploads/b4780aa0-32a0-449d-b039-b83cc167691e.png", // Verdant Solar
+                "/lovable-uploads/56229a8c-fdd0-4e96-bf18-1fe4c4b566b2.png", // Deal Experience Platform
+                "/lovable-uploads/3203ca77-96ca-4347-9e77-4a9c89891bfb.png"  // Referral Program
               ];
               return images[index] || allImages[index % allImages.length];
             };

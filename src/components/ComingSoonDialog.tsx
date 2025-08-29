@@ -17,7 +17,7 @@ const ComingSoonDialog = ({ open, onOpenChange, projectTitle }: ComingSoonDialog
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-center">{projectTitle}</DialogTitle>
+          <DialogTitle className="text-center font-display">{projectTitle}</DialogTitle>
         </DialogHeader>
         <div className="flex items-center justify-center py-8">
           <div className="text-center space-y-2">
