@@ -253,7 +253,7 @@ const ProjectDetail = () => {
       </div>
 
       {/* Project Gallery - Full Width */}
-      <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16 mb-12">
+      <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16 mx-12 mb-12">
         <div className="grid grid-cols-1 gap-6">
           {(slug === 'moneyx-savings-goals-manual-entry' ? moneyxImages : slug === 'knock-knock-cafe-kuala-terengganu' ? knockKnockImages : slug === 'policystreet-car-insurance-platform' ? policyStreetImages : [galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5, galleryImage6, galleryImage7, galleryImage8]).map((image, index) => <div key={index} className="aspect-video overflow-hidden rounded-lg bg-muted">
               <img src={image} alt={`${project.title} - Image ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
