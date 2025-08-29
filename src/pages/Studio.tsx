@@ -46,17 +46,13 @@ const Studio = () => {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6">
+      <section className="py-8 sm:py-12 px-4 sm:px-6">
         <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16">          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
             {[{
             title: "MoneyX App",
             slug: "moneyx-savings-goals-manual-entry",
             description: "App feature UIUX design"
-          }, {
-            title: "Knock Knock Cafe",
-            slug: "knock-knock-cafe-kuala-terengganu",
-            description: "Art direction & brand design"
           }, {
             title: "PolicyStreet - InsurTech",
             slug: "policystreet-car-insurance-platform",
@@ -65,26 +61,32 @@ const Studio = () => {
             title: "Referral Program Design",
             slug: "moneyx-moneyxbiz-referral-program",
             description: "Insurance marketplace platform"
+          }, {
+            title: "Knock Knock Cafe",
+            slug: "knock-knock-cafe-kuala-terengganu",
+            description: "Art direction & brand design"
           }].map((project, index) => <Link key={index} to={`/projects/${project.slug}`} className="group cursor-pointer">
-                <div className="aspect-video overflow-hidden rounded-lg bg-muted">
-                  <img src={index === 0 ? "/lovable-uploads/38a4617f-499b-49dd-accd-4531551d30ac.png" : index === 1 ? "/lovable-uploads/727cdb13-e96f-4680-8771-62fb1f9b98ef.png" : index === 2 ? "/lovable-uploads/8537072c-4ef3-428b-8003-c4c1877fac8c.png" : index === 3 ? "/lovable-uploads/3203ca77-96ca-4347-9e77-4a9c89891bfb.png" : allImages[index % allImages.length]} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
-                </div>
-                <div className="p-6 rounded-b-lg" style={{
-              backgroundColor: '#F5F5F5'
-            }}>
-                  <div className="flex items-center justify-between">
-                    <div className="flex-1">
-                      <h3 className="font-display text-lg font-medium text-black mb-1">
-                        {project.title}
-                      </h3>
-                      <p className="font-mono text-sm text-gray-700">
-                        {project.description}
-                      </p>
-                    </div>
-                    <div className="ml-4">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-600">
-                        <path d="M7 17L17 7M17 7H7M17 7V17" />
-                      </svg>
+                <div className="border border-gray-200 rounded-lg overflow-hidden bg-white">
+                  <div className="aspect-video overflow-hidden bg-muted">
+                    <img src={index === 0 ? "/lovable-uploads/38a4617f-499b-49dd-accd-4531551d30ac.png" : index === 1 ? "/lovable-uploads/8537072c-4ef3-428b-8003-c4c1877fac8c.png" : index === 2 ? "/lovable-uploads/3203ca77-96ca-4347-9e77-4a9c89891bfb.png" : index === 3 ? "/lovable-uploads/727cdb13-e96f-4680-8771-62fb1f9b98ef.png" : allImages[index % allImages.length]} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                  </div>
+                  <div className="p-6" style={{
+                backgroundColor: '#F5F5F5'
+              }}>
+                    <div className="flex items-center justify-between">
+                      <div className="flex-1">
+                        <h3 className="font-display text-lg font-medium text-black mb-1">
+                          {project.title}
+                        </h3>
+                        <p className="font-mono text-sm text-gray-700">
+                          {project.description}
+                        </p>
+                      </div>
+                      <div className="ml-4">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-600">
+                          <path d="M7 17L17 7M17 7H7M17 7V17" />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
