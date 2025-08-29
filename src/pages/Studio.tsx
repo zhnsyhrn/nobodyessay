@@ -62,7 +62,7 @@ const Studio = () => {
             slug: "knock-knock-cafe-kuala-terengganu",
             description: "Art direction & brand design"
           }, {
-            title: "PolicyStreet",
+            title: "PolicyStreet - InsurTech",
             slug: "policystreet-car-insurance-platform",
             description: "Insurance marketplace platform"
           }, {

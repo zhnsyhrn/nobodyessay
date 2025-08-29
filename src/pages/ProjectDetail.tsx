@@ -41,10 +41,11 @@ const knockKnockImages = ["/lovable-uploads/727cdb13-e96f-4680-8771-62fb1f9b98ef
 
 // PolicyStreet project images
 const policyStreetImages = [
-  galleryImage3,
-  galleryImage4,
-  galleryImage5,
-  galleryImage6
+  "/lovable-uploads/a3d87d83-a1e8-426c-9d12-475e9f6f3488.png",
+  "/lovable-uploads/933cdd11-2964-478a-a9f2-09f288821be8.png", 
+  "/lovable-uploads/0a9faeb6-72a3-484e-83a5-0aad681f0684.png",
+  "/lovable-uploads/296d95da-ee08-407a-9413-025d7c4bc61d.png",
+  "/lovable-uploads/bbfa2e07-10f8-41ed-91a7-5b3c0cdb3c1c.png"
 ];
 
 // Sample project data - you can replace this with actual data
@@ -78,7 +79,7 @@ const projectsData = {
     }
   },
   "policystreet-car-insurance-platform": {
-    title: "PolicyStreet",
+    title: "PolicyStreet - InsurTech",
     websiteUrl: "https://policystreet.com/partners/business-insurance-partnership",
     overview: "It is a digital platform that allows users to compare and purchase car insurance policies online. The site provides a convenient and hassle-free way for car owners to find the best car insurance policy that suits their needs and budget. I led market research and design initiatives for this web-based project, adopting a mobile-first design approach to ensure accessibility and usability across devices. I collaborated closely with the growth team—including growth marketers and graphic designers—to align user experience with business objectives and deliver a cohesive product.",
     projectInfo: {
