@@ -39,11 +39,7 @@ const Studio = () => {
       <StickyNavbar />
 
       {/* Hero Section */}
-      <section className="py-8 sm:py-12 px-4 sm:px-6 fade-in lg:py-[60px]">
-        <div className="max-w-6xl mx-auto text-left sm:text-center">
-          <h1 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">Turning briefs into real things, even the ones that change halfway.</h1>
-        </div>
-      </section>
+      
 
       {/* Projects Grid */}
       <section className="py-12 sm:py-16 px-4 sm:px-6">
@@ -58,9 +54,25 @@ const Studio = () => {
             slug: "knock-knock-cafe-kuala-terengganu",
             description: "Art direction & brand design"
           }, {
-            title: "PolicyStreet - InsurTech",
+            title: "PolicyStreet",
             slug: "policystreet-car-insurance-platform",
             description: "Insurance marketplace platform"
+          }, {
+            title: "Changfeng Mixed Use Development",
+            slug: "changfeng-mixed-use",
+            description: "Integrated commercial and residential complex with modern architectural design"
+          }, {
+            title: "Metropolitan Transit Hub",
+            slug: "metropolitan-transit-hub",
+            description: "Multi-modal transportation center connecting various transit systems"
+          }, {
+            title: "Waterfront Cultural District",
+            slug: "waterfront-cultural-district",
+            description: "Arts and culture destination featuring museums, galleries, and performance venues"
+          }, {
+            title: "Sustainable Office Complex",
+            slug: "sustainable-office-complex",
+            description: "Energy-efficient commercial development with innovative green building technologies"
           }].map((project, index) => <Link key={index} to={`/projects/${project.slug}`} className="group cursor-pointer">
                 <div className="aspect-video overflow-hidden rounded-lg bg-muted">
                   <img src={index === 0 ? "/lovable-uploads/38a4617f-499b-49dd-accd-4531551d30ac.png" : index === 1 ? "/lovable-uploads/727cdb13-e96f-4680-8771-62fb1f9b98ef.png" : index === 2 ? "/lovable-uploads/8537072c-4ef3-428b-8003-c4c1877fac8c.png" : allImages[index % allImages.length]} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
