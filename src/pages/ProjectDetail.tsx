@@ -39,6 +39,14 @@ const moneyxImages = ["/lovable-uploads/7818744d-3050-4496-824e-8c4c7a8b1a4e.png
 const knockKnockImages = ["/lovable-uploads/727cdb13-e96f-4680-8771-62fb1f9b98ef.png" // Coffee packaging design
 ];
 
+// PolicyStreet project images
+const policyStreetImages = [
+  galleryImage3,
+  galleryImage4,
+  galleryImage5,
+  galleryImage6
+];
+
 // Sample project data - you can replace this with actual data
 const projectsData = {
   "moneyx-savings-goals-manual-entry": {
@@ -67,6 +75,20 @@ const projectsData = {
       "Project Lead / Product Manager(s)": "Zahin Syahiran",
       "Value Added": "Design consultation",
       "Credits": "Not available"
+    }
+  },
+  "policystreet-car-insurance-platform": {
+    title: "PolicyStreet",
+    websiteUrl: "https://policystreet.com/partners/business-insurance-partnership",
+    overview: "It is a digital platform that allows users to compare and purchase car insurance policies online. The site provides a convenient and hassle-free way for car owners to find the best car insurance policy that suits their needs and budget. I led market research and design initiatives for this web-based project, adopting a mobile-first design approach to ensure accessibility and usability across devices. I collaborated closely with the growth team—including growth marketers and graphic designers—to align user experience with business objectives and deliver a cohesive product.",
+    projectInfo: {
+      "Project / Company": "PolicyStreet (InsurTech Company)",
+      "Type": "Web Portal, UIUX Design",
+      "Role / Project Ownership": "Design owner",
+      "Contribution": "High-fidelity design, design research, product testing and quality assurance",
+      "Project Lead / Product Manager(s)": "Shaun Choy, Nazatul",
+      "Value Added": "Redefine the customer journey of buying car insurance, Improve the existing interaction design and components for web-based platform",
+      "Credits": "Qistina (UX Copywriter), Sher Rhie (Creative Designer)"
     }
   },
   "south-sabah-masterplan": {
@@ -230,7 +252,7 @@ const ProjectDetail = () => {
         {/* Project Gallery */}
         <div className="mb-12">
           <div className="grid grid-cols-1 gap-6">
-            {(slug === 'moneyx-savings-goals-manual-entry' ? moneyxImages : slug === 'knock-knock-cafe-kuala-terengganu' ? knockKnockImages : [galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5, galleryImage6, galleryImage7, galleryImage8]).map((image, index) => <div key={index} className="aspect-video overflow-hidden rounded-lg bg-muted">
+            {(slug === 'moneyx-savings-goals-manual-entry' ? moneyxImages : slug === 'knock-knock-cafe-kuala-terengganu' ? knockKnockImages : slug === 'policystreet-car-insurance-platform' ? policyStreetImages : [galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5, galleryImage6, galleryImage7, galleryImage8]).map((image, index) => <div key={index} className="aspect-video overflow-hidden rounded-lg bg-muted">
                 <img src={image} alt={`${project.title} - Image ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
               </div>)}
           </div>

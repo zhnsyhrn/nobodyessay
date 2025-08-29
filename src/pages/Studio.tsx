@@ -62,6 +62,10 @@ const Studio = () => {
             slug: "knock-knock-cafe-kuala-terengganu",
             description: "Art direction & brand design"
           }, {
+            title: "PolicyStreet",
+            slug: "policystreet-car-insurance-platform",
+            description: "Insurance marketplace platform"
+          }, {
             title: "Changfeng Mixed Use Development",
             slug: "changfeng-mixed-use",
             description: "Integrated commercial and residential complex with modern architectural design"
@@ -79,7 +83,7 @@ const Studio = () => {
             description: "Energy-efficient commercial development with innovative green building technologies"
           }].map((project, index) => <Link key={index} to={`/projects/${project.slug}`} className="group cursor-pointer">
                 <div className="aspect-video overflow-hidden rounded-lg bg-muted">
-                  <img src={index === 0 ? "/lovable-uploads/38a4617f-499b-49dd-accd-4531551d30ac.png" : index === 1 ? "/lovable-uploads/727cdb13-e96f-4680-8771-62fb1f9b98ef.png" : allImages[index % allImages.length]} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                  <img src={index === 0 ? "/lovable-uploads/38a4617f-499b-49dd-accd-4531551d30ac.png" : index === 1 ? "/lovable-uploads/727cdb13-e96f-4680-8771-62fb1f9b98ef.png" : index === 2 ? allImages[2] : allImages[index % allImages.length]} alt={project.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                 </div>
                 <div className="p-6 rounded-b-lg" style={{
               backgroundColor: '#F5F5F5'
