@@ -134,7 +134,7 @@ const Studio = () => {
                       <h3 className="font-display text-base font-medium text-black mb-1">
                         {project.title}
                       </h3>
-                      <p className="font-mono text-xs sm:text-[9px] text-gray-700 uppercase">
+                      <p className="font-mono text-xs sm:text-[10px] text-gray-700 uppercase">
                         {project.description}
                       </p>
                     </div>
