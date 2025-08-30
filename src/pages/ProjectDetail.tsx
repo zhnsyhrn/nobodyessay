@@ -53,6 +53,15 @@ const referralProgramImages = [
   "/lovable-uploads/3203ca77-96ca-4347-9e77-4a9c89891bfb.png"
 ];
 
+// Great Eastern Takaful project images
+const greatEasternTakafulImages = [
+  "/lovable-uploads/dc0d7de5-bc75-471f-9868-78660db2e084.png",
+  "/lovable-uploads/670c5b9d-1b3f-462a-a20f-e76679352f64.png",
+  "/lovable-uploads/2386a452-3187-4691-b942-7b67ffcf80fb.png",
+  "/lovable-uploads/b73c248c-bad3-4363-9939-e5cecdec3e91.png",
+  "/lovable-uploads/d0f62019-9599-4112-a540-dc3bcdfd0f0f.png"
+];
+
 // Sample project data - you can replace this with actual data
 const projectsData = {
   "moneyx-savings-goals-manual-entry": {
@@ -180,6 +189,20 @@ const projectsData = {
       "Value Added": "Functional logics, tech specs",
       "Credits": "Yudhis (3D Icons)"
     }
+  },
+  "great-eastern-takaful-malaysia": {
+    title: "Great Eastern Takaful Malaysia",
+    websiteUrl: "https://www.greateasterntakaful.com/en/personal-takaful.html",
+    overview: "I led the UX Audit exercise for Great Eastern Takaful Berhad, Malaysia, for their corporate website design revamp. The objective of this exercise was to provide a fresh update by following the latest corporate identity design of the Great Eastern Group, laid out by the design team based in Singapore. It took me 2 months from the audit and web translation to the design handover to the AVP of Website in Singapore.",
+    projectInfo: {
+      "Project / Company": "Great Eastern Takaful Berhad",
+      "Type": "UX Audit",
+      "Role / Project Ownership": "Lead designer",
+      "Contribution": "Design workshop with multiple stakeholders",
+      "Project Lead / Product Manager(s)": "Zahin Syahiran",
+      "Value Added": "Design consultation",
+      "Credits": "Not available"
+    }
   }
 };
 const ProjectDetail = () => {
@@ -273,11 +296,135 @@ const ProjectDetail = () => {
 
       {/* Project Gallery - Full Width */}
       <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16 mb-4 sm:mb-12">
-        <div className="grid grid-cols-1 gap-2 sm:gap-6">
-          {(slug === 'moneyx-savings-goals-manual-entry' ? moneyxImages : slug === 'knock-knock-cafe-kuala-terengganu' ? knockKnockImages : slug === 'policystreet-car-insurance-platform' ? policyStreetImages : slug === 'moneyx-moneyxbiz-referral-program' ? referralProgramImages : [galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5, galleryImage6, galleryImage7, galleryImage8]).map((image, index) => <div key={index} className="aspect-video overflow-hidden rounded-[10px] bg-muted">
-              <img src={image} alt={`${project.title} - Image ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
-            </div>)}
-        </div>
+        {slug === 'great-eastern-takaful-malaysia' ? (
+          // Special content layout for Great Eastern Takaful with mixed text and images
+          <div className="max-w-4xl mx-auto space-y-8">
+            <div className="prose prose-lg max-w-none">
+              <h3 className="font-display text-2xl font-medium mb-4">What is this about? UX Audit?</h3>
+              
+              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+                I led the UX Audit exercise for Great Eastern Takaful Berhad, Malaysia, for their corporate website design revamp.
+              </p>
+              
+              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+                The objective of this exercise was to provide a fresh update by following the latest corporate identity design of the Great Eastern Group, laid out by the design team based in Singapore.
+              </p>
+              
+              <p className="mb-8" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+                It took me 2 months from the audit and web translation for Bahasa Malaysia to the design handover to the AVP of Website in Singapore.
+              </p>
+              
+              {/* First 3 images */}
+              <div className="grid grid-cols-1 gap-4 mb-8">
+                {greatEasternTakafulImages.slice(0, 3).map((image, index) => (
+                  <div key={index} className="aspect-video overflow-hidden rounded-[10px] bg-muted">
+                    <img 
+                      src={image} 
+                      alt={`Great Eastern Takaful - Image ${index + 1}`} 
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
+                      loading="lazy" 
+                    />
+                  </div>
+                ))}
+              </div>
+              
+              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+                However, despite the intense workload and tight deadlines, I handled everything on my own with minimal support from the internal designer at Great Eastern Malaysia.
+              </p>
+              
+              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+                They only applauded and gave positive feedback on my last day after I submitted my resignation letter, when he said, "Good job! You did it quite fast, only one month plus." (I'll share this specific story in my reflections on work.)
+              </p>
+              
+              <p className="mb-8" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+                Unfortunately, I wasn't able to capture or document all of the work I completed here. I often spent more than 8 hours per day, working overtime at Starbucks Jalan Ampang to organize all the audits, design arrangements, and workshop plans as a first-timer. There's another personal story from this experience that I'll share soon.
+              </p>
+              
+              <h3 className="font-display text-2xl font-medium mb-4">What I've done and why it matters?</h3>
+              
+              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+                The exercise involved conducting a content audit for every single page on the site, identifying issues such as outdated content and broken links, as well as rearranging the site navigation and content structure for the help centre.
+              </p>
+              
+              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+                These activities required me to document everything in Excel sheets to organize and plan the next steps for issues such as setting up meetings with content owners, organizing design workshops, and facilitating internal discussions.
+              </p>
+              
+              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+                I don't have the screenshots of the Excel files and some of the documentation I created due to strict IT security policies enforced by the IT team, as the items were confidential.
+              </p>
+              
+              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+                Some of the meetings I conducted were with the web owner or gatekeeper, the AVP for Brand and Marketing Communications, Aida Yuhaniza, the AVP for Brand and Corporate Communications, Mastura Abd Rahim, as well as other managers responsible for specific content or site pages on the website. They are very helpful.
+              </p>
+              
+              <p className="mb-8" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+                Then, I needed to refer to the Great Eastern Singapore site as the main reference and identify relevant designs for adaptation based on the latest web page content.
+              </p>
+              
+              <h3 className="font-display text-2xl font-medium mb-4">Do I need to do the design in Figma?</h3>
+              
+              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+                For this task, it was less about creating new assets or designs in Figma, and more about managing stakeholders' expectations and coordinating communication between managers from different departments to reach a consensus on new content arrangements and web navigation (information architecture).
+              </p>
+              
+              <p className="mb-8" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+                The design work in Figma was mainly to visualize the updated layouts for key pages such as corporate, products, company profile, and articles, while also ensuring ease of web development by leveraging the existing templates and assets created by the Singapore team.
+              </p>
+              
+              {/* Last 2 images */}
+              <div className="grid grid-cols-1 gap-4 mb-8">
+                {greatEasternTakafulImages.slice(3, 5).map((image, index) => (
+                  <div key={index + 3} className="aspect-video overflow-hidden rounded-[10px] bg-muted">
+                    <img 
+                      src={image} 
+                      alt={`Great Eastern Takaful - Image ${index + 4}`} 
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
+                      loading="lazy" 
+                    />
+                  </div>
+                ))}
+              </div>
+              
+              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+                This included the new information architecture (before and after), updated illustration placements, color usage, page content layouts, and the side-by-side design of Bahasa Malaysia translations with the English version for every single page, among many other updates.
+              </p>
+              
+              <p className="mb-8" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+                Everything was well-documented from the initial phase through to the design phase, including project updates.
+              </p>
+              
+              <h3 className="font-display text-2xl font-medium mb-4">How I did the design workshop?</h3>
+              
+              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+                I'll write more. I'm tired.
+              </p>
+              
+              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+                Let me rest for awhile.
+              </p>
+            </div>
+          </div>
+        ) : (
+          // Regular gallery for other projects
+          <div className="grid grid-cols-1 gap-2 sm:gap-6">
+            {(slug === 'moneyx-savings-goals-manual-entry' ? moneyxImages : 
+              slug === 'knock-knock-cafe-kuala-terengganu' ? knockKnockImages : 
+              slug === 'policystreet-car-insurance-platform' ? policyStreetImages : 
+              slug === 'moneyx-moneyxbiz-referral-program' ? referralProgramImages : 
+              [galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5, galleryImage6, galleryImage7, galleryImage8]
+            ).map((image, index) => (
+              <div key={index} className="aspect-video overflow-hidden rounded-[10px] bg-muted">
+                <img 
+                  src={image} 
+                  alt={`${project.title} - Image ${index + 1}`} 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
+                  loading="lazy" 
+                />
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Navigation */}
