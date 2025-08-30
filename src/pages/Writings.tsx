@@ -10,18 +10,11 @@ const Writings = () => {
   return <div className="min-h-screen bg-background">
       <StickyNavbar />
 
-      {/* Header */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6 fade-in lg:py-[60px]">
-        <div className="max-w-4xl mx-auto text-left">
-          <h2 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">If you're here, you're already curious. Read my thoughts.</h2>
-          
-        </div>
-      </section>
 
       {/* All Writings */}
-      <section className="pb-12 sm:pb-16 px-4 sm:px-6">
+      <section className="py-12 sm:py-16 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="space-y-8 sm:space-y-12">
+          <div className="space-y-4 sm:space-y-6">
             {allWritings.map((writing, index) => <Card key={index} className="p-4 sm:p-6 lg:p-8 border-border hover:border-foreground/20 transition-colors">
                 <div className="space-y-3 sm:space-y-4">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-4 text-sm text-muted-foreground font-typewriter">
