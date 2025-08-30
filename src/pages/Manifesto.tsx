@@ -327,64 +327,152 @@ const Manifesto = () => {
                   </div>
                 </div>
 
-                {/* Design Projects */}
+                {/* Design & Client Projects */}
                 <div>
                   <h2 className="font-display text-2xl font-medium mb-4 text-foreground">
-                    Design Projects
+                    Design & Client Projects
                   </h2>
                   <div className="space-y-3">
                     <div className="font-typewriter text-muted-foreground">
                       <a 
-                        href="#" 
+                        href="https://grain.com.sg/" 
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
                       >
-                        E-commerce Platform Redesign
+                        Grain Singapore
                         <ExternalLink size={14} className="text-primary" />
                       </a>
                     </div>
+                    <div className="h-px bg-border"></div>
                     <div className="font-typewriter text-muted-foreground">
                       <a 
-                        href="#" 
+                        href="https://www.greateasterntakaful.com/en/personal-takaful.html" 
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
                       >
-                        Mobile Banking App
+                        Great Eastern Takaful Berhad
                         <ExternalLink size={14} className="text-primary" />
                       </a>
                     </div>
+                    <div className="h-px bg-border"></div>
                     <div className="font-typewriter text-muted-foreground">
                       <a 
-                        href="#" 
+                        href="https://www.mmu.edu.my/" 
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
                       >
-                        SaaS Dashboard Interface
+                        Multimedia University
                         <ExternalLink size={14} className="text-primary" />
                       </a>
                     </div>
+                    <div className="h-px bg-border"></div>
                     <div className="font-typewriter text-muted-foreground">
                       <a 
-                        href="#" 
+                        href="https://nanomalaysia.com.my/" 
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
                       >
-                        Insurance Platform UX
+                        NanoMalaysia Berhad
                         <ExternalLink size={14} className="text-primary" />
                       </a>
                     </div>
+                    <div className="h-px bg-border"></div>
                     <div className="font-typewriter text-muted-foreground">
                       <a 
-                        href="#" 
+                        href="https://verdantsolar.my/" 
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
                       >
-                        B2B Commerce Portal
+                        Verdant Solar
+                        <ExternalLink size={14} className="text-primary" />
+                      </a>
+                    </div>
+                    <div className="h-px bg-border"></div>
+                    <div className="font-typewriter text-muted-foreground">
+                      <a 
+                        href="https://mytigas.com/" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                      >
+                        MyTigas Alliance
+                        <ExternalLink size={14} className="text-primary" />
+                      </a>
+                    </div>
+                    <div className="h-px bg-border"></div>
+                    <div className="font-typewriter text-muted-foreground">
+                      <a 
+                        href="https://moneyx.com.my/" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                      >
+                        MoneyX
+                        <ExternalLink size={14} className="text-primary" />
+                      </a>
+                    </div>
+                    <div className="h-px bg-border"></div>
+                    <div className="font-typewriter text-muted-foreground">
+                      <a 
+                        href="https://www.moneyxbiz.com.my/" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                      >
+                        MoneyX Biz
+                        <ExternalLink size={14} className="text-primary" />
+                      </a>
+                    </div>
+                    <div className="h-px bg-border"></div>
+                    <div className="font-typewriter text-muted-foreground">
+                      <a 
+                        href="https://policystreet.com.my/reinsurance" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                      >
+                        PolicyStreet
+                        <ExternalLink size={14} className="text-primary" />
+                      </a>
+                    </div>
+                    <div className="h-px bg-border"></div>
+                    <div className="font-typewriter text-muted-foreground">
+                      <a 
+                        href="https://market.borong.com/my" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                      >
+                        Borong
+                        <ExternalLink size={14} className="text-primary" />
+                      </a>
+                    </div>
+                    <div className="h-px bg-border"></div>
+                    <div className="font-typewriter text-muted-foreground">
+                      <a 
+                        href="https://meca.com.my/" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                      >
+                        Meca Consultancy
+                        <ExternalLink size={14} className="text-primary" />
+                      </a>
+                    </div>
+                    <div className="h-px bg-border"></div>
+                    <div className="font-typewriter text-muted-foreground">
+                      <a 
+                        href="https://paperballad.com/" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                      >
+                        Paperballad & Co.
                         <ExternalLink size={14} className="text-primary" />
                       </a>
                     </div>
