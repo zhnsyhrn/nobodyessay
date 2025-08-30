@@ -90,7 +90,7 @@ const Manifesto = () => {
 
                 {/* Image Slider */}
                 <div className="mb-6">
-                  <Carousel className="w-full max-w-lg mx-auto relative">
+                  <Carousel className="w-full max-w-lg mx-auto relative border border-border rounded-lg overflow-hidden">
                     <CarouselContent>
                       <CarouselItem>
                         <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
