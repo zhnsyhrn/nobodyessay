@@ -43,12 +43,6 @@ const Studio = () => {
   return <div className="min-h-screen bg-background">
       <StickyNavbar />
 
-      {/* Hero Section */}
-      <section className="py-8 sm:py-12 px-4 sm:px-6 fade-in lg:py-[60px]">
-        <div className="max-w-6xl mx-auto text-left sm:text-center">
-          <h1 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">Turning briefs into real things, even the ones that change halfway.</h1>
-        </div>
-      </section>
 
       {/* Projects Grid */}
       <section className="py-8 sm:py-12 px-4 sm:px-6">
