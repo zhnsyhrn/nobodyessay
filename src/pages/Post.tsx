@@ -117,7 +117,7 @@ const Post = () => {
           {/* Article Content */}
           <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none">
             <div 
-              className="font-typewriter leading-relaxed"
+              className="font-jakarta leading-relaxed"
               style={{ color: '#919191' }}
               dangerouslySetInnerHTML={{ 
                 __html: DOMPurify.sanitize(essay.content
@@ -129,7 +129,7 @@ const Post = () => {
                     if (paragraph.trim() === '') {
                       return '';
                     }
-                    return `<p class="mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base" style="color: #919191">${DOMPurify.sanitize(paragraph)}</p>`;
+                    return `<p class="mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base font-jakarta" style="color: #919191">${DOMPurify.sanitize(paragraph)}</p>`;
                   })
                   .join(''))
               }}
