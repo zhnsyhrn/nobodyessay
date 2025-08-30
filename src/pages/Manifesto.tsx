@@ -71,26 +71,70 @@ const Manifesto = () => {
                 <div className="space-y-4">
                   <div className="border-l-2 border-border pl-4">
                     <div className="font-typewriter text-foreground font-medium">
-                      Senior Digital Strategist
+                      <a 
+                        href="https://moneyx.com.my/" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-primary transition-colors"
+                      >
+                        MoneyX
+                      </a>
                     </div>
                     <div className="font-typewriter text-muted-foreground text-sm">
-                      Creative Agency • 2022 - Present
+                      FinTech • 2024 - 2025
                     </div>
                   </div>
                   <div className="border-l-2 border-border pl-4">
                     <div className="font-typewriter text-foreground font-medium">
-                      UX Designer
+                      <a 
+                        href="https://www.borong.com/my" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-primary transition-colors"
+                      >
+                        Borong (Dropee)
+                      </a>
                     </div>
                     <div className="font-typewriter text-muted-foreground text-sm">
-                      Tech Startup • 2020 - 2022
+                      B2B Commerce • 2023 - 2023
                     </div>
                   </div>
                   <div className="border-l-2 border-border pl-4">
                     <div className="font-typewriter text-foreground font-medium">
-                      Digital Marketing Specialist
+                      <a 
+                        href="https://policystreet.com.my/reinsurance" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-primary transition-colors"
+                      >
+                        PolicyStreet
+                      </a>
                     </div>
                     <div className="font-typewriter text-muted-foreground text-sm">
-                      Marketing Firm • 2018 - 2020
+                      InsurTech • 2022 - 2023
+                    </div>
+                  </div>
+                  <div className="border-l-2 border-border pl-4">
+                    <div className="font-typewriter text-foreground font-medium">
+                      <a 
+                        href="https://senangstart.com/" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-primary transition-colors"
+                      >
+                        Fixcolab Group Sdn Bhd
+                      </a>
+                    </div>
+                    <div className="font-typewriter text-muted-foreground text-sm">
+                      Software and technology • 2020 - 2022
+                    </div>
+                  </div>
+                  <div className="border-l-2 border-border pl-4">
+                    <div className="font-typewriter text-foreground font-medium">
+                      Senangreka Venture
+                    </div>
+                    <div className="font-typewriter text-muted-foreground text-sm">
+                      Creative agency • 2018 - 2020
                     </div>
                   </div>
                 </div>
