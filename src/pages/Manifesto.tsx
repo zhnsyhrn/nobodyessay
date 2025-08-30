@@ -1,6 +1,7 @@
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
+import { ExternalLink } from "lucide-react";
 
 const Manifesto = () => {
   return (
@@ -95,81 +96,71 @@ const Manifesto = () => {
                 </div>
               </div>
 
-              {/* Side Projects */}
-              <div>
-                <h2 className="font-display text-2xl font-medium mb-4 text-foreground">
-                  Side Projects
-                </h2>
-                <div className="space-y-4">
-                  <div className="border border-border rounded-lg p-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <a 
-                        href="#" 
-                        className="font-typewriter text-foreground font-medium hover:text-primary transition-colors"
-                      >
-                        Digital Minimalism Blog
-                      </a>
-                      <span className="bg-green-500/20 text-green-700 dark:text-green-300 px-2 py-1 rounded text-xs font-typewriter">
-                        Active
-                      </span>
-                    </div>
-                    <p className="font-typewriter text-muted-foreground text-sm">
-                      Exploring the intersection of technology and mindful living
-                    </p>
-                  </div>
-                  
-                  <div className="border border-border rounded-lg p-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <a 
-                        href="#" 
-                        className="font-typewriter text-foreground font-medium hover:text-primary transition-colors"
-                      >
-                        Creative Writing Workshop
-                      </a>
-                      <span className="bg-green-500/20 text-green-700 dark:text-green-300 px-2 py-1 rounded text-xs font-typewriter">
-                        Active
-                      </span>
-                    </div>
-                    <p className="font-typewriter text-muted-foreground text-sm">
-                      Monthly workshops for aspiring writers and storytellers
-                    </p>
-                  </div>
+               {/* Side Projects */}
+               <div>
+                 <h2 className="font-display text-2xl font-medium mb-4 text-foreground">
+                   Side Projects
+                 </h2>
+                 <div className="space-y-4">
+                   <div className="border border-border rounded-lg p-4">
+                     <div className="flex items-center justify-between mb-2">
+                       <div className="flex items-center gap-2">
+                         <a 
+                           href="https://dealn.app/" 
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                         >
+                           Dealn
+                           <ExternalLink size={14} className="text-primary" />
+                         </a>
+                       </div>
+                       <span className="bg-green-500/20 text-green-700 dark:text-green-300 px-2 py-1 rounded text-xs font-typewriter">
+                         Active
+                       </span>
+                     </div>
+                     <p className="font-typewriter text-muted-foreground text-sm">
+                       Deal Experience Platform (DXP)
+                     </p>
+                   </div>
+                   
+                   <div className="border border-border rounded-lg p-4">
+                     <div className="flex items-center justify-between mb-2">
+                       <div className="flex items-center gap-2">
+                         <a 
+                           href="https://www.instagram.com/nobody.collective/" 
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                         >
+                           Nobody Collective
+                           <ExternalLink size={14} className="text-primary" />
+                         </a>
+                       </div>
+                       <span className="bg-green-500/20 text-green-700 dark:text-green-300 px-2 py-1 rounded text-xs font-typewriter">
+                         Active
+                       </span>
+                     </div>
+                     <p className="font-typewriter text-muted-foreground text-sm">
+                       Design Education Contents
+                     </p>
+                   </div>
 
-                  <div className="border border-border rounded-lg p-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <a 
-                        href="#" 
-                        className="font-typewriter text-foreground font-medium hover:text-primary transition-colors opacity-60"
-                      >
-                        Design System Library
-                      </a>
-                      <span className="bg-gray-500/20 text-gray-700 dark:text-gray-300 px-2 py-1 rounded text-xs font-typewriter">
-                        Inactive
-                      </span>
-                    </div>
-                    <p className="font-typewriter text-muted-foreground text-sm opacity-60">
-                      Open-source design components for rapid prototyping
-                    </p>
-                  </div>
-
-                  <div className="border border-border rounded-lg p-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <a 
-                        href="#" 
-                        className="font-typewriter text-foreground font-medium hover:text-primary transition-colors opacity-60"
-                      >
-                        Photography Archive
-                      </a>
-                      <span className="bg-gray-500/20 text-gray-700 dark:text-gray-300 px-2 py-1 rounded text-xs font-typewriter">
-                        Inactive
-                      </span>
-                    </div>
-                    <p className="font-typewriter text-muted-foreground text-sm opacity-60">
-                      Documentary photography project capturing urban stories
-                    </p>
-                  </div>
-                </div>
-              </div>
+                   <div className="border border-border rounded-lg p-4">
+                     <div className="flex items-center justify-between mb-2">
+                       <span className="font-typewriter text-foreground font-medium opacity-60">
+                         Designloka
+                       </span>
+                       <span className="bg-gray-500/20 text-gray-700 dark:text-gray-300 px-2 py-1 rounded text-xs font-typewriter">
+                         Inactive
+                       </span>
+                     </div>
+                     <p className="font-typewriter text-muted-foreground text-sm opacity-60">
+                       Unlimited Design Subscription
+                     </p>
+                   </div>
+                 </div>
+               </div>
             </div>
           </div>
         </div>
