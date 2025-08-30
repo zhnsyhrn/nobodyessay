@@ -126,7 +126,7 @@ const Studio = () => {
                     loading="lazy" 
                   />
                 </div>
-                <div className="p-2" style={{
+                <div className="p-2 sm:p-3" style={{
               backgroundColor: '#F5F5F5'
             }}>
                   <div className="flex items-center justify-between">
@@ -134,7 +134,7 @@ const Studio = () => {
                       <h3 className="font-display text-base font-medium text-black mb-1">
                         {project.title}
                       </h3>
-                      <p className="font-mono text-xs text-gray-700 uppercase">
+                      <p className="font-mono text-xs sm:text-[9px] text-gray-700 uppercase">
                         {project.description}
                       </p>
                     </div>
