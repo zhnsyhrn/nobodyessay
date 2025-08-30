@@ -11,7 +11,9 @@ const Manifesto = () => {
       
       <section className="py-12 sm:py-16 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 relative">
+              {/* Vertical divider - only visible on larger screens */}
+              <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-border transform -translate-x-1/2"></div>
             
             {/* Left Column */}
             <div className="space-y-8">
@@ -167,74 +169,107 @@ const Manifesto = () => {
                 <h2 className="font-display text-2xl font-medium mb-4 text-foreground">
                   Work Experience
                 </h2>
-                <div className="space-y-4">
-                  <div className="border-l-2 border-border pl-4">
-                    <div className="font-typewriter text-foreground font-medium">
-                      <a 
-                        href="https://moneyx.com.my/" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:text-primary transition-colors"
-                      >
-                        MoneyX
-                      </a>
+                <div className="space-y-3">
+                  <div className="border border-border rounded-lg p-3">
+                    <div className="flex items-center justify-between mb-1">
+                      <div className="font-typewriter text-foreground font-medium">
+                        <a 
+                          href="https://moneyx.com.my/" 
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-primary transition-colors flex items-center gap-2"
+                        >
+                          MoneyX
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
+                      <span className="font-typewriter text-muted-foreground text-xs">
+                        2024 - 2025
+                      </span>
                     </div>
-                    <div className="font-typewriter text-muted-foreground text-sm">
-                      FinTech • 2024 - 2025
-                    </div>
+                    <p className="font-typewriter text-muted-foreground text-sm">
+                      FinTech
+                    </p>
                   </div>
-                  <div className="border-l-2 border-border pl-4">
-                    <div className="font-typewriter text-foreground font-medium">
-                      <a 
-                        href="https://www.borong.com/my" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:text-primary transition-colors"
-                      >
-                        Borong (Dropee)
-                      </a>
+                  
+                  <div className="border border-border rounded-lg p-3">
+                    <div className="flex items-center justify-between mb-1">
+                      <div className="font-typewriter text-foreground font-medium">
+                        <a 
+                          href="https://www.borong.com/my" 
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-primary transition-colors flex items-center gap-2"
+                        >
+                          Borong (Dropee)
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
+                      <span className="font-typewriter text-muted-foreground text-xs">
+                        2023
+                      </span>
                     </div>
-                    <div className="font-typewriter text-muted-foreground text-sm">
-                      B2B Commerce • 2023 - 2023
-                    </div>
+                    <p className="font-typewriter text-muted-foreground text-sm">
+                      B2B Commerce
+                    </p>
                   </div>
-                  <div className="border-l-2 border-border pl-4">
-                    <div className="font-typewriter text-foreground font-medium">
-                      <a 
-                        href="https://policystreet.com.my/reinsurance" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:text-primary transition-colors"
-                      >
-                        PolicyStreet
-                      </a>
+
+                  <div className="border border-border rounded-lg p-3">
+                    <div className="flex items-center justify-between mb-1">
+                      <div className="font-typewriter text-foreground font-medium">
+                        <a 
+                          href="https://policystreet.com.my/reinsurance" 
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-primary transition-colors flex items-center gap-2"
+                        >
+                          PolicyStreet
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
+                      <span className="font-typewriter text-muted-foreground text-xs">
+                        2022 - 2023
+                      </span>
                     </div>
-                    <div className="font-typewriter text-muted-foreground text-sm">
-                      InsurTech • 2022 - 2023
-                    </div>
+                    <p className="font-typewriter text-muted-foreground text-sm">
+                      InsurTech
+                    </p>
                   </div>
-                  <div className="border-l-2 border-border pl-4">
-                    <div className="font-typewriter text-foreground font-medium">
-                      <a 
-                        href="https://senangstart.com/" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:text-primary transition-colors"
-                      >
-                        Fixcolab Group Sdn Bhd
-                      </a>
+
+                  <div className="border border-border rounded-lg p-3">
+                    <div className="flex items-center justify-between mb-1">
+                      <div className="font-typewriter text-foreground font-medium">
+                        <a 
+                          href="https://senangstart.com/" 
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-primary transition-colors flex items-center gap-2"
+                        >
+                          Fixcolab Group Sdn Bhd
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
+                      <span className="font-typewriter text-muted-foreground text-xs">
+                        2020 - 2022
+                      </span>
                     </div>
-                    <div className="font-typewriter text-muted-foreground text-sm">
-                      Software and technology • 2020 - 2022
-                    </div>
+                    <p className="font-typewriter text-muted-foreground text-sm">
+                      Software and technology
+                    </p>
                   </div>
-                  <div className="border-l-2 border-border pl-4">
-                    <div className="font-typewriter text-foreground font-medium">
-                      Senangreka Venture
+
+                  <div className="border border-border rounded-lg p-3">
+                    <div className="flex items-center justify-between mb-1">
+                      <div className="font-typewriter text-foreground font-medium">
+                        Senangreka Venture
+                      </div>
+                      <span className="font-typewriter text-muted-foreground text-xs">
+                        2018 - 2020
+                      </span>
                     </div>
-                    <div className="font-typewriter text-muted-foreground text-sm">
-                      Creative agency • 2018 - 2020
-                    </div>
+                    <p className="font-typewriter text-muted-foreground text-sm">
+                      Creative agency
+                    </p>
                   </div>
                 </div>
               </div>
@@ -244,8 +279,8 @@ const Manifesto = () => {
                   <h2 className="font-display text-2xl font-medium mb-4 text-foreground">
                     Side Projects
                   </h2>
-                  <div className="space-y-4">
-                    <div className="border border-border rounded-lg p-4">
+                  <div className="space-y-3">
+                    <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
                           <a 
@@ -267,7 +302,7 @@ const Manifesto = () => {
                       </p>
                     </div>
                     
-                    <div className="border border-border rounded-lg p-4">
+                    <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
                           <a 
@@ -289,7 +324,7 @@ const Manifesto = () => {
                       </p>
                     </div>
 
-                    <div className="border border-border rounded-lg p-4">
+                    <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center justify-between mb-2">
                         <span className="font-typewriter text-foreground font-medium opacity-60">
                           Designloka
@@ -310,8 +345,8 @@ const Manifesto = () => {
                   <h2 className="font-display text-2xl font-medium mb-4 text-foreground">
                     Design & Client Projects
                   </h2>
-                  <div className="space-y-4">
-                    <div className="border border-border rounded-lg p-4">
+                  <div className="space-y-3">
+                    <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center gap-2">
                         <a 
                           href="https://grain.com.sg/" 
@@ -325,7 +360,7 @@ const Manifesto = () => {
                       </div>
                     </div>
                     
-                    <div className="border border-border rounded-lg p-4">
+                    <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center gap-2">
                         <a 
                           href="https://www.greateasterntakaful.com/en/personal-takaful.html" 
@@ -339,7 +374,7 @@ const Manifesto = () => {
                       </div>
                     </div>
 
-                    <div className="border border-border rounded-lg p-4">
+                    <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center gap-2">
                         <a 
                           href="https://www.mmu.edu.my/" 
@@ -353,7 +388,7 @@ const Manifesto = () => {
                       </div>
                     </div>
 
-                    <div className="border border-border rounded-lg p-4">
+                    <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center gap-2">
                         <a 
                           href="https://nanomalaysia.com.my/" 
@@ -367,7 +402,7 @@ const Manifesto = () => {
                       </div>
                     </div>
 
-                    <div className="border border-border rounded-lg p-4">
+                    <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center gap-2">
                         <a 
                           href="https://verdantsolar.my/" 
@@ -381,7 +416,7 @@ const Manifesto = () => {
                       </div>
                     </div>
 
-                    <div className="border border-border rounded-lg p-4">
+                    <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center gap-2">
                         <a 
                           href="https://mytigas.com/" 
@@ -395,7 +430,7 @@ const Manifesto = () => {
                       </div>
                     </div>
 
-                    <div className="border border-border rounded-lg p-4">
+                    <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center gap-2">
                         <a 
                           href="https://moneyx.com.my/" 
@@ -409,7 +444,7 @@ const Manifesto = () => {
                       </div>
                     </div>
 
-                    <div className="border border-border rounded-lg p-4">
+                    <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center gap-2">
                         <a 
                           href="https://www.moneyxbiz.com.my/" 
@@ -423,7 +458,7 @@ const Manifesto = () => {
                       </div>
                     </div>
 
-                    <div className="border border-border rounded-lg p-4">
+                    <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center gap-2">
                         <a 
                           href="https://policystreet.com.my/reinsurance" 
@@ -437,7 +472,7 @@ const Manifesto = () => {
                       </div>
                     </div>
 
-                    <div className="border border-border rounded-lg p-4">
+                    <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center gap-2">
                         <a 
                           href="https://market.borong.com/my" 
@@ -451,7 +486,7 @@ const Manifesto = () => {
                       </div>
                     </div>
 
-                    <div className="border border-border rounded-lg p-4">
+                    <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center gap-2">
                         <a 
                           href="https://meca.com.my/" 
@@ -465,7 +500,7 @@ const Manifesto = () => {
                       </div>
                     </div>
 
-                    <div className="border border-border rounded-lg p-4">
+                    <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center gap-2">
                         <a 
                           href="https://paperballad.com/" 
