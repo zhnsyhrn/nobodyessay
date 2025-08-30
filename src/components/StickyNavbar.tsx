@@ -33,6 +33,7 @@ const StickyNavbar = () => {
 
   const isActiveRoute = (path: string) => {
     if (path === '/about' && location.pathname === '/about') return true;
+    if (path === '/manifesto' && location.pathname === '/manifesto') return true;
     if (path === '/writings' && location.pathname.startsWith('/writings')) return true;
     if (path === '/studio' && location.pathname === '/studio') return true;
     if (path === '/contact' && location.pathname === '/contact') return true;
@@ -73,9 +74,9 @@ const StickyNavbar = () => {
               Studio
             </Link>
             <Link 
-              to="/about" 
+              to="/manifesto" 
               className={`font-display text-sm transition-colors py-2 ${
-                isActiveRoute('/about') 
+                isActiveRoute('/manifesto') 
                   ? 'text-foreground font-medium' 
                   : 'hover:text-muted-foreground'
               }`}
@@ -171,10 +172,10 @@ const StickyNavbar = () => {
                 <Separator className="bg-gray-200" />
                 
                 <Link 
-                  to="/about" 
+                  to="/manifesto" 
                   onClick={closeMenu}
                   className={`font-display text-3xl transition-colors py-8 text-center flex items-center justify-center text-black hover:text-gray-600 ${
-                    isActiveRoute('/about')
+                    isActiveRoute('/manifesto')
                       ? 'font-medium'
                       : ''
                   }`}
