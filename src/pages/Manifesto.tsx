@@ -69,22 +69,18 @@ const Manifesto = () => {
                   I occasionally accept invitations to speak at events, workshops & consultations to share things that I care about.
                 </p>
                 
-                {/* Workshops List */}
+                 {/* Workshops List */}
                 <div className="space-y-3 mb-6">
                   <div className="font-typewriter text-muted-foreground">
-                    <span className="text-foreground font-medium">Design Systems Workshop</span> • 2024
+                    <span className="text-foreground font-medium">Canva Design Workshop, Universiti Malaysia Sabah</span> • 2022
                   </div>
                   <div className="h-px bg-border"></div>
                   <div className="font-typewriter text-muted-foreground">
-                    <span className="text-foreground font-medium">User Experience Strategy</span> • 2023
+                    <span className="text-foreground font-medium">Createz Bootcamp 3.0, University of Malaya</span> • 2020
                   </div>
                   <div className="h-px bg-border"></div>
                   <div className="font-typewriter text-muted-foreground">
-                    <span className="text-foreground font-medium">Digital Product Design</span> • 2023
-                  </div>
-                  <div className="h-px bg-border"></div>
-                  <div className="font-typewriter text-muted-foreground">
-                    <span className="text-foreground font-medium">Design Thinking for Startups</span> • 2022
+                    <span className="text-foreground font-medium">University Entrepreneurship Masterclass, StartupMalaysia</span> • 2018
                   </div>
                 </div>
 
@@ -95,8 +91,8 @@ const Manifesto = () => {
                       <CarouselItem>
                         <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
                           <img 
-                            src="/lovable-uploads/02594b85-35a5-4f5e-b0f9-c93ee3f201a7.png" 
-                            alt="Speaking engagement" 
+                            src="/lovable-uploads/cdb5672f-de57-4d19-a313-9bdec559de7b.png" 
+                            alt="Group photo at university workshop" 
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -104,8 +100,8 @@ const Manifesto = () => {
                       <CarouselItem>
                         <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
                           <img 
-                            src="/lovable-uploads/0a9faeb6-72a3-484e-83a5-0aad681f0684.png" 
-                            alt="Workshop session" 
+                            src="/lovable-uploads/a78f735b-9b5e-496f-807c-d89d3bb3fbc1.png" 
+                            alt="Speaking at entrepreneurship masterclass" 
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -113,8 +109,8 @@ const Manifesto = () => {
                       <CarouselItem>
                         <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
                           <img 
-                            src="/lovable-uploads/1dcf470c-2ae1-4041-9270-802a1b166480.png" 
-                            alt="Design consultation" 
+                            src="/lovable-uploads/d0b90204-89f8-4b16-9387-912ec4ef8cf9.png" 
+                            alt="Virtual workshop presentation" 
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -122,8 +118,8 @@ const Manifesto = () => {
                       <CarouselItem>
                         <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
                           <img 
-                            src="/lovable-uploads/296d95da-ee08-407a-9413-025d7c4bc61d.png" 
-                            alt="Event presentation" 
+                            src="/lovable-uploads/be876eca-c1a0-4e2f-940e-27d0df2042fa.png" 
+                            alt="Hands-on workshop session" 
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -131,8 +127,8 @@ const Manifesto = () => {
                       <CarouselItem>
                         <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
                           <img 
-                            src="/lovable-uploads/2fbd8484-6091-4de8-8f0d-0c7c7ded5fb0.png" 
-                            alt="Workshop facilitation" 
+                            src="/lovable-uploads/56d6ab0a-15f4-4d7c-80b5-6e358fb73882.png" 
+                            alt="Team photo at bootcamp event" 
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -140,8 +136,8 @@ const Manifesto = () => {
                       <CarouselItem>
                         <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
                           <img 
-                            src="/lovable-uploads/307c85f4-d33f-45a4-83d5-c8d95c1b4a07.png" 
-                            alt="Design thinking session" 
+                            src="/lovable-uploads/8f343185-b806-43de-b723-33d36c31b526.png" 
+                            alt="Large group photo at university event" 
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -149,26 +145,8 @@ const Manifesto = () => {
                       <CarouselItem>
                         <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
                           <img 
-                            src="/lovable-uploads/318ce04d-e3cb-473d-81bc-63e4c917981c.png" 
-                            alt="Speaking at conference" 
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </CarouselItem>
-                      <CarouselItem>
-                        <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
-                          <img 
-                            src="/lovable-uploads/3203ca77-96ca-4347-9e77-4a9c89891bfb.png" 
-                            alt="Workshop participant interaction" 
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      </CarouselItem>
-                      <CarouselItem>
-                        <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
-                          <img 
-                            src="/lovable-uploads/38a4617f-499b-49dd-accd-4531551d30ac.png" 
-                            alt="Design consultation meeting" 
+                            src="/lovable-uploads/48722f75-9955-4d59-9183-79b77034c818.png" 
+                            alt="Presenting at startup event" 
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -332,149 +310,173 @@ const Manifesto = () => {
                   <h2 className="font-display text-2xl font-medium mb-4 text-foreground">
                     Design & Client Projects
                   </h2>
-                  <div className="space-y-3">
-                    <div className="font-typewriter text-muted-foreground">
-                      <a 
-                        href="https://grain.com.sg/" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                      >
-                        Grain Singapore
-                        <ExternalLink size={14} className="text-primary" />
-                      </a>
+                  <div className="space-y-4">
+                    <div className="border border-border rounded-lg p-4">
+                      <div className="flex items-center gap-2">
+                        <a 
+                          href="https://grain.com.sg/" 
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                        >
+                          Grain Singapore
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
                     </div>
-                    <div className="h-px bg-border"></div>
-                    <div className="font-typewriter text-muted-foreground">
-                      <a 
-                        href="https://www.greateasterntakaful.com/en/personal-takaful.html" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                      >
-                        Great Eastern Takaful Berhad
-                        <ExternalLink size={14} className="text-primary" />
-                      </a>
+                    
+                    <div className="border border-border rounded-lg p-4">
+                      <div className="flex items-center gap-2">
+                        <a 
+                          href="https://www.greateasterntakaful.com/en/personal-takaful.html" 
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                        >
+                          Great Eastern Takaful Berhad
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
                     </div>
-                    <div className="h-px bg-border"></div>
-                    <div className="font-typewriter text-muted-foreground">
-                      <a 
-                        href="https://www.mmu.edu.my/" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                      >
-                        Multimedia University
-                        <ExternalLink size={14} className="text-primary" />
-                      </a>
+
+                    <div className="border border-border rounded-lg p-4">
+                      <div className="flex items-center gap-2">
+                        <a 
+                          href="https://www.mmu.edu.my/" 
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                        >
+                          Multimedia University
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
                     </div>
-                    <div className="h-px bg-border"></div>
-                    <div className="font-typewriter text-muted-foreground">
-                      <a 
-                        href="https://nanomalaysia.com.my/" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                      >
-                        NanoMalaysia Berhad
-                        <ExternalLink size={14} className="text-primary" />
-                      </a>
+
+                    <div className="border border-border rounded-lg p-4">
+                      <div className="flex items-center gap-2">
+                        <a 
+                          href="https://nanomalaysia.com.my/" 
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                        >
+                          NanoMalaysia Berhad
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
                     </div>
-                    <div className="h-px bg-border"></div>
-                    <div className="font-typewriter text-muted-foreground">
-                      <a 
-                        href="https://verdantsolar.my/" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                      >
-                        Verdant Solar
-                        <ExternalLink size={14} className="text-primary" />
-                      </a>
+
+                    <div className="border border-border rounded-lg p-4">
+                      <div className="flex items-center gap-2">
+                        <a 
+                          href="https://verdantsolar.my/" 
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                        >
+                          Verdant Solar
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
                     </div>
-                    <div className="h-px bg-border"></div>
-                    <div className="font-typewriter text-muted-foreground">
-                      <a 
-                        href="https://mytigas.com/" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                      >
-                        MyTigas Alliance
-                        <ExternalLink size={14} className="text-primary" />
-                      </a>
+
+                    <div className="border border-border rounded-lg p-4">
+                      <div className="flex items-center gap-2">
+                        <a 
+                          href="https://mytigas.com/" 
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                        >
+                          MyTigas Alliance
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
                     </div>
-                    <div className="h-px bg-border"></div>
-                    <div className="font-typewriter text-muted-foreground">
-                      <a 
-                        href="https://moneyx.com.my/" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                      >
-                        MoneyX
-                        <ExternalLink size={14} className="text-primary" />
-                      </a>
+
+                    <div className="border border-border rounded-lg p-4">
+                      <div className="flex items-center gap-2">
+                        <a 
+                          href="https://moneyx.com.my/" 
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                        >
+                          MoneyX
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
                     </div>
-                    <div className="h-px bg-border"></div>
-                    <div className="font-typewriter text-muted-foreground">
-                      <a 
-                        href="https://www.moneyxbiz.com.my/" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                      >
-                        MoneyX Biz
-                        <ExternalLink size={14} className="text-primary" />
-                      </a>
+
+                    <div className="border border-border rounded-lg p-4">
+                      <div className="flex items-center gap-2">
+                        <a 
+                          href="https://www.moneyxbiz.com.my/" 
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                        >
+                          MoneyX Biz
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
                     </div>
-                    <div className="h-px bg-border"></div>
-                    <div className="font-typewriter text-muted-foreground">
-                      <a 
-                        href="https://policystreet.com.my/reinsurance" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                      >
-                        PolicyStreet
-                        <ExternalLink size={14} className="text-primary" />
-                      </a>
+
+                    <div className="border border-border rounded-lg p-4">
+                      <div className="flex items-center gap-2">
+                        <a 
+                          href="https://policystreet.com.my/reinsurance" 
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                        >
+                          PolicyStreet
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
                     </div>
-                    <div className="h-px bg-border"></div>
-                    <div className="font-typewriter text-muted-foreground">
-                      <a 
-                        href="https://market.borong.com/my" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                      >
-                        Borong
-                        <ExternalLink size={14} className="text-primary" />
-                      </a>
+
+                    <div className="border border-border rounded-lg p-4">
+                      <div className="flex items-center gap-2">
+                        <a 
+                          href="https://market.borong.com/my" 
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                        >
+                          Borong
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
                     </div>
-                    <div className="h-px bg-border"></div>
-                    <div className="font-typewriter text-muted-foreground">
-                      <a 
-                        href="https://meca.com.my/" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                      >
-                        Meca Consultancy
-                        <ExternalLink size={14} className="text-primary" />
-                      </a>
+
+                    <div className="border border-border rounded-lg p-4">
+                      <div className="flex items-center gap-2">
+                        <a 
+                          href="https://meca.com.my/" 
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                        >
+                          Meca Consultancy
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
                     </div>
-                    <div className="h-px bg-border"></div>
-                    <div className="font-typewriter text-muted-foreground">
-                      <a 
-                        href="https://paperballad.com/" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                      >
-                        Paperballad & Co.
-                        <ExternalLink size={14} className="text-primary" />
-                      </a>
+
+                    <div className="border border-border rounded-lg p-4">
+                      <div className="flex items-center gap-2">
+                        <a 
+                          href="https://paperballad.com/" 
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                        >
+                          Paperballad & Co.
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
