@@ -50,9 +50,9 @@ const Studio = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[10px]">
             {[{
             title: "Great Eastern Takaful Malaysia",
-            slug: "great-eastern-takaful",
+            slug: "great-eastern-takaful-malaysia",
             description: "UX Audit",
-            hasDetails: false
+            hasDetails: true
           }, {
             title: "PolicyStreet - InsurTech",
             slug: "policystreet-car-insurance-platform",
