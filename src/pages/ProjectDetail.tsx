@@ -302,15 +302,15 @@ const ProjectDetail = () => {
             <div className="prose prose-lg max-w-none">
               <h3 className="font-display text-2xl font-medium mb-4">What is this about? UX Audit?</h3>
               
-              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
                 I led the UX Audit exercise for Great Eastern Takaful Berhad, Malaysia, for their corporate website design revamp.
               </p>
               
-              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
                 The objective of this exercise was to provide a fresh update by following the latest corporate identity design of the Great Eastern Group, laid out by the design team based in Singapore.
               </p>
               
-              <p className="mb-8" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+              <p className="mb-8" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
                 It took me 2 months from the audit and web translation for Bahasa Malaysia to the design handover to the AVP of Website in Singapore.
               </p>
               
@@ -328,47 +328,47 @@ const ProjectDetail = () => {
                 ))}
               </div>
               
-              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
                 However, despite the intense workload and tight deadlines, I handled everything on my own with minimal support from the internal designer at Great Eastern Malaysia.
               </p>
               
-              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
                 They only applauded and gave positive feedback on my last day after I submitted my resignation letter, when he said, "Good job! You did it quite fast, only one month plus." (I'll share this specific story in my reflections on work.)
               </p>
               
-              <p className="mb-8" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+              <p className="mb-8" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
                 Unfortunately, I wasn't able to capture or document all of the work I completed here. I often spent more than 8 hours per day, working overtime at Starbucks Jalan Ampang to organize all the audits, design arrangements, and workshop plans as a first-timer. There's another personal story from this experience that I'll share soon.
               </p>
               
               <h3 className="font-display text-2xl font-medium mb-4">What I've done and why it matters?</h3>
               
-              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
                 The exercise involved conducting a content audit for every single page on the site, identifying issues such as outdated content and broken links, as well as rearranging the site navigation and content structure for the help centre.
               </p>
               
-              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
                 These activities required me to document everything in Excel sheets to organize and plan the next steps for issues such as setting up meetings with content owners, organizing design workshops, and facilitating internal discussions.
               </p>
               
-              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
                 I don't have the screenshots of the Excel files and some of the documentation I created due to strict IT security policies enforced by the IT team, as the items were confidential.
               </p>
               
-              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
                 Some of the meetings I conducted were with the web owner or gatekeeper, the AVP for Brand and Marketing Communications, Aida Yuhaniza, the AVP for Brand and Corporate Communications, Mastura Abd Rahim, as well as other managers responsible for specific content or site pages on the website. They are very helpful.
               </p>
               
-              <p className="mb-8" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+              <p className="mb-8" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
                 Then, I needed to refer to the Great Eastern Singapore site as the main reference and identify relevant designs for adaptation based on the latest web page content.
               </p>
               
               <h3 className="font-display text-2xl font-medium mb-4">Do I need to do the design in Figma?</h3>
               
-              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
                 For this task, it was less about creating new assets or designs in Figma, and more about managing stakeholders' expectations and coordinating communication between managers from different departments to reach a consensus on new content arrangements and web navigation (information architecture).
               </p>
               
-              <p className="mb-8" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+              <p className="mb-8" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
                 The design work in Figma was mainly to visualize the updated layouts for key pages such as corporate, products, company profile, and articles, while also ensuring ease of web development by leveraging the existing templates and assets created by the Singapore team.
               </p>
               
@@ -386,21 +386,21 @@ const ProjectDetail = () => {
                 ))}
               </div>
               
-              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
                 This included the new information architecture (before and after), updated illustration placements, color usage, page content layouts, and the side-by-side design of Bahasa Malaysia translations with the English version for every single page, among many other updates.
               </p>
               
-              <p className="mb-8" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+              <p className="mb-8" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
                 Everything was well-documented from the initial phase through to the design phase, including project updates.
               </p>
               
               <h3 className="font-display text-2xl font-medium mb-4">How I did the design workshop?</h3>
               
-              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
                 I'll write more. I'm tired.
               </p>
               
-              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060'}}>
+              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
                 Let me rest for awhile.
               </p>
             </div>
