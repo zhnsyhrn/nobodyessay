@@ -2,6 +2,7 @@ import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
 import { ExternalLink } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const Manifesto = () => {
   return (
@@ -45,18 +46,145 @@ const Manifesto = () => {
                 </h2>
                 <div className="space-y-3">
                   <div className="font-typewriter text-muted-foreground">
-                    <span className="text-foreground font-medium">Strategic Thinking:</span> Connecting business objectives with user needs
+                    <span className="text-foreground font-medium">Systems-Oriented Thinking:</span> Building cohesive experiences across touchpoints
                   </div>
                   <div className="font-typewriter text-muted-foreground">
-                    <span className="text-foreground font-medium">Digital Storytelling:</span> Crafting narratives that resonate and engage
+                    <span className="text-foreground font-medium">Multi-Platform Design Execution:</span> Designing modules across web, mobile, and admin tools
+                  </div>
+                  <div className="font-typewriter text-muted-foreground">
+                    <span className="text-foreground font-medium">Ownership & Delivery Under Pressure:</span> Driving end-to-end projects under tight deadlines
                   </div>
                   <div className="font-typewriter text-muted-foreground">
                     <span className="text-foreground font-medium">User-Centered Design:</span> Prioritizing empathy and accessibility
                   </div>
+                </div>
+              </div>
+
+              {/* Engagements */}
+              <div>
+                <h2 className="font-display text-2xl font-medium mb-4 text-foreground">
+                  Engagements
+                </h2>
+                <p className="font-typewriter text-muted-foreground leading-relaxed mb-6">
+                  I occasionally accept invitations to speak at events, workshops & consultations to share things that I care about.
+                </p>
+                
+                {/* Image Slider */}
+                <div className="mb-6">
+                  <Carousel className="w-full max-w-lg mx-auto">
+                    <CarouselContent>
+                      <CarouselItem>
+                        <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                          <img 
+                            src="/lovable-uploads/02594b85-35a5-4f5e-b0f9-c93ee3f201a7.png" 
+                            alt="Speaking engagement" 
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                          <img 
+                            src="/lovable-uploads/0a9faeb6-72a3-484e-83a5-0aad681f0684.png" 
+                            alt="Workshop session" 
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                          <img 
+                            src="/lovable-uploads/1dcf470c-2ae1-4041-9270-802a1b166480.png" 
+                            alt="Design consultation" 
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                          <img 
+                            src="/lovable-uploads/296d95da-ee08-407a-9413-025d7c4bc61d.png" 
+                            alt="Event presentation" 
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                          <img 
+                            src="/lovable-uploads/2fbd8484-6091-4de8-8f0d-0c7c7ded5fb0.png" 
+                            alt="Workshop facilitation" 
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                          <img 
+                            src="/lovable-uploads/307c85f4-d33f-45a4-83d5-c8d95c1b4a07.png" 
+                            alt="Design thinking session" 
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                          <img 
+                            src="/lovable-uploads/318ce04d-e3cb-473d-81bc-63e4c917981c.png" 
+                            alt="Speaking at conference" 
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                          <img 
+                            src="/lovable-uploads/3203ca77-96ca-4347-9e77-4a9c89891bfb.png" 
+                            alt="Workshop participant interaction" 
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                          <img 
+                            src="/lovable-uploads/38a4617f-499b-49dd-accd-4531551d30ac.png" 
+                            alt="Design consultation meeting" 
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </CarouselItem>
+                    </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                  </Carousel>
+                </div>
+
+                {/* Workshops List */}
+                <div className="space-y-3">
                   <div className="font-typewriter text-muted-foreground">
-                    <span className="text-foreground font-medium">Systems Thinking:</span> Building cohesive experiences across touchpoints
+                    <span className="text-foreground font-medium">Design Systems Workshop</span> • 2024
+                  </div>
+                  <div className="font-typewriter text-muted-foreground">
+                    <span className="text-foreground font-medium">User Experience Strategy</span> • 2023
+                  </div>
+                  <div className="font-typewriter text-muted-foreground">
+                    <span className="text-foreground font-medium">Digital Product Design</span> • 2023
+                  </div>
+                  <div className="font-typewriter text-muted-foreground">
+                    <span className="text-foreground font-medium">Design Thinking for Startups</span> • 2022
                   </div>
                 </div>
+              </div>
+
+              {/* Design Projects */}
+              <div>
+                <h2 className="font-display text-2xl font-medium mb-4 text-foreground">
+                  Design Projects
+                </h2>
+                <p className="font-typewriter text-muted-foreground leading-relaxed">
+                  A collection of digital products and experiences that showcase my approach to solving complex design challenges across various industries and platforms.
+                </p>
               </div>
             </div>
 
