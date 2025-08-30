@@ -69,12 +69,31 @@ const Manifesto = () => {
                   I occasionally accept invitations to speak at events, workshops & consultations to share things that I care about.
                 </p>
                 
+                {/* Workshops List */}
+                <div className="space-y-3 mb-6">
+                  <div className="font-typewriter text-muted-foreground">
+                    <span className="text-foreground font-medium">Design Systems Workshop</span> • 2024
+                  </div>
+                  <div className="h-px bg-border"></div>
+                  <div className="font-typewriter text-muted-foreground">
+                    <span className="text-foreground font-medium">User Experience Strategy</span> • 2023
+                  </div>
+                  <div className="h-px bg-border"></div>
+                  <div className="font-typewriter text-muted-foreground">
+                    <span className="text-foreground font-medium">Digital Product Design</span> • 2023
+                  </div>
+                  <div className="h-px bg-border"></div>
+                  <div className="font-typewriter text-muted-foreground">
+                    <span className="text-foreground font-medium">Design Thinking for Startups</span> • 2022
+                  </div>
+                </div>
+
                 {/* Image Slider */}
                 <div className="mb-6">
-                  <Carousel className="w-full max-w-lg mx-auto">
+                  <Carousel className="w-full max-w-lg mx-auto relative">
                     <CarouselContent>
                       <CarouselItem>
-                        <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                        <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
                           <img 
                             src="/lovable-uploads/02594b85-35a5-4f5e-b0f9-c93ee3f201a7.png" 
                             alt="Speaking engagement" 
@@ -83,7 +102,7 @@ const Manifesto = () => {
                         </div>
                       </CarouselItem>
                       <CarouselItem>
-                        <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                        <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
                           <img 
                             src="/lovable-uploads/0a9faeb6-72a3-484e-83a5-0aad681f0684.png" 
                             alt="Workshop session" 
@@ -92,7 +111,7 @@ const Manifesto = () => {
                         </div>
                       </CarouselItem>
                       <CarouselItem>
-                        <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                        <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
                           <img 
                             src="/lovable-uploads/1dcf470c-2ae1-4041-9270-802a1b166480.png" 
                             alt="Design consultation" 
@@ -101,7 +120,7 @@ const Manifesto = () => {
                         </div>
                       </CarouselItem>
                       <CarouselItem>
-                        <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                        <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
                           <img 
                             src="/lovable-uploads/296d95da-ee08-407a-9413-025d7c4bc61d.png" 
                             alt="Event presentation" 
@@ -110,7 +129,7 @@ const Manifesto = () => {
                         </div>
                       </CarouselItem>
                       <CarouselItem>
-                        <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                        <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
                           <img 
                             src="/lovable-uploads/2fbd8484-6091-4de8-8f0d-0c7c7ded5fb0.png" 
                             alt="Workshop facilitation" 
@@ -119,7 +138,7 @@ const Manifesto = () => {
                         </div>
                       </CarouselItem>
                       <CarouselItem>
-                        <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                        <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
                           <img 
                             src="/lovable-uploads/307c85f4-d33f-45a4-83d5-c8d95c1b4a07.png" 
                             alt="Design thinking session" 
@@ -128,7 +147,7 @@ const Manifesto = () => {
                         </div>
                       </CarouselItem>
                       <CarouselItem>
-                        <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                        <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
                           <img 
                             src="/lovable-uploads/318ce04d-e3cb-473d-81bc-63e4c917981c.png" 
                             alt="Speaking at conference" 
@@ -137,7 +156,7 @@ const Manifesto = () => {
                         </div>
                       </CarouselItem>
                       <CarouselItem>
-                        <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                        <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
                           <img 
                             src="/lovable-uploads/3203ca77-96ca-4347-9e77-4a9c89891bfb.png" 
                             alt="Workshop participant interaction" 
@@ -146,7 +165,7 @@ const Manifesto = () => {
                         </div>
                       </CarouselItem>
                       <CarouselItem>
-                        <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                        <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
                           <img 
                             src="/lovable-uploads/38a4617f-499b-49dd-accd-4531551d30ac.png" 
                             alt="Design consultation meeting" 
@@ -155,36 +174,10 @@ const Manifesto = () => {
                         </div>
                       </CarouselItem>
                     </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
+                    <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10" />
+                    <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10" />
                   </Carousel>
                 </div>
-
-                {/* Workshops List */}
-                <div className="space-y-3">
-                  <div className="font-typewriter text-muted-foreground">
-                    <span className="text-foreground font-medium">Design Systems Workshop</span> • 2024
-                  </div>
-                  <div className="font-typewriter text-muted-foreground">
-                    <span className="text-foreground font-medium">User Experience Strategy</span> • 2023
-                  </div>
-                  <div className="font-typewriter text-muted-foreground">
-                    <span className="text-foreground font-medium">Digital Product Design</span> • 2023
-                  </div>
-                  <div className="font-typewriter text-muted-foreground">
-                    <span className="text-foreground font-medium">Design Thinking for Startups</span> • 2022
-                  </div>
-                </div>
-              </div>
-
-              {/* Design Projects */}
-              <div>
-                <h2 className="font-display text-2xl font-medium mb-4 text-foreground">
-                  Design Projects
-                </h2>
-                <p className="font-typewriter text-muted-foreground leading-relaxed">
-                  A collection of digital products and experiences that showcase my approach to solving complex design challenges across various industries and platforms.
-                </p>
               </div>
             </div>
 
@@ -268,71 +261,135 @@ const Manifesto = () => {
                 </div>
               </div>
 
-               {/* Side Projects */}
-               <div>
-                 <h2 className="font-display text-2xl font-medium mb-4 text-foreground">
-                   Side Projects
-                 </h2>
-                 <div className="space-y-4">
-                   <div className="border border-border rounded-lg p-4">
-                     <div className="flex items-center justify-between mb-2">
-                       <div className="flex items-center gap-2">
-                         <a 
-                           href="https://dealn.app/" 
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                         >
-                           Dealn
-                           <ExternalLink size={14} className="text-primary" />
-                         </a>
-                       </div>
-                       <span className="bg-green-500/20 text-green-700 dark:text-green-300 px-2 py-1 rounded text-xs font-typewriter">
-                         Active
-                       </span>
-                     </div>
-                     <p className="font-typewriter text-muted-foreground text-sm">
-                       Deal Experience Platform (DXP)
-                     </p>
-                   </div>
-                   
-                   <div className="border border-border rounded-lg p-4">
-                     <div className="flex items-center justify-between mb-2">
-                       <div className="flex items-center gap-2">
-                         <a 
-                           href="https://www.instagram.com/nobody.collective/" 
-                           target="_blank"
-                           rel="noopener noreferrer"
-                           className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                         >
-                           Nobody Collective
-                           <ExternalLink size={14} className="text-primary" />
-                         </a>
-                       </div>
-                       <span className="bg-green-500/20 text-green-700 dark:text-green-300 px-2 py-1 rounded text-xs font-typewriter">
-                         Active
-                       </span>
-                     </div>
-                     <p className="font-typewriter text-muted-foreground text-sm">
-                       Design Education Contents
-                     </p>
-                   </div>
+                {/* Side Projects */}
+                <div>
+                  <h2 className="font-display text-2xl font-medium mb-4 text-foreground">
+                    Side Projects
+                  </h2>
+                  <div className="space-y-4">
+                    <div className="border border-border rounded-lg p-4">
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="flex items-center gap-2">
+                          <a 
+                            href="https://dealn.app/" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                          >
+                            Dealn
+                            <ExternalLink size={14} className="text-primary" />
+                          </a>
+                        </div>
+                        <span className="bg-green-500/20 text-green-700 dark:text-green-300 px-2 py-1 rounded text-xs font-typewriter">
+                          Active
+                        </span>
+                      </div>
+                      <p className="font-typewriter text-muted-foreground text-sm">
+                        Deal Experience Platform (DXP)
+                      </p>
+                    </div>
+                    
+                    <div className="border border-border rounded-lg p-4">
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="flex items-center gap-2">
+                          <a 
+                            href="https://www.instagram.com/nobody.collective/" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                          >
+                            Nobody Collective
+                            <ExternalLink size={14} className="text-primary" />
+                          </a>
+                        </div>
+                        <span className="bg-green-500/20 text-green-700 dark:text-green-300 px-2 py-1 rounded text-xs font-typewriter">
+                          Active
+                        </span>
+                      </div>
+                      <p className="font-typewriter text-muted-foreground text-sm">
+                        Design Education Contents
+                      </p>
+                    </div>
 
-                   <div className="border border-border rounded-lg p-4">
-                     <div className="flex items-center justify-between mb-2">
-                       <span className="font-typewriter text-foreground font-medium opacity-60">
-                         Designloka
-                       </span>
-                       <span className="bg-gray-500/20 text-gray-700 dark:text-gray-300 px-2 py-1 rounded text-xs font-typewriter">
-                         Inactive
-                       </span>
-                     </div>
-                     <p className="font-typewriter text-muted-foreground text-sm opacity-60">
-                       Unlimited Design Subscription
-                     </p>
-                   </div>
-                 </div>
-               </div>
+                    <div className="border border-border rounded-lg p-4">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="font-typewriter text-foreground font-medium opacity-60">
+                          Designloka
+                        </span>
+                        <span className="bg-gray-500/20 text-gray-700 dark:text-gray-300 px-2 py-1 rounded text-xs font-typewriter">
+                          Inactive
+                        </span>
+                      </div>
+                      <p className="font-typewriter text-muted-foreground text-sm opacity-60">
+                        Unlimited Design Subscription
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Design Projects */}
+                <div>
+                  <h2 className="font-display text-2xl font-medium mb-4 text-foreground">
+                    Design Projects
+                  </h2>
+                  <div className="space-y-3">
+                    <div className="font-typewriter text-muted-foreground">
+                      <a 
+                        href="#" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                      >
+                        E-commerce Platform Redesign
+                        <ExternalLink size={14} className="text-primary" />
+                      </a>
+                    </div>
+                    <div className="font-typewriter text-muted-foreground">
+                      <a 
+                        href="#" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                      >
+                        Mobile Banking App
+                        <ExternalLink size={14} className="text-primary" />
+                      </a>
+                    </div>
+                    <div className="font-typewriter text-muted-foreground">
+                      <a 
+                        href="#" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                      >
+                        SaaS Dashboard Interface
+                        <ExternalLink size={14} className="text-primary" />
+                      </a>
+                    </div>
+                    <div className="font-typewriter text-muted-foreground">
+                      <a 
+                        href="#" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                      >
+                        Insurance Platform UX
+                        <ExternalLink size={14} className="text-primary" />
+                      </a>
+                    </div>
+                    <div className="font-typewriter text-muted-foreground">
+                      <a 
+                        href="#" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
+                      >
+                        B2B Commerce Portal
+                        <ExternalLink size={14} className="text-primary" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
             </div>
           </div>
         </div>
