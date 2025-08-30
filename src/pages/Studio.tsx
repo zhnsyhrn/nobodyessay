@@ -51,8 +51,8 @@ const Studio = () => {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-8 sm:py-12 px-0 sm:px-6">
-        <div className="w-full px-0 sm:px-6 lg:px-12 xl:px-16">          
+      <section className="py-8 sm:py-12 px-4 sm:px-6">
+        <div className="max-w-4xl sm:max-w-none mx-auto sm:px-0 lg:px-12 xl:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[10px]">
             {[{
             title: "Great Eastern Takaful Malaysia",
