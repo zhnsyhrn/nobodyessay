@@ -7,6 +7,7 @@ import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
 import ComingSoonDialog from "@/components/ComingSoonDialog";
 import Autoplay from "embla-carousel-autoplay";
+import { ArrowRight } from "lucide-react";
 
 // Sample project images - you can replace these with actual project images
 import galleryImage1 from "@/assets/gallery-01.jpg";
@@ -50,9 +51,9 @@ const Studio = () => {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-8 sm:py-12 px-4 sm:px-6">
-        <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16">          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+      <section className="py-8 sm:py-12 px-0 sm:px-6">
+        <div className="w-full px-0 sm:px-6 lg:px-12 xl:px-16">          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[10px]">
             {[{
             title: "Great Eastern Takaful Malaysia",
             slug: "great-eastern-takaful",
@@ -125,22 +126,20 @@ const Studio = () => {
                     loading="lazy" 
                   />
                 </div>
-                <div className="p-6" style={{
+                <div className="p-2" style={{
               backgroundColor: '#F5F5F5'
             }}>
                   <div className="flex items-center justify-between">
                     <div className="flex-1">
-                      <h3 className="font-display text-lg font-medium text-black mb-1">
+                      <h3 className="font-display text-base font-medium text-black mb-1">
                         {project.title}
                       </h3>
-                      <p className="font-mono text-sm text-gray-700">
+                      <p className="font-mono text-xs text-gray-700 uppercase">
                         {project.description}
                       </p>
                     </div>
                     <div className="ml-4">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-600">
-                        <path d="M7 17L17 7M17 7H7M17 7V17" />
-                      </svg>
+                      <ArrowRight className="text-gray-600" size={20} />
                     </div>
                   </div>
                 </div>
