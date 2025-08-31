@@ -12,7 +12,6 @@ import { Instagram, Linkedin, X } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
-import AvailabilityBanner from "@/components/AvailabilityBanner";
 
 // Portfolio design images - Your latest design portfolio work
 const portfolioImages = ["/lovable-uploads/8522cb15-bd11-4bf2-9180-619939a55e10.png",
@@ -53,7 +52,6 @@ const Index = () => {
   }, [api]);
   return <div className="min-h-screen bg-background">
       <StickyNavbar />
-      <AvailabilityBanner />
 
       {/* Hero Section */}
       <section className="py-8 sm:py-12 lg:py-20 px-4 sm:px-6 fade-in pb-4 sm:pb-6">

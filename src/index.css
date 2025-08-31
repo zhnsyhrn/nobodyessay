@@ -40,10 +40,6 @@ All colors MUST be HSL.
     --warning-border: 0 84% 85%;
     --warning-foreground: 0 84% 40%;
 
-    --success: 120 60% 96%;
-    --success-border: 120 60% 80%;
-    --success-foreground: 120 60% 25%;
-
     --border: 0 0% 90%;
     --input: 0 0% 90%;
     --ring: 0 0% 18%;
@@ -99,10 +95,6 @@ All colors MUST be HSL.
     --warning: 0 84% 15%;
     --warning-border: 0 84% 25%;
     --warning-foreground: 0 84% 80%;
-
-    --success: 120 60% 8%;
-    --success-border: 120 60% 20%;
-    --success-foreground: 120 60% 85%;
 
     --border: 0 0% 10%;
     --input: 0 0% 10%;

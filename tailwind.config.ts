@@ -68,11 +68,6 @@ export default {
 					border: 'hsl(var(--warning-border))',
 					foreground: 'hsl(var(--warning-foreground))'
 				},
-				success: {
-					DEFAULT: 'hsl(var(--success))',
-					border: 'hsl(var(--success-border))',
-					foreground: 'hsl(var(--success-foreground))'
-				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
