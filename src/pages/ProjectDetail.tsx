@@ -431,74 +431,50 @@ const ProjectDetail = () => {
             </div>
           </div>
         ) : slug === 'verdant-solar-my' ? (
-          // Special two-column layout for Verdant Solar with slider
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {/* Left Column - Content */}
-              <div className="space-y-6">
-                <div>
-                  <h3 className="font-display text-2xl font-medium mb-4">Creative Direction & Visual Design</h3>
-                  <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
-                    Designed compelling social media graphics and advertisements for Verdant Solar, Malaysia's leading renewable energy solutions provider.
-                  </p>
-                  <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
-                    The creative approach focused on highlighting their innovative solar technology, sustainability mission, and customer benefits through vibrant visual storytelling.
-                  </p>
-                </div>
-                
-                <div>
-                  <h4 className="font-display text-xl font-medium mb-3">Key Design Elements</h4>
-                  <ul className="space-y-2">
-                    <li style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>• Bold typography with eco-friendly color palettes</li>
-                    <li style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>• Dynamic compositions showcasing solar installations</li>
-                    <li style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>• Clear messaging on cost savings and environmental benefits</li>
-                    <li style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>• Multilingual content for diverse Malaysian audiences</li>
-                  </ul>
-                </div>
-              </div>
-              
-              {/* Right Column - Image Slider */}
-              <div className="relative">
-                <Carousel 
-                  className="w-full"
-                  plugins={[
-                    Autoplay({
-                      delay: 3000,
-                      stopOnInteraction: true
-                    })
-                  ]}
-                >
-                  <CarouselContent>
-                    {verdantSolarImages.map((image, index) => (
-                      <CarouselItem key={index}>
-                        <div className="aspect-square overflow-hidden rounded-[10px] bg-muted">
-                          <img 
-                            src={image} 
-                            alt={`Verdant Solar Design ${index + 1}`} 
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-                            loading="lazy" 
-                          />
-                        </div>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  <CarouselPrevious className="absolute -left-12 top-1/2 -translate-y-1/2" />
-                  <CarouselNext className="absolute -right-12 top-1/2 -translate-y-1/2" />
-                </Carousel>
-              </div>
+          // Special layout for Verdant Solar - slider at top, two-column grid below
+          <div className="max-w-4xl mx-auto space-y-8">
+            {/* Image Slider at Top */}
+            <div className="relative max-w-2xl mx-auto">
+              <Carousel 
+                className="w-full"
+                plugins={[
+                  Autoplay({
+                    delay: 3000,
+                    stopOnInteraction: true
+                  })
+                ]}
+              >
+                <CarouselContent>
+                  {verdantSolarImages.map((image, index) => (
+                    <CarouselItem key={index}>
+                      <div className="aspect-square overflow-hidden rounded-[10px] bg-muted">
+                        <img 
+                          src={image} 
+                          alt={`Verdant Solar Design ${index + 1}`} 
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
+                          loading="lazy" 
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
             </div>
             
-            {/* Additional Content Below */}
-            <div className="mt-12 space-y-6">
-              <div>
-                <h4 className="font-display text-xl font-medium mb-3">Campaign Impact</h4>
-                <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
-                  The social media graphics and advertisements were designed to increase brand awareness and drive customer engagement across various digital platforms, emphasizing Verdant Solar's commitment to sustainable energy solutions.
-                </p>
-                <p style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
-                  Each design piece was crafted to communicate complex technical benefits in an accessible and visually appealing format, helping potential customers understand the value of solar energy adoption.
-                </p>
-              </div>
+            {/* Two-Column Image Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {verdantSolarImages.map((image, index) => (
+                <div key={index} className="aspect-square overflow-hidden rounded-[10px] bg-muted">
+                  <img 
+                    src={image} 
+                    alt={`Verdant Solar Design ${index + 1}`} 
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
+                    loading="lazy" 
+                  />
+                </div>
+              ))}
             </div>
           </div>
         ) : (
