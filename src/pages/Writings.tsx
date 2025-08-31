@@ -19,20 +19,20 @@ const Writings = () => {
                 <div className="space-y-3 sm:space-y-4">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-4 text-sm text-muted-foreground font-typewriter">
                     <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                      <span className="uppercase">{writing.date}</span>
+                      <span>{writing.date}</span>
                       <span className="hidden sm:inline">•</span>
                       <span className="bg-muted px-2 py-1 rounded text-xs inline-block w-fit">
                         {writing.category}
                       </span>
                     </div>
-                    <span className="text-xs sm:text-sm uppercase">{writing.readTime}</span>
+                    <span className="text-xs sm:text-sm">{writing.readTime}</span>
                   </div>
                   
                   <h2 className="font-display text-lg sm:text-xl font-medium leading-tight">
                     {writing.title}
                   </h2>
                   
-                  <p className="font-jakarta leading-relaxed text-sm sm:text-base" style={{
+                  <p className="font-typewriter leading-relaxed text-sm sm:text-base" style={{
                 color: '#606060'
               }}>
                     {writing.excerpt}
@@ -52,9 +52,7 @@ const Writings = () => {
               More writings coming soon...
             </p>
             <Link to="/">
-              <Button variant="ghost" className="font-display min-h-[44px] px-4">
-                ← Back to home
-              </Button>
+              
             </Link>
           </div>
         </div>
