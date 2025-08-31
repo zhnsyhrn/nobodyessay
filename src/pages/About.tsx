@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import Footer from "@/components/Footer";
 
 const About = () => {
   return (
@@ -55,14 +56,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-border py-12 px-4 sm:px-6 mt-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="font-display text-sm text-muted-foreground">
-            © 2025 | byzahin. All rights reserved. — All thoughts are freely given
-          </p>
-        </div>
-      </footer>
+      <Footer />
       <ScrollToTopButton />
     </div>
   );
