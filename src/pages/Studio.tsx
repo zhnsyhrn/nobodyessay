@@ -40,14 +40,14 @@ const Studio = () => {
       setCurrent(api.selectedScrollSnap() + 1);
     });
   }, [api]);
-  return <div className="min-h-screen" style={{ backgroundColor: '#161616' }}>
+  return <div className="min-h-screen bg-background">
       <StickyNavbar />
 
 
       {/* Projects Grid */}
       <section className="py-8 sm:py-12 px-4 sm:px-6">
         <div className="max-w-4xl sm:max-w-none mx-auto sm:px-0 lg:px-12 xl:px-16">
-          <div className="grid grid-cols-1 gap-[10px]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[10px]">
             {[{
             title: "Great Eastern Takaful Malaysia",
             slug: "great-eastern-takaful-malaysia",
@@ -111,7 +111,7 @@ const Studio = () => {
             };
 
             const CardContent = () => (
-              <div className="border border-gray-200 overflow-hidden bg-white" style={{ borderRadius: '10px' }}>
+              <div className="border border-gray-200 rounded-lg overflow-hidden bg-white">
                 <div className="aspect-video overflow-hidden bg-muted">
                   <img 
                     src={getImageSrc(index)} 
