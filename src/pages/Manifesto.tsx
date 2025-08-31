@@ -3,10 +3,8 @@ import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
 import { ExternalLink } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-
 const Manifesto = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <StickyNavbar />
       
       <section className="py-12 sm:py-16 px-4 sm:px-6">
@@ -23,7 +21,7 @@ const Manifesto = () => {
                 <h2 className="font-display text-2xl font-medium mb-4 text-foreground">
                   What I Do
                 </h2>
-                <p className="font-typewriter text-muted-foreground leading-relaxed">
+                <p className="font-typewriter leading-relaxed text-neutral-500 text-sm">
                   I create digital experiences that bridge the gap between human intuition and technological possibility. Through thoughtful design and strategic thinking, I help brands and individuals tell their stories in the digital landscape.
                 </p>
               </div>
@@ -92,65 +90,37 @@ const Manifesto = () => {
                     <CarouselContent>
                       <CarouselItem>
                         <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
-                          <img 
-                            src="/lovable-uploads/cdb5672f-de57-4d19-a313-9bdec559de7b.png" 
-                            alt="Group photo at university workshop" 
-                            className="w-full h-full object-cover"
-                          />
+                          <img src="/lovable-uploads/cdb5672f-de57-4d19-a313-9bdec559de7b.png" alt="Group photo at university workshop" className="w-full h-full object-cover" />
                         </div>
                       </CarouselItem>
                       <CarouselItem>
                         <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
-                          <img 
-                            src="/lovable-uploads/a78f735b-9b5e-496f-807c-d89d3bb3fbc1.png" 
-                            alt="Speaking at entrepreneurship masterclass" 
-                            className="w-full h-full object-cover"
-                          />
+                          <img src="/lovable-uploads/a78f735b-9b5e-496f-807c-d89d3bb3fbc1.png" alt="Speaking at entrepreneurship masterclass" className="w-full h-full object-cover" />
                         </div>
                       </CarouselItem>
                       <CarouselItem>
                         <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
-                          <img 
-                            src="/lovable-uploads/d0b90204-89f8-4b16-9387-912ec4ef8cf9.png" 
-                            alt="Virtual workshop presentation" 
-                            className="w-full h-full object-cover"
-                          />
+                          <img src="/lovable-uploads/d0b90204-89f8-4b16-9387-912ec4ef8cf9.png" alt="Virtual workshop presentation" className="w-full h-full object-cover" />
                         </div>
                       </CarouselItem>
                       <CarouselItem>
                         <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
-                          <img 
-                            src="/lovable-uploads/be876eca-c1a0-4e2f-940e-27d0df2042fa.png" 
-                            alt="Hands-on workshop session" 
-                            className="w-full h-full object-cover"
-                          />
+                          <img src="/lovable-uploads/be876eca-c1a0-4e2f-940e-27d0df2042fa.png" alt="Hands-on workshop session" className="w-full h-full object-cover" />
                         </div>
                       </CarouselItem>
                       <CarouselItem>
                         <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
-                          <img 
-                            src="/lovable-uploads/56d6ab0a-15f4-4d7c-80b5-6e358fb73882.png" 
-                            alt="Team photo at bootcamp event" 
-                            className="w-full h-full object-cover"
-                          />
+                          <img src="/lovable-uploads/56d6ab0a-15f4-4d7c-80b5-6e358fb73882.png" alt="Team photo at bootcamp event" className="w-full h-full object-cover" />
                         </div>
                       </CarouselItem>
                       <CarouselItem>
                         <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
-                          <img 
-                            src="/lovable-uploads/8f343185-b806-43de-b723-33d36c31b526.png" 
-                            alt="Large group photo at university event" 
-                            className="w-full h-full object-cover"
-                          />
+                          <img src="/lovable-uploads/8f343185-b806-43de-b723-33d36c31b526.png" alt="Large group photo at university event" className="w-full h-full object-cover" />
                         </div>
                       </CarouselItem>
                       <CarouselItem>
                         <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
-                          <img 
-                            src="/lovable-uploads/48722f75-9955-4d59-9183-79b77034c818.png" 
-                            alt="Presenting at startup event" 
-                            className="w-full h-full object-cover"
-                          />
+                          <img src="/lovable-uploads/48722f75-9955-4d59-9183-79b77034c818.png" alt="Presenting at startup event" className="w-full h-full object-cover" />
                         </div>
                       </CarouselItem>
                     </CarouselContent>
@@ -173,12 +143,7 @@ const Manifesto = () => {
                   <div className="border border-border rounded-lg p-3">
                     <div className="flex items-center justify-between mb-1">
                       <div className="font-typewriter text-foreground font-medium">
-                        <a 
-                          href="https://moneyx.com.my/" 
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="hover:text-primary transition-colors flex items-center gap-2"
-                        >
+                        <a href="https://moneyx.com.my/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
                           MoneyX
                           <ExternalLink size={14} className="text-primary" />
                         </a>
@@ -195,12 +160,7 @@ const Manifesto = () => {
                   <div className="border border-border rounded-lg p-3">
                     <div className="flex items-center justify-between mb-1">
                       <div className="font-typewriter text-foreground font-medium">
-                        <a 
-                          href="https://www.borong.com/my" 
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="hover:text-primary transition-colors flex items-center gap-2"
-                        >
+                        <a href="https://www.borong.com/my" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
                           Borong (Dropee)
                           <ExternalLink size={14} className="text-primary" />
                         </a>
@@ -217,12 +177,7 @@ const Manifesto = () => {
                   <div className="border border-border rounded-lg p-3">
                     <div className="flex items-center justify-between mb-1">
                       <div className="font-typewriter text-foreground font-medium">
-                        <a 
-                          href="https://policystreet.com.my/reinsurance" 
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="hover:text-primary transition-colors flex items-center gap-2"
-                        >
+                        <a href="https://policystreet.com.my/reinsurance" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
                           PolicyStreet
                           <ExternalLink size={14} className="text-primary" />
                         </a>
@@ -239,12 +194,7 @@ const Manifesto = () => {
                   <div className="border border-border rounded-lg p-3">
                     <div className="flex items-center justify-between mb-1">
                       <div className="font-typewriter text-foreground font-medium">
-                        <a 
-                          href="https://senangstart.com/" 
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="hover:text-primary transition-colors flex items-center gap-2"
-                        >
+                        <a href="https://senangstart.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
                           Fixcolab Group Sdn Bhd
                           <ExternalLink size={14} className="text-primary" />
                         </a>
@@ -283,12 +233,7 @@ const Manifesto = () => {
                     <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
-                          <a 
-                            href="https://dealn.app/" 
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                          >
+                          <a href="https://dealn.app/" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
                             Dealn
                             <ExternalLink size={14} className="text-primary" />
                           </a>
@@ -305,12 +250,7 @@ const Manifesto = () => {
                     <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
-                          <a 
-                            href="https://www.instagram.com/nobody.collective/" 
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                          >
+                          <a href="https://www.instagram.com/nobody.collective/" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
                             Nobody Collective
                             <ExternalLink size={14} className="text-primary" />
                           </a>
@@ -348,12 +288,7 @@ const Manifesto = () => {
                   <div className="space-y-3">
                     <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center gap-2">
-                        <a 
-                          href="https://grain.com.sg/" 
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                        >
+                        <a href="https://grain.com.sg/" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
                           Grain Singapore
                           <ExternalLink size={14} className="text-primary" />
                         </a>
@@ -362,12 +297,7 @@ const Manifesto = () => {
                     
                     <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center gap-2">
-                        <a 
-                          href="https://www.greateasterntakaful.com/en/personal-takaful.html" 
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                        >
+                        <a href="https://www.greateasterntakaful.com/en/personal-takaful.html" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
                           Great Eastern Takaful Berhad
                           <ExternalLink size={14} className="text-primary" />
                         </a>
@@ -376,12 +306,7 @@ const Manifesto = () => {
 
                     <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center gap-2">
-                        <a 
-                          href="https://www.mmu.edu.my/" 
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                        >
+                        <a href="https://www.mmu.edu.my/" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
                           Multimedia University
                           <ExternalLink size={14} className="text-primary" />
                         </a>
@@ -390,12 +315,7 @@ const Manifesto = () => {
 
                     <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center gap-2">
-                        <a 
-                          href="https://nanomalaysia.com.my/" 
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                        >
+                        <a href="https://nanomalaysia.com.my/" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
                           NanoMalaysia Berhad
                           <ExternalLink size={14} className="text-primary" />
                         </a>
@@ -404,12 +324,7 @@ const Manifesto = () => {
 
                     <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center gap-2">
-                        <a 
-                          href="https://verdantsolar.my/" 
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                        >
+                        <a href="https://verdantsolar.my/" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
                           Verdant Solar
                           <ExternalLink size={14} className="text-primary" />
                         </a>
@@ -418,12 +333,7 @@ const Manifesto = () => {
 
                     <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center gap-2">
-                        <a 
-                          href="https://mytigas.com/" 
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                        >
+                        <a href="https://mytigas.com/" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
                           MyTigas Alliance
                           <ExternalLink size={14} className="text-primary" />
                         </a>
@@ -432,12 +342,7 @@ const Manifesto = () => {
 
                     <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center gap-2">
-                        <a 
-                          href="https://moneyx.com.my/" 
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                        >
+                        <a href="https://moneyx.com.my/" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
                           MoneyX
                           <ExternalLink size={14} className="text-primary" />
                         </a>
@@ -446,12 +351,7 @@ const Manifesto = () => {
 
                     <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center gap-2">
-                        <a 
-                          href="https://www.moneyxbiz.com.my/" 
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                        >
+                        <a href="https://www.moneyxbiz.com.my/" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
                           MoneyX Biz
                           <ExternalLink size={14} className="text-primary" />
                         </a>
@@ -460,12 +360,7 @@ const Manifesto = () => {
 
                     <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center gap-2">
-                        <a 
-                          href="https://policystreet.com.my/reinsurance" 
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                        >
+                        <a href="https://policystreet.com.my/reinsurance" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
                           PolicyStreet
                           <ExternalLink size={14} className="text-primary" />
                         </a>
@@ -474,12 +369,7 @@ const Manifesto = () => {
 
                     <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center gap-2">
-                        <a 
-                          href="https://market.borong.com/my" 
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                        >
+                        <a href="https://market.borong.com/my" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
                           Borong
                           <ExternalLink size={14} className="text-primary" />
                         </a>
@@ -488,12 +378,7 @@ const Manifesto = () => {
 
                     <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center gap-2">
-                        <a 
-                          href="https://meca.com.my/" 
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                        >
+                        <a href="https://meca.com.my/" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
                           Meca Consultancy
                           <ExternalLink size={14} className="text-primary" />
                         </a>
@@ -502,12 +387,7 @@ const Manifesto = () => {
 
                     <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center gap-2">
-                        <a 
-                          href="https://paperballad.com/" 
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2"
-                        >
+                        <a href="https://paperballad.com/" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
                           Paperballad & Co.
                           <ExternalLink size={14} className="text-primary" />
                         </a>
@@ -522,8 +402,6 @@ const Manifesto = () => {
 
       <Footer />
       <ScrollToTopButton />
-    </div>
-  );
+    </div>;
 };
-
 export default Manifesto;
