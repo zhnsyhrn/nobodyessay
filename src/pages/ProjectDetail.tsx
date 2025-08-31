@@ -73,6 +73,16 @@ const verdantSolarImages = [
   "/lovable-uploads/a101a464-5e40-43a9-968e-64adccc9ddb8.png"
 ];
 
+// Verdant Solar grid images (for two-column layout)
+const verdantSolarGridImages = [
+  "/lovable-uploads/75b4d467-d07b-4a22-8523-6a9a556c5e2a.png",
+  "/lovable-uploads/13a8a4c7-9cd9-478e-a490-d3a7722f360a.png",
+  "/lovable-uploads/fc9707ef-ea3a-4b10-8e9d-c8d31441015b.png",
+  "/lovable-uploads/bc558340-fdd3-4e28-964d-459e2f34bd20.png",
+  "/lovable-uploads/bfa83407-2aa7-4d54-9719-7c2ae449a499.png",
+  "/lovable-uploads/5686ffae-e247-45ab-add8-45cbc20b7546.png"
+];
+
 // Sample project data - you can replace this with actual data
 const projectsData = {
   "moneyx-savings-goals-manual-entry": {
@@ -465,7 +475,7 @@ const ProjectDetail = () => {
             
             {/* Two-Column Image Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {verdantSolarImages.map((image, index) => (
+              {verdantSolarGridImages.map((image, index) => (
                 <div key={index} className="aspect-square overflow-hidden rounded-[10px] bg-muted">
                   <img 
                     src={image} 
