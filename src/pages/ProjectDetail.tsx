@@ -66,11 +66,14 @@ const greatEasternTakafulImages = [
   "/lovable-uploads/d0f62019-9599-4112-a540-dc3bcdfd0f0f.png"
 ];
 
-// Verdant Solar project images
+// Verdant Solar project images - Climate Awareness Graphics
 const verdantSolarImages = [
-  "/lovable-uploads/17b28c4c-a735-4020-ad74-e2559335890e.png",
-  "/lovable-uploads/bc3998bd-919f-4d25-bbe1-da43047c83bd.png",
-  "/lovable-uploads/a101a464-5e40-43a9-968e-64adccc9ddb8.png"
+  "/lovable-uploads/1f6d4e2e-7b54-4f9c-ae30-fb04593a5db8.png",
+  "/lovable-uploads/51d094bb-7212-44aa-880f-81843fda108d.png",
+  "/lovable-uploads/3ce0b311-2366-442e-ae3d-44512f7e5f93.png",
+  "/lovable-uploads/6b5aaf11-dbc3-4f4d-800d-fbfdd59965ea.png",
+  "/lovable-uploads/a8f38dd3-d20d-454e-befd-b9935a81579d.png",
+  "/lovable-uploads/f4a75733-8f8a-4c38-997e-85eaeafb9f5b.png"
 ];
 
 // Verdant Solar grid images (for two-column layout)
@@ -125,7 +128,7 @@ const VerdantSolarImageSlider = () => {
                 <div className="aspect-square overflow-hidden rounded-[10px] bg-muted">
                   <img 
                     src={image} 
-                    alt={`Verdant Solar Design ${index + 1}`} 
+                    alt={`Verdant Solar Climate Awareness ${index + 1}`} 
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
                     loading="lazy" 
                   />
@@ -137,21 +140,21 @@ const VerdantSolarImageSlider = () => {
           {/* Internal Navigation Controls */}
           <CarouselPrevious className="left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 hover:bg-white border-white/20 backdrop-blur-sm" />
           <CarouselNext className="right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 hover:bg-white border-white/20 backdrop-blur-sm" />
-          
-          {/* Dots Indicator */}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-            {verdantSolarImages.map((_, index) => (
-              <button 
-                key={index}
-                className={`w-2 h-2 rounded-full transition-colors duration-200 ${
-                  current === index ? 'bg-white' : 'bg-white/60 hover:bg-white/90'
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-                onClick={() => api?.scrollTo(index)}
-              />
-            ))}
-          </div>
         </Carousel>
+      </div>
+      
+      {/* Dots Indicator - Outside the image */}
+      <div className="flex justify-center mt-4 space-x-2">
+        {verdantSolarImages.map((_, index) => (
+          <button 
+            key={index}
+            className={`w-2 h-2 rounded-full transition-colors duration-200 ${
+              current === index ? 'bg-foreground' : 'bg-muted-foreground hover:bg-foreground/70'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+            onClick={() => api?.scrollTo(index)}
+          />
+        ))}
       </div>
       
       {/* Divider Line */}
