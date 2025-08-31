@@ -113,10 +113,15 @@ const VerdantSolarImageSlider = () => {
             })
           ]}
           setApi={setApi}
+          opts={{
+            align: "start",
+            loop: true,
+            slidesToScroll: 1
+          }}
         >
-          <CarouselContent>
+          <CarouselContent className="-ml-2">
             {verdantSolarImages.map((image, index) => (
-              <CarouselItem key={index}>
+              <CarouselItem key={index} className="pl-2 basis-1/2">
                 <div className="aspect-square overflow-hidden rounded-[10px] bg-muted">
                   <img 
                     src={image} 
