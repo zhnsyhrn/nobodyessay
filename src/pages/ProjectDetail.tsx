@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
@@ -70,7 +71,13 @@ const greatEasternTakafulImages = [
 const verdantSolarImages = [
   "/lovable-uploads/17b28c4c-a735-4020-ad74-e2559335890e.png",
   "/lovable-uploads/bc3998bd-919f-4d25-bbe1-da43047c83bd.png",
-  "/lovable-uploads/a101a464-5e40-43a9-968e-64adccc9ddb8.png"
+  "/lovable-uploads/a101a464-5e40-43a9-968e-64adccc9ddb8.png",
+  "/lovable-uploads/88310cc4-78f3-4db1-b2fd-6c17cf4237fa.png",
+  "/lovable-uploads/d1cb1dac-b2ad-4a12-8ead-e11fc18c8e30.png",
+  "/lovable-uploads/b3c7b09b-7683-40f7-ae59-5a30f7273869.png",
+  "/lovable-uploads/e6837a83-fce4-48a0-8972-728788cfa1df.png",
+  "/lovable-uploads/a8e606f3-8888-415b-9bbb-20d29b7a4f3a.png",
+  "/lovable-uploads/f376483d-c554-4ba6-b9ed-5e4acf8de962.png"
 ];
 
 // Verdant Solar grid images (for two-column layout)
@@ -82,6 +89,30 @@ const verdantSolarGridImages = [
   "/lovable-uploads/bfa83407-2aa7-4d54-9719-7c2ae449a499.png",
   "/lovable-uploads/5686ffae-e247-45ab-add8-45cbc20b7546.png"
 ];
+
+// Image Modal Component
+const ImageModal = ({ src, alt }: { src: string; alt: string }) => (
+  <Dialog>
+    <DialogTrigger asChild>
+      <button className="w-full h-full">
+        <img 
+          src={src} 
+          alt={alt} 
+          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 cursor-pointer" 
+          loading="lazy" 
+        />
+      </button>
+    </DialogTrigger>
+    <DialogContent className="max-w-4xl max-h-[90vh] p-0 overflow-hidden">
+      <img 
+        src={src} 
+        alt={alt} 
+        className="w-full h-full object-contain" 
+        loading="lazy" 
+      />
+    </DialogContent>
+  </Dialog>
+);
 
 // Verdant Solar Component
 const VerdantSolarContent = () => {
@@ -118,11 +149,9 @@ const VerdantSolarContent = () => {
             {verdantSolarImages.map((image, index) => (
               <CarouselItem key={index}>
                 <div className="aspect-square overflow-hidden rounded-[10px] bg-muted">
-                  <img 
+                  <ImageModal 
                     src={image} 
-                    alt={`Verdant Solar Design ${index + 1}`} 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-                    loading="lazy" 
+                    alt={`Verdant Solar Design ${index + 1}`}
                   />
                 </div>
               </CarouselItem>
@@ -153,11 +182,9 @@ const VerdantSolarContent = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
         {verdantSolarGridImages.map((image, index) => (
           <div key={index} className="aspect-square overflow-hidden rounded-[10px] bg-muted">
-            <img 
+            <ImageModal 
               src={image} 
-              alt={`Verdant Solar Design ${index + 1}`} 
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-              loading="lazy" 
+              alt={`Verdant Solar Grid ${index + 1}`}
             />
           </div>
         ))}
@@ -412,8 +439,13 @@ const ProjectDetail = () => {
 
       </div>
 
-      {/* Project Gallery - Full Width */}
-      <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16 mb-4 sm:mb-12">
+      {/* Divider */}
+      <div className="px-4 sm:px-6 lg:px-12 xl:px-16">
+        <div className="w-full h-px bg-border mb-8 sm:mb-12"></div>
+      </div>
+
+      {/* Project Gallery - Normal Width */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-16 mb-4 sm:mb-12">
         {slug === 'great-eastern-takaful-malaysia' ? (
           // Special content layout for Great Eastern Takaful with mixed text and images
           <div className="max-w-4xl mx-auto space-y-8">
@@ -436,11 +468,9 @@ const ProjectDetail = () => {
               <div className="grid grid-cols-1 gap-4 mb-8">
                 {greatEasternTakafulImages.slice(0, 3).map((image, index) => (
                   <div key={index} className="aspect-video overflow-hidden rounded-[10px] bg-muted">
-                    <img 
+                    <ImageModal 
                       src={image} 
-                      alt={`Great Eastern Takaful - Image ${index + 1}`} 
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-                      loading="lazy" 
+                      alt={`Great Eastern Takaful - Image ${index + 1}`}
                     />
                   </div>
                 ))}
@@ -494,11 +524,9 @@ const ProjectDetail = () => {
               <div className="grid grid-cols-1 gap-4 mb-8">
                 {greatEasternTakafulImages.slice(3, 5).map((image, index) => (
                   <div key={index + 3} className="aspect-video overflow-hidden rounded-[10px] bg-muted">
-                    <img 
+                    <ImageModal 
                       src={image} 
-                      alt={`Great Eastern Takaful - Image ${index + 4}`} 
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-                      loading="lazy" 
+                      alt={`Great Eastern Takaful - Image ${index + 4}`}
                     />
                   </div>
                 ))}
@@ -536,11 +564,9 @@ const ProjectDetail = () => {
               [galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5, galleryImage6, galleryImage7, galleryImage8]
             ).map((image, index) => (
               <div key={index} className="aspect-video overflow-hidden rounded-[10px] bg-muted">
-                <img 
+                <ImageModal 
                   src={image} 
-                  alt={`${project.title} - Image ${index + 1}`} 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-                  loading="lazy" 
+                  alt={`${project.title} - Image ${index + 1}`}
                 />
               </div>
             ))}
