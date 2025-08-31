@@ -83,7 +83,9 @@ const verdantSolarGridImages = [
   "/lovable-uploads/fc9707ef-ea3a-4b10-8e9d-c8d31441015b.png",
   "/lovable-uploads/bc558340-fdd3-4e28-964d-459e2f34bd20.png",
   "/lovable-uploads/bfa83407-2aa7-4d54-9719-7c2ae449a499.png",
-  "/lovable-uploads/5686ffae-e247-45ab-add8-45cbc20b7546.png"
+  "/lovable-uploads/5686ffae-e247-45ab-add8-45cbc20b7546.png",
+  "/lovable-uploads/8747297b-76ba-4837-a7d9-b5f45b56dcdf.png",
+  "/lovable-uploads/6d87d690-731a-40f4-a0c9-220a616c8954.png"
 ];
 
 // Verdant Solar Image Slider Component (for title section)
