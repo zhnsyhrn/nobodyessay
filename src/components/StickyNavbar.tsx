@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-
 const StickyNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
@@ -21,7 +20,6 @@ const StickyNavbar = () => {
       document.body.style.overflow = 'unset';
     };
   }, [isMenuOpen]);
-
   const toggleMenu = () => {
     console.log('Menu toggle clicked, current state:', isMenuOpen);
     setIsMenuOpen(!isMenuOpen);
@@ -30,7 +28,6 @@ const StickyNavbar = () => {
     console.log('Menu closed');
     setIsMenuOpen(false);
   };
-
   const isActiveRoute = (path: string) => {
     if (path === '/about' && location.pathname === '/about') return true;
     if (path === '/manifesto' && location.pathname === '/manifesto') return true;
@@ -39,9 +36,7 @@ const StickyNavbar = () => {
     if (path === '/contact' && location.pathname === '/contact') return true;
     return false;
   };
-
-  return (
-    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border px-4 sm:px-6 py-3 sm:py-4">
+  return <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border px-4 sm:px-6 py-3 sm:py-4">
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center justify-between">
           <Link to="/" onClick={closeMenu} className="flex items-center space-x-3">
@@ -53,74 +48,32 @@ const StickyNavbar = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
-            <Link 
-              to="/writings" 
-              className={`font-display text-sm transition-colors py-2 ${
-                isActiveRoute('/writings') 
-                  ? 'text-foreground font-medium' 
-                  : 'hover:text-muted-foreground'
-              }`}
-            >
+            <Link to="/writings" className={`font-display text-sm transition-colors py-2 ${isActiveRoute('/writings') ? 'text-foreground font-medium' : 'hover:text-muted-foreground'}`}>
               Writings
             </Link>
-            <Link 
-              to="/studio" 
-              className={`font-display text-sm transition-colors py-2 ${
-                isActiveRoute('/studio') 
-                  ? 'text-foreground font-medium' 
-                  : 'hover:text-muted-foreground'
-              }`}
-            >
-              Studio
-            </Link>
-            <Link 
-              to="/manifesto" 
-              className={`font-display text-sm transition-colors py-2 ${
-                isActiveRoute('/manifesto') 
-                  ? 'text-foreground font-medium' 
-                  : 'hover:text-muted-foreground'
-              }`}
-            >
-              Manifesto
-            </Link>
-            <Link 
-              to="/contact" 
-              className={`font-display text-sm transition-colors py-2 ${
-                isActiveRoute('/contact') 
-                  ? 'text-foreground font-medium' 
-                  : 'hover:text-muted-foreground'
-              }`}
-            >
+            <Link to="/studio" className={`font-display text-sm transition-colors py-2 ${isActiveRoute('/studio') ? 'text-foreground font-medium' : 'hover:text-muted-foreground'}`}>Projects</Link>
+            <Link to="/manifesto" className={`font-display text-sm transition-colors py-2 ${isActiveRoute('/manifesto') ? 'text-foreground font-medium' : 'hover:text-muted-foreground'}`}>About</Link>
+            <Link to="/contact" className={`font-display text-sm transition-colors py-2 ${isActiveRoute('/contact') ? 'text-foreground font-medium' : 'hover:text-muted-foreground'}`}>
               Contact
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={toggleMenu}
-            className="md:hidden p-3 h-12 w-12 touch-manipulation"
-            aria-label="Toggle menu"
-          >
+          <Button variant="ghost" size="sm" onClick={toggleMenu} className="md:hidden p-3 h-12 w-12 touch-manipulation" aria-label="Toggle menu">
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </Button>
         </div>
 
         {/* Mobile Navigation Menu Overlay - Full Page */}
-        {isMenuOpen && (
-          <div 
-            className="fixed inset-0 z-[9999] md:hidden flex flex-col bg-white"
-            style={{ 
-              backgroundColor: '#ffffff',
-              minHeight: '100vh',
-              minWidth: '100vw',
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0
-            }}
-          >
+        {isMenuOpen && <div className="fixed inset-0 z-[9999] md:hidden flex flex-col bg-white" style={{
+        backgroundColor: '#ffffff',
+        minHeight: '100vh',
+        minWidth: '100vw',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0
+      }}>
             {/* Header with close button */}
             <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-gray-200">
               <Link to="/" onClick={closeMenu} className="flex items-center space-x-3">
@@ -129,80 +82,41 @@ const StickyNavbar = () => {
                   byzahin
                 </h1>
               </Link>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={closeMenu}
-                className="p-3 h-12 w-12 touch-manipulation text-black hover:bg-gray-100"
-                aria-label="Close menu"
-              >
+              <Button variant="ghost" size="sm" onClick={closeMenu} className="p-3 h-12 w-12 touch-manipulation text-black hover:bg-gray-100" aria-label="Close menu">
                 <X size={24} />
               </Button>
             </div>
 
             {/* Menu Content - Centered */}
-            <div className="flex-1 flex flex-col justify-center items-center px-4 sm:px-6" style={{ backgroundColor: '#ffffff' }}>
+            <div className="flex-1 flex flex-col justify-center items-center px-4 sm:px-6" style={{
+          backgroundColor: '#ffffff'
+        }}>
               <div className="flex flex-col w-full max-w-sm">
-                <Link 
-                  to="/writings" 
-                  onClick={closeMenu}
-                  className={`font-display text-3xl transition-colors py-8 text-center flex items-center justify-center text-black hover:text-gray-600 ${
-                    isActiveRoute('/writings')
-                      ? 'font-medium'
-                      : ''
-                  }`}
-                >
+                <Link to="/writings" onClick={closeMenu} className={`font-display text-3xl transition-colors py-8 text-center flex items-center justify-center text-black hover:text-gray-600 ${isActiveRoute('/writings') ? 'font-medium' : ''}`}>
                   Writings
                 </Link>
                 
                 <Separator className="bg-gray-200" />
                 
-                <Link 
-                  to="/studio" 
-                  onClick={closeMenu}
-                  className={`font-display text-3xl transition-colors py-8 text-center flex items-center justify-center text-black hover:text-gray-600 ${
-                    isActiveRoute('/studio')
-                      ? 'font-medium'
-                      : ''
-                  }`}
-                >
+                <Link to="/studio" onClick={closeMenu} className={`font-display text-3xl transition-colors py-8 text-center flex items-center justify-center text-black hover:text-gray-600 ${isActiveRoute('/studio') ? 'font-medium' : ''}`}>
                   Studio
                 </Link>
                 
                 <Separator className="bg-gray-200" />
                 
-                <Link 
-                  to="/manifesto" 
-                  onClick={closeMenu}
-                  className={`font-display text-3xl transition-colors py-8 text-center flex items-center justify-center text-black hover:text-gray-600 ${
-                    isActiveRoute('/manifesto')
-                      ? 'font-medium'
-                      : ''
-                  }`}
-                >
+                <Link to="/manifesto" onClick={closeMenu} className={`font-display text-3xl transition-colors py-8 text-center flex items-center justify-center text-black hover:text-gray-600 ${isActiveRoute('/manifesto') ? 'font-medium' : ''}`}>
                   Manifesto
                 </Link>
                 
                 <Separator className="bg-gray-200" />
                 
-                <Link 
-                  to="/contact" 
-                  onClick={closeMenu}
-                  className={`font-display text-3xl transition-colors py-8 text-center flex items-center justify-center text-black hover:text-gray-600 ${
-                    isActiveRoute('/contact')
-                      ? 'font-medium'
-                      : ''
-                  }`}
-                >
+                <Link to="/contact" onClick={closeMenu} className={`font-display text-3xl transition-colors py-8 text-center flex items-center justify-center text-black hover:text-gray-600 ${isActiveRoute('/contact') ? 'font-medium' : ''}`}>
                   Contact
                 </Link>
               </div>
             </div>
-          </div>
-        )}
+          </div>}
       </div>
-    </nav>
-  );
+    </nav>;
 };
-
 export default StickyNavbar;

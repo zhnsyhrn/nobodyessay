@@ -66,9 +66,7 @@ const Index = () => {
             <Link to="/studio" className="w-full sm:w-auto">
               <div className="relative">
                 <GlowingEffect spread={40} glow={true} disabled={false} proximity={80} inactiveZone={0.3} />
-                <Button className="font-display min-h-[48px] px-6 w-full touch-manipulation shadow-lg hover:shadow-xl hover:shadow-primary/25 transition-all duration-300">
-                  The Evidence
-                </Button>
+                <Button className="font-display min-h-[48px] px-6 w-full touch-manipulation shadow-lg hover:shadow-xl hover:shadow-primary/25 transition-all duration-300">View All Works</Button>
               </div>
             </Link>
             <Link to="/writings" className="w-full sm:w-auto">
