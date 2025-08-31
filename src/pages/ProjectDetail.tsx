@@ -17,6 +17,10 @@ import galleryImage6 from "@/assets/gallery-06.jpg";
 import galleryImage7 from "@/assets/gallery-07.jpg";
 import galleryImage8 from "@/assets/gallery-08.jpg";
 
+// Import Carousel for Verdant Solar
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+
 // MoneyX project images (using public URLs)
 const moneyxImages = ["/lovable-uploads/7818744d-3050-4496-824e-8c4c7a8b1a4e.png",
 // Components & Wireframes
@@ -60,6 +64,13 @@ const greatEasternTakafulImages = [
   "/lovable-uploads/2386a452-3187-4691-b942-7b67ffcf80fb.png",
   "/lovable-uploads/b73c248c-bad3-4363-9939-e5cecdec3e91.png",
   "/lovable-uploads/d0f62019-9599-4112-a540-dc3bcdfd0f0f.png"
+];
+
+// Verdant Solar project images
+const verdantSolarImages = [
+  "/lovable-uploads/17b28c4c-a735-4020-ad74-e2559335890e.png",
+  "/lovable-uploads/bc3998bd-919f-4d25-bbe1-da43047c83bd.png",
+  "/lovable-uploads/a101a464-5e40-43a9-968e-64adccc9ddb8.png"
 ];
 
 // Sample project data - you can replace this with actual data
@@ -199,6 +210,20 @@ const projectsData = {
       "Type": "UX Audit",
       "Role / Project Ownership": "Lead designer",
       "Contribution": "Design workshop with multiple stakeholders",
+      "Project Lead / Product Manager(s)": "Zahin Syahiran",
+      "Value Added": "Design consultation",
+      "Credits": "Not available"
+    }
+  },
+  "verdant-solar-my": {
+    title: "Verdant Solar",
+    websiteUrl: "https://verdantsolar.my/",
+    overview: "Crafted engaging social media graphics and ads for Verdant Solar to highlight their renewable energy solutions, boost brand presence, and connect with eco-conscious audiences.",
+    projectInfo: {
+      "Project / Company": "Verdant Solar SDN BHD",
+      "Type": "Graphic Design",
+      "Role / Project Ownership": "Lead designer",
+      "Contribution": "Creative direction",
       "Project Lead / Product Manager(s)": "Zahin Syahiran",
       "Value Added": "Design consultation",
       "Credits": "Not available"
@@ -403,6 +428,77 @@ const ProjectDetail = () => {
               <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
                 Let me rest for awhile.
               </p>
+            </div>
+          </div>
+        ) : slug === 'verdant-solar-my' ? (
+          // Special two-column layout for Verdant Solar with slider
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Left Column - Content */}
+              <div className="space-y-6">
+                <div>
+                  <h3 className="font-display text-2xl font-medium mb-4">Creative Direction & Visual Design</h3>
+                  <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
+                    Designed compelling social media graphics and advertisements for Verdant Solar, Malaysia's leading renewable energy solutions provider.
+                  </p>
+                  <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
+                    The creative approach focused on highlighting their innovative solar technology, sustainability mission, and customer benefits through vibrant visual storytelling.
+                  </p>
+                </div>
+                
+                <div>
+                  <h4 className="font-display text-xl font-medium mb-3">Key Design Elements</h4>
+                  <ul className="space-y-2">
+                    <li style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>• Bold typography with eco-friendly color palettes</li>
+                    <li style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>• Dynamic compositions showcasing solar installations</li>
+                    <li style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>• Clear messaging on cost savings and environmental benefits</li>
+                    <li style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>• Multilingual content for diverse Malaysian audiences</li>
+                  </ul>
+                </div>
+              </div>
+              
+              {/* Right Column - Image Slider */}
+              <div className="relative">
+                <Carousel 
+                  className="w-full"
+                  plugins={[
+                    Autoplay({
+                      delay: 3000,
+                      stopOnInteraction: true
+                    })
+                  ]}
+                >
+                  <CarouselContent>
+                    {verdantSolarImages.map((image, index) => (
+                      <CarouselItem key={index}>
+                        <div className="aspect-square overflow-hidden rounded-[10px] bg-muted">
+                          <img 
+                            src={image} 
+                            alt={`Verdant Solar Design ${index + 1}`} 
+                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
+                            loading="lazy" 
+                          />
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="absolute -left-12 top-1/2 -translate-y-1/2" />
+                  <CarouselNext className="absolute -right-12 top-1/2 -translate-y-1/2" />
+                </Carousel>
+              </div>
+            </div>
+            
+            {/* Additional Content Below */}
+            <div className="mt-12 space-y-6">
+              <div>
+                <h4 className="font-display text-xl font-medium mb-3">Campaign Impact</h4>
+                <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
+                  The social media graphics and advertisements were designed to increase brand awareness and drive customer engagement across various digital platforms, emphasizing Verdant Solar's commitment to sustainable energy solutions.
+                </p>
+                <p style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
+                  Each design piece was crafted to communicate complex technical benefits in an accessible and visually appealing format, helping potential customers understand the value of solar energy adoption.
+                </p>
+              </div>
             </div>
           </div>
         ) : (

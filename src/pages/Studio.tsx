@@ -75,9 +75,9 @@ const Studio = () => {
             hasDetails: true
           }, {
             title: "Verdant Solar",
-            slug: "verdant-solar",
-            description: "Social media graphics",
-            hasDetails: false
+            slug: "verdant-solar-my",
+            description: "Social media and ad graphics",
+            hasDetails: true
           }, {
             title: "Deal Experience Platform (DXP)",
             slug: "deal-experience-platform",
