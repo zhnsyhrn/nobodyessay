@@ -40,9 +40,7 @@ const StickyNavbar = () => {
         <div className="flex items-center justify-between">
           <Link to="/" onClick={closeMenu} className="flex items-center space-x-3">
             <img src="/lovable-uploads/e058676f-a0f2-441a-983c-a931949d96b8.png" alt="byzahin" className="w-8 h-8 rounded-full object-cover" />
-            <h1 className="font-display text-lg sm:text-xl font-medium hover:text-muted-foreground transition-colors">
-              byzahin
-            </h1>
+            <h1 className="font-display text-lg sm:text-xl font-medium hover:text-muted-foreground transition-colors">Zahin Syahiran</h1>
           </Link>
           
           {/* Desktop Navigation */}
