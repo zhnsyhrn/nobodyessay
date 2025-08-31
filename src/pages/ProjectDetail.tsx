@@ -44,99 +44,50 @@ const knockKnockImages = ["/lovable-uploads/727cdb13-e96f-4680-8771-62fb1f9b98ef
 ];
 
 // PolicyStreet project images
-const policyStreetImages = [
-  "/lovable-uploads/a3d87d83-a1e8-426c-9d12-475e9f6f3488.png",
-  "/lovable-uploads/933cdd11-2964-478a-a9f2-09f288821be8.png", 
-  "/lovable-uploads/0a9faeb6-72a3-484e-83a5-0aad681f0684.png",
-  "/lovable-uploads/296d95da-ee08-407a-9413-025d7c4bc61d.png",
-  "/lovable-uploads/bbfa2e07-10f8-41ed-91a7-5b3c0cdb3c1c.png"
-];
+const policyStreetImages = ["/lovable-uploads/a3d87d83-a1e8-426c-9d12-475e9f6f3488.png", "/lovable-uploads/933cdd11-2964-478a-a9f2-09f288821be8.png", "/lovable-uploads/0a9faeb6-72a3-484e-83a5-0aad681f0684.png", "/lovable-uploads/296d95da-ee08-407a-9413-025d7c4bc61d.png", "/lovable-uploads/bbfa2e07-10f8-41ed-91a7-5b3c0cdb3c1c.png"];
 
 // Referral Program project images
-const referralProgramImages = [
-  "/lovable-uploads/3203ca77-96ca-4347-9e77-4a9c89891bfb.png"
-];
+const referralProgramImages = ["/lovable-uploads/3203ca77-96ca-4347-9e77-4a9c89891bfb.png"];
 
 // Great Eastern Takaful project images
-const greatEasternTakafulImages = [
-  "/lovable-uploads/dc0d7de5-bc75-471f-9868-78660db2e084.png",
-  "/lovable-uploads/670c5b9d-1b3f-462a-a20f-e76679352f64.png",
-  "/lovable-uploads/2386a452-3187-4691-b942-7b67ffcf80fb.png",
-  "/lovable-uploads/b73c248c-bad3-4363-9939-e5cecdec3e91.png",
-  "/lovable-uploads/d0f62019-9599-4112-a540-dc3bcdfd0f0f.png"
-];
+const greatEasternTakafulImages = ["/lovable-uploads/dc0d7de5-bc75-471f-9868-78660db2e084.png", "/lovable-uploads/670c5b9d-1b3f-462a-a20f-e76679352f64.png", "/lovable-uploads/2386a452-3187-4691-b942-7b67ffcf80fb.png", "/lovable-uploads/b73c248c-bad3-4363-9939-e5cecdec3e91.png", "/lovable-uploads/d0f62019-9599-4112-a540-dc3bcdfd0f0f.png"];
 
 // Verdant Solar project images - Climate Awareness Graphics
-const verdantSolarImages = [
-  "/lovable-uploads/1f6d4e2e-7b54-4f9c-ae30-fb04593a5db8.png",
-  "/lovable-uploads/51d094bb-7212-44aa-880f-81843fda108d.png",
-  "/lovable-uploads/3ce0b311-2366-442e-ae3d-44512f7e5f93.png",
-  "/lovable-uploads/6b5aaf11-dbc3-4f4d-800d-fbfdd59965ea.png",
-  "/lovable-uploads/a8f38dd3-d20d-454e-befd-b9935a81579d.png",
-  "/lovable-uploads/f4a75733-8f8a-4c38-997e-85eaeafb9f5b.png"
-];
+const verdantSolarImages = ["/lovable-uploads/1f6d4e2e-7b54-4f9c-ae30-fb04593a5db8.png", "/lovable-uploads/51d094bb-7212-44aa-880f-81843fda108d.png", "/lovable-uploads/3ce0b311-2366-442e-ae3d-44512f7e5f93.png", "/lovable-uploads/6b5aaf11-dbc3-4f4d-800d-fbfdd59965ea.png", "/lovable-uploads/a8f38dd3-d20d-454e-befd-b9935a81579d.png", "/lovable-uploads/f4a75733-8f8a-4c38-997e-85eaeafb9f5b.png"];
 
 // Verdant Solar grid images (for two-column layout)
-const verdantSolarGridImages = [
-  "/lovable-uploads/75b4d467-d07b-4a22-8523-6a9a556c5e2a.png",
-  "/lovable-uploads/13a8a4c7-9cd9-478e-a490-d3a7722f360a.png",
-  "/lovable-uploads/fc9707ef-ea3a-4b10-8e9d-c8d31441015b.png",
-  "/lovable-uploads/bc558340-fdd3-4e28-964d-459e2f34bd20.png",
-  "/lovable-uploads/bfa83407-2aa7-4d54-9719-7c2ae449a499.png",
-  "/lovable-uploads/5686ffae-e247-45ab-add8-45cbc20b7546.png",
-  "/lovable-uploads/8747297b-76ba-4837-a7d9-b5f45b56dcdf.png",
-  "/lovable-uploads/6d87d690-731a-40f4-a0c9-220a616c8954.png"
-];
+const verdantSolarGridImages = ["/lovable-uploads/75b4d467-d07b-4a22-8523-6a9a556c5e2a.png", "/lovable-uploads/13a8a4c7-9cd9-478e-a490-d3a7722f360a.png", "/lovable-uploads/fc9707ef-ea3a-4b10-8e9d-c8d31441015b.png", "/lovable-uploads/bc558340-fdd3-4e28-964d-459e2f34bd20.png", "/lovable-uploads/bfa83407-2aa7-4d54-9719-7c2ae449a499.png", "/lovable-uploads/5686ffae-e247-45ab-add8-45cbc20b7546.png", "/lovable-uploads/8747297b-76ba-4837-a7d9-b5f45b56dcdf.png", "/lovable-uploads/6d87d690-731a-40f4-a0c9-220a616c8954.png"];
 
 // Verdant Solar Image Slider Component (for title section)
 const VerdantSolarImageSlider = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
-
   React.useEffect(() => {
     if (!api) {
       return;
     }
-
     setCurrent(api.selectedScrollSnap());
-
     api.on("select", () => {
       setCurrent(api.selectedScrollSnap());
     });
   }, [api]);
-
-  return (
-    <div className="mt-8">
+  return <div className="mt-8">
       {/* Image Slider */}
       <div className="relative w-full">
-        <Carousel 
-          className="w-full group"
-          plugins={[
-            Autoplay({
-              delay: 3000,
-              stopOnInteraction: true
-            })
-          ]}
-          setApi={setApi}
-          opts={{
-            align: "start",
-            loop: true,
-            slidesToScroll: 1
-          }}
-        >
+        <Carousel className="w-full group" plugins={[Autoplay({
+        delay: 3000,
+        stopOnInteraction: true
+      })]} setApi={setApi} opts={{
+        align: "start",
+        loop: true,
+        slidesToScroll: 1
+      }}>
           <CarouselContent className="-ml-2">
-            {verdantSolarImages.map((image, index) => (
-              <CarouselItem key={index} className="pl-2 basis-1/2">
+            {verdantSolarImages.map((image, index) => <CarouselItem key={index} className="pl-2 basis-1/2">
                 <div className="aspect-square overflow-hidden rounded-[10px] bg-muted">
-                  <img 
-                    src={image} 
-                    alt={`Verdant Solar Climate Awareness ${index + 1}`} 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-                    loading="lazy" 
-                  />
+                  <img src={image} alt={`Verdant Solar Climate Awareness ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
                 </div>
-              </CarouselItem>
-            ))}
+              </CarouselItem>)}
           </CarouselContent>
           
           {/* Internal Navigation Controls */}
@@ -147,40 +98,21 @@ const VerdantSolarImageSlider = () => {
       
       {/* Dots Indicator - Outside the image */}
       <div className="flex justify-center mt-4 space-x-2">
-        {verdantSolarImages.map((_, index) => (
-          <button 
-            key={index}
-            className={`w-2 h-2 rounded-full transition-colors duration-200 ${
-              current === index ? 'bg-foreground' : 'bg-muted-foreground hover:bg-foreground/70'
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-            onClick={() => api?.scrollTo(index)}
-          />
-        ))}
+        {verdantSolarImages.map((_, index) => <button key={index} className={`w-2 h-2 rounded-full transition-colors duration-200 ${current === index ? 'bg-foreground' : 'bg-muted-foreground hover:bg-foreground/70'}`} aria-label={`Go to slide ${index + 1}`} onClick={() => api?.scrollTo(index)} />)}
       </div>
       
       {/* Divider Line */}
       <div className="border-b border-border mt-8"></div>
-    </div>
-  );
+    </div>;
 };
 
 // Verdant Solar Grid Component (for full-width section)
 const VerdantSolarGridContent = () => {
-  return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
-      {verdantSolarGridImages.map((image, index) => (
-        <div key={index} className="aspect-square overflow-hidden rounded-[10px] bg-muted">
-          <img 
-            src={image} 
-            alt={`Verdant Solar Design ${index + 1}`} 
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-            loading="lazy" 
-          />
-        </div>
-      ))}
-    </div>
-  );
+  return <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+      {verdantSolarGridImages.map((image, index) => <div key={index} className="aspect-square overflow-hidden rounded-[10px] bg-muted">
+          <img src={image} alt={`Verdant Solar Design ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+        </div>)}
+    </div>;
 };
 
 // Sample project data - you can replace this with actual data
@@ -365,7 +297,7 @@ const ProjectDetail = () => {
       <StickyNavbar />
       
       {/* Main Content */}
-      <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6">
+      <div className="max-w-4xl mx-auto px-4 py-[30px] sm:px-0">
         {/* Back Navigation */}
         <div className="mb-8">
           <Link to="/studio" className="inline-flex items-center text-muted-foreground hover:text-foreground transition-colors">
@@ -434,138 +366,177 @@ const ProjectDetail = () => {
 
       {/* Project Gallery - Full Width */}
       <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16 mb-4 sm:mb-12">
-        {slug === 'great-eastern-takaful-malaysia' ? (
-          // Special content layout for Great Eastern Takaful with mixed text and images
-          <div className="max-w-4xl mx-auto space-y-8">
+        {slug === 'great-eastern-takaful-malaysia' ?
+      // Special content layout for Great Eastern Takaful with mixed text and images
+      <div className="max-w-4xl mx-auto space-y-8">
             <div className="prose prose-lg max-w-none">
               <h3 className="font-display text-2xl font-medium mb-4">What is this about? UX Audit?</h3>
               
-              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
+              <p className="mb-4" style={{
+            fontFamily: 'Plus Jakarta Sans, sans-serif',
+            color: '#606060',
+            fontSize: '16px'
+          }}>
                 I led the UX Audit exercise for Great Eastern Takaful Berhad, Malaysia, for their corporate website design revamp.
               </p>
               
-              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
+              <p className="mb-4" style={{
+            fontFamily: 'Plus Jakarta Sans, sans-serif',
+            color: '#606060',
+            fontSize: '16px'
+          }}>
                 The objective of this exercise was to provide a fresh update by following the latest corporate identity design of the Great Eastern Group, laid out by the design team based in Singapore.
               </p>
               
-              <p className="mb-8" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
+              <p className="mb-8" style={{
+            fontFamily: 'Plus Jakarta Sans, sans-serif',
+            color: '#606060',
+            fontSize: '16px'
+          }}>
                 It took me 2 months from the audit and web translation for Bahasa Malaysia to the design handover to the AVP of Website in Singapore.
               </p>
               
               {/* First 3 images */}
               <div className="grid grid-cols-1 gap-4 mb-8">
-                {greatEasternTakafulImages.slice(0, 3).map((image, index) => (
-                  <div key={index} className="aspect-video overflow-hidden rounded-[10px] bg-muted">
-                    <img 
-                      src={image} 
-                      alt={`Great Eastern Takaful - Image ${index + 1}`} 
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-                      loading="lazy" 
-                    />
-                  </div>
-                ))}
+                {greatEasternTakafulImages.slice(0, 3).map((image, index) => <div key={index} className="aspect-video overflow-hidden rounded-[10px] bg-muted">
+                    <img src={image} alt={`Great Eastern Takaful - Image ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+                  </div>)}
               </div>
               
-              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
+              <p className="mb-4" style={{
+            fontFamily: 'Plus Jakarta Sans, sans-serif',
+            color: '#606060',
+            fontSize: '16px'
+          }}>
                 However, despite the intense workload and tight deadlines, I handled everything on my own with minimal support from the internal designer at Great Eastern Malaysia.
               </p>
               
-              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
+              <p className="mb-4" style={{
+            fontFamily: 'Plus Jakarta Sans, sans-serif',
+            color: '#606060',
+            fontSize: '16px'
+          }}>
                 They only applauded and gave positive feedback on my last day after I submitted my resignation letter, when he said, "Good job! You did it quite fast, only one month plus." (I'll share this specific story in my reflections on work.)
               </p>
               
-              <p className="mb-8" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
+              <p className="mb-8" style={{
+            fontFamily: 'Plus Jakarta Sans, sans-serif',
+            color: '#606060',
+            fontSize: '16px'
+          }}>
                 Unfortunately, I wasn't able to capture or document all of the work I completed here. I often spent more than 8 hours per day, working overtime at Starbucks Jalan Ampang to organize all the audits, design arrangements, and workshop plans as a first-timer. There's another personal story from this experience that I'll share soon.
               </p>
               
               <h3 className="font-display text-2xl font-medium mb-4">What I've done and why it matters?</h3>
               
-              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
+              <p className="mb-4" style={{
+            fontFamily: 'Plus Jakarta Sans, sans-serif',
+            color: '#606060',
+            fontSize: '16px'
+          }}>
                 The exercise involved conducting a content audit for every single page on the site, identifying issues such as outdated content and broken links, as well as rearranging the site navigation and content structure for the help centre.
               </p>
               
-              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
+              <p className="mb-4" style={{
+            fontFamily: 'Plus Jakarta Sans, sans-serif',
+            color: '#606060',
+            fontSize: '16px'
+          }}>
                 These activities required me to document everything in Excel sheets to organize and plan the next steps for issues such as setting up meetings with content owners, organizing design workshops, and facilitating internal discussions.
               </p>
               
-              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
+              <p className="mb-4" style={{
+            fontFamily: 'Plus Jakarta Sans, sans-serif',
+            color: '#606060',
+            fontSize: '16px'
+          }}>
                 I don't have the screenshots of the Excel files and some of the documentation I created due to strict IT security policies enforced by the IT team, as the items were confidential.
               </p>
               
-              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
+              <p className="mb-4" style={{
+            fontFamily: 'Plus Jakarta Sans, sans-serif',
+            color: '#606060',
+            fontSize: '16px'
+          }}>
                 Some of the meetings I conducted were with the web owner or gatekeeper, the AVP for Brand and Marketing Communications, Aida Yuhaniza, the AVP for Brand and Corporate Communications, Mastura Abd Rahim, as well as other managers responsible for specific content or site pages on the website. They are very helpful.
               </p>
               
-              <p className="mb-8" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
+              <p className="mb-8" style={{
+            fontFamily: 'Plus Jakarta Sans, sans-serif',
+            color: '#606060',
+            fontSize: '16px'
+          }}>
                 Then, I needed to refer to the Great Eastern Singapore site as the main reference and identify relevant designs for adaptation based on the latest web page content.
               </p>
               
               <h3 className="font-display text-2xl font-medium mb-4">Do I need to do the design in Figma?</h3>
               
-              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
+              <p className="mb-4" style={{
+            fontFamily: 'Plus Jakarta Sans, sans-serif',
+            color: '#606060',
+            fontSize: '16px'
+          }}>
                 For this task, it was less about creating new assets or designs in Figma, and more about managing stakeholders' expectations and coordinating communication between managers from different departments to reach a consensus on new content arrangements and web navigation (information architecture).
               </p>
               
-              <p className="mb-8" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
+              <p className="mb-8" style={{
+            fontFamily: 'Plus Jakarta Sans, sans-serif',
+            color: '#606060',
+            fontSize: '16px'
+          }}>
                 The design work in Figma was mainly to visualize the updated layouts for key pages such as corporate, products, company profile, and articles, while also ensuring ease of web development by leveraging the existing templates and assets created by the Singapore team.
               </p>
               
               {/* Last 2 images */}
               <div className="grid grid-cols-1 gap-4 mb-8">
-                {greatEasternTakafulImages.slice(3, 5).map((image, index) => (
-                  <div key={index + 3} className="aspect-video overflow-hidden rounded-[10px] bg-muted">
-                    <img 
-                      src={image} 
-                      alt={`Great Eastern Takaful - Image ${index + 4}`} 
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-                      loading="lazy" 
-                    />
-                  </div>
-                ))}
+                {greatEasternTakafulImages.slice(3, 5).map((image, index) => <div key={index + 3} className="aspect-video overflow-hidden rounded-[10px] bg-muted">
+                    <img src={image} alt={`Great Eastern Takaful - Image ${index + 4}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+                  </div>)}
               </div>
               
-              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
+              <p className="mb-4" style={{
+            fontFamily: 'Plus Jakarta Sans, sans-serif',
+            color: '#606060',
+            fontSize: '16px'
+          }}>
                 This included the new information architecture (before and after), updated illustration placements, color usage, page content layouts, and the side-by-side design of Bahasa Malaysia translations with the English version for every single page, among many other updates.
               </p>
               
-              <p className="mb-8" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
+              <p className="mb-8" style={{
+            fontFamily: 'Plus Jakarta Sans, sans-serif',
+            color: '#606060',
+            fontSize: '16px'
+          }}>
                 Everything was well-documented from the initial phase through to the design phase, including project updates.
               </p>
               
               <h3 className="font-display text-2xl font-medium mb-4">How I did the design workshop?</h3>
               
-              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
+              <p className="mb-4" style={{
+            fontFamily: 'Plus Jakarta Sans, sans-serif',
+            color: '#606060',
+            fontSize: '16px'
+          }}>
                 I'll write more. I'm tired.
               </p>
               
-              <p className="mb-4" style={{fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060', fontSize: '16px'}}>
+              <p className="mb-4" style={{
+            fontFamily: 'Plus Jakarta Sans, sans-serif',
+            color: '#606060',
+            fontSize: '16px'
+          }}>
                 Let me rest for awhile.
               </p>
             </div>
-          </div>
-        ) : slug === 'verdant-solar-my' ? (
-          // Special layout for Verdant Solar - only the grid in full-width section
-          <VerdantSolarGridContent />
-        ) : (
-          // Regular gallery for other projects
-          <div className="grid grid-cols-1 gap-2 sm:gap-6">
-            {(slug === 'moneyx-savings-goals-manual-entry' ? moneyxImages : 
-              slug === 'knock-knock-cafe-kuala-terengganu' ? knockKnockImages : 
-              slug === 'policystreet-car-insurance-platform' ? policyStreetImages : 
-              slug === 'moneyx-moneyxbiz-referral-program' ? referralProgramImages : 
-              [galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5, galleryImage6, galleryImage7, galleryImage8]
-            ).map((image, index) => (
-              <div key={index} className="aspect-video overflow-hidden rounded-[10px] bg-muted">
-                <img 
-                  src={image} 
-                  alt={`${project.title} - Image ${index + 1}`} 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-                  loading="lazy" 
-                />
-              </div>
-            ))}
-          </div>
-        )}
+          </div> : slug === 'verdant-solar-my' ?
+      // Special layout for Verdant Solar - only the grid in full-width section
+      <VerdantSolarGridContent /> :
+      // Regular gallery for other projects
+      <div className="grid grid-cols-1 gap-2 sm:gap-6">
+            {(slug === 'moneyx-savings-goals-manual-entry' ? moneyxImages : slug === 'knock-knock-cafe-kuala-terengganu' ? knockKnockImages : slug === 'policystreet-car-insurance-platform' ? policyStreetImages : slug === 'moneyx-moneyxbiz-referral-program' ? referralProgramImages : [galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5, galleryImage6, galleryImage7, galleryImage8]).map((image, index) => <div key={index} className="aspect-video overflow-hidden rounded-[10px] bg-muted">
+                <img src={image} alt={`${project.title} - Image ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>)}
+          </div>}
       </div>
 
       {/* Navigation */}
