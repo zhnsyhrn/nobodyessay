@@ -270,6 +270,28 @@ const projectsData = {
       "Value Added": "Design consultation",
       "Credits": "Not available"
     }
+  },
+  "aqa-group-of-companies": {
+    title: "Aqa Group of Companies",
+    websiteUrl: "https://www.aqagoc.com/",
+    overview: "Conducted design exploration and proposed a website redesign concept that streamlined navigation, refreshed the visual identity, and laid the foundation for development.",
+    projectInfo: {
+      "Project / Company": "AQA Group of Companies, Philippines",
+      "Type": "Design Exploration",
+      "Role / Project Ownership": "Lead designer",
+      "Contribution": "Assets creation",
+      "Project Lead / Product Manager(s)": "Zahin Syahiran",
+      "Value Added": "Not available",
+      "Credits": "Not available"
+    },
+    gallery: [
+      { src: "/lovable-uploads/685158de-18a9-4c06-8b43-5214ae7a89a9.png", alt: "AQA Group VR Experience Design" },
+      { src: "/lovable-uploads/e9ff0741-ec96-470e-b68e-3443cd5dddd1.png", alt: "AQA Group Mobile App Design" },
+      { src: "/lovable-uploads/bf0cf575-5ca2-4ba9-8adc-baba0c8e181d.png", alt: "AQA Group Desktop Website Design" },
+      { src: "/lovable-uploads/9e77dbee-24bf-4c37-8923-4c938248c684.png", alt: "AQA Group Expertise Page Design" },
+      { src: "/lovable-uploads/e58c7e72-dc68-42b4-ae8f-b9cdf550a518.png", alt: "AQA Group Contact Page Design" },
+      { src: "/lovable-uploads/0929a14f-34e4-48ac-be77-7853b55de84f.png", alt: "AQA Group Complete Design System" }
+    ]
   }
 };
 const ProjectDetail = () => {
@@ -533,9 +555,21 @@ const ProjectDetail = () => {
       <VerdantSolarGridContent /> :
       // Regular gallery for other projects
       <div className="grid grid-cols-1 gap-2 sm:gap-6">
-            {(slug === 'moneyx-savings-goals-manual-entry' ? moneyxImages : slug === 'knock-knock-cafe-kuala-terengganu' ? knockKnockImages : slug === 'policystreet-car-insurance-platform' ? policyStreetImages : slug === 'moneyx-moneyxbiz-referral-program' ? referralProgramImages : [galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5, galleryImage6, galleryImage7, galleryImage8]).map((image, index) => <div key={index} className="aspect-video overflow-hidden rounded-[10px] bg-muted">
-                <img src={image} alt={`${project.title} - Image ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
-              </div>)}
+            {(slug === 'moneyx-savings-goals-manual-entry' ? moneyxImages : 
+               slug === 'knock-knock-cafe-kuala-terengganu' ? knockKnockImages : 
+               slug === 'policystreet-car-insurance-platform' ? policyStreetImages : 
+               slug === 'moneyx-moneyxbiz-referral-program' ? referralProgramImages :
+               slug === 'aqa-group-of-companies' ? [
+                 "/lovable-uploads/685158de-18a9-4c06-8b43-5214ae7a89a9.png",
+                 "/lovable-uploads/e9ff0741-ec96-470e-b68e-3443cd5dddd1.png", 
+                 "/lovable-uploads/bf0cf575-5ca2-4ba9-8adc-baba0c8e181d.png",
+                 "/lovable-uploads/9e77dbee-24bf-4c37-8923-4c938248c684.png",
+                 "/lovable-uploads/e58c7e72-dc68-42b4-ae8f-b9cdf550a518.png",
+                 "/lovable-uploads/0929a14f-34e4-48ac-be77-7853b55de84f.png"
+               ] :
+               [galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5, galleryImage6, galleryImage7, galleryImage8]).map((image, index) => <div key={index} className="aspect-video overflow-hidden rounded-[10px] bg-muted">
+                 <img src={image} alt={`${project.title} - Image ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+               </div>)}
           </div>}
       </div>
 

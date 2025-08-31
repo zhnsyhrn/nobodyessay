@@ -60,9 +60,9 @@ const Studio = () => {
             hasDetails: true
           }, {
             title: "Aqa Group of Companies",
-            slug: "aqa-group-companies",
+            slug: "aqa-group-of-companies",
             description: "Website redesign",
-            hasDetails: false
+            hasDetails: true
           }, {
             title: "MoneyX App - Fintech",
             slug: "moneyx-savings-goals-manual-entry",
