@@ -103,7 +103,7 @@ const VerdantSolarContent = () => {
   return (
     <div className="space-y-8">
       {/* Image Slider at Top */}
-      <div className="relative max-w-2xl mx-auto">
+      <div className="relative w-full">
         <Carousel 
           className="w-full group"
           plugins={[
@@ -150,7 +150,7 @@ const VerdantSolarContent = () => {
       </div>
       
       {/* Two-Column Image Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
         {verdantSolarGridImages.map((image, index) => (
           <div key={index} className="aspect-square overflow-hidden rounded-[10px] bg-muted">
             <img 
@@ -413,7 +413,7 @@ const ProjectDetail = () => {
       </div>
 
       {/* Project Gallery - Full Width */}
-      <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16 mb-4 sm:mb-12">
+      <div className={`w-full mb-4 sm:mb-12 ${slug === 'verdant-solar-my' ? 'px-0' : 'px-4 sm:px-6 lg:px-12 xl:px-16'}`}>
         {slug === 'great-eastern-takaful-malaysia' ? (
           // Special content layout for Great Eastern Takaful with mixed text and images
           <div className="max-w-4xl mx-auto space-y-8">
