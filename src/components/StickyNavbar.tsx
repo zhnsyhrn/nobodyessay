@@ -29,8 +29,7 @@ const StickyNavbar = () => {
     setIsMenuOpen(false);
   };
   const isActiveRoute = (path: string) => {
-    if (path === '/about' && location.pathname === '/about') return true;
-    if (path === '/manifesto' && location.pathname === '/manifesto') return true;
+    if (path === '/about' && (location.pathname === '/about' || location.pathname === '/manifesto')) return true;
     if (path === '/writings' && location.pathname.startsWith('/writings')) return true;
     if (path === '/studio' && location.pathname === '/studio') return true;
     if (path === '/contact' && location.pathname === '/contact') return true;
@@ -52,7 +51,7 @@ const StickyNavbar = () => {
               Writings
             </Link>
             <Link to="/studio" className={`font-display text-sm transition-colors py-2 ${isActiveRoute('/studio') ? 'text-foreground font-medium' : 'hover:text-muted-foreground'}`}>Projects</Link>
-            <Link to="/manifesto" className={`font-display text-sm transition-colors py-2 ${isActiveRoute('/manifesto') ? 'text-foreground font-medium' : 'hover:text-muted-foreground'}`}>About</Link>
+            <Link to="/about" className={`font-display text-sm transition-colors py-2 ${isActiveRoute('/about') ? 'text-foreground font-medium' : 'hover:text-muted-foreground'}`}>About</Link>
             <Link to="/contact" className={`font-display text-sm transition-colors py-2 ${isActiveRoute('/contact') ? 'text-foreground font-medium' : 'hover:text-muted-foreground'}`}>
               Contact
             </Link>
@@ -104,8 +103,8 @@ const StickyNavbar = () => {
                 
                 <Separator className="bg-gray-200" />
                 
-                <Link to="/manifesto" onClick={closeMenu} className={`font-display text-3xl transition-colors py-8 text-center flex items-center justify-center text-black hover:text-gray-600 ${isActiveRoute('/manifesto') ? 'font-medium' : ''}`}>
-                  Manifesto
+                <Link to="/about" onClick={closeMenu} className={`font-display text-3xl transition-colors py-8 text-center flex items-center justify-center text-black hover:text-gray-600 ${isActiveRoute('/about') ? 'font-medium' : ''}`}>
+                  About
                 </Link>
                 
                 <Separator className="bg-gray-200" />
