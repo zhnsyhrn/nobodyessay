@@ -40,7 +40,7 @@ const Studio = () => {
       setCurrent(api.selectedScrollSnap() + 1);
     });
   }, [api]);
-  return <div className="min-h-screen bg-background">
+  return <div className="min-h-screen" style={{ backgroundColor: '#161616' }}>
       <StickyNavbar />
 
 
