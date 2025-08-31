@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -18,7 +18,7 @@ import galleryImage7 from "@/assets/gallery-07.jpg";
 import galleryImage8 from "@/assets/gallery-08.jpg";
 
 // Import Carousel for Verdant Solar
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
 // MoneyX project images (using public URLs)
@@ -82,6 +82,89 @@ const verdantSolarGridImages = [
   "/lovable-uploads/bfa83407-2aa7-4d54-9719-7c2ae449a499.png",
   "/lovable-uploads/5686ffae-e247-45ab-add8-45cbc20b7546.png"
 ];
+
+// Verdant Solar Component
+const VerdantSolarContent = () => {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  React.useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
+  return (
+    <div className="space-y-8">
+      {/* Image Slider at Top */}
+      <div className="relative max-w-2xl mx-auto">
+        <Carousel 
+          className="w-full group"
+          plugins={[
+            Autoplay({
+              delay: 3000,
+              stopOnInteraction: true
+            })
+          ]}
+          setApi={setApi}
+        >
+          <CarouselContent>
+            {verdantSolarImages.map((image, index) => (
+              <CarouselItem key={index}>
+                <div className="aspect-square overflow-hidden rounded-[10px] bg-muted">
+                  <img 
+                    src={image} 
+                    alt={`Verdant Solar Design ${index + 1}`} 
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
+                    loading="lazy" 
+                  />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          
+          {/* Internal Navigation Controls */}
+          <CarouselPrevious className="left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 hover:bg-white border-white/20 backdrop-blur-sm" />
+          <CarouselNext className="right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 hover:bg-white border-white/20 backdrop-blur-sm" />
+          
+          {/* Dots Indicator */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+            {verdantSolarImages.map((_, index) => (
+              <button 
+                key={index}
+                className={`w-2 h-2 rounded-full transition-colors duration-200 ${
+                  current === index ? 'bg-white' : 'bg-white/60 hover:bg-white/90'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+                onClick={() => api?.scrollTo(index)}
+              />
+            ))}
+          </div>
+        </Carousel>
+      </div>
+      
+      {/* Two-Column Image Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
+        {verdantSolarGridImages.map((image, index) => (
+          <div key={index} className="aspect-square overflow-hidden rounded-[10px] bg-muted">
+            <img 
+              src={image} 
+              alt={`Verdant Solar Design ${index + 1}`} 
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
+              loading="lazy" 
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 // Sample project data - you can replace this with actual data
 const projectsData = {
@@ -442,51 +525,7 @@ const ProjectDetail = () => {
           </div>
         ) : slug === 'verdant-solar-my' ? (
           // Special layout for Verdant Solar - slider at top, two-column grid below
-          <div className="max-w-4xl mx-auto space-y-8">
-            {/* Image Slider at Top */}
-            <div className="relative max-w-2xl mx-auto">
-              <Carousel 
-                className="w-full"
-                plugins={[
-                  Autoplay({
-                    delay: 3000,
-                    stopOnInteraction: true
-                  })
-                ]}
-              >
-                <CarouselContent>
-                  {verdantSolarImages.map((image, index) => (
-                    <CarouselItem key={index}>
-                      <div className="aspect-square overflow-hidden rounded-[10px] bg-muted">
-                        <img 
-                          src={image} 
-                          alt={`Verdant Solar Design ${index + 1}`} 
-                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-                          loading="lazy" 
-                        />
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-              </Carousel>
-            </div>
-            
-            {/* Two-Column Image Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {verdantSolarGridImages.map((image, index) => (
-                <div key={index} className="aspect-square overflow-hidden rounded-[10px] bg-muted">
-                  <img 
-                    src={image} 
-                    alt={`Verdant Solar Design ${index + 1}`} 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-                    loading="lazy" 
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
+          <VerdantSolarContent />
         ) : (
           // Regular gallery for other projects
           <div className="grid grid-cols-1 gap-2 sm:gap-6">
