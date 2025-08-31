@@ -413,7 +413,7 @@ const ProjectDetail = () => {
       </div>
 
       {/* Project Gallery - Full Width */}
-      <div className={`w-full mb-4 sm:mb-12 ${slug === 'verdant-solar-my' ? 'px-0' : 'px-4 sm:px-6 lg:px-12 xl:px-16'}`}>
+      <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16 mb-4 sm:mb-12">
         {slug === 'great-eastern-takaful-malaysia' ? (
           // Special content layout for Great Eastern Takaful with mixed text and images
           <div className="max-w-4xl mx-auto space-y-8">
