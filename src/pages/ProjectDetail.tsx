@@ -321,7 +321,7 @@ const ProjectDetail = () => {
       {/* Main Content */}
       <div className="max-w-4xl mx-auto px-4 py-[30px] sm:px-0">
         {/* Back Navigation */}
-        <div className="mb-8">
+        <div className="mb-4 sm:mb-8">
           <Link to="/studio" className="inline-flex items-center text-muted-foreground hover:text-foreground transition-colors">
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Studio
