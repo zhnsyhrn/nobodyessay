@@ -83,8 +83,8 @@ const verdantSolarGridImages = [
   "/lovable-uploads/5686ffae-e247-45ab-add8-45cbc20b7546.png"
 ];
 
-// Verdant Solar Component
-const VerdantSolarContent = () => {
+// Verdant Solar Image Slider Component (for title section)
+const VerdantSolarImageSlider = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 
@@ -101,8 +101,8 @@ const VerdantSolarContent = () => {
   }, [api]);
 
   return (
-    <div className="space-y-8">
-      {/* Image Slider at Top */}
+    <div className="mt-8">
+      {/* Image Slider */}
       <div className="relative w-full">
         <Carousel 
           className="w-full group"
@@ -149,19 +149,26 @@ const VerdantSolarContent = () => {
         </Carousel>
       </div>
       
-      {/* Two-Column Image Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
-        {verdantSolarGridImages.map((image, index) => (
-          <div key={index} className="aspect-square overflow-hidden rounded-[10px] bg-muted">
-            <img 
-              src={image} 
-              alt={`Verdant Solar Design ${index + 1}`} 
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
-              loading="lazy" 
-            />
-          </div>
-        ))}
-      </div>
+      {/* Divider Line */}
+      <div className="border-b border-border mt-8"></div>
+    </div>
+  );
+};
+
+// Verdant Solar Grid Component (for full-width section)
+const VerdantSolarGridContent = () => {
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+      {verdantSolarGridImages.map((image, index) => (
+        <div key={index} className="aspect-square overflow-hidden rounded-[10px] bg-muted">
+          <img 
+            src={image} 
+            alt={`Verdant Solar Design ${index + 1}`} 
+            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
+            loading="lazy" 
+          />
+        </div>
+      ))}
     </div>
   );
 };
@@ -410,6 +417,9 @@ const ProjectDetail = () => {
           </Accordion>
         </div>
 
+        {/* Verdant Solar Image Slider - Only for verdant-solar-my */}
+        {slug === 'verdant-solar-my' && <VerdantSolarImageSlider />}
+
       </div>
 
       {/* Project Gallery - Full Width */}
@@ -524,8 +534,8 @@ const ProjectDetail = () => {
             </div>
           </div>
         ) : slug === 'verdant-solar-my' ? (
-          // Special layout for Verdant Solar - slider at top, two-column grid below
-          <VerdantSolarContent />
+          // Special layout for Verdant Solar - only the grid in full-width section
+          <VerdantSolarGridContent />
         ) : (
           // Regular gallery for other projects
           <div className="grid grid-cols-1 gap-2 sm:gap-6">
