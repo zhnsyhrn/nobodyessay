@@ -48,16 +48,7 @@ const Writings = () => {
               </Card>)}
           </div>
 
-          <div className="text-center mt-12 sm:mt-16">
-            <p className="font-typewriter text-muted-foreground text-sm mb-4 sm:mb-6">
-              More writings coming soon...
-            </p>
-            <Link to="/">
-              <Button variant="ghost" className="font-display min-h-[44px] px-4">
-                ← Back to home
-              </Button>
-            </Link>
-          </div>
+          
         </div>
       </section>
 
