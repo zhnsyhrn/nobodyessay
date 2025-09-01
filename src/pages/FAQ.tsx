@@ -52,7 +52,7 @@ const FAQ = () => {
       <main className="container mx-auto px-4 pt-24 pb-16 py-[60px]">
         <div className="max-w-4xl mx-auto">
           <header className="text-center mb-12">
-            <h1 className="text-4xl mb-4 text-foreground font-semibold text-left md:text-3xl">Everything about me. Especially for hiring managers, recruiters and potential clients.</h1>
+            <h1 className="text-4xl mb-4 text-foreground text-left font-medium md:text-4xl">Everything about me. Especially for hiring managers, recruiters and potential clients.</h1>
             
           </header>
 
