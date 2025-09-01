@@ -573,6 +573,104 @@ const ProjectDetail = () => {
           </div>}
       </div>
 
+      {/* Next Project You Might Like */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 mb-12">
+        <div className="border-t border-border pt-12">
+          <h2 className="font-display text-2xl font-medium mb-8 text-center">
+            Next Project You Might Like
+          </h2>
+          {(() => {
+            // Get all project keys
+            const allProjects = Object.keys(projectsData);
+            // Get current project index
+            const currentIndex = allProjects.indexOf(slug || '');
+            // Get next project (or first if current is last)
+            const nextProjectSlug = currentIndex === allProjects.length - 1 
+              ? allProjects[0] 
+              : allProjects[currentIndex + 1];
+            const nextProject = projectsData[nextProjectSlug as keyof typeof projectsData];
+            
+            // Get thumbnail image for the next project
+            const getThumbnailImage = (projectSlug: string) => {
+              switch(projectSlug) {
+                case 'moneyx-savings-goals-manual-entry':
+                  return moneyxImages[0];
+                case 'knock-knock-cafe-kuala-terengganu':
+                  return knockKnockImages[0];
+                case 'policystreet-car-insurance-platform':
+                  return policyStreetImages[0];
+                case 'moneyx-moneyxbiz-referral-program':
+                  return referralProgramImages[0];
+                case 'great-eastern-takaful-malaysia':
+                  return greatEasternTakafulImages[0];
+                case 'verdant-solar-my':
+                  return verdantSolarImages[0];
+                case 'aqa-group-of-companies':
+                  return "/lovable-uploads/685158de-18a9-4c06-8b43-5214ae7a89a9.png";
+                default:
+                  return galleryImage1;
+              }
+            };
+            
+            // Get short description for each project
+            const getShortDescription = (projectSlug: string) => {
+              switch(projectSlug) {
+                case 'moneyx-savings-goals-manual-entry':
+                  return "App feature design for savings goals and financial planning";
+                case 'knock-knock-cafe-kuala-terengganu':
+                  return "Logo and brand identity for a local café in Kuala Terengganu";
+                case 'policystreet-car-insurance-platform':
+                  return "Digital platform for comparing and purchasing car insurance";
+                case 'moneyx-moneyxbiz-referral-program':
+                  return "Revenue sharing model design for B2B platform";
+                case 'great-eastern-takaful-malaysia':
+                  return "UX audit and website redesign for corporate website";
+                case 'verdant-solar-my':
+                  return "Social media graphics for renewable energy solutions";
+                case 'aqa-group-of-companies':
+                  return "Website redesign concept and navigation streamlining";
+                default:
+                  return "Creative design project";
+              }
+            };
+            
+            return (
+              <Link 
+                to={`/projects/${nextProjectSlug}`}
+                className="group block"
+              >
+                <div className="bg-muted/30 rounded-xl p-6 hover:bg-muted/50 transition-all duration-300 hover:scale-[1.02]">
+                  <div className="flex flex-col sm:flex-row gap-6 items-start">
+                    <div className="w-full sm:w-48 flex-shrink-0">
+                      <div className="aspect-video overflow-hidden rounded-lg bg-muted">
+                        <img 
+                          src={getThumbnailImage(nextProjectSlug)} 
+                          alt={nextProject.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="font-display text-xl font-medium mb-2 group-hover:text-primary transition-colors">
+                        {nextProject.title}
+                      </h3>
+                      <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                        {getShortDescription(nextProjectSlug)}
+                      </p>
+                      <div className="inline-flex items-center text-primary text-sm font-medium">
+                        View Project
+                        <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            );
+          })()}
+        </div>
+      </div>
+
       {/* Navigation */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 mb-16">
         <div className="text-center">
