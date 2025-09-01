@@ -65,7 +65,7 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background font-jakarta">
       <StickyNavbar />
       
       <main className="container mx-auto px-4 pt-24 pb-16">
@@ -80,9 +80,9 @@ const FAQ = () => {
           </header>
 
           <Tabs defaultValue="career" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 mb-8">
-              <TabsTrigger value="career">Career</TabsTrigger>
-              <TabsTrigger value="random">Random</TabsTrigger>
+            <TabsList className="grid w-full grid-cols-2 mb-8 font-mono">
+              <TabsTrigger value="career" className="uppercase">Career</TabsTrigger>
+              <TabsTrigger value="random" className="uppercase">Random</TabsTrigger>
             </TabsList>
             
             <TabsContent value="career">
