@@ -359,8 +359,8 @@ const ProjectDetail = () => {
     }
   }, [slug]);
 
-  // Get smart recommendation
-  const getRecommendedProject = () => {
+  // Get smart recommendations for two projects
+  const getRecommendedProjects = () => {
     const viewedProjects = JSON.parse(localStorage.getItem('viewedProjects') || '[]');
     const currentIndex = availableProjects.findIndex(p => p.slug === slug);
     
@@ -369,14 +369,38 @@ const ProjectDetail = () => {
       !viewedProjects.includes(p.slug) && p.slug !== slug
     );
     
-    if (unviewedProjects.length > 0) {
-      // Return a random unviewed project for variety
-      return unviewedProjects[Math.floor(Math.random() * unviewedProjects.length)];
+    if (unviewedProjects.length >= 2) {
+      // Return two random unviewed projects for variety
+      const shuffled = [...unviewedProjects].sort(() => 0.5 - Math.random());
+      return shuffled.slice(0, 2);
+    } else if (unviewedProjects.length === 1) {
+      // Return one unviewed project and one sequential project
+      const viewedOtherProjects = availableProjects.filter(p => 
+        viewedProjects.includes(p.slug) && p.slug !== slug
+      );
+      if (viewedOtherProjects.length > 0) {
+        return [unviewedProjects[0], viewedOtherProjects[Math.floor(Math.random() * viewedOtherProjects.length)]];
+      } else {
+        // Fallback to sequential
+        const nextIndex = currentIndex === availableProjects.length - 1 ? 0 : currentIndex + 1;
+        const nextIndex2 = nextIndex === availableProjects.length - 1 ? 0 : nextIndex + 1;
+        return [unviewedProjects[0], availableProjects[nextIndex2]];
+      }
     }
     
-    // If all viewed, return next project in sequence
-    const nextIndex = currentIndex === availableProjects.length - 1 ? 0 : currentIndex + 1;
-    return availableProjects[nextIndex];
+    // If all viewed or less than 2 available, return two sequential projects
+    let nextIndex = currentIndex === availableProjects.length - 1 ? 0 : currentIndex + 1;
+    let nextIndex2 = nextIndex === availableProjects.length - 1 ? 0 : nextIndex + 1;
+    
+    // Ensure we don't return the current project
+    if (availableProjects[nextIndex].slug === slug) {
+      nextIndex = nextIndex === availableProjects.length - 1 ? 0 : nextIndex + 1;
+    }
+    if (availableProjects[nextIndex2].slug === slug) {
+      nextIndex2 = nextIndex2 === availableProjects.length - 1 ? 0 : nextIndex2 + 1;
+    }
+    
+    return [availableProjects[nextIndex], availableProjects[nextIndex2]];
   };
   if (!project) {
     return <div className="min-h-screen bg-background">
@@ -650,48 +674,53 @@ const ProjectDetail = () => {
           </div>}
       </div>
 
-      {/* Next Project You Might Like */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 mb-12">
+      {/* Next Projects You Might Like */}
+      <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16 mb-12">
         <div className="border-t border-border pt-12">
           <h2 className="font-display text-2xl font-medium mb-8 text-center">
-            Next Project You Might Like
+            Next Projects You Might Like
           </h2>
           {(() => {
-            const recommendedProject = getRecommendedProject();
+            const recommendedProjects = getRecommendedProjects();
             
             return (
-              <Link 
-                to={`/projects/${recommendedProject.slug}`}
-                className="cursor-pointer block"
-              >
-                <div className="rounded-lg overflow-hidden bg-white border border-border">
-                  <div className="aspect-video overflow-hidden bg-muted">
-                    <img 
-                      src={recommendedProject.image} 
-                      alt={recommendedProject.title}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="p-2 sm:p-3" style={{
-                    backgroundColor: '#F5F5F5'
-                  }}>
-                    <div className="flex items-center justify-between">
-                      <div className="flex-1">
-                        <h3 className="font-display text-base font-medium text-black mb-1">
-                          {recommendedProject.title}
-                        </h3>
-                        <p className="font-mono text-xs sm:text-[10px] text-gray-700 uppercase">
-                          {recommendedProject.description}
-                        </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {recommendedProjects.map((project, index) => (
+                  <Link 
+                    key={project.slug}
+                    to={`/projects/${project.slug}`}
+                    className="cursor-pointer block"
+                  >
+                    <div className="rounded-lg overflow-hidden bg-white border border-border">
+                      <div className="aspect-video overflow-hidden bg-muted">
+                        <img 
+                          src={project.image} 
+                          alt={project.title}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
                       </div>
-                      <div className="ml-4">
-                        <ArrowRight className="text-gray-600" size={20} />
+                      <div className="p-2 sm:p-3" style={{
+                        backgroundColor: '#F5F5F5'
+                      }}>
+                        <div className="flex items-center justify-between">
+                          <div className="flex-1">
+                            <h3 className="font-display text-base font-medium text-black mb-1">
+                              {project.title}
+                            </h3>
+                            <p className="font-mono text-xs sm:text-[10px] text-gray-700 uppercase">
+                              {project.description}
+                            </p>
+                          </div>
+                          <div className="ml-4">
+                            <ArrowRight className="text-gray-600" size={20} />
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </Link>
+                  </Link>
+                ))}
+              </div>
             );
           })()}
         </div>
