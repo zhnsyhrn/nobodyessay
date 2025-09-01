@@ -662,14 +662,14 @@ const ProjectDetail = () => {
             return (
               <Link 
                 to={`/projects/${recommendedProject.slug}`}
-                className="group cursor-pointer block"
+                className="cursor-pointer block"
               >
-                <div className="rounded-lg overflow-hidden bg-white hover:shadow-lg transition-all duration-300 hover:scale-[1.02]">
+                <div className="rounded-lg overflow-hidden bg-white border border-border">
                   <div className="aspect-video overflow-hidden bg-muted">
                     <img 
                       src={recommendedProject.image} 
                       alt={recommendedProject.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-full object-cover"
                       loading="lazy"
                     />
                   </div>
