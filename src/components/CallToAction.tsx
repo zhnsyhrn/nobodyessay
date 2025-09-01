@@ -6,7 +6,7 @@ interface CallToActionProps {
 }
 
 const CallToAction = ({ page }: CallToActionProps) => {
-  const getSupportingText = () => {
+  const getTitle = () => {
     switch (page) {
       case 'writings':
         return "Enjoyed my perspective on design? Let's turn ideas into real solutions.";
@@ -22,13 +22,9 @@ const CallToAction = ({ page }: CallToActionProps) => {
   return (
     <section className="py-12 sm:py-16 px-4 sm:px-6 bg-muted/30">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="font-display text-2xl sm:text-3xl font-medium mb-4 sm:mb-6 leading-tight">
-          Hiring for a Product Design role or in search for someone to do design works?
+        <h2 className="font-display text-2xl sm:text-3xl font-medium mb-6 sm:mb-8 leading-tight max-w-3xl mx-auto">
+          {getTitle()}
         </h2>
-        
-        <p className="font-jakarta text-muted-foreground text-base sm:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto">
-          {getSupportingText()}
-        </p>
         
         <Link to="/contact">
           <Button 
