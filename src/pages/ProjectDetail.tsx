@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
-import { ExternalLink, ArrowLeft } from "lucide-react";
+import { ExternalLink, ArrowLeft, ArrowRight } from "lucide-react";
 
 // Import gallery images
 import galleryImage1 from "@/assets/gallery-01.jpg";
@@ -294,6 +294,52 @@ const projectsData = {
     ]
   }
 };
+// Available projects with their Studio page info
+const availableProjects = [
+  {
+    title: "Great Eastern Takaful Malaysia",
+    slug: "great-eastern-takaful-malaysia",
+    description: "UX Audit",
+    image: "/lovable-uploads/69a2f54d-177c-4bcd-9167-0e4939d7b7fb.png"
+  },
+  {
+    title: "PolicyStreet - InsurTech",
+    slug: "policystreet-car-insurance-platform", 
+    description: "Insurance marketplace platform",
+    image: "/lovable-uploads/8537072c-4ef3-428b-8003-c4c1877fac8c.png"
+  },
+  {
+    title: "Aqa Group of Companies",
+    slug: "aqa-group-of-companies",
+    description: "Website redesign", 
+    image: "/lovable-uploads/6a5cb6e1-03b7-4408-acc9-3a920fc02038.png"
+  },
+  {
+    title: "MoneyX App - Fintech",
+    slug: "moneyx-savings-goals-manual-entry",
+    description: "App feature UIUX design",
+    image: "/lovable-uploads/38a4617f-499b-49dd-accd-4531551d30ac.png"
+  },
+  {
+    title: "Knock Knock Cafe",
+    slug: "knock-knock-cafe-kuala-terengganu",
+    description: "Art direction & brand design",
+    image: "/lovable-uploads/727cdb13-e96f-4680-8771-62fb1f9b98ef.png"
+  },
+  {
+    title: "Verdant Solar",
+    slug: "verdant-solar-my", 
+    description: "Social media and ad graphics",
+    image: "/lovable-uploads/b4780aa0-32a0-449d-b039-b83cc167691e.png"
+  },
+  {
+    title: "Referral Program Design",
+    slug: "moneyx-moneyxbiz-referral-program",
+    description: "Insurance marketplace platform",
+    image: "/lovable-uploads/3203ca77-96ca-4347-9e77-4a9c89891bfb.png"
+  }
+];
+
 const ProjectDetail = () => {
   const {
     slug
@@ -301,6 +347,37 @@ const ProjectDetail = () => {
     slug: string;
   }>();
   const project = slug ? projectsData[slug as keyof typeof projectsData] : null;
+
+  // Track viewed projects in localStorage
+  useEffect(() => {
+    if (slug) {
+      const viewedProjects = JSON.parse(localStorage.getItem('viewedProjects') || '[]');
+      if (!viewedProjects.includes(slug)) {
+        viewedProjects.push(slug);
+        localStorage.setItem('viewedProjects', JSON.stringify(viewedProjects));
+      }
+    }
+  }, [slug]);
+
+  // Get smart recommendation
+  const getRecommendedProject = () => {
+    const viewedProjects = JSON.parse(localStorage.getItem('viewedProjects') || '[]');
+    const currentIndex = availableProjects.findIndex(p => p.slug === slug);
+    
+    // Find unviewed projects
+    const unviewedProjects = availableProjects.filter(p => 
+      !viewedProjects.includes(p.slug) && p.slug !== slug
+    );
+    
+    if (unviewedProjects.length > 0) {
+      // Return a random unviewed project for variety
+      return unviewedProjects[Math.floor(Math.random() * unviewedProjects.length)];
+    }
+    
+    // If all viewed, return next project in sequence
+    const nextIndex = currentIndex === availableProjects.length - 1 ? 0 : currentIndex + 1;
+    return availableProjects[nextIndex];
+  };
   if (!project) {
     return <div className="min-h-screen bg-background">
         <StickyNavbar />
@@ -580,87 +657,36 @@ const ProjectDetail = () => {
             Next Project You Might Like
           </h2>
           {(() => {
-            // Get all project keys
-            const allProjects = Object.keys(projectsData);
-            // Get current project index
-            const currentIndex = allProjects.indexOf(slug || '');
-            // Get next project (or first if current is last)
-            const nextProjectSlug = currentIndex === allProjects.length - 1 
-              ? allProjects[0] 
-              : allProjects[currentIndex + 1];
-            const nextProject = projectsData[nextProjectSlug as keyof typeof projectsData];
-            
-            // Get thumbnail image for the next project
-            const getThumbnailImage = (projectSlug: string) => {
-              switch(projectSlug) {
-                case 'moneyx-savings-goals-manual-entry':
-                  return moneyxImages[0];
-                case 'knock-knock-cafe-kuala-terengganu':
-                  return knockKnockImages[0];
-                case 'policystreet-car-insurance-platform':
-                  return policyStreetImages[0];
-                case 'moneyx-moneyxbiz-referral-program':
-                  return referralProgramImages[0];
-                case 'great-eastern-takaful-malaysia':
-                  return greatEasternTakafulImages[0];
-                case 'verdant-solar-my':
-                  return verdantSolarImages[0];
-                case 'aqa-group-of-companies':
-                  return "/lovable-uploads/685158de-18a9-4c06-8b43-5214ae7a89a9.png";
-                default:
-                  return galleryImage1;
-              }
-            };
-            
-            // Get short description for each project
-            const getShortDescription = (projectSlug: string) => {
-              switch(projectSlug) {
-                case 'moneyx-savings-goals-manual-entry':
-                  return "App feature design for savings goals and financial planning";
-                case 'knock-knock-cafe-kuala-terengganu':
-                  return "Logo and brand identity for a local café in Kuala Terengganu";
-                case 'policystreet-car-insurance-platform':
-                  return "Digital platform for comparing and purchasing car insurance";
-                case 'moneyx-moneyxbiz-referral-program':
-                  return "Revenue sharing model design for B2B platform";
-                case 'great-eastern-takaful-malaysia':
-                  return "UX audit and website redesign for corporate website";
-                case 'verdant-solar-my':
-                  return "Social media graphics for renewable energy solutions";
-                case 'aqa-group-of-companies':
-                  return "Website redesign concept and navigation streamlining";
-                default:
-                  return "Creative design project";
-              }
-            };
+            const recommendedProject = getRecommendedProject();
             
             return (
               <Link 
-                to={`/projects/${nextProjectSlug}`}
-                className="group block"
+                to={`/projects/${recommendedProject.slug}`}
+                className="group cursor-pointer block"
               >
-                <div className="bg-muted/30 rounded-xl p-6 hover:bg-muted/50 transition-all duration-300 hover:scale-[1.02]">
-                  <div className="flex flex-col sm:flex-row gap-6 items-start">
-                    <div className="w-full sm:w-48 flex-shrink-0">
-                      <div className="aspect-video overflow-hidden rounded-lg bg-muted">
-                        <img 
-                          src={getThumbnailImage(nextProjectSlug)} 
-                          alt={nextProject.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          loading="lazy"
-                        />
+                <div className="rounded-lg overflow-hidden bg-white hover:shadow-lg transition-all duration-300 hover:scale-[1.02]">
+                  <div className="aspect-video overflow-hidden bg-muted">
+                    <img 
+                      src={recommendedProject.image} 
+                      alt={recommendedProject.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-2 sm:p-3" style={{
+                    backgroundColor: '#F5F5F5'
+                  }}>
+                    <div className="flex items-center justify-between">
+                      <div className="flex-1">
+                        <h3 className="font-display text-base font-medium text-black mb-1">
+                          {recommendedProject.title}
+                        </h3>
+                        <p className="font-mono text-xs sm:text-[10px] text-gray-700 uppercase">
+                          {recommendedProject.description}
+                        </p>
                       </div>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-display text-xl font-medium mb-2 group-hover:text-primary transition-colors">
-                        {nextProject.title}
-                      </h3>
-                      <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-                        {getShortDescription(nextProjectSlug)}
-                      </p>
-                      <div className="inline-flex items-center text-primary text-sm font-medium">
-                        View Project
-                        <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      <div className="ml-4">
+                        <ArrowRight className="text-gray-600" size={20} />
                       </div>
                     </div>
                   </div>
