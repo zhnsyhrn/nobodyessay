@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import Manifesto from "./pages/Manifesto";
 import Post from "./pages/Post";
 import ProjectDetail from "./pages/ProjectDetail";
+import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/writings" element={<Writings />} />
           <Route path="/studio" element={<Studio />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/faq" element={<FAQ />} />
           <Route path="/manifesto" element={<Navigate to="/about" replace />} />
           <Route path="/writings/:slug" element={<Post />} />
           <Route path="/projects/:slug" element={<ProjectDetail />} />
