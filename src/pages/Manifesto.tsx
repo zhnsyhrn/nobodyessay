@@ -18,43 +18,43 @@ const Manifesto = () => {
               
               {/* Summary */}
               <div>
-                <h2 className="font-display text-2xl font-medium mb-4 text-foreground">
+                <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
                   What I Do
                 </h2>
-                <p className="font-typewriter leading-relaxed text-neutral-500 text-sm">
+                <p className="font-jakarta leading-relaxed text-neutral-500 text-sm">
                   I create digital experiences that bridge the gap between human intuition and technological possibility. Through thoughtful design and strategic thinking, I help brands and individuals tell their stories in the digital landscape.
                 </p>
               </div>
 
               {/* About the Writer */}
               <div>
-                <h2 className="font-display text-2xl font-medium mb-4 text-foreground">
+                <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
                   About the Writer
                 </h2>
-                <p className="font-typewriter text-muted-foreground leading-relaxed mb-4">
+                <p className="font-jakarta text-muted-foreground leading-relaxed mb-4">
                   A digital strategist and creative thinker who believes in the power of authentic storytelling. I approach every project with curiosity and a commitment to understanding the deeper why behind what we create.
                 </p>
-                <p className="font-typewriter text-muted-foreground leading-relaxed">
+                <p className="font-jakarta text-muted-foreground leading-relaxed">
                   When I'm not crafting digital experiences, you'll find me exploring the intersection of technology, philosophy, and human behavior through writing and conversation.
                 </p>
               </div>
 
               {/* Core Competencies */}
               <div>
-                <h2 className="font-display text-2xl font-medium mb-4 text-foreground">
+                <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
                   Core Competencies & Design Philosophy
                 </h2>
                 <div className="space-y-3">
-                  <div className="font-typewriter text-muted-foreground">
+                  <div className="font-jakarta text-muted-foreground">
                     <span className="text-foreground font-medium">Systems-Oriented Thinking:</span> Building cohesive experiences across touchpoints
                   </div>
-                  <div className="font-typewriter text-muted-foreground">
+                  <div className="font-jakarta text-muted-foreground">
                     <span className="text-foreground font-medium">Multi-Platform Design Execution:</span> Designing modules across web, mobile, and admin tools
                   </div>
-                  <div className="font-typewriter text-muted-foreground">
+                  <div className="font-jakarta text-muted-foreground">
                     <span className="text-foreground font-medium">Ownership & Delivery Under Pressure:</span> Driving end-to-end projects under tight deadlines
                   </div>
-                  <div className="font-typewriter text-muted-foreground">
+                  <div className="font-jakarta text-muted-foreground">
                     <span className="text-foreground font-medium">User-Centered Design:</span> Prioritizing empathy and accessibility
                   </div>
                 </div>
@@ -62,24 +62,24 @@ const Manifesto = () => {
 
               {/* Engagements */}
               <div>
-                <h2 className="font-display text-2xl font-medium mb-4 text-foreground">
+                <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
                   Engagements
                 </h2>
-                <p className="font-typewriter text-muted-foreground leading-relaxed mb-6">
+                <p className="font-jakarta text-muted-foreground leading-relaxed mb-6">
                   I occasionally accept invitations to speak at events, workshops & consultations to share things that I care about.
                 </p>
                 
                  {/* Workshops List */}
                 <div className="space-y-3 mb-6">
-                  <div className="font-typewriter text-muted-foreground">
+                  <div className="font-jakarta text-muted-foreground">
                     <span className="text-foreground font-medium">Canva Design Workshop, Universiti Malaysia Sabah</span> • 2022
                   </div>
                   <div className="h-px bg-border"></div>
-                  <div className="font-typewriter text-muted-foreground">
+                  <div className="font-jakarta text-muted-foreground">
                     <span className="text-foreground font-medium">Createz Bootcamp 3.0, University of Malaya</span> • 2020
                   </div>
                   <div className="h-px bg-border"></div>
-                  <div className="font-typewriter text-muted-foreground">
+                  <div className="font-jakarta text-muted-foreground">
                     <span className="text-foreground font-medium">University Entrepreneurship Masterclass, StartupMalaysia</span> • 2018
                   </div>
                 </div>
@@ -136,88 +136,88 @@ const Manifesto = () => {
               
               {/* Work Experience */}
               <div>
-                <h2 className="font-display text-2xl font-medium mb-4 text-foreground">
+                <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
                   Work Experience
                 </h2>
                 <div className="space-y-3">
                   <div className="border border-border rounded-lg p-3">
                     <div className="flex items-center justify-between mb-1">
-                      <div className="font-typewriter text-foreground font-medium">
+                      <div className="font-jakarta text-foreground font-medium">
                         <a href="https://moneyx.com.my/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
                           MoneyX
                           <ExternalLink size={14} className="text-primary" />
                         </a>
                       </div>
-                      <span className="font-typewriter text-muted-foreground text-xs">
+                      <span className="font-jakarta text-muted-foreground text-xs">
                         2024 - 2025
                       </span>
                     </div>
-                    <p className="font-typewriter text-muted-foreground text-sm">
+                    <p className="font-jakarta text-muted-foreground text-sm">
                       FinTech
                     </p>
                   </div>
                   
                   <div className="border border-border rounded-lg p-3">
                     <div className="flex items-center justify-between mb-1">
-                      <div className="font-typewriter text-foreground font-medium">
+                      <div className="font-jakarta text-foreground font-medium">
                         <a href="https://www.borong.com/my" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
                           Borong (Dropee)
                           <ExternalLink size={14} className="text-primary" />
                         </a>
                       </div>
-                      <span className="font-typewriter text-muted-foreground text-xs">
+                      <span className="font-jakarta text-muted-foreground text-xs">
                         2023
                       </span>
                     </div>
-                    <p className="font-typewriter text-muted-foreground text-sm">
+                    <p className="font-jakarta text-muted-foreground text-sm">
                       B2B Commerce
                     </p>
                   </div>
 
                   <div className="border border-border rounded-lg p-3">
                     <div className="flex items-center justify-between mb-1">
-                      <div className="font-typewriter text-foreground font-medium">
+                      <div className="font-jakarta text-foreground font-medium">
                         <a href="https://policystreet.com.my/reinsurance" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
                           PolicyStreet
                           <ExternalLink size={14} className="text-primary" />
                         </a>
                       </div>
-                      <span className="font-typewriter text-muted-foreground text-xs">
+                      <span className="font-jakarta text-muted-foreground text-xs">
                         2022 - 2023
                       </span>
                     </div>
-                    <p className="font-typewriter text-muted-foreground text-sm">
+                    <p className="font-jakarta text-muted-foreground text-sm">
                       InsurTech
                     </p>
                   </div>
 
                   <div className="border border-border rounded-lg p-3">
                     <div className="flex items-center justify-between mb-1">
-                      <div className="font-typewriter text-foreground font-medium">
+                      <div className="font-jakarta text-foreground font-medium">
                         <a href="https://senangstart.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
                           Fixcolab Group Sdn Bhd
                           <ExternalLink size={14} className="text-primary" />
                         </a>
                       </div>
-                      <span className="font-typewriter text-muted-foreground text-xs">
+                      <span className="font-jakarta text-muted-foreground text-xs">
                         2020 - 2022
                       </span>
                     </div>
-                    <p className="font-typewriter text-muted-foreground text-sm">
+                    <p className="font-jakarta text-muted-foreground text-sm">
                       Software and technology
                     </p>
                   </div>
 
                   <div className="border border-border rounded-lg p-3">
                     <div className="flex items-center justify-between mb-1">
-                      <div className="font-typewriter text-foreground font-medium">
+                      <div className="font-jakarta text-foreground font-medium">
                         Senangreka Venture
                       </div>
-                      <span className="font-typewriter text-muted-foreground text-xs">
+                      <span className="font-jakarta text-muted-foreground text-xs">
                         2018 - 2020
                       </span>
                     </div>
-                    <p className="font-typewriter text-muted-foreground text-sm">
+                    <p className="font-jakarta text-muted-foreground text-sm">
                       Creative agency
                     </p>
                   </div>
@@ -226,23 +226,23 @@ const Manifesto = () => {
 
                 {/* Side Projects */}
                 <div>
-                  <h2 className="font-display text-2xl font-medium mb-4 text-foreground">
+                  <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
                     Side Projects
                   </h2>
                   <div className="space-y-3">
                     <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
-                          <a href="https://dealn.app/" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
-                            Dealn
-                            <ExternalLink size={14} className="text-primary" />
-                          </a>
-                        </div>
-                        <span className="bg-green-500/20 text-green-700 dark:text-green-300 px-2 py-1 rounded text-xs font-typewriter">
-                          Active
-                        </span>
-                      </div>
-                      <p className="font-typewriter text-muted-foreground text-sm">
+                           <a href="https://dealn.app/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                             Dealn
+                             <ExternalLink size={14} className="text-primary" />
+                           </a>
+                         </div>
+                         <span className="bg-green-500/20 text-green-700 dark:text-green-300 px-2 py-1 rounded text-xs font-jakarta">
+                           Active
+                         </span>
+                       </div>
+                       <p className="font-jakarta text-muted-foreground text-sm">
                         Deal Experience Platform (DXP)
                       </p>
                     </div>
@@ -250,30 +250,30 @@ const Manifesto = () => {
                     <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
-                          <a href="https://www.instagram.com/nobody.collective/" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
-                            Nobody Collective
-                            <ExternalLink size={14} className="text-primary" />
-                          </a>
-                        </div>
-                        <span className="bg-green-500/20 text-green-700 dark:text-green-300 px-2 py-1 rounded text-xs font-typewriter">
-                          Active
-                        </span>
-                      </div>
-                      <p className="font-typewriter text-muted-foreground text-sm">
+                           <a href="https://www.instagram.com/nobody.collective/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                             Nobody Collective
+                             <ExternalLink size={14} className="text-primary" />
+                           </a>
+                         </div>
+                         <span className="bg-green-500/20 text-green-700 dark:text-green-300 px-2 py-1 rounded text-xs font-jakarta">
+                           Active
+                         </span>
+                       </div>
+                       <p className="font-jakarta text-muted-foreground text-sm">
                         Design Education Contents
                       </p>
                     </div>
 
                     <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center justify-between mb-2">
-                        <span className="font-typewriter text-foreground font-medium opacity-60">
-                          Designloka
-                        </span>
-                        <span className="bg-gray-500/20 text-gray-700 dark:text-gray-300 px-2 py-1 rounded text-xs font-typewriter">
-                          Inactive
-                        </span>
-                      </div>
-                      <p className="font-typewriter text-muted-foreground text-sm opacity-60">
+                         <span className="font-jakarta text-foreground font-medium opacity-60">
+                           Designloka
+                         </span>
+                         <span className="bg-gray-500/20 text-gray-700 dark:text-gray-300 px-2 py-1 rounded text-xs font-jakarta">
+                           Inactive
+                         </span>
+                       </div>
+                       <p className="font-jakarta text-muted-foreground text-sm opacity-60">
                         Unlimited Design Subscription
                       </p>
                     </div>
@@ -282,115 +282,115 @@ const Manifesto = () => {
 
                 {/* Design & Client Projects */}
                 <div>
-                  <h2 className="font-display text-2xl font-medium mb-4 text-foreground">
+                  <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
                     Design & Client Projects
                   </h2>
                   <div className="space-y-3">
                     <div className="border border-border rounded-lg p-3">
                       <div className="flex items-center gap-2">
-                        <a href="https://grain.com.sg/" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
-                          Grain Singapore
-                          <ExternalLink size={14} className="text-primary" />
-                        </a>
-                      </div>
-                    </div>
-                    
-                    <div className="border border-border rounded-lg p-3">
-                      <div className="flex items-center gap-2">
-                        <a href="https://www.greateasterntakaful.com/en/personal-takaful.html" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
-                          Great Eastern Takaful Berhad
-                          <ExternalLink size={14} className="text-primary" />
-                        </a>
-                      </div>
-                    </div>
+                         <a href="https://grain.com.sg/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                           Grain Singapore
+                           <ExternalLink size={14} className="text-primary" />
+                         </a>
+                       </div>
+                     </div>
+                     
+                     <div className="border border-border rounded-lg p-3">
+                       <div className="flex items-center gap-2">
+                         <a href="https://www.greateasterntakaful.com/en/personal-takaful.html" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                           Great Eastern Takaful Berhad
+                           <ExternalLink size={14} className="text-primary" />
+                         </a>
+                       </div>
+                     </div>
 
-                    <div className="border border-border rounded-lg p-3">
-                      <div className="flex items-center gap-2">
-                        <a href="https://www.mmu.edu.my/" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
-                          Multimedia University
-                          <ExternalLink size={14} className="text-primary" />
-                        </a>
-                      </div>
-                    </div>
+                     <div className="border border-border rounded-lg p-3">
+                       <div className="flex items-center gap-2">
+                         <a href="https://www.mmu.edu.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                           Multimedia University
+                           <ExternalLink size={14} className="text-primary" />
+                         </a>
+                       </div>
+                     </div>
 
-                    <div className="border border-border rounded-lg p-3">
-                      <div className="flex items-center gap-2">
-                        <a href="https://nanomalaysia.com.my/" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
-                          NanoMalaysia Berhad
-                          <ExternalLink size={14} className="text-primary" />
-                        </a>
-                      </div>
-                    </div>
+                     <div className="border border-border rounded-lg p-3">
+                       <div className="flex items-center gap-2">
+                         <a href="https://nanomalaysia.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                           NanoMalaysia Berhad
+                           <ExternalLink size={14} className="text-primary" />
+                         </a>
+                       </div>
+                     </div>
 
-                    <div className="border border-border rounded-lg p-3">
-                      <div className="flex items-center gap-2">
-                        <a href="https://verdantsolar.my/" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
-                          Verdant Solar
-                          <ExternalLink size={14} className="text-primary" />
-                        </a>
-                      </div>
-                    </div>
+                     <div className="border border-border rounded-lg p-3">
+                       <div className="flex items-center gap-2">
+                         <a href="https://verdantsolar.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                           Verdant Solar
+                           <ExternalLink size={14} className="text-primary" />
+                         </a>
+                       </div>
+                     </div>
 
-                    <div className="border border-border rounded-lg p-3">
-                      <div className="flex items-center gap-2">
-                        <a href="https://mytigas.com/" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
-                          MyTigas Alliance
-                          <ExternalLink size={14} className="text-primary" />
-                        </a>
-                      </div>
-                    </div>
+                     <div className="border border-border rounded-lg p-3">
+                       <div className="flex items-center gap-2">
+                         <a href="https://mytigas.com/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                           MyTigas Alliance
+                           <ExternalLink size={14} className="text-primary" />
+                         </a>
+                       </div>
+                     </div>
 
-                    <div className="border border-border rounded-lg p-3">
-                      <div className="flex items-center gap-2">
-                        <a href="https://moneyx.com.my/" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
-                          MoneyX
-                          <ExternalLink size={14} className="text-primary" />
-                        </a>
-                      </div>
-                    </div>
+                     <div className="border border-border rounded-lg p-3">
+                       <div className="flex items-center gap-2">
+                         <a href="https://moneyx.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                           MoneyX
+                           <ExternalLink size={14} className="text-primary" />
+                         </a>
+                       </div>
+                     </div>
 
-                    <div className="border border-border rounded-lg p-3">
-                      <div className="flex items-center gap-2">
-                        <a href="https://www.moneyxbiz.com.my/" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
-                          MoneyX Biz
-                          <ExternalLink size={14} className="text-primary" />
-                        </a>
-                      </div>
-                    </div>
+                     <div className="border border-border rounded-lg p-3">
+                       <div className="flex items-center gap-2">
+                         <a href="https://www.moneyxbiz.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                           MoneyX Biz
+                           <ExternalLink size={14} className="text-primary" />
+                         </a>
+                       </div>
+                     </div>
 
-                    <div className="border border-border rounded-lg p-3">
-                      <div className="flex items-center gap-2">
-                        <a href="https://policystreet.com.my/reinsurance" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
-                          PolicyStreet
-                          <ExternalLink size={14} className="text-primary" />
-                        </a>
-                      </div>
-                    </div>
+                     <div className="border border-border rounded-lg p-3">
+                       <div className="flex items-center gap-2">
+                         <a href="https://policystreet.com.my/reinsurance" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                           PolicyStreet
+                           <ExternalLink size={14} className="text-primary" />
+                         </a>
+                       </div>
+                     </div>
 
-                    <div className="border border-border rounded-lg p-3">
-                      <div className="flex items-center gap-2">
-                        <a href="https://market.borong.com/my" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
-                          Borong
-                          <ExternalLink size={14} className="text-primary" />
-                        </a>
-                      </div>
-                    </div>
+                     <div className="border border-border rounded-lg p-3">
+                       <div className="flex items-center gap-2">
+                         <a href="https://market.borong.com/my" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                           Borong
+                           <ExternalLink size={14} className="text-primary" />
+                         </a>
+                       </div>
+                     </div>
 
-                    <div className="border border-border rounded-lg p-3">
-                      <div className="flex items-center gap-2">
-                        <a href="https://meca.com.my/" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
-                          Meca Consultancy
-                          <ExternalLink size={14} className="text-primary" />
-                        </a>
-                      </div>
-                    </div>
+                     <div className="border border-border rounded-lg p-3">
+                       <div className="flex items-center gap-2">
+                         <a href="https://meca.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                           Meca Consultancy
+                           <ExternalLink size={14} className="text-primary" />
+                         </a>
+                       </div>
+                     </div>
 
-                    <div className="border border-border rounded-lg p-3">
-                      <div className="flex items-center gap-2">
-                        <a href="https://paperballad.com/" target="_blank" rel="noopener noreferrer" className="font-typewriter text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
-                          Paperballad & Co.
-                          <ExternalLink size={14} className="text-primary" />
-                        </a>
+                     <div className="border border-border rounded-lg p-3">
+                       <div className="flex items-center gap-2">
+                         <a href="https://paperballad.com/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                           Paperballad & Co.
+                           <ExternalLink size={14} className="text-primary" />
+                         </a>
                       </div>
                     </div>
                   </div>
