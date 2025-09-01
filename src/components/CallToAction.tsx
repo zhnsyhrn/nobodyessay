@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 interface CallToActionProps {
   page: 'writings' | 'projects' | 'about';
@@ -26,14 +27,15 @@ const CallToAction = ({ page }: CallToActionProps) => {
           {getTitle()}
         </h2>
         
-        <Link to="/contact">
-          <Button 
-            variant="default" 
-            size="lg"
-            className="font-display text-base px-8 py-6 h-auto min-h-[44px]"
-          >
-            Yes, Hire Zahin
-          </Button>
+        <Link to="/contact" className="inline-block">
+          <div className="relative">
+            <GlowingEffect spread={40} glow={true} disabled={false} proximity={80} inactiveZone={0.3} />
+            <Button 
+              className="font-display min-h-[48px] px-6 touch-manipulation shadow-lg hover:shadow-xl hover:shadow-primary/25 transition-all duration-300"
+            >
+              Yes, Hire Zahin
+            </Button>
+          </div>
         </Link>
       </div>
     </section>
