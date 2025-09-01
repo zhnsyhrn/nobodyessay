@@ -5,6 +5,7 @@ import { essays } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
+import CallToAction from "@/components/CallToAction";
 const Writings = () => {
   const allWritings = essays;
   return <div className="min-h-screen bg-background">
@@ -60,6 +61,8 @@ const Writings = () => {
         </div>
       </section>
 
+      <CallToAction page="writings" />
+      
       <Footer />
       <ScrollToTopButton />
     </div>;

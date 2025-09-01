@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
+import CallToAction from "@/components/CallToAction";
 
 const About = () => {
   return (
@@ -56,6 +57,8 @@ const About = () => {
         </div>
       </section>
 
+      <CallToAction page="about" />
+      
       <Footer />
       <ScrollToTopButton />
     </div>

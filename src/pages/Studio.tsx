@@ -6,6 +6,7 @@ import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
 import ComingSoonDialog from "@/components/ComingSoonDialog";
+import CallToAction from "@/components/CallToAction";
 import Autoplay from "embla-carousel-autoplay";
 import { ArrowRight } from "lucide-react";
 
@@ -154,6 +155,8 @@ const Studio = () => {
         </div>
       </section>
 
+      <CallToAction page="projects" />
+      
       <Footer />
       <ScrollToTopButton />
       
