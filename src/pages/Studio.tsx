@@ -112,7 +112,7 @@ const Studio = () => {
             };
 
             const CardContent = () => (
-              <div className="rounded-lg overflow-hidden bg-white">
+              <div className="rounded-[10px] overflow-hidden bg-white">
                 <div className="aspect-video overflow-hidden bg-muted">
                   <img 
                     src={getImageSrc(index)} 
