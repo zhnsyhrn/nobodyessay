@@ -246,7 +246,7 @@ const projectsData = {
   "great-eastern-takaful-malaysia": {
     title: "Great Eastern Takaful Malaysia",
     websiteUrl: "https://www.greateasterntakaful.com/en/personal-takaful.html",
-    overview: "I led the UX Audit exercise for Great Eastern Takaful Berhad, Malaysia, for their corporate website design revamp. The objective of this exercise was to provide a fresh update by following the latest corporate identity design of the Great Eastern Group, laid out by the design team based in Singapore. It took me 2 months from the audit and web translation to the design handover to the AVP of Website in Singapore.",
+    overview: "Led a 2-month UX Audit and redesign for Great Eastern Takaful Berhad's corporate website, aligning it with the latest Great Eastern Group identity before handing over to the Singapore team.",
     projectInfo: {
       "Project / Company": "Great Eastern Takaful Berhad",
       "Type": "UX Audit",
@@ -410,7 +410,7 @@ const ProjectDetail = () => {
           <Link to="/studio">
             <Button variant="outline">
               <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Studio
+              BACK TO STUDIO
             </Button>
           </Link>
         </div>
@@ -425,7 +425,7 @@ const ProjectDetail = () => {
         <div className="mb-4 sm:mb-8">
           <Link to="/studio" className="inline-flex items-center text-muted-foreground hover:text-foreground transition-colors">
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Studio
+            BACK TO STUDIO
           </Link>
         </div>
 
