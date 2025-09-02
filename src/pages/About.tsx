@@ -31,7 +31,7 @@ const About = () => {
                 <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
                   Engagements
                 </h2>
-                <p className="font-jakarta text-muted-foreground leading-relaxed mb-6">
+                <p className="font-jakarta leading-relaxed mb-6 text-base" style={{color: '#606060'}}>
                   I occasionally accept invitations to speak at events, workshops & consultations to share things that I care about.
                 </p>
                 
