@@ -26,40 +26,6 @@ const About = () => {
                 </p>
               </div>
 
-              {/* About the Writer */}
-              <div>
-                <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
-                  About the Writer
-                </h2>
-                <p className="font-jakarta text-muted-foreground leading-relaxed mb-4">
-                  A digital strategist and creative thinker who believes in the power of authentic storytelling. I approach every project with curiosity and a commitment to understanding the deeper why behind what we create.
-                </p>
-                <p className="font-jakarta text-muted-foreground leading-relaxed">
-                  When I'm not crafting digital experiences, you'll find me exploring the intersection of technology, philosophy, and human behavior through writing and conversation.
-                </p>
-              </div>
-
-              {/* Core Competencies */}
-              <div>
-                <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
-                  Core Competencies & Design Philosophy
-                </h2>
-                <div className="space-y-3">
-                  <div className="font-jakarta text-muted-foreground">
-                    <span className="text-foreground font-medium">Systems-Oriented Thinking:</span> Building cohesive experiences across touchpoints
-                  </div>
-                  <div className="font-jakarta text-muted-foreground">
-                    <span className="text-foreground font-medium">Multi-Platform Design Execution:</span> Designing modules across web, mobile, and admin tools
-                  </div>
-                  <div className="font-jakarta text-muted-foreground">
-                    <span className="text-foreground font-medium">Ownership & Delivery Under Pressure:</span> Driving end-to-end projects under tight deadlines
-                  </div>
-                  <div className="font-jakarta text-muted-foreground">
-                    <span className="text-foreground font-medium">User-Centered Design:</span> Prioritizing empathy and accessibility
-                  </div>
-                </div>
-              </div>
-
               {/* Engagements */}
               <div>
                 <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
@@ -129,6 +95,28 @@ const About = () => {
                   </Carousel>
                 </div>
               </div>
+
+              {/* Core Competencies */}
+              <div>
+                <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
+                  Core Competencies & Design Philosophy
+                </h2>
+                <div className="space-y-3">
+                  <div className="font-jakarta text-muted-foreground">
+                    <span className="text-foreground font-medium">Systems-Oriented Thinking:</span> Building cohesive experiences across touchpoints
+                  </div>
+                  <div className="font-jakarta text-muted-foreground">
+                    <span className="text-foreground font-medium">Multi-Platform Design Execution:</span> Designing modules across web, mobile, and admin tools
+                  </div>
+                  <div className="font-jakarta text-muted-foreground">
+                    <span className="text-foreground font-medium">Ownership & Delivery Under Pressure:</span> Driving end-to-end projects under tight deadlines
+                  </div>
+                  <div className="font-jakarta text-muted-foreground">
+                    <span className="text-foreground font-medium">User-Centered Design:</span> Prioritizing empathy and accessibility
+                  </div>
+                </div>
+              </div>
+
             </div>
 
             {/* Right Column */}
