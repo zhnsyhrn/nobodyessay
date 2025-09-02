@@ -22,29 +22,29 @@ const FAQ = () => {
     answer: "I follow design communities, attend conferences, read design books, and most importantly, I observe how people interact with digital products in real life."
   }];
   const careerFAQs = [{
-    question: "What type of projects are you looking for?",
-    answer: "I'm interested in projects that challenge me creatively and have meaningful impact. This includes web applications, design systems, brand identities, and user experience design."
+    question: "Can you walk me through your design process from research to final product?",
+    answer: "My process usually looks like this:\n\n1. **Understand the problem** – Talking with stakeholders, defining success metrics.\n2. **Research** – Competitive benchmarking.\n3. **Ideation** – Sketching flows, brainstorming with product managers and engineers.\n4. **Prototyping** – Hi-fi prototype in Figma.\n5. **Validation** – Usability testing, stakeholder reviews.\n6. **Handoff & iteration** – Collaborating closely with developers and refining based on feedback."
   }, {
-    question: "What's your typical project timeline?",
-    answer: "Project timelines vary based on scope and complexity. Typically, a complete web design project takes 2-4 weeks, while larger projects or design systems can take 1-3 months."
+    question: "Describe a design challenge you faced and how you solved it.",
+    answer: "Once, two stakeholder groups had conflicting needs: one wanted a feature-heavy dashboard, while the other wanted simplicity. I facilitated a workshop to prioritize features based on impact vs effort, and we agreed to phase the rollout. This not only balanced both perspectives but also gave users a smoother experience over time."
   }, {
-    question: "Do you work with startups or only established companies?",
-    answer: "I love working with both! Startups offer exciting challenges and the opportunity to shape a brand from the ground up, while established companies provide stability and resources for larger-scale projects."
+    question: "How do you manage conflicting feedback from stakeholders?",
+    answer: "I bring discussions back to user needs and business goals. If disagreements persist, I recommend testing both options. This shifts the conversation from personal preferences to evidence-based decisions."
   }, {
-    question: "What's included in your design process?",
-    answer: "My process includes discovery and research, user persona development, wireframing, visual design, prototyping, and user testing. I believe in iterative design and close collaboration."
+    question: "How do you balance business goals and user needs?",
+    answer: "I frame business goals and user needs as two sides of the same coin.\n\n**Example: MoneyX Referral Program**\n\n- **Business goal**: Drive user acquisition through referrals—reward both the referrer and the referee to encourage sign-ups.\n- **User need**: Have a clear, trustworthy, and effortless way to invite friends—and feel rewarded for it.\n\n**Design solution**:\n\n- Create an intuitive **Referral Dashboard** where users can easily locate and copy their referral code or link.\n- Offer meaningful rewards: users earn a tangible incentive (e.g., RM10 for every four successful referrals), while their friends enjoy a bonus as well.\n- Be transparent: showing how many referrals are needed, what counts as a \"successful signup,\" and how rewards are disbursed creates trust and motivates action.\n\n**Impact**:\n\n- Users can immediately understand the value and mechanics of the referral program.\n- This simplicity and clarity increase the likelihood they'll invite others.\n- As more users join through referrals, the business grows organically—at lower acquisition cost and with higher engagement"
   }, {
-    question: "Can you handle development as well?",
-    answer: "Yes! I have strong front-end development skills and can take projects from design to implementation. I specialize in React, TypeScript, and modern CSS frameworks."
+    question: "How do you collaborate with developers, product managers, and other teammates?",
+    answer: "I involve developers early to discuss feasibility, sync regularly with product managers on priorities, and document designs clearly in Figma. This avoids last-minute surprises and ensures smooth handoff. View how I arrange my design in Figma file."
   }, {
-    question: "What's your availability like?",
-    answer: "I'm currently available for new projects. I typically work on 1-2 major projects at a time to ensure quality and dedicated attention. Let's discuss your timeline!"
+    question: "How do you handle feedback or criticism?",
+    answer: "Feedback is a core part of design. If feedback is subjective, I ask for the reasoning behind it. If valid, I adjust. If conflicting, I bring it back to user data."
   }, {
-    question: "How do you handle revisions and feedback?",
-    answer: "I include a reasonable number of revisions in my project scope and encourage open communication throughout the process. I believe great work comes from collaboration and constructive feedback."
+    question: "How do you stay up to date with UI/UX trends and evolving tools?",
+    answer: "I stay active in design communities, attend meetups/webinars, and run small side projects to experiment with new tools. Recently, I've been exploring AI-assisted design workflows and variable typography."
   }, {
-    question: "Do you offer ongoing support after project completion?",
-    answer: "Absolutely! I provide post-launch support and can help with updates, maintenance, and future iterations. Building long-term relationships with clients is important to me."
+    question: "Why are you in the job market? Why are you currently exploring other career opportunities?",
+    answer: "I'm looking to grow in a more collaborative and mature design environment which is one that embraces experience design with measurable outcomes as a core part of the strategy. I'm also eager to take on more challenging work with regional impact, where I can continue learning while contributing meaningfully."
   }];
   return <div className="min-h-screen bg-background font-jakarta">
       <StickyNavbar />
