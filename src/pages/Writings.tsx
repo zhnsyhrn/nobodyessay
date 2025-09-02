@@ -16,7 +16,7 @@ const Writings = () => {
       <section className="py-12 sm:py-16 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           <div className="space-y-4 sm:space-y-6">
-            {allWritings.map((writing, index) => <Card key={index} className="p-4 sm:p-6 lg:p-8 border-border hover:border-foreground/20 transition-colors">
+            {allWritings.map((writing, index) => <Card key={index} className="p-4 sm:p-6 lg:p-8 border-border hover:border-foreground/20 transition-colors" style={{ borderRadius: '10px' }}>
                 <div className="space-y-3 sm:space-y-4">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-4 text-sm text-muted-foreground font-typewriter uppercase">
                     <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">

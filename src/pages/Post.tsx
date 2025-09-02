@@ -223,7 +223,7 @@ const Post = () => {
               </h2>
               <div className="space-y-4 sm:space-y-6">
                 {relatedEssays.map((relatedEssay) => (
-                  <div key={relatedEssay.slug} className="p-4 sm:p-6 lg:p-8 border border-border hover:border-foreground/20 transition-colors rounded-lg">
+                  <div key={relatedEssay.slug} className="p-4 sm:p-6 lg:p-8 border border-border hover:border-foreground/20 transition-colors" style={{ borderRadius: '10px' }}>
                     <div className="space-y-3 sm:space-y-4">
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-4 text-sm text-muted-foreground font-typewriter uppercase">
                         <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
