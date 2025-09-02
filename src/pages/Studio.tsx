@@ -50,9 +50,9 @@ const Studio = () => {
         <div className="w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[10px]">
             {[{
-            title: "Great Eastern Takaful Malaysia",
-            slug: "great-eastern-takaful-malaysia",
-            description: "UX Audit",
+            title: "Knock Knock Cafe",
+            slug: "knock-knock-cafe-kuala-terengganu",
+            description: "Art direction & brand design",
             hasDetails: true
           }, {
             title: "PolicyStreet - InsurTech",
@@ -60,19 +60,19 @@ const Studio = () => {
             description: "Insurance marketplace platform",
             hasDetails: true
           }, {
-            title: "Aqa Group of Companies",
-            slug: "aqa-group-of-companies",
-            description: "Website redesign",
-            hasDetails: true
-          }, {
             title: "MoneyX App - Fintech",
             slug: "moneyx-savings-goals-manual-entry",
             description: "App feature UIUX design",
             hasDetails: true
           }, {
-            title: "Knock Knock Cafe",
-            slug: "knock-knock-cafe-kuala-terengganu",
-            description: "Art direction & brand design",
+            title: "Great Eastern Takaful Malaysia",
+            slug: "great-eastern-takaful-malaysia",
+            description: "UX Audit",
+            hasDetails: true
+          }, {
+            title: "Aqa Group of Companies",
+            slug: "aqa-group-of-companies",
+            description: "Website redesign",
             hasDetails: true
           }, {
             title: "Verdant Solar",
@@ -92,11 +92,11 @@ const Studio = () => {
           }].map((project, index) => {
             const getImageSrc = (index: number) => {
               const images = [
-                "/lovable-uploads/69a2f54d-177c-4bcd-9167-0e4939d7b7fb.png", // Great Eastern
-                "/lovable-uploads/8537072c-4ef3-428b-8003-c4c1877fac8c.png", // PolicyStreet
-                "/lovable-uploads/6a5cb6e1-03b7-4408-acc9-3a920fc02038.png", // Aqa Group
-                "/lovable-uploads/38a4617f-499b-49dd-accd-4531551d30ac.png", // MoneyX App
                 "/lovable-uploads/2ec90d04-32fe-40d7-ad32-37985537079c.png", // Knock Knock Cafe
+                "/lovable-uploads/8537072c-4ef3-428b-8003-c4c1877fac8c.png", // PolicyStreet
+                "/lovable-uploads/38a4617f-499b-49dd-accd-4531551d30ac.png", // MoneyX App
+                "/lovable-uploads/69a2f54d-177c-4bcd-9167-0e4939d7b7fb.png", // Great Eastern
+                "/lovable-uploads/6a5cb6e1-03b7-4408-acc9-3a920fc02038.png", // Aqa Group
                 "/lovable-uploads/b4780aa0-32a0-449d-b039-b83cc167691e.png", // Verdant Solar
                 "/lovable-uploads/56229a8c-fdd0-4e96-bf18-1fe4c4b566b2.png", // Deal Experience Platform
                 "/lovable-uploads/3203ca77-96ca-4347-9e77-4a9c89891bfb.png"  // Referral Program
