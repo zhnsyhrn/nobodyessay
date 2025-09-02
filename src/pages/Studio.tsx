@@ -96,7 +96,7 @@ const Studio = () => {
                 "/lovable-uploads/8537072c-4ef3-428b-8003-c4c1877fac8c.png", // PolicyStreet
                 "/lovable-uploads/6a5cb6e1-03b7-4408-acc9-3a920fc02038.png", // Aqa Group
                 "/lovable-uploads/38a4617f-499b-49dd-accd-4531551d30ac.png", // MoneyX App
-                "/lovable-uploads/727cdb13-e96f-4680-8771-62fb1f9b98ef.png", // Knock Knock Cafe
+                "/lovable-uploads/2ec90d04-32fe-40d7-ad32-37985537079c.png", // Knock Knock Cafe
                 "/lovable-uploads/b4780aa0-32a0-449d-b039-b83cc167691e.png", // Verdant Solar
                 "/lovable-uploads/56229a8c-fdd0-4e96-bf18-1fe4c4b566b2.png", // Deal Experience Platform
                 "/lovable-uploads/3203ca77-96ca-4347-9e77-4a9c89891bfb.png"  // Referral Program
