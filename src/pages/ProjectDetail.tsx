@@ -349,7 +349,7 @@ const availableProjects = [
     title: "MoneyX App - Fintech",
     slug: "moneyx-savings-goals-manual-entry",
     description: "App feature UIUX design",
-    image: "/lovable-uploads/38a4617f-499b-49dd-accd-4531551d30ac.png"
+    image: "/lovable-uploads/3f82fbbf-f7a3-4418-bc91-7b43dcb140e8.png"
   },
   {
     title: "Knock Knock Cafe",
