@@ -21,7 +21,7 @@ const About = () => {
                 <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
                   What I Do
                 </h2>
-                <p className="font-jakarta leading-relaxed text-neutral-500 text-sm">
+                <p className="font-jakarta leading-relaxed text-base" style={{color: 'hsl(var(--faq-content))'}}>
                   I create digital experiences that bridge the gap between human intuition and technological possibility. Through thoughtful design and strategic thinking, I help brands and individuals tell their stories in the digital landscape.
                 </p>
               </div>
