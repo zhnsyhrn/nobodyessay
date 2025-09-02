@@ -215,15 +215,6 @@ const Post = () => {
             />
           </div>
 
-          {/* Article Footer */}
-          <div className="mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-border">
-            <Link to="/writings">
-              <Button variant="ghost" className="font-display touch-manipulation min-h-[44px]">
-                ← More writings
-              </Button>
-            </Link>
-          </div>
-
           {/* Next Articles Section */}
           {relatedEssays.length > 0 && (
             <div className="mt-16 sm:mt-20 pt-8 sm:pt-12 border-t border-border">
