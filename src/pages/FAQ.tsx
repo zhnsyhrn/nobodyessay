@@ -69,7 +69,7 @@ const FAQ = () => {
             </TabsList>
             
             <TabsContent value="career">
-              <Card>
+              <Card style={{ borderRadius: '10px' }}>
                 <CardHeader>
                   <CardTitle className="text-2xl">Career & Work</CardTitle>
                   <CardDescription style={{color: 'hsl(var(--faq-content))', fontSize: '16px'}}>
@@ -92,7 +92,7 @@ const FAQ = () => {
             </TabsContent>
             
             <TabsContent value="random">
-              <Card>
+              <Card style={{ borderRadius: '10px' }}>
                 <CardHeader>
                   <CardTitle className="text-2xl">Random & Personal</CardTitle>
                   <CardDescription style={{color: 'hsl(var(--faq-content))', fontSize: '16px'}}>
