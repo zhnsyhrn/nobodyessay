@@ -107,7 +107,7 @@ const Post = () => {
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
           <h1 className="font-display text-2xl font-medium mb-4">Essay Not Found</h1>
-          <p className="font-typewriter text-muted-foreground mb-6">
+          <p className="font-typewriter uppercase text-muted-foreground mb-6">
             The essay you're looking for doesn't exist or has been moved.
           </p>
           <Link to="/writings">
@@ -225,7 +225,7 @@ const Post = () => {
                 {relatedEssays.map((relatedEssay) => (
                   <div key={relatedEssay.slug} className="p-4 sm:p-6 lg:p-8 border border-border hover:border-foreground/20 transition-colors rounded-lg">
                     <div className="space-y-3 sm:space-y-4">
-                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-4 text-sm text-muted-foreground font-typewriter">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-4 text-sm text-muted-foreground font-typewriter uppercase">
                         <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                           <span className="uppercase">{relatedEssay.date}</span>
                           <span className="hidden sm:inline">•</span>
