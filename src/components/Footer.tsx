@@ -1,6 +1,6 @@
 import { Instagram, Linkedin } from "lucide-react";
 const Footer = () => {
-  return <footer className="border-t border-border py-4 sm:py-6 px-4 sm:px-6 bg-[#2F2F2F]">
+  return <footer className="border-t border-border py-4 sm:py-6 px-4 sm:px-6 bg-[#1f1f1f]">
       <div className="max-w-4xl mx-auto">
         <div className="flex flex-col items-center sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4 py-4">
           <div className="order-1 sm:order-2 flex gap-3 sm:gap-4 justify-center sm:justify-end" role="navigation" aria-label="Social links">
