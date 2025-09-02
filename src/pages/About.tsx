@@ -38,15 +38,15 @@ const About = () => {
                  {/* Workshops List */}
                 <div className="space-y-3 mb-6">
                   <div className="font-jakarta text-muted-foreground">
-                    <span className="text-foreground font-medium">Canva Design Workshop, Universiti Malaysia Sabah</span> • 2022
+                    <span className="text-foreground font-medium">Canva Design Workshop, Universiti Malaysia Sabah</span> • <span className="font-mono">2022</span>
                   </div>
                   <div className="h-px bg-border"></div>
                   <div className="font-jakarta text-muted-foreground">
-                    <span className="text-foreground font-medium">Createz Bootcamp 3.0, University of Malaya</span> • 2020
+                    <span className="text-foreground font-medium">Createz Bootcamp 3.0, University of Malaya</span> • <span className="font-mono">2020</span>
                   </div>
                   <div className="h-px bg-border"></div>
                   <div className="font-jakarta text-muted-foreground">
-                    <span className="text-foreground font-medium">University Entrepreneurship Masterclass, StartupMalaysia</span> • 2018
+                    <span className="text-foreground font-medium">University Entrepreneurship Masterclass, StartupMalaysia</span> • <span className="font-mono">2018</span>
                   </div>
                 </div>
 
@@ -139,9 +139,9 @@ const About = () => {
                           <ExternalLink size={14} className="text-primary" />
                         </a>
                       </div>
-                      <span className="font-jakarta text-muted-foreground text-xs">
-                        2024 - 2025
-                      </span>
+                       <span className="font-mono text-muted-foreground text-xs">
+                         2024 - 2025
+                       </span>
                     </div>
                     <p className="font-jakarta text-muted-foreground text-sm">
                       FinTech
@@ -156,9 +156,9 @@ const About = () => {
                           <ExternalLink size={14} className="text-primary" />
                         </a>
                       </div>
-                      <span className="font-jakarta text-muted-foreground text-xs">
-                        2023
-                      </span>
+                       <span className="font-mono text-muted-foreground text-xs">
+                         2023
+                       </span>
                     </div>
                     <p className="font-jakarta text-muted-foreground text-sm">
                       B2B Commerce
@@ -173,9 +173,9 @@ const About = () => {
                           <ExternalLink size={14} className="text-primary" />
                         </a>
                       </div>
-                      <span className="font-jakarta text-muted-foreground text-xs">
-                        2022 - 2023
-                      </span>
+                       <span className="font-mono text-muted-foreground text-xs">
+                         2022 - 2023
+                       </span>
                     </div>
                     <p className="font-jakarta text-muted-foreground text-sm">
                       InsurTech
@@ -190,9 +190,9 @@ const About = () => {
                           <ExternalLink size={14} className="text-primary" />
                         </a>
                       </div>
-                      <span className="font-jakarta text-muted-foreground text-xs">
-                        2020 - 2022
-                      </span>
+                       <span className="font-mono text-muted-foreground text-xs">
+                         2020 - 2022
+                       </span>
                     </div>
                     <p className="font-jakarta text-muted-foreground text-sm">
                       Software and technology
@@ -204,9 +204,9 @@ const About = () => {
                       <div className="font-jakarta text-foreground font-medium">
                         Senangreka Venture
                       </div>
-                      <span className="font-jakarta text-muted-foreground text-xs">
-                        2018 - 2020
-                      </span>
+                       <span className="font-mono text-muted-foreground text-xs">
+                         2018 - 2020
+                       </span>
                     </div>
                     <p className="font-jakarta text-muted-foreground text-sm">
                       Creative agency
