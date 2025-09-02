@@ -175,3 +175,7 @@ export const getEssayBySlug = (slug: string): Essay | undefined => {
 export const getFeaturedEssays = (): Essay[] => {
   return essays.slice(0, 3);
 };
+
+export const getRelatedEssays = (currentSlug: string, limit: number = 3): Essay[] => {
+  return essays.filter(essay => essay.slug !== currentSlug).slice(0, limit);
+};
