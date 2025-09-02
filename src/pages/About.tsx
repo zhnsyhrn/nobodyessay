@@ -111,7 +111,7 @@ const About = () => {
                   <div className="font-jakarta text-muted-foreground text-base">
                     <span className="text-foreground font-medium">Ownership & Delivery Under Pressure:</span> Driving end-to-end projects under tight deadlines
                   </div>
-                  <div className="font-jakarta text-muted-foreground">
+                  <div className="font-jakarta text-muted-foreground text-base">
                     <span className="text-foreground font-medium">User-Centered Design:</span> Prioritizing empathy and accessibility
                   </div>
                 </div>
