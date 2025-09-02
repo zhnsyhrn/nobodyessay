@@ -8,6 +8,57 @@ import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
 import DOMPurify from "dompurify";
 
+// Rich text content parser
+const parseRichContent = (content: string) => {
+  return content
+    .split('\n\n')
+    .map(paragraph => {
+      const trimmed = paragraph.trim();
+      
+      // Empty paragraphs
+      if (!trimmed) return '';
+      
+      // Headers
+      if (trimmed.startsWith('## ')) {
+        return `<h2 class="font-display text-xl sm:text-2xl font-medium mt-8 sm:mt-12 mb-4 sm:mb-6 text-foreground">${DOMPurify.sanitize(trimmed.slice(3))}</h2>`;
+      }
+      
+      // Quote blocks
+      if (trimmed.startsWith('> ')) {
+        return `<blockquote class="border-l-4 border-primary pl-4 sm:pl-6 my-6 sm:my-8 italic text-sm sm:text-base font-jakarta" style="color: #606060">${DOMPurify.sanitize(trimmed.slice(2))}</blockquote>`;
+      }
+      
+      // Images
+      if (trimmed.match(/!\[.*?\]\(.*?\)/)) {
+        const match = trimmed.match(/!\[(.*?)\]\((.*?)\)/);
+        if (match) {
+          return `<img src="${DOMPurify.sanitize(match[2])}" alt="${DOMPurify.sanitize(match[1])}" class="w-full rounded-lg my-6 sm:my-8" />`;
+        }
+      }
+      
+      // Unordered lists
+      if (trimmed.includes('\n- ')) {
+        const items = trimmed.split('\n- ').filter(item => item.trim());
+        const listItems = items.map(item => `<li class="mb-2">${DOMPurify.sanitize(item.startsWith('- ') ? item.slice(2) : item)}</li>`).join('');
+        return `<ul class="list-disc list-inside my-4 sm:my-6 space-y-2 text-sm sm:text-base font-jakarta" style="color: #606060">${listItems}</ul>`;
+      }
+      
+      // Ordered lists
+      if (trimmed.match(/^\d+\./)) {
+        const lines = trimmed.split('\n');
+        const listItems = lines
+          .filter(line => line.match(/^\d+\./))
+          .map(line => `<li class="mb-2">${DOMPurify.sanitize(line.replace(/^\d+\.\s*/, ''))}</li>`)
+          .join('');
+        return `<ol class="list-decimal list-inside my-4 sm:my-6 space-y-2 text-sm sm:text-base font-jakarta" style="color: #606060">${listItems}</ol>`;
+      }
+      
+      // Regular paragraphs
+      return `<p class="mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base font-jakarta" style="color: #606060">${DOMPurify.sanitize(trimmed)}</p>`;
+    })
+    .join('');
+};
+
 const Post = () => {
   const { slug } = useParams<{ slug: string }>();
   const essay = slug ? getEssayBySlug(slug) : undefined;
@@ -121,40 +172,18 @@ const Post = () => {
               className="font-jakarta leading-relaxed"
               style={{ color: '#606060' }}
               dangerouslySetInnerHTML={{ 
-                __html: DOMPurify.sanitize(essay.content
-                  .split('\n\n')
-                  .map(paragraph => {
-                    if (paragraph.startsWith('## ')) {
-                      return `<h2 class="font-display text-xl sm:text-2xl font-medium mt-8 sm:mt-12 mb-4 sm:mb-6 text-foreground">${DOMPurify.sanitize(paragraph.slice(3))}</h2>`;
-                    }
-                    if (paragraph.trim() === '') {
-                      return '';
-                    }
-                    return `<p class="mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base font-jakarta" style="color: #606060">${DOMPurify.sanitize(paragraph)}</p>`;
-                  })
-                  .join(''))
+                __html: DOMPurify.sanitize(parseRichContent(essay.content))
               }}
             />
           </div>
 
           {/* Article Footer */}
           <div className="mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-border">
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 sm:gap-0">
-              <Link to="/writings">
-                <Button variant="ghost" className="font-display touch-manipulation min-h-[44px]">
-                  ← More writings
-                </Button>
-              </Link>
-              
-              <div className="sm:text-right">
-                <p className="font-typewriter uppercase text-sm text-muted-foreground mb-2">
-                  Found this piece meaningful?
-                </p>
-                <p className="font-typewriter uppercase text-xs sm:text-sm text-muted-foreground">
-                  Share it with someone who might appreciate it.
-                </p>
-              </div>
-            </div>
+            <Link to="/writings">
+              <Button variant="ghost" className="font-display touch-manipulation min-h-[44px]">
+                ← More writings
+              </Button>
+            </Link>
           </div>
 
           {/* Next Articles Section */}
@@ -163,30 +192,36 @@ const Post = () => {
               <h2 className="font-display text-xl sm:text-2xl font-medium mb-6 sm:mb-8">
                 Next Articles You Might Like
               </h2>
-              <div className="grid gap-6 sm:gap-8">
+              <div className="space-y-4 sm:space-y-6">
                 {relatedEssays.map((relatedEssay) => (
-                  <Link
-                    key={relatedEssay.slug}
-                    to={`/writings/${relatedEssay.slug}`}
-                    className="block group hover:bg-muted/20 p-4 sm:p-6 rounded-lg transition-colors"
-                  >
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-0 text-sm text-muted-foreground font-typewriter uppercase mb-3">
-                      <div className="flex items-center space-x-3 sm:space-x-4">
-                        <span className="text-xs sm:text-sm">{relatedEssay.date}</span>
-                        <span>•</span>
-                        <span className="bg-muted px-2 py-1 rounded text-xs">
-                          {relatedEssay.category}
-                        </span>
+                  <div key={relatedEssay.slug} className="p-4 sm:p-6 lg:p-8 border border-border hover:border-foreground/20 transition-colors rounded-lg">
+                    <div className="space-y-3 sm:space-y-4">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-4 text-sm text-muted-foreground font-typewriter">
+                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                          <span className="uppercase">{relatedEssay.date}</span>
+                          <span className="hidden sm:inline">•</span>
+                          <span className="bg-muted px-2 py-1 rounded text-xs inline-block w-fit">
+                            {relatedEssay.category}
+                          </span>
+                        </div>
+                        <span className="text-xs sm:text-sm uppercase">{relatedEssay.readTime}</span>
                       </div>
-                      <span className="text-xs sm:text-sm">{relatedEssay.readTime}</span>
+                      
+                      <h3 className="font-display text-lg sm:text-xl font-medium leading-tight">
+                        {relatedEssay.title}
+                      </h3>
+                      
+                      <p className="font-jakarta leading-relaxed text-sm sm:text-base" style={{ color: '#606060' }}>
+                        {relatedEssay.excerpt}
+                      </p>
+                      
+                      <Link to={`/writings/${relatedEssay.slug}`}>
+                        <Button variant="ghost" className="font-display text-sm p-0 h-auto hover:bg-transparent hover:text-foreground min-h-[44px] flex items-center">
+                          Read more →
+                        </Button>
+                      </Link>
                     </div>
-                    <h3 className="font-display text-lg sm:text-xl font-medium mb-2 sm:mb-3 group-hover:text-primary transition-colors">
-                      {relatedEssay.title}
-                    </h3>
-                    <p className="text-sm sm:text-base leading-relaxed" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif', color: '#606060' }}>
-                      {relatedEssay.excerpt}
-                    </p>
-                  </Link>
+                  </div>
                 ))}
               </div>
             </div>
