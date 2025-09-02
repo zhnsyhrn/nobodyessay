@@ -577,8 +577,8 @@ const ProjectDetail = () => {
               
               {/* First 3 images */}
               <div className="grid grid-cols-1 gap-4 mb-8">
-                {greatEasternTakafulImages.slice(0, 3).map((image, index) => <div key={index} className="aspect-video overflow-hidden rounded-[10px] bg-muted">
-                    <img src={image} alt={`Great Eastern Takaful - Image ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+                {greatEasternTakafulImages.slice(0, 3).map((image, index) => <div key={index} className="aspect-[4/3] overflow-hidden rounded-[10px] bg-muted">
+                    <img src={image} alt={`Great Eastern Takaful - Image ${index + 1}`} className="w-full h-full object-contain hover:scale-105 transition-transform duration-300" loading="lazy" />
                   </div>)}
               </div>
               
@@ -668,8 +668,8 @@ const ProjectDetail = () => {
               
               {/* Last 2 images */}
               <div className="grid grid-cols-1 gap-4 mb-8">
-                {greatEasternTakafulImages.slice(3, 5).map((image, index) => <div key={index + 3} className="aspect-video overflow-hidden rounded-[10px] bg-muted">
-                    <img src={image} alt={`Great Eastern Takaful - Image ${index + 4}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+                {greatEasternTakafulImages.slice(3, 5).map((image, index) => <div key={index + 3} className="aspect-[4/3] overflow-hidden rounded-[10px] bg-muted">
+                    <img src={image} alt={`Great Eastern Takaful - Image ${index + 4}`} className="w-full h-full object-contain hover:scale-105 transition-transform duration-300" loading="lazy" />
                   </div>)}
               </div>
               
