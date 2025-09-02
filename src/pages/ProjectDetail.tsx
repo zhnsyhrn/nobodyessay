@@ -21,22 +21,22 @@ import galleryImage8 from "@/assets/gallery-08.jpg";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
-// MoneyX project images (using public URLs)
-const moneyxImages = ["/lovable-uploads/7818744d-3050-4496-824e-8c4c7a8b1a4e.png",
-// Components & Wireframes
-"/lovable-uploads/c528a13e-2b16-4074-9369-d55af61f04ac.png",
-// Dashboard Core Experiences
-"/lovable-uploads/1dcf470c-2ae1-4041-9270-802a1b166480.png",
-// Goal Creation
-"/lovable-uploads/c931605e-784c-4a52-ae00-b9eb94d0be58.png",
-// Transactions
-"/lovable-uploads/75943d99-0ed4-4445-9bdd-80d0bab01e5f.png",
-// UI Flow
-"/lovable-uploads/02594b85-35a5-4f5e-b0f9-c93ee3f201a7.png",
-// Interface Flow
-"/lovable-uploads/2fbd8484-6091-4de8-8f0d-0c7c7ded5fb0.png",
-// Categories & Charts
-"/lovable-uploads/b0b84054-8135-427f-8108-9f34cecc6fa7.png" // Final Flow
+// MoneyX project images - Updated with new app screenshots
+const moneyxImages = [
+  // Savings Goals Main Screen
+  "/lovable-uploads/adb8375e-7208-4d84-9ce2-c1deeef1d51a.png",
+  // Travel to Mexico Detail Page
+  "/lovable-uploads/472e21c0-bef8-4755-aca3-56731363c335.png",
+  // Onboarding Screens
+  "/lovable-uploads/c3e54d43-db55-4773-8d0a-458a56a4f01e.png",
+  // Create Savings Goals Categories
+  "/lovable-uploads/a8f7d34a-6035-491c-8c34-bf425d47dd34.png",
+  // Desktop Wireframes & Components
+  "/lovable-uploads/643fbf53-e088-48f0-8d9b-8be7c48d135d.png",
+  // Edit Transactions Interface
+  "/lovable-uploads/c5bc8a80-0a89-483d-b4b9-caecdf933613.png",
+  // Savings Details Screens
+  "/lovable-uploads/7e77fb1b-fb0b-4114-b857-11a456dd2afc.png"
 ];
 
 // Knock Knock Cafe project images
