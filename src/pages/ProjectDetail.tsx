@@ -575,6 +575,12 @@ const ProjectDetail = () => {
                 It took me 2 months from the audit and web translation for Bahasa Malaysia to the design handover to the AVP of Website in Singapore.
               </p>
               
+              {/* First 3 images */}
+              <div className="grid grid-cols-1 gap-4 mb-8">
+                {greatEasternTakafulImages.slice(0, 3).map((image, index) => <div key={index} className="aspect-video overflow-hidden rounded-[10px] bg-muted">
+                    <img src={image} alt={`Great Eastern Takaful - Image ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+                  </div>)}
+              </div>
               
               <p className="mb-4" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
@@ -660,6 +666,12 @@ const ProjectDetail = () => {
                 The design work in Figma was mainly to visualize the updated layouts for key pages such as corporate, products, company profile, and articles, while also ensuring ease of web development by leveraging the existing templates and assets created by the Singapore team.
               </p>
               
+              {/* Last 2 images */}
+              <div className="grid grid-cols-1 gap-4 mb-8">
+                {greatEasternTakafulImages.slice(3, 5).map((image, index) => <div key={index + 3} className="aspect-video overflow-hidden rounded-[10px] bg-muted">
+                    <img src={image} alt={`Great Eastern Takaful - Image ${index + 4}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+                  </div>)}
+              </div>
               
               <p className="mb-4" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
