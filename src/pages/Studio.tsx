@@ -114,7 +114,7 @@ const Studio = () => {
                 "/lovable-uploads/6a5cb6e1-03b7-4408-acc9-3a920fc02038.png", // Aqa Group
                 "/lovable-uploads/b4780aa0-32a0-449d-b039-b83cc167691e.png", // Verdant Solar
                 "/lovable-uploads/f83e49dc-cff5-4e61-af7d-10bef4f81e8d.png", // Deal Experience Platform
-                "/lovable-uploads/4c73baad-91b3-4543-93aa-ef27127e6260.png", // SPARK
+                "/lovable-uploads/c439fbb4-3f35-4764-a184-273325e4e840.png", // SPARK
                 "/lovable-uploads/3203ca77-96ca-4347-9e77-4a9c89891bfb.png", // Referral Program
                 "/lovable-uploads/a0d51a79-c8e0-48dd-a846-8ee7d9ccec37.png", // Babyborong Commerce
                 "/lovable-uploads/f3563e28-9a23-4146-bb62-ca77d0cd0da9.png"  // CH Phoon & Associates
