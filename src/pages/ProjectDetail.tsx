@@ -43,6 +43,20 @@ const moneyxImages = ["/lovable-uploads/7818744d-3050-4496-824e-8c4c7a8b1a4e.png
 const knockKnockImages = ["/lovable-uploads/2ec90d04-32fe-40d7-ad32-37985537079c.png" // Cafe storefront
 ];
 
+// Knock Knock Cafe branding images (for grid layout)
+const knockKnockBrandingImages = [
+  "/lovable-uploads/0b90dd1f-2e0c-4cea-9622-6b345dcd480d.png", // Logo on black
+  "/lovable-uploads/64832b62-e750-4885-959a-66813f85078d.png", // Coffee machine with branding
+  "/lovable-uploads/86ddb1e9-5e7f-4b73-b047-1aa627b6b9ec.png", // Pour over coffee
+  "/lovable-uploads/951498a7-dfc1-4382-a38d-42ee2427abb7.png", // Branded coffee mugs
+  "/lovable-uploads/ca49269f-c5cf-44d5-8312-dee498ccaa03.png", // Coffee cup with branding
+  "/lovable-uploads/fb717700-2c2d-478c-9555-fa375093bfd0.png", // Wall signage
+  "/lovable-uploads/947f2684-f773-4dc8-a59c-1689e8415d2f.png", // Branded apron
+  "/lovable-uploads/0e8b7ab7-7337-4a4a-ae43-0ab5e4306dca.png", // Street view of cafe
+  "/lovable-uploads/168e7a46-8c2a-481f-b86b-9ac4b3f7ecc8.png", // Interior signage
+  "/lovable-uploads/4323e2a7-a557-4508-a17c-7552c47f1bb0.png"  // Coffee packaging
+];
+
 // PolicyStreet project images
 const policyStreetImages = ["/lovable-uploads/a3d87d83-a1e8-426c-9d12-475e9f6f3488.png", "/lovable-uploads/933cdd11-2964-478a-a9f2-09f288821be8.png", "/lovable-uploads/0a9faeb6-72a3-484e-83a5-0aad681f0684.png", "/lovable-uploads/296d95da-ee08-407a-9413-025d7c4bc61d.png", "/lovable-uploads/bbfa2e07-10f8-41ed-91a7-5b3c0cdb3c1c.png"];
 
@@ -111,6 +125,15 @@ const VerdantSolarGridContent = () => {
   return <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
       {verdantSolarGridImages.map((image, index) => <div key={index} className="aspect-square overflow-hidden rounded-[10px] bg-muted">
           <img src={image} alt={`Verdant Solar Design ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+        </div>)}
+    </div>;
+};
+
+// Knock Knock Cafe Branding Grid Component (for full-width section)  
+const KnockKnockBrandingGridContent = () => {
+  return <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+      {knockKnockBrandingImages.map((image, index) => <div key={index} className="aspect-square overflow-hidden rounded-[10px] bg-muted">
+          <img src={image} alt={`Knock Knock Cafe Branding ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
         </div>)}
     </div>;
 };
@@ -651,6 +674,18 @@ const ProjectDetail = () => {
                 Let me rest for awhile.
               </p>
             </div>
+          </div> : slug === 'knock-knock-cafe-kuala-terengganu' ?
+      // Knock Knock Cafe layout with portrait image first, then branding grid
+      <div className="space-y-8">
+            {/* Portrait image */}
+            <div className="max-w-4xl mx-auto">
+              <div className="aspect-video overflow-hidden rounded-[10px] bg-muted">
+                <img src={knockKnockImages[0]} alt="Knock Knock Cafe Storefront" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+            </div>
+            
+            {/* Branding grid */}
+            <KnockKnockBrandingGridContent />
           </div> : slug === 'verdant-solar-my' ?
       // Special layout for Verdant Solar - only the grid in full-width section
       <VerdantSolarGridContent /> :
