@@ -54,43 +54,44 @@ const About = () => {
                 {/* Image Slider */}
                 <div className="mb-6">
                   <Carousel 
-                    className="w-full relative border border-border rounded-lg overflow-hidden"
+                    className="w-full relative border border-border overflow-hidden"
+                    style={{ borderRadius: '10px' }}
                     plugins={[Autoplay({ delay: 3000, stopOnInteraction: true })]}
                     opts={{ align: "start", loop: true }}
                   >
                     <CarouselContent>
                       <CarouselItem>
-                        <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
+                        <div className="aspect-[4/3] overflow-hidden relative" style={{ borderRadius: '10px' }}>
                           <img src="/lovable-uploads/cdb5672f-de57-4d19-a313-9bdec559de7b.png" alt="Group photo at university workshop" className="w-full h-full object-cover" />
                         </div>
                       </CarouselItem>
                       <CarouselItem>
-                        <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
+                        <div className="aspect-[4/3] overflow-hidden relative" style={{ borderRadius: '10px' }}>
                           <img src="/lovable-uploads/a78f735b-9b5e-496f-807c-d89d3bb3fbc1.png" alt="Speaking at entrepreneurship masterclass" className="w-full h-full object-cover" />
                         </div>
                       </CarouselItem>
                       <CarouselItem>
-                        <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
+                        <div className="aspect-[4/3] overflow-hidden relative" style={{ borderRadius: '10px' }}>
                           <img src="/lovable-uploads/d0b90204-89f8-4b16-9387-912ec4ef8cf9.png" alt="Virtual workshop presentation" className="w-full h-full object-cover" />
                         </div>
                       </CarouselItem>
                       <CarouselItem>
-                        <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
+                        <div className="aspect-[4/3] overflow-hidden relative" style={{ borderRadius: '10px' }}>
                           <img src="/lovable-uploads/be876eca-c1a0-4e2f-940e-27d0df2042fa.png" alt="Hands-on workshop session" className="w-full h-full object-cover" />
                         </div>
                       </CarouselItem>
                       <CarouselItem>
-                        <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
+                        <div className="aspect-[4/3] overflow-hidden relative" style={{ borderRadius: '10px' }}>
                           <img src="/lovable-uploads/56d6ab0a-15f4-4d7c-80b5-6e358fb73882.png" alt="Team photo at bootcamp event" className="w-full h-full object-cover" />
                         </div>
                       </CarouselItem>
                       <CarouselItem>
-                        <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
+                        <div className="aspect-[4/3] overflow-hidden relative" style={{ borderRadius: '10px' }}>
                           <img src="/lovable-uploads/8f343185-b806-43de-b723-33d36c31b526.png" alt="Large group photo at university event" className="w-full h-full object-cover" />
                         </div>
                       </CarouselItem>
                       <CarouselItem>
-                        <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
+                        <div className="aspect-[4/3] overflow-hidden relative" style={{ borderRadius: '10px' }}>
                           <img src="/lovable-uploads/48722f75-9955-4d59-9183-79b77034c818.png" alt="Presenting at startup event" className="w-full h-full object-cover" />
                         </div>
                       </CarouselItem>
@@ -136,7 +137,7 @@ const About = () => {
                   Work Experience
                 </h2>
                 <div className="space-y-3">
-                  <div className="border border-border rounded-lg p-3">
+                  <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
                     <div className="flex items-center justify-between mb-1">
                       <div className="font-jakarta text-foreground font-medium">
                         <a href="https://moneyx.com.my/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
@@ -153,7 +154,7 @@ const About = () => {
                     </p>
                   </div>
                   
-                  <div className="border border-border rounded-lg p-3">
+                  <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
                     <div className="flex items-center justify-between mb-1">
                       <div className="font-jakarta text-foreground font-medium">
                         <a href="https://www.borong.com/my" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
@@ -170,7 +171,7 @@ const About = () => {
                     </p>
                   </div>
 
-                  <div className="border border-border rounded-lg p-3">
+                  <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
                     <div className="flex items-center justify-between mb-1">
                       <div className="font-jakarta text-foreground font-medium">
                         <a href="https://policystreet.com.my/reinsurance" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
@@ -187,7 +188,7 @@ const About = () => {
                     </p>
                   </div>
 
-                  <div className="border border-border rounded-lg p-3">
+                  <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
                     <div className="flex items-center justify-between mb-1">
                       <div className="font-jakarta text-foreground font-medium">
                         <a href="https://senangstart.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
@@ -204,7 +205,7 @@ const About = () => {
                     </p>
                   </div>
 
-                  <div className="border border-border rounded-lg p-3">
+                  <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
                     <div className="flex items-center justify-between mb-1">
                       <div className="font-jakarta text-foreground font-medium">
                         Senangreka Venture
@@ -226,7 +227,7 @@ const About = () => {
                     Side Projects
                   </h2>
                   <div className="space-y-3">
-                    <div className="border border-border rounded-lg p-3">
+                    <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
                            <a href="https://dealn.app/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
@@ -243,7 +244,7 @@ const About = () => {
                       </p>
                     </div>
                     
-                    <div className="border border-border rounded-lg p-3">
+                    <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
                            <a href="https://www.instagram.com/nobody.collective/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
@@ -260,7 +261,7 @@ const About = () => {
                       </p>
                     </div>
 
-                    <div className="border border-border rounded-lg p-3">
+                    <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
                       <div className="flex items-center justify-between mb-2">
                          <span className="font-jakarta text-foreground font-medium opacity-60">
                            Designloka
@@ -282,7 +283,7 @@ const About = () => {
                     Design & Client Projects
                   </h2>
                   <div className="space-y-3">
-                    <div className="border border-border rounded-lg p-3">
+                    <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
                       <div className="flex items-center gap-2">
                          <a href="https://grain.com.sg/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
                            Grain Singapore
@@ -291,7 +292,7 @@ const About = () => {
                        </div>
                      </div>
                      
-                     <div className="border border-border rounded-lg p-3">
+                     <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
                        <div className="flex items-center gap-2">
                          <a href="https://www.greateasterntakaful.com/en/personal-takaful.html" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
                            Great Eastern Takaful Berhad
@@ -300,7 +301,7 @@ const About = () => {
                        </div>
                      </div>
 
-                     <div className="border border-border rounded-lg p-3">
+                     <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
                        <div className="flex items-center gap-2">
                          <a href="https://www.mmu.edu.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
                            Multimedia University
@@ -309,7 +310,7 @@ const About = () => {
                        </div>
                      </div>
 
-                     <div className="border border-border rounded-lg p-3">
+                     <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
                        <div className="flex items-center gap-2">
                          <a href="https://nanomalaysia.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
                            NanoMalaysia Berhad
@@ -318,7 +319,7 @@ const About = () => {
                        </div>
                      </div>
 
-                     <div className="border border-border rounded-lg p-3">
+                     <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
                        <div className="flex items-center gap-2">
                          <a href="https://verdantsolar.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
                            Verdant Solar
@@ -327,7 +328,7 @@ const About = () => {
                        </div>
                      </div>
 
-                     <div className="border border-border rounded-lg p-3">
+                     <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
                        <div className="flex items-center gap-2">
                          <a href="https://mytigas.com/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
                            MyTigas Alliance
@@ -336,7 +337,7 @@ const About = () => {
                        </div>
                      </div>
 
-                     <div className="border border-border rounded-lg p-3">
+                     <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
                        <div className="flex items-center gap-2">
                          <a href="https://moneyx.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
                            MoneyX
@@ -345,7 +346,7 @@ const About = () => {
                        </div>
                      </div>
 
-                     <div className="border border-border rounded-lg p-3">
+                     <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
                        <div className="flex items-center gap-2">
                          <a href="https://www.moneyxbiz.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
                            MoneyX Biz
@@ -354,7 +355,7 @@ const About = () => {
                        </div>
                      </div>
 
-                     <div className="border border-border rounded-lg p-3">
+                     <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
                        <div className="flex items-center gap-2">
                          <a href="https://policystreet.com.my/reinsurance" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
                            PolicyStreet
@@ -363,7 +364,7 @@ const About = () => {
                        </div>
                      </div>
 
-                     <div className="border border-border rounded-lg p-3">
+                     <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
                        <div className="flex items-center gap-2">
                          <a href="https://market.borong.com/my" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
                            Borong
@@ -372,7 +373,7 @@ const About = () => {
                        </div>
                      </div>
 
-                     <div className="border border-border rounded-lg p-3">
+                     <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
                        <div className="flex items-center gap-2">
                          <a href="https://meca.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
                            Meca Consultancy
@@ -381,7 +382,7 @@ const About = () => {
                        </div>
                      </div>
 
-                     <div className="border border-border rounded-lg p-3">
+                     <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
                        <div className="flex items-center gap-2">
                          <a href="https://paperballad.com/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
                            Paperballad & Co.
