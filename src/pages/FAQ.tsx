@@ -52,7 +52,7 @@ const FAQ = () => {
       <main className="container mx-auto px-4 pt-24 pb-16 py-[60px]">
         <div className="max-w-4xl mx-auto">
           <header className="text-center mb-12">
-            <h1 className="font-display sm:text-4xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight lg:text-4xl text-3xl text-left">Everything about me. Especially for hiring managers, recruiters and potential clients.</h1>
+            <h1 className="font-display sm:text-4xl font-medium mb-4 sm:mb-6 tracking-tight lg:text-4xl text-3xl text-left" style={{lineHeight: '45px'}}>Everything about me. Especially for hiring managers, recruiters and potential clients.</h1>
             
           </header>
 
