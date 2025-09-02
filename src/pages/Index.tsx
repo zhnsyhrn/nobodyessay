@@ -92,7 +92,7 @@ const Index = () => {
               {galleryImages.map((image, index) => <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3">
                   <Dialog>
                     <DialogTrigger asChild>
-                      <div className="aspect-square overflow-hidden rounded-lg cursor-pointer">
+                      <div className="aspect-square overflow-hidden rounded-[10px] cursor-pointer">
                         <img src={image} alt={`Design portfolio work ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
                       </div>
                     </DialogTrigger>
@@ -102,7 +102,7 @@ const Index = () => {
                           <X className="h-4 w-4" />
                           <span className="sr-only">Close</span>
                         </DialogClose>
-                        <img src={image} alt={`Design portfolio work ${index + 1}`} className="w-full h-auto rounded-lg" />
+                        <img src={image} alt={`Design portfolio work ${index + 1}`} className="w-full h-auto rounded-[10px]" />
                       </div>
                     </DialogContent>
                   </Dialog>
