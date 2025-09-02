@@ -14,25 +14,17 @@ import Autoplay from "embla-carousel-autoplay";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 // Portfolio design images - Your latest design portfolio work
-const portfolioImages = ["/lovable-uploads/8522cb15-bd11-4bf2-9180-619939a55e10.png",
-// Dealn mobile app UI
-"/lovable-uploads/53e0e815-137f-432c-b911-7b4e350825c9.png",
-// Verdant Solar marketing design
-"/lovable-uploads/3f6db57e-8fa8-4856-8053-b49d12f800a6.png",
-// PolicyStreet insurance app
-"/lovable-uploads/788b5ed7-7c3b-45d4-9514-30ed5c61b691.png",
-// Banking app interface
-"/lovable-uploads/dae15990-3155-4b7d-b781-466cb9ae3574.png",
-// Health tracking app UI
-"/lovable-uploads/b738fc37-b9ee-4bea-9dca-797cef546f3a.png",
-// Coffee packaging design
-"/lovable-uploads/514634dc-ae1c-4362-8cb4-ebdea96fd21e.png",
-// Corporate website design
-"/lovable-uploads/4982d9b9-bf59-4d92-b1df-f4df6aefa746.png",
-// Financial goal tracking UI
-"/lovable-uploads/a88214a6-39ca-471c-aee2-8eadc8dafa6f.png",
-// Legal firm branding
-"/lovable-uploads/6944a474-3ed4-4943-ac6d-b1d7bcf575ec.png" // Spark mobile app onboarding
+const portfolioImages = [
+  "/lovable-uploads/4f35efbc-ddf9-451c-bf0a-e7c2e5ccceec.png", // Health tracking app UI
+  "/lovable-uploads/ed2d1384-cbe4-4b7a-8d35-9fbad4f3f104.png", // Great Eastern Takaful website
+  "/lovable-uploads/f4697a18-0878-474e-993a-80b25600aa97.png", // Mobile app screens
+  "/lovable-uploads/ebb70966-3d48-4bd8-a0fb-dcb74281f5fb.png", // PolicyStreet mobile app
+  "/lovable-uploads/87011945-cf3d-4d63-8f09-146843fb1e36.png", // Banking/finance app
+  "/lovable-uploads/a4606376-f5cc-4a88-bf08-f8485cba771a.png", // Dealn mobile app
+  "/lovable-uploads/151a6112-1d81-410d-b905-46eb1820545e.png", // Coffee branding/mugs
+  "/lovable-uploads/9fe47bb5-a2b9-40fc-8df4-560e811a56b4.png", // Finance app screens
+  "/lovable-uploads/c4f41984-363c-4bd4-92f4-318ddc3e4368.png", // AQA Group website
+  "/lovable-uploads/b4c83dca-133b-41b0-9c28-44746d3f650f.png"  // Coffee packaging
 ];
 const Index = () => {
   const featuredWritings = getFeaturedEssays();
