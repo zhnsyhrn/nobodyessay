@@ -465,14 +465,14 @@ const ProjectDetail = () => {
                   {Object.entries(project.projectInfo).map(([key, value], index, array) => <div key={key} className={`pb-2 ${index < array.length - 1 ? 'border-b border-border/50' : ''}`}>
                       <div className="flex flex-col sm:flex-row sm:items-start">
                         <div className="w-full sm:w-48 mb-2 sm:mb-0">
-                          <span className="font-mono text-sm text-muted-foreground uppercase tracking-wide">
-                            {key}
-                          </span>
+                           <span className="font-mono text-sm text-muted-foreground uppercase tracking-wide">
+                             {key}
+                           </span>
                         </div>
                         <div className="flex-1">
-                          <p className="font-mono text-foreground text-sm">
-                            {value}
-                          </p>
+                           <p className="font-mono text-foreground text-sm uppercase">
+                             {value}
+                           </p>
                         </div>
                       </div>
                     </div>)}
@@ -708,9 +708,9 @@ const ProjectDetail = () => {
                             <h3 className="font-display text-base font-medium text-black mb-1">
                               {project.title}
                             </h3>
-                            <p className="font-mono text-xs sm:text-[10px] text-gray-700 uppercase">
-                              {project.description}
-                            </p>
+                             <p className="font-mono text-xs sm:text-[10px] text-gray-700 uppercase">
+                               {project.description}
+                             </p>
                           </div>
                           <div className="ml-4">
                             <ArrowRight className="text-gray-600" size={20} />
