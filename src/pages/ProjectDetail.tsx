@@ -134,7 +134,7 @@ const projectsData = {
   "knock-knock-cafe-kuala-terengganu": {
     title: "Knock Knock Cafe",
     websiteUrl: "https://share.google/iyxthFbyCnHGwy5zD",
-    overview: "This is the outcome of a minor branding and design project I worked on for a small local café in Kampung Cina, Kuala Terengganu, located just steps away from the iconic Pasar Payang Central Market. The café already stands out, with 42 reviews and an impressive 4.8-star average rating from happy customers. Full story, read here.",
+    overview: "Minor branding and design project for a local café in Kampung Cina, Kuala Terengganu. It just steps away from Pasar Payang.",
     projectInfo: {
       "Project / Company": "Knock Knock Cafe, Kuala Terengganu, Terengganu, Malaysia",
       "Type": "Art direction, Logo & brand design",
