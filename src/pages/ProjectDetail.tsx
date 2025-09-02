@@ -120,7 +120,7 @@ const projectsData = {
   "moneyx-savings-goals-manual-entry": {
     title: "MoneyX App",
     websiteUrl: "https://moneyx.com.my/",
-    overview: "I worked on this new feature for 2 months together with a Product Manager, Business Analyst, and Lead UX Designer. I had the opportunity to lead the design process and decision of their overall feature experience, setting up design direction, and components creation. This project assigned to me a month after officially joining the team. The goal was to keep users engaged and encourage them to explore other features within the app that are linked to the net worth simulation.",
+    overview: "Led the end-to-end design of a new net worth simulation feature within 2 months, defining design direction and components to boost engagement and cross-feature exploration.",
     projectInfo: {
       "Project / Company": "MoneyX, Hextar Technologies Solutions Berhad",
       "Type": "App UX/UI, Product Design",
