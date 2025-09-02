@@ -36,7 +36,15 @@ const moneyxImages = [
   // Edit Transactions Interface
   "/lovable-uploads/c5bc8a80-0a89-483d-b4b9-caecdf933613.png",
   // Savings Details Screens
-  "/lovable-uploads/7e77fb1b-fb0b-4114-b857-11a456dd2afc.png"
+  "/lovable-uploads/7e77fb1b-fb0b-4114-b857-11a456dd2afc.png",
+  // Categories Selection Screen
+  "/lovable-uploads/31c8da5a-eea9-4b10-9c3f-0355f96c7496.png",
+  // Reminders and Goal Achievement
+  "/lovable-uploads/e65e44a7-f123-4406-8578-ff7f47c1829d.png",
+  // Banking Features & Emergency Fund
+  "/lovable-uploads/386b2649-e0b5-45bc-9d3c-6b1688bc7942.png",
+  // Add/Withdraw Money Transactions
+  "/lovable-uploads/9f5db7d6-5ff9-401e-86fb-66e4f1807c38.png"
 ];
 
 // Knock Knock Cafe project images
