@@ -70,16 +70,6 @@ const Studio = () => {
             description: "UX Audit",
             hasDetails: true
           }, {
-            title: "Aqa Group of Companies",
-            slug: "aqa-group-of-companies",
-            description: "Website redesign",
-            hasDetails: true
-          }, {
-            title: "Verdant Solar",
-            slug: "verdant-solar-my",
-            description: "Social media and ad graphics",
-            hasDetails: true
-          }, {
             title: "Deal Experience Platform (DXP)",
             slug: "deal-experience-platform",
             description: "SaaS tools design",
@@ -90,15 +80,25 @@ const Studio = () => {
             description: "Design Exploration for parking app",
             hasDetails: true
           }, {
-            title: "Referral Program Design",
-            slug: "moneyx-moneyxbiz-referral-program",
-            description: "Insurance marketplace platform",
+            title: "Verdant Solar",
+            slug: "verdant-solar-my",
+            description: "Social media and ad graphics",
+            hasDetails: true
+          }, {
+            title: "Aqa Group of Companies",
+            slug: "aqa-group-of-companies",
+            description: "Website redesign",
             hasDetails: true
           }, {
             title: "Babyborong Commerce",
             slug: "babyborong-commerce",
             description: "B2B Commerce, UI Design",
             hasDetails: false
+          }, {
+            title: "Referral Program Design",
+            slug: "moneyx-moneyxbiz-referral-program",
+            description: "Insurance marketplace platform",
+            hasDetails: true
           }, {
             title: "CH Phoon & Associates",
             slug: "ch-phoon-associates",
@@ -111,12 +111,12 @@ const Studio = () => {
                 "/lovable-uploads/3f82fbbf-f7a3-4418-bc91-7b43dcb140e8.png", // MoneyX App
                 "/lovable-uploads/87b6fb4e-ffa5-46a7-9852-1a38db415cb4.png", // PolicyStreet
                 "/lovable-uploads/69a2f54d-177c-4bcd-9167-0e4939d7b7fb.png", // Great Eastern
-                "/lovable-uploads/6a5cb6e1-03b7-4408-acc9-3a920fc02038.png", // Aqa Group
-                "/lovable-uploads/b4780aa0-32a0-449d-b039-b83cc167691e.png", // Verdant Solar
                 "/lovable-uploads/f83e49dc-cff5-4e61-af7d-10bef4f81e8d.png", // Deal Experience Platform
                 "/lovable-uploads/c439fbb4-3f35-4764-a184-273325e4e840.png", // SPARK
-                "/lovable-uploads/3203ca77-96ca-4347-9e77-4a9c89891bfb.png", // Referral Program
+                "/lovable-uploads/b4780aa0-32a0-449d-b039-b83cc167691e.png", // Verdant Solar
+                "/lovable-uploads/6a5cb6e1-03b7-4408-acc9-3a920fc02038.png", // Aqa Group
                 "/lovable-uploads/a0d51a79-c8e0-48dd-a846-8ee7d9ccec37.png", // Babyborong Commerce
+                "/lovable-uploads/3203ca77-96ca-4347-9e77-4a9c89891bfb.png", // Referral Program
                 "/lovable-uploads/f3563e28-9a23-4146-bb62-ca77d0cd0da9.png"  // CH Phoon & Associates
               ];
               return images[index] || allImages[index % allImages.length];
