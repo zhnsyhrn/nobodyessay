@@ -148,7 +148,7 @@ const projectsData = {
   "policystreet-car-insurance-platform": {
     title: "PolicyStreet - InsurTech",
     websiteUrl: "https://policystreet.com/partners/business-insurance-partnership",
-    overview: "It is a digital platform that allows users to compare and purchase car insurance policies online. The site provides a convenient and hassle-free way for car owners to find the best car insurance policy that suits their needs and budget. I led market research and design initiatives for this web-based project, adopting a mobile-first design approach to ensure accessibility and usability across devices. I collaborated closely with the growth team—including growth marketers and graphic designers—to align user experience with business objectives and deliver a cohesive product.",
+    overview: "Designed a mobile-first car insurance comparison platform, leading market research and UX design while collaborating with the growth team to align user needs with business goals.",
     projectInfo: {
       "Project / Company": "PolicyStreet (InsurTech Company)",
       "Type": "Web Portal, UIUX Design",
