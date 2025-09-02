@@ -37,7 +37,7 @@ const About = () => {
                 </p>
                 
                  {/* Workshops List */}
-                <div className="space-y-3 mb-6">
+                <div className="space-y-3">
                   <div className="font-jakarta text-muted-foreground">
                     <span className="text-foreground font-medium">Canva Design Workshop, Universiti Malaysia Sabah</span> • <span className="font-mono">2022</span>
                   </div>
@@ -49,56 +49,6 @@ const About = () => {
                   <div className="font-jakarta text-muted-foreground">
                     <span className="text-foreground font-medium">University Entrepreneurship Masterclass, StartupMalaysia</span> • <span className="font-mono">2018</span>
                   </div>
-                </div>
-
-                {/* Image Slider */}
-                <div className="mb-6">
-                  <Carousel 
-                    className="w-full relative border border-border overflow-hidden"
-                    style={{ borderRadius: '10px' }}
-                    plugins={[Autoplay({ delay: 3000, stopOnInteraction: true })]}
-                    opts={{ align: "start", loop: true }}
-                  >
-                    <CarouselContent>
-                      <CarouselItem>
-                        <div className="aspect-[4/3] overflow-hidden relative" style={{ borderRadius: '10px' }}>
-                          <img src="/lovable-uploads/cdb5672f-de57-4d19-a313-9bdec559de7b.png" alt="Group photo at university workshop" className="w-full h-full object-cover" />
-                        </div>
-                      </CarouselItem>
-                      <CarouselItem>
-                        <div className="aspect-[4/3] overflow-hidden relative" style={{ borderRadius: '10px' }}>
-                          <img src="/lovable-uploads/a78f735b-9b5e-496f-807c-d89d3bb3fbc1.png" alt="Speaking at entrepreneurship masterclass" className="w-full h-full object-cover" />
-                        </div>
-                      </CarouselItem>
-                      <CarouselItem>
-                        <div className="aspect-[4/3] overflow-hidden relative" style={{ borderRadius: '10px' }}>
-                          <img src="/lovable-uploads/d0b90204-89f8-4b16-9387-912ec4ef8cf9.png" alt="Virtual workshop presentation" className="w-full h-full object-cover" />
-                        </div>
-                      </CarouselItem>
-                      <CarouselItem>
-                        <div className="aspect-[4/3] overflow-hidden relative" style={{ borderRadius: '10px' }}>
-                          <img src="/lovable-uploads/be876eca-c1a0-4e2f-940e-27d0df2042fa.png" alt="Hands-on workshop session" className="w-full h-full object-cover" />
-                        </div>
-                      </CarouselItem>
-                      <CarouselItem>
-                        <div className="aspect-[4/3] overflow-hidden relative" style={{ borderRadius: '10px' }}>
-                          <img src="/lovable-uploads/56d6ab0a-15f4-4d7c-80b5-6e358fb73882.png" alt="Team photo at bootcamp event" className="w-full h-full object-cover" />
-                        </div>
-                      </CarouselItem>
-                      <CarouselItem>
-                        <div className="aspect-[4/3] overflow-hidden relative" style={{ borderRadius: '10px' }}>
-                          <img src="/lovable-uploads/8f343185-b806-43de-b723-33d36c31b526.png" alt="Large group photo at university event" className="w-full h-full object-cover" />
-                        </div>
-                      </CarouselItem>
-                      <CarouselItem>
-                        <div className="aspect-[4/3] overflow-hidden relative" style={{ borderRadius: '10px' }}>
-                          <img src="/lovable-uploads/48722f75-9955-4d59-9183-79b77034c818.png" alt="Presenting at startup event" className="w-full h-full object-cover" />
-                        </div>
-                      </CarouselItem>
-                    </CarouselContent>
-                    <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10" />
-                    <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10" />
-                  </Carousel>
                 </div>
               </div>
 
