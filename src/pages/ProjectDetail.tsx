@@ -337,7 +337,7 @@ const availableProjects = [
     title: "PolicyStreet - InsurTech",
     slug: "policystreet-car-insurance-platform", 
     description: "Insurance marketplace platform",
-    image: "/lovable-uploads/8537072c-4ef3-428b-8003-c4c1877fac8c.png"
+    image: "/lovable-uploads/4e111c7f-e2dd-4b75-b6ed-fa27fdd4835a.png"
   },
   {
     title: "Aqa Group of Companies",
