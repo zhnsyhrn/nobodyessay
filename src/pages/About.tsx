@@ -3,6 +3,7 @@ import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
 import { ExternalLink } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 const About = () => {
   return <div className="min-h-screen bg-background">
       <StickyNavbar />
@@ -52,7 +53,11 @@ const About = () => {
 
                 {/* Image Slider */}
                 <div className="mb-6">
-                  <Carousel className="w-full relative border border-border rounded-lg overflow-hidden">
+                  <Carousel 
+                    className="w-full relative border border-border rounded-lg overflow-hidden"
+                    plugins={[Autoplay({ delay: 3000, stopOnInteraction: true })]}
+                    opts={{ align: "start", loop: true }}
+                  >
                     <CarouselContent>
                       <CarouselItem>
                         <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
