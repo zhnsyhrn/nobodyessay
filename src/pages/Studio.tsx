@@ -89,6 +89,11 @@ const Studio = () => {
             slug: "moneyx-moneyxbiz-referral-program",
             description: "Insurance marketplace platform",
             hasDetails: true
+          }, {
+            title: "Babyborong Commerce",
+            slug: "babyborong-commerce",
+            description: "B2B Commerce, UI Design",
+            hasDetails: false
           }].map((project, index) => {
             const getImageSrc = (index: number) => {
               const images = [
@@ -99,7 +104,8 @@ const Studio = () => {
                 "/lovable-uploads/6a5cb6e1-03b7-4408-acc9-3a920fc02038.png", // Aqa Group
                 "/lovable-uploads/b4780aa0-32a0-449d-b039-b83cc167691e.png", // Verdant Solar
                 "/lovable-uploads/f83e49dc-cff5-4e61-af7d-10bef4f81e8d.png", // Deal Experience Platform
-                "/lovable-uploads/3203ca77-96ca-4347-9e77-4a9c89891bfb.png"  // Referral Program
+                "/lovable-uploads/3203ca77-96ca-4347-9e77-4a9c89891bfb.png", // Referral Program
+                "/lovable-uploads/a0d51a79-c8e0-48dd-a846-8ee7d9ccec37.png"  // Babyborong Commerce
               ];
               return images[index] || allImages[index % allImages.length];
             };
