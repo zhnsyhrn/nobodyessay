@@ -73,10 +73,10 @@ const FAQ = () => {
                 <CardContent>
                   <Accordion type="single" collapsible className="w-full">
                     {careerFAQs.map((faq, index) => <AccordionItem key={index} value={`career-${index}`}>
-                        <AccordionTrigger className="text-left">
+                        <AccordionTrigger className="text-left text-base">
                           {faq.question}
                         </AccordionTrigger>
-                        <AccordionContent className="text-muted-foreground leading-relaxed">
+                        <AccordionContent className="leading-relaxed" style={{color: 'hsl(var(--faq-content))'}}>
                           {faq.answer}
                         </AccordionContent>
                       </AccordionItem>)}
@@ -96,10 +96,10 @@ const FAQ = () => {
                 <CardContent>
                   <Accordion type="single" collapsible className="w-full">
                     {randomFAQs.map((faq, index) => <AccordionItem key={index} value={`random-${index}`}>
-                        <AccordionTrigger className="text-left">
+                        <AccordionTrigger className="text-left text-base">
                           {faq.question}
                         </AccordionTrigger>
-                        <AccordionContent className="text-muted-foreground leading-relaxed">
+                        <AccordionContent className="leading-relaxed" style={{color: 'hsl(var(--faq-content))'}}>
                           {faq.answer}
                         </AccordionContent>
                       </AccordionItem>)}

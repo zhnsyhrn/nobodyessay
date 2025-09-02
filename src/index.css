@@ -26,6 +26,7 @@ All colors MUST be HSL.
 
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 57%; /* #919191 for body text */
+    --faq-content: 0 0% 38%; /* #606060 for FAQ responses */
 
     --accent: 0 0% 4%;
     --accent-foreground: 0 0% 96%;
@@ -82,6 +83,7 @@ All colors MUST be HSL.
 
     --muted: 0 0% 4%;
     --muted-foreground: 0 0% 60%;
+    --faq-content: 0 0% 55%; /* Dark mode FAQ content */
 
     --accent: 0 0% 96%;
     --accent-foreground: 0 0% 4%;
