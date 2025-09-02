@@ -22,6 +22,9 @@ const FAQ = () => {
     answer: "I follow design communities, attend conferences, read design books, and most importantly, I observe how people interact with digital products in real life."
   }];
   const careerFAQs = [{
+    question: "Why I left Borong? The tenure is too short.",
+    answer: "I worked and study full-time for the past 4 years. As you noticed in my CV, I finished a degree last year in 2024.\n\nI left my job because my college changed its class schedule from evening classes to daytime hours, requiring my full commitment during my final semester before graduation. At the same time, applied for the Antler program but unfortunately not passed for the last phase."
+  }, {
     question: "Can you walk me through your design process from research to final product?",
     answer: "<p>My process usually looks like this:</p><ol><li><strong>Understand the problem</strong> – Talking with stakeholders, defining success metrics.</li><li><strong>Research</strong> – Competitive benchmarking.</li><li><strong>Ideation</strong> – Sketching flows, brainstorming with product managers and engineers.</li><li><strong>Prototyping</strong> – Hi-fi prototype in Figma.</li><li><strong>Validation</strong> – Usability testing, stakeholder reviews.</li><li><strong>Handoff & iteration</strong> – Collaborating closely with developers and refining based on feedback.</li></ol>"
   }, {
