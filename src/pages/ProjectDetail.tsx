@@ -68,6 +68,17 @@ const knockKnockBrandingImages = [
 // PolicyStreet project images
 const policyStreetImages = ["/lovable-uploads/a3d87d83-a1e8-426c-9d12-475e9f6f3488.png", "/lovable-uploads/933cdd11-2964-478a-a9f2-09f288821be8.png", "/lovable-uploads/0a9faeb6-72a3-484e-83a5-0aad681f0684.png", "/lovable-uploads/296d95da-ee08-407a-9413-025d7c4bc61d.png", "/lovable-uploads/bbfa2e07-10f8-41ed-91a7-5b3c0cdb3c1c.png"];
 
+// SPARK project images
+const sparkImages = [
+  "/lovable-uploads/b31a3d69-a319-41f8-953e-4ebbe4c110c0.png", // Location permission screen with parking lot aerial view
+  "/lovable-uploads/816e499f-7462-444a-9388-122c69a50862.png", // Dark screen with parking card and Find my car button
+  "/lovable-uploads/2525639b-74e1-4aa0-bffc-4b0fab2d7cfa.png", // Blue background with two phones showing app features
+  "/lovable-uploads/44a586a0-3527-4860-b885-bc5fbdf6c16e.png", // Green background with phone showing navigation
+  "/lovable-uploads/42728c64-72ad-4ef3-866a-8373a1342c5c.png", // Light background with parking spot marking features
+  "/lovable-uploads/718387b0-54c8-4f56-aba1-835c63478a0e.png", // Phone showing active parking session and history
+  "/lovable-uploads/dcf50b70-7cae-4fb9-853e-a388fe394afb.png"  // Green background with three phones showing confirmation
+];
+
 // Referral Program project images
 const referralProgramImages = ["/lovable-uploads/3203ca77-96ca-4347-9e77-4a9c89891bfb.png"];
 
@@ -323,6 +334,20 @@ const projectsData = {
       { src: "/lovable-uploads/e58c7e72-dc68-42b4-ae8f-b9cdf550a518.png", alt: "AQA Group Contact Page Design" },
       { src: "/lovable-uploads/0929a14f-34e4-48ac-be77-7853b55de84f.png", alt: "AQA Group Complete Design System" }
     ]
+  },
+  "spark-parking-app": {
+    title: "SPARK",
+    websiteUrl: "https://example.com/spark",
+    overview: "A comprehensive mobile app design exploration for a smart parking solution that helps users find, navigate to, and manage parking spots with real-time availability and seamless payment integration.",
+    projectInfo: {
+      "Project / Company": "SPARK Parking Solutions",
+      "Type": "Mobile App UX/UI Design, Design Exploration",
+      "Role / Project Ownership": "Lead UX/UI Designer",
+      "Contribution": "User research, wireframing, high-fidelity design, user flow optimization, prototyping",
+      "Project Lead / Product Manager(s)": "Design Team Lead",
+      "Value Added": "Complete user journey design from parking discovery to payment completion",
+      "Credits": "Design exploration project"
+    }
   }
 };
 // Available projects with their Studio page info
@@ -702,6 +727,7 @@ const ProjectDetail = () => {
             {(slug === 'moneyx-savings-goals-manual-entry' ? moneyxImages : 
                slug === 'knock-knock-cafe-kuala-terengganu' ? knockKnockImages : 
                slug === 'policystreet-car-insurance-platform' ? policyStreetImages : 
+               slug === 'spark-parking-app' ? sparkImages :
                slug === 'moneyx-moneyxbiz-referral-program' ? referralProgramImages :
                slug === 'aqa-group-of-companies' ? [
                  "/lovable-uploads/685158de-18a9-4c06-8b43-5214ae7a89a9.png",
