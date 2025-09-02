@@ -98,7 +98,7 @@ const Studio = () => {
                 "/lovable-uploads/69a2f54d-177c-4bcd-9167-0e4939d7b7fb.png", // Great Eastern
                 "/lovable-uploads/6a5cb6e1-03b7-4408-acc9-3a920fc02038.png", // Aqa Group
                 "/lovable-uploads/b4780aa0-32a0-449d-b039-b83cc167691e.png", // Verdant Solar
-                "/lovable-uploads/56229a8c-fdd0-4e96-bf18-1fe4c4b566b2.png", // Deal Experience Platform
+                "/lovable-uploads/f83e49dc-cff5-4e61-af7d-10bef4f81e8d.png", // Deal Experience Platform
                 "/lovable-uploads/3203ca77-96ca-4347-9e77-4a9c89891bfb.png"  // Referral Program
               ];
               return images[index] || allImages[index % allImages.length];
