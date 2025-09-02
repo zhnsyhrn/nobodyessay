@@ -6,20 +6,20 @@ import StickyNavbar from "@/components/StickyNavbar";
 import Footer from "@/components/Footer";
 const FAQ = () => {
   const randomFAQs = [{
-    question: "What's your favorite design tool?",
-    answer: "I'm passionate about Figma for its collaborative features and versatility. I also love experimenting with new tools like Framer for interactive prototypes."
+    question: "Do you like solo travel?",
+    answer: "Yes, I do. There's something exciting about wandering unfamiliar streets on my own. My first solo trip after Covid-19 was to Singapore, and it turned out to be a memorable experience."
   }, {
-    question: "Do you prefer coffee or tea?",
-    answer: "Definitely coffee! I'm a bit of a coffee enthusiast and enjoy trying different brewing methods. It fuels my creative process."
+    question: "What kind of books do you read?",
+    answer: "I enjoy a wide mix, but I'm especially drawn to design, business biographies, and political books. But open to explore other genre."
   }, {
-    question: "What inspires your design work?",
-    answer: "I draw inspiration from everyday interactions, nature, architecture, and human psychology. I believe great design should feel intuitive and delightful."
+    question: "Which hikes have you done?",
+    answer: "I've hiked Gunung Besar Hantu, Gunung Angsi, Bukit Gasing, Bukit Batu Putih, and Sri Bintang Hill. Each has its own unique atmosphere and challenge."
   }, {
-    question: "What's your design philosophy?",
-    answer: "I believe in designing with empathy and purpose. Every design decision should serve the user and solve real problems, while also being aesthetically pleasing."
+    question: "Favorite movies?",
+    answer: "I'm into films that go beyond entertainment. Dune by Denis Villeneuve and Studio Ghibli works are personal favorites, along with indie films like Snow In Midsummer that explore deeper themes."
   }, {
-    question: "How do you stay updated with design trends?",
-    answer: "I follow design communities, attend conferences, read design books, and most importantly, I observe how people interact with digital products in real life."
+    question: "What sports do you play?",
+    answer: "Mostly badminton but I balance it out with hiking trips when I can. I can't play football or futsal. I love cycling and bouldering/wall climbing."
   }];
   const careerFAQs = [{
     question: "Why I left Borong? The tenure is too short.",
