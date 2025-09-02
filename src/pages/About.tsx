@@ -1,68 +1,407 @@
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
-import CallToAction from "@/components/CallToAction";
-
+import { ExternalLink } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 const About = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <StickyNavbar />
-
-      {/* About Content */}
-      <section className="py-20 px-4 sm:px-6 fade-in" style={{ backgroundColor: '#F3F3F3' }}>
-        <div className="max-w-4xl mx-auto">
-          <h1 className="font-jakarta text-4xl font-light mb-12 text-center tracking-tight">
-            About the Writer
-          </h1>
-          
-          <div className="max-w-2xl mx-auto space-y-8">
-            <p className="font-jakarta text-muted-foreground leading-relaxed text-lg">
-              I am nobody in particular, yet somebody in the sense that we all are—
-              a consciousness attempting to make sense of existence through words. 
-              These essays emerge from quiet observation, late-night contemplation, 
-              and the persistent belief that writing can illuminate the overlooked 
-              corners of human experience.
-            </p>
+      
+      <section className="py-12 sm:py-16 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 relative">
+              {/* Vertical divider - only visible on larger screens */}
+              <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-border transform -translate-x-1/2"></div>
             
-            <p className="font-jakarta text-muted-foreground leading-relaxed text-lg">
-              Each piece here represents an attempt to capture something fleeting: 
-              a feeling, an insight, a moment of clarity in the beautiful chaos of being alive. 
-              If these words resonate with you, then perhaps we share something in our solitude.
-            </p>
+            {/* Left Column */}
+            <div className="space-y-8">
+              
+              {/* Summary */}
+              <div>
+                <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
+                  What I Do
+                </h2>
+                <p className="font-jakarta leading-relaxed text-neutral-500 text-sm">
+                  I create digital experiences that bridge the gap between human intuition and technological possibility. Through thoughtful design and strategic thinking, I help brands and individuals tell their stories in the digital landscape.
+                </p>
+              </div>
 
-            <p className="font-jakarta text-muted-foreground leading-relaxed text-lg">
-              Writing, for me, is not about answers but about better questions. It's about 
-              sitting with uncertainty and finding beauty in the unresolved. In a world 
-              that demands constant noise, these essays are an invitation to pause, to 
-              reflect, and to find meaning in the spaces between words.
-            </p>
+              {/* About the Writer */}
+              <div>
+                <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
+                  About the Writer
+                </h2>
+                <p className="font-jakarta text-muted-foreground leading-relaxed mb-4">
+                  A digital strategist and creative thinker who believes in the power of authentic storytelling. I approach every project with curiosity and a commitment to understanding the deeper why behind what we create.
+                </p>
+                <p className="font-jakarta text-muted-foreground leading-relaxed">
+                  When I'm not crafting digital experiences, you'll find me exploring the intersection of technology, philosophy, and human behavior through writing and conversation.
+                </p>
+              </div>
 
-            <p className="font-jakarta text-muted-foreground leading-relaxed text-lg">
-              I write because I must, not because I have something profound to say, 
-              but because the act of writing itself is a form of listening—to the world, 
-              to others, to the quiet voice that speaks only in the early hours of morning 
-              when the rest of the world sleeps.
-            </p>
-          </div>
+              {/* Core Competencies */}
+              <div>
+                <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
+                  Core Competencies & Design Philosophy
+                </h2>
+                <div className="space-y-3">
+                  <div className="font-jakarta text-muted-foreground">
+                    <span className="text-foreground font-medium">Systems-Oriented Thinking:</span> Building cohesive experiences across touchpoints
+                  </div>
+                  <div className="font-jakarta text-muted-foreground">
+                    <span className="text-foreground font-medium">Multi-Platform Design Execution:</span> Designing modules across web, mobile, and admin tools
+                  </div>
+                  <div className="font-jakarta text-muted-foreground">
+                    <span className="text-foreground font-medium">Ownership & Delivery Under Pressure:</span> Driving end-to-end projects under tight deadlines
+                  </div>
+                  <div className="font-jakarta text-muted-foreground">
+                    <span className="text-foreground font-medium">User-Centered Design:</span> Prioritizing empathy and accessibility
+                  </div>
+                </div>
+              </div>
 
-          <div className="text-center mt-12">
-            <Link to="/writings">
-              <Button variant="ghost" className="font-jakarta">
-                Read my writings →
-              </Button>
-            </Link>
+              {/* Engagements */}
+              <div>
+                <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
+                  Engagements
+                </h2>
+                <p className="font-jakarta text-muted-foreground leading-relaxed mb-6">
+                  I occasionally accept invitations to speak at events, workshops & consultations to share things that I care about.
+                </p>
+                
+                 {/* Workshops List */}
+                <div className="space-y-3 mb-6">
+                  <div className="font-jakarta text-muted-foreground">
+                    <span className="text-foreground font-medium">Canva Design Workshop, Universiti Malaysia Sabah</span> • 2022
+                  </div>
+                  <div className="h-px bg-border"></div>
+                  <div className="font-jakarta text-muted-foreground">
+                    <span className="text-foreground font-medium">Createz Bootcamp 3.0, University of Malaya</span> • 2020
+                  </div>
+                  <div className="h-px bg-border"></div>
+                  <div className="font-jakarta text-muted-foreground">
+                    <span className="text-foreground font-medium">University Entrepreneurship Masterclass, StartupMalaysia</span> • 2018
+                  </div>
+                </div>
+
+                {/* Image Slider */}
+                <div className="mb-6">
+                  <Carousel className="w-full max-w-lg mx-auto relative border border-border rounded-lg overflow-hidden">
+                    <CarouselContent>
+                      <CarouselItem>
+                        <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
+                          <img src="/lovable-uploads/cdb5672f-de57-4d19-a313-9bdec559de7b.png" alt="Group photo at university workshop" className="w-full h-full object-cover" />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
+                          <img src="/lovable-uploads/a78f735b-9b5e-496f-807c-d89d3bb3fbc1.png" alt="Speaking at entrepreneurship masterclass" className="w-full h-full object-cover" />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
+                          <img src="/lovable-uploads/d0b90204-89f8-4b16-9387-912ec4ef8cf9.png" alt="Virtual workshop presentation" className="w-full h-full object-cover" />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
+                          <img src="/lovable-uploads/be876eca-c1a0-4e2f-940e-27d0df2042fa.png" alt="Hands-on workshop session" className="w-full h-full object-cover" />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
+                          <img src="/lovable-uploads/56d6ab0a-15f4-4d7c-80b5-6e358fb73882.png" alt="Team photo at bootcamp event" className="w-full h-full object-cover" />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
+                          <img src="/lovable-uploads/8f343185-b806-43de-b723-33d36c31b526.png" alt="Large group photo at university event" className="w-full h-full object-cover" />
+                        </div>
+                      </CarouselItem>
+                      <CarouselItem>
+                        <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
+                          <img src="/lovable-uploads/48722f75-9955-4d59-9183-79b77034c818.png" alt="Presenting at startup event" className="w-full h-full object-cover" />
+                        </div>
+                      </CarouselItem>
+                    </CarouselContent>
+                    <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10" />
+                    <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10" />
+                  </Carousel>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column */}
+            <div className="space-y-8">
+              
+              {/* Work Experience */}
+              <div>
+                <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
+                  Work Experience
+                </h2>
+                <div className="space-y-3">
+                  <div className="border border-border rounded-lg p-3">
+                    <div className="flex items-center justify-between mb-1">
+                      <div className="font-jakarta text-foreground font-medium">
+                        <a href="https://moneyx.com.my/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
+                          MoneyX
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
+                      <span className="font-jakarta text-muted-foreground text-xs">
+                        2024 - 2025
+                      </span>
+                    </div>
+                    <p className="font-jakarta text-muted-foreground text-sm">
+                      FinTech
+                    </p>
+                  </div>
+                  
+                  <div className="border border-border rounded-lg p-3">
+                    <div className="flex items-center justify-between mb-1">
+                      <div className="font-jakarta text-foreground font-medium">
+                        <a href="https://www.borong.com/my" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
+                          Borong (Dropee)
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
+                      <span className="font-jakarta text-muted-foreground text-xs">
+                        2023
+                      </span>
+                    </div>
+                    <p className="font-jakarta text-muted-foreground text-sm">
+                      B2B Commerce
+                    </p>
+                  </div>
+
+                  <div className="border border-border rounded-lg p-3">
+                    <div className="flex items-center justify-between mb-1">
+                      <div className="font-jakarta text-foreground font-medium">
+                        <a href="https://policystreet.com.my/reinsurance" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
+                          PolicyStreet
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
+                      <span className="font-jakarta text-muted-foreground text-xs">
+                        2022 - 2023
+                      </span>
+                    </div>
+                    <p className="font-jakarta text-muted-foreground text-sm">
+                      InsurTech
+                    </p>
+                  </div>
+
+                  <div className="border border-border rounded-lg p-3">
+                    <div className="flex items-center justify-between mb-1">
+                      <div className="font-jakarta text-foreground font-medium">
+                        <a href="https://senangstart.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
+                          Fixcolab Group Sdn Bhd
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
+                      <span className="font-jakarta text-muted-foreground text-xs">
+                        2020 - 2022
+                      </span>
+                    </div>
+                    <p className="font-jakarta text-muted-foreground text-sm">
+                      Software and technology
+                    </p>
+                  </div>
+
+                  <div className="border border-border rounded-lg p-3">
+                    <div className="flex items-center justify-between mb-1">
+                      <div className="font-jakarta text-foreground font-medium">
+                        Senangreka Venture
+                      </div>
+                      <span className="font-jakarta text-muted-foreground text-xs">
+                        2018 - 2020
+                      </span>
+                    </div>
+                    <p className="font-jakarta text-muted-foreground text-sm">
+                      Creative agency
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+                {/* Side Projects */}
+                <div>
+                  <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
+                    Side Projects
+                  </h2>
+                  <div className="space-y-3">
+                    <div className="border border-border rounded-lg p-3">
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="flex items-center gap-2">
+                           <a href="https://dealn.app/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                             Dealn
+                             <ExternalLink size={14} className="text-primary" />
+                           </a>
+                         </div>
+                         <span className="bg-green-500/20 text-green-700 dark:text-green-300 px-2 py-1 rounded text-xs font-jakarta">
+                           Active
+                         </span>
+                       </div>
+                       <p className="font-jakarta text-muted-foreground text-sm">
+                        Deal Experience Platform (DXP)
+                      </p>
+                    </div>
+                    
+                    <div className="border border-border rounded-lg p-3">
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="flex items-center gap-2">
+                           <a href="https://www.instagram.com/nobody.collective/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                             Nobody Collective
+                             <ExternalLink size={14} className="text-primary" />
+                           </a>
+                         </div>
+                         <span className="bg-green-500/20 text-green-700 dark:text-green-300 px-2 py-1 rounded text-xs font-jakarta">
+                           Active
+                         </span>
+                       </div>
+                       <p className="font-jakarta text-muted-foreground text-sm">
+                        Design Education Contents
+                      </p>
+                    </div>
+
+                    <div className="border border-border rounded-lg p-3">
+                      <div className="flex items-center justify-between mb-2">
+                         <span className="font-jakarta text-foreground font-medium opacity-60">
+                           Designloka
+                         </span>
+                         <span className="bg-gray-500/20 text-gray-700 dark:text-gray-300 px-2 py-1 rounded text-xs font-jakarta">
+                           Inactive
+                         </span>
+                       </div>
+                       <p className="font-jakarta text-muted-foreground text-sm opacity-60">
+                        Unlimited Design Subscription
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Design & Client Projects */}
+                <div>
+                  <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
+                    Design & Client Projects
+                  </h2>
+                  <div className="space-y-3">
+                    <div className="border border-border rounded-lg p-3">
+                      <div className="flex items-center gap-2">
+                         <a href="https://grain.com.sg/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                           Grain Singapore
+                           <ExternalLink size={14} className="text-primary" />
+                         </a>
+                       </div>
+                     </div>
+                     
+                     <div className="border border-border rounded-lg p-3">
+                       <div className="flex items-center gap-2">
+                         <a href="https://www.greateasterntakaful.com/en/personal-takaful.html" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                           Great Eastern Takaful Berhad
+                           <ExternalLink size={14} className="text-primary" />
+                         </a>
+                       </div>
+                     </div>
+
+                     <div className="border border-border rounded-lg p-3">
+                       <div className="flex items-center gap-2">
+                         <a href="https://www.mmu.edu.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                           Multimedia University
+                           <ExternalLink size={14} className="text-primary" />
+                         </a>
+                       </div>
+                     </div>
+
+                     <div className="border border-border rounded-lg p-3">
+                       <div className="flex items-center gap-2">
+                         <a href="https://nanomalaysia.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                           NanoMalaysia Berhad
+                           <ExternalLink size={14} className="text-primary" />
+                         </a>
+                       </div>
+                     </div>
+
+                     <div className="border border-border rounded-lg p-3">
+                       <div className="flex items-center gap-2">
+                         <a href="https://verdantsolar.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                           Verdant Solar
+                           <ExternalLink size={14} className="text-primary" />
+                         </a>
+                       </div>
+                     </div>
+
+                     <div className="border border-border rounded-lg p-3">
+                       <div className="flex items-center gap-2">
+                         <a href="https://mytigas.com/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                           MyTigas Alliance
+                           <ExternalLink size={14} className="text-primary" />
+                         </a>
+                       </div>
+                     </div>
+
+                     <div className="border border-border rounded-lg p-3">
+                       <div className="flex items-center gap-2">
+                         <a href="https://moneyx.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                           MoneyX
+                           <ExternalLink size={14} className="text-primary" />
+                         </a>
+                       </div>
+                     </div>
+
+                     <div className="border border-border rounded-lg p-3">
+                       <div className="flex items-center gap-2">
+                         <a href="https://www.moneyxbiz.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                           MoneyX Biz
+                           <ExternalLink size={14} className="text-primary" />
+                         </a>
+                       </div>
+                     </div>
+
+                     <div className="border border-border rounded-lg p-3">
+                       <div className="flex items-center gap-2">
+                         <a href="https://policystreet.com.my/reinsurance" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                           PolicyStreet
+                           <ExternalLink size={14} className="text-primary" />
+                         </a>
+                       </div>
+                     </div>
+
+                     <div className="border border-border rounded-lg p-3">
+                       <div className="flex items-center gap-2">
+                         <a href="https://market.borong.com/my" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                           Borong
+                           <ExternalLink size={14} className="text-primary" />
+                         </a>
+                       </div>
+                     </div>
+
+                     <div className="border border-border rounded-lg p-3">
+                       <div className="flex items-center gap-2">
+                         <a href="https://meca.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                           Meca Consultancy
+                           <ExternalLink size={14} className="text-primary" />
+                         </a>
+                       </div>
+                     </div>
+
+                     <div className="border border-border rounded-lg p-3">
+                       <div className="flex items-center gap-2">
+                         <a href="https://paperballad.com/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                           Paperballad & Co.
+                           <ExternalLink size={14} className="text-primary" />
+                         </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <CallToAction page="about" />
-      
       <Footer />
       <ScrollToTopButton />
-    </div>
-  );
+    </div>;
 };
-
 export default About;

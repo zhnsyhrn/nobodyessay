@@ -9,7 +9,6 @@ import About from "./pages/About";
 import Writings from "./pages/Writings";
 import Studio from "./pages/Studio";
 import Contact from "./pages/Contact";
-import Manifesto from "./pages/Manifesto";
 import Post from "./pages/Post";
 import ProjectDetail from "./pages/ProjectDetail";
 import FAQ from "./pages/FAQ";
@@ -26,12 +25,11 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/about" element={<Manifesto />} />
+          <Route path="/about" element={<About />} />
           <Route path="/writings" element={<Writings />} />
           <Route path="/studio" element={<Studio />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
-          <Route path="/manifesto" element={<Navigate to="/about" replace />} />
           <Route path="/writings/:slug" element={<Post />} />
           <Route path="/projects/:slug" element={<ProjectDetail />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
