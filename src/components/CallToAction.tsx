@@ -21,7 +21,7 @@ const CallToAction = ({ page }: CallToActionProps) => {
   };
 
   return (
-    <section className="py-12 sm:py-16 px-4 sm:px-6 bg-muted/30">
+    <section className="py-12 sm:py-16 px-4 sm:px-6 bg-[#f3f3f3]">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="font-display text-2xl sm:text-3xl font-medium mb-6 sm:mb-8 leading-tight max-w-3xl mx-auto">
           {getTitle()}
