@@ -82,7 +82,7 @@ const FAQ = () => {
                         <AccordionTrigger className="text-left text-base">
                           {faq.question}
                         </AccordionTrigger>
-                        <AccordionContent className="leading-relaxed prose prose-sm max-w-none" style={{color: 'hsl(var(--faq-content))'}}>
+                        <AccordionContent className="leading-relaxed prose max-w-none" style={{color: 'hsl(var(--faq-content))', fontSize: '16px'}}>
                           <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
                         </AccordionContent>
                       </AccordionItem>)}
@@ -105,7 +105,7 @@ const FAQ = () => {
                         <AccordionTrigger className="text-left text-base">
                           {faq.question}
                         </AccordionTrigger>
-                        <AccordionContent className="leading-relaxed prose prose-sm max-w-none" style={{color: 'hsl(var(--faq-content))'}}>
+                        <AccordionContent className="leading-relaxed prose max-w-none" style={{color: 'hsl(var(--faq-content))', fontSize: '16px'}}>
                           <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
                         </AccordionContent>
                       </AccordionItem>)}
