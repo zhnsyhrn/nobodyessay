@@ -137,10 +137,10 @@ const About = () => {
                   Work Experience
                 </h2>
                 <div className="space-y-3">
-                  <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
+                  <div className="border border-border p-3" style={{ borderRadius: '10px', backgroundColor: 'hsl(var(--box-background))' }}>
                     <div className="flex items-center justify-between mb-1">
                       <div className="font-jakarta text-foreground font-medium">
-                        <a href="https://moneyx.com.my/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
+                        <a href="https://moneyx.com.my/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2 underline">
                           MoneyX
                           <ExternalLink size={14} className="text-primary" />
                         </a>
@@ -154,10 +154,10 @@ const About = () => {
                     </p>
                   </div>
                   
-                  <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
+                  <div className="border border-border p-3" style={{ borderRadius: '10px', backgroundColor: 'hsl(var(--box-background))' }}>
                     <div className="flex items-center justify-between mb-1">
                       <div className="font-jakarta text-foreground font-medium">
-                        <a href="https://www.borong.com/my" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
+                        <a href="https://www.borong.com/my" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2 underline">
                           Borong (Dropee)
                           <ExternalLink size={14} className="text-primary" />
                         </a>
@@ -171,10 +171,10 @@ const About = () => {
                     </p>
                   </div>
 
-                  <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
+                  <div className="border border-border p-3" style={{ borderRadius: '10px', backgroundColor: 'hsl(var(--box-background))' }}>
                     <div className="flex items-center justify-between mb-1">
                       <div className="font-jakarta text-foreground font-medium">
-                        <a href="https://policystreet.com.my/reinsurance" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
+                        <a href="https://policystreet.com.my/reinsurance" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2 underline">
                           PolicyStreet
                           <ExternalLink size={14} className="text-primary" />
                         </a>
@@ -188,10 +188,10 @@ const About = () => {
                     </p>
                   </div>
 
-                  <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
+                  <div className="border border-border p-3" style={{ borderRadius: '10px', backgroundColor: 'hsl(var(--box-background))' }}>
                     <div className="flex items-center justify-between mb-1">
                       <div className="font-jakarta text-foreground font-medium">
-                        <a href="https://senangstart.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
+                        <a href="https://senangstart.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2 underline">
                           Fixcolab Group Sdn Bhd
                           <ExternalLink size={14} className="text-primary" />
                         </a>
@@ -205,7 +205,7 @@ const About = () => {
                     </p>
                   </div>
 
-                  <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
+                  <div className="border border-border p-3" style={{ borderRadius: '10px', backgroundColor: 'hsl(var(--box-background))' }}>
                     <div className="flex items-center justify-between mb-1">
                       <div className="font-jakarta text-foreground font-medium">
                         Senangreka Venture
@@ -227,10 +227,10 @@ const About = () => {
                     Side Projects
                   </h2>
                   <div className="space-y-3">
-                    <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
+                    <div className="border border-border p-3" style={{ borderRadius: '10px', backgroundColor: 'hsl(var(--box-background))' }}>
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
-                           <a href="https://dealn.app/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                           <a href="https://dealn.app/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                              Dealn
                              <ExternalLink size={14} className="text-primary" />
                            </a>
@@ -244,10 +244,10 @@ const About = () => {
                       </p>
                     </div>
                     
-                    <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
+                    <div className="border border-border p-3" style={{ borderRadius: '10px', backgroundColor: 'hsl(var(--box-background))' }}>
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
-                           <a href="https://www.instagram.com/nobody.collective/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                           <a href="https://www.instagram.com/nobody.collective/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                              Nobody Collective
                              <ExternalLink size={14} className="text-primary" />
                            </a>
@@ -261,7 +261,7 @@ const About = () => {
                       </p>
                     </div>
 
-                    <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
+                    <div className="border border-border p-3" style={{ borderRadius: '10px', backgroundColor: 'hsl(var(--box-background))' }}>
                       <div className="flex items-center justify-between mb-2">
                          <span className="font-jakarta text-foreground font-medium opacity-60">
                            Designloka
@@ -283,113 +283,113 @@ const About = () => {
                     Design & Client Projects
                   </h2>
                   <div className="space-y-3">
-                    <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
+                    <div className="border border-border p-3" style={{ borderRadius: '10px', backgroundColor: 'hsl(var(--box-background))' }}>
                       <div className="flex items-center gap-2">
-                         <a href="https://grain.com.sg/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                         <a href="https://grain.com.sg/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                            Grain Singapore
                            <ExternalLink size={14} className="text-primary" />
                          </a>
                        </div>
                      </div>
                      
-                     <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
+                     <div className="border border-border p-3" style={{ borderRadius: '10px', backgroundColor: 'hsl(var(--box-background))' }}>
                        <div className="flex items-center gap-2">
-                         <a href="https://www.greateasterntakaful.com/en/personal-takaful.html" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                         <a href="https://www.greateasterntakaful.com/en/personal-takaful.html" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                            Great Eastern Takaful Berhad
                            <ExternalLink size={14} className="text-primary" />
                          </a>
                        </div>
                      </div>
 
-                     <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
+                     <div className="border border-border p-3" style={{ borderRadius: '10px', backgroundColor: 'hsl(var(--box-background))' }}>
                        <div className="flex items-center gap-2">
-                         <a href="https://www.mmu.edu.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
+                         <a href="https://www.mmu.edu.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                            Multimedia University
                            <ExternalLink size={14} className="text-primary" />
                          </a>
                        </div>
                      </div>
 
-                     <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
-                       <div className="flex items-center gap-2">
-                         <a href="https://nanomalaysia.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
-                           NanoMalaysia Berhad
-                           <ExternalLink size={14} className="text-primary" />
-                         </a>
-                       </div>
-                     </div>
-
-                     <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
-                       <div className="flex items-center gap-2">
-                         <a href="https://verdantsolar.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
-                           Verdant Solar
-                           <ExternalLink size={14} className="text-primary" />
-                         </a>
-                       </div>
-                     </div>
-
-                     <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
-                       <div className="flex items-center gap-2">
-                         <a href="https://mytigas.com/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
-                           MyTigas Alliance
-                           <ExternalLink size={14} className="text-primary" />
-                         </a>
-                       </div>
-                     </div>
-
-                     <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
-                       <div className="flex items-center gap-2">
-                         <a href="https://moneyx.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
-                           MoneyX
-                           <ExternalLink size={14} className="text-primary" />
-                         </a>
-                       </div>
-                     </div>
-
-                     <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
-                       <div className="flex items-center gap-2">
-                         <a href="https://www.moneyxbiz.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
-                           MoneyX Biz
-                           <ExternalLink size={14} className="text-primary" />
-                         </a>
-                       </div>
-                     </div>
-
-                     <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
-                       <div className="flex items-center gap-2">
-                         <a href="https://policystreet.com.my/reinsurance" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
-                           PolicyStreet
-                           <ExternalLink size={14} className="text-primary" />
-                         </a>
-                       </div>
-                     </div>
-
-                     <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
-                       <div className="flex items-center gap-2">
-                         <a href="https://market.borong.com/my" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
-                           Borong
-                           <ExternalLink size={14} className="text-primary" />
-                         </a>
-                       </div>
-                     </div>
-
-                     <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
-                       <div className="flex items-center gap-2">
-                         <a href="https://meca.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
-                           Meca Consultancy
-                           <ExternalLink size={14} className="text-primary" />
-                         </a>
-                       </div>
-                     </div>
-
-                     <div className="border border-border p-3" style={{ borderRadius: '10px' }}>
-                       <div className="flex items-center gap-2">
-                         <a href="https://paperballad.com/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2">
-                           Paperballad & Co.
-                           <ExternalLink size={14} className="text-primary" />
-                         </a>
+                      <div className="border border-border p-3" style={{ borderRadius: '10px', backgroundColor: 'hsl(var(--box-background))' }}>
+                        <div className="flex items-center gap-2">
+                          <a href="https://nanomalaysia.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
+                            NanoMalaysia Berhad
+                            <ExternalLink size={14} className="text-primary" />
+                          </a>
+                        </div>
                       </div>
-                    </div>
+
+                      <div className="border border-border p-3" style={{ borderRadius: '10px', backgroundColor: 'hsl(var(--box-background))' }}>
+                        <div className="flex items-center gap-2">
+                          <a href="https://verdantsolar.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
+                            Verdant Solar
+                            <ExternalLink size={14} className="text-primary" />
+                          </a>
+                        </div>
+                      </div>
+
+                      <div className="border border-border p-3" style={{ borderRadius: '10px', backgroundColor: 'hsl(var(--box-background))' }}>
+                        <div className="flex items-center gap-2">
+                          <a href="https://mytigas.com/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
+                            MyTigas Alliance
+                            <ExternalLink size={14} className="text-primary" />
+                          </a>
+                        </div>
+                      </div>
+
+                      <div className="border border-border p-3" style={{ borderRadius: '10px', backgroundColor: 'hsl(var(--box-background))' }}>
+                        <div className="flex items-center gap-2">
+                          <a href="https://moneyx.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
+                            MoneyX
+                            <ExternalLink size={14} className="text-primary" />
+                          </a>
+                        </div>
+                      </div>
+
+                      <div className="border border-border p-3" style={{ borderRadius: '10px', backgroundColor: 'hsl(var(--box-background))' }}>
+                        <div className="flex items-center gap-2">
+                          <a href="https://www.moneyxbiz.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
+                            MoneyX Biz
+                            <ExternalLink size={14} className="text-primary" />
+                          </a>
+                        </div>
+                      </div>
+
+                      <div className="border border-border p-3" style={{ borderRadius: '10px', backgroundColor: 'hsl(var(--box-background))' }}>
+                        <div className="flex items-center gap-2">
+                          <a href="https://policystreet.com.my/reinsurance" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
+                            PolicyStreet
+                            <ExternalLink size={14} className="text-primary" />
+                          </a>
+                        </div>
+                      </div>
+
+                      <div className="border border-border p-3" style={{ borderRadius: '10px', backgroundColor: 'hsl(var(--box-background))' }}>
+                        <div className="flex items-center gap-2">
+                          <a href="https://market.borong.com/my" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
+                            Borong
+                            <ExternalLink size={14} className="text-primary" />
+                          </a>
+                        </div>
+                      </div>
+
+                      <div className="border border-border p-3" style={{ borderRadius: '10px', backgroundColor: 'hsl(var(--box-background))' }}>
+                        <div className="flex items-center gap-2">
+                          <a href="https://meca.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
+                            Meca Consultancy
+                            <ExternalLink size={14} className="text-primary" />
+                          </a>
+                        </div>
+                      </div>
+
+                      <div className="border border-border p-3" style={{ borderRadius: '10px', backgroundColor: 'hsl(var(--box-background))' }}>
+                        <div className="flex items-center gap-2">
+                          <a href="https://paperballad.com/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
+                            Paperballad & Co.
+                            <ExternalLink size={14} className="text-primary" />
+                          </a>
+                       </div>
+                     </div>
                   </div>
                 </div>
             </div>
