@@ -8,6 +8,27 @@ import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
 import DOMPurify from "dompurify";
 
+// Function to parse inline formatting (bold, italic, underline, links)
+const parseInlineFormatting = (text: string): string => {
+  let formatted = text;
+  
+  // Links [text](url)
+  formatted = formatted.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">$1</a>');
+  
+  // Bold **text** or __text__
+  formatted = formatted.replace(/\*\*([^*]+)\*\*/g, '<strong class="font-semibold">$1</strong>');
+  formatted = formatted.replace(/__([^_]+)__/g, '<strong class="font-semibold">$1</strong>');
+  
+  // Italic *text* or _text_ (but not if surrounded by __)
+  formatted = formatted.replace(/(?<!_)\*([^*]+)\*(?!\*)/g, '<em class="italic">$1</em>');
+  formatted = formatted.replace(/(?<!_)_([^_]+)_(?!_)/g, '<em class="italic">$1</em>');
+  
+  // Underline ~~text~~
+  formatted = formatted.replace(/~~([^~]+)~~/g, '<u class="underline">$1</u>');
+  
+  return formatted;
+};
+
 // Rich text content parser
 const parseRichContent = (content: string) => {
   return content
@@ -18,14 +39,24 @@ const parseRichContent = (content: string) => {
       // Empty paragraphs
       if (!trimmed) return '';
       
-      // Headers
+      // Different heading levels
+      if (trimmed.startsWith('### ')) {
+        const text = parseInlineFormatting(trimmed.slice(4));
+        return `<h3 class="font-display text-lg sm:text-xl font-medium mt-6 sm:mt-8 mb-3 sm:mb-4 text-foreground">${DOMPurify.sanitize(text)}</h3>`;
+      }
       if (trimmed.startsWith('## ')) {
-        return `<h2 class="font-display text-xl sm:text-2xl font-medium mt-8 sm:mt-12 mb-4 sm:mb-6 text-foreground">${DOMPurify.sanitize(trimmed.slice(3))}</h2>`;
+        const text = parseInlineFormatting(trimmed.slice(3));
+        return `<h2 class="font-display text-xl sm:text-2xl font-medium mt-8 sm:mt-12 mb-4 sm:mb-6 text-foreground">${DOMPurify.sanitize(text)}</h2>`;
+      }
+      if (trimmed.startsWith('# ')) {
+        const text = parseInlineFormatting(trimmed.slice(2));
+        return `<h1 class="font-display text-2xl sm:text-3xl font-medium mt-8 sm:mt-12 mb-6 sm:mb-8 text-foreground">${DOMPurify.sanitize(text)}</h1>`;
       }
       
       // Quote blocks
       if (trimmed.startsWith('> ')) {
-        return `<blockquote class="border-l-4 border-primary pl-4 sm:pl-6 my-6 sm:my-8 italic text-sm sm:text-base font-jakarta" style="color: #606060">${DOMPurify.sanitize(trimmed.slice(2))}</blockquote>`;
+        const text = parseInlineFormatting(trimmed.slice(2));
+        return `<blockquote class="border-l-4 border-primary pl-4 sm:pl-6 my-6 sm:my-8 italic text-sm sm:text-base font-jakarta" style="color: #606060">${DOMPurify.sanitize(text)}</blockquote>`;
       }
       
       // Images
@@ -39,7 +70,10 @@ const parseRichContent = (content: string) => {
       // Unordered lists
       if (trimmed.includes('\n- ')) {
         const items = trimmed.split('\n- ').filter(item => item.trim());
-        const listItems = items.map(item => `<li class="mb-2">${DOMPurify.sanitize(item.startsWith('- ') ? item.slice(2) : item)}</li>`).join('');
+        const listItems = items.map(item => {
+          const itemText = item.startsWith('- ') ? item.slice(2) : item;
+          return `<li class="mb-2">${DOMPurify.sanitize(parseInlineFormatting(itemText))}</li>`;
+        }).join('');
         return `<ul class="list-disc list-inside my-4 sm:my-6 space-y-2 text-sm sm:text-base font-jakarta" style="color: #606060">${listItems}</ul>`;
       }
       
@@ -48,13 +82,17 @@ const parseRichContent = (content: string) => {
         const lines = trimmed.split('\n');
         const listItems = lines
           .filter(line => line.match(/^\d+\./))
-          .map(line => `<li class="mb-2">${DOMPurify.sanitize(line.replace(/^\d+\.\s*/, ''))}</li>`)
+          .map(line => {
+            const itemText = line.replace(/^\d+\.\s*/, '');
+            return `<li class="mb-2">${DOMPurify.sanitize(parseInlineFormatting(itemText))}</li>`;
+          })
           .join('');
         return `<ol class="list-decimal list-inside my-4 sm:my-6 space-y-2 text-sm sm:text-base font-jakarta" style="color: #606060">${listItems}</ol>`;
       }
       
-      // Regular paragraphs
-      return `<p class="mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base font-jakarta" style="color: #606060">${DOMPurify.sanitize(trimmed)}</p>`;
+      // Regular paragraphs with inline formatting
+      const formattedText = parseInlineFormatting(trimmed);
+      return `<p class="mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base font-jakarta" style="color: #606060">${DOMPurify.sanitize(formattedText)}</p>`;
     })
     .join('');
 };
