@@ -49,34 +49,34 @@ const FAQ = () => {
   return <div className="min-h-screen bg-background font-jakarta">
       <StickyNavbar />
       
-      <main className="container mx-auto px-4 pt-24 pb-16 py-[60px]">
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 pb-12 sm:pb-16">
         <div className="max-w-4xl mx-auto">
-          <header className="text-center mb-12">
-            <h1 className="font-display sm:text-4xl font-medium mb-4 sm:mb-6 tracking-tight lg:text-4xl text-3xl text-left" style={{lineHeight: '45px'}}>Everything about me. Especially for hiring managers, recruiters and potential clients.</h1>
+          <header className="mb-8 sm:mb-12">
+            <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium mb-4 sm:mb-6 tracking-tight text-left leading-tight sm:leading-normal">Everything about me. Especially for hiring managers, recruiters and potential clients.</h1>
             
           </header>
 
           <Tabs defaultValue="career" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 mb-8 font-mono">
-              <TabsTrigger value="career" className="uppercase">Career</TabsTrigger>
-              <TabsTrigger value="random" className="uppercase">Random</TabsTrigger>
+            <TabsList className="grid w-full grid-cols-2 mb-6 sm:mb-8 font-mono h-12 sm:h-10">
+              <TabsTrigger value="career" className="uppercase text-sm sm:text-base px-3 sm:px-4 py-3 sm:py-2">Career</TabsTrigger>
+              <TabsTrigger value="random" className="uppercase text-sm sm:text-base px-3 sm:px-4 py-3 sm:py-2">Random</TabsTrigger>
             </TabsList>
             
-            <TabsContent value="career">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-2xl">Career & Work</CardTitle>
-                  <CardDescription>
+            <TabsContent value="career" className="mt-0">
+              <Card className="border-0 sm:border shadow-none sm:shadow-sm">
+                <CardHeader className="px-4 sm:px-6 py-4 sm:py-6">
+                  <CardTitle className="text-xl sm:text-2xl">Career & Work</CardTitle>
+                  <CardDescription className="text-sm sm:text-base mt-1 sm:mt-2">
                     Professional questions about my work, process, and availability
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <Accordion type="single" collapsible className="w-full">
-                    {careerFAQs.map((faq, index) => <AccordionItem key={index} value={`career-${index}`}>
-                        <AccordionTrigger className="text-left text-base">
-                          {faq.question}
+                <CardContent className="px-4 sm:px-6 pb-4 sm:pb-6">
+                  <Accordion type="single" collapsible className="w-full space-y-2 sm:space-y-0">
+                    {careerFAQs.map((faq, index) => <AccordionItem key={index} value={`career-${index}`} className="border-b border-border/50 last:border-b-0 py-2 sm:py-0">
+                        <AccordionTrigger className="text-left text-base sm:text-base font-medium py-4 sm:py-4 px-0 hover:no-underline [&[data-state=open]>svg]:rotate-180 transition-all">
+                          <span className="pr-4">{faq.question}</span>
                         </AccordionTrigger>
-                        <AccordionContent className="leading-relaxed prose prose-sm max-w-none" style={{color: 'hsl(var(--faq-content))'}}>
+                        <AccordionContent className="leading-relaxed prose prose-sm sm:prose-base max-w-none pb-4 sm:pb-6 pt-2 text-sm sm:text-base" style={{color: 'hsl(var(--faq-content))'}}>
                           <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
                         </AccordionContent>
                       </AccordionItem>)}
@@ -85,21 +85,21 @@ const FAQ = () => {
               </Card>
             </TabsContent>
             
-            <TabsContent value="random">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-2xl">Random & Personal</CardTitle>
-                  <CardDescription>
+            <TabsContent value="random" className="mt-0">
+              <Card className="border-0 sm:border shadow-none sm:shadow-sm">
+                <CardHeader className="px-4 sm:px-6 py-4 sm:py-6">
+                  <CardTitle className="text-xl sm:text-2xl">Random & Personal</CardTitle>
+                  <CardDescription className="text-sm sm:text-base mt-1 sm:mt-2">
                     Fun questions to get to know me better as a person
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <Accordion type="single" collapsible className="w-full">
-                    {randomFAQs.map((faq, index) => <AccordionItem key={index} value={`random-${index}`}>
-                        <AccordionTrigger className="text-left text-base">
-                          {faq.question}
+                <CardContent className="px-4 sm:px-6 pb-4 sm:pb-6">
+                  <Accordion type="single" collapsible className="w-full space-y-2 sm:space-y-0">
+                    {randomFAQs.map((faq, index) => <AccordionItem key={index} value={`random-${index}`} className="border-b border-border/50 last:border-b-0 py-2 sm:py-0">
+                        <AccordionTrigger className="text-left text-base sm:text-base font-medium py-4 sm:py-4 px-0 hover:no-underline [&[data-state=open]>svg]:rotate-180 transition-all">
+                          <span className="pr-4">{faq.question}</span>
                         </AccordionTrigger>
-                        <AccordionContent className="leading-relaxed prose prose-sm max-w-none" style={{color: 'hsl(var(--faq-content))'}}>
+                        <AccordionContent className="leading-relaxed prose prose-sm sm:prose-base max-w-none pb-4 sm:pb-6 pt-2 text-sm sm:text-base" style={{color: 'hsl(var(--faq-content))'}}>
                           <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
                         </AccordionContent>
                       </AccordionItem>)}
