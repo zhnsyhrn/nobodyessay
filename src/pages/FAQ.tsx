@@ -72,7 +72,7 @@ const FAQ = () => {
               <Card>
                 <CardHeader>
                   <CardTitle className="text-2xl">Career & Work</CardTitle>
-                  <CardDescription>
+                  <CardDescription style={{color: 'hsl(var(--faq-content))', fontSize: '16px'}}>
                     Professional questions about my work, process, and availability
                   </CardDescription>
                 </CardHeader>
@@ -95,7 +95,7 @@ const FAQ = () => {
               <Card>
                 <CardHeader>
                   <CardTitle className="text-2xl">Random & Personal</CardTitle>
-                  <CardDescription>
+                  <CardDescription style={{color: 'hsl(var(--faq-content))', fontSize: '16px'}}>
                     Fun questions to get to know me better as a person
                   </CardDescription>
                 </CardHeader>
