@@ -105,7 +105,7 @@ const About = () => {
                   <div className="font-jakarta text-muted-foreground text-base">
                     <span className="text-foreground font-medium">Systems-Oriented Thinking:</span> Building cohesive experiences across touchpoints
                   </div>
-                  <div className="font-jakarta text-muted-foreground">
+                  <div className="font-jakarta text-muted-foreground text-base">
                     <span className="text-foreground font-medium">Multi-Platform Design Execution:</span> Designing modules across web, mobile, and admin tools
                   </div>
                   <div className="font-jakarta text-muted-foreground">
