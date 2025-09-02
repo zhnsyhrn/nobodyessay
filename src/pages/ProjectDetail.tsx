@@ -40,7 +40,7 @@ const moneyxImages = ["/lovable-uploads/7818744d-3050-4496-824e-8c4c7a8b1a4e.png
 ];
 
 // Knock Knock Cafe project images
-const knockKnockImages = ["/lovable-uploads/727cdb13-e96f-4680-8771-62fb1f9b98ef.png" // Coffee packaging design
+const knockKnockImages = ["/lovable-uploads/2ec90d04-32fe-40d7-ad32-37985537079c.png" // Cafe storefront
 ];
 
 // PolicyStreet project images
@@ -324,7 +324,7 @@ const availableProjects = [
     title: "Knock Knock Cafe",
     slug: "knock-knock-cafe-kuala-terengganu",
     description: "Art direction & brand design",
-    image: "/lovable-uploads/727cdb13-e96f-4680-8771-62fb1f9b98ef.png"
+    image: "/lovable-uploads/2ec90d04-32fe-40d7-ad32-37985537079c.png"
   },
   {
     title: "Verdant Solar",
