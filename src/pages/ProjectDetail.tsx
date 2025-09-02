@@ -726,7 +726,7 @@ const ProjectDetail = () => {
                     to={`/projects/${project.slug}`}
                     className="cursor-pointer block"
                   >
-                    <div className="rounded-[10px] overflow-hidden bg-white border border-border">
+                    <div className="rounded-[10px] overflow-hidden bg-white">
                       <div className="aspect-video overflow-hidden bg-muted">
                         <img 
                           src={project.image} 
