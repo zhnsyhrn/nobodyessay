@@ -23,7 +23,7 @@ const FAQ = () => {
   }];
   const careerFAQs = [{
     question: "Can you walk me through your design process from research to final product?",
-    answer: "My process usually looks like this:\n\n1. **Understand the problem** – Talking with stakeholders, defining success metrics.\n2. **Research** – Competitive benchmarking.\n3. **Ideation** – Sketching flows, brainstorming with product managers and engineers.\n4. **Prototyping** – Hi-fi prototype in Figma.\n5. **Validation** – Usability testing, stakeholder reviews.\n6. **Handoff & iteration** – Collaborating closely with developers and refining based on feedback."
+    answer: "<p>My process usually looks like this:</p><ol><li><strong>Understand the problem</strong> – Talking with stakeholders, defining success metrics.</li><li><strong>Research</strong> – Competitive benchmarking.</li><li><strong>Ideation</strong> – Sketching flows, brainstorming with product managers and engineers.</li><li><strong>Prototyping</strong> – Hi-fi prototype in Figma.</li><li><strong>Validation</strong> – Usability testing, stakeholder reviews.</li><li><strong>Handoff & iteration</strong> – Collaborating closely with developers and refining based on feedback.</li></ol>"
   }, {
     question: "Describe a design challenge you faced and how you solved it.",
     answer: "Once, two stakeholder groups had conflicting needs: one wanted a feature-heavy dashboard, while the other wanted simplicity. I facilitated a workshop to prioritize features based on impact vs effort, and we agreed to phase the rollout. This not only balanced both perspectives but also gave users a smoother experience over time."
@@ -76,8 +76,8 @@ const FAQ = () => {
                         <AccordionTrigger className="text-left text-base">
                           {faq.question}
                         </AccordionTrigger>
-                        <AccordionContent className="leading-relaxed" style={{color: 'hsl(var(--faq-content))'}}>
-                          {faq.answer}
+                        <AccordionContent className="leading-relaxed prose prose-sm max-w-none" style={{color: 'hsl(var(--faq-content))'}}>
+                          <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
                         </AccordionContent>
                       </AccordionItem>)}
                   </Accordion>
@@ -99,8 +99,8 @@ const FAQ = () => {
                         <AccordionTrigger className="text-left text-base">
                           {faq.question}
                         </AccordionTrigger>
-                        <AccordionContent className="leading-relaxed" style={{color: 'hsl(var(--faq-content))'}}>
-                          {faq.answer}
+                        <AccordionContent className="leading-relaxed prose prose-sm max-w-none" style={{color: 'hsl(var(--faq-content))'}}>
+                          <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
                         </AccordionContent>
                       </AccordionItem>)}
                   </Accordion>
