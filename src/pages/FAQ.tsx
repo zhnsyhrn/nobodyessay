@@ -49,10 +49,13 @@ const FAQ = () => {
   return <div className="min-h-screen bg-background font-jakarta">
       <StickyNavbar />
       
-      <main className="container mx-auto px-4 pt-24 pb-16 py-[60px]">
+      <main className="container mx-auto px-4 pt-16 sm:pt-24 pb-16 py-[60px]">
         <div className="max-w-4xl mx-auto">
           <header className="text-center mb-12">
-            <h1 className="font-display sm:text-4xl font-medium mb-4 sm:mb-6 tracking-tight lg:text-4xl text-3xl text-left" style={{lineHeight: '45px'}}>Everything about me. Especially for hiring managers, recruiters and potential clients.</h1>
+            <h1 className="font-display sm:text-4xl font-medium mb-4 sm:mb-6 tracking-tight lg:text-4xl text-3xl text-left" style={{lineHeight: '38px'}} data-mobile-line-height="38px" data-desktop-line-height="45px">
+              <span className="sm:hidden" style={{lineHeight: '38px'}}>Everything about me. Especially for hiring managers, recruiters and potential clients.</span>
+              <span className="hidden sm:inline" style={{lineHeight: '45px'}}>Everything about me. Especially for hiring managers, recruiters and potential clients.</span>
+            </h1>
             
           </header>
 
