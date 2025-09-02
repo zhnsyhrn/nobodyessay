@@ -102,7 +102,7 @@ const About = () => {
                   Core Competencies & Design Philosophy
                 </h2>
                 <div className="space-y-3">
-                  <div className="font-jakarta text-muted-foreground">
+                  <div className="font-jakarta text-muted-foreground text-base">
                     <span className="text-foreground font-medium">Systems-Oriented Thinking:</span> Building cohesive experiences across touchpoints
                   </div>
                   <div className="font-jakarta text-muted-foreground">
