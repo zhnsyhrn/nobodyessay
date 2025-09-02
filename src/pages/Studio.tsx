@@ -55,14 +55,14 @@ const Studio = () => {
             description: "Art direction & brand design",
             hasDetails: true
           }, {
-            title: "PolicyStreet - InsurTech",
-            slug: "policystreet-car-insurance-platform",
-            description: "Insurance marketplace platform",
-            hasDetails: true
-          }, {
             title: "MoneyX App - Fintech",
             slug: "moneyx-savings-goals-manual-entry",
             description: "App feature UIUX design",
+            hasDetails: true
+          }, {
+            title: "PolicyStreet - InsurTech",
+            slug: "policystreet-car-insurance-platform",
+            description: "Insurance marketplace platform",
             hasDetails: true
           }, {
             title: "Great Eastern Takaful Malaysia",
@@ -93,8 +93,8 @@ const Studio = () => {
             const getImageSrc = (index: number) => {
               const images = [
                 "/lovable-uploads/2ec90d04-32fe-40d7-ad32-37985537079c.png", // Knock Knock Cafe
-                "/lovable-uploads/8537072c-4ef3-428b-8003-c4c1877fac8c.png", // PolicyStreet
                 "/lovable-uploads/3f82fbbf-f7a3-4418-bc91-7b43dcb140e8.png", // MoneyX App
+                "/lovable-uploads/8537072c-4ef3-428b-8003-c4c1877fac8c.png", // PolicyStreet
                 "/lovable-uploads/69a2f54d-177c-4bcd-9167-0e4939d7b7fb.png", // Great Eastern
                 "/lovable-uploads/6a5cb6e1-03b7-4408-acc9-3a920fc02038.png", // Aqa Group
                 "/lovable-uploads/b4780aa0-32a0-449d-b039-b83cc167691e.png", // Verdant Solar
