@@ -677,8 +677,8 @@ const ProjectDetail = () => {
           </div> : slug === 'knock-knock-cafe-kuala-terengganu' ?
       // Knock Knock Cafe layout with portrait image first, then branding grid
       <div className="space-y-8">
-            {/* Portrait image */}
-            <div className="max-w-4xl mx-auto">
+            {/* Portrait image - full width */}
+            <div className="w-full">
               <div className="aspect-video overflow-hidden rounded-[10px] bg-muted">
                 <img src={knockKnockImages[0]} alt="Knock Knock Cafe Storefront" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
               </div>
