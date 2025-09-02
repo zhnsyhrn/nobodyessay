@@ -105,12 +105,15 @@ const About = () => {
                   <div className="font-jakarta text-muted-foreground text-base">
                     <span className="text-foreground font-medium">Systems-Oriented Thinking:</span> Building cohesive experiences across touchpoints
                   </div>
+                  <div className="h-px bg-border"></div>
                   <div className="font-jakarta text-muted-foreground text-base">
                     <span className="text-foreground font-medium">Multi-Platform Design Execution:</span> Designing modules across web, mobile, and admin tools
                   </div>
+                  <div className="h-px bg-border"></div>
                   <div className="font-jakarta text-muted-foreground text-base">
                     <span className="text-foreground font-medium">Ownership & Delivery Under Pressure:</span> Driving end-to-end projects under tight deadlines
                   </div>
+                  <div className="h-px bg-border"></div>
                   <div className="font-jakarta text-muted-foreground text-base">
                     <span className="text-foreground font-medium">User-Centered Design:</span> Prioritizing empathy and accessibility
                   </div>
