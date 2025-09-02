@@ -94,6 +94,11 @@ const Studio = () => {
             slug: "babyborong-commerce",
             description: "B2B Commerce, UI Design",
             hasDetails: false
+          }, {
+            title: "CH Phoon & Associates",
+            slug: "ch-phoon-associates",
+            description: "Law firm logo redesign",
+            hasDetails: false
           }].map((project, index) => {
             const getImageSrc = (index: number) => {
               const images = [
@@ -105,7 +110,8 @@ const Studio = () => {
                 "/lovable-uploads/b4780aa0-32a0-449d-b039-b83cc167691e.png", // Verdant Solar
                 "/lovable-uploads/f83e49dc-cff5-4e61-af7d-10bef4f81e8d.png", // Deal Experience Platform
                 "/lovable-uploads/3203ca77-96ca-4347-9e77-4a9c89891bfb.png", // Referral Program
-                "/lovable-uploads/a0d51a79-c8e0-48dd-a846-8ee7d9ccec37.png"  // Babyborong Commerce
+                "/lovable-uploads/a0d51a79-c8e0-48dd-a846-8ee7d9ccec37.png", // Babyborong Commerce
+                "/lovable-uploads/f3563e28-9a23-4146-bb62-ca77d0cd0da9.png"  // CH Phoon & Associates
               ];
               return images[index] || allImages[index % allImages.length];
             };
