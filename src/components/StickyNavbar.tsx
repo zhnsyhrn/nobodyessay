@@ -30,7 +30,6 @@ const StickyNavbar = () => {
   };
   const isActiveRoute = (path: string) => {
     if (path === '/about' && (location.pathname === '/about' || location.pathname === '/manifesto')) return true;
-    if (path === '/consultation' && location.pathname === '/consultation') return true;
     if (path === '/writings' && location.pathname.startsWith('/writings')) return true;
     if (path === '/studio' && location.pathname === '/studio') return true;
     if (path === '/faq' && location.pathname === '/faq') return true;
@@ -52,7 +51,6 @@ const StickyNavbar = () => {
             </Link>
             <Link to="/studio" className={`font-display text-sm transition-colors py-2 ${isActiveRoute('/studio') ? 'text-foreground font-medium' : 'hover:text-muted-foreground'}`}>Projects</Link>
             <Link to="/about" className={`font-display text-sm transition-colors py-2 ${isActiveRoute('/about') ? 'text-foreground font-medium' : 'hover:text-muted-foreground'}`}>About</Link>
-            <Link to="/consultation" className={`font-display text-sm transition-colors py-2 ${isActiveRoute('/consultation') ? 'text-foreground font-medium' : 'hover:text-muted-foreground'}`}>Consultation</Link>
             <Link to="/faq" className={`font-display text-sm transition-colors py-2 ${isActiveRoute('/faq') ? 'text-foreground font-medium' : 'hover:text-muted-foreground'}`}>FAQ</Link>
             <Link to="/contact" className={`font-display text-sm transition-colors py-2 ${isActiveRoute('/contact') ? 'text-foreground font-medium' : 'hover:text-muted-foreground'}`}>
               Contact
@@ -107,12 +105,6 @@ const StickyNavbar = () => {
                 
                 <Link to="/about" onClick={closeMenu} className={`font-display text-3xl transition-colors py-8 text-center flex items-center justify-center text-black hover:text-gray-600 ${isActiveRoute('/about') ? 'font-medium' : ''}`}>
                   About
-                </Link>
-                
-                <Separator className="bg-gray-200" />
-                
-                <Link to="/consultation" onClick={closeMenu} className={`font-display text-3xl transition-colors py-8 text-center flex items-center justify-center text-black hover:text-gray-600 ${isActiveRoute('/consultation') ? 'font-medium' : ''}`}>
-                  Consultation
                 </Link>
                 
                 <Separator className="bg-gray-200" />
