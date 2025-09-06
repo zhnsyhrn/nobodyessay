@@ -15,7 +15,7 @@ const About = () => {
           fontSize: '36px',
           lineHeight: '46px'
         }}>
-            <span className="sm:text-4xl md:text-5xl lg:text-6xl sm:leading-tight">Design with empathy.
+            <span className="sm:text-4xl md:text-5xl lg:text-6xl sm:leading-tight">Design with empathy.<br />
 Built for identity.</span>
           </h1>
           <p className="font-jakarta text-lg sm:text-xl text-white/70">
