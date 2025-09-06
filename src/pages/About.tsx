@@ -11,9 +11,8 @@ const About = () => {
       {/* Hero Section */}
       <section className="bg-[#1f1f1f] py-16 sm:py-20 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto w-full">
-          <h1 className="font-display font-medium text-white mb-6 leading-tight" style={{
-          fontSize: '36px',
-          lineHeight: '68px'
+          <h1 className="font-display font-medium text-white mb-6 leading-tight lg:leading-[68px]" style={{
+          fontSize: '36px'
         }}>
             <span className="sm:text-4xl md:text-5xl lg:text-6xl sm:leading-tight">Design with empathy.<br />
 Built for identity.</span>
