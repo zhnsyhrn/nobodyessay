@@ -169,7 +169,7 @@ Built for identity.</span>
                   Design & Client Projects
                 </h2>
                 <div className="space-y-3">
-                  <div className="p-3" style={{
+                  <div className="border border-border p-3" style={{
                 borderRadius: '10px'
               }}>
                     <div className="flex items-center gap-2">
@@ -180,7 +180,7 @@ Built for identity.</span>
                      </div>
                    </div>
                    
-                   <div className="p-3" style={{
+                   <div className="border border-border p-3" style={{
                 borderRadius: '10px'
               }}>
                      <div className="flex items-center gap-2">
@@ -191,7 +191,7 @@ Built for identity.</span>
                      </div>
                    </div>
 
-                   <div className="p-3" style={{
+                   <div className="border border-border p-3" style={{
                 borderRadius: '10px'
               }}>
                      <div className="flex items-center gap-2">
@@ -202,7 +202,7 @@ Built for identity.</span>
                      </div>
                    </div>
 
-                    <div className="p-3" style={{
+                    <div className="border border-border p-3" style={{
                 borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-2">
@@ -213,7 +213,7 @@ Built for identity.</span>
                       </div>
                     </div>
 
-                    <div className="p-3" style={{
+                    <div className="border border-border p-3" style={{
                 borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-2">
@@ -224,7 +224,7 @@ Built for identity.</span>
                       </div>
                     </div>
 
-                    <div className="p-3" style={{
+                    <div className="border border-border p-3" style={{
                 borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-2">
@@ -235,7 +235,7 @@ Built for identity.</span>
                       </div>
                     </div>
 
-                    <div className="p-3" style={{
+                    <div className="border border-border p-3" style={{
                 borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-2">
@@ -246,7 +246,7 @@ Built for identity.</span>
                       </div>
                     </div>
 
-                    <div className="p-3" style={{
+                    <div className="border border-border p-3" style={{
                 borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-2">
@@ -257,7 +257,7 @@ Built for identity.</span>
                       </div>
                     </div>
 
-                    <div className="p-3" style={{
+                    <div className="border border-border p-3" style={{
                 borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-2">
@@ -268,7 +268,7 @@ Built for identity.</span>
                       </div>
                     </div>
 
-                    <div className="p-3" style={{
+                    <div className="border border-border p-3" style={{
                 borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-2">
@@ -279,7 +279,7 @@ Built for identity.</span>
                       </div>
                     </div>
 
-                    <div className="p-3" style={{
+                    <div className="border border-border p-3" style={{
                 borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-2">
@@ -290,7 +290,7 @@ Built for identity.</span>
                       </div>
                     </div>
 
-                    <div className="p-3" style={{
+                    <div className="border border-border p-3" style={{
                 borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-2">
