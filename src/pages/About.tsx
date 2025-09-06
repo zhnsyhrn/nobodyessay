@@ -13,7 +13,7 @@ const About = () => {
         <div className="max-w-4xl mx-auto w-full">
           <h1 className="font-display font-medium text-white mb-6 leading-tight" style={{
           fontSize: '36px',
-          lineHeight: '46px'
+          lineHeight: '68px'
         }}>
             <span className="sm:text-4xl md:text-5xl lg:text-6xl sm:leading-tight">Design with empathy.<br />
 Built for identity.</span>
