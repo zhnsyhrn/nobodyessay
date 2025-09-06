@@ -125,7 +125,7 @@ Built for identity.</span>
       </section>
 
       {/* Core Competencies & Design Philosophy Section */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6">
+      <section className="pt-6 sm:pt-8 pb-12 sm:pb-16 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           <div className="border border-border p-6" style={{
             borderRadius: '10px'
