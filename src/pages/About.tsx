@@ -169,7 +169,7 @@ Built for identity.</span>
                   Design & Client Projects
                 </h2>
                 <div className="space-y-3">
-                  <div className="border border-border p-3" style={{
+                  <div className="p-3" style={{
                 borderRadius: '10px'
               }}>
                     <div className="flex items-center gap-2">
@@ -180,7 +180,7 @@ Built for identity.</span>
                      </div>
                    </div>
                    
-                   <div className="border border-border p-3" style={{
+                   <div className="p-3" style={{
                 borderRadius: '10px'
               }}>
                      <div className="flex items-center gap-2">
@@ -191,7 +191,7 @@ Built for identity.</span>
                      </div>
                    </div>
 
-                   <div className="border border-border p-3" style={{
+                   <div className="p-3" style={{
                 borderRadius: '10px'
               }}>
                      <div className="flex items-center gap-2">
@@ -202,7 +202,7 @@ Built for identity.</span>
                      </div>
                    </div>
 
-                    <div className="border border-border p-3" style={{
+                    <div className="p-3" style={{
                 borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-2">
@@ -213,7 +213,7 @@ Built for identity.</span>
                       </div>
                     </div>
 
-                    <div className="border border-border p-3" style={{
+                    <div className="p-3" style={{
                 borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-2">
@@ -224,46 +224,81 @@ Built for identity.</span>
                       </div>
                     </div>
 
-                    <div className="border border-border p-3" style={{
+                    <div className="p-3" style={{
                 borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-2">
-                        <a href="https://etiqa.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                          Etiqa Insurance Berhad
+                        <a href="https://mytigas.com/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
+                          MyTigas Alliance
                           <ExternalLink size={14} className="text-primary" />
                         </a>
                       </div>
                     </div>
 
-                    <div className="border border-border p-3" style={{
+                    <div className="p-3" style={{
                 borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-2">
-                        <a href="https://www.pknp.gov.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                          Perbadanan Kemajuan Negeri Perak
+                        <a href="https://moneyx.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
+                          MoneyX
                           <ExternalLink size={14} className="text-primary" />
                         </a>
                       </div>
                     </div>
 
-                    <div className="border border-border p-3" style={{
+                    <div className="p-3" style={{
                 borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-2">
-                         <span className="font-jakarta text-foreground font-medium">
-                           AQA Group
-                         </span>
-                       </div>
+                        <a href="https://www.moneyxbiz.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
+                          MoneyX Biz
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
                     </div>
 
-                    <div className="border border-border p-3" style={{
+                    <div className="p-3" style={{
                 borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-2">
-                         <span className="font-jakarta text-foreground font-medium">
-                           Starburst
-                         </span>
-                       </div>
+                        <a href="https://policystreet.com.my/reinsurance" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
+                          PolicyStreet
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="p-3" style={{
+                borderRadius: '10px'
+              }}>
+                      <div className="flex items-center gap-2">
+                        <a href="https://market.borong.com/my" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
+                          Borong
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="p-3" style={{
+                borderRadius: '10px'
+              }}>
+                      <div className="flex items-center gap-2">
+                        <a href="https://meca.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
+                          Meca Consultancy
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="p-3" style={{
+                borderRadius: '10px'
+              }}>
+                      <div className="flex items-center gap-2">
+                        <a href="https://paperballad.com/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
+                          Paperballad & Co.
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
                     </div>
                 </div>
               </div>
