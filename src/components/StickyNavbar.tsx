@@ -86,8 +86,8 @@ const StickyNavbar = () => {
               </Button>
             </div>
 
-            {/* Menu Content - Centered */}
-            <div className="flex-1 flex flex-col justify-center items-center px-4 sm:px-6" style={{
+            {/* Menu Content - Top Aligned */}
+            <div className="flex-1 flex flex-col justify-start items-center px-4 sm:px-6 pt-8" style={{
           backgroundColor: '#ffffff'
         }}>
               <div className="flex flex-col w-full max-w-sm">
