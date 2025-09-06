@@ -123,6 +123,32 @@ Built for identity.</span>
           </div>
         </div>
       </section>
+
+      {/* Core Competencies & Design Philosophy Section */}
+      <section className="py-12 sm:py-16 px-4 sm:px-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
+            Core Competencies & Design Philosophy
+          </h2>
+          <div className="space-y-3">
+            <div className="font-jakarta text-muted-foreground text-base">
+              <span className="text-foreground font-medium">Systems-Oriented Thinking:</span> Building cohesive experiences across touchpoints
+            </div>
+            <div className="h-px bg-border"></div>
+            <div className="font-jakarta text-muted-foreground text-base">
+              <span className="text-foreground font-medium">Multi-Platform Design Execution:</span> Designing modules across web, mobile, and admin tools
+            </div>
+            <div className="h-px bg-border"></div>
+            <div className="font-jakarta text-muted-foreground text-base">
+              <span className="text-foreground font-medium">Ownership & Delivery Under Pressure:</span> Driving end-to-end projects under tight deadlines
+            </div>
+            <div className="h-px bg-border"></div>
+            <div className="font-jakarta text-muted-foreground text-base">
+              <span className="text-foreground font-medium">User-Centered Design:</span> Prioritizing empathy and accessibility
+            </div>
+          </div>
+        </div>
+      </section>
       
       <section className="py-12 sm:py-16 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
@@ -132,30 +158,6 @@ Built for identity.</span>
             
             {/* Left Column */}
             <div className="space-y-8">
-
-              {/* Core Competencies */}
-              <div>
-                <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
-                  Core Competencies & Design Philosophy
-                </h2>
-                <div className="space-y-3">
-                  <div className="font-jakarta text-muted-foreground text-base">
-                    <span className="text-foreground font-medium">Systems-Oriented Thinking:</span> Building cohesive experiences across touchpoints
-                  </div>
-                  <div className="h-px bg-border"></div>
-                  <div className="font-jakarta text-muted-foreground text-base">
-                    <span className="text-foreground font-medium">Multi-Platform Design Execution:</span> Designing modules across web, mobile, and admin tools
-                  </div>
-                  <div className="h-px bg-border"></div>
-                  <div className="font-jakarta text-muted-foreground text-base">
-                    <span className="text-foreground font-medium">Ownership & Delivery Under Pressure:</span> Driving end-to-end projects under tight deadlines
-                  </div>
-                  <div className="h-px bg-border"></div>
-                  <div className="font-jakarta text-muted-foreground text-base">
-                    <span className="text-foreground font-medium">User-Centered Design:</span> Prioritizing empathy and accessibility
-                  </div>
-                </div>
-              </div>
 
             </div>
 
