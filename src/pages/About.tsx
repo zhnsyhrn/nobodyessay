@@ -26,10 +26,10 @@ Built for identity.</span>
 
       {/* Engagements Section */}
       <section className="py-12 sm:py-16 px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Left Column - Text Content */}
-            <div>
+            <div className="flex flex-col justify-center">
               <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
                 Engagements
               </h2>
@@ -126,7 +126,7 @@ Built for identity.</span>
       </section>
       
       <section className="py-12 sm:py-16 px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 relative">
               {/* Vertical divider - only visible on larger screens */}
               <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-border transform -translate-x-1/2"></div>
