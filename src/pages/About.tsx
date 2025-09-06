@@ -1,50 +1,27 @@
-import { useState } from "react";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
 import { ExternalLink } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
 import Autoplay from "embla-carousel-autoplay";
 const About = () => {
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-
   return <div className="min-h-screen bg-background">
       <StickyNavbar />
       
       {/* Hero Section */}
       <section className="bg-[#1f1f1f] h-screen flex items-center px-4 sm:px-6">
         <div className="max-w-4xl mx-auto w-full">
-          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-white mb-6 leading-tight">
-            I create design solutions that make systems usable, brands memorable, and digital experiences truly human.
+          <h1 className="font-display font-medium text-white mb-6 leading-tight" 
+              style={{ fontSize: '36px', lineHeight: '46px' }}>
+            <span className="sm:text-4xl md:text-5xl lg:text-6xl sm:leading-tight">
+              Design with empathy. Built for identity.
+            </span>
           </h1>
-          <p className="font-jakarta text-lg sm:text-xl text-white/70 mb-8">
-            Human and brand-centered design.
+          <p className="font-jakarta text-lg sm:text-xl text-white/70">
+            Create experiences that serve people while staying true to a brand's identity.
           </p>
-          <Button 
-            variant="ghost" 
-            onClick={() => setIsDialogOpen(true)}
-            className="text-white hover:text-white hover:bg-white/10 underline underline-offset-4 font-jakarta text-base"
-          >
-            Learn more.
-          </Button>
         </div>
       </section>
-
-      {/* Learn More Dialog */}
-      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="sm:max-w-2xl">
-          <DialogHeader>
-            <DialogTitle className="font-display text-xl">Human and brand-centered design</DialogTitle>
-          </DialogHeader>
-          <div className="py-4">
-            <p className="font-jakarta leading-relaxed text-muted-foreground">
-              Human and brand-centered design is about creating experiences that serve people while staying true to a brand's identity. It means understanding real human needs, emotions, and behaviors, then translating them into solutions that are intuitive, accessible, and meaningful. At the same time, it ensures every interaction reflects the brand's voice, values, and personality—building trust, recognition, and long-term connection.
-            </p>
-          </div>
-        </DialogContent>
-      </Dialog>
       
       <section className="py-12 sm:py-16 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
