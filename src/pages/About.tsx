@@ -127,24 +127,29 @@ Built for identity.</span>
       {/* Core Competencies & Design Philosophy Section */}
       <section className="py-12 sm:py-16 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
-            Core Competencies & Design Philosophy
-          </h2>
-          <div className="space-y-3">
-            <div className="font-jakarta text-muted-foreground text-base">
-              <span className="text-foreground font-medium">Systems-Oriented Thinking:</span> Building cohesive experiences across touchpoints
-            </div>
-            <div className="h-px bg-border"></div>
-            <div className="font-jakarta text-muted-foreground text-base">
-              <span className="text-foreground font-medium">Multi-Platform Design Execution:</span> Designing modules across web, mobile, and admin tools
-            </div>
-            <div className="h-px bg-border"></div>
-            <div className="font-jakarta text-muted-foreground text-base">
-              <span className="text-foreground font-medium">Ownership & Delivery Under Pressure:</span> Driving end-to-end projects under tight deadlines
-            </div>
-            <div className="h-px bg-border"></div>
-            <div className="font-jakarta text-muted-foreground text-base">
-              <span className="text-foreground font-medium">User-Centered Design:</span> Prioritizing empathy and accessibility
+          <div className="border border-border p-6" style={{
+            borderRadius: '10px',
+            backgroundColor: 'hsl(var(--box-background))'
+          }}>
+            <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
+              Core Competencies & Design Philosophy
+            </h2>
+            <div className="space-y-3">
+              <div className="font-jakarta text-muted-foreground text-base">
+                <span className="text-foreground font-medium">Systems-Oriented Thinking:</span> Building cohesive experiences across touchpoints
+              </div>
+              <div className="h-px bg-border"></div>
+              <div className="font-jakarta text-muted-foreground text-base">
+                <span className="text-foreground font-medium">Multi-Platform Design Execution:</span> Designing modules across web, mobile, and admin tools
+              </div>
+              <div className="h-px bg-border"></div>
+              <div className="font-jakarta text-muted-foreground text-base">
+                <span className="text-foreground font-medium">Ownership & Delivery Under Pressure:</span> Driving end-to-end projects under tight deadlines
+              </div>
+              <div className="h-px bg-border"></div>
+              <div className="font-jakarta text-muted-foreground text-base">
+                <span className="text-foreground font-medium">User-Centered Design:</span> Prioritizing empathy and accessibility
+              </div>
             </div>
           </div>
         </div>
@@ -158,6 +163,120 @@ Built for identity.</span>
             
             {/* Left Column */}
             <div className="space-y-8">
+
+              {/* Design & Client Projects */}
+              <div>
+                <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
+                  Design & Client Projects
+                </h2>
+                <div className="space-y-3">
+                  <div className="border border-border p-3" style={{
+                borderRadius: '10px',
+                backgroundColor: 'hsl(var(--box-background))'
+              }}>
+                    <div className="flex items-center gap-2">
+                       <a href="https://grain.com.sg/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
+                         Grain Singapore
+                         <ExternalLink size={14} className="text-primary" />
+                       </a>
+                     </div>
+                   </div>
+                   
+                   <div className="border border-border p-3" style={{
+                borderRadius: '10px',
+                backgroundColor: 'hsl(var(--box-background))'
+              }}>
+                     <div className="flex items-center gap-2">
+                       <a href="https://www.greateasterntakaful.com/en/personal-takaful.html" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
+                         Great Eastern Takaful Berhad
+                         <ExternalLink size={14} className="text-primary" />
+                       </a>
+                     </div>
+                   </div>
+
+                   <div className="border border-border p-3" style={{
+                borderRadius: '10px',
+                backgroundColor: 'hsl(var(--box-background))'
+              }}>
+                     <div className="flex items-center gap-2">
+                       <a href="https://www.mmu.edu.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
+                         Multimedia University
+                         <ExternalLink size={14} className="text-primary" />
+                       </a>
+                     </div>
+                   </div>
+
+                    <div className="border border-border p-3" style={{
+                borderRadius: '10px',
+                backgroundColor: 'hsl(var(--box-background))'
+              }}>
+                      <div className="flex items-center gap-2">
+                        <a href="https://nanomalaysia.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
+                          NanoMalaysia Berhad
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="border border-border p-3" style={{
+                borderRadius: '10px',
+                backgroundColor: 'hsl(var(--box-background))'
+              }}>
+                      <div className="flex items-center gap-2">
+                        <a href="https://verdantsolar.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
+                          Verdant Solar
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="border border-border p-3" style={{
+                borderRadius: '10px',
+                backgroundColor: 'hsl(var(--box-background))'
+              }}>
+                      <div className="flex items-center gap-2">
+                        <a href="https://etiqa.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
+                          Etiqa Insurance Berhad
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="border border-border p-3" style={{
+                borderRadius: '10px',
+                backgroundColor: 'hsl(var(--box-background))'
+              }}>
+                      <div className="flex items-center gap-2">
+                        <a href="https://www.pknp.gov.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
+                          Perbadanan Kemajuan Negeri Perak
+                          <ExternalLink size={14} className="text-primary" />
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="border border-border p-3" style={{
+                borderRadius: '10px',
+                backgroundColor: 'hsl(var(--box-background))'
+              }}>
+                      <div className="flex items-center gap-2">
+                         <span className="font-jakarta text-foreground font-medium">
+                           AQA Group
+                         </span>
+                       </div>
+                    </div>
+
+                    <div className="border border-border p-3" style={{
+                borderRadius: '10px',
+                backgroundColor: 'hsl(var(--box-background))'
+              }}>
+                      <div className="flex items-center gap-2">
+                         <span className="font-jakarta text-foreground font-medium">
+                           Starburst
+                         </span>
+                       </div>
+                    </div>
+                </div>
+              </div>
 
             </div>
 
@@ -329,158 +448,6 @@ Built for identity.</span>
                         Unlimited Design Subscription
                       </p>
                     </div>
-                  </div>
-                </div>
-
-                {/* Design & Client Projects */}
-                <div>
-                  <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
-                    Design & Client Projects
-                  </h2>
-                  <div className="space-y-3">
-                    <div className="border border-border p-3" style={{
-                  borderRadius: '10px',
-                  backgroundColor: 'hsl(var(--box-background))'
-                }}>
-                      <div className="flex items-center gap-2">
-                         <a href="https://grain.com.sg/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                           Grain Singapore
-                           <ExternalLink size={14} className="text-primary" />
-                         </a>
-                       </div>
-                     </div>
-                     
-                     <div className="border border-border p-3" style={{
-                  borderRadius: '10px',
-                  backgroundColor: 'hsl(var(--box-background))'
-                }}>
-                       <div className="flex items-center gap-2">
-                         <a href="https://www.greateasterntakaful.com/en/personal-takaful.html" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                           Great Eastern Takaful Berhad
-                           <ExternalLink size={14} className="text-primary" />
-                         </a>
-                       </div>
-                     </div>
-
-                     <div className="border border-border p-3" style={{
-                  borderRadius: '10px',
-                  backgroundColor: 'hsl(var(--box-background))'
-                }}>
-                       <div className="flex items-center gap-2">
-                         <a href="https://www.mmu.edu.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                           Multimedia University
-                           <ExternalLink size={14} className="text-primary" />
-                         </a>
-                       </div>
-                     </div>
-
-                      <div className="border border-border p-3" style={{
-                  borderRadius: '10px',
-                  backgroundColor: 'hsl(var(--box-background))'
-                }}>
-                        <div className="flex items-center gap-2">
-                          <a href="https://nanomalaysia.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                            NanoMalaysia Berhad
-                            <ExternalLink size={14} className="text-primary" />
-                          </a>
-                        </div>
-                      </div>
-
-                      <div className="border border-border p-3" style={{
-                  borderRadius: '10px',
-                  backgroundColor: 'hsl(var(--box-background))'
-                }}>
-                        <div className="flex items-center gap-2">
-                          <a href="https://verdantsolar.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                            Verdant Solar
-                            <ExternalLink size={14} className="text-primary" />
-                          </a>
-                        </div>
-                      </div>
-
-                      <div className="border border-border p-3" style={{
-                  borderRadius: '10px',
-                  backgroundColor: 'hsl(var(--box-background))'
-                }}>
-                        <div className="flex items-center gap-2">
-                          <a href="https://mytigas.com/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                            MyTigas Alliance
-                            <ExternalLink size={14} className="text-primary" />
-                          </a>
-                        </div>
-                      </div>
-
-                      <div className="border border-border p-3" style={{
-                  borderRadius: '10px',
-                  backgroundColor: 'hsl(var(--box-background))'
-                }}>
-                        <div className="flex items-center gap-2">
-                          <a href="https://moneyx.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                            MoneyX
-                            <ExternalLink size={14} className="text-primary" />
-                          </a>
-                        </div>
-                      </div>
-
-                      <div className="border border-border p-3" style={{
-                  borderRadius: '10px',
-                  backgroundColor: 'hsl(var(--box-background))'
-                }}>
-                        <div className="flex items-center gap-2">
-                          <a href="https://www.moneyxbiz.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                            MoneyX Biz
-                            <ExternalLink size={14} className="text-primary" />
-                          </a>
-                        </div>
-                      </div>
-
-                      <div className="border border-border p-3" style={{
-                  borderRadius: '10px',
-                  backgroundColor: 'hsl(var(--box-background))'
-                }}>
-                        <div className="flex items-center gap-2">
-                          <a href="https://policystreet.com.my/reinsurance" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                            PolicyStreet
-                            <ExternalLink size={14} className="text-primary" />
-                          </a>
-                        </div>
-                      </div>
-
-                      <div className="border border-border p-3" style={{
-                  borderRadius: '10px',
-                  backgroundColor: 'hsl(var(--box-background))'
-                }}>
-                        <div className="flex items-center gap-2">
-                          <a href="https://market.borong.com/my" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                            Borong
-                            <ExternalLink size={14} className="text-primary" />
-                          </a>
-                        </div>
-                      </div>
-
-                      <div className="border border-border p-3" style={{
-                  borderRadius: '10px',
-                  backgroundColor: 'hsl(var(--box-background))'
-                }}>
-                        <div className="flex items-center gap-2">
-                          <a href="https://meca.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                            Meca Consultancy
-                            <ExternalLink size={14} className="text-primary" />
-                          </a>
-                        </div>
-                      </div>
-
-                      <div className="border border-border p-3" style={{
-                  borderRadius: '10px',
-                  backgroundColor: 'hsl(var(--box-background))'
-                }}>
-                        <div className="flex items-center gap-2">
-                          <a href="https://paperballad.com/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                            Paperballad & Co.
-                            <ExternalLink size={14} className="text-primary" />
-                          </a>
-                       </div>
-                     </div>
                   </div>
                 </div>
             </div>
