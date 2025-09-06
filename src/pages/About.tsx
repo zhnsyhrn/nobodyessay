@@ -128,8 +128,7 @@ Built for identity.</span>
       <section className="py-12 sm:py-16 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           <div className="border border-border p-6" style={{
-            borderRadius: '10px',
-            backgroundColor: 'hsl(var(--box-background))'
+            borderRadius: '10px'
           }}>
             <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
               Core Competencies & Design Philosophy
