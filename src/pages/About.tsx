@@ -170,8 +170,7 @@ Built for identity.</span>
                 </h2>
                 <div className="space-y-3">
                   <div className="border border-border p-3" style={{
-                borderRadius: '10px',
-                backgroundColor: 'hsl(var(--box-background))'
+                borderRadius: '10px'
               }}>
                     <div className="flex items-center gap-2">
                        <a href="https://grain.com.sg/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
@@ -182,8 +181,7 @@ Built for identity.</span>
                    </div>
                    
                    <div className="border border-border p-3" style={{
-                borderRadius: '10px',
-                backgroundColor: 'hsl(var(--box-background))'
+                borderRadius: '10px'
               }}>
                      <div className="flex items-center gap-2">
                        <a href="https://www.greateasterntakaful.com/en/personal-takaful.html" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
@@ -194,8 +192,7 @@ Built for identity.</span>
                    </div>
 
                    <div className="border border-border p-3" style={{
-                borderRadius: '10px',
-                backgroundColor: 'hsl(var(--box-background))'
+                borderRadius: '10px'
               }}>
                      <div className="flex items-center gap-2">
                        <a href="https://www.mmu.edu.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
@@ -206,8 +203,7 @@ Built for identity.</span>
                    </div>
 
                     <div className="border border-border p-3" style={{
-                borderRadius: '10px',
-                backgroundColor: 'hsl(var(--box-background))'
+                borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-2">
                         <a href="https://nanomalaysia.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
@@ -218,8 +214,7 @@ Built for identity.</span>
                     </div>
 
                     <div className="border border-border p-3" style={{
-                borderRadius: '10px',
-                backgroundColor: 'hsl(var(--box-background))'
+                borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-2">
                         <a href="https://verdantsolar.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
@@ -230,8 +225,7 @@ Built for identity.</span>
                     </div>
 
                     <div className="border border-border p-3" style={{
-                borderRadius: '10px',
-                backgroundColor: 'hsl(var(--box-background))'
+                borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-2">
                         <a href="https://etiqa.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
@@ -242,8 +236,7 @@ Built for identity.</span>
                     </div>
 
                     <div className="border border-border p-3" style={{
-                borderRadius: '10px',
-                backgroundColor: 'hsl(var(--box-background))'
+                borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-2">
                         <a href="https://www.pknp.gov.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
@@ -254,8 +247,7 @@ Built for identity.</span>
                     </div>
 
                     <div className="border border-border p-3" style={{
-                borderRadius: '10px',
-                backgroundColor: 'hsl(var(--box-background))'
+                borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-2">
                          <span className="font-jakarta text-foreground font-medium">
@@ -265,8 +257,7 @@ Built for identity.</span>
                     </div>
 
                     <div className="border border-border p-3" style={{
-                borderRadius: '10px',
-                backgroundColor: 'hsl(var(--box-background))'
+                borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-2">
                          <span className="font-jakarta text-foreground font-medium">
@@ -289,8 +280,7 @@ Built for identity.</span>
                 </h2>
                 <div className="space-y-3">
                   <div className="border border-border p-3" style={{
-                  borderRadius: '10px',
-                  backgroundColor: 'hsl(var(--box-background))'
+                  borderRadius: '10px'
                 }}>
                     <div className="flex items-center justify-between mb-1">
                       <div className="font-jakarta text-foreground font-medium">
@@ -307,8 +297,7 @@ Built for identity.</span>
                   </div>
                   
                   <div className="border border-border p-3" style={{
-                  borderRadius: '10px',
-                  backgroundColor: 'hsl(var(--box-background))'
+                  borderRadius: '10px'
                 }}>
                     <div className="flex items-center justify-between mb-1">
                       <div className="font-jakarta text-foreground font-medium">
@@ -327,8 +316,7 @@ Built for identity.</span>
                   </div>
 
                   <div className="border border-border p-3" style={{
-                  borderRadius: '10px',
-                  backgroundColor: 'hsl(var(--box-background))'
+                  borderRadius: '10px'
                 }}>
                     <div className="flex items-center justify-between mb-1">
                       <div className="font-jakarta text-foreground font-medium">
@@ -347,8 +335,7 @@ Built for identity.</span>
                   </div>
 
                   <div className="border border-border p-3" style={{
-                  borderRadius: '10px',
-                  backgroundColor: 'hsl(var(--box-background))'
+                  borderRadius: '10px'
                 }}>
                     <div className="flex items-center justify-between mb-1">
                       <div className="font-jakarta text-foreground font-medium">
@@ -367,8 +354,7 @@ Built for identity.</span>
                   </div>
 
                   <div className="border border-border p-3" style={{
-                  borderRadius: '10px',
-                  backgroundColor: 'hsl(var(--box-background))'
+                  borderRadius: '10px'
                 }}>
                     <div className="flex items-center justify-between mb-1">
                       <div className="font-jakarta text-foreground font-medium">
@@ -392,8 +378,7 @@ Built for identity.</span>
                   </h2>
                   <div className="space-y-3">
                     <div className="border border-border p-3" style={{
-                  borderRadius: '10px',
-                  backgroundColor: 'hsl(var(--box-background))'
+                  borderRadius: '10px'
                 }}>
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
@@ -412,8 +397,7 @@ Built for identity.</span>
                     </div>
                     
                     <div className="border border-border p-3" style={{
-                  borderRadius: '10px',
-                  backgroundColor: 'hsl(var(--box-background))'
+                  borderRadius: '10px'
                 }}>
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
@@ -432,8 +416,7 @@ Built for identity.</span>
                     </div>
 
                     <div className="border border-border p-3" style={{
-                  borderRadius: '10px',
-                  backgroundColor: 'hsl(var(--box-background))'
+                  borderRadius: '10px'
                 }}>
                       <div className="flex items-center justify-between mb-2">
                          <span className="font-jakarta text-foreground font-medium opacity-60">
