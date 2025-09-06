@@ -11,11 +11,12 @@ const About = () => {
       {/* Hero Section */}
       <section className="bg-[#1f1f1f] h-screen flex items-center px-4 sm:px-6">
         <div className="max-w-4xl mx-auto w-full">
-          <h1 className="font-display font-medium text-white mb-6 leading-tight" 
-              style={{ fontSize: '36px', lineHeight: '46px' }}>
-            <span className="sm:text-4xl md:text-5xl lg:text-6xl sm:leading-tight">
-              Design with empathy. Built for identity.
-            </span>
+          <h1 className="font-display font-medium text-white mb-6 leading-tight" style={{
+          fontSize: '36px',
+          lineHeight: '46px'
+        }}>
+            <span className="sm:text-4xl md:text-5xl lg:text-6xl sm:leading-tight">Design with empathy.
+Built for identity.</span>
           </h1>
           <p className="font-jakarta text-lg sm:text-xl text-white/70">
             Create experiences that serve people while staying true to a brand's identity.
