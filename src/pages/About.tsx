@@ -14,8 +14,8 @@ const About = () => {
       <StickyNavbar />
       
       {/* Hero Section */}
-      <section className="bg-[#1f1f1f] py-16 sm:py-24 px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="bg-[#1f1f1f] h-screen flex items-center px-4 sm:px-6">
+        <div className="max-w-4xl mx-auto w-full">
           <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-white mb-6 leading-tight">
             I create design solutions that make systems usable, brands memorable, and digital experiences truly human.
           </h1>
