@@ -137,7 +137,9 @@ const Studio = () => {
                     src={getImageSrc(index)} 
                     alt={project.title} 
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+                    priority={index < 2} // High priority for first 2 projects
                     preload={index < 4} // Preload first 4 images for above-the-fold content
+                    blurUp={true} // Enable blur-up effect
                   />
                 </div>
                 <div className="p-2 sm:p-3" style={{

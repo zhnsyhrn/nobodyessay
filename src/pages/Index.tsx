@@ -13,6 +13,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import Autoplay from "embla-carousel-autoplay";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { LazyImage } from "@/components/ui/lazy-image";
+import { useCarouselPreloader } from "@/hooks/useImagePreloader";
 
 // Portfolio design images - Your latest design portfolio work
 const portfolioImages = [
@@ -33,6 +34,10 @@ const Index = () => {
   const [current, setCurrent] = React.useState(0);
   const [count, setCount] = React.useState(0);
   const galleryImages = portfolioImages;
+
+  // Preload carousel images intelligently
+  useCarouselPreloader(galleryImages, current, 3);
+
   React.useEffect(() => {
     if (!api) {
       return;
@@ -86,12 +91,14 @@ const Index = () => {
                   <Dialog>
                     <DialogTrigger asChild>
                       <div className="aspect-square overflow-hidden rounded-[10px] cursor-pointer">
-                        <LazyImage 
-                          src={image} 
-                          alt={`Design portfolio work ${index + 1}`} 
-                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                          preload={index < 3} // Preload first 3 images for better LCP
-                        />
+                         <LazyImage 
+                           src={image} 
+                           alt={`Design portfolio work ${index + 1}`} 
+                           className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                           priority={index < 2} // High priority for first 2 images
+                           preload={index < 3} // Preload first 3 images for better LCP
+                           blurUp={true} // Enable blur-up effect
+                         />
                       </div>
                     </DialogTrigger>
                     <DialogContent className="max-w-2xl w-full p-4 border-0">
@@ -100,12 +107,13 @@ const Index = () => {
                           <X className="h-4 w-4" />
                           <span className="sr-only">Close</span>
                         </DialogClose>
-                        <LazyImage 
-                          src={image} 
-                          alt={`Design portfolio work ${index + 1}`} 
-                          className="w-full h-auto rounded-[10px]" 
-                          preload={true} // Preload dialog images since user explicitly clicked
-                        />
+                         <LazyImage 
+                           src={image} 
+                           alt={`Design portfolio work ${index + 1}`} 
+                           className="w-full h-auto rounded-[10px]" 
+                           priority={true} // High priority for dialog images since user explicitly clicked
+                           blurUp={true} // Enable blur-up effect
+                         />
                       </div>
                     </DialogContent>
                   </Dialog>
