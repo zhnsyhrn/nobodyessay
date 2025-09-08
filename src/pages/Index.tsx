@@ -16,17 +16,25 @@ import { LazyImage } from "@/components/ui/lazy-image";
 import { useCarouselPreloader } from "@/hooks/useImagePreloader";
 
 // Portfolio design images - Your latest design portfolio work
-const portfolioImages = [
-  "/lovable-uploads/4f35efbc-ddf9-451c-bf0a-e7c2e5ccceec.png", // Health tracking app UI
-  "/lovable-uploads/ed2d1384-cbe4-4b7a-8d35-9fbad4f3f104.png", // Great Eastern Takaful website
-  "/lovable-uploads/f4697a18-0878-474e-993a-80b25600aa97.png", // Mobile app screens
-  "/lovable-uploads/ebb70966-3d48-4bd8-a0fb-dcb74281f5fb.png", // PolicyStreet mobile app
-  "/lovable-uploads/87011945-cf3d-4d63-8f09-146843fb1e36.png", // Banking/finance app
-  "/lovable-uploads/a4606376-f5cc-4a88-bf08-f8485cba771a.png", // Dealn mobile app
-  "/lovable-uploads/151a6112-1d81-410d-b905-46eb1820545e.png", // Coffee branding/mugs
-  "/lovable-uploads/9fe47bb5-a2b9-40fc-8df4-560e811a56b4.png", // Finance app screens
-  "/lovable-uploads/c4f41984-363c-4bd4-92f4-318ddc3e4368.png", // AQA Group website
-  "/lovable-uploads/b4c83dca-133b-41b0-9c28-44746d3f650f.png"  // Coffee packaging
+const portfolioImages = ["/lovable-uploads/4f35efbc-ddf9-451c-bf0a-e7c2e5ccceec.png",
+// Health tracking app UI
+"/lovable-uploads/ed2d1384-cbe4-4b7a-8d35-9fbad4f3f104.png",
+// Great Eastern Takaful website
+"/lovable-uploads/f4697a18-0878-474e-993a-80b25600aa97.png",
+// Mobile app screens
+"/lovable-uploads/ebb70966-3d48-4bd8-a0fb-dcb74281f5fb.png",
+// PolicyStreet mobile app
+"/lovable-uploads/87011945-cf3d-4d63-8f09-146843fb1e36.png",
+// Banking/finance app
+"/lovable-uploads/a4606376-f5cc-4a88-bf08-f8485cba771a.png",
+// Dealn mobile app
+"/lovable-uploads/151a6112-1d81-410d-b905-46eb1820545e.png",
+// Coffee branding/mugs
+"/lovable-uploads/9fe47bb5-a2b9-40fc-8df4-560e811a56b4.png",
+// Finance app screens
+"/lovable-uploads/c4f41984-363c-4bd4-92f4-318ddc3e4368.png",
+// AQA Group website
+"/lovable-uploads/b4c83dca-133b-41b0-9c28-44746d3f650f.png" // Coffee packaging
 ];
 const Index = () => {
   const featuredWritings = getFeaturedEssays();
@@ -37,7 +45,6 @@ const Index = () => {
 
   // Preload carousel images intelligently
   useCarouselPreloader(galleryImages, current, 3);
-
   React.useEffect(() => {
     if (!api) {
       return;
@@ -57,7 +64,7 @@ const Index = () => {
           <h2 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">I specialise in user interface and experience design, branding and creative direction.</h2>
           <p style={{
           color: '#606060'
-        }} className="font-jakarta text-lg sm:text-lg max-w-2xl leading-[27px] sm:leading-relaxed px-1 mb-6 sm:mb-8 sm:px-0">I create design solutions that bring clarity to complex systems, enhance usability, and strengthen brand presence across digital platforms.</p>
+        }} className="font-jakarta text-lg sm:text-lg max-w-2xl leading-[27px] sm:leading-relaxed px-1 mb-6 sm:mb-8 sm:px-0">I create design solutions that bring clarity to complex systems.</p>
           
           {/* Navigation Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 px-1 sm:px-2">
@@ -91,14 +98,10 @@ const Index = () => {
                   <Dialog>
                     <DialogTrigger asChild>
                       <div className="aspect-square overflow-hidden rounded-[10px] cursor-pointer">
-                         <LazyImage 
-                           src={image} 
-                           alt={`Design portfolio work ${index + 1}`} 
-                           className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                           priority={index < 2} // High priority for first 2 images
-                           preload={index < 3} // Preload first 3 images for better LCP
-                           blurUp={true} // Enable blur-up effect
-                         />
+                         <LazyImage src={image} alt={`Design portfolio work ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" priority={index < 2} // High priority for first 2 images
+                    preload={index < 3} // Preload first 3 images for better LCP
+                    blurUp={true} // Enable blur-up effect
+                    />
                       </div>
                     </DialogTrigger>
                     <DialogContent className="max-w-2xl w-full p-4 border-0">
@@ -107,13 +110,9 @@ const Index = () => {
                           <X className="h-4 w-4" />
                           <span className="sr-only">Close</span>
                         </DialogClose>
-                         <LazyImage 
-                           src={image} 
-                           alt={`Design portfolio work ${index + 1}`} 
-                           className="w-full h-auto rounded-[10px]" 
-                           priority={true} // High priority for dialog images since user explicitly clicked
-                           blurUp={true} // Enable blur-up effect
-                         />
+                         <LazyImage src={image} alt={`Design portfolio work ${index + 1}`} className="w-full h-auto rounded-[10px]" priority={true} // High priority for dialog images since user explicitly clicked
+                    blurUp={true} // Enable blur-up effect
+                    />
                       </div>
                     </DialogContent>
                   </Dialog>
