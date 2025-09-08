@@ -178,7 +178,7 @@ Built for identity.</span>
                 borderRadius: '10px'
               }}>
                     <div className="flex items-center gap-3">
-                      <img src="/lovable-uploads/3c96f375-d885-4200-93e7-d6c296d99beb.png" alt="Grain Singapore logo" className="w-8 h-8 object-contain rounded flex-shrink-0" />
+                      <img src="/lovable-uploads/3c96f375-d885-4200-93e7-d6c296d99beb.png" alt="Grain Singapore logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0" />
                        <a href="https://grain.com.sg/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                          Grain Singapore
                          <ExternalLink size={14} className="text-primary" />
@@ -190,7 +190,7 @@ Built for identity.</span>
                 borderRadius: '10px'
               }}>
                      <div className="flex items-center gap-3">
-                        <img src="/lovable-uploads/27f41456-e5d7-44d0-b7c9-cd34256d208c.png" alt="Great Eastern Takaful logo" className="w-8 h-8 object-contain rounded flex-shrink-0" />
+                        <img src="/lovable-uploads/27f41456-e5d7-44d0-b7c9-cd34256d208c.png" alt="Great Eastern Takaful logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0" />
                        <a href="https://www.greateasterntakaful.com/en/personal-takaful.html" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                          Great Eastern Takaful Berhad
                          <ExternalLink size={14} className="text-primary" />
@@ -202,7 +202,7 @@ Built for identity.</span>
                 borderRadius: '10px'
               }}>
                      <div className="flex items-center gap-3">
-                        <img src="/lovable-uploads/3d45a311-8480-4ac2-9b4e-d4581026c946.png" alt="Multimedia University logo" className="w-8 h-8 object-contain rounded flex-shrink-0" />
+                        <img src="/lovable-uploads/3d45a311-8480-4ac2-9b4e-d4581026c946.png" alt="Multimedia University logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0" />
                        <a href="https://www.mmu.edu.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                          Multimedia University
                          <ExternalLink size={14} className="text-primary" />
@@ -214,7 +214,7 @@ Built for identity.</span>
                 borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-3">
-                         <img src="/lovable-uploads/a692e280-7921-4475-86cc-982c64f086ab.png" alt="NanoMalaysia logo" className="w-8 h-8 object-contain rounded flex-shrink-0" />
+                         <img src="/lovable-uploads/a692e280-7921-4475-86cc-982c64f086ab.png" alt="NanoMalaysia logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0" />
                         <a href="https://nanomalaysia.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                           NanoMalaysia Berhad
                           <ExternalLink size={14} className="text-primary" />
@@ -226,7 +226,7 @@ Built for identity.</span>
                 borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-3">
-                         <img src="/lovable-uploads/4b7c51d8-a0b7-4436-b96f-64b7615e0f0e.png" alt="Verdant Solar logo" className="w-8 h-8 object-contain rounded flex-shrink-0" />
+                         <img src="/lovable-uploads/4b7c51d8-a0b7-4436-b96f-64b7615e0f0e.png" alt="Verdant Solar logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0" />
                         <a href="https://verdantsolar.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                           Verdant Solar
                           <ExternalLink size={14} className="text-primary" />
@@ -238,7 +238,7 @@ Built for identity.</span>
                 borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-3">
-                         <img src="/lovable-uploads/85e1f77f-633b-418c-8603-068070a2d55e.png" alt="MyTigas Alliance logo" className="w-8 h-8 object-contain rounded flex-shrink-0" />
+                         <img src="/lovable-uploads/85e1f77f-633b-418c-8603-068070a2d55e.png" alt="MyTigas Alliance logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0" />
                         <a href="https://mytigas.com/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                           MyTigas Alliance
                           <ExternalLink size={14} className="text-primary" />
@@ -250,7 +250,7 @@ Built for identity.</span>
                 borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-3">
-                         <img src="/lovable-uploads/ea89b5b1-149b-4473-93c4-c8044d3fb71b.png" alt="MoneyX logo" className="w-8 h-8 object-contain rounded flex-shrink-0" />
+                         <img src="/lovable-uploads/ea89b5b1-149b-4473-93c4-c8044d3fb71b.png" alt="MoneyX logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0" />
                         <a href="https://moneyx.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                           MoneyX
                           <ExternalLink size={14} className="text-primary" />
@@ -262,7 +262,7 @@ Built for identity.</span>
                 borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-3">
-                         <img src="/lovable-uploads/7444c41d-b2f9-4848-9e79-08b6d96b24b0.png" alt="MoneyX Biz logo" className="w-8 h-8 object-contain rounded flex-shrink-0" />
+                         <img src="/lovable-uploads/7444c41d-b2f9-4848-9e79-08b6d96b24b0.png" alt="MoneyX Biz logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0" />
                         <a href="https://www.moneyxbiz.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                           MoneyX Biz
                           <ExternalLink size={14} className="text-primary" />
@@ -274,7 +274,7 @@ Built for identity.</span>
                 borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-3">
-                         <img src="/lovable-uploads/714500df-499f-4bcc-b0b1-ddfb6dfd74b6.png" alt="PolicyStreet logo" className="w-8 h-8 object-contain rounded flex-shrink-0" />
+                         <img src="/lovable-uploads/714500df-499f-4bcc-b0b1-ddfb6dfd74b6.png" alt="PolicyStreet logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0" />
                         <a href="https://policystreet.com.my/reinsurance" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                           PolicyStreet
                           <ExternalLink size={14} className="text-primary" />
@@ -286,7 +286,7 @@ Built for identity.</span>
                 borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-3">
-                         <img src="/lovable-uploads/3c3c213c-e6f9-4cd7-a841-b9b012ff9fdd.png" alt="Borong logo" className="w-8 h-8 object-contain rounded flex-shrink-0" />
+                         <img src="/lovable-uploads/3c3c213c-e6f9-4cd7-a841-b9b012ff9fdd.png" alt="Borong logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0" />
                         <a href="https://market.borong.com/my" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                           Borong
                           <ExternalLink size={14} className="text-primary" />
@@ -335,7 +335,7 @@ Built for identity.</span>
                   borderRadius: '10px'
                 }}>
                     <div className="flex items-start gap-3 mb-1">
-                       <img src="/lovable-uploads/ea89b5b1-149b-4473-93c4-c8044d3fb71b.png" alt="MoneyX logo" className="w-8 h-8 object-contain rounded flex-shrink-0 mt-0.5" />
+                       <img src="/lovable-uploads/ea89b5b1-149b-4473-93c4-c8044d3fb71b.png" alt="MoneyX logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0 mt-0.5" />
                       <div className="flex-1">
                         <div className="flex items-center justify-between">
                           <div className="font-jakarta text-foreground font-medium">
