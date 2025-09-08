@@ -177,7 +177,8 @@ Built for identity.</span>
                   <div className="border border-border p-3 bg-white" style={{
                 borderRadius: '10px'
               }}>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0"></div>
                        <a href="https://grain.com.sg/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                          Grain Singapore
                          <ExternalLink size={14} className="text-primary" />
@@ -188,7 +189,8 @@ Built for identity.</span>
                    <div className="border border-border p-3 bg-white" style={{
                 borderRadius: '10px'
               }}>
-                     <div className="flex items-center gap-2">
+                     <div className="flex items-center gap-3">
+                       <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0"></div>
                        <a href="https://www.greateasterntakaful.com/en/personal-takaful.html" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                          Great Eastern Takaful Berhad
                          <ExternalLink size={14} className="text-primary" />
@@ -199,7 +201,8 @@ Built for identity.</span>
                    <div className="border border-border p-3 bg-white" style={{
                 borderRadius: '10px'
               }}>
-                     <div className="flex items-center gap-2">
+                     <div className="flex items-center gap-3">
+                       <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0"></div>
                        <a href="https://www.mmu.edu.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                          Multimedia University
                          <ExternalLink size={14} className="text-primary" />
@@ -210,7 +213,8 @@ Built for identity.</span>
                     <div className="border border-border p-3 bg-white" style={{
                 borderRadius: '10px'
               }}>
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0"></div>
                         <a href="https://nanomalaysia.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                           NanoMalaysia Berhad
                           <ExternalLink size={14} className="text-primary" />
@@ -221,7 +225,8 @@ Built for identity.</span>
                     <div className="border border-border p-3 bg-white" style={{
                 borderRadius: '10px'
               }}>
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0"></div>
                         <a href="https://verdantsolar.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                           Verdant Solar
                           <ExternalLink size={14} className="text-primary" />
@@ -232,7 +237,8 @@ Built for identity.</span>
                     <div className="border border-border p-3 bg-white" style={{
                 borderRadius: '10px'
               }}>
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0"></div>
                         <a href="https://mytigas.com/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                           MyTigas Alliance
                           <ExternalLink size={14} className="text-primary" />
@@ -243,7 +249,8 @@ Built for identity.</span>
                     <div className="border border-border p-3 bg-white" style={{
                 borderRadius: '10px'
               }}>
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0"></div>
                         <a href="https://moneyx.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                           MoneyX
                           <ExternalLink size={14} className="text-primary" />
@@ -254,7 +261,8 @@ Built for identity.</span>
                     <div className="border border-border p-3 bg-white" style={{
                 borderRadius: '10px'
               }}>
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0"></div>
                         <a href="https://www.moneyxbiz.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                           MoneyX Biz
                           <ExternalLink size={14} className="text-primary" />
@@ -265,7 +273,8 @@ Built for identity.</span>
                     <div className="border border-border p-3 bg-white" style={{
                 borderRadius: '10px'
               }}>
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0"></div>
                         <a href="https://policystreet.com.my/reinsurance" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                           PolicyStreet
                           <ExternalLink size={14} className="text-primary" />
@@ -276,7 +285,8 @@ Built for identity.</span>
                     <div className="border border-border p-3 bg-white" style={{
                 borderRadius: '10px'
               }}>
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0"></div>
                         <a href="https://market.borong.com/my" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                           Borong
                           <ExternalLink size={14} className="text-primary" />
@@ -287,7 +297,8 @@ Built for identity.</span>
                     <div className="border border-border p-3 bg-white" style={{
                 borderRadius: '10px'
               }}>
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0"></div>
                         <a href="https://meca.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                           Meca Consultancy
                           <ExternalLink size={14} className="text-primary" />
@@ -298,7 +309,8 @@ Built for identity.</span>
                     <div className="border border-border p-3 bg-white" style={{
                 borderRadius: '10px'
               }}>
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0"></div>
                         <a href="https://paperballad.com/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                           Paperballad & Co.
                           <ExternalLink size={14} className="text-primary" />
@@ -322,91 +334,116 @@ Built for identity.</span>
                   <div className="border border-border p-3 bg-white" style={{
                   borderRadius: '10px'
                 }}>
-                    <div className="flex items-center justify-between mb-1">
-                      <div className="font-jakarta text-foreground font-medium">
-                        <a href="https://moneyx.com.my/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2 underline">
-                          MoneyX
-                          <ExternalLink size={14} className="text-primary" />
-                        </a>
+                    <div className="flex items-start gap-3 mb-1">
+                      <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0 mt-0.5"></div>
+                      <div className="flex-1">
+                        <div className="flex items-center justify-between">
+                          <div className="font-jakarta text-foreground font-medium">
+                            <a href="https://moneyx.com.my/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2 underline">
+                              MoneyX
+                              <ExternalLink size={14} className="text-primary" />
+                            </a>
+                          </div>
+                          <span className="font-mono text-muted-foreground text-xs">2024 - Present</span>
+                        </div>
+                        <p className="font-jakarta text-muted-foreground text-sm mt-1">
+                          FinTech
+                        </p>
                       </div>
-                       <span className="font-mono text-muted-foreground text-xs">2024 - Present</span>
                     </div>
-                    <p className="font-jakarta text-muted-foreground text-sm">
-                      FinTech
-                    </p>
                   </div>
                   
                   <div className="border border-border p-3 bg-white" style={{
                   borderRadius: '10px'
                 }}>
-                    <div className="flex items-center justify-between mb-1">
-                      <div className="font-jakarta text-foreground font-medium">
-                        <a href="https://www.borong.com/my" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2 underline">
-                          Borong (Dropee)
-                          <ExternalLink size={14} className="text-primary" />
-                        </a>
+                    <div className="flex items-start gap-3 mb-1">
+                      <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0 mt-0.5"></div>
+                      <div className="flex-1">
+                        <div className="flex items-center justify-between">
+                          <div className="font-jakarta text-foreground font-medium">
+                            <a href="https://www.borong.com/my" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2 underline">
+                              Borong (Dropee)
+                              <ExternalLink size={14} className="text-primary" />
+                            </a>
+                          </div>
+                          <span className="font-mono text-muted-foreground text-xs">
+                            2023
+                          </span>
+                        </div>
+                        <p className="font-jakarta text-muted-foreground text-sm mt-1">
+                          B2B Commerce
+                        </p>
                       </div>
-                       <span className="font-mono text-muted-foreground text-xs">
-                         2023
-                       </span>
                     </div>
-                    <p className="font-jakarta text-muted-foreground text-sm">
-                      B2B Commerce
-                    </p>
                   </div>
 
                   <div className="border border-border p-3 bg-white" style={{
                   borderRadius: '10px'
                 }}>
-                    <div className="flex items-center justify-between mb-1">
-                      <div className="font-jakarta text-foreground font-medium">
-                        <a href="https://policystreet.com.my/reinsurance" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2 underline">
-                          PolicyStreet
-                          <ExternalLink size={14} className="text-primary" />
-                        </a>
+                    <div className="flex items-start gap-3 mb-1">
+                      <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0 mt-0.5"></div>
+                      <div className="flex-1">
+                        <div className="flex items-center justify-between">
+                          <div className="font-jakarta text-foreground font-medium">
+                            <a href="https://policystreet.com.my/reinsurance" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2 underline">
+                              PolicyStreet
+                              <ExternalLink size={14} className="text-primary" />
+                            </a>
+                          </div>
+                          <span className="font-mono text-muted-foreground text-xs">
+                            2022 - 2023
+                          </span>
+                        </div>
+                        <p className="font-jakarta text-muted-foreground text-sm mt-1">
+                          InsurTech
+                        </p>
                       </div>
-                       <span className="font-mono text-muted-foreground text-xs">
-                         2022 - 2023
-                       </span>
                     </div>
-                    <p className="font-jakarta text-muted-foreground text-sm">
-                      InsurTech
-                    </p>
                   </div>
 
                   <div className="border border-border p-3 bg-white" style={{
                   borderRadius: '10px'
                 }}>
-                    <div className="flex items-center justify-between mb-1">
-                      <div className="font-jakarta text-foreground font-medium">
-                        <a href="https://senangstart.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2 underline">
-                          Fixcolab Group Sdn Bhd
-                          <ExternalLink size={14} className="text-primary" />
-                        </a>
+                    <div className="flex items-start gap-3 mb-1">
+                      <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0 mt-0.5"></div>
+                      <div className="flex-1">
+                        <div className="flex items-center justify-between">
+                          <div className="font-jakarta text-foreground font-medium">
+                            <a href="https://senangstart.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2 underline">
+                              Fixcolab Group Sdn Bhd
+                              <ExternalLink size={14} className="text-primary" />
+                            </a>
+                          </div>
+                          <span className="font-mono text-muted-foreground text-xs">
+                            2020 - 2022
+                          </span>
+                        </div>
+                        <p className="font-jakarta text-muted-foreground text-sm mt-1">
+                          Software and technology
+                        </p>
                       </div>
-                       <span className="font-mono text-muted-foreground text-xs">
-                         2020 - 2022
-                       </span>
                     </div>
-                    <p className="font-jakarta text-muted-foreground text-sm">
-                      Software and technology
-                    </p>
                   </div>
 
                   <div className="border border-border p-3 bg-white" style={{
                   borderRadius: '10px'
                 }}>
-                    <div className="flex items-center justify-between mb-1">
-                      <div className="font-jakarta text-foreground font-medium">
-                        Senangreka Venture
+                    <div className="flex items-start gap-3 mb-1">
+                      <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0 mt-0.5"></div>
+                      <div className="flex-1">
+                        <div className="flex items-center justify-between">
+                          <div className="font-jakarta text-foreground font-medium">
+                            Senangreka Venture
+                          </div>
+                          <span className="font-mono text-muted-foreground text-xs">
+                            2018 - 2020
+                          </span>
+                        </div>
+                        <p className="font-jakarta text-muted-foreground text-sm mt-1">
+                          Creative agency
+                        </p>
                       </div>
-                       <span className="font-mono text-muted-foreground text-xs">
-                         2018 - 2020
-                       </span>
                     </div>
-                    <p className="font-jakarta text-muted-foreground text-sm">
-                      Creative agency
-                    </p>
                   </div>
                 </div>
               </div>
@@ -420,55 +457,70 @@ Built for identity.</span>
                     <div className="border border-border p-3 bg-white" style={{
                   borderRadius: '10px'
                 }}>
-                      <div className="flex items-center justify-between mb-2">
-                        <div className="flex items-center gap-2">
-                           <a href="https://dealn.app/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                             Dealn
-                             <ExternalLink size={14} className="text-primary" />
-                           </a>
-                         </div>
-                         <span className="bg-green-500/20 text-green-700 dark:text-green-300 px-2 py-1 rounded text-xs font-jakarta">
-                           Active
-                         </span>
-                       </div>
-                       <p className="font-jakarta text-muted-foreground text-sm">
-                        Deal Experience Platform (DXP)
-                      </p>
+                      <div className="flex items-start gap-3 mb-2">
+                        <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0 mt-0.5"></div>
+                        <div className="flex-1">
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-2">
+                              <a href="https://dealn.app/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
+                                Dealn
+                                <ExternalLink size={14} className="text-primary" />
+                              </a>
+                            </div>
+                            <span className="bg-green-500/20 text-green-700 dark:text-green-300 px-2 py-1 rounded text-xs font-jakarta">
+                              Active
+                            </span>
+                          </div>
+                          <p className="font-jakarta text-muted-foreground text-sm mt-1">
+                            Deal Experience Platform (DXP)
+                          </p>
+                        </div>
+                      </div>
                     </div>
                     
                     <div className="border border-border p-3 bg-white" style={{
                   borderRadius: '10px'
                 }}>
-                      <div className="flex items-center justify-between mb-2">
-                        <div className="flex items-center gap-2">
-                           <a href="https://www.instagram.com/nobody.collective/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                             Nobody Collective
-                             <ExternalLink size={14} className="text-primary" />
-                           </a>
-                         </div>
-                         <span className="bg-green-500/20 text-green-700 dark:text-green-300 px-2 py-1 rounded text-xs font-jakarta">
-                           Active
-                         </span>
-                       </div>
-                       <p className="font-jakarta text-muted-foreground text-sm">
-                        Design Education Contents
-                      </p>
+                      <div className="flex items-start gap-3 mb-2">
+                        <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0 mt-0.5"></div>
+                        <div className="flex-1">
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-2">
+                              <a href="https://www.instagram.com/nobody.collective/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
+                                Nobody Collective
+                                <ExternalLink size={14} className="text-primary" />
+                              </a>
+                            </div>
+                            <span className="bg-green-500/20 text-green-700 dark:text-green-300 px-2 py-1 rounded text-xs font-jakarta">
+                              Active
+                            </span>
+                          </div>
+                          <p className="font-jakarta text-muted-foreground text-sm mt-1">
+                            Design Education Contents
+                          </p>
+                        </div>
+                      </div>
                     </div>
 
                     <div className="border border-border p-3 bg-white" style={{
                   borderRadius: '10px'
                 }}>
-                      <div className="flex items-center justify-between mb-2">
-                         <span className="font-jakarta text-foreground font-medium opacity-60">
-                           Designloka
-                         </span>
-                         <span className="bg-gray-500/20 text-gray-700 dark:text-gray-300 px-2 py-1 rounded text-xs font-jakarta">
-                           Inactive
-                         </span>
-                       </div>
-                       <p className="font-jakarta text-muted-foreground text-sm opacity-60">
-                        Unlimited Design Subscription
-                      </p>
+                      <div className="flex items-start gap-3 mb-2">
+                        <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0 mt-0.5 opacity-60"></div>
+                        <div className="flex-1">
+                          <div className="flex items-center justify-between">
+                            <span className="font-jakarta text-foreground font-medium opacity-60">
+                              Designloka
+                            </span>
+                            <span className="bg-gray-500/20 text-gray-700 dark:text-gray-300 px-2 py-1 rounded text-xs font-jakarta">
+                              Inactive
+                            </span>
+                          </div>
+                          <p className="font-jakarta text-muted-foreground text-sm opacity-60 mt-1">
+                            Unlimited Design Subscription
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
