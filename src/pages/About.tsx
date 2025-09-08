@@ -319,7 +319,7 @@ Built for identity.</span>
                   Work Experience
                 </h2>
                 <div className="space-y-3">
-                  <div className="border border-border p-3" style={{
+                  <div className="border border-border p-3 bg-white" style={{
                   borderRadius: '10px'
                 }}>
                     <div className="flex items-center justify-between mb-1">
@@ -336,7 +336,7 @@ Built for identity.</span>
                     </p>
                   </div>
                   
-                  <div className="border border-border p-3" style={{
+                  <div className="border border-border p-3 bg-white" style={{
                   borderRadius: '10px'
                 }}>
                     <div className="flex items-center justify-between mb-1">
@@ -355,7 +355,7 @@ Built for identity.</span>
                     </p>
                   </div>
 
-                  <div className="border border-border p-3" style={{
+                  <div className="border border-border p-3 bg-white" style={{
                   borderRadius: '10px'
                 }}>
                     <div className="flex items-center justify-between mb-1">
@@ -374,7 +374,7 @@ Built for identity.</span>
                     </p>
                   </div>
 
-                  <div className="border border-border p-3" style={{
+                  <div className="border border-border p-3 bg-white" style={{
                   borderRadius: '10px'
                 }}>
                     <div className="flex items-center justify-between mb-1">
@@ -393,7 +393,7 @@ Built for identity.</span>
                     </p>
                   </div>
 
-                  <div className="border border-border p-3" style={{
+                  <div className="border border-border p-3 bg-white" style={{
                   borderRadius: '10px'
                 }}>
                     <div className="flex items-center justify-between mb-1">
@@ -417,7 +417,7 @@ Built for identity.</span>
                     Side Projects
                   </h2>
                   <div className="space-y-3">
-                    <div className="border border-border p-3" style={{
+                    <div className="border border-border p-3 bg-white" style={{
                   borderRadius: '10px'
                 }}>
                       <div className="flex items-center justify-between mb-2">
@@ -436,7 +436,7 @@ Built for identity.</span>
                       </p>
                     </div>
                     
-                    <div className="border border-border p-3" style={{
+                    <div className="border border-border p-3 bg-white" style={{
                   borderRadius: '10px'
                 }}>
                       <div className="flex items-center justify-between mb-2">
@@ -455,7 +455,7 @@ Built for identity.</span>
                       </p>
                     </div>
 
-                    <div className="border border-border p-3" style={{
+                    <div className="border border-border p-3 bg-white" style={{
                   borderRadius: '10px'
                 }}>
                       <div className="flex items-center justify-between mb-2">
