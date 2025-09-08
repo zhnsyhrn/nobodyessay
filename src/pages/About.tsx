@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { ExternalLink } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { LazyImage } from "@/components/ui/lazy-image";
 const About = () => {
   return <div className="min-h-screen bg-background">
       <StickyNavbar />
@@ -70,49 +71,78 @@ Built for identity.</span>
                     <div className="aspect-[4/3] overflow-hidden relative" style={{
                       borderRadius: '10px'
                     }}>
-                      <img src="/lovable-uploads/cdb5672f-de57-4d19-a313-9bdec559de7b.png" alt="Group photo at university workshop" className="w-full h-full object-cover" />
+                      <LazyImage 
+                        src="/lovable-uploads/cdb5672f-de57-4d19-a313-9bdec559de7b.png" 
+                        alt="Group photo at university workshop" 
+                        className="w-full h-full object-cover" 
+                        preload={true} // Preload first image
+                      />
                     </div>
                   </CarouselItem>
                   <CarouselItem>
                     <div className="aspect-[4/3] overflow-hidden relative" style={{
                       borderRadius: '10px'
                     }}>
-                      <img src="/lovable-uploads/a78f735b-9b5e-496f-807c-d89d3bb3fbc1.png" alt="Speaking at entrepreneurship masterclass" className="w-full h-full object-cover" />
+                      <LazyImage 
+                        src="/lovable-uploads/a78f735b-9b5e-496f-807c-d89d3bb3fbc1.png" 
+                        alt="Speaking at entrepreneurship masterclass" 
+                        className="w-full h-full object-cover" 
+                      />
                     </div>
                   </CarouselItem>
                   <CarouselItem>
                     <div className="aspect-[4/3] overflow-hidden relative" style={{
                       borderRadius: '10px'
                     }}>
-                      <img src="/lovable-uploads/d0b90204-89f8-4b16-9387-912ec4ef8cf9.png" alt="Virtual workshop presentation" className="w-full h-full object-cover" />
+                      <LazyImage 
+                        src="/lovable-uploads/d0b90204-89f8-4b16-9387-912ec4ef8cf9.png" 
+                        alt="Virtual workshop presentation" 
+                        className="w-full h-full object-cover" 
+                      />
                     </div>
                   </CarouselItem>
                   <CarouselItem>
                     <div className="aspect-[4/3] overflow-hidden relative" style={{
                       borderRadius: '10px'
                     }}>
-                      <img src="/lovable-uploads/be876eca-c1a0-4e2f-940e-27d0df2042fa.png" alt="Hands-on workshop session" className="w-full h-full object-cover" />
+                      <LazyImage 
+                        src="/lovable-uploads/be876eca-c1a0-4e2f-940e-27d0df2042fa.png" 
+                        alt="Hands-on workshop session" 
+                        className="w-full h-full object-cover" 
+                      />
                     </div>
                   </CarouselItem>
                   <CarouselItem>
                     <div className="aspect-[4/3] overflow-hidden relative" style={{
                       borderRadius: '10px'
                     }}>
-                      <img src="/lovable-uploads/56d6ab0a-15f4-4d7c-80b5-6e358fb73882.png" alt="Team photo at bootcamp event" className="w-full h-full object-cover" />
+                      <LazyImage 
+                        src="/lovable-uploads/56d6ab0a-15f4-4d7c-80b5-6e358fb73882.png" 
+                        alt="Team photo at bootcamp event" 
+                        className="w-full h-full object-cover" 
+                      />
                     </div>
                   </CarouselItem>
                   <CarouselItem>
                     <div className="aspect-[4/3] overflow-hidden relative" style={{
                       borderRadius: '10px'
                     }}>
-                      <img src="/lovable-uploads/8f343185-b806-43de-b723-33d36c31b526.png" alt="Large group photo at university event" className="w-full h-full object-cover" />
+                      <LazyImage 
+                        src="/lovable-uploads/8f343185-b806-43de-b723-33d36c31b526.png" 
+                        alt="Large group photo at university event" 
+                        className="w-full h-full object-cover" 
+                      />
                     </div>
                   </CarouselItem>
                   <CarouselItem>
                     <div className="aspect-[4/3] overflow-hidden relative" style={{
                       borderRadius: '10px'
                     }}>
-                      <img src="/lovable-uploads/48722f75-9955-4d59-9183-79b77034c818.png" alt="Presenting at startup event" className="w-full h-full object-cover" />
+                      <LazyImage 
+                        src="/lovable-uploads/48722f75-9955-4d59-9183-79b77034c818.png" 
+                        alt="Presenting at startup event" 
+                        className="w-full h-full object-cover" 
+                      />
                     </div>
                   </CarouselItem>
                 </CarouselContent>

@@ -9,6 +9,7 @@ import ComingSoonDialog from "@/components/ComingSoonDialog";
 import CallToAction from "@/components/CallToAction";
 import Autoplay from "embla-carousel-autoplay";
 import { ArrowRight } from "lucide-react";
+import { LazyImage } from "@/components/ui/lazy-image";
 
 // Sample project images - you can replace these with actual project images
 import galleryImage1 from "@/assets/gallery-01.jpg";
@@ -132,11 +133,11 @@ const Studio = () => {
             const CardContent = () => (
               <div className="rounded-[10px] overflow-hidden bg-white">
                 <div className="aspect-video overflow-hidden bg-muted">
-                  <img 
+                  <LazyImage 
                     src={getImageSrc(index)} 
                     alt={project.title} 
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
-                    loading="lazy" 
+                    preload={index < 4} // Preload first 4 images for above-the-fold content
                   />
                 </div>
                 <div className="p-2 sm:p-3" style={{

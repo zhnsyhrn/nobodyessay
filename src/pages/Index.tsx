@@ -12,6 +12,7 @@ import { Instagram, Linkedin, X } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
+import { LazyImage } from "@/components/ui/lazy-image";
 
 // Portfolio design images - Your latest design portfolio work
 const portfolioImages = [
@@ -85,7 +86,12 @@ const Index = () => {
                   <Dialog>
                     <DialogTrigger asChild>
                       <div className="aspect-square overflow-hidden rounded-[10px] cursor-pointer">
-                        <img src={image} alt={`Design portfolio work ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                        <LazyImage 
+                          src={image} 
+                          alt={`Design portfolio work ${index + 1}`} 
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                          preload={index < 3} // Preload first 3 images for better LCP
+                        />
                       </div>
                     </DialogTrigger>
                     <DialogContent className="max-w-2xl w-full p-4 border-0">
@@ -94,7 +100,12 @@ const Index = () => {
                           <X className="h-4 w-4" />
                           <span className="sr-only">Close</span>
                         </DialogClose>
-                        <img src={image} alt={`Design portfolio work ${index + 1}`} className="w-full h-auto rounded-[10px]" />
+                        <LazyImage 
+                          src={image} 
+                          alt={`Design portfolio work ${index + 1}`} 
+                          className="w-full h-auto rounded-[10px]" 
+                          preload={true} // Preload dialog images since user explicitly clicked
+                        />
                       </div>
                     </DialogContent>
                   </Dialog>
