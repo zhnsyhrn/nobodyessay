@@ -153,16 +153,6 @@ Built for identity.</span>
                    />
                 </div>
                 
-                <div className="aspect-[4/3] overflow-hidden relative" style={{
-                  borderRadius: '10px'
-                }}>
-                   <LazyImage 
-                     src="/lovable-uploads/48722f75-9955-4d59-9183-79b77034c818.png" 
-                     alt="Presenting at startup event" 
-                     className="w-full h-full object-cover"
-                     blurUp={true} // Enable blur-up effect
-                   />
-                </div>
               </div>
             </div>
           </div>
