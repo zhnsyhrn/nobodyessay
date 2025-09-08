@@ -55,7 +55,7 @@ Built for identity.</span>
       </section>
 
       {/* Engagements Section */}
-      <section className="pt-6 sm:pt-8 pb-12 sm:pb-16 px-4 sm:px-6">
+      <section className="pt-6 sm:pt-8 pb-12 sm:pb-16 px-4 sm:px-6 bg-[#f3f3f3]">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Left Column - Text Content */}
