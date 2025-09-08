@@ -298,7 +298,7 @@ Built for identity.</span>
                 borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0"></div>
+                         <img src="/lovable-uploads/e6ecb381-b351-4f44-b892-7e3efcb31c42.png" alt="Meca Consultancy logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0" />
                         <a href="https://meca.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                           Meca Consultancy
                           <ExternalLink size={14} className="text-primary" />
@@ -310,7 +310,7 @@ Built for identity.</span>
                 borderRadius: '10px'
               }}>
                       <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0"></div>
+                        <img src="/lovable-uploads/6ec75d24-bfe9-44c6-afff-4c215221d6bb.png" alt="Paperballad & Co. logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0" />
                         <a href="https://paperballad.com/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
                           Paperballad & Co.
                           <ExternalLink size={14} className="text-primary" />
