@@ -357,7 +357,7 @@ Built for identity.</span>
                   borderRadius: '10px'
                 }}>
                     <div className="flex items-start gap-3 mb-1">
-                      <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0 mt-0.5"></div>
+                       <img src="/lovable-uploads/ea65d18a-23b5-4265-8264-2531abb9878b.png" alt="Borong logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0 mt-0.5" />
                       <div className="flex-1">
                         <div className="flex items-center justify-between">
                           <div className="font-jakarta text-foreground font-medium">
@@ -381,7 +381,7 @@ Built for identity.</span>
                   borderRadius: '10px'
                 }}>
                     <div className="flex items-start gap-3 mb-1">
-                      <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0 mt-0.5"></div>
+                       <img src="/lovable-uploads/7fb05563-421a-490c-a6a6-bf42424d4004.png" alt="PolicyStreet logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0 mt-0.5" />
                       <div className="flex-1">
                         <div className="flex items-center justify-between">
                           <div className="font-jakarta text-foreground font-medium">
@@ -405,7 +405,7 @@ Built for identity.</span>
                   borderRadius: '10px'
                 }}>
                     <div className="flex items-start gap-3 mb-1">
-                      <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0 mt-0.5"></div>
+                       <img src="/lovable-uploads/11824137-1783-42f5-9bfa-c07f47d2a9cf.png" alt="Fixcolab Group logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0 mt-0.5" />
                       <div className="flex-1">
                         <div className="flex items-center justify-between">
                           <div className="font-jakarta text-foreground font-medium">
@@ -429,7 +429,7 @@ Built for identity.</span>
                   borderRadius: '10px'
                 }}>
                     <div className="flex items-start gap-3 mb-1">
-                      <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0 mt-0.5"></div>
+                       <img src="/lovable-uploads/038a006c-27e6-4a90-8ac8-038eb8276732.png" alt="Senangreka Venture logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0 mt-0.5" />
                       <div className="flex-1">
                         <div className="flex items-center justify-between">
                           <div className="font-jakarta text-foreground font-medium">
