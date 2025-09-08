@@ -2,8 +2,6 @@ import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
 import { ExternalLink } from "lucide-react";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
 import { LazyImage } from "@/components/ui/lazy-image";
 const About = () => {
   return <div className="min-h-screen bg-background">
@@ -85,107 +83,87 @@ Built for identity.</span>
               </div>
             </div>
 
-            {/* Right Column - Image Slider */}
+            {/* Right Column - Image Grid */}
             <div>
-              <Carousel className="w-full relative border border-border overflow-hidden" style={{
-                borderRadius: '10px'
-              }} plugins={[Autoplay({
-                delay: 3000,
-                stopOnInteraction: true
-              })]} opts={{
-                align: "start",
-                loop: true
-              }}>
-                <CarouselContent>
-                  <CarouselItem>
-                    <div className="aspect-[4/3] overflow-hidden relative" style={{
-                      borderRadius: '10px'
-                    }}>
-                       <LazyImage 
-                         src="/lovable-uploads/cdb5672f-de57-4d19-a313-9bdec559de7b.png" 
-                         alt="Group photo at university workshop" 
-                         className="w-full h-full object-cover" 
-                         priority={true} // High priority for first carousel image
-                         blurUp={true} // Enable blur-up effect
-                       />
-                    </div>
-                  </CarouselItem>
-                  <CarouselItem>
-                    <div className="aspect-[4/3] overflow-hidden relative" style={{
-                      borderRadius: '10px'
-                    }}>
-                       <LazyImage 
-                         src="/lovable-uploads/a78f735b-9b5e-496f-807c-d89d3bb3fbc1.png" 
-                         alt="Speaking at entrepreneurship masterclass" 
-                         className="w-full h-full object-cover"
-                         blurUp={true} // Enable blur-up effect
-                       />
-                    </div>
-                  </CarouselItem>
-                  <CarouselItem>
-                    <div className="aspect-[4/3] overflow-hidden relative" style={{
-                      borderRadius: '10px'
-                    }}>
-                       <LazyImage 
-                         src="/lovable-uploads/d0b90204-89f8-4b16-9387-912ec4ef8cf9.png" 
-                         alt="Virtual workshop presentation" 
-                         className="w-full h-full object-cover"
-                         blurUp={true} // Enable blur-up effect
-                       />
-                    </div>
-                  </CarouselItem>
-                  <CarouselItem>
-                    <div className="aspect-[4/3] overflow-hidden relative" style={{
-                      borderRadius: '10px'
-                    }}>
-                       <LazyImage 
-                         src="/lovable-uploads/be876eca-c1a0-4e2f-940e-27d0df2042fa.png" 
-                         alt="Hands-on workshop session" 
-                         className="w-full h-full object-cover"
-                         blurUp={true} // Enable blur-up effect
-                       />
-                    </div>
-                  </CarouselItem>
-                  <CarouselItem>
-                    <div className="aspect-[4/3] overflow-hidden relative" style={{
-                      borderRadius: '10px'
-                    }}>
-                       <LazyImage 
-                         src="/lovable-uploads/56d6ab0a-15f4-4d7c-80b5-6e358fb73882.png" 
-                         alt="Team photo at bootcamp event" 
-                         className="w-full h-full object-cover"
-                         blurUp={true} // Enable blur-up effect
-                       />
-                    </div>
-                  </CarouselItem>
-                  <CarouselItem>
-                    <div className="aspect-[4/3] overflow-hidden relative" style={{
-                      borderRadius: '10px'
-                    }}>
-                       <LazyImage 
-                         src="/lovable-uploads/8f343185-b806-43de-b723-33d36c31b526.png" 
-                         alt="Large group photo at university event" 
-                         className="w-full h-full object-cover"
-                         blurUp={true} // Enable blur-up effect
-                       />
-                    </div>
-                  </CarouselItem>
-                  <CarouselItem>
-                    <div className="aspect-[4/3] overflow-hidden relative" style={{
-                      borderRadius: '10px'
-                    }}>
-                       <LazyImage 
-                         src="/lovable-uploads/48722f75-9955-4d59-9183-79b77034c818.png" 
-                         alt="Presenting at startup event" 
-                         className="w-full h-full object-cover"
-                         blurUp={true} // Enable blur-up effect
-                       />
-                    </div>
-                  </CarouselItem>
-                </CarouselContent>
-                <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10" />
-                <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10" />
-              </Carousel>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="aspect-[4/3] overflow-hidden relative" style={{
+                  borderRadius: '10px'
+                }}>
+                   <LazyImage 
+                     src="/lovable-uploads/cdb5672f-de57-4d19-a313-9bdec559de7b.png" 
+                     alt="Group photo at university workshop" 
+                     className="w-full h-full object-cover" 
+                     priority={true} // High priority for first image
+                     blurUp={true} // Enable blur-up effect
+                   />
+                </div>
+                
+                <div className="aspect-[4/3] overflow-hidden relative" style={{
+                  borderRadius: '10px'
+                }}>
+                   <LazyImage 
+                     src="/lovable-uploads/a78f735b-9b5e-496f-807c-d89d3bb3fbc1.png" 
+                     alt="Speaking at entrepreneurship masterclass" 
+                     className="w-full h-full object-cover"
+                     blurUp={true} // Enable blur-up effect
+                   />
+                </div>
+                
+                <div className="aspect-[4/3] overflow-hidden relative" style={{
+                  borderRadius: '10px'
+                }}>
+                   <LazyImage 
+                     src="/lovable-uploads/d0b90204-89f8-4b16-9387-912ec4ef8cf9.png" 
+                     alt="Virtual workshop presentation" 
+                     className="w-full h-full object-cover"
+                     blurUp={true} // Enable blur-up effect
+                   />
+                </div>
+                
+                <div className="aspect-[4/3] overflow-hidden relative" style={{
+                  borderRadius: '10px'
+                }}>
+                   <LazyImage 
+                     src="/lovable-uploads/be876eca-c1a0-4e2f-940e-27d0df2042fa.png" 
+                     alt="Hands-on workshop session" 
+                     className="w-full h-full object-cover"
+                     blurUp={true} // Enable blur-up effect
+                   />
+                </div>
+                
+                <div className="aspect-[4/3] overflow-hidden relative" style={{
+                  borderRadius: '10px'
+                }}>
+                   <LazyImage 
+                     src="/lovable-uploads/56d6ab0a-15f4-4d7c-80b5-6e358fb73882.png" 
+                     alt="Team photo at bootcamp event" 
+                     className="w-full h-full object-cover"
+                     blurUp={true} // Enable blur-up effect
+                   />
+                </div>
+                
+                <div className="aspect-[4/3] overflow-hidden relative" style={{
+                  borderRadius: '10px'
+                }}>
+                   <LazyImage 
+                     src="/lovable-uploads/8f343185-b806-43de-b723-33d36c31b526.png" 
+                     alt="Large group photo at university event" 
+                     className="w-full h-full object-cover"
+                     blurUp={true} // Enable blur-up effect
+                   />
+                </div>
+                
+                <div className="aspect-[4/3] overflow-hidden relative" style={{
+                  borderRadius: '10px'
+                }}>
+                   <LazyImage 
+                     src="/lovable-uploads/48722f75-9955-4d59-9183-79b77034c818.png" 
+                     alt="Presenting at startup event" 
+                     className="w-full h-full object-cover"
+                     blurUp={true} // Enable blur-up effect
+                   />
+                </div>
+              </div>
             </div>
           </div>
         </div>
