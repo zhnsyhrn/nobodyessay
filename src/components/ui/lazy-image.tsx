@@ -1,33 +1,19 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { cn } from '@/lib/utils';
-import { imagePreloader } from '@/utils/imagePreloader';
+import React, { useState, useEffect, useRef } from 'react';
 import { Skeleton } from '@/components/ui/skeleton';
-import { 
-  getOptimalImagePath, 
-  generateImageSrcSet, 
-  generateSizesAttribute,
-  generateLQIP,
-  ImagePerformanceMonitor,
-  getOptimalQuality,
-  type ImageVariant 
-} from '@/utils/imageOptimization';
 
-interface LazyImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
+interface LazyImageProps {
   src: string;
   alt: string;
   className?: string;
   preload?: boolean;
-  placeholderSrc?: string;
-  blurUp?: boolean;
-  priority?: boolean;
-  variants?: ImageVariant[];
-  sizes?: string;
-  quality?: number;
+  placeholderSrc?: string; // Low-quality placeholder for progressive loading
+  blurUp?: boolean; // Enable blur-up technique
+  priority?: boolean; // High priority loading for critical images
   onLoad?: () => void;
   onError?: () => void;
 }
 
-const LazyImage: React.FC<LazyImageProps> = ({
+export const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
   className = '',
@@ -35,64 +21,50 @@ const LazyImage: React.FC<LazyImageProps> = ({
   placeholderSrc,
   blurUp = true,
   priority = false,
-  variants,
-  sizes,
-  quality,
   onLoad,
-  onError,
-  ...props
+  onError
 }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [inView, setInView] = useState(preload || priority);
   const [placeholderLoaded, setPlaceholderLoaded] = useState(false);
   const [fullImageLoaded, setFullImageLoaded] = useState(false);
-  const [optimizedSrc, setOptimizedSrc] = useState(src);
-  const [srcSet, setSrcSet] = useState<string>('');
-  
   const imgRef = useRef<HTMLImageElement>(null);
   const placeholderRef = useRef<HTMLImageElement>(null);
-  const performanceMonitor = ImagePerformanceMonitor.getInstance();
 
-  // Initialize optimized image source and srcset
-  useEffect(() => {
-    const initializeImage = async () => {
-      try {
-        const optimized = await getOptimalImagePath(src);
-        setOptimizedSrc(optimized);
-        
-        if (variants && variants.length > 0) {
-          const generatedSrcSet = generateImageSrcSet(src, variants);
-          setSrcSet(generatedSrcSet);
-        }
-      } catch (error) {
-        console.warn('Failed to optimize image:', error);
-        setOptimizedSrc(src);
-      }
-    };
-    
-    initializeImage();
-  }, [src, variants]);
+  // Create low-quality placeholder URL if not provided
+  const getLowQualityPlaceholder = (originalSrc: string) => {
+    if (placeholderSrc) return placeholderSrc;
+    // For uploaded images, we could generate a smaller version
+    // For now, we'll use a data URL for a tiny blurred placeholder
+    return "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='1' height='1' fill='%23f3f4f6'/%3E%3C/svg%3E";
+  };
 
-  // Setup intersection observer for lazy loading
+  // Enhanced Intersection Observer for better performance
   useEffect(() => {
-    if (priority || preload) {
-      setInView(true);
-      return;
-    }
+    if (preload || priority) return; // Skip observer for critical images
 
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setInView(true);
-            observer.unobserve(entry.target);
-          }
-        });
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          // Preload next images when current comes into view
+          const nextImages = entry.target.parentElement?.nextElementSibling?.querySelectorAll('img[data-src]');
+          nextImages?.forEach((img, index) => {
+            if (index < 2) { // Preload next 2 images
+              const dataSrc = img.getAttribute('data-src');
+              if (dataSrc) {
+                const preloadImg = new Image();
+                preloadImg.src = dataSrc;
+              }
+            }
+          });
+          observer.disconnect();
+        }
       },
-      {
-        rootMargin: '100px', // Increased margin for better preloading
-        threshold: 0.1
+      { 
+        rootMargin: priority ? '200px' : '100px', // Larger margin for priority images
+        threshold: [0, 0.1, 0.25] // Multiple thresholds for better tracking
       }
     );
 
@@ -100,168 +72,73 @@ const LazyImage: React.FC<LazyImageProps> = ({
       observer.observe(imgRef.current);
     }
 
-    return () => {
-      if (imgRef.current) {
-        observer.unobserve(imgRef.current);
-      }
-    };
-  }, [priority, preload]);
+    return () => observer.disconnect();
+  }, [preload, priority]);
 
-  // Load placeholder image
+  // Handle placeholder image load
   useEffect(() => {
-    if (!inView) return;
-    
-    const lqipSrc = placeholderSrc || (blurUp ? generateLQIP(src) : undefined);
-    if (!lqipSrc) return;
-    
+    if (!inView || !placeholderSrc) return;
+
     const img = new Image();
     img.onload = () => setPlaceholderLoaded(true);
-    img.onerror = () => {
-      // Fallback to skeleton if LQIP fails
-      setPlaceholderLoaded(false);
-    };
-    img.src = lqipSrc;
-  }, [inView, placeholderSrc, blurUp, src]);
+    img.src = getLowQualityPlaceholder(src);
+  }, [inView, placeholderSrc, src]);
 
-  // Load main image with performance monitoring
-  useEffect(() => {
-    if (!inView || !optimizedSrc) return;
-    
-    // Start performance tracking
-    performanceMonitor.startTracking(optimizedSrc);
-    
-    const img = new Image();
-    
-    img.onload = () => {
-      performanceMonitor.endTracking(optimizedSrc);
-      setFullImageLoaded(true);
-      setLoading(false);
-      onLoad?.();
-    };
-    
-    img.onerror = () => {
-      performanceMonitor.endTracking(optimizedSrc);
-      // Try fallback to original source if optimized fails
-      if (optimizedSrc !== src) {
-        setOptimizedSrc(src);
-        return;
-      }
-      setError(true);
-      setLoading(false);
-      onError?.();
-    };
+  const handleFullImageLoad = () => {
+    setFullImageLoaded(true);
+    setLoading(false);
+    onLoad?.();
+  };
 
-    // Set responsive attributes
-    if (srcSet) {
-      img.srcset = srcSet;
-    }
-    if (sizes) {
-      img.sizes = sizes;
-    }
-
-    // Use preloader if available, otherwise load directly
-    if (preload) {
-      imagePreloader.preload(optimizedSrc, { 
-        priority: priority ? 'high' : 'low',
-        timeout: priority ? 5000 : 10000 
-      })
-        .then(() => {
-          performanceMonitor.endTracking(optimizedSrc);
-          setFullImageLoaded(true);
-          setLoading(false);
-          onLoad?.();
-        })
-        .catch(() => {
-          performanceMonitor.endTracking(optimizedSrc);
-          if (optimizedSrc !== src) {
-            setOptimizedSrc(src);
-            return;
-          }
-          setError(true);
-          setLoading(false);
-          onError?.();
-        });
-    } else {
-      img.src = optimizedSrc;
-    }
-  }, [inView, optimizedSrc, src, srcSet, sizes, preload, priority, onLoad, onError, performanceMonitor]);
-
-  if (error) {
-    return (
-      <div 
-        className={cn(
-          "flex items-center justify-center bg-muted text-muted-foreground rounded-md",
-          className
-        )}
-        {...props}
-      >
-        <div className="text-center p-4">
-          <div className="text-2xl mb-2">📷</div>
-          <span className="text-sm">Image unavailable</span>
-        </div>
-      </div>
-    );
-  }
+  const handleError = () => {
+    setLoading(false);
+    setError(true);
+    onError?.();
+  };
 
   return (
-    <div className={cn("relative overflow-hidden", className)} {...props}>
-      {/* Loading skeleton with shimmer effect */}
+    <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
+      {/* Loading skeleton */}
       {loading && !placeholderLoaded && (
-        <Skeleton className="absolute inset-0 w-full h-full animate-pulse" />
+        <Skeleton className="absolute inset-0 w-full h-full" />
       )}
       
-      {/* Placeholder/LQIP */}
-      {((placeholderSrc && placeholderLoaded) || (blurUp && placeholderLoaded)) && !fullImageLoaded && (
+      {/* Low-quality placeholder with blur effect */}
+      {placeholderSrc && placeholderLoaded && !fullImageLoaded && (
         <img
           ref={placeholderRef}
-          src={placeholderSrc || generateLQIP(src)}
-          alt={`${alt} (loading)`}
-          className={cn(
-            "absolute inset-0 w-full h-full object-cover transition-all duration-300",
-            blurUp && "filter blur-sm scale-105",
-            "animate-pulse"
-          )}
-          loading="eager"
+          src={getLowQualityPlaceholder(src)}
+          alt=""
+          className={`absolute inset-0 w-full h-full object-cover ${
+            blurUp ? 'filter blur-sm scale-105' : ''
+          } transition-all duration-300`}
+          aria-hidden="true"
         />
+      )}
+      
+      {/* Error state */}
+      {error && (
+        <div className="absolute inset-0 flex items-center justify-center bg-muted text-muted-foreground text-sm">
+          Failed to load image
+        </div>
       )}
       
       {/* Main image */}
       {inView && (
         <img
-          ref={imgRef}
-          src={optimizedSrc}
-          srcSet={srcSet || undefined}
-          sizes={sizes || undefined}
+          src={src}
           alt={alt}
-          className={cn(
-            "w-full h-full object-cover transition-all duration-500 ease-out",
-            fullImageLoaded ? "opacity-100 scale-100" : "opacity-0 scale-105"
-          )}
-          loading={priority ? "eager" : "lazy"}
-          fetchPriority={priority ? "high" : "low"}
-          decoding={priority ? "sync" : "async"}
-          onLoad={() => {
-            setFullImageLoaded(true);
-            setLoading(false);
-            onLoad?.();
-          }}
-          onError={() => {
-            setError(true);
-            setLoading(false);
-            onError?.();
-          }}
-          {...props}
+          data-src={src} // For preloading detection
+          className={`w-full h-full object-cover transition-all duration-500 ${
+            fullImageLoaded ? 'opacity-100' : 'opacity-0'
+          } ${className}`}
+          onLoad={handleFullImageLoad}
+          onError={handleError}
+          loading={priority ? 'eager' : 'lazy'}
+          decoding={priority ? 'sync' : 'async'}
+          fetchPriority={priority ? 'high' : 'auto'}
         />
-      )}
-      
-      {/* Loading progress indicator for slow connections */}
-      {loading && inView && (
-        <div className="absolute bottom-2 right-2">
-          <div className="w-6 h-6 border-2 border-primary/30 border-t-primary rounded-full animate-spin"></div>
-        </div>
       )}
     </div>
   );
 };
-
-export { LazyImage };

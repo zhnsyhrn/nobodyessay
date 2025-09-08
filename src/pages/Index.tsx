@@ -14,7 +14,6 @@ import Autoplay from "embla-carousel-autoplay";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { LazyImage } from "@/components/ui/lazy-image";
 import { useCarouselPreloader } from "@/hooks/useImagePreloader";
-import { generateSizesAttribute, type ImageVariant } from "@/utils/imageOptimization";
 
 // Portfolio design images - Your latest design portfolio work
 const portfolioImages = [
@@ -36,21 +35,8 @@ const Index = () => {
   const [count, setCount] = React.useState(0);
   const galleryImages = portfolioImages;
 
-  // Use carousel preloader for better performance
-  useCarouselPreloader(galleryImages, current, 3); // Preload 3 images ahead
-
-  // Define responsive image variants for carousel
-  const carouselImageVariants: ImageVariant[] = [
-    { width: 400, quality: 75 },
-    { width: 800, quality: 85 },
-    { width: 1200, quality: 90 }
-  ];
-
-  const carouselSizes = generateSizesAttribute([
-    { condition: '(max-width: 640px)', size: '100vw' },
-    { condition: '(max-width: 1024px)', size: '80vw' },
-    { condition: '(min-width: 1025px)', size: '60vw' }
-  ]);
+  // Preload carousel images intelligently
+  useCarouselPreloader(galleryImages, current, 3);
 
   React.useEffect(() => {
     if (!api) {
@@ -109,12 +95,9 @@ const Index = () => {
                            src={image} 
                            alt={`Design portfolio work ${index + 1}`} 
                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                           priority={index === 0} // Only first image has priority
-                           preload={index <= 2} // Preload first 3 images
-                           blurUp={true}
-                           variants={carouselImageVariants}
-                           sizes={carouselSizes}
-                           quality={85}
+                           priority={index < 2} // High priority for first 2 images
+                           preload={index < 3} // Preload first 3 images for better LCP
+                           blurUp={true} // Enable blur-up effect
                          />
                       </div>
                     </DialogTrigger>
@@ -126,17 +109,10 @@ const Index = () => {
                         </DialogClose>
                          <LazyImage 
                            src={image} 
-                           alt={`Design portfolio work ${index + 1} - enlarged view`} 
+                           alt={`Design portfolio work ${index + 1}`} 
                            className="w-full h-auto rounded-[10px]" 
-                           priority={true}
-                           blurUp={false}
-                           variants={[
-                             { width: 800, quality: 90 },
-                             { width: 1200, quality: 95 },
-                             { width: 1600, quality: 100 }
-                           ]}
-                           sizes="90vw"
-                           quality={95}
+                           priority={true} // High priority for dialog images since user explicitly clicked
+                           blurUp={true} // Enable blur-up effect
                          />
                       </div>
                     </DialogContent>
