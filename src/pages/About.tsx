@@ -61,25 +61,25 @@ Built for identity.</span>
             {/* Left Column - Text Content */}
             <div className="flex flex-col justify-center">
               <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
-                Engagements
+                Speaking & Participation
               </h2>
               <p className="font-jakarta leading-relaxed mb-6 text-base" style={{
                 color: '#606060'
               }}>
-                I occasionally accept invitations to speak at events, workshops & consultations to share things that I care about.
+                I occasionally speak at events, workshops, and consultations, and have also joined startup accelerators and workshops as a participant.
               </p>
 
               {/* Workshops List */}
               <div className="space-y-3">
-                <div className="font-jakarta text-muted-foreground">
+                <div className="font-jakarta text-muted-foreground" style={{ fontSize: '16px' }}>
                   <span className="text-foreground font-medium">Canva Design Workshop, Universiti Malaysia Sabah</span> • <span className="font-mono">2022</span>
                 </div>
                 <div className="h-px bg-border"></div>
-                <div className="font-jakarta text-muted-foreground">
+                <div className="font-jakarta text-muted-foreground" style={{ fontSize: '16px' }}>
                   <span className="text-foreground font-medium">Createz Bootcamp 3.0, University of Malaya</span> • <span className="font-mono">2020</span>
                 </div>
                 <div className="h-px bg-border"></div>
-                <div className="font-jakarta text-muted-foreground">
+                <div className="font-jakarta text-muted-foreground" style={{ fontSize: '16px' }}>
                   <span className="text-foreground font-medium">University Entrepreneurship Masterclass, StartupMalaysia</span> • <span className="font-mono">2018</span>
                 </div>
               </div>
