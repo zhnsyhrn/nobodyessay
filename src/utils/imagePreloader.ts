@@ -15,7 +15,7 @@ class ImagePreloader {
   private isProcessing = false;
 
   /**
-   * Preload a single image
+   * Preload a single image with enhanced error handling
    */
   preload(src: string, options: PreloadOptions = {}): Promise<HTMLImageElement> {
     // Return cached promise if already loading/loaded
@@ -23,7 +23,7 @@ class ImagePreloader {
       return this.cache.get(src)!;
     }
 
-    const promise = this.loadImage(src, options);
+    const promise = this.loadImageWithRetry(src, options);
     this.cache.set(src, promise);
 
     return promise;
@@ -51,6 +51,21 @@ class ImagePreloader {
   }
 
   /**
+   * Load image with retry mechanism and enhanced error handling
+   */
+  private loadImageWithRetry(src: string, options: PreloadOptions = {}, retryCount = 0): Promise<HTMLImageElement> {
+    const maxRetries = 2;
+    return this.loadImage(src, options).catch((error) => {
+      if (retryCount < maxRetries) {
+        console.warn(`Retrying image load (${retryCount + 1}/${maxRetries}):`, src);
+        return new Promise(resolve => setTimeout(resolve, 1000 * (retryCount + 1)))
+          .then(() => this.loadImageWithRetry(src, options, retryCount + 1));
+      }
+      throw error;
+    });
+  }
+
+  /**
    * Load image with proper error handling and timeout
    */
   private loadImage(src: string, options: PreloadOptions = {}): Promise<HTMLImageElement> {
@@ -60,6 +75,8 @@ class ImagePreloader {
 
       // Set up timeout
       const timeoutId = setTimeout(() => {
+        img.onload = null;
+        img.onerror = null;
         reject(new Error(`Image load timeout: ${src}`));
       }, timeout);
 
@@ -86,6 +103,17 @@ class ImagePreloader {
       // Set fetch priority for supported browsers
       if ('fetchPriority' in img && options.priority) {
         (img as any).fetchPriority = options.priority;
+      }
+
+      // Add decode optimization for modern browsers
+      if ('decode' in img) {
+        img.decode().then(() => {
+          clearTimeout(timeoutId);
+          resolve(img);
+        }).catch(() => {
+          clearTimeout(timeoutId);
+          resolve(img); // Fallback to regular load
+        });
       }
 
       img.src = src;

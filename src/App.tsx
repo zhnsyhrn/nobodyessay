@@ -14,6 +14,7 @@ import Post from "./pages/Post";
 import ProjectDetail from "./pages/ProjectDetail";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
+import ImagePerformanceStats from "./components/ImagePerformanceStats";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +38,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <ImagePerformanceStats />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
