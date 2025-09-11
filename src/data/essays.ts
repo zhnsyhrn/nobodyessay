@@ -25,7 +25,6 @@ Buttons are one of the most essential interactive UI elements, yet they're also 
 
 **Summary:**
 
-:::warning
 ❌ Disabled state looks active, so users click without feedback.
 
 ❌ Overdone transitions are flashy but distracting.
@@ -33,7 +32,6 @@ Buttons are one of the most essential interactive UI elements, yet they're also 
 ❌ Low contrast makes it hard to distinguish states and leads to errors.
 
 ❌ Ignoring accessibility excludes users relying on assistive tech.
-:::
 
 ## Why Button States Matter in UX Design
 
