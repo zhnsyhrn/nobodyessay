@@ -26,8 +26,6 @@ Buttons are one of the most essential interactive UI elements, yet they're also 
 **Summary:**
 
 :::warning
-❌ Inconsistent visual cues confuse users across the interface.
-
 ❌ Disabled state looks active, so users click without feedback.
 
 ❌ Overdone transitions are flashy but distracting.
