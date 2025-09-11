@@ -20,8 +20,8 @@ export default {
 		extend: {
 			fontFamily: {
 				'display': ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
-				'typewriter': ['Space Mono', 'monospace'],
-				'mono': ['Space Mono', 'monospace'],
+				'typewriter': ['Inter', 'sans-serif'],
+				'mono': ['Inter', 'sans-serif'],
 				'lyon': ['Lyon Text', 'serif'],
 				'jakarta': ['Plus Jakarta Sans', 'sans-serif'],
 			},

@@ -133,7 +133,7 @@ All colors MUST be HSL.
   }
 
   .font-typewriter {
-    font-family: 'Space Mono', monospace;
+    font-family: 'Inter', sans-serif;
     letter-spacing: 0.02em;
     color: hsl(var(--muted-foreground));
     font-size: 14px;
