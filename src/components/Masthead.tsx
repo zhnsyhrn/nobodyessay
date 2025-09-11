@@ -46,7 +46,7 @@ const Masthead = () => {
         >
           <div className="border-t border-zinc-300 pt-4">
             <div className="space-y-2">
-              <p className="font-sans text-sm text-[#3F3F46] leading-relaxed">
+              <p className="font-sans text-sm font-bold text-[#3F3F46] leading-relaxed">
                 Identification is based on participation records at{" "}
                 <a 
                   href="https://malaysia.design" 
@@ -58,7 +58,7 @@ const Masthead = () => {
                 </a>
                 .
               </p>
-              <p className="font-sans text-sm text-[#3F3F46] leading-relaxed">
+              <p className="font-sans text-xs font-normal text-[#3F3F46] leading-relaxed">
                 A non-profit initiative to showcase Malaysian creative talent globally. This is community-driven and voluntary, non-government affiliated.
               </p>
             </div>
