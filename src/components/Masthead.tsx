@@ -33,7 +33,7 @@ const Masthead = () => {
             aria-controls="masthead-content"
           >
             <span className="hidden sm:inline">How to identify</span>
-            <span className="sm:hidden">identify</span>
+            <span className="sm:hidden">Identify</span>
             {isExpanded ? (
               <ChevronUp size={14} />
             ) : (
