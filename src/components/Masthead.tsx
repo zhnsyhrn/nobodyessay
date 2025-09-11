@@ -14,7 +14,11 @@ const Masthead = () => {
       <div className={`max-w-4xl mx-auto ${isExpanded ? 'py-1.5' : 'py-1.5'}`}>
         <div className={`flex items-center justify-start gap-2 ${isExpanded ? 'h-auto' : 'h-4'}`}>
           {/* Malaysian Flag */}
-          <div className="text-sm">🇲🇾</div>
+          <img 
+            src="/lovable-uploads/4caa9234-a2a4-43ab-8e4c-54fc63c41265.png" 
+            alt="Malaysian Flag" 
+            className="w-4 h-3"
+          />
           
           {/* Title */}
           <p className="font-sans text-sm text-[#3F3F46] font-medium">
