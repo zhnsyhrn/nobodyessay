@@ -64,7 +64,7 @@ const Masthead = () => {
                 .
               </p>
               <p className="font-sans text-sm font-normal text-[#3F3F46] leading-relaxed">
-                A non-profit initiative to highlight Malaysian creative talent globally. This is community-driven and voluntary, non-government affiliated.
+                The initiative to highlight Malaysian creative talent globally. This is community-driven and voluntary, non-government affiliated.
               </p>
             </div>
           </div>
