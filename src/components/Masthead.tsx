@@ -11,7 +11,7 @@ const Masthead = () => {
   return (
     <div className="w-full bg-[#F4F4F5] border-b border-zinc-200 px-4 sm:px-6">
       {/* Fixed height container for collapsed state */}
-      <div className={`max-w-4xl mx-auto ${isExpanded ? 'py-1.5' : 'py-1.5'}`}>
+      <div className={`max-w-4xl mx-auto ${isExpanded ? 'py-2' : 'py-2'}`}>
         <div className={`flex items-center justify-start gap-2 ${isExpanded ? 'h-auto' : 'h-4'}`}>
           {/* Malaysian Flag */}
           <img 
@@ -32,7 +32,8 @@ const Masthead = () => {
             aria-expanded={isExpanded}
             aria-controls="masthead-content"
           >
-            How to identify
+            <span className="hidden sm:inline">How to identify</span>
+            <span className="sm:hidden">identify</span>
             {isExpanded ? (
               <ChevronUp size={14} />
             ) : (
