@@ -45,36 +45,22 @@ const Masthead = () => {
           }`}
         >
           <div className="border-t border-zinc-300 pt-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Malaysia's Design Identity */}
-              <div>
-                <h3 className="font-sans text-sm font-semibold text-[#3F3F46] mb-2">
-                  Malaysia's Design Identity
-                </h3>
-                <p className="font-sans text-xs text-[#3F3F46] leading-relaxed">
-                  Discover the rich cultural heritage and contemporary design thinking that shapes Malaysian creative work. From traditional batik patterns to modern digital interfaces.
-                </p>
-              </div>
-              
-              {/* Creative Talent Showcase */}
-              <div>
-                <h3 className="font-sans text-sm font-semibold text-[#3F3F46] mb-2">
-                  Creative Talent Showcase
-                </h3>
-                <p className="font-sans text-xs text-[#3F3F46] leading-relaxed">
-                  Explore portfolios and stories from Malaysia's most innovative designers, artists, and creative professionals making their mark locally and internationally.
-                </p>
-              </div>
-              
-              {/* Voluntary Participation */}
-              <div>
-                <h3 className="font-sans text-sm font-semibold text-[#3F3F46] mb-2">
-                  Voluntary Participation
-                </h3>
-                <p className="font-sans text-xs text-[#3F3F46] leading-relaxed">
-                  This initiative is community-driven and voluntary. Malaysian designers can showcase their work and connect with peers in the creative industry.
-                </p>
-              </div>
+            <div className="space-y-2">
+              <p className="font-sans text-sm text-[#3F3F46] leading-relaxed">
+                Identification is based on participation records at{" "}
+                <a 
+                  href="https://malaysia.design" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-[#2563EB] hover:underline"
+                >
+                  malaysia.design
+                </a>
+                .
+              </p>
+              <p className="font-sans text-sm text-[#3F3F46] leading-relaxed">
+                A non-profit initiative to showcase Malaysian creative talent globally. This is community-driven and voluntary, non-government affiliated.
+              </p>
             </div>
           </div>
         </div>
