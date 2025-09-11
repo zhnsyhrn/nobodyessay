@@ -10,8 +10,8 @@ const Masthead = () => {
 
   return (
     <div className="w-full bg-[#F4F4F5] border-b border-zinc-200">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-6">
-        <div className="flex items-center justify-center gap-8">
+      <div className="h-7 max-w-4xl mx-auto px-4 sm:px-6 py-1.5">
+        <div className="flex items-center justify-start gap-2">
           {/* Malaysian Flag */}
           <div className="text-2xl">🇲🇾</div>
           
