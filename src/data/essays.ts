@@ -72,6 +72,65 @@ Skipping ARIA roles, labels, or keyboard navigation alienates users who rely on 
 Button state design may seem like a small detail, but it's one of the most visible parts of user interaction. By avoiding these common UX mistakes and following best practices, you create interfaces that are not only usable but also accessible and trustworthy.`
   },
   {
+    slug: "on-the-nature-of-solitude",
+    title: "Jakob's Law: [ Confusing = Frustating ]",
+    excerpt: "Users spend most of their time on other websites, so they expect your process flow to work like the ones they already know",
+    metaDescription: "Learn why familiar design patterns reduce user frustration. Explore Jakob's Law and how user expectations shape effective UX design decisions.",
+    date: "Aug 24, 2025",
+    readTime: "8 min read",
+    category: "UX Laws",
+    content: `Jakob's Law > This is the basic principle in UX Design.
+
+The key for good app or platform is familiarity.
+
+## Familiarity enables transfer of experience
+
+"Familiarity enables the transfer of experience between similar products or services, allowing us to be productive without first learning how a system works. When we encounter familiar interface patterns and conventions, we intuitively understand them based on previous experience." - Laws of UX
+
+Each of us here loves to talk to somebody they know. None of us likes to randomly bump into a stranger and say 'Hello!' without a reason. Even when there's a new colleague joining our team, we take some time to get to know them.
+
+The same rule applies for a process flow.
+
+We don't want to go through something strange or unusual. It is frustrating because we need to learn a new thing again just to get things done.
+
+We go to an app or website for a reason. Either we want to sign up and try a new tool or log in to pay our summon.
+
+We expect everything to be the same based on our previous experiences.
+
+## Simple login flow example
+
+A simple example is login flow.
+
+The logic or expectation for a user to log in to their account is that they need to input these two or three things:
+
+- Username
+- Password
+
+It is unusual if the platform requires users to log in by filling out more than two inputs — full name, username, birthday, and password.
+
+Another scenario for your better understanding is what if they forget their password?
+
+For users, when they key in the password but the system tells them their password is incorrect after a few attempts, their mental model is that they want to click a 'forgot password' button somewhere on the login screen.
+
+Then, they will expect to receive a verification code through their registered email or mobile number and click the reset password link.
+
+The keyword here is account verification as part of the security process to reset their account password.
+
+It is common to them when they encounter a similar scenario with other platforms and they expect the same process flow when clicking the "forgot password" button.
+
+So when designing the business or process flow, including the interface design like the button placement for the forgot password button, it must follow the same pattern as what others have done.
+
+Designing for the product or digital experience is not the same as graphic design or crafting a masterpiece of art.
+
+The creativity in UI/UX design is to make the overall experience fun, exciting, and easy to use. We can't reinvent the wheel, even though we are building an AI digital banking app, because the basic principle of Jakob's Law is still applicable everywhere, including the retail experience.
+
+Otherwise, no matter how cool your product is, if the overall flow is odd and unusual, your product will suck.
+
+No matter how cool your backend technology is, no one cares if they find your app or platform too complex to use.
+
+Thus, [Confusing = Frustating].`
+  },
+  {
     slug: "design-in-the-wilderness",
     title: "Design in the Wilderness",
     excerpt: "This is my story of working to drive change when no one cared — small efforts that made a big impact. Inspired by the former Malaysian AG's My Story: Justice in the Wilderness.",
@@ -169,65 +228,6 @@ As I work closely with the Biz Platform squad, I led the initiative to improve t
 My upcoming essay the first series of "Design in the Wilderness" is on Figma File Management.
 
 Stay tuned!`
-  },
-  {
-    slug: "on-the-nature-of-solitude",
-    title: "Jakob's Law: [ Confusing = Frustating ]",
-    excerpt: "Users spend most of their time on other websites, so they expect your process flow to work like the ones they already know",
-    metaDescription: "Learn why familiar design patterns reduce user frustration. Explore Jakob's Law and how user expectations shape effective UX design decisions.",
-    date: "Aug 24, 2025",
-    readTime: "8 min read",
-    category: "UX Laws",
-    content: `Jakob's Law > This is the basic principle in UX Design.
-
-The key for good app or platform is familiarity.
-
-## Familiarity enables transfer of experience
-
-"Familiarity enables the transfer of experience between similar products or services, allowing us to be productive without first learning how a system works. When we encounter familiar interface patterns and conventions, we intuitively understand them based on previous experience." - Laws of UX
-
-Each of us here loves to talk to somebody they know. None of us likes to randomly bump into a stranger and say 'Hello!' without a reason. Even when there's a new colleague joining our team, we take some time to get to know them.
-
-The same rule applies for a process flow.
-
-We don't want to go through something strange or unusual. It is frustrating because we need to learn a new thing again just to get things done.
-
-We go to an app or website for a reason. Either we want to sign up and try a new tool or log in to pay our summon.
-
-We expect everything to be the same based on our previous experiences.
-
-## Simple login flow example
-
-A simple example is login flow.
-
-The logic or expectation for a user to log in to their account is that they need to input these two or three things:
-
-- Username
-- Password
-
-It is unusual if the platform requires users to log in by filling out more than two inputs — full name, username, birthday, and password.
-
-Another scenario for your better understanding is what if they forget their password?
-
-For users, when they key in the password but the system tells them their password is incorrect after a few attempts, their mental model is that they want to click a 'forgot password' button somewhere on the login screen.
-
-Then, they will expect to receive a verification code through their registered email or mobile number and click the reset password link.
-
-The keyword here is account verification as part of the security process to reset their account password.
-
-It is common to them when they encounter a similar scenario with other platforms and they expect the same process flow when clicking the "forgot password" button.
-
-So when designing the business or process flow, including the interface design like the button placement for the forgot password button, it must follow the same pattern as what others have done.
-
-Designing for the product or digital experience is not the same as graphic design or crafting a masterpiece of art.
-
-The creativity in UI/UX design is to make the overall experience fun, exciting, and easy to use. We can't reinvent the wheel, even though we are building an AI digital banking app, because the basic principle of Jakob's Law is still applicable everywhere, including the retail experience.
-
-Otherwise, no matter how cool your product is, if the overall flow is odd and unusual, your product will suck.
-
-No matter how cool your backend technology is, no one cares if they find your app or platform too complex to use.
-
-Thus, [Confusing = Frustating].`
   }
 ];
 
