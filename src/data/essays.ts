@@ -19,7 +19,7 @@ export const essays: Essay[] = [
     date: "September 11, 2025",
     readTime: "2 min read",
     category: "UX Laws",
-    content: `![Button State Design Examples](/lovable-uploads/fc9707ef-ea3a-4b10-8e9d-c8d31441015b.png)
+    content: `![Button State Design Examples](/lovable-uploads/31da105f-4446-41fe-bbcd-6a2bc9a689e9.png)
 
 Buttons are one of the most essential interactive UI elements, yet they're also one of the easiest places to slip up. Poor button state design leads to confusion, frustration, and accessibility issues. Below, we'll cover the most common mistakes in button interaction design and how to avoid them.
 
