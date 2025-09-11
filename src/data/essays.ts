@@ -3,6 +3,7 @@ export interface Essay {
   slug: string;
   title: string;
   excerpt: string;
+  metaDescription: string;
   date: string;
   readTime: string;
   category: string;
@@ -14,6 +15,7 @@ export const essays: Essay[] = [
     slug: "design-in-the-wilderness",
     title: "Design in the Wilderness",
     excerpt: "This is my story of working to drive change when no one cared — small efforts that made a big impact. Inspired by the former Malaysian AG's My Story: Justice in the Wilderness.",
+    metaDescription: "Discover how small design initiatives can drive meaningful change in organizations without design leadership. A UX designer's journey through challenges and reforms.",
     date: "May 18, 2025",
     readTime: "6 min read",
     category: "DesignOps",
@@ -112,6 +114,7 @@ Stay tuned!`
     slug: "on-the-nature-of-solitude",
     title: "Jakob's Law: [ Confusing = Frustating ]",
     excerpt: "Users spend most of their time on other websites, so they expect your process flow to work like the ones they already know",
+    metaDescription: "Learn why familiar design patterns reduce user frustration. Explore Jakob's Law and how user expectations shape effective UX design decisions.",
     date: "Aug 24, 2025",
     readTime: "8 min read",
     category: "UX Laws",

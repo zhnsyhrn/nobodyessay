@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Share2, Twitter, Facebook, Link as LinkIcon } from "lucide-react";
@@ -6,128 +7,101 @@ import { getEssayBySlug, getRelatedEssays } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
+import { parseRichContent, postProcessContent } from "@/utils/contentParser";
 import DOMPurify from "dompurify";
-
-// Function to parse inline formatting (bold, italic, underline, links)
-const parseInlineFormatting = (text: string): string => {
-  let formatted = text;
-  
-  // Links [text](url)
-  formatted = formatted.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">$1</a>');
-  
-  // Bold **text** or __text__
-  formatted = formatted.replace(/\*\*([^*]+)\*\*/g, '<strong class="font-semibold">$1</strong>');
-  formatted = formatted.replace(/__([^_]+)__/g, '<strong class="font-semibold">$1</strong>');
-  
-  // Italic *text* or _text_ (but not if surrounded by __)
-  formatted = formatted.replace(/(?<!_)\*([^*]+)\*(?!\*)/g, '<em class="italic">$1</em>');
-  formatted = formatted.replace(/(?<!_)_([^_]+)_(?!_)/g, '<em class="italic">$1</em>');
-  
-  // Underline ~~text~~
-  formatted = formatted.replace(/~~([^~]+)~~/g, '<u class="underline">$1</u>');
-  
-  return formatted;
-};
-
-// Rich text content parser
-const parseRichContent = (content: string) => {
-  return content
-    .split('\n\n')
-    .map(paragraph => {
-      const trimmed = paragraph.trim();
-      
-      // Empty paragraphs
-      if (!trimmed) return '';
-      
-      // Different heading levels
-      if (trimmed.startsWith('### ')) {
-        const text = parseInlineFormatting(trimmed.slice(4));
-        return `<h3 class="font-display text-lg sm:text-xl font-medium mt-6 sm:mt-8 mb-3 sm:mb-4 text-foreground">${DOMPurify.sanitize(text)}</h3>`;
-      }
-      if (trimmed.startsWith('## ')) {
-        const text = parseInlineFormatting(trimmed.slice(3));
-        return `<h2 class="font-display text-xl sm:text-2xl font-medium mt-8 sm:mt-12 mb-4 sm:mb-6 text-foreground">${DOMPurify.sanitize(text)}</h2>`;
-      }
-      if (trimmed.startsWith('# ')) {
-        const text = parseInlineFormatting(trimmed.slice(2));
-        return `<h1 class="font-display text-2xl sm:text-3xl font-medium mt-8 sm:mt-12 mb-6 sm:mb-8 text-foreground">${DOMPurify.sanitize(text)}</h1>`;
-      }
-      
-      // Quote blocks
-      if (trimmed.startsWith('> ')) {
-        const text = parseInlineFormatting(trimmed.slice(2));
-        return `<blockquote class="border-l-4 border-primary pl-4 sm:pl-6 my-6 sm:my-8 italic text-sm sm:text-base font-jakarta" style="color: #606060">${DOMPurify.sanitize(text)}</blockquote>`;
-      }
-      
-      // Images
-      if (trimmed.match(/!\[.*?\]\(.*?\)/)) {
-        const match = trimmed.match(/!\[(.*?)\]\((.*?)\)/);
-        if (match) {
-          return `<img src="${DOMPurify.sanitize(match[2])}" alt="${DOMPurify.sanitize(match[1])}" class="w-full rounded-lg my-6 sm:my-8" />`;
-        }
-      }
-      
-      // Unordered lists
-      if (trimmed.includes('\n- ')) {
-        const items = trimmed.split('\n- ').filter(item => item.trim());
-        const listItems = items.map(item => {
-          const itemText = item.startsWith('- ') ? item.slice(2) : item;
-          return `<li class="mb-2">${DOMPurify.sanitize(parseInlineFormatting(itemText))}</li>`;
-        }).join('');
-        return `<ul class="list-disc list-inside my-4 sm:my-6 space-y-2 text-sm sm:text-base font-jakarta" style="color: #606060">${listItems}</ul>`;
-      }
-      
-      // Ordered lists
-      if (trimmed.match(/^\d+\./)) {
-        const lines = trimmed.split('\n');
-        const listItems = lines
-          .filter(line => line.match(/^\d+\./))
-          .map(line => {
-            const itemText = line.replace(/^\d+\.\s*/, '');
-            return `<li class="mb-2">${DOMPurify.sanitize(parseInlineFormatting(itemText))}</li>`;
-          })
-          .join('');
-        return `<ol class="list-decimal list-inside my-4 sm:my-6 space-y-2 text-sm sm:text-base font-jakarta" style="color: #606060">${listItems}</ol>`;
-      }
-      
-      // Regular paragraphs with inline formatting
-      const formattedText = parseInlineFormatting(trimmed);
-      return `<p class="mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base font-jakarta" style="color: #606060">${DOMPurify.sanitize(formattedText)}</p>`;
-    })
-    .join('');
-};
 
 const Post = () => {
   const { slug } = useParams<{ slug: string }>();
   const essay = slug ? getEssayBySlug(slug) : undefined;
   const relatedEssays = slug ? getRelatedEssays(slug, 3) : [];
 
+  // Generate the processed content
+  const processedContent = essay ? postProcessContent(parseRichContent(essay.content)) : '';
+
   if (!essay) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="font-display text-2xl font-medium mb-4">Essay Not Found</h1>
-          <p className="font-typewriter uppercase text-muted-foreground mb-6">
-            The essay you're looking for doesn't exist or has been moved.
-          </p>
-          <Link to="/writings">
-            <Button className="font-display">
-              ← Back to Writings
-            </Button>
-          </Link>
+      <>
+        <Helmet>
+          <title>Essay Not Found | Zahin | UX & Creative Direction</title>
+          <meta name="description" content="The essay you're looking for doesn't exist or has been moved. Browse our collection of UX design and creative direction writings." />
+        </Helmet>
+        <div className="min-h-screen bg-background flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="font-display text-2xl font-medium mb-4">Essay Not Found</h1>
+            <p className="font-typewriter uppercase text-muted-foreground mb-6">
+              The essay you're looking for doesn't exist or has been moved.
+            </p>
+            <Link to="/writings">
+              <Button className="font-display">
+                ← Back to Writings
+              </Button>
+            </Link>
+          </div>
         </div>
-      </div>
+      </>
     );
   }
 
-  return (
-    <div className="min-h-screen bg-background">
-      <StickyNavbar />
+  const pageTitle = `${essay.title} | Zahin | UX & Creative Direction`;
+  const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
+  const shareText = `Check out "${essay.title}" by Zahin S.`;
 
-      {/* Article Header */}
-      <article className="py-8 sm:py-12 px-4 sm:px-6 fade-in">
-        <div className="max-w-3xl mx-auto">
-          <div className="mb-6 sm:mb-8">
+  return (
+    <>
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={essay.metaDescription} />
+        <meta name="keywords" content={`UX design, ${essay.category.toLowerCase()}, creative direction, ${essay.title}`} />
+        <link rel="canonical" href={currentUrl} />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={essay.title} />
+        <meta property="og:description" content={essay.metaDescription} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={currentUrl} />
+        <meta property="og:site_name" content="Zahin | UX & Creative Direction" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={essay.title} />
+        <meta name="twitter:description" content={essay.metaDescription} />
+        
+        {/* Article specific */}
+        <meta property="article:author" content="Zahin S." />
+        <meta property="article:published_time" content={essay.date} />
+        <meta property="article:section" content={essay.category} />
+        <meta property="article:tag" content={essay.category} />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": essay.title,
+            "description": essay.metaDescription,
+            "author": {
+              "@type": "Person",
+              "name": "Zahin S."
+            },
+            "datePublished": essay.date,
+            "articleSection": essay.category,
+            "wordCount": essay.content.split(' ').length,
+            "timeRequired": essay.readTime,
+            "publisher": {
+              "@type": "Organization",
+              "name": "Zahin | UX & Creative Direction"
+            }
+          })}
+        </script>
+      </Helmet>
+
+      <div className="min-h-screen bg-background">
+        <StickyNavbar />
+
+        {/* Article Header */}
+        <article className="py-8 sm:py-12 px-4 sm:px-6 fade-in">
+          <div className="max-w-3xl mx-auto">
+            <div className="mb-6 sm:mb-8">
             
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-0 text-sm text-muted-foreground font-typewriter uppercase mb-6">
               <div className="flex items-center space-x-3 sm:space-x-4">
@@ -161,15 +135,13 @@ const Post = () => {
                 </div>
               </div>
               
-              {/* Social Share Buttons */}
               <div className="flex items-center space-x-2 sm:space-x-3">
                 <Button
                   variant="outline"
                   size="sm"
                   onClick={() => {
-                    const url = window.location.href;
-                    const text = `Check out "${essay.title}" by Zahin S.`;
-                    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+                    const url = currentUrl;
+                    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(url)}`, '_blank');
                   }}
                   className="p-2 sm:p-3 h-9 w-9 sm:h-10 sm:w-10 touch-manipulation"
                 >
@@ -179,7 +151,7 @@ const Post = () => {
                   variant="outline"
                   size="sm"
                   onClick={() => {
-                    const url = window.location.href;
+                    const url = currentUrl;
                     window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
                   }}
                   className="p-2 sm:p-3 h-9 w-9 sm:h-10 sm:w-10 touch-manipulation"
@@ -190,7 +162,7 @@ const Post = () => {
                   variant="outline"
                   size="sm"
                   onClick={() => {
-                    navigator.clipboard.writeText(window.location.href);
+                    navigator.clipboard.writeText(currentUrl);
                     // You could add a toast notification here
                   }}
                   className="p-2 sm:p-3 h-9 w-9 sm:h-10 sm:w-10 touch-manipulation"
@@ -204,16 +176,16 @@ const Post = () => {
             <div className="border-t border-border mt-4 sm:mt-6"></div>
           </div>
 
-          {/* Article Content */}
-          <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none">
-            <div 
-              className="font-jakarta leading-relaxed"
-              style={{ color: '#606060' }}
-              dangerouslySetInnerHTML={{ 
-                __html: DOMPurify.sanitize(parseRichContent(essay.content))
-              }}
-            />
-          </div>
+            {/* Article Content */}
+            <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none">
+              <div 
+                className="font-jakarta leading-relaxed"
+                style={{ color: '#606060' }}
+                dangerouslySetInnerHTML={{ 
+                  __html: DOMPurify.sanitize(processedContent)
+                }}
+              />
+            </div>
 
           {/* Next Articles Section */}
           {relatedEssays.length > 0 && (
@@ -261,7 +233,8 @@ const Post = () => {
       <Footer />
       <ScrollToTopButton />
     </div>
-  );
+  </>
+);
 };
 
 export default Post;
