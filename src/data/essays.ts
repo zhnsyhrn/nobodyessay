@@ -12,6 +12,66 @@ export interface Essay {
 
 export const essays: Essay[] = [
   {
+    slug: "button-state-design-best-practices",
+    title: "Button State Design Best Practices: Avoid These UX Pitfalls",
+    excerpt: "Learn the most common button state design mistakes in UI/UX and discover best practices to create consistent, accessible, and user-friendly interfaces.",
+    metaDescription: "Improve usability with button state best practices. Avoid common UX pitfalls that confuse users and hurt engagement.",
+    date: "September 11, 2025",
+    readTime: "2 min read",
+    category: "UX Laws",
+    content: `![Button State Design Examples](/lovable-uploads/fc9707ef-ea3a-4b10-8e9d-c8d31441015b.png)
+
+Buttons are one of the most essential interactive UI elements, yet they're also one of the easiest places to slip up. Poor button state design leads to confusion, frustration, and accessibility issues. Below, we'll cover the most common mistakes in button interaction design and how to avoid them.
+
+**Summary:**
+
+:::warning
+❌ Inconsistent visual cues → breaks recognition across the interface
+❌ Disabled state looks active → users click without feedback
+❌ Overdone transitions → flashy but distracting
+❌ Low contrast → hard to distinguish states, leads to errors
+❌ Ignoring accessibility → excludes users relying on assistive tech
+:::
+
+## Why Button States Matter in UX Design
+
+Button states—default, hover, active, focused, and disabled—give users feedback and guide interaction. When done right, they improve usability, accessibility, and confidence. When done poorly, they create friction and errors.
+
+## Common Mistakes in Button State Design
+
+### 1. Inconsistent Visual Cues
+
+When button states don't follow consistent rules across your UI, users struggle to recognize patterns. Design consistency in UI is critical for building trust and clarity.
+
+### 2. Disabled Buttons That Look Active
+
+A disabled button should look clearly inactive. If disabled button design is too subtle, users may click repeatedly without understanding why nothing happens.
+
+### 3. Overcomplicated Animations
+
+UI animation mistakes happen when transitions are flashy but unhelpful. Keep button animations subtle, consistent, and purposeful to avoid distracting users.
+
+### 4. Low Color Contrast
+
+Poor color contrast in design makes button states hard to distinguish, especially for users with visual impairments. Always check your color contrast ratios to meet accessibility standards.
+
+### 5. Ignoring Accessibility
+
+Skipping ARIA roles, labels, or keyboard navigation alienates users who rely on assistive technologies. Accessibility in button states is not optional—it's a best practice.
+
+## Button State Design Best Practices
+
+- Keep button states **consistent** across the interface
+- Use **clear contrast** for different states
+- Apply **accessible color schemes** that meet WCAG standards
+- Add **meaningful animations** that enhance clarity, not distract
+- Ensure **keyboard and screen reader support** for inclusivity
+
+## Final Thoughts
+
+Button state design may seem like a small detail, but it's one of the most visible parts of user interaction. By avoiding these common UX mistakes and following best practices, you create interfaces that are not only usable but also accessible and trustworthy.`
+  },
+  {
     slug: "design-in-the-wilderness",
     title: "Design in the Wilderness",
     excerpt: "This is my story of working to drive change when no one cared — small efforts that made a big impact. Inspired by the former Malaysian AG's My Story: Justice in the Wilderness.",
