@@ -45,7 +45,7 @@ const Masthead = () => {
           }`}
         >
           <div className="border-t border-zinc-300 pt-4">
-            <div className="space-y-2">
+            <div className="space-y-0.5">
               <p className="font-sans text-sm font-bold text-[#3F3F46] leading-relaxed">
                 Identification is based on participation records at{" "}
                 <a 
