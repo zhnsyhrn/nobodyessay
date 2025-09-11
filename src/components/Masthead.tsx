@@ -54,17 +54,17 @@ const Masthead = () => {
               <p className="font-sans text-sm font-bold text-[#3F3F46] leading-relaxed">
                 Identification is based on participation records at{" "}
                 <a 
-                  href="https://malaysia.design" 
+                  href="https://malaysiabydesign.lovable.app/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-[#2563EB] hover:underline"
                 >
-                  malaysia.design
+                  Malaysia by Design
                 </a>
                 .
               </p>
               <p className="font-sans text-sm font-normal text-[#3F3F46] leading-relaxed">
-                A non-profit initiative to showcase Malaysian creative talent globally. This is community-driven and voluntary, non-government affiliated.
+                A non-profit initiative to highlight Malaysian creative talent globally. This is community-driven and voluntary, non-government affiliated.
               </p>
             </div>
           </div>
