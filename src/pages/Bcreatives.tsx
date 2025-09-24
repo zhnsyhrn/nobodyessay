@@ -32,19 +32,19 @@ const Bcreatives = () => {
         {/* Hero Section */}
         <section className="px-4 sm:px-6 py-16 sm:py-24 bg-bcreatives-hero">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium mb-6 leading-tight text-black">
+            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-medium mb-6 leading-tight text-black px-2">
               Your Business Best Friend
             </h1>
-            <p className="text-xl sm:text-2xl mb-8 max-w-2xl mx-auto leading-relaxed text-black/80">
+            <p className="text-lg sm:text-xl lg:text-2xl mb-8 max-w-2xl mx-auto leading-relaxed text-black/80 px-2">
               Monthly rental and quick sprint design services
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
-              <Button asChild size="lg" className="font-display bg-black text-white hover:bg-black/90">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center mt-8 px-2">
+              <Button asChild size="lg" className="font-display bg-black text-white hover:bg-black/90 w-full sm:w-auto min-h-[48px]">
                 <a href="https://wasap.my/60183943519" target="_blank" rel="noopener noreferrer">
                   I'm Interested
                 </a>
               </Button>
-              <Button asChild size="lg" variant="outline" className="font-display border-black text-black hover:bg-black/10">
+              <Button asChild size="lg" variant="outline" className="font-display border-black text-black hover:bg-black/10 w-full sm:w-auto min-h-[48px]">
                 <Link to="/studio">
                   View Works
                 </Link>
@@ -56,13 +56,13 @@ const Bcreatives = () => {
         {/* Services Section */}
         <section className="px-4 sm:px-6 py-16">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-display text-3xl sm:text-4xl font-medium mb-12 text-center">
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium mb-8 sm:mb-12 text-center px-2">
               All your design needs covered
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {services.map((service, index) => (
-                <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow">
-                  <p className="font-medium text-lg">{service}</p>
+                <Card key={index} className="p-4 sm:p-6 text-center hover:shadow-lg transition-shadow">
+                  <p className="font-medium text-base sm:text-lg leading-snug">{service}</p>
                 </Card>
               ))}
             </div>
@@ -72,37 +72,37 @@ const Bcreatives = () => {
         {/* Pricing Plans */}
         <section className="px-4 sm:px-6 py-16 bg-secondary/50">
           <div className="max-w-6xl mx-auto">
-            <h2 className="font-display text-3xl sm:text-4xl font-medium mb-12 text-center">
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium mb-8 sm:mb-12 text-center px-2">
               Pricing Plans
             </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
               
               {/* Plan 1 */}
-              <Card className="p-8 relative">
+              <Card className="p-4 sm:p-6 lg:p-8 relative">
                 <div className="mb-6">
-                  <h3 className="font-display text-2xl font-medium mb-2">Monthly Design Subscription</h3>
-                  <p className="text-muted-foreground mb-4">Available slot: 3 seats per month</p>
-                  <div className="text-3xl font-display font-medium">
-                    MYR 1,800<span className="text-lg text-muted-foreground">/Mo</span>
+                  <h3 className="font-display text-xl sm:text-2xl font-medium mb-2 leading-tight">Monthly Design Subscription</h3>
+                  <p className="text-muted-foreground mb-4 text-sm sm:text-base">Available slot: 3 seats per month</p>
+                  <div className="text-2xl sm:text-3xl font-display font-medium">
+                    MYR 1,800<span className="text-base sm:text-lg text-muted-foreground">/Mo</span>
                   </div>
                 </div>
                 
                 <Separator className="mb-6" />
                 
                 <div className="space-y-4">
-                  <h4 className="font-medium mb-3">Includes:</h4>
+                  <h4 className="font-medium mb-3 text-sm sm:text-base">Includes:</h4>
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span>Marketing and social media graphics</span>
+                      <Check className="w-4 h-4 sm:w-5 sm:h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-sm sm:text-base leading-relaxed">Marketing and social media graphics</span>
                     </div>
                     <div className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span>Product design for mobile and web</span>
+                      <Check className="w-4 h-4 sm:w-5 sm:h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-sm sm:text-base leading-relaxed">Product design for mobile and web</span>
                     </div>
                     <div className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span>Up to 2 design syncs and requests per week</span>
+                      <Check className="w-4 h-4 sm:w-5 sm:h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-sm sm:text-base leading-relaxed">Up to 2 design syncs and requests per week</span>
                     </div>
                   </div>
                 </div>
@@ -117,11 +117,11 @@ const Bcreatives = () => {
               </Card>
 
               {/* Plan 2 */}
-              <Card className="p-8 relative">
+              <Card className="p-4 sm:p-6 lg:p-8 relative">
                 <div className="mb-6">
-                  <h3 className="font-display text-2xl font-medium mb-2">Quick Sprint</h3>
-                  <p className="text-muted-foreground mb-4">Available slot: Up to 2 seats per month</p>
-                  <div className="text-3xl font-display font-medium">
+                  <h3 className="font-display text-xl sm:text-2xl font-medium mb-2 leading-tight">Quick Sprint</h3>
+                  <p className="text-muted-foreground mb-4 text-sm sm:text-base">Available slot: Up to 2 seats per month</p>
+                  <div className="text-2xl sm:text-3xl font-display font-medium">
                     MYR 3,800
                   </div>
                 </div>
@@ -129,19 +129,19 @@ const Bcreatives = () => {
                 <Separator className="mb-6" />
                 
                 <div className="space-y-4">
-                  <h4 className="font-medium mb-3">Includes:</h4>
+                  <h4 className="font-medium mb-3 text-sm sm:text-base">Includes:</h4>
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span>Best for pitch decks and marketing projects, quick prototyping, or UX refinements</span>
+                      <Check className="w-4 h-4 sm:w-5 sm:h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-sm sm:text-base leading-relaxed">Best for pitch decks and marketing projects, quick prototyping, or UX refinements</span>
                     </div>
                     <div className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span>Marketing and social media graphics based on your social media content calendar</span>
+                      <Check className="w-4 h-4 sm:w-5 sm:h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-sm sm:text-base leading-relaxed">Marketing and social media graphics based on your social media content calendar</span>
                     </div>
                     <div className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span>Product design for mobile and web ready with copywriting for your first product landing page</span>
+                      <Check className="w-4 h-4 sm:w-5 sm:h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-sm sm:text-base leading-relaxed">Product design for mobile and web ready with copywriting for your first product landing page</span>
                     </div>
                   </div>
                 </div>
@@ -161,10 +161,10 @@ const Bcreatives = () => {
         {/* Why Hire Me Section */}
         <section className="px-4 sm:px-6 py-16">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-display text-3xl sm:text-4xl font-medium mb-8 text-center">
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium mb-6 sm:mb-8 text-center px-2">
               Why hire me?
             </h2>
-            <div className="prose prose-lg max-w-none">
+            <div className="prose prose-base sm:prose-lg max-w-none px-2">
               <p className="text-muted-foreground leading-relaxed mb-6">
                 I'm a product designer from Malaysia, and I've had the chance to work across different startups — from Insurtech and Fintech to B2B commerce and software houses. Along the way, I've learned how design can directly shape business growth, not just make things look good.
               </p>
@@ -182,13 +182,13 @@ const Bcreatives = () => {
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
-              <Button asChild size="lg" className="font-display">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center mt-8 sm:mt-12 px-2">
+              <Button asChild size="lg" className="font-display w-full sm:w-auto min-h-[48px]">
                 <a href="https://wasap.my/60183943519" target="_blank" rel="noopener noreferrer">
                   I'm Interested
                 </a>
               </Button>
-              <Button asChild size="lg" variant="outline" className="font-display">
+              <Button asChild size="lg" variant="outline" className="font-display w-full sm:w-auto min-h-[48px]">
                 <Link to="/studio">
                   View Works
                 </Link>
