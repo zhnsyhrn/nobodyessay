@@ -18,17 +18,9 @@ const About = () => {
             <span className="sm:text-4xl md:text-5xl lg:text-6xl sm:leading-tight">Design with empathy.<br />
 Built for identity.</span>
           </h1>
-          <p className="font-jakarta text-lg sm:text-xl text-white/70 mb-6">
+          <p className="font-jakarta text-lg sm:text-xl text-white/70">
             Create experiences that serve people while staying true to a brand's identity.
           </p>
-          
-          <Link to="/bcreatives" className="inline-block">
-            <Button 
-              className="font-display min-h-[48px] px-6 bg-white text-black hover:bg-white/90 transition-colors"
-            >
-              Design Services
-            </Button>
-          </Link>
         </div>
       </section>
 

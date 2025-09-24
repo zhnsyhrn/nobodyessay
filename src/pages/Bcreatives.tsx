@@ -2,11 +2,12 @@ import React from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Link } from "react-router-dom";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
-import { Check } from "lucide-react";
+import { Check, HelpCircle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 const Bcreatives = () => {
@@ -20,7 +21,7 @@ const Bcreatives = () => {
   ];
 
   return (
-    <>
+    <TooltipProvider>
       <Helmet>
         <title>bcreatives - Design Services | Your Business Best Friend</title>
         <meta name="description" content="Monthly rental and quick sprint design services. Mobile apps, websites, SaaS apps, social media graphics, and more." />
@@ -72,7 +73,7 @@ const Bcreatives = () => {
         {/* Pricing Plans */}
         <section className="px-4 sm:px-6 py-16 bg-bcreatives-pricing">
           <div className="max-w-6xl mx-auto">
-            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium mb-8 sm:mb-12 text-center px-2 text-white">
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium mb-8 sm:mb-12 text-center px-2" style={{ color: '#d1ff00' }}>
               Pricing Plans
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
@@ -102,7 +103,19 @@ const Bcreatives = () => {
                     </div>
                     <div className="flex items-start gap-3">
                       <Check className="w-4 h-4 sm:w-5 sm:h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span className="text-sm sm:text-base leading-relaxed">Up to 2 design syncs and requests per week</span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-sm sm:text-base leading-relaxed">Up to 2 design syncs and requests per week</span>
+                        <TooltipProvider>
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <HelpCircle className="w-4 h-4 text-muted-foreground cursor-help" />
+                            </TooltipTrigger>
+                            <TooltipContent className="max-w-xs">
+                              <p>👉 At most two meetings (or check-ins) per week where the design team (and sometimes other stakeholders) gather to synchronize — i.e., align on progress, decisions, blockers, or next steps.</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -210,7 +223,7 @@ const Bcreatives = () => {
 
       <Footer />
       <ScrollToTopButton />
-    </>
+    </TooltipProvider>
   );
 };
 
