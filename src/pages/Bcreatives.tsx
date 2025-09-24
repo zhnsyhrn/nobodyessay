@@ -7,17 +7,17 @@ import { Link } from "react-router-dom";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
-import { Check, HelpCircle } from "lucide-react";
+import { Check, HelpCircle, Smartphone, Globe, Laptop, Image, FileText, Megaphone } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 const Bcreatives = () => {
   const services = [
-    "Mobile Apps Design",
-    "Business landing page and websites", 
-    "SaaS Apps",
-    "Social Media Graphics",
-    "Pitch Decks",
-    "Social Media Ads"
+    { name: "Mobile Apps Design", icon: Smartphone },
+    { name: "Business landing page and websites", icon: Globe }, 
+    { name: "SaaS Apps", icon: Laptop },
+    { name: "Social Media Graphics", icon: Image },
+    { name: "Pitch Decks", icon: FileText },
+    { name: "Social Media Ads", icon: Megaphone }
   ];
 
   return (
@@ -61,11 +61,17 @@ const Bcreatives = () => {
               All your design needs covered
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-              {services.map((service, index) => (
-                <Card key={index} className="p-4 sm:p-6 text-center hover:shadow-lg transition-shadow">
-                  <p className="font-medium text-base sm:text-lg leading-snug">{service}</p>
-                </Card>
-              ))}
+              {services.map((service, index) => {
+                const IconComponent = service.icon;
+                return (
+                  <Card key={index} className="p-4 sm:p-6 text-center hover:shadow-lg transition-shadow">
+                    <div className="flex flex-col items-center space-y-3">
+                      <IconComponent className="w-8 h-8 text-primary" />
+                      <p className="font-medium text-base sm:text-lg leading-snug">{service.name}</p>
+                    </div>
+                  </Card>
+                );
+              })}
             </div>
           </div>
         </section>
