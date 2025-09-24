@@ -65,6 +65,7 @@ All colors MUST be HSL.
 
     --box-background: 252 22% 95%; /* #f2f1f6 for box containers */
     --bcreatives-hero: 72 100% 50%; /* #d1ff00 for bcreatives hero section */
+    --bcreatives-pricing: 0 0% 9%; /* #181818 for bcreatives pricing section */
   }
 
   .dark {

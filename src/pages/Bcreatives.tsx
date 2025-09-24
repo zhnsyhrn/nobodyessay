@@ -55,7 +55,7 @@ const Bcreatives = () => {
 
         {/* Services Section */}
         <section className="px-4 sm:px-6 py-16">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium mb-8 sm:mb-12 text-center px-2">
               All your design needs covered
             </h2>
@@ -70,15 +70,15 @@ const Bcreatives = () => {
         </section>
 
         {/* Pricing Plans */}
-        <section className="px-4 sm:px-6 py-16 bg-secondary/50">
+        <section className="px-4 sm:px-6 py-16 bg-bcreatives-pricing">
           <div className="max-w-6xl mx-auto">
-            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium mb-8 sm:mb-12 text-center px-2">
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium mb-8 sm:mb-12 text-center px-2 text-white">
               Pricing Plans
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
               
               {/* Plan 1 */}
-              <Card className="p-4 sm:p-6 lg:p-8 relative">
+              <Card className="p-4 sm:p-6 lg:p-8 relative bg-white">
                 <div className="mb-6">
                   <h3 className="font-display text-xl sm:text-2xl font-medium mb-2 leading-tight">Monthly Design Subscription</h3>
                   <p className="text-muted-foreground mb-4 text-sm sm:text-base">Available slot: 3 seats per month</p>
@@ -107,17 +107,22 @@ const Bcreatives = () => {
                   </div>
                 </div>
                 
-                <div className="mt-6">
-                  <Button asChild className="w-full font-display">
+                <div className="mt-6 space-y-3">
+                  <Button asChild className="w-full font-display bg-black text-white hover:bg-black/90">
                     <a href="https://wasap.my/60183943519" target="_blank" rel="noopener noreferrer">
                       I'm Interested
                     </a>
+                  </Button>
+                  <Button asChild variant="outline" className="w-full font-display border-black text-black hover:bg-black/10">
+                    <Link to="/studio">
+                      View Works
+                    </Link>
                   </Button>
                 </div>
               </Card>
 
               {/* Plan 2 */}
-              <Card className="p-4 sm:p-6 lg:p-8 relative">
+              <Card className="p-4 sm:p-6 lg:p-8 relative bg-white">
                 <div className="mb-6">
                   <h3 className="font-display text-xl sm:text-2xl font-medium mb-2 leading-tight">Quick Sprint</h3>
                   <p className="text-muted-foreground mb-4 text-sm sm:text-base">Available slot: Up to 2 seats per month</p>
@@ -146,11 +151,16 @@ const Bcreatives = () => {
                   </div>
                 </div>
                 
-                <div className="mt-6">
-                  <Button asChild className="w-full font-display">
+                <div className="mt-6 space-y-3">
+                  <Button asChild className="w-full font-display bg-black text-white hover:bg-black/90">
                     <a href="https://wasap.my/60183943519" target="_blank" rel="noopener noreferrer">
                       I'm Interested
                     </a>
+                  </Button>
+                  <Button asChild variant="outline" className="w-full font-display border-black text-black hover:bg-black/10">
+                    <Link to="/studio">
+                      View Works
+                    </Link>
                   </Button>
                 </div>
               </Card>
@@ -183,12 +193,12 @@ const Bcreatives = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center mt-8 sm:mt-12 px-2">
-              <Button asChild size="lg" className="font-display w-full sm:w-auto min-h-[48px]">
+              <Button asChild size="lg" className="font-display bg-black text-white hover:bg-black/90 w-full sm:w-auto min-h-[48px]">
                 <a href="https://wasap.my/60183943519" target="_blank" rel="noopener noreferrer">
                   I'm Interested
                 </a>
               </Button>
-              <Button asChild size="lg" variant="outline" className="font-display w-full sm:w-auto min-h-[48px]">
+              <Button asChild size="lg" variant="outline" className="font-display border-black text-black hover:bg-black/10 w-full sm:w-auto min-h-[48px]">
                 <Link to="/studio">
                   View Works
                 </Link>

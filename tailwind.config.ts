@@ -78,7 +78,8 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				'bcreatives-hero': 'hsl(var(--bcreatives-hero))'
+				'bcreatives-hero': 'hsl(var(--bcreatives-hero))',
+				'bcreatives-pricing': 'hsl(var(--bcreatives-pricing))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
