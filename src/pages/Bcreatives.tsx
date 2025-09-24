@@ -30,14 +30,26 @@ const Bcreatives = () => {
       
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
-        <section className="px-4 sm:px-6 py-16 sm:py-24">
+        <section className="px-4 sm:px-6 py-16 sm:py-24 bg-bcreatives-hero">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium mb-6 leading-tight">
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium mb-6 leading-tight text-black">
               Your Business Best Friend
             </h1>
-            <p className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl sm:text-2xl mb-8 max-w-2xl mx-auto leading-relaxed text-black/80">
               Monthly rental and quick sprint design services
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
+              <Button asChild size="lg" className="font-display bg-black text-white hover:bg-black/90">
+                <a href="https://wasap.my/60183943519" target="_blank" rel="noopener noreferrer">
+                  I'm Interested
+                </a>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="font-display border-black text-black hover:bg-black/10">
+                <Link to="/studio">
+                  View Works
+                </Link>
+              </Button>
+            </div>
           </div>
         </section>
 
@@ -94,6 +106,14 @@ const Bcreatives = () => {
                     </div>
                   </div>
                 </div>
+                
+                <div className="mt-6">
+                  <Button asChild className="w-full font-display">
+                    <a href="https://wasap.my/60183943519" target="_blank" rel="noopener noreferrer">
+                      I'm Interested
+                    </a>
+                  </Button>
+                </div>
               </Card>
 
               {/* Plan 2 */}
@@ -125,6 +145,14 @@ const Bcreatives = () => {
                     </div>
                   </div>
                 </div>
+                
+                <div className="mt-6">
+                  <Button asChild className="w-full font-display">
+                    <a href="https://wasap.my/60183943519" target="_blank" rel="noopener noreferrer">
+                      I'm Interested
+                    </a>
+                  </Button>
+                </div>
               </Card>
             </div>
           </div>
@@ -154,12 +182,17 @@ const Bcreatives = () => {
               </p>
             </div>
             
-            <div className="text-center mt-12">
-              <Link to="/contact">
-                <Button size="lg" className="font-display">
-                  Get Started
-                </Button>
-              </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
+              <Button asChild size="lg" className="font-display">
+                <a href="https://wasap.my/60183943519" target="_blank" rel="noopener noreferrer">
+                  I'm Interested
+                </a>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="font-display">
+                <Link to="/studio">
+                  View Works
+                </Link>
+              </Button>
             </div>
           </div>
         </section>

@@ -64,6 +64,7 @@ All colors MUST be HSL.
     --sidebar-ring: 217.2 91.2% 59.8%;
 
     --box-background: 252 22% 95%; /* #f2f1f6 for box containers */
+    --bcreatives-hero: 72 100% 50%; /* #d1ff00 for bcreatives hero section */
   }
 
   .dark {
