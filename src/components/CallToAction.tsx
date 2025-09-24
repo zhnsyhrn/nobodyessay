@@ -27,16 +27,29 @@ const CallToAction = ({ page }: CallToActionProps) => {
           {getTitle()}
         </h2>
         
-        <Link to="/contact" className="inline-block">
-          <div className="relative">
-            <GlowingEffect spread={40} glow={true} disabled={false} proximity={80} inactiveZone={0.3} />
-            <Button 
-              className="font-display min-h-[48px] px-6 touch-manipulation shadow-lg hover:shadow-xl hover:shadow-primary/25 transition-all duration-300"
-            >
-              Yes, Hire Zahin
-            </Button>
-          </div>
-        </Link>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <Link to="/contact" className="inline-block">
+            <div className="relative">
+              <GlowingEffect spread={40} glow={true} disabled={false} proximity={80} inactiveZone={0.3} />
+              <Button 
+                className="font-display min-h-[48px] px-6 touch-manipulation shadow-lg hover:shadow-xl hover:shadow-primary/25 transition-all duration-300"
+              >
+                Yes, Hire Zahin
+              </Button>
+            </div>
+          </Link>
+          
+          {page === 'projects' && (
+            <Link to="/bcreatives" className="inline-block">
+              <Button 
+                variant="outline"
+                className="font-display min-h-[48px] px-6 touch-manipulation"
+              >
+                Design Services
+              </Button>
+            </Link>
+          )}
+        </div>
       </div>
     </section>
   );
