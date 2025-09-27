@@ -76,6 +76,52 @@ const Bcreatives = () => {
           </div>
         </section>
 
+        {/* Testimonials Section */}
+        <section className="px-4 sm:px-6 py-16 bg-muted/30">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-8 sm:mb-12">
+              <p className="text-sm uppercase tracking-wider text-muted-foreground mb-2">WHAT EVERYONE IS SAYING</p>
+              <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-medium px-2">
+                Trusted by professionals.
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+              <Card className="p-6 sm:p-8 text-left bg-white">
+                <div className="mb-6">
+                  <p className="text-base sm:text-lg leading-relaxed mb-4">
+                    "NEKA.DESIGN gave us the flexibility to test ideas quickly without the cost of an in-house team. The speed and clarity were game-changing."
+                  </p>
+                </div>
+                <div className="pt-4 border-t border-muted">
+                  <p className="font-medium text-sm">— Founder, SaaS Startup</p>
+                </div>
+              </Card>
+              
+              <Card className="p-6 sm:p-8 text-left bg-white">
+                <div className="mb-6">
+                  <p className="text-base sm:text-lg leading-relaxed mb-4">
+                    "As a growing team, design used to slow us down. With NEKA.DESIGN, we can iterate in days, not weeks. It feels like having a design lab on demand."
+                  </p>
+                </div>
+                <div className="pt-4 border-t border-muted">
+                  <p className="font-medium text-sm">— Product Lead, Fintech</p>
+                </div>
+              </Card>
+              
+              <Card className="p-6 sm:p-8 text-left bg-white">
+                <div className="mb-6">
+                  <p className="text-base sm:text-lg leading-relaxed mb-4">
+                    "From landing pages to product screens, the sandbox model just works. No fuss, no waiting — just design that keeps up with us."
+                  </p>
+                </div>
+                <div className="pt-4 border-t border-muted">
+                  <p className="font-medium text-sm">— Marketing Director, D2C Brand</p>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </section>
+
         {/* Pricing Plans */}
         <section className="px-4 sm:px-6 py-16 bg-bcreatives-pricing">
           <div className="max-w-6xl mx-auto">
