@@ -89,7 +89,7 @@ const Bcreatives = () => {
               <Card className="p-6 sm:p-8 text-left bg-white">
                 <div className="mb-6">
                   <p className="text-base sm:text-lg leading-relaxed mb-4">
-                    "NEKA.DESIGN gave us the flexibility to test ideas quickly without the cost of an in-house team. The speed and clarity were game-changing."
+                    "Zahin gave us the flexibility to test ideas quickly without the cost of an in-house team. The speed and clarity were game-changing."
                   </p>
                 </div>
                 <div className="pt-4 border-t border-muted">
@@ -100,7 +100,7 @@ const Bcreatives = () => {
               <Card className="p-6 sm:p-8 text-left bg-white">
                 <div className="mb-6">
                   <p className="text-base sm:text-lg leading-relaxed mb-4">
-                    "As a growing team, design used to slow us down. With NEKA.DESIGN, we can iterate in days, not weeks. It feels like having a design lab on demand."
+                    "As a growing team, design used to slow us down. With Zahin, we can iterate in days, not weeks. It feels like having a design lab on demand."
                   </p>
                 </div>
                 <div className="pt-4 border-t border-muted">
