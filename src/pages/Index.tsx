@@ -60,8 +60,8 @@ const Index = () => {
       <StickyNavbar />
 
       {/* Hero Section */}
-      <section className="py-8 sm:py-12 lg:py-20 px-4 sm:px-6 lg:px-12 xl:px-16 fade-in pb-4 sm:pb-6">
-        <div className="w-full text-left">
+      <section className="py-8 sm:py-12 lg:py-20 px-4 sm:px-6 fade-in pb-4 sm:pb-6">
+        <div className="max-w-4xl mx-auto text-left">
           <h2 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">I specialise in user interface and experience design, branding and creative direction.</h2>
           <p style={{
           color: '#606060'
@@ -124,8 +124,8 @@ const Index = () => {
       </section>
 
       {/* Design Philosophy Section */}
-      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-12 xl:px-16">
-        <div className="w-full">
+      <section className="py-16 sm:py-24 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto">
           <Card className="bg-[#1a1a1a] text-white border-0 rounded-[24px] p-8 sm:p-16 text-center">
             <h2 className="font-display text-white text-3xl sm:text-4xl lg:text-5xl font-medium mb-6 tracking-tight leading-tight">
               Design is not linear. It's systemic.<br />
@@ -140,8 +140,8 @@ const Index = () => {
       </section>
 
       {/* Proof in Practice Section */}
-      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-12 xl:px-16">
-        <div className="w-full">
+      <section className="py-16 sm:py-24 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium mb-4 tracking-tight">
               Proof in Practice.
