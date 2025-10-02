@@ -16,7 +16,7 @@ const QuoteBlock: React.FC<QuoteBlockProps> = ({
   return (
     <div className="bg-muted/50 p-6 md:p-8 rounded-[10px] mb-8 border border-border">
       <p 
-        className="mb-4 md:mb-6 text-base md:text-[21px] leading-relaxed md:leading-[32px]"
+        className="mb-3 md:mb-4 text-base md:text-[21px] leading-relaxed md:leading-[32px]"
         style={{
           fontFamily: 'Plus Jakarta Sans, sans-serif',
           color: '#374151'
