@@ -199,8 +199,8 @@ const Index = () => {
       {/* Contact Section */}
       <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-12 xl:px-16 border-t border-border">
         <div className="max-w-4xl">
-          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-foreground mb-8">
-            Let's talk. <span className="text-muted-foreground font-normal">We'd love to hear from you.</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-[50px] lg:leading-[60px] font-bold text-foreground mb-8">
+            Let's talk. <span className="text-muted-foreground font-normal">I'd love to hear from you.</span>
           </h2>
           <Link to="/contact">
             <Button variant="secondary" size="lg">
