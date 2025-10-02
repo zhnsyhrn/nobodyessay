@@ -126,7 +126,7 @@ const Index = () => {
       <section className="py-16 sm:py-24 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <Card className="bg-[#1a1a1a] text-white border-0 rounded-[24px] p-8 sm:p-16 text-center">
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium mb-6 tracking-tight leading-tight">
+            <h2 className="font-display text-white text-3xl sm:text-4xl lg:text-5xl font-medium mb-6 tracking-tight leading-tight">
               Design is not linear. It's systemic.<br />
               Every system evolves with intention.
             </h2>
