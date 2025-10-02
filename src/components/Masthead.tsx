@@ -9,9 +9,9 @@ const Masthead = () => {
   };
 
   return (
-    <div className="w-full bg-[#F4F4F5] border-b border-zinc-200 px-3 sm:px-4 md:px-6">
+    <div className="w-full bg-[#F4F4F5] border-b border-zinc-200 px-4 sm:px-6 lg:px-12 xl:px-16">
       {/* Fixed height container for collapsed state */}
-      <div className={`max-w-4xl mx-auto ${isExpanded ? 'py-2' : 'py-2'}`}>
+      <div className={`w-full ${isExpanded ? 'py-2' : 'py-2'}`}>
         <div className={`flex items-center justify-start gap-1.5 sm:gap-2 ${isExpanded ? 'h-auto' : 'h-4'}`}>
           {/* Malaysian Flag */}
           <img 
