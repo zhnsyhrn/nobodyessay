@@ -9,23 +9,11 @@ const CallToAction = ({ page }: CallToActionProps) => {
   const getTitle = () => {
     switch (page) {
       case 'writings':
-        return (
-          <>
-            Let's talk. <span className="text-muted-foreground font-normal">I'd love to hear from you.</span>
-          </>
-        );
+        return "Enjoyed my perspective on design? Let's turn ideas into real solutions.";
       case 'projects':
-        return (
-          <>
-            Let's talk. <span className="text-muted-foreground font-normal">I'd love to hear from you.</span>
-          </>
-        );
+        return "If these projects spark interest, I'd love to create impactful work for you too.";
       case 'about':
-        return (
-          <>
-            Let's talk. <span className="text-muted-foreground font-normal">I'd love to hear from you.</span>
-          </>
-        );
+        return "I'm open to new opportunities and collaborations — let's build something great together.";
       default:
         return '';
     }
