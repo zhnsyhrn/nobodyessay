@@ -14,6 +14,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { LazyImage } from "@/components/ui/lazy-image";
 import { useCarouselPreloader } from "@/hooks/useImagePreloader";
+import { projects } from "@/data/projects";
 
 // Portfolio design images - Your latest design portfolio work
 const portfolioImages = ["/lovable-uploads/4f35efbc-ddf9-451c-bf0a-e7c2e5ccceec.png",
@@ -155,73 +156,30 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Project 1 */}
-            <Link to="/studio" className="group">
-              <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <LazyImage
-                    src="/lovable-uploads/151a6112-1d81-410d-b905-46eb1820545e.png"
-                    alt="Knock Knock Cafe - Art Direction & Brand Design"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-display text-xl font-medium mb-1">Knock Knock Cafe</h3>
-                  <p className="text-sm text-muted-foreground uppercase tracking-wide">ART DIRECTION & BRAND DESIGN</p>
-                </div>
-              </Card>
-            </Link>
-
-            {/* Project 2 */}
-            <Link to="/studio" className="group">
-              <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="aspect-[4/3] overflow-hidden bg-[#ff4438]">
-                  <LazyImage
-                    src="/lovable-uploads/87011945-cf3d-4d63-8f09-146843fb1e36.png"
-                    alt="MoneyX App - Fintech App Feature UX/UI Design"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-display text-xl font-medium mb-1">MoneyX App - Fintech</h3>
-                  <p className="text-sm text-muted-foreground uppercase tracking-wide">APP FEATURE UX/UI DESIGN</p>
-                </div>
-              </Card>
-            </Link>
-
-            {/* Project 3 */}
-            <Link to="/studio" className="group">
-              <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <LazyImage
-                    src="/lovable-uploads/f4697a18-0878-474e-993a-80b25600aa97.png"
-                    alt="Great Eastern Takaful - Website Design"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-display text-xl font-medium mb-1">Great Eastern Takaful</h3>
-                  <p className="text-sm text-muted-foreground uppercase tracking-wide">WEBSITE REDESIGN</p>
-                </div>
-              </Card>
-            </Link>
-
-            {/* Project 4 */}
-            <Link to="/studio" className="group">
-              <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <LazyImage
-                    src="/lovable-uploads/ebb70966-3d48-4bd8-a0fb-dcb74281f5fb.png"
-                    alt="PolicyStreet - Mobile App Design"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-display text-xl font-medium mb-1">PolicyStreet Mobile</h3>
-                  <p className="text-sm text-muted-foreground uppercase tracking-wide">MOBILE APP UX/UI DESIGN</p>
-                </div>
-              </Card>
-            </Link>
+            {projects.slice(0, 4).map((project, index) => (
+              <Link 
+                key={project.slug} 
+                to={project.hasDetails ? `/projects/${project.slug}` : "/studio"} 
+                className="group"
+              >
+                <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <LazyImage
+                      src={project.image}
+                      alt={`${project.title} - ${project.description}`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      priority={index < 2}
+                      preload={index < 4}
+                      blurUp={true}
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-display text-xl font-medium mb-1">{project.title}</h3>
+                    <p className="text-sm text-muted-foreground uppercase tracking-wide">{project.description}</p>
+                  </div>
+                </Card>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
