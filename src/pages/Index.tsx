@@ -8,7 +8,7 @@ import { getFeaturedEssays } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
-import { Instagram, Linkedin, X } from "lucide-react";
+import { Instagram, Linkedin, X, ArrowRight } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
@@ -155,29 +155,40 @@ const Index = () => {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[10px]">
             {projects.slice(0, 4).map((project, index) => (
               <Link 
                 key={project.slug} 
                 to={project.hasDetails ? `/projects/${project.slug}` : "/studio"} 
-                className="group"
+                className="group cursor-pointer"
               >
-                <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="aspect-[4/3] overflow-hidden">
+                <div className="rounded-[10px] overflow-hidden bg-white">
+                  <div className="aspect-video overflow-hidden bg-muted">
                     <LazyImage
                       src={project.image}
-                      alt={`${project.title} - ${project.description}`}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       priority={index < 2}
                       preload={index < 4}
                       blurUp={true}
                     />
                   </div>
-                  <div className="p-6">
-                    <h3 className="font-display text-xl font-medium mb-1">{project.title}</h3>
-                    <p className="text-sm text-muted-foreground uppercase tracking-wide">{project.description}</p>
+                  <div className="p-2 sm:p-3" style={{ backgroundColor: '#F5F5F5' }}>
+                    <div className="flex items-center justify-between">
+                      <div className="flex-1">
+                        <h3 className="font-display text-base font-medium text-black mb-1">
+                          {project.title}
+                        </h3>
+                        <p className="font-mono text-xs sm:text-[10px] text-gray-700 uppercase">
+                          {project.description}
+                        </p>
+                      </div>
+                      <div className="ml-4">
+                        <ArrowRight className="text-gray-600" size={20} />
+                      </div>
+                    </div>
                   </div>
-                </Card>
+                </div>
               </Link>
             ))}
           </div>
