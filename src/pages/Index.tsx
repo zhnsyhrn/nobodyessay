@@ -124,8 +124,8 @@ const Index = () => {
       </section>
 
       {/* Design Philosophy Section */}
-      <section className="py-16 sm:py-24 px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-12 xl:px-16">
+        <div className="w-full">
           <Card className="bg-[#1a1a1a] text-white border-0 rounded-[24px] p-6 sm:p-12 lg:p-16 text-center">
             <h2 className="font-display text-white text-3xl sm:text-4xl lg:text-5xl font-medium mb-6 sm:mb-8 tracking-tight leading-tight sm:leading-tight" style={{ lineHeight: '1.2' }}>
               Design is not linear. It's systemic.<br />
@@ -139,8 +139,8 @@ const Index = () => {
       </section>
 
       {/* Proof in Practice Section */}
-      <section className="py-16 sm:py-24 px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-12 xl:px-16">
+        <div className="w-full">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium mb-4 tracking-tight">
               Proof in Practice.
