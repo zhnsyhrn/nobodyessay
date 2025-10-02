@@ -126,12 +126,12 @@ const Index = () => {
       {/* Design Philosophy Section */}
       <section className="py-16 sm:py-24 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
-          <Card className="bg-[#1a1a1a] text-white border-0 rounded-[24px] p-8 sm:p-16 text-center">
-            <h2 className="font-display text-white text-3xl sm:text-4xl lg:text-5xl font-medium mb-6 tracking-tight" style={{ lineHeight: '58px' }}>
+          <Card className="bg-[#1a1a1a] text-white border-0 rounded-[24px] p-6 sm:p-12 lg:p-16 text-center">
+            <h2 className="font-display text-white text-3xl sm:text-4xl lg:text-5xl font-medium mb-6 sm:mb-8 tracking-tight leading-tight sm:leading-tight" style={{ lineHeight: '1.2' }}>
               Design is not linear. It's systemic.<br />
               Every system evolves with intention.
             </h2>
-            <p className="text-white/70 max-w-3xl mx-auto" style={{ fontSize: '16px', lineHeight: '26px' }}>
+            <p className="text-white/70 max-w-3xl mx-auto text-sm sm:text-base" style={{ lineHeight: '1.625' }}>
               I treat every project as a dynamic system of interactions, not a collection of assets. They are living ecosystems — made of people, processes, and touch points.
             </p>
           </Card>
