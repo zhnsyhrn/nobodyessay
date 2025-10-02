@@ -82,7 +82,9 @@ const Studio = () => {
                         </p>
                       </div>
                       <div className="ml-4">
-                        <ArrowRight className="text-gray-600" size={20} />
+                        <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
+                          <ArrowRight className="text-black" size={20} />
+                        </div>
                       </div>
                     </div>
                   </div>
