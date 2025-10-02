@@ -128,7 +128,8 @@ const Index = () => {
         <div className="w-full">
           <Card className="bg-[#1a1a1a] text-white border-0 rounded-[24px] p-6 sm:p-12 lg:p-16 text-left lg:text-center">
             <h2 className="font-display text-white text-3xl sm:text-4xl lg:text-5xl font-medium mb-6 sm:mb-8 tracking-tight leading-tight sm:leading-tight" style={{ lineHeight: '1.2' }}>
-              Design is not linear. It's systemic. Every system evolves with intention.
+              Design is not linear. It's systemic.<br className="hidden lg:block" />
+              Every system evolves with intention.
             </h2>
             <p className="text-white/70 max-w-3xl lg:mx-auto text-sm sm:text-base" style={{ lineHeight: '1.625' }}>
               I treat every project as a dynamic system of interactions, not a collection of assets. They are living ecosystems — made of people, processes, and touch points.
