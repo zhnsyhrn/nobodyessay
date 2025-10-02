@@ -8,10 +8,10 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Knock Knock Cafe",
-    slug: "knock-knock-cafe-kuala-terengganu",
-    description: "Art direction & brand design",
-    image: "/lovable-uploads/2ec90d04-32fe-40d7-ad32-37985537079c.png",
+    title: "Great Eastern Takaful Malaysia",
+    slug: "great-eastern-takaful-malaysia",
+    description: "UX Audit, Design-led Initiative",
+    image: "/lovable-uploads/69a2f54d-177c-4bcd-9167-0e4939d7b7fb.png",
     hasDetails: true
   },
   {
@@ -29,10 +29,10 @@ export const projects: Project[] = [
     hasDetails: true
   },
   {
-    title: "Great Eastern Takaful Malaysia",
-    slug: "great-eastern-takaful-malaysia",
-    description: "UX Audit",
-    image: "/lovable-uploads/69a2f54d-177c-4bcd-9167-0e4939d7b7fb.png",
+    title: "Knock Knock Cafe",
+    slug: "knock-knock-cafe-kuala-terengganu",
+    description: "Art direction & brand design",
+    image: "/lovable-uploads/2ec90d04-32fe-40d7-ad32-37985537079c.png",
     hasDetails: true
   },
   {

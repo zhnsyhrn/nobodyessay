@@ -286,17 +286,17 @@ const projectsData = {
     }
   },
   "great-eastern-takaful-malaysia": {
-    title: "Great Eastern Takaful Malaysia",
+    title: "Rearchitecting the Customer Experience for Great Eastern Takaful Website",
     websiteUrl: "https://www.greateasterntakaful.com/en/personal-takaful.html",
-    overview: "Led a 2-month UX Audit and redesign for Great Eastern Takaful Berhad's corporate website, aligning it with the latest Great Eastern Group identity before handing over to the Singapore team.",
+    overview: "Transforming fragmented digital touchpoints into a cohesive, customer-centric experience through content reorganisation and UX strategy.",
     projectInfo: {
-      "Project / Company": "Great Eastern Takaful Berhad",
-      "Type": "UX Audit",
-      "Role / Project Ownership": "Lead designer",
-      "Contribution": "Design workshop with multiple stakeholders",
+      "Project / Company": "Great Eastern Takaful Berhad, Malaysia",
+      "Type": "UX Audit, Design-led Initiative",
+      "Role / Project Ownership": "Design Ownership",
+      "Contribution": "Leading end-to-end design process from UX audit to design handover co-led ideation sessions with stakeholders to generate early solutions / created low-fi wireframes, iterated them into hi-fi mobile screens, and built the interactive prototype in Figma.",
       "Project Lead / Product Manager(s)": "Zahin Syahiran",
-      "Value Added": "Design consultation",
-      "Credits": "Not available"
+      "Value Added": "Bahasa Malaysia translation for all content in the website",
+      "Credits": "Simon Goh, Director of Digital Experience Studio"
     }
   },
   "verdant-solar-my": {
