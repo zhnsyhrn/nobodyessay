@@ -502,7 +502,7 @@ const ProjectDetail = () => {
           <div className="border-b border-border pb-2">
             <p className="text-base sm:text-lg leading-relaxed" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#606060'
+            color: '#374151'
           }}>
               {project.overview}
             </p>
@@ -553,7 +553,7 @@ const ProjectDetail = () => {
               
               <p className="mb-4" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#606060',
+            color: '#374151',
             fontSize: '16px'
           }}>
                 Great Eastern Takaful Berhad (GETB) wanted to reorganise their overall website experience to better support customers seeking takaful consultation, purchasing takaful products, and managing claims. The project also included refreshing the design to align with the latest corporate identity from Great Eastern Group, designed by the Singapore team.
@@ -561,7 +561,7 @@ const ProjectDetail = () => {
               
               <p className="mb-4" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#606060',
+            color: '#374151',
             fontSize: '16px'
           }}>
                 The existing website's information architecture was problematic: broken links, outdated content and products, unnecessary widgets, and poor structure overall.
@@ -569,7 +569,7 @@ const ProjectDetail = () => {
               
               <p className="mb-8" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#606060',
+            color: '#374151',
             fontSize: '16px'
           }}>
                 The Digital Experience Studio of Great Eastern hired Zahin Syahiran on a contractual basis to lead the process—conducting a UX audit, running workshops and consultations with internal stakeholders, translating content into Bahasa Malaysia for local audiences, and handing over the designs to the AVP of Website in Singapore within two months.
@@ -580,7 +580,7 @@ const ProjectDetail = () => {
               <div className="bg-muted/30 border-l-4 border-primary p-4 mb-8 rounded">
                 <p className="italic" style={{
               fontFamily: 'Plus Jakarta Sans, sans-serif',
-              color: '#606060',
+              color: '#374151',
               fontSize: '16px'
             }}>
                   "Unfortunately, I wasn't able to capture or document all of the work I completed here, specifically the Excel files and some of the documentation, due to strict IT security policies enforced by the IT team. Many items were confidential. I often worked more than 8 hours a day, sometimes at Starbucks Jalan Ampang, to organise all the audits, design arrangements, and workshop plans as a first-timer." – Zahin Syahiran
@@ -600,7 +600,7 @@ const ProjectDetail = () => {
               
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#606060',
+            color: '#374151',
             fontSize: '16px'
           }}>
                 <li>Conducted a full audit of the entire website end-to-end, including micro-sites, to gather insights.</li>
@@ -614,7 +614,7 @@ const ProjectDetail = () => {
               <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-4 rounded">
                 <p style={{
               fontFamily: 'Plus Jakarta Sans, sans-serif',
-              color: '#606060',
+              color: '#374151',
               fontSize: '16px'
             }}>
                   💡 The workshops were conducted to seek verification on various issues found from the audit, highlighting potential solutions, and facilitate internal discussions between department managers that are responsible for their content or pages on the website.
@@ -623,7 +623,7 @@ const ProjectDetail = () => {
               
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#606060',
+            color: '#374151',
             fontSize: '16px'
           }}>
                 <li>1-hour call with the website owner to highlight the insights gathered from the audit. The main objective is to seek verification on the issues, get better context, and explore potential initial solutions.</li>
@@ -636,7 +636,7 @@ const ProjectDetail = () => {
               <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-4 rounded">
                 <p style={{
               fontFamily: 'Plus Jakarta Sans, sans-serif',
-              color: '#606060',
+              color: '#374151',
               fontSize: '16px'
             }}>
                   💡 Then, the process continued with high-fidelity wireframes for all key pages in the website by referring to the Great Eastern Singapore site as the main reference and identifying relevant designs for adaptation based on the latest web page content.
@@ -645,7 +645,7 @@ const ProjectDetail = () => {
               
               <ul className="list-disc pl-6 mb-8 space-y-2" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#606060',
+            color: '#374151',
             fontSize: '16px'
           }}>
                 <li>Created high-fidelity wireframes for key website pages, referencing the Great Eastern Singapore site as the primary design benchmark.</li>
@@ -658,14 +658,14 @@ const ProjectDetail = () => {
               <div className="bg-muted/30 border-l-4 border-primary p-4 mb-8 rounded">
                 <p className="italic mb-4" style={{
               fontFamily: 'Plus Jakarta Sans, sans-serif',
-              color: '#606060',
+              color: '#374151',
               fontSize: '16px'
             }}>
                   "For this task, it was less about creating new assets or designs in Figma, and more about managing stakeholders' expectations and coordinating communication between managers from different departments to reach a consensus on new content arrangements and web navigation (information architecture)."
                 </p>
                 <p className="italic" style={{
               fontFamily: 'Plus Jakarta Sans, sans-serif',
-              color: '#606060',
+              color: '#374151',
               fontSize: '16px'
             }}>
                   "The design work in Figma was mainly to visualize the updated layouts for key pages such as corporate, products, company profile, and articles, while also ensuring ease of web development by leveraging the existing templates and assets created by the Singapore team. This included the new information architecture (before and after), updated illustration placements, color usage, page content layouts, and the side-by-side design of Bahasa Malaysia translations with the English version for every single page, among many other updates. Everything was well-documented from the initial phase through to the design phase, including project updates." – Zahin Syahiran
@@ -685,7 +685,7 @@ const ProjectDetail = () => {
               
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#606060',
+            color: '#374151',
             fontSize: '16px'
           }}>
                 <li>Created templates for consistent layouts across multiple pages.</li>
@@ -698,7 +698,7 @@ const ProjectDetail = () => {
               
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#606060',
+            color: '#374151',
             fontSize: '16px'
           }}>
                 <li>Users experienced a more consistent, responsive website free from broken layouts and outdated pages.</li>
@@ -709,7 +709,7 @@ const ProjectDetail = () => {
               
               <ul className="list-disc pl-6 mb-8 space-y-2" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#606060',
+            color: '#374151',
             fontSize: '16px'
           }}>
                 <li>Developers reused components and templates reducing development effort.</li>
@@ -721,7 +721,7 @@ const ProjectDetail = () => {
               
               <ul className="list-decimal pl-6 mb-8 space-y-2" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#606060',
+            color: '#374151',
             fontSize: '16px'
           }}>
                 <li>Co-creation workshops not only produced better ideas but also secured stakeholder buy-in early.</li>
