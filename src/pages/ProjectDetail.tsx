@@ -5,6 +5,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
+import QuoteBlock from "@/components/QuoteBlock";
 import { ExternalLink, ArrowLeft, ArrowRight } from "lucide-react";
 
 // Import gallery images
@@ -577,15 +578,11 @@ const ProjectDetail = () => {
               
               <h3 className="font-display text-2xl font-medium mb-4">Case Study Limitations</h3>
               
-              <div className="bg-muted/30 border-l-4 border-primary p-4 mb-8 rounded">
-                <p className="italic" style={{
-              fontFamily: 'Plus Jakarta Sans, sans-serif',
-              color: '#374151',
-              fontSize: '16px'
-            }}>
-                  "Unfortunately, I wasn't able to capture or document all of the work I completed here, specifically the Excel files and some of the documentation, due to strict IT security policies enforced by the IT team. Many items were confidential. I often worked more than 8 hours a day, sometimes at Starbucks Jalan Ampang, to organise all the audits, design arrangements, and workshop plans as a first-timer." – Zahin Syahiran
-                </p>
-              </div>
+              <QuoteBlock 
+                quote="Unfortunately, I wasn't able to capture or document all of the work I completed here, specifically the Excel files and some of the documentation, due to strict IT security policies enforced by the IT team. Many items were confidential. I often worked more than 8 hours a day, sometimes at Starbucks Jalan Ampang, to organise all the audits, design arrangements, and workshop plans as a first-timer."
+                authorName="Zahin Syahiran"
+                authorImage="/lovable-uploads/zahin-profile.png"
+              />
               
               {/* First 3 images */}
               <div className="grid grid-cols-1 gap-4 mb-8">
@@ -655,22 +652,11 @@ const ProjectDetail = () => {
                 <li>Documented the full process from audit to handover.</li>
               </ul>
               
-              <div className="bg-muted/30 border-l-4 border-primary p-4 mb-8 rounded">
-                <p className="italic mb-4" style={{
-              fontFamily: 'Plus Jakarta Sans, sans-serif',
-              color: '#374151',
-              fontSize: '16px'
-            }}>
-                  "For this task, it was less about creating new assets or designs in Figma, and more about managing stakeholders' expectations and coordinating communication between managers from different departments to reach a consensus on new content arrangements and web navigation (information architecture)."
-                </p>
-                <p className="italic" style={{
-              fontFamily: 'Plus Jakarta Sans, sans-serif',
-              color: '#374151',
-              fontSize: '16px'
-            }}>
-                  "The design work in Figma was mainly to visualize the updated layouts for key pages such as corporate, products, company profile, and articles, while also ensuring ease of web development by leveraging the existing templates and assets created by the Singapore team. This included the new information architecture (before and after), updated illustration placements, color usage, page content layouts, and the side-by-side design of Bahasa Malaysia translations with the English version for every single page, among many other updates. Everything was well-documented from the initial phase through to the design phase, including project updates." – Zahin Syahiran
-                </p>
-              </div>
+              <QuoteBlock 
+                quote="For this task, it was less about creating new assets or designs in Figma, and more about managing stakeholders' expectations and coordinating communication between managers from different departments to reach a consensus on new content arrangements and web navigation (information architecture). The design work in Figma was mainly to visualize the updated layouts for key pages such as corporate, products, company profile, and articles, while also ensuring ease of web development by leveraging the existing templates and assets created by the Singapore team. This included the new information architecture (before and after), updated illustration placements, color usage, page content layouts, and the side-by-side design of Bahasa Malaysia translations with the English version for every single page, among many other updates. Everything was well-documented from the initial phase through to the design phase, including project updates."
+                authorName="Zahin Syahiran"
+                authorImage="/lovable-uploads/zahin-profile.png"
+              />
               
               {/* Last 2 images */}
               <div className="grid grid-cols-1 gap-4 mb-8">
