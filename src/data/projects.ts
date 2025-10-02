@@ -8,7 +8,7 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Great Eastern Takaful Malaysia",
+    title: "Rearchitecting the Customer Experience for Great Eastern Takaful Website",
     slug: "great-eastern-takaful-malaysia",
     description: "UX Audit, Design-led Initiative",
     image: "/lovable-uploads/69a2f54d-177c-4bcd-9167-0e4939d7b7fb.png",
