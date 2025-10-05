@@ -60,14 +60,14 @@ export const ProjectFilters = ({
 
               <div className="flex items-center gap-2">
                 <Button
-                  variant={sortBy === "date" ? "default" : "ghost"}
+                  variant={sortBy === "date" ? "default" : "outline"}
                   onClick={() => onSortChange("date")}
                   className="rounded-full"
                 >
                   Date {sortBy === "date" && <ArrowUp size={16} className="ml-1" />}
                 </Button>
                 <Button
-                  variant={sortBy === "alphabetical" ? "default" : "ghost"}
+                  variant={sortBy === "alphabetical" ? "default" : "outline"}
                   onClick={() => onSortChange("alphabetical")}
                   className="rounded-full"
                 >
