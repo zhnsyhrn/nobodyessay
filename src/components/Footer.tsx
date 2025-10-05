@@ -66,7 +66,7 @@ const Footer = () => {
       </div>
 
       {/* Copyright */}
-      <div className="border-t border-border py-4" style={{ backgroundColor: '#EBEBEB' }}>
+      <div className="border-t border-border py-4" style={{ backgroundColor: '#121212' }}>
         <p className="font-display text-sm text-center text-muted-foreground">
           © 2025 Zahin Syahiran. All rights reserved.
         </p>
