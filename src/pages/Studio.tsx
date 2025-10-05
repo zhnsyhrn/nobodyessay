@@ -91,22 +91,18 @@ const Studio = () => {
       <StickyNavbar />
 
       {/* Filters Section */}
-      <section className="py-6 sm:py-8 px-4 sm:px-6 lg:px-12 xl:px-16">
-        <div className="w-full">
-          <ProjectFilters
-            searchQuery={searchQuery}
-            onSearchChange={setSearchQuery}
-            selectedType={selectedType}
-            onTypeChange={setSelectedType}
-            sortBy={sortBy}
-            onSortChange={setSortBy}
-            projectTypes={projectTypes}
-          />
-        </div>
-      </section>
+      <ProjectFilters
+        searchQuery={searchQuery}
+        onSearchChange={setSearchQuery}
+        selectedType={selectedType}
+        onTypeChange={setSelectedType}
+        sortBy={sortBy}
+        onSortChange={setSortBy}
+        projectTypes={projectTypes}
+      />
 
       {/* Projects Grid */}
-      <section className="py-4 sm:py-6 px-4 sm:px-6 lg:px-12 xl:px-16">
+      <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-12 xl:px-16">
         <div className="w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[20px]">
             {filteredProjects.map((project, index) => {
