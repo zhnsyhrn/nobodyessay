@@ -92,11 +92,11 @@ const Studio = () => {
               );
 
               return project.hasDetails ? (
-                <Link key={project.slug} to={`/projects/${project.slug}`} className="group cursor-pointer">
+                <Link key={project.slug} to={`/projects/${project.slug}`} className="group cursor-pointer h-full">
                   <CardContent />
                 </Link>
               ) : (
-                <div key={project.slug} onClick={handleClick} className="group cursor-pointer">
+                <div key={project.slug} onClick={handleClick} className="group cursor-pointer h-full">
                   <CardContent />
                 </div>
               );

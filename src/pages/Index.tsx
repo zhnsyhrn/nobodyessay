@@ -159,7 +159,7 @@ const Index = () => {
               <Link 
                 key={project.slug} 
                 to={project.hasDetails ? `/projects/${project.slug}` : "/studio"} 
-                className="group cursor-pointer"
+                className="group cursor-pointer h-full"
               >
                 <div className="rounded-[10px] overflow-hidden bg-white h-full flex flex-col">
                   <div className="aspect-video overflow-hidden bg-muted">
