@@ -6,10 +6,12 @@ const Footer = () => {
     <footer className="border-t border-border bg-background">
       <div className="px-4 sm:px-6 lg:px-12 xl:px-16 py-6 sm:py-8">
         <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-6">
-          {/* Name */}
-          <h2 className="font-display text-xl sm:text-2xl font-medium">
-            Zahin Syahiran
-          </h2>
+          {/* Logo */}
+          <img 
+            src="/lovable-uploads/zahin-logo.png" 
+            alt="Zahin Syahiran" 
+            className="h-6 sm:h-7"
+          />
 
           {/* Navigation Links */}
           <nav className="flex gap-6 sm:gap-8" role="navigation" aria-label="Footer navigation">
