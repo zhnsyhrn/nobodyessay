@@ -154,7 +154,7 @@ const Index = () => {
                 <h3 className="font-jakarta font-semibold mb-3 sm:mb-3 md:mb-4 text-[20px] leading-[28px] sm:text-[21px] sm:leading-[30px] md:text-[22px] md:leading-[32px] lg:text-[24px] lg:leading-[34px]" style={{ color: '#F3F3F3' }}>
                   Imagine & Experiment.
                 </h3>
-                <p className="font-jakarta text-[14px] leading-[22px] sm:text-[14.5px] sm:leading-[22px] md:text-[15px] md:leading-[23px] lg:text-[16px] lg:leading-[24px]" style={{ color: '#C2C2C2' }}>
+                <p className="font-jakarta text-[14px] leading-[22px] sm:text-[14.5px] sm:leading-[22px] md:text-[15px] md:leading-[23px] lg:text-[20px] lg:leading-[30px] lg:font-medium" style={{ color: '#C2C2C2' }}>
                   Map possibilities across the brand system, design prototypes and push boundaries. In this phase, ideas compete, merge, and evolve.
                 </p>
               </div>
@@ -167,7 +167,7 @@ const Index = () => {
                 <h3 className="font-jakarta font-semibold mb-3 sm:mb-3 md:mb-4 text-[20px] leading-[28px] sm:text-[21px] sm:leading-[30px] md:text-[22px] md:leading-[32px] lg:text-[24px] lg:leading-[34px]" style={{ color: '#F3F3F3' }}>
                   Refine. Cohesion by Design.
                 </h3>
-                <p className="font-jakarta text-[14px] leading-[22px] sm:text-[14.5px] sm:leading-[22px] md:text-[15px] md:leading-[23px] lg:text-[16px] lg:leading-[24px]" style={{ color: '#C2C2C2' }}>
+                <p className="font-jakarta text-[14px] leading-[22px] sm:text-[14.5px] sm:leading-[22px] md:text-[15px] md:leading-[23px] lg:text-[20px] lg:leading-[30px] lg:font-medium" style={{ color: '#C2C2C2' }}>
                   What survives experimentation becomes systemized. Each element serves a role, aligned to function and scalability — visual languages & component libraries.
                 </p>
               </div>
@@ -180,7 +180,7 @@ const Index = () => {
                 <h3 className="font-jakarta font-semibold mb-3 sm:mb-3 md:mb-4 text-[20px] leading-[28px] sm:text-[21px] sm:leading-[30px] md:text-[22px] md:leading-[32px] lg:text-[24px] lg:leading-[34px]" style={{ color: '#F3F3F3' }}>
                   Emerge. Systems That Lead.
                 </h3>
-                <p className="font-jakarta text-[14px] leading-[22px] sm:text-[14.5px] sm:leading-[22px] md:text-[15px] md:leading-[23px] lg:text-[16px] lg:leading-[24px]" style={{ color: '#C2C2C2' }}>
+                <p className="font-jakarta text-[14px] leading-[22px] sm:text-[14.5px] sm:leading-[22px] md:text-[15px] md:leading-[23px] lg:text-[20px] lg:leading-[30px] lg:font-medium" style={{ color: '#C2C2C2' }}>
                   Finally, the system comes to life. Each brand we design can scale, flex, and evolve without losing its essence. Growth becomes effortless.
                 </p>
               </div>
