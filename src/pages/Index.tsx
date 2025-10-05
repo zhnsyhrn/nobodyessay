@@ -196,7 +196,7 @@ const Index = () => {
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium mb-4 tracking-tight">
               Proof in Practice.
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl md:mx-auto mb-2">
+            <p className="font-jakarta text-[15px] leading-[24px] sm:text-[16px] sm:leading-[26px] md:text-[17px] md:leading-[28px] lg:text-[18px] lg:leading-[29px] text-muted-foreground max-w-2xl md:mx-auto mb-2">
               Every project is a system in motion. Every outcome is<br className="hidden sm:block" />
               measurable, scalable, enduring.
             </p>
