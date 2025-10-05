@@ -60,7 +60,7 @@ const Studio = () => {
               };
 
               const CardContent = () => (
-                <div className="rounded-[10px] overflow-hidden bg-white">
+                <div className="rounded-[10px] overflow-hidden bg-white h-full flex flex-col">
                   <div className="aspect-video overflow-hidden bg-muted">
                     <LazyImage 
                       src={project.image} 
