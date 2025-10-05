@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState, useMemo } from "react";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -11,6 +11,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { ArrowRight } from "lucide-react";
 import { LazyImage } from "@/components/ui/lazy-image";
 import { projects } from "@/data/projects";
+import { ProjectFilters } from "@/components/ProjectFilters";
 
 // Sample project images - you can replace these with actual project images
 import galleryImage1 from "@/assets/gallery-01.jpg";
@@ -30,6 +31,49 @@ const Studio = () => {
   
   // Coming soon dialog state
   const [comingSoonDialog, setComingSoonDialog] = useState({ open: false, title: "" });
+  
+  // Filter states
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedType, setSelectedType] = useState("all");
+  const [sortBy, setSortBy] = useState<"date" | "alphabetical">("date");
+  
+  // Get unique project types
+  const projectTypes = useMemo(() => {
+    const types = new Set(projects.map(p => p.type));
+    return Array.from(types).sort();
+  }, []);
+  
+  // Filter and sort projects
+  const filteredProjects = useMemo(() => {
+    let filtered = projects;
+    
+    // Apply search filter
+    if (searchQuery) {
+      filtered = filtered.filter(project =>
+        project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        project.description.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    }
+    
+    // Apply type filter
+    if (selectedType !== "all") {
+      filtered = filtered.filter(project => project.type === selectedType);
+    }
+    
+    // Apply sorting
+    const sorted = [...filtered];
+    if (sortBy === "alphabetical") {
+      sorted.sort((a, b) => a.title.localeCompare(b.title));
+    } else {
+      sorted.sort((a, b) => {
+        const dateA = a.date || "0";
+        const dateB = b.date || "0";
+        return dateB.localeCompare(dateA);
+      });
+    }
+    
+    return sorted;
+  }, [searchQuery, selectedType, sortBy]);
 
   // All gallery images
   const allImages = [galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5, galleryImage6, galleryImage7, galleryImage8, galleryImage9];
@@ -46,12 +90,26 @@ const Studio = () => {
   return <div className="min-h-screen bg-background">
       <StickyNavbar />
 
+      {/* Filters Section */}
+      <section className="py-6 sm:py-8 px-4 sm:px-6 lg:px-12 xl:px-16">
+        <div className="w-full">
+          <ProjectFilters
+            searchQuery={searchQuery}
+            onSearchChange={setSearchQuery}
+            selectedType={selectedType}
+            onTypeChange={setSelectedType}
+            sortBy={sortBy}
+            onSortChange={setSortBy}
+            projectTypes={projectTypes}
+          />
+        </div>
+      </section>
 
       {/* Projects Grid */}
-      <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-12 xl:px-16">
+      <section className="py-4 sm:py-6 px-4 sm:px-6 lg:px-12 xl:px-16">
         <div className="w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[20px]">
-            {projects.map((project, index) => {
+            {filteredProjects.map((project, index) => {
               const handleClick = (e: React.MouseEvent) => {
                 if (!project.hasDetails) {
                   e.preventDefault();
