@@ -39,16 +39,16 @@ export const ProjectFilters = ({
                 placeholder="Search project..."
                 value={searchQuery}
                 onChange={(e) => onSearchChange(e.target.value)}
-                className="pl-10 bg-muted/50 border-0 rounded-full"
+                className="pl-10 bg-muted/50 border-0 rounded-full font-jakarta"
               />
             </div>
             
             <div className="flex items-center gap-3">
               <Select value={selectedType} onValueChange={onTypeChange}>
-                <SelectTrigger className="w-[200px] bg-muted/50 border-0 rounded-full">
+                <SelectTrigger className="w-[200px] bg-muted/50 border-0 rounded-full font-jakarta">
                   <SelectValue placeholder="All project types" />
                 </SelectTrigger>
-                <SelectContent className="bg-background border shadow-lg">
+                <SelectContent className="bg-background border shadow-lg font-jakarta">
                   <SelectItem value="all">All project types</SelectItem>
                   {projectTypes.map((type) => (
                     <SelectItem key={type} value={type}>
@@ -62,14 +62,14 @@ export const ProjectFilters = ({
                 <Button
                   variant={sortBy === "date" ? "default" : "outline"}
                   onClick={() => onSortChange("date")}
-                  className="rounded-full"
+                  className="rounded-full font-jakarta"
                 >
                   Date {sortBy === "date" && <ArrowUp size={16} className="ml-1" />}
                 </Button>
                 <Button
                   variant={sortBy === "alphabetical" ? "default" : "outline"}
                   onClick={() => onSortChange("alphabetical")}
-                  className="rounded-full"
+                  className="rounded-full font-jakarta"
                 >
                   Alphabetical
                 </Button>
@@ -88,14 +88,14 @@ export const ProjectFilters = ({
           placeholder="Search project..."
           value={searchQuery}
           onChange={(e) => onSearchChange(e.target.value)}
-          className="pl-10 bg-muted/50 border-0 rounded-full"
+          className="pl-10 bg-muted/50 border-0 rounded-full font-jakarta"
         />
       </div>
       
         
         <Sheet open={isFilterOpen} onOpenChange={setIsFilterOpen}>
           <SheetTrigger asChild>
-            <Button variant="outline" className="rounded-full px-6 border-border">
+            <Button variant="outline" className="rounded-full px-6 border-border font-jakarta">
               <Filter size={18} className="mr-2" />
               Filters
             </Button>
@@ -103,10 +103,10 @@ export const ProjectFilters = ({
           <SheetContent side="bottom" className="h-auto rounded-t-[20px]">
             <div className="space-y-4 py-4">
               <Select value={selectedType} onValueChange={onTypeChange}>
-                <SelectTrigger className="w-full bg-muted/50 border-0 rounded-full h-12">
+                <SelectTrigger className="w-full bg-muted/50 border-0 rounded-full h-12 font-jakarta">
                   <SelectValue placeholder="All project types" />
                 </SelectTrigger>
-                <SelectContent className="bg-background border shadow-lg">
+                <SelectContent className="bg-background border shadow-lg font-jakarta">
                   <SelectItem value="all">All project types</SelectItem>
                   {projectTypes.map((type) => (
                     <SelectItem key={type} value={type}>
@@ -120,14 +120,14 @@ export const ProjectFilters = ({
                 <Button
                   variant={sortBy === "date" ? "default" : "outline"}
                   onClick={() => onSortChange("date")}
-                  className="flex-1 rounded-full"
+                  className="flex-1 rounded-full font-jakarta"
                 >
                   Date {sortBy === "date" && <ArrowUp size={16} className="ml-1" />}
                 </Button>
                 <Button
                   variant={sortBy === "alphabetical" ? "default" : "outline"}
                   onClick={() => onSortChange("alphabetical")}
-                  className="flex-1 rounded-full"
+                  className="flex-1 rounded-full font-jakarta"
                 >
                   Alphabetical
                 </Button>
