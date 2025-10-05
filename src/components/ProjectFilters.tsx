@@ -32,46 +32,48 @@ export const ProjectFilters = ({
       {/* Desktop - Sticky Filters Bar */}
       <div className="hidden md:block sticky top-[57px] z-40 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="px-4 sm:px-6 lg:px-12 xl:px-16 py-3 sm:py-4">
-          <div className="w-full flex items-center gap-4">
-      <div className="relative flex-1 max-w-md">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" size={18} />
-        <Input
-          placeholder="Search project..."
-          value={searchQuery}
-          onChange={(e) => onSearchChange(e.target.value)}
-          className="pl-10 bg-muted/50 border-0 rounded-full"
-        />
-      </div>
-      
-      <Select value={selectedType} onValueChange={onTypeChange}>
-        <SelectTrigger className="w-[200px] bg-muted/50 border-0 rounded-full">
-          <SelectValue placeholder="All project types" />
-        </SelectTrigger>
-        <SelectContent className="bg-background border shadow-lg">
-          <SelectItem value="all">All project types</SelectItem>
-          {projectTypes.map((type) => (
-            <SelectItem key={type} value={type}>
-              {type}
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
+          <div className="w-full flex items-center justify-between gap-4">
+            <div className="relative flex-1 max-w-lg">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" size={18} />
+              <Input
+                placeholder="Search project..."
+                value={searchQuery}
+                onChange={(e) => onSearchChange(e.target.value)}
+                className="pl-10 bg-muted/50 border-0 rounded-full"
+              />
+            </div>
+            
+            <div className="flex items-center gap-3">
+              <Select value={selectedType} onValueChange={onTypeChange}>
+                <SelectTrigger className="w-[200px] bg-muted/50 border-0 rounded-full">
+                  <SelectValue placeholder="All project types" />
+                </SelectTrigger>
+                <SelectContent className="bg-background border shadow-lg">
+                  <SelectItem value="all">All project types</SelectItem>
+                  {projectTypes.map((type) => (
+                    <SelectItem key={type} value={type}>
+                      {type}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
 
-            <div className="flex items-center gap-2">
-              <Button
-                variant={sortBy === "date" ? "default" : "ghost"}
-                onClick={() => onSortChange("date")}
-                className="rounded-full"
-              >
-                Date {sortBy === "date" && <ArrowUp size={16} className="ml-1" />}
-              </Button>
-              <Button
-                variant={sortBy === "alphabetical" ? "default" : "ghost"}
-                onClick={() => onSortChange("alphabetical")}
-                className="rounded-full"
-              >
-                Alphabetical
-              </Button>
+              <div className="flex items-center gap-2">
+                <Button
+                  variant={sortBy === "date" ? "default" : "ghost"}
+                  onClick={() => onSortChange("date")}
+                  className="rounded-full"
+                >
+                  Date {sortBy === "date" && <ArrowUp size={16} className="ml-1" />}
+                </Button>
+                <Button
+                  variant={sortBy === "alphabetical" ? "default" : "ghost"}
+                  onClick={() => onSortChange("alphabetical")}
+                  className="rounded-full"
+                >
+                  Alphabetical
+                </Button>
+              </div>
             </div>
           </div>
         </div>
