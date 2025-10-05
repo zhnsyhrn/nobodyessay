@@ -8,7 +8,7 @@ import { getFeaturedEssays } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
-import { Instagram, Linkedin, X, ArrowRight } from "lucide-react";
+import { Instagram, Linkedin, X, ArrowRight, FileText, TrendingUp, LayoutGrid } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
@@ -126,14 +126,62 @@ const Index = () => {
       {/* Design Philosophy Section */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-12 xl:px-16 pb-8 sm:pb-12">
         <div className="w-full">
-          <Card className="bg-[#1a1a1a] text-white border-0 rounded-[24px] p-6 sm:p-12 lg:p-16 text-left lg:text-center">
-            <h2 className="font-display text-white text-3xl sm:text-4xl lg:text-5xl font-medium mb-6 sm:mb-8 tracking-tight leading-tight sm:leading-tight" style={{ lineHeight: '1.2' }}>
-              Design is not linear. It's systemic.<br className="hidden lg:block" />
-              Every system evolves with intention.
-            </h2>
-            <p className="text-white/70 max-w-3xl lg:mx-auto text-sm sm:text-base" style={{ lineHeight: '1.625' }}>
-              I treat every project as a dynamic system of interactions, not a collection of assets. They are living ecosystems — made of people, processes, and touch points.
-            </p>
+          <Card className="bg-[#1a1a1a] text-white border-0 rounded-[24px] p-8 sm:p-12 lg:p-16">
+            {/* Header */}
+            <div className="text-center mb-12">
+              <p className="font-jakarta uppercase tracking-wider mb-6" style={{ fontSize: '12px', color: '#666666' }}>
+                Design Philosophy
+              </p>
+              <h2 className="font-display text-white font-medium mb-6 tracking-tight" style={{ fontSize: '48px', lineHeight: '60px', color: '#F3F3F3' }}>
+                Design is not linear. It's systemic.<br />
+                Every system evolves with intention.
+              </h2>
+              <p className="font-jakarta max-w-4xl mx-auto" style={{ fontSize: '18px', lineHeight: '29px', color: '#D9D9D9' }}>
+                I treat every project as a dynamic system of interactions, not a collection of assets. They are living ecosystems — made of people, processes, and touch points.
+              </p>
+            </div>
+
+            {/* Three Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+              {/* Card 1 */}
+              <div className="bg-white/5 backdrop-blur-sm rounded-[16px] p-8 border border-white/10">
+                <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-6">
+                  <FileText className="w-7 h-7 text-white/80" />
+                </div>
+                <h3 className="font-jakarta font-semibold mb-4" style={{ fontSize: '24px', lineHeight: '34px', color: '#F3F3F3' }}>
+                  Imagine & Experiment.
+                </h3>
+                <p className="font-jakarta" style={{ fontSize: '16px', lineHeight: '24px', color: '#C2C2C2' }}>
+                  Map possibilities across the brand system, design prototypes and push boundaries. In this phase, ideas compete, merge, and evolve.
+                </p>
+              </div>
+
+              {/* Card 2 */}
+              <div className="bg-white/5 backdrop-blur-sm rounded-[16px] p-8 border border-white/10">
+                <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-6">
+                  <TrendingUp className="w-7 h-7 text-white/80" />
+                </div>
+                <h3 className="font-jakarta font-semibold mb-4" style={{ fontSize: '24px', lineHeight: '34px', color: '#F3F3F3' }}>
+                  Refine. Cohesion by Design.
+                </h3>
+                <p className="font-jakarta" style={{ fontSize: '16px', lineHeight: '24px', color: '#C2C2C2' }}>
+                  What survives experimentation becomes systemized. Each element serves a role, aligned to function and scalability — visual languages & component libraries.
+                </p>
+              </div>
+
+              {/* Card 3 */}
+              <div className="bg-white/5 backdrop-blur-sm rounded-[16px] p-8 border border-white/10">
+                <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-6">
+                  <LayoutGrid className="w-7 h-7 text-white/80" />
+                </div>
+                <h3 className="font-jakarta font-semibold mb-4" style={{ fontSize: '24px', lineHeight: '34px', color: '#F3F3F3' }}>
+                  Emerge. Systems That Lead.
+                </h3>
+                <p className="font-jakarta" style={{ fontSize: '16px', lineHeight: '24px', color: '#C2C2C2' }}>
+                  Finally, the system comes to life. Each brand we design can scale, flex, and evolve without losing its essence. Growth becomes effortless.
+                </p>
+              </div>
+            </div>
           </Card>
         </div>
       </section>
