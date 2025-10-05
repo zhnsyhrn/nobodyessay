@@ -192,11 +192,11 @@ const Index = () => {
       {/* Proof in Practice Section */}
       <section className="pt-8 sm:pt-12 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-12 xl:px-16">
         <div className="w-full">
-          <div className="text-center mb-12">
+          <div className="text-left md:text-center mb-12">
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium mb-4 tracking-tight">
               Proof in Practice.
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-2">
+            <p className="text-lg text-muted-foreground max-w-2xl md:mx-auto mb-2">
               Every project is a system in motion. Every outcome is<br className="hidden sm:block" />
               measurable, scalable, enduring.
             </p>
