@@ -154,7 +154,7 @@ const Index = () => {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-[10px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px]">
             {projects.slice(0, 4).map((project, index) => (
               <Link 
                 key={project.slug} 
