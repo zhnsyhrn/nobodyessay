@@ -30,7 +30,7 @@ export const ProjectFilters = ({
   return (
     <>
       {/* Desktop - Sticky Filters Bar */}
-      <div className="hidden md:block sticky top-[57px] z-40 bg-background/95 backdrop-blur-sm border-b border-border">
+      <div className="hidden md:block sticky top-[var(--navbar-height,64px)] z-40 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="px-4 sm:px-6 lg:px-12 xl:px-16 py-3 sm:py-4">
           <div className="w-full flex items-center justify-between gap-4">
             <div className="relative flex-1 max-w-lg">

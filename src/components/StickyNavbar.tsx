@@ -1,11 +1,23 @@
 import { Link, useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 const StickyNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const navRef = useRef<HTMLElement | null>(null);
+
+  // Set CSS var for navbar height to align sticky filters
+  useEffect(() => {
+    const updateVar = () => {
+      const h = navRef.current?.offsetHeight ?? 64;
+      document.documentElement.style.setProperty('--navbar-height', `${h}px`);
+    };
+    updateVar();
+    window.addEventListener('resize', updateVar);
+    return () => window.removeEventListener('resize', updateVar);
+  }, []);
 
   // Prevent background scrolling when menu is open
   useEffect(() => {
@@ -36,7 +48,7 @@ const StickyNavbar = () => {
     if (path === '/contact' && location.pathname === '/contact') return true;
     return false;
   };
-  return <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border px-4 sm:px-6 lg:px-12 xl:px-16 py-3 sm:py-4">
+  return <nav ref={navRef} className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border px-4 sm:px-6 lg:px-12 xl:px-16 py-3 sm:py-4">
       <div className="w-full">
         <div className="flex items-center justify-between">
           <Link to="/" onClick={closeMenu} className="flex items-center space-x-3">
