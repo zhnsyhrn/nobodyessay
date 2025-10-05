@@ -128,16 +128,18 @@ const Index = () => {
         <div className="w-full">
           <Card className="bg-[#1a1a1a] text-white border-0 rounded-[16px] sm:rounded-[20px] md:rounded-[24px] p-6 sm:p-8 md:p-12 lg:p-16">
             {/* Header */}
-            <div className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-14">
+            <div className="text-left md:text-center mb-8 sm:mb-10 md:mb-12 lg:mb-14">
               <p className="font-jakarta uppercase tracking-wider text-[10px] sm:text-[11px] md:text-xs mb-4 sm:mb-5 md:mb-6" style={{ color: '#666666' }}>
                 Design Philosophy
               </p>
               <h2 className="font-display text-white font-medium mb-4 sm:mb-5 md:mb-6 tracking-tight text-[28px] leading-[36px] sm:text-[32px] sm:leading-[42px] md:text-[40px] md:leading-[52px] lg:text-[48px] lg:leading-[60px]" style={{ color: '#F3F3F3' }}>
-                Design is not linear. It's systemic.
-                <br className="hidden sm:block" />
-                <span className="block sm:inline"> Every system evolves with intention.</span>
+                <span className="md:hidden">Design is not linear. It's systemic. Every system evolves with intention.</span>
+                <span className="hidden md:inline">
+                  Design is not linear. It's systemic.<br />
+                  Every system evolves with intention.
+                </span>
               </h2>
-              <p className="font-jakarta max-w-4xl mx-auto text-[15px] leading-[24px] sm:text-[16px] sm:leading-[26px] md:text-[17px] md:leading-[28px] lg:text-[18px] lg:leading-[29px] px-2 sm:px-4 md:px-0" style={{ color: '#D9D9D9' }}>
+              <p className="font-jakarta max-w-4xl md:mx-auto text-[15px] leading-[24px] sm:text-[16px] sm:leading-[26px] md:text-[17px] md:leading-[28px] lg:text-[18px] lg:leading-[29px] md:px-0" style={{ color: '#D9D9D9' }}>
                 I treat every project as a dynamic system of interactions, not a collection of assets. They are living ecosystems — made of people, processes, and touch points.
               </p>
             </div>
