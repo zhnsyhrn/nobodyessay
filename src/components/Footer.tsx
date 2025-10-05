@@ -1,15 +1,52 @@
 import { Instagram, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
+
 const Footer = () => {
-  return <footer className="border-t border-border py-2 sm:py-6 lg:py-2 px-4 sm:px-6 lg:px-12 xl:px-16 bg-[#1f1f1f]">
-      <div className="w-full">
-        <div className="flex flex-col items-center sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4 py-2 lg:py-2">
-          <div className="order-1 sm:order-2 flex gap-3 sm:gap-4 justify-center sm:justify-end" role="navigation" aria-label="Social links">
+  return (
+    <footer className="border-t border-border bg-background">
+      <div className="px-4 sm:px-6 lg:px-12 xl:px-16 py-6 sm:py-8">
+        <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-6">
+          {/* Name */}
+          <h2 className="font-display text-xl sm:text-2xl font-medium">
+            Zahin Syahiran
+          </h2>
+
+          {/* Navigation Links */}
+          <nav className="flex gap-6 sm:gap-8" role="navigation" aria-label="Footer navigation">
+            <Link 
+              to="/studio" 
+              className="font-display text-sm sm:text-base hover:text-muted-foreground transition-colors"
+            >
+              Projects
+            </Link>
+            <Link 
+              to="/writings" 
+              className="font-display text-sm sm:text-base hover:text-muted-foreground transition-colors"
+            >
+              Articles
+            </Link>
+            <Link 
+              to="/about" 
+              className="font-display text-sm sm:text-base hover:text-muted-foreground transition-colors"
+            >
+              About
+            </Link>
+            <Link 
+              to="/contact" 
+              className="font-display text-sm sm:text-base hover:text-muted-foreground transition-colors"
+            >
+              Contact
+            </Link>
+          </nav>
+
+          {/* Social Icons */}
+          <div className="flex gap-3" role="navigation" aria-label="Social links">
             <a
               href="https://www.instagram.com/byzahin_/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram profile"
-              className="text-white/70 hover:text-white transition-colors p-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background hover:bg-white/10"
+              className="w-10 h-10 rounded-full bg-muted hover:bg-muted/80 transition-colors flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
               <Instagram className="h-5 w-5" />
               <span className="sr-only">Instagram</span>
@@ -19,17 +56,23 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn profile"
-              className="text-white/70 hover:text-white transition-colors p-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background hover:bg-white/10"
+              className="w-10 h-10 rounded-full bg-muted hover:bg-muted/80 transition-colors flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
               <Linkedin className="h-5 w-5" />
               <span className="sr-only">LinkedIn</span>
             </a>
           </div>
-          <p className="order-2 sm:order-1 font-display text-xs sm:text-sm text-white/70 text-center">
-            byzahin © 2025 | All rights reserved.
-          </p>
         </div>
       </div>
-    </footer>;
+
+      {/* Copyright */}
+      <div className="border-t border-border py-4">
+        <p className="font-display text-sm text-center text-muted-foreground">
+          © 2025 Zahin Syahiran. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  );
 };
+
 export default Footer;
