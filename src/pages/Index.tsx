@@ -70,7 +70,7 @@ const Index = () => {
           {/* Navigation Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 px-1 sm:px-2 lg:justify-center">
             <Link to="/studio" className="w-full sm:w-auto">
-              <div className="relative">
+              <div className="relative rounded-full">
                 <GlowingEffect spread={40} glow={true} disabled={false} proximity={80} inactiveZone={0.3} />
                 <Button className="font-display min-h-[48px] px-6 w-full touch-manipulation shadow-lg hover:shadow-xl hover:shadow-primary/25 transition-all duration-300">View All Works</Button>
               </div>
