@@ -11,19 +11,19 @@ const CallToAction = ({ page }: CallToActionProps) => {
       case 'writings':
         return (
           <>
-            Let's talk. <span className="text-muted-foreground font-normal">I'd love to hear from you.</span>
+            Let's talk. I'd love<br />to hear from you.
           </>
         );
       case 'projects':
         return (
           <>
-            Let's talk. <span className="text-muted-foreground font-normal">I'd love to hear from you.</span>
+            Let's talk. I'd love<br />to hear from you.
           </>
         );
       case 'about':
         return (
           <>
-            Let's talk. <span className="text-muted-foreground font-normal">I'd love to hear from you.</span>
+            Let's talk. I'd love<br />to hear from you.
           </>
         );
       default:
