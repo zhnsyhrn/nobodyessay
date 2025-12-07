@@ -12,6 +12,54 @@ export interface Essay {
 
 export const essays: Essay[] = [
   {
+    slug: "ambitious",
+    title: "Ambitious",
+    excerpt: "What a waste if a man dies but regrets the things they wanted to do but haven't done. At least give yourself room to grow by contributing to self.",
+    metaDescription: "Reflections on ambition and optimism — why we must never stop dreaming and how small ambitions lead to meaningful contributions.",
+    date: "December 8, 2025",
+    readTime: "3 min read",
+    category: "Thoughts",
+    content: `We must be ambitious.
+
+Never stop dreaming, never stop being optimistic.
+
+The idea of life is to live up to our potential. Using our brain, skills, and talent to contribute to the ecosystem of humankind.
+
+What a waste if a man dies but regrets the things they wanted to do but haven't done. At least give yourself room to grow by contributing to self.
+
+## The Algorithmic Trap
+
+As we live in the technological era, everything is moving fast but predictable.
+
+What we see and listen to is an algorithm; a pattern of interaction for a certain group of people. And we are part of them.
+
+We watch, listen, and consume the same information as everyone else. Worse, the information we get is shaped by demand and trends, leading to bias.
+
+This limits us, human beings with infinite potential. Because we just receive and consume it as it is without further exploration. The exploration and curiosity that made us an adult from a baby state.
+
+## The Gift of Ambition
+
+Every brain was made different and was there for a reason.
+
+Even though technology exists to speed up things and let us live comfortably, that doesn't mean we stop dreaming and become more ambitious. Only by being ambitious do new inventions emerge in civilization.
+
+But ambition alone isn't enough without optimism.
+
+Without optimism, the ambition fades away and is gone like it had never existed before. When nobody believes, but because you believe in it, you make things happen.
+
+Although it is not as easy as we thought, with optimism, even after failing many times, we stay firm and find a way to achieve it even though the direction of ambition changes.
+
+## It's Not Rocket Science
+
+Great scientists, inventors, and makers all share these traits. It's not rocket science—it's a human gift we often overlook.
+
+Being ambitious doesn't necessarily mean dreaming big. That's the misconception that stops many of us. We think everything needs to be massive, loud, or world-changing. But it's not.
+
+It can be a small good thing for yourself—mental health, career, quality foods, and anything. If we are able to do all those things for ourselves, then we have no problem being ambitious and optimistic in any way for our civilization.
+
+> Let's be ambitious. Maybe we can cook good food that no one else does.`
+  },
+  {
     slug: "button-state-design-best-practices",
     title: "Button State Design Best Practices: Avoid These UX Pitfalls",
     excerpt: "Learn the most common button state design mistakes in UI/UX and discover best practices to create consistent, accessible, and user-friendly interfaces.",
