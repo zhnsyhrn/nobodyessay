@@ -1,5 +1,4 @@
 import React from "react";
-import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Dialog, DialogContent, DialogTrigger, DialogClose } from "@/components/ui/dialog";
