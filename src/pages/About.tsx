@@ -8,21 +8,6 @@ import { Link } from "react-router-dom";
 const About = () => {
   return <div className="min-h-screen bg-background">
       <StickyNavbar />
-      
-      {/* Hero Section */}
-      <section className="bg-[#1f1f1f] py-16 sm:py-20 px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto w-full">
-          <h1 className="font-display font-medium text-white mb-6 leading-tight lg:leading-[68px]" style={{
-          fontSize: '36px'
-        }}>
-            <span className="sm:text-4xl md:text-5xl lg:text-6xl sm:leading-tight">Design with empathy.<br />
-Built for identity.</span>
-          </h1>
-          <p className="font-jakarta text-lg sm:text-xl text-white/70">
-            Create experiences that serve people while staying true to a brand's identity.
-          </p>
-        </div>
-      </section>
 
       {/* Engagements Section */}
       <section className="pt-12 sm:pt-16 pb-12 sm:pb-16 px-4 sm:px-6">
