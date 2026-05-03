@@ -24,36 +24,6 @@ Built for identity.</span>
         </div>
       </section>
 
-      {/* Core Competencies & Design Philosophy Section */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto">
-          <div className="border border-border p-6" style={{
-            borderRadius: '10px'
-          }}>
-            <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
-              Core Competencies & Design Philosophy
-            </h2>
-            <div className="space-y-3">
-              <div className="font-jakarta text-muted-foreground text-base">
-                <span className="text-foreground font-medium">Systems-Oriented Thinking:</span> Building cohesive experiences across touchpoints
-              </div>
-              <div className="h-px bg-border"></div>
-              <div className="font-jakarta text-muted-foreground text-base">
-                <span className="text-foreground font-medium">Multi-Platform Design Execution:</span> Designing modules across web, mobile, and admin tools
-              </div>
-              <div className="h-px bg-border"></div>
-              <div className="font-jakarta text-muted-foreground text-base">
-                <span className="text-foreground font-medium">Ownership & Delivery Under Pressure:</span> Driving end-to-end projects under tight deadlines
-              </div>
-              <div className="h-px bg-border"></div>
-              <div className="font-jakarta text-muted-foreground text-base">
-                <span className="text-foreground font-medium">User-Centered Design:</span> Prioritizing empathy and accessibility
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Engagements Section */}
       <section className="pt-2 sm:pt-4 pb-12 sm:pb-16 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
