@@ -1,5 +1,4 @@
 import React from "react";
-import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Dialog, DialogContent, DialogTrigger, DialogClose } from "@/components/ui/dialog";
@@ -8,7 +7,7 @@ import { getFeaturedEssays } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
-import { Instagram, Linkedin, X, ArrowRight, FileText, TrendingUp, LayoutGrid } from "lucide-react";
+import { Instagram, Linkedin, X, ArrowRight } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
@@ -120,72 +119,6 @@ const Index = () => {
                 </CarouselItem>)}
             </CarouselContent>
           </Carousel>
-        </div>
-      </section>
-
-      {/* Design Philosophy Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-        <div className="w-full">
-          <Card className="bg-[#1a1a1a] text-white border-0 rounded-[16px] sm:rounded-[20px] md:rounded-[24px] p-6 sm:p-8 md:p-12 lg:p-16">
-            {/* Header */}
-            <div className="text-left md:text-center mb-8 sm:mb-10 md:mb-12 lg:mb-14">
-              <p className="font-jakarta uppercase tracking-wider text-[10px] sm:text-[11px] md:text-xs mb-4 sm:mb-5 md:mb-6" style={{ color: '#666666' }}>
-                Design Philosophy
-              </p>
-              <h2 className="font-display text-white font-medium mb-4 sm:mb-5 md:mb-6 tracking-tight text-[28px] leading-[36px] sm:text-[32px] sm:leading-[42px] md:text-[40px] md:leading-[52px] lg:text-[48px] lg:leading-[60px]" style={{ color: '#F3F3F3' }}>
-                <span className="md:hidden">Design is not linear. It's systemic. Every system evolves with intention.</span>
-                <span className="hidden md:inline">
-                  Design is not linear. It's systemic.<br />
-                  Every system evolves with intention.
-                </span>
-              </h2>
-              <p className="font-jakarta max-w-4xl md:mx-auto text-[15px] leading-[24px] sm:text-[16px] sm:leading-[26px] md:text-[17px] md:leading-[28px] lg:text-[18px] lg:leading-[29px] md:px-0" style={{ color: '#D9D9D9' }}>
-                I treat every project as a dynamic system of interactions, not a collection of assets. They are living ecosystems — made of people, processes, and touch points.
-              </p>
-            </div>
-
-            {/* Three Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 md:gap-5 lg:gap-6 mt-8 sm:mt-10 md:mt-14 lg:mt-16">
-              {/* Card 1 */}
-              <div className="bg-white/5 backdrop-blur-sm rounded-[12px] sm:rounded-[14px] md:rounded-[16px] p-6 sm:p-6 md:p-7 lg:p-8 border border-white/10">
-                <div className="w-12 h-12 sm:w-13 sm:h-13 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full bg-white/10 flex items-center justify-center mb-4 sm:mb-4 md:mb-5 lg:mb-6">
-                  <FileText className="w-5 h-5 sm:w-5.5 sm:h-5.5 md:w-6 md:h-6 lg:w-7 lg:h-7 text-white/80" />
-                </div>
-                <h3 className="font-jakarta font-semibold mb-3 sm:mb-3 md:mb-4 text-[20px] leading-[28px] sm:text-[21px] sm:leading-[30px] md:text-[22px] md:leading-[32px] lg:text-[20px] lg:leading-[30px] lg:font-medium" style={{ color: '#F3F3F3' }}>
-                  Imagine & Experiment.
-                </h3>
-                <p className="font-jakarta text-[14px] leading-[22px] sm:text-[14.5px] sm:leading-[22px] md:text-[15px] md:leading-[23px] lg:text-[16px] lg:leading-[24px]" style={{ color: '#C2C2C2' }}>
-                  Map possibilities across the brand system, design prototypes and push boundaries. In this phase, ideas compete, merge, and evolve.
-                </p>
-              </div>
-
-              {/* Card 2 */}
-              <div className="bg-white/5 backdrop-blur-sm rounded-[12px] sm:rounded-[14px] md:rounded-[16px] p-6 sm:p-6 md:p-7 lg:p-8 border border-white/10">
-                <div className="w-12 h-12 sm:w-13 sm:h-13 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full bg-white/10 flex items-center justify-center mb-4 sm:mb-4 md:mb-5 lg:mb-6">
-                  <TrendingUp className="w-5 h-5 sm:w-5.5 sm:h-5.5 md:w-6 md:h-6 lg:w-7 lg:h-7 text-white/80" />
-                </div>
-                <h3 className="font-jakarta font-semibold mb-3 sm:mb-3 md:mb-4 text-[20px] leading-[28px] sm:text-[21px] sm:leading-[30px] md:text-[22px] md:leading-[32px] lg:text-[20px] lg:leading-[30px] lg:font-medium" style={{ color: '#F3F3F3' }}>
-                  Refine. Cohesion by Design.
-                </h3>
-                <p className="font-jakarta text-[14px] leading-[22px] sm:text-[14.5px] sm:leading-[22px] md:text-[15px] md:leading-[23px] lg:text-[16px] lg:leading-[24px]" style={{ color: '#C2C2C2' }}>
-                  What survives experimentation becomes systemized. Each element serves a role, aligned to function and scalability — visual languages & component libraries.
-                </p>
-              </div>
-
-              {/* Card 3 */}
-              <div className="bg-white/5 backdrop-blur-sm rounded-[12px] sm:rounded-[14px] md:rounded-[16px] p-6 sm:p-6 md:p-7 lg:p-8 border border-white/10">
-                <div className="w-12 h-12 sm:w-13 sm:h-13 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full bg-white/10 flex items-center justify-center mb-4 sm:mb-4 md:mb-5 lg:mb-6">
-                  <LayoutGrid className="w-5 h-5 sm:w-5.5 sm:h-5.5 md:w-6 md:h-6 lg:w-7 lg:h-7 text-white/80" />
-                </div>
-                <h3 className="font-jakarta font-semibold mb-3 sm:mb-3 md:mb-4 text-[20px] leading-[28px] sm:text-[21px] sm:leading-[30px] md:text-[22px] md:leading-[32px] lg:text-[20px] lg:leading-[30px] lg:font-medium" style={{ color: '#F3F3F3' }}>
-                  Emerge. Systems That Lead.
-                </h3>
-                <p className="font-jakarta text-[14px] leading-[22px] sm:text-[14.5px] sm:leading-[22px] md:text-[15px] md:leading-[23px] lg:text-[16px] lg:leading-[24px]" style={{ color: '#C2C2C2' }}>
-                  Finally, the system comes to life. Each brand we design can scale, flex, and evolve without losing its essence. Growth becomes effortless.
-                </p>
-              </div>
-            </div>
-          </Card>
         </div>
       </section>
 
