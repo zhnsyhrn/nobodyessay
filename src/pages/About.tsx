@@ -1,363 +1,197 @@
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Mic, Briefcase, Rocket } from "lucide-react";
 import { LazyImage } from "@/components/ui/lazy-image";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+
 const About = () => {
-  return <div className="min-h-screen bg-background">
+  const clients = [
+    { name: "Grain Singapore", logo: "/lovable-uploads/3c96f375-d885-4200-93e7-d6c296d99beb.png", url: "https://grain.com.sg/" },
+    { name: "Great Eastern Takaful Berhad", logo: "/lovable-uploads/27f41456-e5d7-44d0-b7c9-cd34256d208c.png", url: "https://www.greateasterntakaful.com/en/personal-takaful.html" },
+    { name: "Multimedia University", logo: "/lovable-uploads/3d45a311-8480-4ac2-9b4e-d4581026c946.png", url: "https://www.mmu.edu.my/" },
+    { name: "NanoMalaysia Berhad", logo: "/lovable-uploads/a692e280-7921-4475-86cc-982c64f086ab.png", url: "https://nanomalaysia.com.my/" },
+    { name: "Verdant Solar", logo: "/lovable-uploads/4b7c51d8-a0b7-4436-b96f-64b7615e0f0e.png", url: "https://verdantsolar.my/" },
+    { name: "MyTigas Alliance", logo: "/lovable-uploads/85e1f77f-633b-418c-8603-068070a2d55e.png", url: "https://mytigas.com/" },
+    { name: "MoneyX", logo: "/lovable-uploads/ea89b5b1-149b-4473-93c4-c8044d3fb71b.png", url: "https://moneyx.com.my/" },
+    { name: "MoneyX Biz", logo: "/lovable-uploads/7444c41d-b2f9-4848-9e79-08b6d96b24b0.png", url: "https://www.moneyxbiz.com.my/" },
+    { name: "PolicyStreet", logo: "/lovable-uploads/714500df-499f-4bcc-b0b1-ddfb6dfd74b6.png", url: "https://policystreet.com.my/reinsurance" },
+    { name: "Borong", logo: "/lovable-uploads/3c3c213c-e6f9-4cd7-a841-b9b012ff9fdd.png", url: "https://market.borong.com/my" },
+    { name: "Meca Consultancy", logo: "/lovable-uploads/e6ecb381-b351-4f44-b892-7e3efcb31c42.png", url: "https://meca.com.my/" },
+    { name: "Paperballad & Co.", logo: "/lovable-uploads/6ec75d24-bfe9-44c6-afff-4c215221d6bb.png", url: "https://paperballad.com/" },
+  ];
+
+  const sideProjects = [
+    { name: "Dealn", url: "https://dealn.app/", description: "Deal Experience Platform (DXP)", active: true },
+    { name: "Nobody Collective", url: "https://www.instagram.com/nobody.collective/", description: "Design Education Contents", active: true },
+    { name: "Designloka", url: null, description: "Unlimited Design Subscription", active: false },
+  ];
+
+  const speakingPhotos = [
+    { src: "/lovable-uploads/cdb5672f-de57-4d19-a313-9bdec559de7b.png", alt: "Group photo at university workshop" },
+    { src: "/lovable-uploads/a78f735b-9b5e-496f-807c-d89d3bb3fbc1.png", alt: "Speaking at entrepreneurship masterclass" },
+    { src: "/lovable-uploads/d0b90204-89f8-4b16-9387-912ec4ef8cf9.png", alt: "Virtual workshop presentation" },
+    { src: "/lovable-uploads/be876eca-c1a0-4e2f-940e-27d0df2042fa.png", alt: "Hands-on workshop session" },
+    { src: "/lovable-uploads/56d6ab0a-15f4-4d7c-80b5-6e358fb73882.png", alt: "Team photo at bootcamp event" },
+    { src: "/lovable-uploads/8f343185-b806-43de-b723-33d36c31b526.png", alt: "Large group photo at university event" },
+  ];
+
+  return (
+    <div className="min-h-screen bg-background">
       <StickyNavbar />
 
-      {/* Engagements Section */}
-      <section className="pt-12 sm:pt-16 pb-12 sm:pb-16 px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-            {/* Left Column - Text Content */}
-            <div className="flex flex-col justify-center">
-              <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
-                Speaking & Participation
-              </h2>
-              <p className="font-jakarta leading-relaxed mb-6 text-base" style={{
-                color: '#606060'
-              }}>
-                I occasionally speak at events, workshops, and consultations, and have also joined startup accelerators and workshops as a participant.
-              </p>
+      {/* Speaking & Participation — Photo-forward hero */}
+      <section className="pt-20 sm:pt-28 pb-16 sm:pb-24 px-4 sm:px-6">
+        <div className="max-w-5xl mx-auto">
+          {/* Section label */}
+          <div className="flex items-center gap-2.5 mb-3">
+            <Mic size={16} className="text-muted-foreground" />
+            <span className="font-jakarta text-xs font-semibold uppercase tracking-[0.15em] text-muted-foreground">
+              Speaking & Participation
+            </span>
+          </div>
+          <h2 className="font-jakarta text-3xl sm:text-4xl font-semibold text-foreground mb-3 tracking-tight">
+            Workshops & Events
+          </h2>
+          <p className="font-jakarta text-base sm:text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed">
+            I occasionally speak at events, workshops, and consultations, and have joined startup accelerators as a participant.
+          </p>
 
-              {/* Workshops List */}
-              <div className="space-y-3">
-                <div className="font-jakarta text-muted-foreground" style={{ fontSize: '16px' }}>
-                  <span className="text-foreground font-medium">Canva Design Workshop, Universiti Malaysia Sabah</span> • <span className="font-mono">2022</span>
-                </div>
-                <div className="h-px bg-border"></div>
-                <div className="font-jakarta text-muted-foreground" style={{ fontSize: '16px' }}>
-                  <span className="text-foreground font-medium">Createz Bootcamp 3.0, University of Malaya</span> • <span className="font-mono">2020</span>
-                </div>
-                <div className="h-px bg-border"></div>
-                <div className="font-jakarta text-muted-foreground" style={{ fontSize: '16px' }}>
-                  <span className="text-foreground font-medium">University Entrepreneurship Masterclass, StartupMalaysia</span> • <span className="font-mono">2018</span>
-                </div>
+          {/* Photo mosaic */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 mb-10">
+            {speakingPhotos.map((photo, i) => (
+              <div
+                key={i}
+                className={`overflow-hidden rounded-xl ${
+                  i === 0 ? "sm:col-span-2 sm:row-span-2" : ""
+                }`}
+              >
+                <LazyImage
+                  src={photo.src}
+                  alt={photo.alt}
+                  className={`w-full object-cover hover:scale-[1.03] transition-transform duration-500 ${
+                    i === 0 ? "h-48 sm:h-full" : "h-48 sm:h-52"
+                  }`}
+                  priority={i === 0}
+                  blurUp
+                />
               </div>
-            </div>
+            ))}
+          </div>
 
-            {/* Right Column - Image Grid */}
-            <div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="aspect-[4/3] overflow-hidden relative" style={{
-                  borderRadius: '10px'
-                }}>
-                   <LazyImage 
-                     src="/lovable-uploads/cdb5672f-de57-4d19-a313-9bdec559de7b.png" 
-                     alt="Group photo at university workshop" 
-                     className="w-full h-full object-cover" 
-                     priority={true} // High priority for first image
-                     blurUp={true} // Enable blur-up effect
-                   />
-                </div>
-                
-                <div className="aspect-[4/3] overflow-hidden relative" style={{
-                  borderRadius: '10px'
-                }}>
-                   <LazyImage 
-                     src="/lovable-uploads/a78f735b-9b5e-496f-807c-d89d3bb3fbc1.png" 
-                     alt="Speaking at entrepreneurship masterclass" 
-                     className="w-full h-full object-cover"
-                     blurUp={true} // Enable blur-up effect
-                   />
-                </div>
-                
-                <div className="aspect-[4/3] overflow-hidden relative" style={{
-                  borderRadius: '10px'
-                }}>
-                   <LazyImage 
-                     src="/lovable-uploads/d0b90204-89f8-4b16-9387-912ec4ef8cf9.png" 
-                     alt="Virtual workshop presentation" 
-                     className="w-full h-full object-cover"
-                     blurUp={true} // Enable blur-up effect
-                   />
-                </div>
-                
-                <div className="aspect-[4/3] overflow-hidden relative" style={{
-                  borderRadius: '10px'
-                }}>
-                   <LazyImage 
-                     src="/lovable-uploads/be876eca-c1a0-4e2f-940e-27d0df2042fa.png" 
-                     alt="Hands-on workshop session" 
-                     className="w-full h-full object-cover"
-                     blurUp={true} // Enable blur-up effect
-                   />
-                </div>
-                
-                <div className="aspect-[4/3] overflow-hidden relative" style={{
-                  borderRadius: '10px'
-                }}>
-                   <LazyImage 
-                     src="/lovable-uploads/56d6ab0a-15f4-4d7c-80b5-6e358fb73882.png" 
-                     alt="Team photo at bootcamp event" 
-                     className="w-full h-full object-cover"
-                     blurUp={true} // Enable blur-up effect
-                   />
-                </div>
-                
-                <div className="aspect-[4/3] overflow-hidden relative" style={{
-                  borderRadius: '10px'
-                }}>
-                   <LazyImage 
-                     src="/lovable-uploads/8f343185-b806-43de-b723-33d36c31b526.png" 
-                     alt="Large group photo at university event" 
-                     className="w-full h-full object-cover"
-                     blurUp={true} // Enable blur-up effect
-                   />
-                </div>
-                
+          {/* Speaking timeline */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {[
+              { title: "Canva Design Workshop", org: "Universiti Malaysia Sabah", year: "2022" },
+              { title: "Createz Bootcamp 3.0", org: "University of Malaya", year: "2020" },
+              { title: "Entrepreneurship Masterclass", org: "StartupMalaysia", year: "2018" },
+            ].map((event, i) => (
+              <div
+                key={i}
+                className="group rounded-xl border border-border bg-secondary/40 p-5 hover:bg-secondary/70 transition-colors"
+              >
+                <span className="font-mono text-xs text-muted-foreground">{event.year}</span>
+                <h3 className="font-jakarta font-medium text-foreground mt-1.5 text-[15px] leading-snug">
+                  {event.title}
+                </h3>
+                <p className="font-jakarta text-sm text-muted-foreground mt-1">{event.org}</p>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
-      
-      <section className="pt-12 sm:pt-16 pb-12 sm:pb-16 px-4 sm:px-6 bg-[#f3f3f3]">
-        <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 relative">
-              {/* Vertical divider - only visible on larger screens */}
-              <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-border transform -translate-x-1/2"></div>
-            
-            {/* Left Column */}
-            <div className="space-y-8">
 
-              {/* Design & Client Projects */}
-              <div>
-                <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
+      {/* Clients & Side Projects */}
+      <section className="pb-16 sm:pb-24 px-4 sm:px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
+            {/* Clients — 3 cols */}
+            <div className="lg:col-span-3">
+              <div className="flex items-center gap-2.5 mb-3">
+                <Briefcase size={16} className="text-muted-foreground" />
+                <span className="font-jakarta text-xs font-semibold uppercase tracking-[0.15em] text-muted-foreground">
                   Design & Client Projects
-                </h2>
-                <div className="space-y-3">
-                  <div className="border border-border p-3 bg-white" style={{
-                borderRadius: '10px'
-              }}>
-                    <div className="flex items-center gap-3">
-                      <img src="/lovable-uploads/3c96f375-d885-4200-93e7-d6c296d99beb.png" alt="Grain Singapore logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0" />
-                       <a href="https://grain.com.sg/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                         Grain Singapore
-                         <ExternalLink size={14} className="text-primary" />
-                       </a>
-                     </div>
-                   </div>
-                   
-                   <div className="border border-border p-3 bg-white" style={{
-                borderRadius: '10px'
-              }}>
-                     <div className="flex items-center gap-3">
-                        <img src="/lovable-uploads/27f41456-e5d7-44d0-b7c9-cd34256d208c.png" alt="Great Eastern Takaful logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0" />
-                       <a href="https://www.greateasterntakaful.com/en/personal-takaful.html" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                         Great Eastern Takaful Berhad
-                         <ExternalLink size={14} className="text-primary" />
-                       </a>
-                     </div>
-                   </div>
-
-                   <div className="border border-border p-3 bg-white" style={{
-                borderRadius: '10px'
-              }}>
-                     <div className="flex items-center gap-3">
-                        <img src="/lovable-uploads/3d45a311-8480-4ac2-9b4e-d4581026c946.png" alt="Multimedia University logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0" />
-                       <a href="https://www.mmu.edu.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                         Multimedia University
-                         <ExternalLink size={14} className="text-primary" />
-                       </a>
-                     </div>
-                   </div>
-
-                    <div className="border border-border p-3 bg-white" style={{
-                borderRadius: '10px'
-              }}>
-                      <div className="flex items-center gap-3">
-                         <img src="/lovable-uploads/a692e280-7921-4475-86cc-982c64f086ab.png" alt="NanoMalaysia logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0" />
-                        <a href="https://nanomalaysia.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                          NanoMalaysia Berhad
-                          <ExternalLink size={14} className="text-primary" />
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="border border-border p-3 bg-white" style={{
-                borderRadius: '10px'
-              }}>
-                      <div className="flex items-center gap-3">
-                         <img src="/lovable-uploads/4b7c51d8-a0b7-4436-b96f-64b7615e0f0e.png" alt="Verdant Solar logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0" />
-                        <a href="https://verdantsolar.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                          Verdant Solar
-                          <ExternalLink size={14} className="text-primary" />
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="border border-border p-3 bg-white" style={{
-                borderRadius: '10px'
-              }}>
-                      <div className="flex items-center gap-3">
-                         <img src="/lovable-uploads/85e1f77f-633b-418c-8603-068070a2d55e.png" alt="MyTigas Alliance logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0" />
-                        <a href="https://mytigas.com/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                          MyTigas Alliance
-                          <ExternalLink size={14} className="text-primary" />
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="border border-border p-3 bg-white" style={{
-                borderRadius: '10px'
-              }}>
-                      <div className="flex items-center gap-3">
-                         <img src="/lovable-uploads/ea89b5b1-149b-4473-93c4-c8044d3fb71b.png" alt="MoneyX logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0" />
-                        <a href="https://moneyx.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                          MoneyX
-                          <ExternalLink size={14} className="text-primary" />
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="border border-border p-3 bg-white" style={{
-                borderRadius: '10px'
-              }}>
-                      <div className="flex items-center gap-3">
-                         <img src="/lovable-uploads/7444c41d-b2f9-4848-9e79-08b6d96b24b0.png" alt="MoneyX Biz logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0" />
-                        <a href="https://www.moneyxbiz.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                          MoneyX Biz
-                          <ExternalLink size={14} className="text-primary" />
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="border border-border p-3 bg-white" style={{
-                borderRadius: '10px'
-              }}>
-                      <div className="flex items-center gap-3">
-                         <img src="/lovable-uploads/714500df-499f-4bcc-b0b1-ddfb6dfd74b6.png" alt="PolicyStreet logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0" />
-                        <a href="https://policystreet.com.my/reinsurance" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                          PolicyStreet
-                          <ExternalLink size={14} className="text-primary" />
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="border border-border p-3 bg-white" style={{
-                borderRadius: '10px'
-              }}>
-                      <div className="flex items-center gap-3">
-                         <img src="/lovable-uploads/3c3c213c-e6f9-4cd7-a841-b9b012ff9fdd.png" alt="Borong logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0" />
-                        <a href="https://market.borong.com/my" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                          Borong
-                          <ExternalLink size={14} className="text-primary" />
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="border border-border p-3 bg-white" style={{
-                borderRadius: '10px'
-              }}>
-                      <div className="flex items-center gap-3">
-                         <img src="/lovable-uploads/e6ecb381-b351-4f44-b892-7e3efcb31c42.png" alt="Meca Consultancy logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0" />
-                        <a href="https://meca.com.my/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                          Meca Consultancy
-                          <ExternalLink size={14} className="text-primary" />
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="border border-border p-3 bg-white" style={{
-                borderRadius: '10px'
-              }}>
-                      <div className="flex items-center gap-3">
-                        <img src="/lovable-uploads/6ec75d24-bfe9-44c6-afff-4c215221d6bb.png" alt="Paperballad & Co. logo" className="w-8 h-8 object-contain rounded border border-border flex-shrink-0" />
-                        <a href="https://paperballad.com/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                          Paperballad & Co.
-                          <ExternalLink size={14} className="text-primary" />
-                        </a>
-                      </div>
-                    </div>
-                </div>
+                </span>
               </div>
+              <h2 className="font-jakarta text-3xl sm:text-4xl font-semibold text-foreground mb-8 tracking-tight">
+                People I've worked with
+              </h2>
 
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                {clients.map((client) => (
+                  <a
+                    key={client.name}
+                    href={client.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-3 rounded-xl border border-border bg-background p-3.5 hover:border-foreground/20 hover:shadow-sm transition-all duration-200"
+                  >
+                    <img
+                      src={client.logo}
+                      alt={`${client.name} logo`}
+                      className="w-8 h-8 object-contain rounded flex-shrink-0"
+                    />
+                    <span className="font-jakarta text-sm font-medium text-foreground truncate group-hover:text-foreground/80 transition-colors">
+                      {client.name}
+                    </span>
+                  </a>
+                ))}
+              </div>
             </div>
 
-            {/* Right Column */}
-            <div className="space-y-8">
+            {/* Side projects — 2 cols */}
+            <div className="lg:col-span-2">
+              <div className="flex items-center gap-2.5 mb-3">
+                <Rocket size={16} className="text-muted-foreground" />
+                <span className="font-jakarta text-xs font-semibold uppercase tracking-[0.15em] text-muted-foreground">
+                  Side Projects
+                </span>
+              </div>
+              <h2 className="font-jakarta text-3xl sm:text-4xl font-semibold text-foreground mb-8 tracking-tight">
+                Things I'm building
+              </h2>
 
-                {/* Side Projects */}
-                <div>
-                  <h2 className="font-jakarta text-2xl font-medium mb-4 text-foreground">
-                    Side Projects
-                  </h2>
-                  <div className="space-y-3">
-                    <div className="border border-border p-3 bg-white" style={{
-                  borderRadius: '10px'
-                }}>
-                      <div className="flex items-start gap-3 mb-2">
-                        <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0 mt-0.5"></div>
-                        <div className="flex-1">
-                          <div className="flex items-center justify-between">
-                            <div className="flex items-center gap-2">
-                              <a href="https://dealn.app/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                                Dealn
-                                <ExternalLink size={14} className="text-primary" />
-                              </a>
-                            </div>
-                            <span className="bg-green-500/20 text-green-700 dark:text-green-300 px-2 py-1 rounded text-xs font-jakarta">
-                              Active
-                            </span>
-                          </div>
-                          <p className="font-jakarta text-muted-foreground text-sm mt-1">
-                            Deal Experience Platform (DXP)
-                          </p>
-                        </div>
-                      </div>
+              <div className="space-y-3">
+                {sideProjects.map((project) => (
+                  <div
+                    key={project.name}
+                    className={`rounded-xl border border-border p-5 transition-all duration-200 ${
+                      project.active
+                        ? "bg-background hover:border-foreground/20 hover:shadow-sm"
+                        : "bg-secondary/30 opacity-60"
+                    }`}
+                  >
+                    <div className="flex items-center justify-between mb-1.5">
+                      {project.url ? (
+                        <a
+                          href={project.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-jakarta text-foreground font-medium hover:underline flex items-center gap-2"
+                        >
+                          {project.name}
+                          <ExternalLink size={13} className="text-muted-foreground" />
+                        </a>
+                      ) : (
+                        <span className="font-jakarta text-foreground font-medium">
+                          {project.name}
+                        </span>
+                      )}
+                      <span
+                        className={`px-2 py-0.5 rounded-full text-[11px] font-semibold font-jakarta ${
+                          project.active
+                            ? "bg-green-500/10 text-green-700"
+                            : "bg-secondary text-muted-foreground"
+                        }`}
+                      >
+                        {project.active ? "Active" : "Inactive"}
+                      </span>
                     </div>
-                    
-                    <div className="border border-border p-3 bg-white" style={{
-                  borderRadius: '10px'
-                }}>
-                      <div className="flex items-start gap-3 mb-2">
-                        <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0 mt-0.5"></div>
-                        <div className="flex-1">
-                          <div className="flex items-center justify-between">
-                            <div className="flex items-center gap-2">
-                              <a href="https://www.instagram.com/nobody.collective/" target="_blank" rel="noopener noreferrer" className="font-jakarta text-foreground font-medium hover:text-primary transition-colors flex items-center gap-2 underline">
-                                Nobody Collective
-                                <ExternalLink size={14} className="text-primary" />
-                              </a>
-                            </div>
-                            <span className="bg-green-500/20 text-green-700 dark:text-green-300 px-2 py-1 rounded text-xs font-jakarta">
-                              Active
-                            </span>
-                          </div>
-                          <p className="font-jakarta text-muted-foreground text-sm mt-1">
-                            Design Education Contents
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="border border-border p-3 bg-white" style={{
-                  borderRadius: '10px'
-                }}>
-                      <div className="flex items-start gap-3 mb-2">
-                        <div className="w-8 h-8 bg-muted border border-border rounded flex-shrink-0 mt-0.5 opacity-60"></div>
-                        <div className="flex-1">
-                          <div className="flex items-center justify-between">
-                            <span className="font-jakarta text-foreground font-medium opacity-60">
-                              Designloka
-                            </span>
-                            <span className="bg-gray-500/20 text-gray-700 dark:text-gray-300 px-2 py-1 rounded text-xs font-jakarta">
-                              Inactive
-                            </span>
-                          </div>
-                          <p className="font-jakarta text-muted-foreground text-sm opacity-60 mt-1">
-                            Unlimited Design Subscription
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                    <p className="font-jakarta text-sm text-muted-foreground">
+                      {project.description}
+                    </p>
                   </div>
-                </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -365,6 +199,7 @@ const About = () => {
 
       <Footer />
       <ScrollToTopButton />
-    </div>;
+    </div>
+  );
 };
 export default About;
