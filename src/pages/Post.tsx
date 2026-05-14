@@ -102,7 +102,7 @@ const Post = () => {
       <div className="min-h-screen bg-background">
         <StickyNavbar />
 
-        <article className="py-8 sm:py-12 px-4 sm:px-6 fade-in">
+        <article className="pt-10 sm:pt-12 pb-8 sm:pb-12 px-4 sm:px-6 fade-in">
           <div className="max-w-3xl mx-auto">
             {/* Back link */}
             <Link
@@ -126,15 +126,15 @@ const Post = () => {
 
             {/* Title */}
             <h1
-              className="font-display font-medium tracking-tight mt-4"
-              style={{ fontSize: "26px", lineHeight: 1.3, maxWidth: "560px" }}
+              className="font-display font-medium tracking-tight mt-4 text-[22px] sm:text-[26px] max-w-full sm:max-w-[560px]"
+              style={{ lineHeight: 1.3 }}
             >
               {essay.title}
             </h1>
 
             {/* Meta row */}
             <div
-              className="flex items-center mt-4 font-jakarta text-[13px]"
+              className="flex items-center mt-4 font-jakarta text-[12px] sm:text-[13px]"
               style={{ color: "#919191", gap: "16px" }}
             >
               <span className="inline-flex items-center gap-1.5">
@@ -150,10 +150,9 @@ const Post = () => {
             {/* Article body */}
             <div className="mt-10">
               <div
-                className="font-jakarta prose-post"
+                className="font-jakarta prose-post max-w-full sm:max-w-[600px]"
                 style={{
                   color: "#606060",
-                  maxWidth: "600px",
                   fontSize: "15px",
                   lineHeight: 1.8,
                 }}

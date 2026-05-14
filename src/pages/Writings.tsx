@@ -44,14 +44,16 @@ const Writings = () => {
           </header>
 
           {/* Filter tabs */}
-          <div className="flex flex-wrap gap-2 mt-8">
+          <div
+            className="flex gap-2 mt-8 overflow-x-auto sm:flex-wrap [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden -mx-4 px-4 sm:mx-0 sm:px-0"
+          >
             {categories.map((cat) => {
               const active = activeCategory === cat;
               return (
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`font-display text-xs rounded-full border px-3 py-1.5 transition-colors ${
+                  className={`font-display text-xs rounded-full border px-3 py-1.5 transition-colors shrink-0 ${
                     active
                       ? "bg-foreground text-background border-foreground"
                       : "bg-transparent text-foreground border-border hover:border-foreground/40"
@@ -72,11 +74,10 @@ const Writings = () => {
               >
                 <Link
                   to={`/writings/${writing.slug}`}
-                  className="grid items-start gap-4 py-5 sm:py-6"
-                  style={{ gridTemplateColumns: "120px 1fr 28px" }}
+                  className="grid items-start gap-2 sm:gap-4 py-5 sm:py-6 grid-cols-1 sm:[grid-template-columns:120px_1fr_28px]"
                 >
                   <span
-                    className="font-typewriter uppercase text-[12px] pt-0.5"
+                    className="font-typewriter uppercase text-[12px] sm:pt-0.5"
                     style={{ color: "#919191" }}
                   >
                     {formatMonthYear(writing.date)}
@@ -94,7 +95,7 @@ const Writings = () => {
                   </div>
                   <ArrowRight
                     size={16}
-                    className="text-muted-foreground mt-1 justify-self-end"
+                    className="hidden sm:block text-muted-foreground mt-1 justify-self-end"
                   />
                 </Link>
               </li>
