@@ -13,7 +13,7 @@ const formatMonthYear = (dateStr: string) => {
   return d.toLocaleDateString("en-US", { month: "short", year: "numeric" });
 };
 
-const Writings = () => {
+const Journals = () => {
   const [activeCategory, setActiveCategory] = useState<string>("All");
 
   const categories = useMemo(() => {
@@ -36,7 +36,7 @@ const Writings = () => {
           {/* Heading */}
           <header>
             <h1 className="font-display text-3xl sm:text-4xl font-medium tracking-tight text-foreground">
-              Writings
+              Journals
             </h1>
             <p className="font-jakarta text-base mt-3" style={{ color: "#606060" }}>
               Notes on craft, process, industry, and the in-between.
@@ -73,7 +73,7 @@ const Writings = () => {
                 className="border-t border-border/60 transition-opacity duration-200 hover:opacity-70"
               >
                 <Link
-                  to={`/writings/${writing.slug}`}
+                  to={`/journals/${writing.slug}`}
                   className="grid items-start gap-2 sm:gap-4 py-5 sm:py-6 grid-cols-1 sm:[grid-template-columns:120px_1fr_28px]"
                 >
                   <span
@@ -104,7 +104,7 @@ const Writings = () => {
         </div>
       </section>
 
-      <CallToAction page="writings" />
+      <CallToAction page="journals" />
 
       <Footer />
       <ScrollToTopButton />
@@ -112,4 +112,4 @@ const Writings = () => {
   );
 };
 
-export default Writings;
+export default Journals;

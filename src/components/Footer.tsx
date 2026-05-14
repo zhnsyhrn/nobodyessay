@@ -22,7 +22,7 @@ const Footer = () => {
               Projects
             </Link>
             <Link 
-              to="/writings" 
+              to="/journals" 
               className="font-display text-sm sm:text-base hover:text-muted-foreground transition-colors"
             >
               Articles
