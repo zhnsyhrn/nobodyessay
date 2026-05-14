@@ -5,7 +5,6 @@ import { essays } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
-import CallToAction from "@/components/CallToAction";
 
 const formatMonthYear = (dateStr: string) => {
   const d = new Date(dateStr);
@@ -103,8 +102,6 @@ const Journals = () => {
           </ul>
         </div>
       </section>
-
-      <CallToAction page="journals" />
 
       <Footer />
       <ScrollToTopButton />
