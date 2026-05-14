@@ -22,7 +22,7 @@ const Post = () => {
       <>
         <Helmet>
           <title>Essay Not Found | Zahin | UX & Creative Direction</title>
-          <meta name="description" content="The essay you're looking for doesn't exist or has been moved. Browse our collection of UX design and creative direction writings." />
+          <meta name="description" content="The essay you're looking for doesn't exist or has been moved. Browse our collection of UX design and creative direction journals." />
         </Helmet>
         <div className="min-h-screen bg-background flex items-center justify-center">
           <div className="text-center">
@@ -30,9 +30,9 @@ const Post = () => {
             <p className="font-typewriter uppercase text-muted-foreground mb-6">
               The essay you're looking for doesn't exist or has been moved.
             </p>
-            <Link to="/writings">
+            <Link to="/journals">
               <Button className="font-display">
-                ← Back to Writings
+                ← Back to Journals
               </Button>
             </Link>
           </div>
@@ -106,12 +106,12 @@ const Post = () => {
           <div className="max-w-3xl mx-auto">
             {/* Back link */}
             <Link
-              to="/writings"
+              to="/journals"
               className="inline-flex items-center gap-1.5 font-jakarta text-[13px] no-underline hover:underline transition-colors"
               style={{ color: "#919191" }}
             >
               <ArrowLeft size={14} />
-              Writings
+              Journals
             </Link>
 
             {/* Category pill */}
@@ -162,20 +162,20 @@ const Post = () => {
               />
             </div>
 
-            {/* More writings */}
+            {/* More journals */}
             {relatedEssays.length > 0 && (
               <div className="mt-16 pt-8 border-t border-border/60">
                 <p
                   className="font-typewriter uppercase text-[11px]"
                   style={{ color: "#919191", letterSpacing: "0.08em" }}
                 >
-                  More writings
+                  More journals
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
                   {relatedEssays.slice(0, 2).map((r) => (
                     <Link
                       key={r.slug}
-                      to={`/writings/${r.slug}`}
+                      to={`/journals/${r.slug}`}
                       className="block rounded-lg border border-border/60 p-4 transition-colors hover:border-foreground/30"
                     >
                       <p

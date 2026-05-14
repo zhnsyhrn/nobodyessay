@@ -9,7 +9,7 @@ import Masthead from "./components/Masthead";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Consultation from "./pages/Consultation";
-import Writings from "./pages/Writings";
+import Journals from "./pages/Journals";
 import Studio from "./pages/Studio";
 import Contact from "./pages/Contact";
 import Post from "./pages/Post";
@@ -33,12 +33,12 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/consultation" element={<Consultation />} />
-            <Route path="/writings" element={<Writings />} />
+            <Route path="/journals" element={<Journals />} />
             <Route path="/studio" element={<Studio />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/bcreatives" element={<Bcreatives />} />
             <Route path="/senangreka-venture" element={<SenangrekaVenture />} />
-            <Route path="/writings/:slug" element={<Post />} />
+            <Route path="/journals/:slug" element={<Post />} />
             <Route path="/projects/:slug" element={<ProjectDetail />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

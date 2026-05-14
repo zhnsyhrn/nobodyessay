@@ -37,7 +37,7 @@ const portfolioImages = ["/lovable-uploads/4f35efbc-ddf9-451c-bf0a-e7c2e5ccceec.
 "/lovable-uploads/b4c83dca-133b-41b0-9c28-44746d3f650f.png" // Coffee packaging
 ];
 const Index = () => {
-  const featuredWritings = getFeaturedEssays();
+  const featuredJournals = getFeaturedEssays();
   const [api, setApi] = React.useState<any>();
   const [current, setCurrent] = React.useState(0);
   const [count, setCount] = React.useState(0);
@@ -74,7 +74,7 @@ const Index = () => {
                 <Button className="font-display min-h-[48px] px-6 w-full touch-manipulation shadow-lg hover:shadow-xl hover:shadow-primary/25 transition-all duration-300">View All Works</Button>
               </div>
             </Link>
-            <Link to="/writings" className="w-full sm:w-auto">
+            <Link to="/journals" className="w-full sm:w-auto">
               <Button variant="light" className="font-display min-h-[48px] px-6 w-full touch-manipulation">
                 Read My Thoughts
               </Button>

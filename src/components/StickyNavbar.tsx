@@ -42,7 +42,7 @@ const StickyNavbar = () => {
   };
   const isActiveRoute = (path: string) => {
     if (path === '/about' && (location.pathname === '/about' || location.pathname === '/manifesto')) return true;
-    if (path === '/writings' && location.pathname.startsWith('/writings')) return true;
+    if (path === '/journals' && location.pathname.startsWith('/journals')) return true;
     if (path === '/studio' && location.pathname === '/studio') return true;
     if (path === '/contact' && location.pathname === '/contact') return true;
     return false;
@@ -57,8 +57,8 @@ const StickyNavbar = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
-            <Link to="/writings" className={`font-display text-sm transition-colors py-2 ${isActiveRoute('/writings') ? 'text-foreground font-medium' : 'hover:text-muted-foreground'}`}>
-              Writings
+            <Link to="/journals" className={`font-display text-sm transition-colors py-2 ${isActiveRoute('/journals') ? 'text-foreground font-medium' : 'hover:text-muted-foreground'}`}>
+              Journals
             </Link>
             <Link to="/studio" className={`font-display text-sm transition-colors py-2 ${isActiveRoute('/studio') ? 'text-foreground font-medium' : 'hover:text-muted-foreground'}`}>Projects</Link>
             <Link to="/about" className={`font-display text-sm transition-colors py-2 ${isActiveRoute('/about') ? 'text-foreground font-medium' : 'hover:text-muted-foreground'}`}>About</Link>
@@ -101,8 +101,8 @@ const StickyNavbar = () => {
           backgroundColor: '#ffffff'
         }}>
               <div className="flex flex-col w-full max-w-sm">
-                <Link to="/writings" onClick={closeMenu} className={`font-display text-3xl transition-colors py-8 text-center flex items-center justify-center text-black hover:text-gray-600 ${isActiveRoute('/writings') ? 'font-medium' : ''}`}>
-                  Writings
+                <Link to="/journals" onClick={closeMenu} className={`font-display text-3xl transition-colors py-8 text-center flex items-center justify-center text-black hover:text-gray-600 ${isActiveRoute('/journals') ? 'font-medium' : ''}`}>
+                  Journals
                 </Link>
                 
                 <Separator className="bg-gray-200" />
