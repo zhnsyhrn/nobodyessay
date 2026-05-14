@@ -82,11 +82,11 @@ const Writings = () => {
                     {formatMonthYear(writing.date)}
                   </span>
                   <div className="min-w-0">
-                    <h2 className="font-display text-[15px] font-medium leading-snug text-foreground">
+                    <h2 className="font-display text-[18px] font-medium leading-snug text-foreground">
                       {writing.title}
                     </h2>
                     <p
-                      className="font-jakarta text-[13px] leading-relaxed mt-1.5"
+                      className="font-jakarta text-[14px] leading-relaxed mt-1.5"
                       style={{ color: "#606060" }}
                     >
                       {writing.excerpt}
