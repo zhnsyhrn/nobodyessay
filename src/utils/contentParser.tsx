@@ -31,18 +31,7 @@ export const parseInlineFormatting = (text: string): string => {
 
 // Enhanced rich content parser
 export const parseRichContent = (content: string): string => {
-  // Extract top-level HTML blocks so markdown parsing doesn't mangle them
-  // (blank lines inside, attributes like target="_blank", styles with *, etc.)
-  const htmlBlocks: string[] = [];
-  const protectedContent = content.replace(
-    /<(div|figure|section|aside|table)\b[\s\S]*?<\/\1>/g,
-    (match) => {
-      htmlBlocks.push(match);
-      return `\n\n@@HTMLBLOCK_${htmlBlocks.length - 1}@@\n\n`;
-    }
-  );
-
-  const sections = protectedContent.split('\n\n');
+  const sections = content.split('\n\n');
   let inCodeBlock = false;
   let codeLanguage = '';
   let codeContent: string[] = [];
@@ -52,13 +41,6 @@ export const parseRichContent = (content: string): string => {
     const section = sections[i].trim();
     
     if (!section) continue;
-
-    // Restore protected HTML blocks as-is
-    const htmlMatch = section.match(/^@@HTMLBLOCK_(\d+)@@$/);
-    if (htmlMatch) {
-      result.push(htmlBlocks[Number(htmlMatch[1])]);
-      continue;
-    }
 
     // Handle code blocks
     if (section.startsWith('```')) {
