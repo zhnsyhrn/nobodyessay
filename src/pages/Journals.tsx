@@ -71,10 +71,46 @@ const Journals = () => {
                 key={writing.slug}
                 className="border-t border-border/60 transition-opacity duration-200 hover:opacity-70"
               >
-                <Link
-                  to={`/journals/${writing.slug}`}
-                  className="grid items-start gap-2 sm:gap-4 py-5 sm:py-6 grid-cols-1 sm:[grid-template-columns:120px_1fr_28px]"
-                >
+                {writing.category === "Announcement" && writing.coverImage ? (
+                  <Link
+                    to={`/journals/${writing.slug}`}
+                    className="block py-5 sm:py-6"
+                  >
+                    <img
+                      src={writing.coverImage}
+                      alt={writing.title}
+                      className="w-full h-[160px] sm:h-[200px] object-cover rounded-lg border border-border/60"
+                      loading="lazy"
+                    />
+                    <div className="mt-4 flex items-center gap-3">
+                      <span
+                        className="font-typewriter uppercase text-[12px]"
+                        style={{ color: "#919191" }}
+                      >
+                        {formatMonthYear(writing.date)}
+                      </span>
+                      <span
+                        className="font-typewriter uppercase text-[11px] rounded-full border border-border px-2.5 py-0.5"
+                        style={{ color: "#606060" }}
+                      >
+                        Announcement
+                      </span>
+                    </div>
+                    <h2 className="font-display text-[18px] font-medium leading-snug text-foreground mt-2">
+                      {writing.title}
+                    </h2>
+                    <p
+                      className="font-jakarta text-[14px] leading-relaxed mt-1.5"
+                      style={{ color: "#606060" }}
+                    >
+                      {writing.excerpt}
+                    </p>
+                  </Link>
+                ) : (
+                  <Link
+                    to={`/journals/${writing.slug}`}
+                    className="grid items-start gap-2 sm:gap-4 py-5 sm:py-6 grid-cols-1 sm:[grid-template-columns:120px_1fr_28px]"
+                  >
                   <span
                     className="font-typewriter uppercase text-[12px] sm:pt-0.5"
                     style={{ color: "#919191" }}
@@ -96,7 +132,8 @@ const Journals = () => {
                     size={16}
                     className="hidden sm:block text-muted-foreground mt-1 justify-self-end"
                   />
-                </Link>
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
