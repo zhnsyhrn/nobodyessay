@@ -8,9 +8,100 @@ export interface Essay {
   readTime: string;
   category: string;
   content: string;
+  coverImage?: string;
 }
 
 export const essays: Essay[] = [
+  {
+    slug: "ai-native-corporate-design",
+    title: "Designing corporate websites the AI-native way",
+    excerpt: "How a collaboration between byzahin and Produlogi is using AI-first creative tools — Antigravity, Aura.build, and Unicorn Studio — to ship a high-craft tech company profile that looks like the future.",
+    metaDescription: "byzahin x Produlogi announce an AI-native creative workflow for a tech company profile site, built with Antigravity, Aura.build, and Unicorn Studio.",
+    date: "May 2025",
+    readTime: "6 min read",
+    category: "Announcement",
+    coverImage: "/placeholder.svg",
+    content: `There is a question every tech company eventually wrestles with. It usually comes when a potential client lands on the homepage, or when the CEO shares the link in a pitch deck, or sometimes just from the leadership team staring at the screen and asking: "Does this actually represent who we are?"
+
+For most growing tech companies, the honest answer has been some version of: not really. The gap between what a company has built and how it presents itself online has quietly become one of the most underestimated brand problems in the industry. A misaligned company profile doesn't just look outdated — it leaks credibility with every impression it makes.
+
+That gap is exactly what this collaboration is built to close.
+
+## The partnership
+
+I'm Zahin Syahiran, a UX designer focused on crafting intuitive digital experiences, design systems, and premium templates for brands, startups, and product teams. Today, I'm announcing a professional design consultancy collaboration with Produlogi — a design-led AI product studio founded by Marcus Chia — to deliver a corporate company profile website for a tech company client.
+
+This isn't a conventional agency engagement. It is a deliberate experiment in what becomes possible when two design-forward practitioners apply a fully AI-native workflow to a real corporate brief.
+
+## Why the workflow matters as much as the output
+
+The digital creative industry is in the middle of a slow, uncomfortable reckoning. AI tools have arrived. Most studios have quietly added them to existing processes — a bit of generation here, an automation there — without fundamentally changing how creative work gets done.
+
+> We're not bolting AI onto an old process. We're designing the process itself around AI-native tools from the first brief to the final delivery.
+
+This collaboration takes a different position. The methodology we're applying — which we're calling an AI-native creative workflow — treats these tools not as assistants to the designer, but as core infrastructure for the entire production pipeline. The distinction matters more than it sounds.
+
+## The tools at the center of it
+
+Three platforms form the backbone of this project's creative stack:
+
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6 not-prose">
+  <div class="rounded-lg border border-border/60 p-5">
+    <h3 class="font-display text-[15px] font-medium text-foreground mb-2">Antigravity</h3>
+    <p class="font-jakarta text-[13px] leading-relaxed" style="color:#606060">AI-assisted layout and structural design, used to rapidly concept and iterate the site architecture.</p>
+  </div>
+  <div class="rounded-lg border border-border/60 p-5">
+    <h3 class="font-display text-[15px] font-medium text-foreground mb-2">Aura.build</h3>
+    <p class="font-jakarta text-[13px] leading-relaxed" style="color:#606060">AI-powered frontend generation, bridging design intent and production-ready code without the usual translation loss.</p>
+  </div>
+  <div class="rounded-lg border border-border/60 p-5">
+    <h3 class="font-display text-[15px] font-medium text-foreground mb-2">Unicorn Studio</h3>
+    <p class="font-jakarta text-[13px] leading-relaxed" style="color:#606060">Motion and interactive visual design, used to craft the immersive, animated moments a premium corporate site demands.</p>
+  </div>
+</div>
+
+Together, these platforms compress what would traditionally take weeks of back-and-forth between designer, developer, and motion specialist into a tight, coherent loop where creative decisions and execution happen nearly in parallel.
+
+## What this means for the industry
+
+The intent behind this project is bigger than a single deliverable. One of the ongoing challenges in the Malaysian and wider Southeast Asian tech ecosystem is the slow adoption of AI tools inside creative and design teams. The hesitation is understandable — new workflows carry risk, and client work is not the place most practitioners want to experiment.
+
+This engagement is designed to prove that the risk calculus has changed. When the workflow is properly architected, AI-native tooling doesn't introduce uncertainty — it reduces it. Faster iteration means more decisions get tested before they're committed. Better motion tooling means the experience quality previously reserved for top-tier international studios becomes accessible without a full production team.
+
+If this project lands the way we expect it to, we intend to document the methodology and make it available as a reference for other designers and studios asking the same questions we were asking six months ago.
+
+## What comes next
+
+The site is in active production. We'll be sharing process work, decisions, and lessons learned as the project progresses.
+
+If you're a tech company reconsidering how your brand shows up online — or a designer curious about what an AI-native production workflow looks like in practice — follow along.
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10 not-prose">
+  <div class="rounded-lg border border-border/60 p-5">
+    <p class="font-typewriter uppercase text-[11px] mb-3" style="color:#919191;letter-spacing:0.08em">Learn more</p>
+    <ul class="space-y-2">
+      <li><a href="https://byzahin.com" target="_blank" rel="noopener noreferrer" class="font-jakarta text-[13px] text-foreground hover:underline inline-flex items-center gap-1.5">byzahin.com <span aria-hidden="true">↗</span></a></li>
+      <li><a href="https://produlogi.com" target="_blank" rel="noopener noreferrer" class="font-jakarta text-[13px] text-foreground hover:underline inline-flex items-center gap-1.5">produlogi.com <span aria-hidden="true">↗</span></a></li>
+    </ul>
+  </div>
+  <div class="rounded-lg border border-border/60 p-5">
+    <p class="font-typewriter uppercase text-[11px] mb-3" style="color:#919191;letter-spacing:0.08em">Inquiries</p>
+    <div class="grid grid-cols-2 gap-4">
+      <div>
+        <p class="font-jakarta text-[13px] font-medium text-foreground">Zahin Syahiran</p>
+        <p class="font-jakarta text-[12px]" style="color:#919191">UX Designer · byzahin</p>
+        <a href="https://byzahin.com" target="_blank" rel="noopener noreferrer" class="font-jakarta text-[12px] text-foreground hover:underline mt-1 inline-block">byzahin.com ↗</a>
+      </div>
+      <div>
+        <p class="font-jakarta text-[13px] font-medium text-foreground">Marcus Chia</p>
+        <p class="font-jakarta text-[12px]" style="color:#919191">Brand Strategist · Produlogi</p>
+        <a href="https://produlogi.com" target="_blank" rel="noopener noreferrer" class="font-jakarta text-[12px] text-foreground hover:underline mt-1 inline-block">produlogi.com ↗</a>
+        <a href="https://linkedin.com/in/marcusmark5/" target="_blank" rel="noopener noreferrer" class="font-jakarta text-[12px] text-foreground hover:underline mt-1 inline-block">linkedin ↗</a>
+      </div>
+    </div>
+  </div>
+</div>`
+  },
   {
     slug: "ambitious",
     title: "Ambitious",
