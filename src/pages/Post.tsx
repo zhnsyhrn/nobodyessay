@@ -147,6 +147,16 @@ const Post = () => {
               </span>
             </div>
 
+            {/* Cover image - announcements only */}
+            {essay.category === "Announcement" && essay.coverImage && (
+              <img
+                src={essay.coverImage}
+                alt={essay.title}
+                className="w-full object-cover rounded-lg mt-8 h-[220px] sm:h-[400px]"
+                style={{ marginBottom: "24px" }}
+              />
+            )}
+
             {/* Article body */}
             <div className="mt-10">
               <div
