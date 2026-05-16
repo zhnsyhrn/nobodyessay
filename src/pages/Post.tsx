@@ -102,8 +102,8 @@ const Post = () => {
       <div className="min-h-screen bg-background">
         <StickyNavbar />
 
-        <article className="pt-10 sm:pt-12 pb-8 sm:pb-12 px-4 sm:px-6 fade-in">
-          <div className="max-w-3xl mx-auto">
+        <article className="pt-10 sm:pt-12 pb-8 sm:pb-12 fade-in">
+          <div className="max-w-[740px] mx-auto px-6">
             {/* Back link */}
             <Link
               to="/journals"
@@ -126,7 +126,7 @@ const Post = () => {
 
             {/* Title */}
             <h1
-              className="font-display font-medium tracking-tight mt-4 text-[22px] sm:text-[26px] max-w-full sm:max-w-[560px]"
+              className="font-display font-medium tracking-tight mt-4 text-[22px] sm:text-[26px]"
               style={{ lineHeight: 1.3 }}
             >
               {essay.title}
@@ -135,7 +135,7 @@ const Post = () => {
             {/* Subtitle / description (announcement posts) */}
             {essay.category === "Announcement" && essay.excerpt && (
               <p
-                className="font-jakarta max-w-full sm:max-w-[600px]"
+                className="font-jakarta"
                 style={{
                   color: "#606060",
                   fontSize: "16px",
@@ -182,7 +182,7 @@ const Post = () => {
             {/* Article body */}
             <div className="mt-10">
               <div
-                className="font-jakarta prose-post max-w-full sm:max-w-[600px]"
+                className="font-jakarta prose-post"
                 style={{
                   color: "#606060",
                   fontSize: "15px",
