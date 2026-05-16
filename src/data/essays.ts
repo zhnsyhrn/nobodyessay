@@ -1,3 +1,5 @@
+import byzahinProdulogiCover from "@/assets/byzahin-produlogi-cover.png";
+
 export interface Essay {
   slug: string;
   title: string;
