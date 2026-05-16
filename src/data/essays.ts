@@ -1,3 +1,4 @@
+import byzahinProdulogiCover from "@/assets/byzahin-produlogi-cover.png";
 
 export interface Essay {
   slug: string;
@@ -20,7 +21,7 @@ export const essays: Essay[] = [
     date: "May 2025",
     readTime: "6 min read",
     category: "Announcement",
-    coverImage: "/placeholder.svg",
+    coverImage: byzahinProdulogiCover,
     content: `There is a question every tech company eventually wrestles with. It usually comes when a potential client lands on the homepage, or when the CEO shares the link in a pitch deck, or sometimes just from the leadership team staring at the screen and asking: "Does this actually represent who we are?"
 
 For most growing tech companies, the honest answer has been some version of: not really. The gap between what a company has built and how it presents itself online has quietly become one of the most underestimated brand problems in the industry. A misaligned company profile doesn't just look outdated — it leaks credibility with every impression it makes.
