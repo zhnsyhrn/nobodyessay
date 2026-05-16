@@ -78,26 +78,27 @@ The site is in active production. We'll be sharing process work, decisions, and 
 If you're a tech company reconsidering how your brand shows up online — or a designer curious about what an AI-native production workflow looks like in practice — follow along.
 
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10 not-prose">
-  <div class="rounded-lg border border-border/60 p-5">
-    <p class="font-typewriter uppercase text-[11px] mb-3" style="color:#919191;letter-spacing:0.08em">Learn more</p>
-    <ul class="space-y-2">
-      <li><a href="https://byzahin.com" target="_blank" rel="noopener noreferrer" class="font-jakarta text-[13px] text-foreground hover:underline inline-flex items-center gap-1.5">byzahin.com <span aria-hidden="true">↗</span></a></li>
-      <li><a href="https://produlogi.com" target="_blank" rel="noopener noreferrer" class="font-jakarta text-[13px] text-foreground hover:underline inline-flex items-center gap-1.5">produlogi.com <span aria-hidden="true">↗</span></a></li>
-    </ul>
+  <div class="rounded-[12px] border-[0.5px] border-border p-6">
+    <p class="font-typewriter uppercase text-[11px]" style="color:#919191;letter-spacing:0.08em">Learn more</p>
+    <div class="border-t border-border/60 mt-3"></div>
+    <a href="https://byzahin.com" target="_blank" rel="noopener noreferrer" class="font-jakarta text-[14px] text-foreground no-underline hover:opacity-70 transition-opacity flex items-center justify-between py-3">byzahin.com <span aria-hidden="true">↗</span></a>
+    <div class="border-t border-border/60"></div>
+    <a href="https://produlogi.com" target="_blank" rel="noopener noreferrer" class="font-jakarta text-[14px] text-foreground no-underline hover:opacity-70 transition-opacity flex items-center justify-between py-3">produlogi.com <span aria-hidden="true">↗</span></a>
   </div>
-  <div class="rounded-lg border border-border/60 p-5">
-    <p class="font-typewriter uppercase text-[11px] mb-3" style="color:#919191;letter-spacing:0.08em">Inquiries</p>
-    <div class="grid grid-cols-2 gap-4">
+  <div class="rounded-[12px] border-[0.5px] border-border p-6">
+    <p class="font-typewriter uppercase text-[11px]" style="color:#919191;letter-spacing:0.08em">Inquiries</p>
+    <div class="border-t border-border/60 mt-3 mb-4"></div>
+    <div class="grid grid-cols-2 gap-5">
       <div>
-        <p class="font-jakarta text-[13px] font-medium text-foreground">Zahin Syahiran</p>
-        <p class="font-jakarta text-[12px]" style="color:#919191">UX Designer · byzahin</p>
-        <a href="https://byzahin.com" target="_blank" rel="noopener noreferrer" class="font-jakarta text-[12px] text-foreground hover:underline mt-1 inline-block">byzahin.com ↗</a>
+        <p class="font-jakarta text-[14px] font-medium text-foreground">Zahin Syahiran</p>
+        <p class="font-jakarta text-[12px] mt-0.5" style="color:#919191">UX Designer · byzahin</p>
+        <a href="https://byzahin.com" target="_blank" rel="noopener noreferrer" class="font-jakarta text-[13px] no-underline hover:opacity-70 transition-opacity mt-2 inline-block" style="color:#606060">byzahin.com ↗</a>
       </div>
       <div>
-        <p class="font-jakarta text-[13px] font-medium text-foreground">Marcus Chia</p>
-        <p class="font-jakarta text-[12px]" style="color:#919191">Brand Strategist · Produlogi</p>
-        <a href="https://produlogi.com" target="_blank" rel="noopener noreferrer" class="font-jakarta text-[12px] text-foreground hover:underline mt-1 inline-block">produlogi.com ↗</a>
-        <a href="https://linkedin.com/in/marcusmark5/" target="_blank" rel="noopener noreferrer" class="font-jakarta text-[12px] text-foreground hover:underline mt-1 inline-block">linkedin ↗</a>
+        <p class="font-jakarta text-[14px] font-medium text-foreground">Marcus Chia</p>
+        <p class="font-jakarta text-[12px] mt-0.5" style="color:#919191">Brand Strategist · Produlogi</p>
+        <a href="https://produlogi.com" target="_blank" rel="noopener noreferrer" class="font-jakarta text-[13px] no-underline hover:opacity-70 transition-opacity mt-2 inline-block" style="color:#606060">produlogi.com ↗</a>
+        <a href="https://linkedin.com/in/marcusmark5/" target="_blank" rel="noopener noreferrer" class="font-jakarta text-[13px] no-underline hover:opacity-70 transition-opacity inline-block" style="color:#606060;margin-top:6px">linkedin ↗</a>
       </div>
     </div>
   </div>

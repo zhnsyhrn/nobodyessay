@@ -169,6 +169,12 @@ export const parseRichContent = (content: string): string => {
     }
 
     // Regular paragraphs
+    // Pass through raw HTML blocks untouched (no <p> wrap, no inline markdown parsing)
+    if (section.startsWith('<')) {
+      result.push(section);
+      continue;
+    }
+
     const formattedText = parseInlineFormatting(section);
     result.push(`<p class="mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base font-jakarta" style="color: #606060">${DOMPurify.sanitize(formattedText)}</p>`);
   }
