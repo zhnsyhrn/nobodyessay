@@ -132,10 +132,32 @@ const Post = () => {
               {essay.title}
             </h1>
 
+            {/* Subtitle / description (announcement posts) */}
+            {essay.category === "Announcement" && essay.excerpt && (
+              <p
+                className="font-jakarta max-w-full sm:max-w-[600px]"
+                style={{
+                  color: "#606060",
+                  fontSize: "16px",
+                  lineHeight: 1.6,
+                  marginTop: "12px",
+                }}
+              >
+                {essay.excerpt}
+              </p>
+            )}
+
             {/* Meta row */}
             <div
-              className="flex items-center mt-4 font-jakarta text-[12px] sm:text-[13px]"
-              style={{ color: "#919191", gap: "16px" }}
+              className="flex items-center font-jakarta text-[12px] sm:text-[13px]"
+              style={{
+                color: "#919191",
+                gap: "16px",
+                marginTop:
+                  essay.category === "Announcement" && essay.excerpt
+                    ? "20px"
+                    : "16px",
+              }}
             >
               <span className="inline-flex items-center gap-1.5">
                 <Calendar size={14} />
