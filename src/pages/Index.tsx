@@ -67,7 +67,7 @@ const Index = () => {
             className="group inline-flex items-center gap-2 rounded-full border border-border/60 bg-background pl-1.5 pr-3 py-1.5 hover:border-foreground/30 transition-colors max-w-full"
           >
             <span
-              className="font-typewriter uppercase text-[10px] rounded-full px-2 py-0.5"
+              className="font-typewriter uppercase text-[10px] rounded-full px-2 py-0.5 animate-soft-pulse"
               style={{
                 color: "#1e40af",
                 backgroundColor: "#dbeafe",
