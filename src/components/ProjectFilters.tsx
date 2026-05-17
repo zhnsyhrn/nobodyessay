@@ -29,8 +29,8 @@ export const ProjectFilters = ({
 
   return (
     <>
-      {/* Desktop - Sticky Filters Bar */}
-      <div className="hidden md:block sticky top-[var(--navbar-height,64px)] z-40 bg-background/95 backdrop-blur-sm border-b border-border">
+      {/* Desktop - Filters Bar */}
+      <div className="hidden md:block border-b border-border bg-background">
         <div className="px-4 sm:px-6 lg:px-12 xl:px-16 py-3 sm:py-4">
           <div className="w-full flex items-center justify-between gap-4">
             <div className="relative flex-1 max-w-lg">
@@ -79,8 +79,8 @@ export const ProjectFilters = ({
         </div>
       </div>
 
-      {/* Mobile - Sticky Filters */}
-      <div className="md:hidden sticky top-[var(--navbar-height,64px)] z-40 bg-background/95 backdrop-blur-sm border-b border-border px-4 sm:px-6 py-4">
+      {/* Mobile - Filters */}
+      <div className="md:hidden border-b border-border bg-background px-4 sm:px-6 py-4">
         <div className="flex items-center gap-3 w-full">
       <div className="relative flex-1">
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" size={18} />
