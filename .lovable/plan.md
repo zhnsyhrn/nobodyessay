@@ -1,35 +1,26 @@
-## Goal
+## Restyle StickyNavbar to floating pill
 
-Add a slim, one-line announcement banner at the top of the homepage that surfaces the most recent post in the "Announcement" category, with a small arrow CTA that links to that post's detail page.
+Refactor `src/components/StickyNavbar.tsx` to match the reference: a centered, floating, pill-shaped navbar with a soft cream background, logo on the left, nav links centered, and an outlined pill "Contact" CTA on the right.
 
-## Where it goes
+### Visual spec (from reference)
+- Outer bar: transparent, with top padding (~16-20px), horizontally centered
+- Inner pill: white background, fully rounded (`rounded-full`), subtle border `border-border/60`, soft shadow, max-width ~1200px, mx-auto, padding `pl-6 pr-2 py-2`
+- Sticky behavior preserved (`sticky top-4 z-50`)
+- Page background area behind nav stays current (no cream tint applied globally)
 
-- File: `src/pages/Index.tsx`
-- Position: Inside the homepage, placed directly above the Hero `<section>` (so it sits just under `<StickyNavbar />`). Centered, full-width row.
-- Only renders if at least one Announcement essay exists.
+### Layout
+- Left: logo image + "Zahin Syahiran" wordmark (unchanged content)
+- Center (absolute-centered on desktop): Journals · Projects · About · Blog-equivalent links — keep current items (Journals, Projects, About). Active link: `text-foreground font-medium`; inactive: `text-muted-foreground hover:text-foreground`
+- Right: "Contact" rendered as an outlined pill button (`rounded-full border border-foreground/80 px-5 py-2 text-sm`) instead of a plain link, linking to `/contact`
 
-## Data source
+### Mobile
+- Same floating pill container; hide center links, show hamburger on the right next to a compact "Contact" pill (or keep hamburger only — confirm via question below if needed; default: hamburger only on mobile, Contact pill hidden < md)
+- Mobile menu overlay logic unchanged
 
-- `src/data/essays.ts` already exports `essays`. Add a tiny helper (or inline filter in `Index.tsx`) that returns the first essay where `category === "Announcement"` (essays are already ordered newest first based on current usage).
-- Use that essay's `title` as the banner text and link to `/journals/${slug}`.
+### Files
+- `src/components/StickyNavbar.tsx` — markup + class changes only
+- No changes to routes, data, or other components
 
-## Visual design (minimal, one line)
-
-- Container: centered pill, max-width fit-content, mx-auto, top margin ~24px, sits above hero.
-- Style: `rounded-full border border-border/60 bg-background px-3.5 py-1.5 inline-flex items-center gap-2 hover:border-foreground/30 transition-colors`
-- Content (single line, truncated on small screens):
-  - Small uppercase label pill: `NEW` (font-typewriter, 10px, `#919191`, `border border-border/60 rounded-full px-2 py-0.5`)
-  - Title text: `font-jakarta text-[13px] text-foreground truncate max-w-[260px] sm:max-w-none`
-  - Arrow CTA: `ArrowRight` icon (lucide-react, 14px, `#606060`) inside a small circular hover target; the whole pill is a single `<Link>` so the arrow is the visual CTA, not a separate button.
-- Mobile: keep one line; allow the title to truncate with ellipsis so the pill never wraps.
-
-## Behavior
-
-- Entire banner is a `react-router-dom` `<Link to={\`/journals/${slug}\`}>`.
-- No dismiss, no storage, no animation beyond hover (keeps it simple per request).
-- Does not replace or modify `InfoBanner` (the existing yellow "in progress" strip is a separate component and isn't currently mounted in `Index.tsx`).
-
-## Out of scope
-
-- No changes to essay data, Post page, or Journals list.
-- No new dependencies.
+### Notes
+- Keep `--navbar-height` CSS var updater (now measures the floating bar's effective height including top offset)
+- Use semantic tokens (`bg-background`, `border-border`, `text-foreground`, `text-muted-foreground`) — no hardcoded hex

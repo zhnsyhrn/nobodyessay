@@ -47,30 +47,39 @@ const StickyNavbar = () => {
     if (path === '/contact' && location.pathname === '/contact') return true;
     return false;
   };
-  return <nav ref={navRef} className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border px-4 sm:px-6 lg:px-12 xl:px-16 py-3 sm:py-4">
-      <div className="w-full">
-        <div className="flex items-center justify-between">
-          <Link to="/" onClick={closeMenu} className="flex items-center space-x-3">
-            <img src="/lovable-uploads/e058676f-a0f2-441a-983c-a931949d96b8.png" alt="byzahin" className="w-8 h-8 rounded-full object-cover" />
-            <h1 className="font-display text-lg sm:text-xl font-medium hover:text-muted-foreground transition-colors">Zahin Syahiran</h1>
+  return <nav ref={navRef} className="sticky top-3 sm:top-4 z-50 px-3 sm:px-6 pt-1">
+      <div className="max-w-6xl mx-auto">
+        <div className="relative flex items-center justify-between rounded-full bg-background border border-border/60 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.08)] pl-4 sm:pl-5 pr-2 py-2">
+          <Link to="/" onClick={closeMenu} className="flex items-center space-x-2 sm:space-x-3 z-10">
+            <img src="/lovable-uploads/e058676f-a0f2-441a-983c-a931949d96b8.png" alt="byzahin" className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover" />
+            <h1 className="font-display text-base sm:text-lg font-medium hover:text-muted-foreground transition-colors">Zahin Syahiran</h1>
           </Link>
-          
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
-            <Link to="/journals" className={`font-display text-sm transition-colors py-2 ${isActiveRoute('/journals') ? 'text-foreground font-medium' : 'hover:text-muted-foreground'}`}>
+
+          {/* Desktop Navigation - absolutely centered */}
+          <div className="hidden md:flex items-center space-x-7 lg:space-x-9 absolute left-1/2 -translate-x-1/2">
+            <Link to="/journals" className={`font-display text-sm transition-colors ${isActiveRoute('/journals') ? 'text-foreground font-medium' : 'text-muted-foreground hover:text-foreground'}`}>
               Journals
             </Link>
-            <Link to="/studio" className={`font-display text-sm transition-colors py-2 ${isActiveRoute('/studio') ? 'text-foreground font-medium' : 'hover:text-muted-foreground'}`}>Projects</Link>
-            <Link to="/about" className={`font-display text-sm transition-colors py-2 ${isActiveRoute('/about') ? 'text-foreground font-medium' : 'hover:text-muted-foreground'}`}>About</Link>
-            <Link to="/contact" className={`font-display text-sm transition-colors py-2 ${isActiveRoute('/contact') ? 'text-foreground font-medium' : 'hover:text-muted-foreground'}`}>
-              Contact
-            </Link>
+            <Link to="/studio" className={`font-display text-sm transition-colors ${isActiveRoute('/studio') ? 'text-foreground font-medium' : 'text-muted-foreground hover:text-foreground'}`}>Projects</Link>
+            <Link to="/about" className={`font-display text-sm transition-colors ${isActiveRoute('/about') ? 'text-foreground font-medium' : 'text-muted-foreground hover:text-foreground'}`}>About</Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <Button variant="ghost" size="sm" onClick={toggleMenu} className="md:hidden p-3 h-12 w-12 touch-manipulation" aria-label="Toggle menu">
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </Button>
+          {/* Right side - Contact pill (desktop) + Hamburger (mobile) */}
+          <div className="flex items-center gap-2 z-10">
+            <Link
+              to="/contact"
+              className={`hidden md:inline-flex items-center rounded-full border px-5 py-2 font-display text-sm transition-colors ${
+                isActiveRoute('/contact')
+                  ? 'border-foreground bg-foreground text-background'
+                  : 'border-foreground/80 text-foreground hover:bg-foreground hover:text-background'
+              }`}
+            >
+              Contact Us
+            </Link>
+            <Button variant="ghost" size="sm" onClick={toggleMenu} className="md:hidden p-2 h-10 w-10 touch-manipulation rounded-full" aria-label="Toggle menu">
+              {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Navigation Menu Overlay - Full Page */}
