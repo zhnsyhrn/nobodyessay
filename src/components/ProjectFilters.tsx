@@ -79,8 +79,8 @@ export const ProjectFilters = ({
         </div>
       </div>
 
-      {/* Mobile - Non-sticky Filters */}
-      <div className="md:hidden px-4 sm:px-6 py-4">
+      {/* Mobile - Sticky Filters */}
+      <div className="md:hidden sticky top-[var(--navbar-height,64px)] z-40 bg-background/95 backdrop-blur-sm border-b border-border px-4 sm:px-6 py-4">
         <div className="flex items-center gap-3 w-full">
       <div className="relative flex-1">
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" size={18} />

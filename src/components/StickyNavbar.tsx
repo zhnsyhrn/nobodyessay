@@ -11,8 +11,10 @@ const StickyNavbar = () => {
   // Set CSS var for navbar height to align sticky filters
   useEffect(() => {
     const updateVar = () => {
-      const h = navRef.current?.offsetHeight ?? 64;
-      document.documentElement.style.setProperty('--navbar-height', `${h}px`);
+      const el = navRef.current;
+      const h = el?.offsetHeight ?? 64;
+      const top = el?.offsetTop ?? 0;
+      document.documentElement.style.setProperty('--navbar-height', `${h + top + 8}px`);
     };
     updateVar();
     window.addEventListener('resize', updateVar);
@@ -57,11 +59,11 @@ const StickyNavbar = () => {
 
           {/* Desktop Navigation - absolutely centered */}
           <div className="hidden md:flex items-center space-x-7 lg:space-x-9 absolute left-1/2 -translate-x-1/2">
-            <Link to="/journals" className={`font-display text-sm transition-colors ${isActiveRoute('/journals') ? 'text-foreground font-medium' : 'text-muted-foreground hover:text-foreground'}`}>
+            <Link to="/journals" className={`font-display text-sm text-foreground transition-colors ${isActiveRoute('/journals') ? 'font-medium underline underline-offset-[6px] decoration-2 decoration-foreground' : 'hover:text-muted-foreground'}`}>
               Journals
             </Link>
-            <Link to="/studio" className={`font-display text-sm transition-colors ${isActiveRoute('/studio') ? 'text-foreground font-medium' : 'text-muted-foreground hover:text-foreground'}`}>Projects</Link>
-            <Link to="/about" className={`font-display text-sm transition-colors ${isActiveRoute('/about') ? 'text-foreground font-medium' : 'text-muted-foreground hover:text-foreground'}`}>About</Link>
+            <Link to="/studio" className={`font-display text-sm text-foreground transition-colors ${isActiveRoute('/studio') ? 'font-medium underline underline-offset-[6px] decoration-2 decoration-foreground' : 'hover:text-muted-foreground'}`}>Projects</Link>
+            <Link to="/about" className={`font-display text-sm text-foreground transition-colors ${isActiveRoute('/about') ? 'font-medium underline underline-offset-[6px] decoration-2 decoration-foreground' : 'hover:text-muted-foreground'}`}>About</Link>
           </div>
 
           {/* Right side - Contact pill (desktop) + Hamburger (mobile) */}
