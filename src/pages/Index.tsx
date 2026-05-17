@@ -59,6 +59,14 @@ const Index = () => {
   return <div className="min-h-screen bg-background">
       <StickyNavbar />
 
+      <div
+        style={{
+          backgroundColor: "#f7f8fa",
+          backgroundImage:
+            "radial-gradient(circle, #d1d5db 1px, transparent 1px)",
+          backgroundSize: "20px 20px",
+        }}
+      >
       {/* Announcement banner */}
       {latestAnnouncement && (
         <div className="pt-10 sm:pt-14 px-4 sm:px-6 flex justify-center fade-in">
@@ -90,15 +98,7 @@ const Index = () => {
       )}
 
       {/* Hero Section */}
-      <section
-        className="relative py-8 sm:py-12 lg:py-20 px-4 sm:px-6 fade-in pb-4 sm:pb-6"
-        style={{
-          backgroundColor: "#f7f8fa",
-          backgroundImage:
-            "radial-gradient(circle, #d1d5db 1px, transparent 1px)",
-          backgroundSize: "20px 20px",
-        }}
-      >
+      <section className="relative py-8 sm:py-12 lg:py-20 px-4 sm:px-6 fade-in pb-4 sm:pb-6">
         <div className="max-w-6xl mx-auto text-left lg:text-center relative">
           <h2 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">Experiment freely, Design fearlessly.</h2>
           <p style={{
@@ -121,6 +121,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+      </div>
 
       {/* Gallery Slider */}
       <section className="py-2 sm:py-4">
