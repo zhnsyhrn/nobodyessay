@@ -103,10 +103,10 @@ const Index = () => {
       <section ref={heroRef} className="relative py-8 sm:py-12 lg:py-20 px-4 sm:px-6 fade-in pb-4 sm:pb-6 md:cursor-none">
         <FigjamCursor targetRef={heroRef} label="You" color="#ec4899" />
         <div className="max-w-6xl mx-auto text-left lg:text-center relative">
-          <h2 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">Experiment freely, Design fearlessly.</h2>
+          <h2 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">Experiment Freely, Design Fearlessly.</h2>
           <p style={{
           color: '#606060'
-        }} className="font-jakarta text-lg sm:text-lg max-w-2xl lg:mx-auto leading-[27px] sm:leading-relaxed px-1 mb-6 sm:mb-8 sm:px-0">Where ideas play, and designs grow — product design, brand design systems, and rapid R&D for startups.</p>
+        }} className="font-jakarta text-lg sm:text-lg max-w-2xl lg:mx-auto leading-[27px] sm:leading-relaxed px-1 mb-6 sm:mb-8 sm:px-0">I'm a multidisciplinary designer specialist in product design. 5 years of experience within FinTech, InsurTech, and B2B SaaS ecosystem. Currently, exploring AI-tech stacks to build functional prototype.</p>
           
           {/* Navigation Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 px-1 sm:px-2 lg:justify-center">
