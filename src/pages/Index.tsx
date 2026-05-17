@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Dialog, DialogContent, DialogTrigger, DialogClose } from "@/components/ui/dialog";
 import { Link } from "react-router-dom";
-import { getFeaturedEssays } from "@/data/essays";
+import { getFeaturedEssays, essays } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
@@ -38,6 +38,7 @@ const portfolioImages = ["/lovable-uploads/4f35efbc-ddf9-451c-bf0a-e7c2e5ccceec.
 ];
 const Index = () => {
   const featuredJournals = getFeaturedEssays();
+  const latestAnnouncement = essays.find((e) => e.category === "Announcement");
   const [api, setApi] = React.useState<any>();
   const [current, setCurrent] = React.useState(0);
   const [count, setCount] = React.useState(0);
@@ -57,6 +58,31 @@ const Index = () => {
   }, [api]);
   return <div className="min-h-screen bg-background">
       <StickyNavbar />
+
+      {/* Announcement banner */}
+      {latestAnnouncement && (
+        <div className="pt-6 px-4 sm:px-6 flex justify-center fade-in">
+          <Link
+            to={`/journals/${latestAnnouncement.slug}`}
+            className="group inline-flex items-center gap-2 rounded-full border border-border/60 bg-background pl-1.5 pr-3 py-1.5 hover:border-foreground/30 transition-colors max-w-full"
+          >
+            <span
+              className="font-typewriter uppercase text-[10px] rounded-full border border-border/60 px-2 py-0.5"
+              style={{ color: "#919191", letterSpacing: "0.08em" }}
+            >
+              New
+            </span>
+            <span className="font-jakarta text-[13px] text-foreground truncate max-w-[220px] sm:max-w-none">
+              {latestAnnouncement.title}
+            </span>
+            <ArrowRight
+              size={14}
+              className="shrink-0 transition-transform group-hover:translate-x-0.5"
+              style={{ color: "#606060" }}
+            />
+          </Link>
+        </div>
+      )}
 
       {/* Hero Section */}
       <section className="py-8 sm:py-12 lg:py-20 px-4 sm:px-6 fade-in pb-4 sm:pb-6">
