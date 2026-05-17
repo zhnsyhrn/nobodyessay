@@ -7,6 +7,7 @@ import { getFeaturedEssays, essays } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
+import FigjamCursor from "@/components/FigjamCursor";
 import { Instagram, Linkedin, X, ArrowRight } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
@@ -42,6 +43,7 @@ const Index = () => {
   const [api, setApi] = React.useState<any>();
   const [current, setCurrent] = React.useState(0);
   const [count, setCount] = React.useState(0);
+  const heroRef = React.useRef<HTMLElement>(null);
   const galleryImages = portfolioImages;
 
   // Preload carousel images intelligently
@@ -98,7 +100,8 @@ const Index = () => {
       )}
 
       {/* Hero Section */}
-      <section className="relative py-8 sm:py-12 lg:py-20 px-4 sm:px-6 fade-in pb-4 sm:pb-6">
+      <section ref={heroRef} className="relative py-8 sm:py-12 lg:py-20 px-4 sm:px-6 fade-in pb-4 sm:pb-6 md:cursor-none">
+        <FigjamCursor targetRef={heroRef} label="You" color="#ec4899" />
         <div className="max-w-6xl mx-auto text-left lg:text-center relative">
           <h2 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">Experiment freely, Design fearlessly.</h2>
           <p style={{
