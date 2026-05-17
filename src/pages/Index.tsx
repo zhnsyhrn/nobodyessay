@@ -57,8 +57,6 @@ const Index = () => {
     });
   }, [api]);
   return <div className="min-h-screen bg-background">
-      <StickyNavbar />
-
       <div
         style={{
           backgroundColor: "#f7f8fa",
@@ -67,6 +65,8 @@ const Index = () => {
           backgroundSize: "20px 20px",
         }}
       >
+      <StickyNavbar />
+
       {/* Announcement banner */}
       {latestAnnouncement && (
         <div className="pt-10 sm:pt-14 px-4 sm:px-6 flex justify-center fade-in">
