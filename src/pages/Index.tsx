@@ -66,7 +66,7 @@ const Index = () => {
         <div className="pt-10 sm:pt-14 px-4 sm:px-6 flex justify-center fade-in">
           <Link
             to={`/journals/${latestAnnouncement.slug}`}
-            className="group inline-flex items-center gap-2 rounded-full border border-border/60 bg-background pl-1.5 pr-3 py-1.5 hover:border-foreground/30 transition-colors max-w-full"
+            className="group inline-flex items-center gap-2 rounded-full border border-border/60 bg-white pl-1.5 pr-3 py-1.5 hover:border-foreground/30 transition-colors max-w-full"
           >
             <span
               className="font-typewriter uppercase text-[10px] rounded-full px-2 py-0.5 animate-soft-pulse"
