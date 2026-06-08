@@ -140,11 +140,16 @@ const Index = () => {
               {galleryImages.map((image, index) => <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3">
                   <Dialog>
                     <DialogTrigger asChild>
-                      <div className="aspect-square overflow-hidden rounded-[10px] cursor-pointer">
-                         <LazyImage src={image} alt={`Design portfolio work ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" priority={index < 2} // High priority for first 2 images
-                    preload={index < 3} // Preload first 3 images for better LCP
-                    blurUp={true} // Enable blur-up effect
+                      <div className="group relative aspect-square overflow-hidden rounded-[10px] cursor-pointer">
+                         <LazyImage src={image} alt={`Design portfolio work ${index + 1}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" priority={index < 2}
+                    preload={index < 3}
+                    blurUp={true}
                     />
+                        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-black font-display text-sm">
+                            View More <ArrowRight size={16} />
+                          </span>
+                        </div>
                       </div>
                     </DialogTrigger>
                     <DialogContent className="max-w-2xl w-full p-4 border-0">
