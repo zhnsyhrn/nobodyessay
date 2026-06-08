@@ -50,20 +50,18 @@ const About = () => {
           </p>
 
           {/* Photo mosaic */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 mb-10">
+          <div className="grid grid-cols-2 sm:grid-cols-3 sm:grid-rows-2 sm:auto-rows-[220px] gap-3 sm:gap-4 mb-10">
             {speakingPhotos.map((photo, i) => (
               <div
                 key={i}
-                className={`overflow-hidden rounded-xl ${
+                className={`overflow-hidden rounded-xl h-48 sm:h-full ${
                   i === 0 ? "sm:col-span-2 sm:row-span-2" : ""
                 }`}
               >
                 <LazyImage
                   src={photo.src}
                   alt={photo.alt}
-                  className={`w-full object-cover hover:scale-[1.03] transition-transform duration-500 ${
-                    i === 0 ? "h-48 sm:h-full" : "h-48 sm:h-52"
-                  }`}
+                  className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500"
                   priority={i === 0}
                   blurUp
                 />
