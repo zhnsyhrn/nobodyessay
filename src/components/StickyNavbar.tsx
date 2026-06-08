@@ -50,8 +50,14 @@ const StickyNavbar = () => {
     return false;
   };
   return <nav ref={navRef} className="sticky top-3 sm:top-4 z-50 px-3 sm:px-6 pt-1">
-      <div className="max-w-6xl mx-auto">
-        <div className="relative flex items-center justify-between rounded-full bg-background border border-border/60 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.08)] pl-4 sm:pl-5 pr-2 py-2">
+      <div className="max-w-6xl mx-auto relative">
+        {/* Light blue blob behind the nav */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute left-1/2 -translate-x-1/2 -top-6 w-[420px] h-[140px] rounded-full blur-3xl opacity-70 -z-10"
+          style={{ background: "radial-gradient(circle, #bfdbfe 0%, #dbeafe 40%, transparent 70%)" }}
+        />
+        <div className="relative flex items-center justify-between rounded-full bg-white border border-border/60 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.08)] pl-4 sm:pl-5 pr-2 py-2">
           <Link to="/" onClick={closeMenu} className="flex items-center space-x-2 sm:space-x-3 z-10">
             <img src="/lovable-uploads/e058676f-a0f2-441a-983c-a931949d96b8.png" alt="byzahin" className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover" />
             <h1 className="font-display text-base sm:text-lg font-medium hover:text-muted-foreground transition-colors">Zahin Syahiran</h1>
