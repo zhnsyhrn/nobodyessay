@@ -104,7 +104,7 @@ const Studio = () => {
       {/* Projects Grid */}
       <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-12 xl:px-16 md:pt-8">
         <div className="w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[20px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px]">
             {filteredProjects.map((project, index) => {
               const handleClick = (e: React.MouseEvent) => {
                 if (!project.hasDetails) {
