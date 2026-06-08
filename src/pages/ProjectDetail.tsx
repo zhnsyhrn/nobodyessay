@@ -564,35 +564,38 @@ const ProjectDetail = () => {
       <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16 mb-4 sm:mb-12">
         {slug === 'great-eastern-takaful-malaysia' ?
       // Special content layout for Great Eastern Takaful with mixed text and images
-      <div className="max-w-4xl mx-auto space-y-8">
+      <div className="max-w-[740px] mx-auto space-y-8">
             <div className="prose prose-lg max-w-none">
-              <h3 className="font-display text-2xl font-medium mb-4">Problem</h3>
+              <h3 className="font-display text-[20px] sm:text-[22px] font-medium mb-4 mt-10" style={{lineHeight:1.3}}>Problem</h3>
               
               <p className="mb-4" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#374151',
-            fontSize: '16px'
+            color: '#606060',
+            fontSize: '15px',
+            lineHeight: 1.8
           }}>
                 Great Eastern Takaful Berhad (GETB) wanted to reorganise their overall website experience to better support customers seeking takaful consultation, purchasing takaful products, and managing claims. The project also included refreshing the design to align with the latest corporate identity from Great Eastern Group, designed by the Singapore team.
               </p>
               
               <p className="mb-4" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#374151',
-            fontSize: '16px'
+            color: '#606060',
+            fontSize: '15px',
+            lineHeight: 1.8
           }}>
                 The existing website's information architecture was problematic: broken links, outdated content and products, unnecessary widgets, and poor structure overall.
               </p>
               
               <p className="mb-8" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#374151',
-            fontSize: '16px'
+            color: '#606060',
+            fontSize: '15px',
+            lineHeight: 1.8
           }}>
                 The Digital Experience Studio of Great Eastern hired Zahin Syahiran on a contractual basis to lead the process—conducting a UX audit, running workshops and consultations with internal stakeholders, translating content into Bahasa Malaysia for local audiences, and handing over the designs to the AVP of Website in Singapore within two months.
               </p>
               
-              <h3 className="font-display text-2xl font-medium mb-4">Case Study Limitations</h3>
+              <h3 className="font-display text-[20px] sm:text-[22px] font-medium mb-4 mt-10" style={{lineHeight:1.3}}>Case Study Limitations</h3>
               
               <QuoteBlock 
                 quote="Unfortunately, I wasn't able to capture or document all of the work I completed here, specifically the Excel files and some of the documentation, due to strict IT security policies enforced by the IT team. Many items were confidential. I often worked more than 8 hours a day, sometimes at Starbucks Jalan Ampang, to organise all the audits, design arrangements, and workshop plans as a first-timer."
@@ -607,14 +610,15 @@ const ProjectDetail = () => {
                   </div>)}
               </div>
               
-              <h3 className="font-display text-2xl font-medium mb-4">Approach</h3>
+              <h3 className="font-display text-[20px] sm:text-[22px] font-medium mb-4 mt-10" style={{lineHeight:1.3}}>Approach</h3>
               
-              <h4 className="font-display text-xl font-medium mb-3 mt-6">1. Content Audit:</h4>
+              <h4 className="font-display text-[17px] sm:text-[18px] font-medium mb-3 mt-6" style={{lineHeight:1.4}}>1. Content Audit:</h4>
               
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#374151',
-            fontSize: '16px'
+            color: '#606060',
+            fontSize: '15px',
+            lineHeight: 1.8
           }}>
                 <li>Conducted a full audit of the entire website end-to-end, including micro-sites, to gather insights.</li>
                 <li>Identified outdated content and pages, broken links, and irrelevant widgets (e.g., prayer times, non-related statistics, external links).</li>
@@ -622,13 +626,14 @@ const ProjectDetail = () => {
                 <li>Documented findings in Excel to prioritise issues, schedule meetings with content owners, plan design workshops, and guide internal discussions.</li>
               </ul>
               
-              <h4 className="font-display text-xl font-medium mb-3 mt-6">2. Design workshops and consultations with internal stakeholders:</h4>
+              <h4 className="font-display text-[17px] sm:text-[18px] font-medium mb-3 mt-6" style={{lineHeight:1.4}}>2. Design workshops and consultations with internal stakeholders:</h4>
               
               <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-4 rounded">
                 <p style={{
               fontFamily: 'Plus Jakarta Sans, sans-serif',
-              color: '#374151',
-              fontSize: '16px'
+              color: '#606060',
+              fontSize: '15px',
+              lineHeight: 1.8
             }}>
                   💡 The workshops were conducted to seek verification on various issues found from the audit, highlighting potential solutions, and facilitate internal discussions between department managers that are responsible for their content or pages on the website.
                 </p>
@@ -636,21 +641,23 @@ const ProjectDetail = () => {
               
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#374151',
-            fontSize: '16px'
+            color: '#606060',
+            fontSize: '15px',
+            lineHeight: 1.8
           }}>
                 <li>1-hour call with the website owner to highlight the insights gathered from the audit. The main objective is to seek verification on the issues, get better context, and explore potential initial solutions.</li>
                 <li>2-hour workshop with GETB key stakeholders across departments to propose initial solutions for a new website information architecture, improved customer service content organisation, and gather immediate feedback.</li>
                 <li>Ongoing smaller workshops and consultations to present wireframes and overall work progress and obtain approval from the main decision maker, AVP for Brand and Marketing Communications, Aida Yuhaniza.</li>
               </ul>
               
-              <h4 className="font-display text-xl font-medium mb-3 mt-6">3. Wireframes & Iteration:</h4>
+              <h4 className="font-display text-[17px] sm:text-[18px] font-medium mb-3 mt-6" style={{lineHeight:1.4}}>3. Wireframes & Iteration:</h4>
               
               <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-4 rounded">
                 <p style={{
               fontFamily: 'Plus Jakarta Sans, sans-serif',
-              color: '#374151',
-              fontSize: '16px'
+              color: '#606060',
+              fontSize: '15px',
+              lineHeight: 1.8
             }}>
                   💡 Then, the process continued with high-fidelity wireframes for all key pages in the website by referring to the Great Eastern Singapore site as the main reference and identifying relevant designs for adaptation based on the latest web page content.
                 </p>
@@ -658,8 +665,9 @@ const ProjectDetail = () => {
               
               <ul className="list-disc pl-6 mb-8 space-y-2" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#374151',
-            fontSize: '16px'
+            color: '#606060',
+            fontSize: '15px',
+            lineHeight: 1.8
           }}>
                 <li>Created high-fidelity wireframes for key website pages, referencing the Great Eastern Singapore site as the primary design benchmark.</li>
                 <li>Focused less on creating new assets in Figma and more on stakeholder alignment, expectation management, and cross-department coordination.</li>
@@ -681,14 +689,15 @@ const ProjectDetail = () => {
                   </div>)}
               </div>
               
-              <h3 className="font-display text-2xl font-medium mb-4">Results</h3>
+              <h3 className="font-display text-[20px] sm:text-[22px] font-medium mb-4 mt-10" style={{lineHeight:1.3}}>Results</h3>
               
-              <h4 className="font-display text-xl font-medium mb-3 mt-6">1. Solution</h4>
+              <h4 className="font-display text-[17px] sm:text-[18px] font-medium mb-3 mt-6" style={{lineHeight:1.4}}>1. Solution</h4>
               
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#374151',
-            fontSize: '16px'
+            color: '#606060',
+            fontSize: '15px',
+            lineHeight: 1.8
           }}>
                 <li>Created templates for consistent layouts across multiple pages.</li>
                 <li>Delivered a new website information architecture while removing outdated content, broken links, and unnecessary pages.</li>
@@ -696,35 +705,38 @@ const ProjectDetail = () => {
                 <li>Contributed new design assets (icons, illustrations) to the Great Eastern Group design system.</li>
               </ul>
               
-              <h4 className="font-display text-xl font-medium mb-3 mt-6">2. User Benefit</h4>
+              <h4 className="font-display text-[17px] sm:text-[18px] font-medium mb-3 mt-6" style={{lineHeight:1.4}}>2. User Benefit</h4>
               
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#374151',
-            fontSize: '16px'
+            color: '#606060',
+            fontSize: '15px',
+            lineHeight: 1.8
           }}>
                 <li>Users experienced a more consistent, responsive website free from broken layouts and outdated pages.</li>
                 <li>Improved navigation made it easier for customers to find information about takaful products and services.</li>
               </ul>
               
-              <h4 className="font-display text-xl font-medium mb-3 mt-6">3. Impact</h4>
+              <h4 className="font-display text-[17px] sm:text-[18px] font-medium mb-3 mt-6" style={{lineHeight:1.4}}>3. Impact</h4>
               
               <ul className="list-disc pl-6 mb-8 space-y-2" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#374151',
-            fontSize: '16px'
+            color: '#606060',
+            fontSize: '15px',
+            lineHeight: 1.8
           }}>
                 <li>Developers reused components and templates reducing development effort.</li>
                 <li>Stakeholders aligned quickly since wireframes clearly showed outcomes.</li>
                 <li>Completed the end-to-end process (audit, high-fidelity wireframes, Bahasa Malaysia translation for all pages and design handover) within 2 months (13/05/2024 to 23/07/2024).</li>
               </ul>
               
-              <h3 className="font-display text-2xl font-medium mb-4">Notes from the Author</h3>
+              <h3 className="font-display text-[20px] sm:text-[22px] font-medium mb-4 mt-10" style={{lineHeight:1.3}}>Notes from the Author</h3>
               
               <ul className="list-decimal pl-6 mb-8 space-y-2" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#374151',
-            fontSize: '16px'
+            color: '#606060',
+            fontSize: '15px',
+            lineHeight: 1.8
           }}>
                 <li>Co-creation workshops not only produced better ideas but also secured stakeholder buy-in early.</li>
                 <li>Next time, I'd prepare stronger alignment frameworks to help stakeholders make decisions faster.</li>
