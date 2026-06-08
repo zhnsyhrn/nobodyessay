@@ -80,7 +80,7 @@ const About = () => {
             ].map((event, i) => (
               <div
                 key={i}
-                className="group rounded-xl border border-border bg-white p-5 hover:shadow-sm transition-all"
+                className="group rounded-xl bg-white p-5 hover:shadow-sm transition-all"
               >
                 <span className="font-mono text-xs text-muted-foreground">{event.year}</span>
                 <h3 className="font-jakarta font-medium text-foreground mt-1.5 text-[15px] leading-snug">
@@ -110,7 +110,7 @@ const About = () => {
                     href={client.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center gap-3 rounded-xl border border-border bg-white p-3.5 hover:border-foreground/20 hover:shadow-sm transition-all duration-200"
+                    className="group flex items-center gap-3 rounded-xl bg-white p-3.5 hover:shadow-sm transition-all duration-200"
                   >
                     <img
                       src={client.logo}
@@ -135,10 +135,8 @@ const About = () => {
                 {sideProjects.map((project) => (
                   <div
                     key={project.name}
-                    className={`rounded-xl border border-border bg-white p-5 transition-all duration-200 ${
-                      project.active
-                        ? "hover:border-foreground/20 hover:shadow-sm"
-                        : "opacity-60"
+                    className={`rounded-xl bg-white p-5 transition-all duration-200 ${
+                      project.active ? "hover:shadow-sm" : "opacity-60"
                     }`}
                   >
                     <div className="flex items-center justify-between mb-1.5">
