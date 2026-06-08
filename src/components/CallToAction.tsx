@@ -38,21 +38,6 @@ const CallToAction = ({ page }: CallToActionProps) => {
           {getTitle()}
         </h2>
         
-        <div className="flex flex-col sm:flex-row gap-4">
-          <Link to="/contact">
-            <Button variant="secondary" size="lg">
-              Contact
-            </Button>
-          </Link>
-          
-          {page === 'projects' && (
-            <Link to="/bcreatives">
-              <Button variant="secondary" size="lg">
-                Design Services
-              </Button>
-            </Link>
-          )}
-        </div>
       </div>
     </section>
   );
