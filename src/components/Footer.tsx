@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 
 interface FooterProps {
   showNav?: boolean;
+  copyrightOnly?: boolean;
 }
 
-const Footer = ({ showNav = true }: FooterProps) => {
+const Footer = ({ showNav = true, copyrightOnly = false }: FooterProps) => {
   return (
     <footer className="border-t border-border bg-background">
-      <div className="px-4 sm:px-6 lg:px-12 xl:px-16 py-6 sm:py-8">
+      {!copyrightOnly && <div className="px-4 sm:px-6 lg:px-12 xl:px-16 py-6 sm:py-8">
         <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-6">
           {/* Logo */}
           <img 
@@ -69,7 +70,7 @@ const Footer = ({ showNav = true }: FooterProps) => {
             </a>
           </div>
         </div>
-      </div>
+      </div>}
 
       {/* Copyright */}
       <div className="border-t border-border py-4" style={{ backgroundColor: '#121212' }}>
