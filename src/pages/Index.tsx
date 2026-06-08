@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { getFeaturedEssays, essays } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import Footer from "@/components/Footer";
 import FigjamCursor from "@/components/FigjamCursor";
 import { Instagram, Linkedin, X, ArrowRight } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -168,6 +169,7 @@ const Index = () => {
       </section>
 
       <ScrollToTopButton />
+      <Footer copyrightOnly />
     </div>;
 };
 export default Index;
