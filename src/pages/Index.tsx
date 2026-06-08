@@ -189,7 +189,7 @@ const Index = () => {
                 className="group cursor-pointer h-full"
               >
                 <div className="rounded-[10px] overflow-hidden bg-white h-full flex flex-col">
-                  <div className="aspect-video overflow-hidden bg-muted">
+                  <div className="relative aspect-video overflow-hidden bg-muted">
                     <LazyImage
                       src={project.image}
                       alt={project.title}
@@ -198,6 +198,17 @@ const Index = () => {
                       preload={index < 4}
                       blurUp={true}
                     />
+                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-6">
+                      <p className="font-mono text-[10px] uppercase tracking-wider text-white/80 mb-2">
+                        {project.type}
+                      </p>
+                      <h3 className="font-display text-xl sm:text-2xl font-medium text-white mb-4 max-w-md">
+                        {project.title}
+                      </h3>
+                      <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-black font-display text-sm">
+                        View More <ArrowRight size={16} />
+                      </span>
+                    </div>
                   </div>
                   <div className="p-2 sm:p-3" style={{ backgroundColor: '#F5F5F5' }}>
                     <div className="flex items-center justify-between">
