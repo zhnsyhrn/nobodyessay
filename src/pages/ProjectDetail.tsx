@@ -477,66 +477,62 @@ const ProjectDetail = () => {
       <StickyNavbar />
       
       {/* Main Content */}
-      <div className="max-w-4xl mx-auto px-4 py-[30px] sm:px-0">
+      <div className="max-w-4xl mx-auto px-4 pt-10 sm:pt-16 pb-8 sm:px-0">
         {/* Back Navigation */}
-        <div className="mb-4 sm:mb-8">
-          <Link to="/studio" className="inline-flex items-center text-muted-foreground hover:text-foreground transition-colors">
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            BACK TO STUDIO
+        <div className="mb-10 sm:mb-14">
+          <Link
+            to="/studio"
+            className="group inline-flex items-center gap-2 font-jakarta text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-0.5" />
+            Back to projects
           </Link>
         </div>
 
         {/* Header Section */}
-        <div className="mb-4">
-          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
-            <h1 className="font-display text-3xl sm:text-4xl font-medium mb-4 sm:mb-0 sm:mr-8">
-              {project.title}
-            </h1>
-            <Button asChild className="w-fit">
-              <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="mr-2 h-4 w-4" />
-                VISIT WEBSITE
-              </a>
-            </Button>
-          </div>
-          
-          <div className="border-b border-border pb-2">
-            <p className="text-base sm:text-lg leading-relaxed" style={{
-            fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#374151'
-          }}>
-              {project.overview}
+        <div className="mb-12 sm:mb-16">
+          {(project.projectInfo as Record<string, string>)?.["Type"] && (
+            <p className="font-jakarta text-xs sm:text-sm font-medium uppercase tracking-[0.18em] text-muted-foreground mb-5">
+              {(project.projectInfo as Record<string, string>)["Type"]}
             </p>
-          </div>
+          )}
+
+          <h1 className="font-jakarta text-4xl sm:text-5xl lg:text-[56px] lg:leading-[1.05] font-semibold tracking-tight text-foreground mb-8 max-w-3xl">
+            {project.title}
+          </h1>
+
+          <p className="font-jakarta text-lg sm:text-xl leading-relaxed text-muted-foreground max-w-2xl mb-10">
+            {project.overview}
+          </p>
+
+          <a
+            href={project.websiteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2 font-jakarta text-sm font-medium text-foreground border-b border-foreground/30 hover:border-foreground pb-1 transition-colors"
+          >
+            Visit website
+            <ExternalLink className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </a>
         </div>
 
         {/* Project Information */}
-        <div className="mt-2">
-          <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="project-info">
-              <AccordionTrigger className="font-display text-xl font-medium">
-                Project Information
-              </AccordionTrigger>
-              <AccordionContent>
-                <div className="space-y-3 pt-4">
-                  {Object.entries(project.projectInfo).map(([key, value], index, array) => <div key={key} className={`pb-2 ${index < array.length - 1 ? 'border-b border-border/50' : ''}`}>
-                      <div className="flex flex-col sm:flex-row sm:items-start">
-                        <div className="w-full sm:w-48 mb-2 sm:mb-0">
-                           <span className="font-mono text-sm text-muted-foreground uppercase tracking-wide">
-                             {key}
-                           </span>
-                        </div>
-                        <div className="flex-1">
-                           <p className="font-mono text-foreground text-sm uppercase">
-                             {value}
-                           </p>
-                        </div>
-                      </div>
-                    </div>)}
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+        <div className="border-t border-border/60 pt-10 sm:pt-12">
+          <h2 className="font-jakarta text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-6">
+            Project Information
+          </h2>
+          <dl className="grid grid-cols-1 sm:grid-cols-12 gap-y-5 sm:gap-y-6">
+            {Object.entries(project.projectInfo).map(([key, value]) => (
+              <React.Fragment key={key}>
+                <dt className="sm:col-span-4 font-jakarta text-sm text-muted-foreground">
+                  {key}
+                </dt>
+                <dd className="sm:col-span-8 font-jakarta text-sm sm:text-base text-foreground leading-relaxed">
+                  {value}
+                </dd>
+              </React.Fragment>
+            ))}
+          </dl>
         </div>
 
         {/* Verdant Solar Image Slider - Only for verdant-solar-my */}
