@@ -17,25 +17,17 @@ import { useCarouselPreloader } from "@/hooks/useImagePreloader";
 import { projects } from "@/data/projects";
 
 // Portfolio design images - Your latest design portfolio work
-const portfolioImages = ["/lovable-uploads/4f35efbc-ddf9-451c-bf0a-e7c2e5ccceec.png",
-// Health tracking app UI
-"/lovable-uploads/ed2d1384-cbe4-4b7a-8d35-9fbad4f3f104.png",
-// Great Eastern Takaful website
-"/lovable-uploads/f4697a18-0878-474e-993a-80b25600aa97.png",
-// Mobile app screens
-"/lovable-uploads/ebb70966-3d48-4bd8-a0fb-dcb74281f5fb.png",
-// PolicyStreet mobile app
-"/lovable-uploads/87011945-cf3d-4d63-8f09-146843fb1e36.png",
-// Banking/finance app
-"/lovable-uploads/a4606376-f5cc-4a88-bf08-f8485cba771a.png",
-// Dealn mobile app
-"/lovable-uploads/151a6112-1d81-410d-b905-46eb1820545e.png",
-// Coffee branding/mugs
-"/lovable-uploads/9fe47bb5-a2b9-40fc-8df4-560e811a56b4.png",
-// Finance app screens
-"/lovable-uploads/c4f41984-363c-4bd4-92f4-318ddc3e4368.png",
-// AQA Group website
-"/lovable-uploads/b4c83dca-133b-41b0-9c28-44746d3f650f.png" // Coffee packaging
+const portfolioImages = [
+  { src: "/lovable-uploads/4f35efbc-ddf9-451c-bf0a-e7c2e5ccceec.png", title: "MoneyX App", type: "App Design" },
+  { src: "/lovable-uploads/ed2d1384-cbe4-4b7a-8d35-9fbad4f3f104.png", title: "Great Eastern Takaful", type: "UX/UI Design" },
+  { src: "/lovable-uploads/f4697a18-0878-474e-993a-80b25600aa97.png", title: "Mobile App Screens", type: "App Design" },
+  { src: "/lovable-uploads/ebb70966-3d48-4bd8-a0fb-dcb74281f5fb.png", title: "PolicyStreet", type: "UX/UI Design" },
+  { src: "/lovable-uploads/87011945-cf3d-4d63-8f09-146843fb1e36.png", title: "Banking & Finance App", type: "App Design" },
+  { src: "/lovable-uploads/a4606376-f5cc-4a88-bf08-f8485cba771a.png", title: "Dealn Mobile App", type: "Product Design" },
+  { src: "/lovable-uploads/151a6112-1d81-410d-b905-46eb1820545e.png", title: "Knock Knock Cafe", type: "Branding" },
+  { src: "/lovable-uploads/9fe47bb5-a2b9-40fc-8df4-560e811a56b4.png", title: "Finance App Screens", type: "App Design" },
+  { src: "/lovable-uploads/c4f41984-363c-4bd4-92f4-318ddc3e4368.png", title: "AQA Group of Companies", type: "Web Design" },
+  { src: "/lovable-uploads/b4c83dca-133b-41b0-9c28-44746d3f650f.png", title: "Coffee Packaging", type: "Branding" },
 ];
 const Index = () => {
   const featuredJournals = getFeaturedEssays();
@@ -137,17 +129,23 @@ const Index = () => {
           stopOnInteraction: true
         })]} setApi={setApi} className="w-full relative">
             <CarouselContent className="-ml-2 md:-ml-4">
-              {galleryImages.map((image, index) => <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3">
+              {galleryImages.map((item, index) => <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3">
                   <Dialog>
                     <DialogTrigger asChild>
                       <div className="group relative aspect-square overflow-hidden rounded-[10px] cursor-pointer">
-                         <LazyImage src={image} alt={`Design portfolio work ${index + 1}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" priority={index < 2}
+                         <LazyImage src={item.src} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" priority={index < 2}
                     preload={index < 3}
                     blurUp={true}
                     />
-                        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-black font-display text-sm">
-                            View More <ArrowRight size={16} />
+                        <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-4">
+                          <p className="font-mono text-[10px] uppercase tracking-wider text-white/80 mb-2">
+                            {item.type}
+                          </p>
+                          <h3 className="font-display text-base sm:text-lg font-medium text-white mb-3 max-w-[90%]">
+                            {item.title}
+                          </h3>
+                          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white text-black font-display text-xs sm:text-sm">
+                            View More <ArrowRight size={14} />
                           </span>
                         </div>
                       </div>
@@ -158,7 +156,7 @@ const Index = () => {
                           <X className="h-4 w-4" />
                           <span className="sr-only">Close</span>
                         </DialogClose>
-                         <LazyImage src={image} alt={`Design portfolio work ${index + 1}`} className="w-full h-auto rounded-[10px]" priority={true} // High priority for dialog images since user explicitly clicked
+                         <LazyImage src={item.src} alt={item.title} className="w-full h-auto rounded-[10px]" priority={true}
                     blurUp={true} // Enable blur-up effect
                     />
                       </div>
