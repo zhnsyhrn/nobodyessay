@@ -42,13 +42,6 @@ const About = () => {
       {/* Speaking & Participation — Photo-forward hero */}
       <section className="pt-20 sm:pt-28 pb-16 sm:pb-24 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
-          {/* Section label */}
-          <div className="flex items-center gap-2.5 mb-3">
-            <Mic size={16} className="text-muted-foreground" />
-            <span className="font-jakarta text-xs font-semibold uppercase tracking-[0.15em] text-muted-foreground">
-              Speaking & Participation
-            </span>
-          </div>
           <h2 className="font-jakarta text-3xl sm:text-4xl font-semibold text-foreground mb-3 tracking-tight">
             Workshops & Events
           </h2>
@@ -106,12 +99,6 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
             {/* Clients — 3 cols */}
             <div className="lg:col-span-3">
-              <div className="flex items-center gap-2.5 mb-3">
-                <Briefcase size={16} className="text-muted-foreground" />
-                <span className="font-jakarta text-xs font-semibold uppercase tracking-[0.15em] text-muted-foreground">
-                  Design & Client Projects
-                </span>
-              </div>
               <h2 className="font-jakarta text-3xl sm:text-4xl font-semibold text-foreground mb-8 tracking-tight">
                 People I've worked with
               </h2>
@@ -140,12 +127,6 @@ const About = () => {
 
             {/* Side projects — 2 cols */}
             <div className="lg:col-span-2">
-              <div className="flex items-center gap-2.5 mb-3">
-                <Rocket size={16} className="text-muted-foreground" />
-                <span className="font-jakarta text-xs font-semibold uppercase tracking-[0.15em] text-muted-foreground">
-                  Side Projects
-                </span>
-              </div>
               <h2 className="font-jakarta text-3xl sm:text-4xl font-semibold text-foreground mb-8 tracking-tight">
                 Things I'm building
               </h2>
