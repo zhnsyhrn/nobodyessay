@@ -125,7 +125,7 @@ const Studio = () => {
                       blurUp={true}
                     />
                   </div>
-                  <div className="p-2 sm:p-3" style={{ backgroundColor: '#F5F5F5' }}>
+                  <div className="p-2 sm:p-3 bg-white">
                     <div className="flex items-center justify-between">
                       <div className="flex-1">
                         <h3 className="font-display text-base font-medium text-black mb-1">
