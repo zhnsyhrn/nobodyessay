@@ -148,8 +148,6 @@ const Studio = () => {
         </div>
       </section>
 
-      <CallToAction page="projects" />
-      
       <Footer />
       <ScrollToTopButton />
       
