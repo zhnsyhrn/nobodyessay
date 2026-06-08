@@ -1,38 +1,55 @@
 import { useEffect, useRef, useState } from "react";
 
 interface FigjamCursorProps {
-  targetRef: React.RefObject<HTMLElement>;
+  targetRef?: React.RefObject<HTMLElement>;
   label?: string;
   color?: string;
 }
 
 const FigjamCursor = ({ targetRef, label = "You", color = "#ec4899" }: FigjamCursorProps) => {
   const [pos, setPos] = useState({ x: 0, y: 0 });
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(!targetRef);
   const rafRef = useRef<number | null>(null);
 
   useEffect(() => {
-    const el = targetRef.current;
-    if (!el) return;
+    const el = targetRef?.current;
 
+    if (el) {
+      const handleMove = (e: MouseEvent) => {
+        const rect = el.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        if (rafRef.current) cancelAnimationFrame(rafRef.current);
+        rafRef.current = requestAnimationFrame(() => setPos({ x, y }));
+      };
+      const handleEnter = () => setVisible(true);
+      const handleLeave = () => setVisible(false);
+
+      el.addEventListener("mousemove", handleMove);
+      el.addEventListener("mouseenter", handleEnter);
+      el.addEventListener("mouseleave", handleLeave);
+      return () => {
+        el.removeEventListener("mousemove", handleMove);
+        el.removeEventListener("mouseenter", handleEnter);
+        el.removeEventListener("mouseleave", handleLeave);
+        if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      };
+    }
+
+    // Global mode: track across whole window
     const handleMove = (e: MouseEvent) => {
-      const rect = el.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
-      rafRef.current = requestAnimationFrame(() => setPos({ x, y }));
+      rafRef.current = requestAnimationFrame(() => setPos({ x: e.clientX, y: e.clientY }));
     };
-    const handleEnter = () => setVisible(true);
     const handleLeave = () => setVisible(false);
-
-    el.addEventListener("mousemove", handleMove);
-    el.addEventListener("mouseenter", handleEnter);
-    el.addEventListener("mouseleave", handleLeave);
-
+    const handleEnter = () => setVisible(true);
+    window.addEventListener("mousemove", handleMove);
+    document.addEventListener("mouseleave", handleLeave);
+    document.addEventListener("mouseenter", handleEnter);
     return () => {
-      el.removeEventListener("mousemove", handleMove);
-      el.removeEventListener("mouseenter", handleEnter);
-      el.removeEventListener("mouseleave", handleLeave);
+      window.removeEventListener("mousemove", handleMove);
+      document.removeEventListener("mouseleave", handleLeave);
+      document.removeEventListener("mouseenter", handleEnter);
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
     };
   }, [targetRef]);
@@ -40,7 +57,7 @@ const FigjamCursor = ({ targetRef, label = "You", color = "#ec4899" }: FigjamCur
   return (
     <div
       aria-hidden
-      className="pointer-events-none absolute top-0 left-0 z-50 hidden md:block transition-opacity duration-150"
+      className={`pointer-events-none ${targetRef ? "absolute" : "fixed"} top-0 left-0 z-[9999] hidden md:block transition-opacity duration-150`}
       style={{
         transform: `translate3d(${pos.x}px, ${pos.y}px, 0)`,
         opacity: visible ? 1 : 0,

@@ -130,6 +130,16 @@ All colors MUST be HSL.
     font-size: 14px;
   }
 
+  /* FigJam-style global cursor on desktop */
+  @media (min-width: 768px) {
+    html, body {
+      cursor: none;
+    }
+    a, button, [role="button"], input, textarea, select, label {
+      cursor: none;
+    }
+  }
+
   /* Typography classes for the writing portfolio */
   .font-display {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
