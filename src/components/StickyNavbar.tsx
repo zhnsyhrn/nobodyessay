@@ -76,7 +76,7 @@ const StickyNavbar = () => {
                   : 'border-foreground/80 text-foreground hover:bg-foreground hover:text-background'
               }`}
             >
-              Contact Us
+              Contact Me
             </Link>
             <Button variant="ghost" size="sm" onClick={toggleMenu} className="md:hidden p-2 h-10 w-10 touch-manipulation rounded-full" aria-label="Toggle menu">
               {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
