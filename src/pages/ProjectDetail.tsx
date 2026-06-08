@@ -477,7 +477,7 @@ const ProjectDetail = () => {
       <StickyNavbar />
       
       {/* Main Content */}
-      <div className="max-w-4xl mx-auto px-4 pt-10 sm:pt-16 pb-8 sm:px-0">
+      <div className="max-w-[740px] mx-auto px-6 pt-10 sm:pt-12 pb-8">
         {/* Back Navigation */}
         <div className="mb-10 sm:mb-14">
           <Link
@@ -490,18 +490,29 @@ const ProjectDetail = () => {
         </div>
 
         {/* Header Section */}
-        <div className="mb-12 sm:mb-16">
+        <div className="mb-10 sm:mb-12">
           {(project.projectInfo as Record<string, string>)?.["Type"] && (
-            <p className="font-jakarta text-xs sm:text-sm font-medium uppercase tracking-[0.18em] text-muted-foreground mb-5">
-              {(project.projectInfo as Record<string, string>)["Type"]}
-            </p>
+            <div className="mt-2 mb-4">
+              <span
+                className="inline-block font-typewriter uppercase text-[11px] rounded-full border border-border px-2.5 py-1"
+                style={{ color: "#606060" }}
+              >
+                {(project.projectInfo as Record<string, string>)["Type"]}
+              </span>
+            </div>
           )}
 
-          <h1 className="font-jakarta text-4xl sm:text-5xl lg:text-[56px] lg:leading-[1.05] font-semibold tracking-tight text-foreground mb-8 max-w-3xl">
+          <h1
+            className="font-display font-medium tracking-tight text-[22px] sm:text-[26px]"
+            style={{ lineHeight: 1.3 }}
+          >
             {project.title}
           </h1>
 
-          <p className="font-jakarta text-lg sm:text-xl leading-relaxed text-muted-foreground max-w-2xl mb-10">
+          <p
+            className="font-jakarta mt-3"
+            style={{ color: "#606060", fontSize: "16px", lineHeight: 1.6 }}
+          >
             {project.overview}
           </p>
 
@@ -509,25 +520,34 @@ const ProjectDetail = () => {
             href={project.websiteUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 font-jakarta text-sm font-medium text-foreground border-b border-foreground/30 hover:border-foreground pb-1 transition-colors"
+            className="group inline-flex items-center gap-2 font-jakarta text-[13px] font-medium text-foreground border-b border-foreground/30 hover:border-foreground pb-0.5 transition-colors mt-6"
           >
             Visit website
-            <ExternalLink className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            <ExternalLink className="h-3 w-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
         </div>
 
         {/* Project Information */}
-        <div className="border-t border-border/60 pt-10 sm:pt-12">
-          <h2 className="font-jakarta text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-6">
+        <div className="border-t border-border/60 pt-8">
+          <h2
+            className="font-typewriter uppercase text-[11px] mb-5"
+            style={{ color: "#606060", letterSpacing: "0.08em" }}
+          >
             Project Information
           </h2>
-          <dl className="grid grid-cols-1 sm:grid-cols-12 gap-y-5 sm:gap-y-6">
+          <dl className="grid grid-cols-1 sm:grid-cols-12 gap-y-4">
             {Object.entries(project.projectInfo).map(([key, value]) => (
               <React.Fragment key={key}>
-                <dt className="sm:col-span-4 font-jakarta text-sm text-muted-foreground">
+                <dt
+                  className="sm:col-span-4 font-jakarta text-[13px]"
+                  style={{ color: "#919191" }}
+                >
                   {key}
                 </dt>
-                <dd className="sm:col-span-8 font-jakarta text-sm sm:text-base text-foreground leading-relaxed">
+                <dd
+                  className="sm:col-span-8 font-jakarta text-[15px]"
+                  style={{ color: "#606060", lineHeight: 1.7 }}
+                >
                   {value}
                 </dd>
               </React.Fragment>
