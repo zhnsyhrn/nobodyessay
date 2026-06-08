@@ -90,17 +90,6 @@ const Studio = () => {
   return <div className="min-h-screen bg-background">
       <StickyNavbar />
 
-      {/* Filters Section */}
-      <ProjectFilters
-        searchQuery={searchQuery}
-        onSearchChange={setSearchQuery}
-        selectedType={selectedType}
-        onTypeChange={setSelectedType}
-        sortBy={sortBy}
-        onSortChange={setSortBy}
-        projectTypes={projectTypes}
-      />
-
       {/* Projects Grid */}
       <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-12 xl:px-16 md:pt-8">
         <div className="w-full">
