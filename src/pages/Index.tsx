@@ -168,7 +168,7 @@ const Index = () => {
         </div>
       </section>
 
-      <Footer />
+      <Footer showNav={false} />
       <ScrollToTopButton />
     </div>;
 };

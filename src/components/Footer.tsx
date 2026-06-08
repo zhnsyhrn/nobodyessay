@@ -1,7 +1,11 @@
 import { Instagram, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const Footer = () => {
+interface FooterProps {
+  showNav?: boolean;
+}
+
+const Footer = ({ showNav = true }: FooterProps) => {
   return (
     <footer className="border-t border-border bg-background">
       <div className="px-4 sm:px-6 lg:px-12 xl:px-16 py-6 sm:py-8">
@@ -14,7 +18,7 @@ const Footer = () => {
           />
 
           {/* Navigation Links */}
-          <nav className="flex gap-6 sm:gap-8" role="navigation" aria-label="Footer navigation">
+          {showNav && <nav className="flex gap-6 sm:gap-8" role="navigation" aria-label="Footer navigation">
             <Link 
               to="/studio" 
               className="font-display text-sm sm:text-base hover:text-muted-foreground transition-colors"
@@ -39,7 +43,7 @@ const Footer = () => {
             >
               Contact
             </Link>
-          </nav>
+          </nav>}
 
           {/* Social Icons */}
           <div className="flex gap-3" role="navigation" aria-label="Social links">
