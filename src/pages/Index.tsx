@@ -39,7 +39,7 @@ const Index = () => {
   const galleryImages = portfolioImages;
 
   // Preload carousel images intelligently
-  useCarouselPreloader(galleryImages, current, 3);
+  useCarouselPreloader(galleryImages.map(g => g.src), current, 3);
   React.useEffect(() => {
     if (!api) {
       return;
