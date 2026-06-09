@@ -1,4 +1,5 @@
 import byzahinProdulogiCover from "@/assets/byzahin-produlogi-cover.png";
+import websiteUpgradeCover from "@/assets/website-upgrade-cover.png";
 
 export interface Essay {
   slug: string;
@@ -13,6 +14,35 @@ export interface Essay {
 }
 
 export const essays: Essay[] = [
+  {
+    slug: "page-upgrade-in-progress",
+    title: "Pardon the Dust: A Major Upgrade is in Progress",
+    excerpt: "I'm currently working on a significant upgrade to this platform. Things might look a little messy right now, but a completely revamped experience is on the way.",
+    metaDescription: "An announcement regarding the ongoing major upgrade of the byzahin platform.",
+    date: "June 2026",
+    readTime: "2 min read",
+    category: "Announcement",
+    coverImage: websiteUpgradeCover,
+    content: `Hey everyone,
+
+If you've noticed things shifting around, buttons moving, or new sections popping up out of nowhere—don't worry, you're not seeing things. I am currently in the middle of a major overhaul of this entire platform.
+
+Why the upgrade? Because as my work and thoughts evolve, the space that houses them needs to evolve too. I'm tearing down some old walls to build a much more cohesive, dynamic, and engaging experience. I want this site to reflect my current design philosophy and the new directions I'm exploring.
+
+## What to expect
+
+- A cleaner, more refined aesthetic that puts focus on content and interaction.
+- Tighter integrations with AI-native tools (like the new chat search).
+- Better structure for my journals and essays, making it easier to explore different topics.
+
+It's going to be a bit messy while the construction is ongoing. Think of it as an open kitchen—you get to see the raw process, the trial, and the errors before the final dish is served. 
+
+This is my space, my canvas, and I'm treating it exactly like a product in active development. Thanks for bearing with me during the transition. The end result will be worth it.
+
+Stay tuned.
+
+— Zahin`
+  },
   {
     slug: "ai-native-corporate-design",
     title: "Designing corporate websites the AI-native way",

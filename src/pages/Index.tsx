@@ -2,18 +2,20 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Dialog, DialogContent, DialogTrigger, DialogClose } from "@/components/ui/dialog";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Link } from "react-router-dom";
 import { getFeaturedEssays, essays } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
-import { Instagram, Linkedin, X, ArrowRight } from "lucide-react";
+import { Instagram, Linkedin, X, ArrowRight, Mic } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { LazyImage } from "@/components/ui/lazy-image";
 import { useCarouselPreloader } from "@/hooks/useImagePreloader";
 import { projects } from "@/data/projects";
+import { useChat } from "@/contexts/ChatContext";
 
 // Portfolio design images - Your latest design portfolio work
 const portfolioImages = [
@@ -28,6 +30,50 @@ const portfolioImages = [
   { src: "/lovable-uploads/c4f41984-363c-4bd4-92f4-318ddc3e4368.png", title: "AQA Group of Companies", type: "Web Design", slug: "aqa-group-of-companies" },
   { src: "/lovable-uploads/b4c83dca-133b-41b0-9c28-44746d3f650f.png", title: "Coffee Packaging", type: "Branding", slug: "knock-knock-cafe-kuala-terengganu" },
 ];
+
+const TypewriterEffect = ({ text }: { text: string }) => {
+  const [displayedText, setDisplayedText] = React.useState("");
+  const [index, setIndex] = React.useState(0);
+  const [isDeleting, setIsDeleting] = React.useState(false);
+
+  React.useEffect(() => {
+    let timeout: NodeJS.Timeout;
+
+    if (!isDeleting && index < text.length) {
+      // Typing
+      timeout = setTimeout(() => {
+        setDisplayedText((prev) => prev + text.charAt(index));
+        setIndex((prev) => prev + 1);
+      }, 50);
+    } else if (!isDeleting && index === text.length) {
+      // Pause at the end before deleting
+      timeout = setTimeout(() => {
+        setIsDeleting(true);
+      }, 3500); // 3.5 seconds pause
+    } else if (isDeleting && index > 0) {
+      // Deleting
+      timeout = setTimeout(() => {
+        setDisplayedText((prev) => prev.slice(0, -1));
+        setIndex((prev) => prev - 1);
+      }, 30);
+    } else if (isDeleting && index === 0) {
+      // Pause before typing again
+      timeout = setTimeout(() => {
+        setIsDeleting(false);
+      }, 500);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [index, isDeleting, text]);
+
+  return (
+    <>
+      {displayedText}
+      <span className={`${index === text.length || index === 0 ? 'animate-pulse' : ''} ml-1 inline-block w-[3px] h-[0.8em] bg-gradient-to-t from-blue-600 to-cyan-400 align-middle`}></span>
+    </>
+  );
+};
+
 const Index = () => {
   const featuredJournals = getFeaturedEssays();
   const latestAnnouncement = essays.find((e) => e.category === "Announcement");
@@ -36,6 +82,7 @@ const Index = () => {
   const [count, setCount] = React.useState(0);
   const heroRef = React.useRef<HTMLElement>(null);
   const galleryImages = portfolioImages;
+  const { openChat, sendMessage } = useChat();
 
   // Preload carousel images intelligently
   useCarouselPreloader(galleryImages.map(g => g.src), current, 3);
@@ -53,9 +100,6 @@ const Index = () => {
       <div
         style={{
           backgroundColor: "#f7f8fa",
-          backgroundImage:
-            "radial-gradient(circle, #d1d5db 1px, transparent 1px)",
-          backgroundSize: "20px 20px",
         }}
       >
       <StickyNavbar />
@@ -65,26 +109,18 @@ const Index = () => {
         <div className="pt-10 sm:pt-14 px-4 sm:px-6 flex justify-center fade-in">
           <Link
             to={`/journals/${latestAnnouncement.slug}`}
-            className="group inline-flex items-center gap-2 rounded-full border border-border/60 bg-white pl-1.5 pr-3 py-1.5 hover:border-foreground/30 transition-colors max-w-full"
+            className="group relative inline-flex items-center justify-center gap-2.5 rounded-full border border-slate-200/50 bg-white/60 backdrop-blur-md px-4 py-2 transition-all hover:bg-white/90 hover:shadow-sm max-w-full"
           >
-            <span
-              className="font-typewriter uppercase text-[10px] rounded-full px-2 py-0.5 animate-soft-pulse"
-              style={{
-                color: "#1e40af",
-                backgroundColor: "#dbeafe",
-                border: "1px solid #bfdbfe",
-                letterSpacing: "0.08em",
-              }}
-            >
-              New
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
             </span>
-            <span className="font-jakarta text-[13px] text-foreground truncate max-w-[220px] sm:max-w-none">
+            <span className="font-jakarta text-[12px] sm:text-[13px] text-slate-700 font-medium truncate">
               {latestAnnouncement.title}
             </span>
             <ArrowRight
               size={14}
-              className="shrink-0 transition-transform group-hover:translate-x-0.5"
-              style={{ color: "#606060" }}
+              className="shrink-0 text-slate-400 transition-transform group-hover:translate-x-1 group-hover:text-slate-700"
             />
           </Link>
         </div>
@@ -92,25 +128,61 @@ const Index = () => {
 
       {/* Hero Section */}
       <section ref={heroRef} className="relative py-8 sm:py-12 lg:py-20 px-4 sm:px-6 fade-in pb-4 sm:pb-6">
-        <div className="max-w-6xl mx-auto text-left lg:text-center relative">
-          <h2 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">Entrepreneurship, Product Design & Branding.</h2>
+        <div className="max-w-6xl mx-auto text-left lg:text-center relative z-10">
+          <h2 className="font-display text-[30px] sm:text-[36px] font-medium mb-2 sm:mb-3 tracking-tight leading-[36px] sm:leading-[40px] min-h-[80px] sm:min-h-[40px]"><TypewriterEffect text="Entrepreneurship, Product Design & Branding." /></h2>
           <p style={{
           color: '#606060'
-        }} className="font-jakarta text-lg sm:text-lg max-w-2xl lg:mx-auto leading-[27px] sm:leading-relaxed px-1 mb-6 sm:mb-8 sm:px-0">5 years of experience within FinTech, InsurTech, and B2B SaaS ecosystem.</p>
+        }} className="font-jakarta text-[14px] sm:text-[16px] max-w-2xl lg:mx-auto leading-[25px] sm:leading-[29px] px-1 mb-6 sm:mb-8 sm:px-0">5 years of experience within FinTech, InsurTech, and B2B SaaS ecosystem.</p>
           
-          {/* Navigation Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 px-1 sm:px-2 lg:justify-center">
-            <Link to="/studio" className="w-full sm:w-auto">
-              <div className="relative rounded-full">
-                <GlowingEffect spread={40} glow={true} disabled={false} proximity={80} inactiveZone={0.3} />
-                <Button className="font-display min-h-[48px] px-6 w-full touch-manipulation shadow-lg hover:shadow-xl hover:shadow-primary/25 transition-all duration-300">View All Works</Button>
+          {/* AI Search Bar */}
+          <div className="flex flex-col items-center px-1 sm:px-2 mt-8 lg:mt-12 relative z-10 group">
+            <div className="relative w-full max-w-2xl">
+              {/* Glowing Aura */}
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-300 rounded-full blur-md opacity-20 group-hover:opacity-50 transition duration-1000 group-hover:duration-300 animate-gradient bg-[length:200%_auto]"></div>
+              
+              <div className="relative flex items-center w-full h-full bg-white rounded-full p-2 pl-6 pr-3 shadow-md">
+                <input 
+                  type="text" 
+                  placeholder="What are you looking for?" 
+                  className="flex-1 bg-transparent border-none focus:outline-none focus:ring-0 text-foreground font-jakarta text-[15px] placeholder:text-muted-foreground w-full outline-none"
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' && e.currentTarget.value.trim()) {
+                      const text = e.currentTarget.value.trim();
+                      e.currentTarget.value = ''; // clear input
+                      openChat();
+                      sendMessage(text);
+                    }
+                  }}
+                />
+                
+                <div className="flex items-center gap-1 sm:gap-2 pl-2 sm:pl-4">
+                  <button className="p-2 sm:p-2.5 rounded-full hover:bg-slate-100 text-foreground transition-colors group/btn shrink-0">
+                    <Mic size={18} className="group-hover/btn:text-primary transition-colors" />
+                  </button>
+                </div>
               </div>
-            </Link>
-            <Link to="/journals" className="w-full sm:w-auto">
-              <Button variant="light" className="font-display min-h-[48px] px-6 w-full touch-manipulation">
-                Read My Thoughts
-              </Button>
-            </Link>
+            </div>
+
+            {/* Search Suggestions */}
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mt-4 sm:mt-5">
+                {[
+                  { full: "Who is Zahin?", short: "Who is Zahin?" },
+                  { full: "Show me your recent works", short: "Recent works" },
+                  { full: "What are your skills?", short: "Skills" }
+                ].map((suggestion, idx) => (
+                  <button 
+                    key={idx}
+                    onClick={() => {
+                      openChat();
+                      sendMessage(suggestion.full);
+                    }}
+                    className="px-3 sm:px-4 py-1.5 rounded-full bg-white/50 hover:bg-white border border-border/40 hover:border-border/80 text-xs sm:text-[13px] font-medium text-slate-500 hover:text-slate-800 transition-all shadow-sm hover:shadow-md"
+                  >
+                    <span className="sm:hidden">{suggestion.short}</span>
+                    <span className="hidden sm:inline">{suggestion.full}</span>
+                  </button>
+                ))}
+              </div>
           </div>
         </div>
       </section>

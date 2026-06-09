@@ -3,10 +3,7 @@ import { X, Send } from 'lucide-react';
 import { useChat } from '../contexts/ChatContext';
 
 export default function ChatOverlay() {
-  const { isOpen, closeChat } = useChat();
-  const [messages, setMessages] = useState<{ text: string; isUser: boolean }[]>([
-    { text: "Hi! I'm Zahin's AI assistant. How can I help you today?", isUser: false },
-  ]);
+  const { isOpen, closeChat, messages, sendMessage } = useChat();
   const [inputValue, setInputValue] = useState('');
 
   if (!isOpen) return null;
@@ -15,17 +12,8 @@ export default function ChatOverlay() {
     e.preventDefault();
     if (!inputValue.trim()) return;
 
-    // Add user message
-    setMessages(prev => [...prev, { text: inputValue, isUser: true }]);
+    sendMessage(inputValue);
     setInputValue('');
-
-    // Simulate AI response
-    setTimeout(() => {
-      setMessages(prev => [
-        ...prev,
-        { text: "Thanks for reaching out! This is a placeholder response. Zahin is currently working on adding more functionality here.", isUser: false }
-      ]);
-    }, 1000);
   };
 
   return (
