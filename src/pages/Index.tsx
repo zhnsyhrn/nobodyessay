@@ -142,7 +142,7 @@ const Index = () => {
               {/* Glowing Aura */}
               <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-300 rounded-full blur-md opacity-20 group-hover:opacity-50 transition duration-1000 group-hover:duration-300 animate-gradient bg-[length:200%_auto]"></div>
               
-              <div className="relative flex items-center w-full h-full bg-white rounded-full p-2 pl-6 pr-3 shadow-md">
+              <div className="relative flex items-center w-full h-full bg-white rounded-full p-2 pl-6 pr-3 shadow-sm">
                 <input 
                   type="text" 
                   placeholder={t('hero.search_placeholder')}
