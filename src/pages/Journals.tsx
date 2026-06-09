@@ -30,7 +30,7 @@ const Journals = () => {
     <div className="min-h-screen bg-background">
       <StickyNavbar />
 
-      <section className="py-12 sm:py-16 px-4 sm:px-6 fade-in">
+      <section className="py-12 sm:py-16 px-4 sm:px-6">
         <div className="max-w-3xl mx-auto">
           {/* Heading */}
           <header>
