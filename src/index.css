@@ -199,4 +199,17 @@ All colors MUST be HSL.
   .animate-soft-pulse {
     animation: softPulse 2.6s ease-in-out infinite;
   }
+
+  @keyframes floatMascot {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  .animate-float-mascot {
+    animation: floatMascot 4s ease-in-out infinite;
+  }
 }

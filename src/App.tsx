@@ -17,6 +17,9 @@ import ProjectDetail from "./pages/ProjectDetail";
 import Bcreatives from "./pages/Bcreatives";
 import SenangrekaVenture from "./pages/SenangrekaVenture";
 import NotFound from "./pages/NotFound";
+import { ChatProvider } from "./contexts/ChatContext";
+import ChatWidget from "./components/ChatWidget";
+import ChatOverlay from "./components/ChatOverlay";
 
 const queryClient = new QueryClient();
 
@@ -26,24 +29,28 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
-          <ScrollToTop />
-          <FigjamCursor label="You" color="#ec4899" />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/consultation" element={<Consultation />} />
-            <Route path="/journals" element={<Journals />} />
-            <Route path="/studio" element={<Studio />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/bcreatives" element={<Bcreatives />} />
-            <Route path="/senangreka-venture" element={<SenangrekaVenture />} />
-            <Route path="/journals/:slug" element={<Post />} />
-            <Route path="/projects/:slug" element={<ProjectDetail />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
+        <ChatProvider>
+          <BrowserRouter>
+            <ScrollToTop />
+            <FigjamCursor label="You" color="#ec4899" />
+            <ChatWidget />
+            <ChatOverlay />
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/consultation" element={<Consultation />} />
+              <Route path="/journals" element={<Journals />} />
+              <Route path="/studio" element={<Studio />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/bcreatives" element={<Bcreatives />} />
+              <Route path="/senangreka-venture" element={<SenangrekaVenture />} />
+              <Route path="/journals/:slug" element={<Post />} />
+              <Route path="/projects/:slug" element={<ProjectDetail />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </ChatProvider>
       </TooltipProvider>
     </HelmetProvider>
   </QueryClientProvider>
