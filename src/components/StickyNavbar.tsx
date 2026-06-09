@@ -93,13 +93,13 @@ const StickyNavbar = () => {
               <DropdownMenuContent align="end" className="min-w-[120px] border-border/50 bg-white/90 backdrop-blur-xl shadow-lg rounded-xl mt-2 p-1">
                 <DropdownMenuItem 
                   onClick={() => i18n.changeLanguage('en')}
-                  className={`font-display text-sm px-3 py-2 cursor-pointer rounded-lg transition-colors ${i18n.language === 'en' ? 'text-blue-500 bg-blue-50/50 focus:bg-blue-50 focus:text-blue-600' : 'hover:bg-gray-50 focus:bg-gray-50'}`}
+                  className={`font-display text-sm px-3 py-2 cursor-pointer rounded-lg transition-colors ${i18n.language === 'en' ? 'text-blue-600 bg-blue-50 focus:bg-blue-100 focus:text-blue-700 font-medium' : 'text-slate-700 hover:bg-slate-100 hover:text-slate-900 focus:bg-slate-100 focus:text-slate-900'}`}
                 >
                   English
                 </DropdownMenuItem>
                 <DropdownMenuItem 
                   onClick={() => i18n.changeLanguage('ms')}
-                  className={`font-display text-sm px-3 py-2 cursor-pointer rounded-lg transition-colors ${i18n.language === 'ms' ? 'text-blue-500 bg-blue-50/50 focus:bg-blue-50 focus:text-blue-600' : 'hover:bg-gray-50 focus:bg-gray-50'}`}
+                  className={`font-display text-sm px-3 py-2 cursor-pointer rounded-lg transition-colors ${i18n.language === 'ms' ? 'text-blue-600 bg-blue-50 focus:bg-blue-100 focus:text-blue-700 font-medium' : 'text-slate-700 hover:bg-slate-100 hover:text-slate-900 focus:bg-slate-100 focus:text-slate-900'}`}
                 >
                   Bahasa Malaysia
                 </DropdownMenuItem>
