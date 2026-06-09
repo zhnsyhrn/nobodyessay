@@ -1,0 +1,48 @@
+{
+  "nav": {
+    "journals": "Jurnal",
+    "projects": "Projek",
+    "about": "Tentang",
+    "contact": "Hubungi Saya",
+    "contact_mobile": "Hubungi"
+  },
+  "hero": {
+    "subtitle": "5 tahun pengalaman dalam ekosistem FinTech, InsurTech, dan B2B SaaS.",
+    "search_placeholder": "Apa yang anda cari?"
+  },
+  "search_suggestions": {
+    "who_is_zahin": {
+      "full": "Siapakah Zahin?",
+      "short": "Siapa Zahin?"
+    },
+    "recent_works": {
+      "full": "Tunjukkan karya terbaru anda",
+      "short": "Karya terbaru"
+    },
+    "skills": {
+      "full": "Apakah kemahiran anda?",
+      "short": "Kemahiran"
+    }
+  },
+  "about": {
+    "title": "Bengkel & Acara",
+    "description": "Saya kadangkala berucap di acara, bengkel, dan perundingan, serta pernah menyertai program pemecut syarikat permulaan.",
+    "clients_title": "Mereka yang pernah bekerjasama dengan saya",
+    "projects_title": "Projek yang sedang saya bina",
+    "active": "Aktif",
+    "inactive": "Tidak Aktif"
+  },
+  "journals": {
+    "title": "Jurnal",
+    "description": "Catatan mengenai kraf, proses, industri, dan segalanya."
+  },
+  "footer": {
+    "back_to_top": "Kembali ke atas",
+    "rights": "Hak cipta terpelihara.",
+    "based_in": "Berpusat di Kuala Lumpur, MY."
+  },
+  "coming_soon": {
+    "title": "Projek ini akan datang!",
+    "description": "Sila kembali kemudian untuk butiran lanjut."
+  }
+}

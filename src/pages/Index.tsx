@@ -8,14 +8,15 @@ import { getFeaturedEssays, essays } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
-import { Instagram, Linkedin, X, ArrowRight, Mic } from "lucide-react";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Instagram, Linkedin, X, ArrowRight, Mic, Search } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { LazyImage } from "@/components/ui/lazy-image";
 import { useCarouselPreloader } from "@/hooks/useImagePreloader";
 import { projects } from "@/data/projects";
 import { useChat } from "@/contexts/ChatContext";
+import { useTranslation } from "react-i18next";
 
 // Portfolio design images - Your latest design portfolio work
 const portfolioImages = [
@@ -75,9 +76,10 @@ const TypewriterEffect = ({ text }: { text: string }) => {
 };
 
 const Index = () => {
+  const { t } = useTranslation();
   const featuredJournals = getFeaturedEssays();
   const latestAnnouncement = essays.find((e) => e.category === "Announcement");
-  const [api, setApi] = React.useState<any>();
+  const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
   const [count, setCount] = React.useState(0);
   const heroRef = React.useRef<HTMLElement>(null);
@@ -132,7 +134,7 @@ const Index = () => {
           <h2 className="font-display text-[30px] sm:text-[36px] font-medium mb-2 sm:mb-3 tracking-tight leading-[36px] sm:leading-[40px] min-h-[80px] sm:min-h-[40px]"><TypewriterEffect text="Entrepreneurship, Product Design & Branding." /></h2>
           <p style={{
           color: '#606060'
-        }} className="font-jakarta text-[14px] sm:text-[16px] max-w-2xl lg:mx-auto leading-[25px] sm:leading-[29px] px-1 mb-6 sm:mb-8 sm:px-0">5 years of experience within FinTech, InsurTech, and B2B SaaS ecosystem.</p>
+        }} className="font-jakarta text-[14px] sm:text-[16px] max-w-2xl lg:mx-auto leading-[25px] sm:leading-[29px] px-1 mb-6 sm:mb-8 sm:px-0">{t('hero.subtitle')}</p>
           
           {/* AI Search Bar */}
           <div className="flex flex-col items-center px-1 sm:px-2 mt-8 lg:mt-12 relative z-10 group">
@@ -140,11 +142,12 @@ const Index = () => {
               {/* Glowing Aura */}
               <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-300 rounded-full blur-md opacity-20 group-hover:opacity-50 transition duration-1000 group-hover:duration-300 animate-gradient bg-[length:200%_auto]"></div>
               
-              <div className="relative flex items-center w-full h-full bg-white rounded-full p-2 pl-6 pr-3 shadow-md">
+              <div className="relative flex items-center w-full max-w-2xl bg-white/70 backdrop-blur-md border border-border/50 rounded-full shadow-sm px-4 py-2.5 sm:py-3 mx-auto transition-all duration-300 hover:shadow-md focus-within:shadow-md focus-within:border-border/80 focus-within:bg-white/90">
+                <Search size={18} className="text-slate-400 shrink-0 ml-1 mr-3" />
                 <input 
                   type="text" 
-                  placeholder="What are you looking for?" 
-                  className="flex-1 bg-transparent border-none focus:outline-none focus:ring-0 text-foreground font-jakarta text-[15px] placeholder:text-muted-foreground w-full outline-none"
+                  placeholder={t('hero.search_placeholder')}
+                  className="flex-1 bg-transparent border-none focus:outline-none focus:ring-0 text-foreground font-jakarta text-[15px] placeholder:text-slate-400 w-full outline-none"
                   onKeyDown={(e) => {
                     if (e.key === 'Enter' && e.currentTarget.value.trim()) {
                       const text = e.currentTarget.value.trim();
@@ -166,9 +169,9 @@ const Index = () => {
             {/* Search Suggestions */}
               <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mt-4 sm:mt-5">
                 {[
-                  { full: "Who is Zahin?", short: "Who is Zahin?" },
-                  { full: "Show me your recent works", short: "Recent works" },
-                  { full: "What are your skills?", short: "Skills" }
+                  { full: t('search_suggestions.who_is_zahin.full'), short: t('search_suggestions.who_is_zahin.short') },
+                  { full: t('search_suggestions.recent_works.full'), short: t('search_suggestions.recent_works.short') },
+                  { full: t('search_suggestions.skills.full'), short: t('search_suggestions.skills.short') }
                 ].map((suggestion, idx) => (
                   <button 
                     key={idx}

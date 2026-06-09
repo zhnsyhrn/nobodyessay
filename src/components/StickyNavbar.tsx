@@ -1,12 +1,19 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 const StickyNavbar = () => {
+  const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const navRef = useRef<HTMLElement | null>(null);
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'en' ? 'ms' : 'en';
+    i18n.changeLanguage(newLang);
+  };
 
   // Set CSS var for navbar height to align sticky filters
   useEffect(() => {
@@ -60,14 +67,24 @@ const StickyNavbar = () => {
           {/* Desktop Navigation - absolutely centered */}
           <div className="hidden md:flex items-center space-x-7 lg:space-x-9 absolute left-1/2 -translate-x-1/2">
             <Link to="/journals" className={`font-display text-sm text-foreground transition-colors ${isActiveRoute('/journals') ? 'font-medium underline underline-offset-[6px] decoration-2 decoration-foreground' : 'hover:text-muted-foreground'}`}>
-              Journals
+              {t('nav.journals')}
             </Link>
-            <Link to="/studio" className={`font-display text-sm text-foreground transition-colors ${isActiveRoute('/studio') ? 'font-medium underline underline-offset-[6px] decoration-2 decoration-foreground' : 'hover:text-muted-foreground'}`}>Projects</Link>
-            <Link to="/about" className={`font-display text-sm text-foreground transition-colors ${isActiveRoute('/about') ? 'font-medium underline underline-offset-[6px] decoration-2 decoration-foreground' : 'hover:text-muted-foreground'}`}>About</Link>
+            <Link to="/studio" className={`font-display text-sm text-foreground transition-colors ${isActiveRoute('/studio') ? 'font-medium underline underline-offset-[6px] decoration-2 decoration-foreground' : 'hover:text-muted-foreground'}`}>
+              {t('nav.projects')}
+            </Link>
+            <Link to="/about" className={`font-display text-sm text-foreground transition-colors ${isActiveRoute('/about') ? 'font-medium underline underline-offset-[6px] decoration-2 decoration-foreground' : 'hover:text-muted-foreground'}`}>
+              {t('nav.about')}
+            </Link>
           </div>
 
-          {/* Right side - Contact pill (desktop) + Hamburger (mobile) */}
+          {/* Right side - Contact pill (desktop) + Language Toggle + Hamburger (mobile) */}
           <div className="flex items-center gap-2 z-10">
+            <button
+              onClick={toggleLanguage}
+              className="font-display text-xs sm:text-sm font-medium px-2 py-1 hover:text-muted-foreground transition-colors"
+            >
+              {i18n.language === 'en' ? 'EN' : 'MS'}
+            </button>
             <Link
               to="/contact"
               className={`hidden md:inline-flex items-center rounded-full border px-5 py-2 font-display text-sm transition-colors ${
@@ -76,7 +93,7 @@ const StickyNavbar = () => {
                   : 'border-foreground/80 text-foreground hover:bg-foreground hover:text-background'
               }`}
             >
-              Contact Me
+              {t('nav.contact')}
             </Link>
             <Button variant="ghost" size="sm" onClick={toggleMenu} className="md:hidden p-2 h-10 w-10 touch-manipulation rounded-full" aria-label="Toggle menu">
               {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -113,25 +130,25 @@ const StickyNavbar = () => {
         }}>
               <div className="flex flex-col w-full max-w-sm">
                 <Link to="/journals" onClick={closeMenu} className={`font-display text-3xl transition-colors py-8 text-center flex items-center justify-center text-black hover:text-gray-600 ${isActiveRoute('/journals') ? 'font-medium' : ''}`}>
-                  Journals
+                  {t('nav.journals')}
                 </Link>
                 
                 <Separator className="bg-gray-200" />
                 
                 <Link to="/studio" onClick={closeMenu} className={`font-display text-3xl transition-colors py-8 text-center flex items-center justify-center text-black hover:text-gray-600 ${isActiveRoute('/studio') ? 'font-medium' : ''}`}>
-                  Studio
+                  {t('nav.projects')}
                 </Link>
                 
                 <Separator className="bg-gray-200" />
                 
                 <Link to="/about" onClick={closeMenu} className={`font-display text-3xl transition-colors py-8 text-center flex items-center justify-center text-black hover:text-gray-600 ${isActiveRoute('/about') ? 'font-medium' : ''}`}>
-                  About
+                  {t('nav.about')}
                 </Link>
                 
                 <Separator className="bg-gray-200" />
                 
                 <Link to="/contact" onClick={closeMenu} className={`font-display text-3xl transition-colors py-8 text-center flex items-center justify-center text-black hover:text-gray-600 ${isActiveRoute('/contact') ? 'font-medium' : ''}`}>
-                  Contact
+                  {t('nav.contact_mobile')}
                 </Link>
               </div>
             </div>

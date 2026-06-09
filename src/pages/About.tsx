@@ -3,8 +3,10 @@ import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
 import { ExternalLink, Mic, Briefcase, Rocket } from "lucide-react";
 import { LazyImage } from "@/components/ui/lazy-image";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
   const clients = [
     { name: "Grain Singapore", logo: "/lovable-uploads/3c96f375-d885-4200-93e7-d6c296d99beb.png", url: "https://grain.com.sg/" },
     { name: "Great Eastern Takaful Berhad", logo: "/lovable-uploads/27f41456-e5d7-44d0-b7c9-cd34256d208c.png", url: "https://www.greateasterntakaful.com/en/personal-takaful.html" },
@@ -43,10 +45,10 @@ const About = () => {
       <section className="pt-20 sm:pt-28 pb-16 sm:pb-24 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           <h2 className="font-jakarta text-3xl sm:text-4xl font-semibold text-foreground mb-3 tracking-tight">
-            Workshops & Events
+            {t('about.title')}
           </h2>
           <p className="font-jakarta text-base sm:text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed">
-            I occasionally speak at events, workshops, and consultations, and have joined startup accelerators as a participant.
+            {t('about.description')}
           </p>
 
           {/* Photo mosaic */}
@@ -98,7 +100,7 @@ const About = () => {
             {/* Clients — 3 cols */}
             <div className="lg:col-span-3">
               <h2 className="font-jakarta text-3xl sm:text-4xl font-semibold text-foreground mb-8 tracking-tight">
-                People I've worked with
+                {t('about.clients_title')}
               </h2>
 
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -126,7 +128,7 @@ const About = () => {
             {/* Side projects — 2 cols */}
             <div className="lg:col-span-2">
               <h2 className="font-jakarta text-3xl sm:text-4xl font-semibold text-foreground mb-8 tracking-tight">
-                Things I'm building
+                {t('about.projects_title')}
               </h2>
 
               <div className="space-y-3">
@@ -160,7 +162,7 @@ const About = () => {
                             : "bg-secondary text-muted-foreground"
                         }`}
                       >
-                        {project.active ? "Active" : "Inactive"}
+                        {project.active ? t('about.active') : t('about.inactive')}
                       </span>
                     </div>
                     <p className="font-jakarta text-sm text-muted-foreground">

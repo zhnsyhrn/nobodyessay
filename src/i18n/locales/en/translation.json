@@ -1,0 +1,48 @@
+{
+  "nav": {
+    "journals": "Journals",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact Me",
+    "contact_mobile": "Contact"
+  },
+  "hero": {
+    "subtitle": "5 years of experience within FinTech, InsurTech, and B2B SaaS ecosystem.",
+    "search_placeholder": "What are you looking for?"
+  },
+  "search_suggestions": {
+    "who_is_zahin": {
+      "full": "Who is Zahin?",
+      "short": "Who is Zahin?"
+    },
+    "recent_works": {
+      "full": "Show me your recent works",
+      "short": "Recent works"
+    },
+    "skills": {
+      "full": "What are your skills?",
+      "short": "Skills"
+    }
+  },
+  "about": {
+    "title": "Workshops & Events",
+    "description": "I occasionally speak at events, workshops, and consultations, and have joined startup accelerators as a participant.",
+    "clients_title": "People I've worked with",
+    "projects_title": "Things I'm building",
+    "active": "Active",
+    "inactive": "Inactive"
+  },
+  "journals": {
+    "title": "Journals",
+    "description": "Notes on craft, process, industry, and the in-between."
+  },
+  "footer": {
+    "back_to_top": "Back to top",
+    "rights": "All rights reserved.",
+    "based_in": "Based in Kuala Lumpur, MY."
+  },
+  "coming_soon": {
+    "title": "This project is coming soon!",
+    "description": "Check back later for more details."
+  }
+}

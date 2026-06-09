@@ -5,6 +5,7 @@ import { essays } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
+import { useTranslation } from "react-i18next";
 
 const formatMonthYear = (dateStr: string) => {
   const d = new Date(dateStr);
@@ -13,6 +14,7 @@ const formatMonthYear = (dateStr: string) => {
 };
 
 const Journals = () => {
+  const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState<string>("All");
 
   const categories = useMemo(() => {
@@ -35,10 +37,10 @@ const Journals = () => {
           {/* Heading */}
           <header>
             <h1 className="font-display text-3xl sm:text-4xl font-medium tracking-tight text-foreground">
-              Journals
+              {t('journals.title')}
             </h1>
             <p className="font-jakarta text-base mt-3" style={{ color: "#606060" }}>
-              Notes on craft, process, industry, and the in-between.
+              {t('journals.description')}
             </p>
           </header>
 
