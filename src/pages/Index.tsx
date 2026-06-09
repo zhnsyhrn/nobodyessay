@@ -96,7 +96,7 @@ const Index = () => {
           <h2 className="font-display text-4xl sm:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight">Entrepreneurship, Product Design & Branding.</h2>
           <p style={{
           color: '#606060'
-        }} className="font-jakarta text-lg sm:text-lg max-w-2xl lg:mx-auto leading-[27px] sm:leading-relaxed px-1 mb-6 sm:mb-8 sm:px-0">I'm a multidisciplinary designer specialist in product design. 5 years of experience within FinTech, InsurTech, and B2B SaaS ecosystem. Currently, exploring AI-tech stacks to build functional prototype.</p>
+        }} className="font-jakarta text-lg sm:text-lg max-w-2xl lg:mx-auto leading-[27px] sm:leading-relaxed px-1 mb-6 sm:mb-8 sm:px-0">5 years of experience within FinTech, InsurTech, and B2B SaaS ecosystem.</p>
           
           {/* Navigation Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 px-1 sm:px-2 lg:justify-center">
