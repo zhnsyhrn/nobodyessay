@@ -40,7 +40,7 @@ const About = () => {
       <StickyNavbar />
 
       {/* Speaking & Participation — Photo-forward hero */}
-      <section className="pt-20 sm:pt-28 pb-16 sm:pb-24 px-4 sm:px-6">
+      <section className="pt-20 sm:pt-28 pb-16 sm:pb-24 px-4 sm:px-6 fade-in">
         <div className="max-w-5xl mx-auto">
           <h2 className="font-jakarta text-3xl sm:text-4xl font-semibold text-foreground mb-3 tracking-tight">
             Workshops & Events
