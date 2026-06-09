@@ -1,9 +1,15 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 const StickyNavbar = () => {
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -79,12 +85,26 @@ const StickyNavbar = () => {
 
           {/* Right side - Contact pill (desktop) + Language Toggle + Hamburger (mobile) */}
           <div className="flex items-center gap-2 z-10">
-            <button
-              onClick={toggleLanguage}
-              className="font-display text-xs sm:text-sm font-medium px-2 py-1 hover:text-muted-foreground transition-colors"
-            >
-              {i18n.language === 'en' ? 'EN' : 'MS'}
-            </button>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="font-display text-xs sm:text-sm font-medium px-2 py-1 flex items-center gap-1 hover:text-muted-foreground transition-colors focus:outline-none data-[state=open]:text-muted-foreground">
+                {i18n.language === 'en' ? 'EN' : 'MS'}
+                <ChevronDown size={14} className="opacity-70" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="min-w-[120px] border-border/50 bg-white/90 backdrop-blur-xl shadow-lg rounded-xl mt-2 p-1">
+                <DropdownMenuItem 
+                  onClick={() => i18n.changeLanguage('en')}
+                  className={`font-display text-sm px-3 py-2 cursor-pointer rounded-lg transition-colors ${i18n.language === 'en' ? 'text-blue-500 bg-blue-50/50 focus:bg-blue-50 focus:text-blue-600' : 'hover:bg-gray-50 focus:bg-gray-50'}`}
+                >
+                  English
+                </DropdownMenuItem>
+                <DropdownMenuItem 
+                  onClick={() => i18n.changeLanguage('ms')}
+                  className={`font-display text-sm px-3 py-2 cursor-pointer rounded-lg transition-colors ${i18n.language === 'ms' ? 'text-blue-500 bg-blue-50/50 focus:bg-blue-50 focus:text-blue-600' : 'hover:bg-gray-50 focus:bg-gray-50'}`}
+                >
+                  Bahasa Malaysia
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <Link
               to="/contact"
               className={`hidden md:inline-flex items-center rounded-full border px-5 py-2 font-display text-sm transition-colors ${
