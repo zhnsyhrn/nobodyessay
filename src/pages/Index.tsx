@@ -142,7 +142,7 @@ const Index = () => {
               {/* Subtle Glowing Aura */}
               <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-200 via-cyan-200 to-blue-200 rounded-full blur-sm opacity-20 group-hover:opacity-30 transition duration-1000 group-hover:duration-300 animate-gradient bg-[length:200%_auto]"></div>
               
-              <div className="relative flex items-center w-full max-w-2xl bg-white/70 backdrop-blur-md border border-border/50 rounded-full shadow-sm px-4 py-2.5 sm:py-3 mx-auto transition-all duration-300 hover:shadow-md focus-within:shadow-md focus-within:border-border/80 focus-within:bg-white/90">
+              <div className="relative flex items-center w-full max-w-2xl bg-white border border-border/50 rounded-full shadow-sm px-4 py-2.5 sm:py-3 mx-auto transition-all duration-300 hover:shadow-md focus-within:shadow-md focus-within:border-border/80 focus-within:bg-white">
                 <Search size={18} className="text-slate-400 shrink-0 ml-1 mr-3" />
                 <input 
                   type="text" 
