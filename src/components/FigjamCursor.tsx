@@ -65,15 +65,9 @@ const FigjamCursor = ({ targetRef, label = "You", color = "#ec4899" }: FigjamCur
     >
       {/* Arrow */}
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none" style={{ filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.15))" }}>
-        <defs>
-          <linearGradient id="cursorGradient" x1="0%" y1="100%" x2="0%" y2="0%">
-            <stop offset="0%" stopColor="#2563eb" />
-            <stop offset="100%" stopColor="#22d3ee" />
-          </linearGradient>
-        </defs>
         <path
           d="M3 2L3 17L7.5 13L10.2 18.8L12.6 17.7L9.9 11.9L16 11.5L3 2Z"
-          fill="url(#cursorGradient)"
+          fill="#2563eb"
           stroke="white"
           strokeWidth="1.2"
           strokeLinejoin="round"
@@ -81,7 +75,7 @@ const FigjamCursor = ({ targetRef, label = "You", color = "#ec4899" }: FigjamCur
       </svg>
       {/* Label */}
       <div
-        className="absolute font-jakarta text-[11px] font-medium text-white px-2 py-0.5 rounded-full whitespace-nowrap bg-gradient-to-t from-blue-600 to-cyan-400"
+        className="absolute font-jakarta text-[11px] font-medium text-white px-2 py-0.5 rounded-full whitespace-nowrap bg-blue-600"
         style={{
           left: 18,
           top: 18,
