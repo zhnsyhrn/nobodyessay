@@ -6,6 +6,7 @@ import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 
 const formatMonthYear = (dateStr: string) => {
   const d = new Date(dateStr);
@@ -38,15 +39,20 @@ const Journals = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>UX & Design Journals | Thoughts on UI/UX, Branding & DesignOps</title>
+        <meta name="description" content="Read articles, announcements, and thoughts on UI/UX design, branding strategies, and DesignOps by Zahin Syahiran." />
+      </Helmet>
+      <h1 className="sr-only">UX Design and Branding Journals</h1>
       <StickyNavbar />
 
       <section className="py-12 sm:py-16 px-4 sm:px-6">
         <div className="max-w-3xl mx-auto">
           {/* Heading */}
           <header>
-            <h1 className="font-display text-3xl sm:text-4xl font-medium tracking-tight text-foreground">
+            <h2 className="font-display text-3xl sm:text-4xl font-medium tracking-tight text-foreground">
               {t('journals.title')}
-            </h1>
+            </h2>
             <p className="font-jakarta text-base mt-3" style={{ color: 'var(--body-text)' }}>
               {t('journals.description')}
             </p>

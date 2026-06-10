@@ -12,6 +12,7 @@ import { ArrowRight } from "lucide-react";
 import { LazyImage } from "@/components/ui/lazy-image";
 import { projects } from "@/data/projects";
 import { ProjectFilters } from "@/components/ProjectFilters";
+import { Helmet } from "react-helmet-async";
 
 // Sample project images - you can replace these with actual project images
 import galleryImage1 from "@/assets/gallery-01.jpg";
@@ -88,6 +89,11 @@ const Studio = () => {
     });
   }, [api]);
   return <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Portfolio | UI/UX & Branding Design Projects by Zahin Syahiran</title>
+        <meta name="description" content="Explore my latest UI/UX design, app design, and branding projects. See how I solve complex business problems through intuitive design." />
+      </Helmet>
+      <h1 className="sr-only">UI/UX and Branding Design Portfolio</h1>
       <StickyNavbar />
 
       {/* Projects Grid */}

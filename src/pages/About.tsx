@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { ExternalLink, Mic, Briefcase, Rocket } from "lucide-react";
 import { LazyImage } from "@/components/ui/lazy-image";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   const { t } = useTranslation();
@@ -39,14 +40,18 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>About Zahin Syahiran | UI/UX Design & Branding Portfolio</title>
+        <meta name="description" content="Learn about Zahin Syahiran's experience working with top tech companies, startups, and enterprises to deliver high-converting UX/UI and brand identities." />
+      </Helmet>
       <StickyNavbar />
 
       {/* Speaking & Participation — Photo-forward hero */}
       <section className="pt-20 sm:pt-28 pb-16 sm:pb-24 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="font-jakarta text-3xl sm:text-4xl font-semibold text-foreground mb-3 tracking-tight">
+          <h1 className="font-jakarta text-3xl sm:text-4xl font-semibold text-foreground mb-3 tracking-tight">
             {t('about.title')}
-          </h2>
+          </h1>
           <p className="font-jakarta text-base sm:text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed">
             {t('about.description')}
           </p>

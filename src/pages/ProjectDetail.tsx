@@ -7,6 +7,7 @@ import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
 import QuoteBlock from "@/components/QuoteBlock";
 import { ExternalLink, ArrowLeft, ArrowRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 // Import gallery images
 import galleryImage1 from "@/assets/gallery-01.jpg";
@@ -474,6 +475,12 @@ const ProjectDetail = () => {
       </div>;
   }
   return <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>{`${project.title} | UI/UX Design Case Study`}</title>
+        <meta name="description" content={project.overview.substring(0, 160)} />
+        <meta property="og:title" content={`${project.title} | UI/UX Design Case Study`} />
+        <meta property="og:description" content={project.overview.substring(0, 160)} />
+      </Helmet>
       <StickyNavbar />
       
       {/* Main Content */}

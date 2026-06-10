@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Dialog, DialogContent, DialogTrigger, DialogClose } from "@/components/ui/dialog";
@@ -99,7 +100,16 @@ const Index = () => {
     });
   }, [api]);
   return <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Zahin Syahiran | Freelance UI/UX Designer & Brand Strategist</title>
+        <meta name="description" content="Hire Zahin Syahiran, a UI/UX designer and branding expert specializing in enterprise software, SaaS, and premium tech company profiles." />
+        <meta property="og:title" content="Zahin Syahiran | Freelance UI/UX Designer & Brand Strategist" />
+        <meta property="og:description" content="Hire Zahin Syahiran, a UI/UX designer and branding expert specializing in enterprise software, SaaS, and premium tech company profiles." />
+        <meta name="twitter:title" content="Zahin Syahiran | Freelance UI/UX Designer & Brand Strategist" />
+        <meta name="twitter:description" content="Hire Zahin Syahiran, a UI/UX designer and branding expert specializing in enterprise software, SaaS, and premium tech company profiles." />
+      </Helmet>
       <div className="bg-[#f7f8fa] dark:bg-background transition-colors">
+      <h1 className="sr-only">Zahin Syahiran - Expert UI/UX Designer & Brand Strategist</h1>
       <StickyNavbar />
 
       {/* Announcement banner */}
