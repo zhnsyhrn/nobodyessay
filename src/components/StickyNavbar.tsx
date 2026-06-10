@@ -74,13 +74,13 @@ const StickyNavbar = () => {
 
           {/* Desktop Navigation - absolutely centered */}
           <div className="hidden md:flex items-center space-x-7 lg:space-x-9 absolute left-1/2 -translate-x-1/2">
-            <Link to="/journals" className={`font-display text-sm text-foreground transition-colors ${isActiveRoute('/journals') ? 'font-medium underline underline-offset-[6px] decoration-2 decoration-foreground' : 'hover:text-muted-foreground'}`}>
+            <Link to="/journals" className={`font-display text-sm transition-colors ${isActiveRoute('/journals') ? 'font-medium text-blue-600 dark:text-blue-400' : 'text-foreground hover:text-muted-foreground'}`}>
               {t('nav.journals')}
             </Link>
-            <Link to="/studio" className={`font-display text-sm text-foreground transition-colors ${isActiveRoute('/studio') ? 'font-medium underline underline-offset-[6px] decoration-2 decoration-foreground' : 'hover:text-muted-foreground'}`}>
+            <Link to="/studio" className={`font-display text-sm transition-colors ${isActiveRoute('/studio') ? 'font-medium text-blue-600 dark:text-blue-400' : 'text-foreground hover:text-muted-foreground'}`}>
               {t('nav.projects')}
             </Link>
-            <Link to="/about" className={`font-display text-sm text-foreground transition-colors ${isActiveRoute('/about') ? 'font-medium underline underline-offset-[6px] decoration-2 decoration-foreground' : 'hover:text-muted-foreground'}`}>
+            <Link to="/about" className={`font-display text-sm transition-colors ${isActiveRoute('/about') ? 'font-medium text-blue-600 dark:text-blue-400' : 'text-foreground hover:text-muted-foreground'}`}>
               {t('nav.about')}
             </Link>
           </div>
