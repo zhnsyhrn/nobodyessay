@@ -130,7 +130,7 @@ export const parseRichContent = (content: string): string => {
     // Handle blockquotes
     if (section.startsWith('> ')) {
       const text = parseInlineFormatting(section.slice(2));
-      result.push(`<blockquote class="border-l-4 border-primary pl-4 sm:pl-6 my-6 sm:my-8 italic text-sm sm:text-base font-jakarta" style="color: #606060">${DOMPurify.sanitize(text)}</blockquote>`);
+      result.push(`<blockquote class="border-l-4 border-primary pl-4 sm:pl-6 my-6 sm:my-8 italic text-sm sm:text-base font-jakarta" style="color: var(--body-text)">${DOMPurify.sanitize(text)}</blockquote>`);
       continue;
     }
 
@@ -150,7 +150,7 @@ export const parseRichContent = (content: string): string => {
         const itemText = item.replace(/^- /, '');
         return `<li class="mb-2">${DOMPurify.sanitize(parseInlineFormatting(itemText))}</li>`;
       }).join('');
-      result.push(`<ul class="list-disc list-inside my-4 sm:my-6 space-y-2 text-sm sm:text-base font-jakarta" style="color: #606060">${listItems}</ul>`);
+      result.push(`<ul class="list-disc list-inside my-4 sm:my-6 space-y-2 text-sm sm:text-base font-jakarta" style="color: var(--body-text)">${listItems}</ul>`);
       continue;
     }
 
@@ -164,7 +164,7 @@ export const parseRichContent = (content: string): string => {
           return `<li class="mb-2">${DOMPurify.sanitize(parseInlineFormatting(itemText))}</li>`;
         })
         .join('');
-      result.push(`<ol class="list-decimal list-inside my-4 sm:my-6 space-y-2 text-sm sm:text-base font-jakarta" style="color: #606060">${listItems}</ol>`);
+      result.push(`<ol class="list-decimal list-inside my-4 sm:my-6 space-y-2 text-sm sm:text-base font-jakarta" style="color: var(--body-text)">${listItems}</ol>`);
       continue;
     }
 
@@ -176,7 +176,7 @@ export const parseRichContent = (content: string): string => {
     }
 
     const formattedText = parseInlineFormatting(section);
-    result.push(`<p class="mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base font-jakarta" style="color: #606060">${DOMPurify.sanitize(formattedText)}</p>`);
+    result.push(`<p class="mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base font-jakarta" style="color: var(--body-text)">${DOMPurify.sanitize(formattedText)}</p>`);
   }
 
   return result.join('');

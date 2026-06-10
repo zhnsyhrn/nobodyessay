@@ -103,7 +103,7 @@ const Studio = () => {
               };
 
               const CardContent = () => (
-                <div className="rounded-[10px] overflow-hidden bg-white h-full flex flex-col">
+                <div className="rounded-[10px] overflow-hidden bg-white dark:bg-white/[0.03] border border-transparent dark:border-white/10 hover:shadow-sm dark:hover:bg-white/[0.06] transition-all duration-300 h-full flex flex-col">
                   <div className="aspect-video overflow-hidden bg-muted">
                     <LazyImage 
                       src={project.image} 
@@ -114,19 +114,19 @@ const Studio = () => {
                       blurUp={true}
                     />
                   </div>
-                  <div className="p-2 sm:p-3 bg-white">
+                  <div className="p-2 sm:p-3 bg-white dark:bg-transparent transition-colors">
                     <div className="flex items-center justify-between">
                       <div className="flex-1">
-                        <h3 className="font-display text-base font-medium text-black mb-1">
+                        <h3 className="font-display text-base font-medium text-black dark:text-white mb-1 transition-colors">
                           {project.title}
                         </h3>
-                        <p className="font-mono text-xs sm:text-[10px] text-gray-700 uppercase">
+                        <p className="font-mono text-xs sm:text-[10px] text-gray-700 dark:text-gray-300 uppercase transition-colors">
                           {project.description}
                         </p>
                       </div>
                       <div className="ml-4">
-                        <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
-                          <ArrowRight className="text-black" size={20} />
+                        <div className="w-10 h-10 rounded-full bg-white dark:bg-white/10 flex items-center justify-center shadow-sm transition-colors">
+                          <ArrowRight className="text-black dark:text-white transition-colors" size={20} />
                         </div>
                       </div>
                     </div>

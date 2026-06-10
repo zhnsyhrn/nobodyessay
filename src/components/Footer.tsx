@@ -9,7 +9,7 @@ const Footer = (_props: FooterProps = {}) => {
   const { t } = useTranslation();
   return (
     <footer>
-      <div className="py-4" style={{ backgroundColor: '#121212' }}>
+      <div className="py-4 bg-[#121212] dark:bg-background transition-colors">
         <p className="font-display text-sm text-center text-muted-foreground">
           © {new Date().getFullYear()} Zahin Syahiran. {t('footer.rights')}
         </p>

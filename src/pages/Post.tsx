@@ -108,7 +108,7 @@ const Post = () => {
             <Link
               to="/journals"
               className="inline-flex items-center gap-1.5 font-jakarta text-[13px] no-underline hover:underline transition-colors"
-              style={{ color: "#919191" }}
+              style={{ color: 'var(--meta-text)' }}
             >
               <ArrowLeft size={14} />
               Journals
@@ -118,7 +118,7 @@ const Post = () => {
             <div className="mt-6">
               <span
                 className="inline-block font-typewriter uppercase text-[11px] rounded-full border border-border px-2.5 py-1"
-                style={{ color: "#606060" }}
+                style={{ color: 'var(--body-text)' }}
               >
                 {essay.category}
               </span>
@@ -137,7 +137,7 @@ const Post = () => {
               <p
                 className="font-jakarta"
                 style={{
-                  color: "#606060",
+                  color: 'var(--body-text)',
                   fontSize: "16px",
                   lineHeight: 1.6,
                   marginTop: "12px",
@@ -151,7 +151,7 @@ const Post = () => {
             <div
               className="flex items-center font-jakarta text-[12px] sm:text-[13px]"
               style={{
-                color: "#919191",
+                color: 'var(--meta-text)',
                 gap: "16px",
                 marginTop:
                   essay.category === "Announcement" && essay.excerpt
@@ -184,7 +184,7 @@ const Post = () => {
               <div
                 className="font-jakarta prose-post"
                 style={{
-                  color: "#606060",
+                  color: 'var(--body-text)',
                   fontSize: "15px",
                   lineHeight: 1.8,
                 }}
@@ -199,7 +199,7 @@ const Post = () => {
               <div className="mt-16 pt-8 border-t border-border/60">
                 <p
                   className="font-typewriter uppercase text-[11px]"
-                  style={{ color: "#919191", letterSpacing: "0.08em" }}
+                  style={{ color: 'var(--meta-text)', letterSpacing: "0.08em" }}
                 >
                   More journals
                 </p>
@@ -212,7 +212,7 @@ const Post = () => {
                     >
                       <p
                         className="font-typewriter uppercase text-[11px]"
-                        style={{ color: "#919191" }}
+                        style={{ color: 'var(--meta-text)' }}
                       >
                         {formatMonthYear(r.date)}
                       </p>

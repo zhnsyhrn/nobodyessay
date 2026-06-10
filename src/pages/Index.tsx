@@ -99,11 +99,7 @@ const Index = () => {
     });
   }, [api]);
   return <div className="min-h-screen bg-background">
-      <div
-        style={{
-          backgroundColor: "#f7f8fa",
-        }}
-      >
+      <div className="bg-[#f7f8fa] dark:bg-background transition-colors">
       <StickyNavbar />
 
       {/* Announcement banner */}
@@ -111,18 +107,18 @@ const Index = () => {
         <div className="pt-10 sm:pt-14 px-4 sm:px-6 flex justify-center fade-in">
           <Link
             to={`/journals/${latestAnnouncement.slug}`}
-            className="group relative inline-flex items-center justify-center gap-2.5 rounded-full border border-slate-200/50 bg-white/60 backdrop-blur-md px-4 py-2 transition-all hover:bg-white/90 hover:shadow-sm max-w-full"
+            className="group relative inline-flex items-center justify-center gap-2.5 rounded-full border border-slate-200/50 dark:border-white/10 bg-white/60 dark:bg-white/5 backdrop-blur-md px-4 py-2 transition-all hover:bg-white/90 dark:hover:bg-white/10 hover:shadow-sm max-w-full"
           >
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 dark:bg-blue-300 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500 dark:bg-blue-400"></span>
             </span>
-            <span className="font-jakarta text-[12px] sm:text-[13px] text-slate-700 font-medium truncate">
+            <span className="font-jakarta text-[12px] sm:text-[13px] text-slate-700 dark:text-slate-200 font-medium truncate">
               {latestAnnouncement.title}
             </span>
             <ArrowRight
               size={14}
-              className="shrink-0 text-slate-400 transition-transform group-hover:translate-x-1 group-hover:text-slate-700"
+              className="shrink-0 text-slate-400 dark:text-slate-500 transition-transform group-hover:translate-x-1 group-hover:text-slate-700 dark:group-hover:text-slate-200"
             />
           </Link>
         </div>
@@ -133,16 +129,16 @@ const Index = () => {
         <div className="max-w-6xl mx-auto text-left lg:text-center relative z-10">
           <h2 className="font-display text-[30px] sm:text-[36px] font-medium mb-2 sm:mb-3 tracking-tight leading-[36px] sm:leading-[40px] min-h-[80px] sm:min-h-[40px]"><TypewriterEffect text="Entrepreneurship, Product Design & Branding." /></h2>
           <p style={{
-          color: '#606060'
+          color: 'var(--body-text)'
         }} className="font-jakarta text-[14px] sm:text-[16px] max-w-2xl lg:mx-auto leading-[25px] sm:leading-[29px] px-1 mb-6 sm:mb-8 sm:px-0">{t('hero.subtitle')}</p>
           
           {/* AI Search Bar */}
           <div className="flex flex-col items-center px-1 sm:px-2 mt-8 lg:mt-12 relative z-10 group">
             <div className="relative w-full max-w-2xl">
               {/* Glowing Aura */}
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-300 rounded-full blur-md opacity-20 group-hover:opacity-50 transition duration-1000 group-hover:duration-300 animate-gradient bg-[length:200%_auto]"></div>
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-300 dark:from-blue-500 dark:via-cyan-400 dark:to-blue-500 rounded-full blur-md opacity-20 dark:opacity-50 group-hover:opacity-50 dark:group-hover:opacity-100 transition duration-1000 group-hover:duration-300 animate-gradient bg-[length:200%_auto]"></div>
               
-              <div className="relative flex items-center w-full h-full bg-white rounded-full p-2 pl-6 pr-3 shadow-sm">
+              <div className="relative flex items-center w-full h-full bg-white dark:bg-card rounded-full p-2 pl-6 pr-3 shadow-sm transition-colors">
                 <input 
                   type="text" 
                   placeholder={t('hero.search_placeholder')}
@@ -178,7 +174,7 @@ const Index = () => {
                       openChat();
                       sendMessage(suggestion.full);
                     }}
-                    className="px-3 sm:px-4 py-1.5 rounded-full bg-white/50 hover:bg-white border border-border/40 hover:border-border/80 text-xs sm:text-[13px] font-medium text-slate-500 hover:text-slate-800 transition-all shadow-sm hover:shadow-md"
+                    className="px-3 sm:px-4 py-1.5 rounded-full bg-white/50 dark:bg-card/50 hover:bg-white dark:hover:bg-card border border-border/40 hover:border-border/80 text-xs sm:text-[13px] font-medium text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-all shadow-sm hover:shadow-md"
                   >
                     <span className="sm:hidden">{suggestion.short}</span>
                     <span className="hidden sm:inline">{suggestion.full}</span>

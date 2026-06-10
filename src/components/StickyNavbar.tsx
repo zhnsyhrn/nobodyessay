@@ -10,6 +10,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { ThemeToggle } from "./ThemeToggle";
+
 const StickyNavbar = () => {
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,7 +66,7 @@ const StickyNavbar = () => {
   };
   return <nav ref={navRef} className="sticky top-3 sm:top-4 z-50 px-3 sm:px-6 pt-1">
       <div className="max-w-6xl mx-auto">
-        <div className="relative flex items-center justify-between rounded-full bg-white/60 backdrop-blur-lg border border-border/60 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.08)] pl-4 sm:pl-5 pr-2 py-2">
+        <div className="relative flex items-center justify-between rounded-full bg-white/60 dark:bg-[#1a1a1a]/80 backdrop-blur-xl border border-border/60 dark:border-white/10 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.6)] pl-4 sm:pl-5 pr-2 py-2 transition-all duration-300">
           <Link to="/" onClick={closeMenu} className="flex items-center space-x-2 sm:space-x-3 z-10">
             <img src="/lovable-uploads/e058676f-a0f2-441a-983c-a931949d96b8.png" alt="byzahin" className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover" />
             <h1 className="font-display text-base sm:text-lg font-medium hover:text-muted-foreground transition-colors">Zahin Syahiran</h1>
@@ -83,23 +85,24 @@ const StickyNavbar = () => {
             </Link>
           </div>
 
-          {/* Right side - Contact pill (desktop) + Language Toggle + Hamburger (mobile) */}
+          {/* Right side - Contact pill (desktop) + Language Toggle + Theme Toggle + Hamburger (mobile) */}
           <div className="flex items-center gap-2 z-10">
+            <ThemeToggle />
             <DropdownMenu>
               <DropdownMenuTrigger className="font-display text-xs sm:text-sm font-medium px-2 py-1 flex items-center gap-1 hover:text-muted-foreground transition-colors focus:outline-none data-[state=open]:text-muted-foreground">
                 {i18n.language === 'en' ? 'EN' : 'MS'}
                 <ChevronDown size={14} className="opacity-70" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="min-w-[120px] border-border/50 bg-white/90 backdrop-blur-xl shadow-lg rounded-xl mt-2 p-1">
+              <DropdownMenuContent align="end" className="min-w-[120px] border-border/50 bg-white/90 dark:bg-card/90 backdrop-blur-xl shadow-lg rounded-xl mt-2 p-1">
                 <DropdownMenuItem 
                   onClick={() => i18n.changeLanguage('en')}
-                  className={`font-display text-sm px-3 py-2 cursor-pointer rounded-lg transition-colors ${i18n.language === 'en' ? 'text-blue-600 bg-blue-50 focus:bg-blue-100 focus:text-blue-700 font-medium' : 'text-slate-700 hover:bg-slate-100 hover:text-slate-900 focus:bg-slate-100 focus:text-slate-900'}`}
+                  className={`font-display text-sm px-3 py-2 cursor-pointer rounded-lg transition-colors ${i18n.language === 'en' ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 focus:bg-blue-100 dark:focus:bg-blue-900/50 font-medium' : 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 focus:bg-slate-100 dark:focus:bg-slate-800'}`}
                 >
                   English
                 </DropdownMenuItem>
                 <DropdownMenuItem 
                   onClick={() => i18n.changeLanguage('ms')}
-                  className={`font-display text-sm px-3 py-2 cursor-pointer rounded-lg transition-colors ${i18n.language === 'ms' ? 'text-blue-600 bg-blue-50 focus:bg-blue-100 focus:text-blue-700 font-medium' : 'text-slate-700 hover:bg-slate-100 hover:text-slate-900 focus:bg-slate-100 focus:text-slate-900'}`}
+                  className={`font-display text-sm px-3 py-2 cursor-pointer rounded-lg transition-colors ${i18n.language === 'ms' ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 focus:bg-blue-100 dark:focus:bg-blue-900/50 font-medium' : 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 focus:bg-slate-100 dark:focus:bg-slate-800'}`}
                 >
                   Bahasa Malaysia
                 </DropdownMenuItem>

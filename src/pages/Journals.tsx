@@ -16,6 +16,8 @@ const formatMonthYear = (dateStr: string) => {
 const Journals = () => {
   const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState<string>("All");
+  const [currentPage, setCurrentPage] = useState(1);
+  const ITEMS_PER_PAGE = 6;
 
   const categories = useMemo(() => {
     const set = new Set<string>();
@@ -28,6 +30,12 @@ const Journals = () => {
     return essays.filter((e) => e.category === activeCategory);
   }, [activeCategory]);
 
+  const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
+  const paginatedEssays = useMemo(() => {
+    const start = (currentPage - 1) * ITEMS_PER_PAGE;
+    return filtered.slice(start, start + ITEMS_PER_PAGE);
+  }, [filtered, currentPage]);
+
   return (
     <div className="min-h-screen bg-background">
       <StickyNavbar />
@@ -39,7 +47,7 @@ const Journals = () => {
             <h1 className="font-display text-3xl sm:text-4xl font-medium tracking-tight text-foreground">
               {t('journals.title')}
             </h1>
-            <p className="font-jakarta text-base mt-3" style={{ color: "#606060" }}>
+            <p className="font-jakarta text-base mt-3" style={{ color: 'var(--body-text)' }}>
               {t('journals.description')}
             </p>
           </header>
@@ -53,7 +61,10 @@ const Journals = () => {
               return (
                 <button
                   key={cat}
-                  onClick={() => setActiveCategory(cat)}
+                  onClick={() => {
+                    setActiveCategory(cat);
+                    setCurrentPage(1);
+                  }}
                   className={`font-display text-xs rounded-full border px-3 py-1.5 transition-colors shrink-0 ${
                     active
                       ? "bg-foreground text-background border-foreground"
@@ -68,7 +79,7 @@ const Journals = () => {
 
           {/* Article rows */}
           <ul className="mt-8 border-b border-border/60">
-            {filtered.map((writing) => (
+            {paginatedEssays.map((writing) => (
               <li
                 key={writing.slug}
                 className="border-t border-border/60 transition-opacity duration-200 hover:opacity-70"
@@ -87,13 +98,13 @@ const Journals = () => {
                     <div className="mt-4 flex items-center gap-3">
                       <span
                         className="font-typewriter uppercase text-[12px]"
-                        style={{ color: "#919191" }}
+                        style={{ color: 'var(--meta-text)' }}
                       >
                         {formatMonthYear(writing.date)}
                       </span>
                       <span
                         className="font-typewriter uppercase text-[11px] rounded-full border border-border px-2.5 py-0.5"
-                        style={{ color: "#606060" }}
+                        style={{ color: 'var(--body-text)' }}
                       >
                         Announcement
                       </span>
@@ -103,7 +114,7 @@ const Journals = () => {
                     </h2>
                     <p
                       className="font-jakarta text-[14px] leading-relaxed mt-1.5"
-                      style={{ color: "#606060" }}
+                      style={{ color: 'var(--body-text)' }}
                     >
                       {writing.excerpt}
                     </p>
@@ -115,7 +126,7 @@ const Journals = () => {
                   >
                   <span
                     className="font-typewriter uppercase text-[12px] sm:pt-0.5"
-                    style={{ color: "#919191" }}
+                    style={{ color: 'var(--meta-text)' }}
                   >
                     {formatMonthYear(writing.date)}
                   </span>
@@ -125,7 +136,7 @@ const Journals = () => {
                     </h2>
                     <p
                       className="font-jakarta text-[14px] leading-relaxed mt-1.5"
-                      style={{ color: "#606060" }}
+                      style={{ color: 'var(--body-text)' }}
                     >
                       {writing.excerpt}
                     </p>
@@ -139,6 +150,29 @@ const Journals = () => {
               </li>
             ))}
           </ul>
+
+          {/* Pagination Controls */}
+          {totalPages > 1 && (
+            <div className="flex justify-center items-center gap-4 mt-8">
+              <button
+                onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+                disabled={currentPage === 1}
+                className="font-display text-sm px-4 py-2 border border-border/60 rounded-full disabled:opacity-50 transition-opacity hover:bg-muted"
+              >
+                Previous
+              </button>
+              <span className="font-jakarta text-sm text-muted-foreground">
+                Page {currentPage} of {totalPages}
+              </span>
+              <button
+                onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+                disabled={currentPage === totalPages}
+                className="font-display text-sm px-4 py-2 border border-border/60 rounded-full disabled:opacity-50 transition-opacity hover:bg-muted"
+              >
+                Next
+              </button>
+            </div>
+          )}
         </div>
       </section>
 

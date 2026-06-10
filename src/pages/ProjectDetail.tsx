@@ -495,7 +495,7 @@ const ProjectDetail = () => {
             <div className="mt-2 mb-4">
               <span
                 className="inline-block font-typewriter uppercase text-[11px] rounded-full border border-border px-2.5 py-1"
-                style={{ color: "#606060" }}
+                style={{ color: 'var(--body-text)' }}
               >
                 {(project.projectInfo as Record<string, string>)["Type"]}
               </span>
@@ -511,7 +511,7 @@ const ProjectDetail = () => {
 
           <p
             className="font-jakarta mt-3"
-            style={{ color: "#606060", fontSize: "16px", lineHeight: 1.6 }}
+            style={{ color: 'var(--body-text)', fontSize: "16px", lineHeight: 1.6 }}
           >
             {project.overview}
           </p>
@@ -531,7 +531,7 @@ const ProjectDetail = () => {
         <div className="border-t border-border/60 pt-8">
           <h2
             className="font-typewriter uppercase text-[11px] mb-5"
-            style={{ color: "#606060", letterSpacing: "0.08em" }}
+            style={{ color: 'var(--body-text)', letterSpacing: "0.08em" }}
           >
             Project Information
           </h2>
@@ -540,13 +540,13 @@ const ProjectDetail = () => {
               <React.Fragment key={key}>
                 <dt
                   className="sm:col-span-4 font-jakarta text-[13px]"
-                  style={{ color: "#919191" }}
+                  style={{ color: 'var(--meta-text)' }}
                 >
                   {key}
                 </dt>
                 <dd
                   className="sm:col-span-8 font-jakarta text-[15px]"
-                  style={{ color: "#606060", lineHeight: 1.7 }}
+                  style={{ color: 'var(--body-text)', lineHeight: 1.7 }}
                 >
                   {value}
                 </dd>
@@ -570,7 +570,7 @@ const ProjectDetail = () => {
               
               <p className="mb-4" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#606060',
+            color: 'var(--body-text)',
             fontSize: '15px',
             lineHeight: 1.8
           }}>
@@ -579,7 +579,7 @@ const ProjectDetail = () => {
               
               <p className="mb-4" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#606060',
+            color: 'var(--body-text)',
             fontSize: '15px',
             lineHeight: 1.8
           }}>
@@ -588,7 +588,7 @@ const ProjectDetail = () => {
               
               <p className="mb-8" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#606060',
+            color: 'var(--body-text)',
             fontSize: '15px',
             lineHeight: 1.8
           }}>
@@ -616,7 +616,7 @@ const ProjectDetail = () => {
               
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#606060',
+            color: 'var(--body-text)',
             fontSize: '15px',
             lineHeight: 1.8
           }}>
@@ -631,7 +631,7 @@ const ProjectDetail = () => {
               <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-4 rounded">
                 <p style={{
               fontFamily: 'Plus Jakarta Sans, sans-serif',
-              color: '#606060',
+              color: 'var(--body-text)',
               fontSize: '15px',
               lineHeight: 1.8
             }}>
@@ -641,7 +641,7 @@ const ProjectDetail = () => {
               
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#606060',
+            color: 'var(--body-text)',
             fontSize: '15px',
             lineHeight: 1.8
           }}>
@@ -655,7 +655,7 @@ const ProjectDetail = () => {
               <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-4 rounded">
                 <p style={{
               fontFamily: 'Plus Jakarta Sans, sans-serif',
-              color: '#606060',
+              color: 'var(--body-text)',
               fontSize: '15px',
               lineHeight: 1.8
             }}>
@@ -665,7 +665,7 @@ const ProjectDetail = () => {
               
               <ul className="list-disc pl-6 mb-8 space-y-2" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#606060',
+            color: 'var(--body-text)',
             fontSize: '15px',
             lineHeight: 1.8
           }}>
@@ -695,7 +695,7 @@ const ProjectDetail = () => {
               
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#606060',
+            color: 'var(--body-text)',
             fontSize: '15px',
             lineHeight: 1.8
           }}>
@@ -709,7 +709,7 @@ const ProjectDetail = () => {
               
               <ul className="list-disc pl-6 mb-6 space-y-2" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#606060',
+            color: 'var(--body-text)',
             fontSize: '15px',
             lineHeight: 1.8
           }}>
@@ -721,7 +721,7 @@ const ProjectDetail = () => {
               
               <ul className="list-disc pl-6 mb-8 space-y-2" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#606060',
+            color: 'var(--body-text)',
             fontSize: '15px',
             lineHeight: 1.8
           }}>
@@ -734,7 +734,7 @@ const ProjectDetail = () => {
               
               <ul className="list-decimal pl-6 mb-8 space-y-2" style={{
             fontFamily: 'Plus Jakarta Sans, sans-serif',
-            color: '#606060',
+            color: 'var(--body-text)',
             fontSize: '15px',
             lineHeight: 1.8
           }}>

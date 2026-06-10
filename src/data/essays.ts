@@ -22,7 +22,7 @@ export const essays: Essay[] = [
     date: "June 2026",
     readTime: "2 min read",
     category: "Announcement",
-    coverImage: websiteUpgradeCover,
+    coverImage: "/byzahin_major-upgrade_notice.png",
     content: `Hey everyone,
 
 If you've noticed things shifting around, buttons moving, or new sections popping up out of nowhere—don't worry, you're not seeing things. I am currently in the middle of a major overhaul of this entire platform.
@@ -48,7 +48,7 @@ Stay tuned.
     title: "Designing corporate websites the AI-native way",
     excerpt: "How a collaboration between byzahin and Produlogi is using AI-first creative tools — Antigravity, Aura.build, and Unicorn Studio — to ship a high-craft tech company profile that looks like the future.",
     metaDescription: "byzahin x Produlogi announce an AI-native creative workflow for a tech company profile site, built with Antigravity, Aura.build, and Unicorn Studio.",
-    date: "May 2025",
+    date: "May 2026",
     readTime: "6 min read",
     category: "Announcement",
     coverImage: byzahinProdulogiCover,

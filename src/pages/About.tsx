@@ -80,7 +80,7 @@ const About = () => {
             ].map((event, i) => (
               <div
                 key={i}
-                className="group rounded-xl bg-white p-5 hover:shadow-sm transition-all"
+                className="group rounded-xl bg-white dark:bg-white/[0.03] border border-transparent dark:border-white/10 p-5 hover:shadow-sm dark:hover:bg-white/[0.06] transition-all duration-300"
               >
                 <span className="font-mono text-xs text-muted-foreground">{event.year}</span>
                 <h3 className="font-jakarta font-medium text-foreground mt-1.5 text-[15px] leading-snug">
@@ -110,7 +110,7 @@ const About = () => {
                     href={client.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center gap-3 rounded-xl bg-white p-3.5 hover:shadow-sm transition-all duration-200"
+                    className="group flex items-center gap-3 rounded-xl bg-white dark:bg-white/[0.03] border border-transparent dark:border-white/10 p-3.5 hover:shadow-sm dark:hover:bg-white/[0.06] transition-all duration-300"
                   >
                     <img
                       src={client.logo}
@@ -135,8 +135,8 @@ const About = () => {
                 {sideProjects.map((project) => (
                   <div
                     key={project.name}
-                    className={`rounded-xl bg-white p-5 transition-all duration-200 ${
-                      project.active ? "hover:shadow-sm" : "opacity-60"
+                    className={`rounded-xl bg-white dark:bg-white/[0.03] border border-transparent dark:border-white/10 p-5 transition-all duration-300 ${
+                      project.active ? "hover:shadow-sm dark:hover:bg-white/[0.06]" : "opacity-60"
                     }`}
                   >
                     <div className="flex items-center justify-between mb-1.5">
@@ -158,7 +158,7 @@ const About = () => {
                       <span
                         className={`px-2 py-0.5 rounded-full text-[11px] font-semibold font-jakarta ${
                           project.active
-                            ? "bg-green-500/10 text-green-700"
+                            ? "bg-green-500/10 text-green-700 dark:text-green-400"
                             : "bg-secondary text-muted-foreground"
                         }`}
                       >
