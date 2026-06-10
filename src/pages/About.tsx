@@ -39,13 +39,14 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen flex flex-col bg-background">
       <Helmet>
         <title>About Zahin Syahiran | UI/UX Design & Branding Portfolio</title>
         <meta name="description" content="Learn about Zahin Syahiran's experience working with top tech companies, startups, and enterprises to deliver high-converting UX/UI and brand identities." />
       </Helmet>
       <StickyNavbar />
 
+      <main className="flex-1 flex flex-col">
       {/* Speaking & Participation — Photo-forward hero */}
       <section className="pt-20 sm:pt-28 pb-16 sm:pb-24 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
@@ -181,6 +182,7 @@ const About = () => {
         </div>
       </section>
 
+      </main>
       <Footer />
       <ScrollToTopButton />
     </div>

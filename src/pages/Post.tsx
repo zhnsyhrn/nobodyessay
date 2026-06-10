@@ -99,9 +99,10 @@ const Post = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen flex flex-col bg-background">
         <StickyNavbar />
 
+        <main className="flex-1 flex flex-col">
         <article className="pt-10 sm:pt-12 pb-8 sm:pb-12 fade-in">
           <div className="max-w-[740px] mx-auto px-6">
             {/* Back link */}
@@ -226,6 +227,7 @@ const Post = () => {
             )}
           </div>
         </article>
+        </main>
 
       <Footer />
       <ScrollToTopButton />

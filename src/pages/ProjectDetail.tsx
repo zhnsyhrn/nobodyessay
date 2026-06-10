@@ -474,7 +474,7 @@ const ProjectDetail = () => {
         </div>
       </div>;
   }
-  return <div className="min-h-screen bg-background">
+  return <div className="min-h-screen flex flex-col bg-background">
       <Helmet>
         <title>{`${project.title} | UI/UX Design Case Study`}</title>
         <meta name="description" content={project.overview.substring(0, 160)} />
@@ -483,6 +483,7 @@ const ProjectDetail = () => {
       </Helmet>
       <StickyNavbar />
       
+      <main className="flex-1 flex flex-col">
       {/* Main Content */}
       <div className="max-w-[740px] mx-auto px-6 pt-10 sm:pt-12 pb-8">
         {/* Back Navigation */}
@@ -849,7 +850,7 @@ const ProjectDetail = () => {
           </Link>
         </div>
       </div>
-
+      </main>
       <Footer />
       <ScrollToTopButton />
     </div>;

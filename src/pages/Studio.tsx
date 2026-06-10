@@ -88,7 +88,7 @@ const Studio = () => {
       setCurrent(api.selectedScrollSnap() + 1);
     });
   }, [api]);
-  return <div className="min-h-screen bg-background">
+  return <div className="min-h-screen flex flex-col bg-background">
       <Helmet>
         <title>Portfolio | UI/UX & Branding Design Projects by Zahin Syahiran</title>
         <meta name="description" content="Explore my latest UI/UX design, app design, and branding projects. See how I solve complex business problems through intuitive design." />
@@ -96,6 +96,7 @@ const Studio = () => {
       <h1 className="sr-only">UI/UX and Branding Design Portfolio</h1>
       <StickyNavbar />
 
+      <main className="flex-1 flex flex-col">
       {/* Projects Grid */}
       <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-12 xl:px-16 md:pt-8">
         <div className="w-full">
@@ -154,6 +155,7 @@ const Studio = () => {
         </div>
       </section>
 
+      </main>
       <Footer />
       <ScrollToTopButton />
       

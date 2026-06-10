@@ -38,7 +38,7 @@ const Journals = () => {
   }, [filtered, currentPage]);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen flex flex-col bg-background">
       <Helmet>
         <title>UX & Design Journals | Thoughts on UI/UX, Branding & DesignOps</title>
         <meta name="description" content="Read articles, announcements, and thoughts on UI/UX design, branding strategies, and DesignOps by Zahin Syahiran." />
@@ -46,7 +46,8 @@ const Journals = () => {
       <h1 className="sr-only">UX Design and Branding Journals</h1>
       <StickyNavbar />
 
-      <section className="py-12 sm:py-16 px-4 sm:px-6">
+      <main className="flex-1 flex flex-col">
+        <section className="py-12 sm:py-16 px-4 sm:px-6">
         <div className="max-w-3xl mx-auto">
           {/* Heading */}
           <header>
@@ -181,6 +182,7 @@ const Journals = () => {
           )}
         </div>
       </section>
+      </main>
 
       <Footer />
       <ScrollToTopButton />

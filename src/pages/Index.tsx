@@ -99,7 +99,7 @@ const Index = () => {
       setCurrent(api.selectedScrollSnap() + 1);
     });
   }, [api]);
-  return <div className="min-h-screen bg-background">
+  return <div className="min-h-screen flex flex-col bg-background">
       <Helmet>
         <title>Zahin Syahiran | Freelance UI/UX Designer & Brand Strategist</title>
         <meta name="description" content="Hire Zahin Syahiran, a UI/UX designer and branding expert specializing in enterprise software, SaaS, and premium tech company profiles." />
@@ -108,6 +108,8 @@ const Index = () => {
         <meta name="twitter:title" content="Zahin Syahiran | Freelance UI/UX Designer & Brand Strategist" />
         <meta name="twitter:description" content="Hire Zahin Syahiran, a UI/UX designer and branding expert specializing in enterprise software, SaaS, and premium tech company profiles." />
       </Helmet>
+      
+      <main className="flex-1 flex flex-col">
       <div className="bg-[#f7f8fa] dark:bg-background transition-colors">
       <h1 className="sr-only">Zahin Syahiran - Expert UI/UX Designer & Brand Strategist</h1>
       <StickyNavbar />
@@ -232,6 +234,7 @@ const Index = () => {
           </Carousel>
         </div>
       </section>
+      </main>
 
       <ScrollToTopButton />
       <Footer copyrightOnly />
