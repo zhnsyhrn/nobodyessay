@@ -112,8 +112,8 @@ const StickyNavbar = () => {
               to="/contact"
               className={`hidden md:inline-flex items-center rounded-full border px-5 py-2 font-display text-sm transition-colors ${
                 isActiveRoute('/contact')
-                  ? 'border-foreground bg-foreground text-background'
-                  : 'border-foreground/80 text-foreground hover:bg-foreground hover:text-background'
+                  ? 'border-blue-700 bg-blue-700 text-white dark:border-blue-600 dark:bg-blue-600'
+                  : 'border-blue-600 bg-blue-600 text-white hover:bg-blue-700 hover:border-blue-700 dark:border-blue-500 dark:bg-blue-500 dark:hover:bg-blue-600 dark:hover:border-blue-600'
               }`}
             >
               {t('nav.contact')}
