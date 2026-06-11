@@ -16,34 +16,30 @@ export interface Essay {
 export const essays: Essay[] = [
   {
     slug: "flaaah-creative-direction",
-    title: "Taking on Flaaah: The Business of Brand Creative Direction",
-    excerpt: "I will soon be leading the brand creative direction for Flaaah. A look into why bridging the gap between business strategy and brand identity is the most critical step for growing companies.",
-    metaDescription: "An announcement regarding my upcoming brand creative direction engagement with Flaaah, focusing on the business value of design.",
+    title: "Taking on Flaaah",
+    excerpt: "I will soon be leading the brand creative direction for Flaaah. Here is why creative direction is a business strategy, not just design.",
+    metaDescription: "An upcoming brand creative direction project with Flaaah, focusing on the business value of design.",
     date: "June 2026",
-    readTime: "3 min read",
+    readTime: "1 min read",
     category: "Announcement",
     coverImage: "/byzahin_flaaah.png",
-    content: `There is a critical threshold every growing business must cross. It's the point where having a good product is no longer enough to command market presence. The vision expands, the stakes get higher, but often, the brand's creative direction remains stubbornly anchored to its early days.
+    content: `I'll be taking on a new project soon: leading the brand creative direction for [Flaaah](https://www.flaaah.com/).
 
-That is the exact challenge I will be tackling soon with [Flaaah](https://www.flaaah.com/).
+When a business grows, having a great product isn't enough anymore. The brand needs to catch up to the company's ambition. This project isn't just about making things look nice. It's a strategic business move.
 
-I am bringing my expertise to lead a comprehensive brand and creative direction overhaul for them. This isn't just about aesthetics. It is a strategic business move. It is about realigning the brand's visual identity with its commercial ambition.
+## Design is business strategy
 
-## The business of creative direction
+How people see your brand decides where you sit in the market. 
 
-In the current market, brand perception directly dictates market positioning. The gap between what a company is building and how it presents itself to the world is where credibility—and revenue—leaks. 
+If your creative direction doesn't match your business goals, you confuse your audience and leave money on the table. My job is to fix that gap. I want to clear out the noise and build a strong identity that supports Flaaah's next stage of growth.
 
-When a business's creative direction is misaligned with its core strategy, it confuses the audience and dilutes the product's value. My role here is to bridge that gap. The goal is to strip away the noise and establish a cohesive, commanding brand identity that speaks directly to the business's next phase of growth.
+> Good creative direction is the visual execution of a business strategy.
 
-> A brand's creative direction isn't just a marketing expense; it is the visual execution of its business strategy.
+## What happens next
 
-## What comes next
+The work starts soon. We aren't going straight into logos and colors. First, we need to get aligned. We'll set the foundation for how the brand shows up in the market.
 
-The engagement begins soon. The initial phase won't be about sketching logos or picking colors; it will be about deep alignment. We will be establishing the foundational strategy that dictates how the brand occupies its market space. 
-
-It is going to be a rigorous process of testing assumptions, defining the core message, and ensuring that every creative decision we make going forward serves a distinct business purpose. I am treating this engagement as a critical alignment of craft and commerce, ensuring the output delivers tangible value.
-
-I will be sharing insights and lessons learned as the project kicks off. 
+Everything we design from here on out will have a clear business purpose. I'll share what I learn along the way once the project kicks off.
 
 Stay tuned.
 
