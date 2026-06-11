@@ -16,7 +16,7 @@ export interface Essay {
 export const essays: Essay[] = [
   {
     slug: "flaaah-creative-direction",
-    title: "Taking on Flaaah",
+    title: "Baking with Flaaah",
     excerpt: "I will soon be leading the brand creative direction for Flaaah. Here is why creative direction is a business strategy, not just design.",
     metaDescription: "An upcoming brand creative direction project with Flaaah, focusing on the business value of design.",
     date: "June 2026",
