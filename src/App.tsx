@@ -17,6 +17,7 @@ import Post from "./pages/Post";
 import ProjectDetail from "./pages/ProjectDetail";
 import Bcreatives from "./pages/Bcreatives";
 import SenangrekaVenture from "./pages/SenangrekaVenture";
+import Service from "./pages/Service";
 import NotFound from "./pages/NotFound";
 import { ChatProvider } from "./contexts/ChatContext";
 import ChatWidget from "./components/ChatWidget";
@@ -50,6 +51,7 @@ const App = () => (
                   <Route path="/senangreka-venture" element={<SenangrekaVenture />} />
                   <Route path="/journals/:slug" element={<Post />} />
                   <Route path="/projects/:slug" element={<ProjectDetail />} />
+                  <Route path="/service" element={<Service />} />
                   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                   <Route path="*" element={<NotFound />} />
                 </Routes>
