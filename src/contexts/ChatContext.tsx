@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, ReactNode, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 interface Message {
   text: ReactNode;
@@ -25,7 +26,66 @@ interface ChatContextType {
 
 const ChatContext = createContext<ChatContextType | undefined>(undefined);
 
-const INITIAL_GREETING = "Hey, thanks for stopping by! I'm Zahin's site assistant. Ask me about his work experience, skills, past projects, availability for freelance, or how to get in touch.";
+export function parseMessageContent(content: ReactNode): ReactNode {
+  if (typeof content !== 'string') return content;
+
+  const lines = content.split('\n');
+
+  return (
+    <div className="space-y-1">
+      {lines.map((line, lineIdx) => {
+        if (!line.trim()) return <div key={lineIdx} className="h-1" />;
+
+        // Match markdown links [label](url) and bare URLs
+        const tokenRegex = /\[([^\]]+)\]\(([^)]+)\)|(https?:\/\/[^\s]+)/g;
+        const elements: ReactNode[] = [];
+        let lastIndex = 0;
+        let match: RegExpExecArray | null;
+
+        while ((match = tokenRegex.exec(line)) !== null) {
+          if (match.index > lastIndex) {
+            elements.push(line.substring(lastIndex, match.index));
+          }
+
+          if (match[1] && match[2]) {
+            const label = match[1];
+            const url = match[2];
+            if (url.startsWith('/')) {
+              elements.push(
+                <Link key={match.index} to={url} className="text-blue-600 hover:underline font-medium">
+                  {label}
+                </Link>
+              );
+            } else {
+              elements.push(
+                <a key={match.index} href={url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">
+                  {label}
+                </a>
+              );
+            }
+          } else if (match[3]) {
+            const url = match[3];
+            elements.push(
+              <a key={match.index} href={url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline font-medium">
+                {url}
+              </a>
+            );
+          }
+
+          lastIndex = tokenRegex.lastIndex;
+        }
+
+        if (lastIndex < line.length) {
+          elements.push(line.substring(lastIndex));
+        }
+
+        return <p key={lineIdx}>{elements}</p>;
+      })}
+    </div>
+  );
+}
+
+const INITIAL_GREETING = "Hey, thanks for stopping by! I'm Zahin's site assistant. Ask me about his work experience, skills, past projects, availability for freelance, or how to get in touch. Explore [Services & Rates](/service), view [Projects](/projects), or read [About Zahin](/about).";
 const INITIAL_QUICK_REPLIES: QuickReply[] = [
   { label: "What does Zahin do?", intentId: "who_is_zahin" },
   { label: "See his work", intentId: "portfolio_projects" },
@@ -36,7 +96,7 @@ const INITIAL_QUICK_REPLIES: QuickReply[] = [
 export function ChatProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { text: INITIAL_GREETING, isUser: false },
+    { text: parseMessageContent(INITIAL_GREETING), isUser: false },
   ]);
   const [quickReplies, setQuickReplies] = useState<QuickReply[]>(INITIAL_QUICK_REPLIES);
   const [isBotReady, setIsBotReady] = useState(false);
@@ -63,7 +123,7 @@ export function ChatProvider({ children }: { children: ReactNode }) {
   const toggleChat = () => setIsOpen((prev) => !prev);
   
   const resetChat = () => {
-    setMessages([{ text: INITIAL_GREETING, isUser: false }]);
+    setMessages([{ text: parseMessageContent(INITIAL_GREETING), isUser: false }]);
     setQuickReplies(INITIAL_QUICK_REPLIES);
     if (botRef.current) {
       botRef.current.history = [];
@@ -79,7 +139,7 @@ export function ChatProvider({ children }: { children: ReactNode }) {
     setTimeout(() => {
       if (botRef.current) {
         const result = botRef.current.ask(text);
-        let parsedText: ReactNode = result.answer;
+        const parsedText = parseMessageContent(result.answer);
         
         setMessages(prev => [...prev, { text: parsedText, isUser: false }]);
         
@@ -104,7 +164,7 @@ export function ChatProvider({ children }: { children: ReactNode }) {
     setTimeout(() => {
       if (botRef.current) {
         const result = botRef.current.askByIntentId(reply.intentId);
-        let parsedText: ReactNode = result.answer;
+        const parsedText = parseMessageContent(result.answer);
         
         setMessages(prev => [...prev, { text: parsedText, isUser: false }]);
         
