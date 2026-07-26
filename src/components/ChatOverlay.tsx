@@ -92,13 +92,13 @@ export default function ChatOverlay() {
         
         {/* Quick Replies */}
         {quickReplies && quickReplies.length > 0 && (
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 max-w-full overflow-hidden">
             {quickReplies.map((reply, idx) => (
               <button 
                 key={idx}
                 type="button" 
                 onClick={() => sendQuickReply(reply)} 
-                className="px-3 py-1.5 bg-transparent border border-blue-500 text-blue-600 text-[13px] font-medium rounded-md hover:bg-blue-50 transition-colors text-left"
+                className="max-w-full px-3 py-1.5 bg-transparent border border-blue-500 text-blue-600 text-[13px] font-medium rounded-md hover:bg-blue-50 transition-colors text-left break-words leading-tight"
               >
                 {reply.label}
               </button>
