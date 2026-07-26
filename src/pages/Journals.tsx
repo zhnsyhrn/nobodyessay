@@ -27,7 +27,19 @@ const Journals = () => {
   }, []);
 
   const filtered = useMemo(() => {
-    if (activeCategory === "All") return essays;
+    if (activeCategory === "All") {
+      let announcementSeen = false;
+      return essays.filter((e) => {
+        if (e.category === "Announcement") {
+          if (!announcementSeen) {
+            announcementSeen = true;
+            return true;
+          }
+          return false;
+        }
+        return true;
+      });
+    }
     return essays.filter((e) => e.category === activeCategory);
   }, [activeCategory]);
 
