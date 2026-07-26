@@ -101,11 +101,11 @@ const Index = () => {
   }, [api]);
   return <div className="min-h-screen flex flex-col bg-background">
       <Helmet>
-        <title>Zahin Syahiran | Freelance UI/UX Designer & Brand Strategist</title>
+        <title>Zahin Syahiran | UI/UX Designer & Brand Strategist</title>
         <meta name="description" content="Hire Zahin Syahiran, a UI/UX designer and branding expert specializing in enterprise software, SaaS, and premium tech company profiles." />
-        <meta property="og:title" content="Zahin Syahiran | Freelance UI/UX Designer & Brand Strategist" />
+        <meta property="og:title" content="Zahin Syahiran | UI/UX Designer & Brand Strategist" />
         <meta property="og:description" content="Hire Zahin Syahiran, a UI/UX designer and branding expert specializing in enterprise software, SaaS, and premium tech company profiles." />
-        <meta name="twitter:title" content="Zahin Syahiran | Freelance UI/UX Designer & Brand Strategist" />
+        <meta name="twitter:title" content="Zahin Syahiran | UI/UX Designer & Brand Strategist" />
         <meta name="twitter:description" content="Hire Zahin Syahiran, a UI/UX designer and branding expert specializing in enterprise software, SaaS, and premium tech company profiles." />
       </Helmet>
       

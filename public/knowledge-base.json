@@ -1,0 +1,775 @@
+{
+  "_meta": {
+    "name": "byzahin.com Chatbot Knowledge Base",
+    "version": "1.0.0",
+    "description": "Keyword/intent-matching database for a client-side FAQ chatbot. Edit the 'answer' fields freely — the 'keywords' arrays are what the matcher scores against. Keep keywords lowercase.",
+    "audience": [
+      "recruiters_hiring_managers",
+      "freelance_clients"
+    ],
+    "how_to_edit": "Each object in 'intents' is one topic. 'keywords' = words/phrases that trigger it. 'examples' = sample real questions (for your reference + can double as training phrases). 'answer' = what the bot replies. 'quickReplies' = optional buttons shown after the answer to guide the next question. 'links' = optional URLs the bot can surface."
+  },
+  "settings": {
+    "matchThreshold": 0.35,
+    "maxQuickReplies": 4,
+    "caseSensitive": false,
+    "fallbackIntentId": "fallback"
+  },
+  "intents": [
+    {
+      "id": "greeting",
+      "category": "general",
+      "audience": [
+        "recruiters_hiring_managers",
+        "freelance_clients"
+      ],
+      "keywords": [
+        "hi",
+        "hello",
+        "hey",
+        "yo",
+        "salam",
+        "assalamualaikum",
+        "good morning",
+        "good afternoon"
+      ],
+      "examples": [
+        "hi",
+        "hello there",
+        "hey zahin"
+      ],
+      "answer": "Hey, thanks for stopping by! I'm Zahin's site assistant. Ask me about his work experience, skills, past projects, availability for freelance, or how to get in touch.",
+      "quickReplies": [
+        {
+          "label": "What does Zahin do?",
+          "intentId": "who_is_zahin"
+        },
+        {
+          "label": "See his work",
+          "intentId": "portfolio_projects"
+        },
+        {
+          "label": "Is he open for freelance?",
+          "intentId": "availability_freelance"
+        },
+        {
+          "label": "How do I contact him?",
+          "intentId": "contact"
+        }
+      ]
+    },
+    {
+      "id": "who_is_zahin",
+      "category": "about",
+      "audience": [
+        "recruiters_hiring_managers",
+        "freelance_clients"
+      ],
+      "keywords": [
+        "who is zahin",
+        "about zahin",
+        "who are you",
+        "tell me about yourself",
+        "introduce",
+        "background"
+      ],
+      "examples": [
+        "Who is Zahin?",
+        "Tell me about yourself",
+        "What's your background?"
+      ],
+      "answer": "Zahin Syahiran is a UI/UX Designer and Brand Strategist based in Malaysia with about 8 years of experience spanning graphic design, brand identity, and product/UX design. He's currently a Senior UI/UX Designer at Gamuda Technologies, and also runs his own design practice for freelance and consultancy work.",
+      "quickReplies": [
+        {
+          "label": "What's his current job?",
+          "intentId": "current_role"
+        },
+        {
+          "label": "What services does he offer?",
+          "intentId": "services_offered"
+        },
+        {
+          "label": "Show me his skills",
+          "intentId": "skills_tools"
+        }
+      ]
+    },
+    {
+      "id": "current_role",
+      "category": "experience",
+      "audience": [
+        "recruiters_hiring_managers"
+      ],
+      "keywords": [
+        "current job",
+        "current role",
+        "where does he work",
+        "employer",
+        "gamuda",
+        "full time job",
+        "day job"
+      ],
+      "examples": [
+        "Where does Zahin currently work?",
+        "What's his current position?"
+      ],
+      "answer": "Zahin is currently a Senior UI/UX Designer at Gamuda Technologies, working on AI-focused product design. Before that he built his experience across MoneyX, Borong Malaysia, PolicyStreet, Fixcolab, and Paperballad.",
+      "quickReplies": [
+        {
+          "label": "What's his design experience?",
+          "intentId": "experience_history"
+        },
+        {
+          "label": "Is he open to freelance too?",
+          "intentId": "availability_freelance"
+        }
+      ]
+    },
+    {
+      "id": "experience_history",
+      "category": "experience",
+      "audience": [
+        "recruiters_hiring_managers"
+      ],
+      "keywords": [
+        "experience",
+        "work history",
+        "career",
+        "companies worked",
+        "past jobs",
+        "resume",
+        "cv",
+        "employment history"
+      ],
+      "examples": [
+        "What's his work experience?",
+        "Can I see his resume?",
+        "Where has he worked before?"
+      ],
+      "answer": "Zahin has ~8 years across graphic design, branding, and product/UX. He founded Designloka (Malaysia's first subscription-based graphic design service) in 2019 while studying, then moved through in-house design roles at MoneyX, Borong Malaysia, PolicyStreet, Fixcolab, and Paperballad, and is now a Senior UI/UX Designer at Gamuda Technologies. [Add link to downloadable resume/CV if available]",
+      "quickReplies": [
+        {
+          "label": "Tell me about Designloka",
+          "intentId": "designloka"
+        },
+        {
+          "label": "What's his education?",
+          "intentId": "education"
+        },
+        {
+          "label": "Download resume",
+          "intentId": "resume_download"
+        }
+      ]
+    },
+    {
+      "id": "designloka",
+      "category": "experience",
+      "audience": [
+        "recruiters_hiring_managers",
+        "freelance_clients"
+      ],
+      "keywords": [
+        "designloka",
+        "own agency",
+        "founded",
+        "startup",
+        "entrepreneur"
+      ],
+      "examples": [
+        "What is Designloka?",
+        "Did he run his own business?"
+      ],
+      "answer": "Designloka was Zahin's own venture — Malaysia's first subscription-based graphic design service, founded in 2019 while he was still studying. He ran it solo-to-small-team, handling business development, finance, and delivery, and worked with clients including IPG Mediabrands accounts and Grain Singapore.",
+      "quickReplies": [
+        {
+          "label": "What services does he offer now?",
+          "intentId": "services_offered"
+        },
+        {
+          "label": "See his other projects",
+          "intentId": "portfolio_projects"
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "category": "about",
+      "audience": [
+        "recruiters_hiring_managers"
+      ],
+      "keywords": [
+        "education",
+        "degree",
+        "university",
+        "study",
+        "qualification",
+        "graduate"
+      ],
+      "examples": [
+        "What did he study?",
+        "Does he have a degree?"
+      ],
+      "answer": "Zahin holds an Honours degree in Graphic Design from Saito University College (2024).",
+      "quickReplies": [
+        {
+          "label": "What's his work experience?",
+          "intentId": "experience_history"
+        },
+        {
+          "label": "What tools does he use?",
+          "intentId": "skills_tools"
+        }
+      ]
+    },
+    {
+      "id": "skills_tools",
+      "category": "skills",
+      "audience": [
+        "recruiters_hiring_managers",
+        "freelance_clients"
+      ],
+      "keywords": [
+        "skills",
+        "tools",
+        "software",
+        "figma",
+        "what can he do",
+        "expertise",
+        "tech stack",
+        "design tools"
+      ],
+      "examples": [
+        "What tools does Zahin use?",
+        "What are his design skills?",
+        "Does he use Figma?"
+      ],
+      "answer": "Core strengths: UI/UX design, design systems, brand identity, and product design. Tools include Figma (primary), plus AI-assisted / vibe-coding tools like Lovable, Antigravity, and Aura.build for rapid prototyping and shipping AI-native web builds. [Add any additional tools: e.g. Adobe CC, Framer, Webflow, etc.]",
+      "quickReplies": [
+        {
+          "label": "Show me his projects",
+          "intentId": "portfolio_projects"
+        },
+        {
+          "label": "What services does he offer?",
+          "intentId": "services_offered"
+        }
+      ]
+    },
+    {
+      "id": "services_offered",
+      "category": "services",
+      "audience": [
+        "freelance_clients"
+      ],
+      "keywords": [
+        "services",
+        "hire",
+        "freelance",
+        "consultancy",
+        "what can you help with",
+        "offer",
+        "packages"
+      ],
+      "examples": [
+        "What services do you offer?",
+        "Can I hire you?",
+        "Do you do freelance work?"
+      ],
+      "answer": "Zahin offers UI/UX design, brand identity systems, and product design consultancy for startups and businesses — from wireframes and design systems to full website/product builds using AI-native tools. [Confirm current service tiers/packages here, e.g. 3-tier model if applicable.]",
+      "quickReplies": [
+        {
+          "label": "What's the process like?",
+          "intentId": "process"
+        },
+        {
+          "label": "How much does it cost?",
+          "intentId": "pricing"
+        },
+        {
+          "label": "Show me past work",
+          "intentId": "portfolio_projects"
+        }
+      ]
+    },
+    {
+      "id": "pricing",
+      "category": "services",
+      "audience": [
+        "freelance_clients"
+      ],
+      "keywords": [
+        "price",
+        "pricing",
+        "cost",
+        "rate",
+        "rates",
+        "budget",
+        "how much",
+        "fee"
+      ],
+      "examples": [
+        "How much do you charge?",
+        "What's your rate?",
+        "What's the budget for a project?"
+      ],
+      "answer": "Pricing depends on project scope — whether it's a single deliverable (e.g. brand identity) or a full product design engagement. Best to reach out directly with your project details for a quote. [Optionally add a starting rate/range here.]",
+      "quickReplies": [
+        {
+          "label": "How do I contact him?",
+          "intentId": "contact"
+        },
+        {
+          "label": "What's the process like?",
+          "intentId": "process"
+        }
+      ]
+    },
+    {
+      "id": "process",
+      "category": "services",
+      "audience": [
+        "freelance_clients"
+      ],
+      "keywords": [
+        "process",
+        "how do you work",
+        "workflow",
+        "steps",
+        "what happens next",
+        "timeline"
+      ],
+      "examples": [
+        "What's your design process?",
+        "How does a project usually go?"
+      ],
+      "answer": "Typical flow: discovery call to understand goals → research & wireframes → design system / hi-fi design → review & iteration → handoff (Figma files, dev-ready specs, or a working build if using AI-native tools). Timelines vary by scope. [Confirm/adjust to your actual process.]",
+      "quickReplies": [
+        {
+          "label": "What services does he offer?",
+          "intentId": "services_offered"
+        },
+        {
+          "label": "Contact him",
+          "intentId": "contact"
+        }
+      ]
+    },
+    {
+      "id": "availability_freelance",
+      "category": "services",
+      "audience": [
+        "recruiters_hiring_managers",
+        "freelance_clients"
+      ],
+      "keywords": [
+        "available",
+        "availability",
+        "open for work",
+        "taking clients",
+        "freelance available",
+        "book"
+      ],
+      "examples": [
+        "Is he available for freelance?",
+        "Is he taking new clients?"
+      ],
+      "answer": "Zahin works full-time at Gamuda Technologies but takes on select freelance and consultancy projects outside of work hours. Reach out with your project details and timeline to check current availability. [Update this if availability status changes.]",
+      "quickReplies": [
+        {
+          "label": "How do I contact him?",
+          "intentId": "contact"
+        },
+        {
+          "label": "What services does he offer?",
+          "intentId": "services_offered"
+        }
+      ]
+    },
+    {
+      "id": "portfolio_projects",
+      "category": "work",
+      "audience": [
+        "recruiters_hiring_managers",
+        "freelance_clients"
+      ],
+      "keywords": [
+        "projects",
+        "portfolio",
+        "work samples",
+        "case study",
+        "case studies",
+        "show me his work",
+        "examples of work"
+      ],
+      "examples": [
+        "Can I see his projects?",
+        "What has he built?",
+        "Show me case studies"
+      ],
+      "answer": "A few highlights: a unified visual identity + website revamp for Mesiniaga's 7-product AI suite, an AI-native corporate website built with Antigravity/Aura.build/Unicorn Studio, and independent product builds like Cari Rumah (a trust-first room rental platform) and CareerVault (a personal career tracking tool). Full case studies and journal write-ups are on the site. [Link to /journals or /work page]",
+      "quickReplies": [
+        {
+          "label": "Tell me about Cari Rumah",
+          "intentId": "cari_rumah"
+        },
+        {
+          "label": "Tell me about Mesiniaga project",
+          "intentId": "mesiniaga_project"
+        },
+        {
+          "label": "See his journals/blog",
+          "intentId": "journals_blog"
+        }
+      ]
+    },
+    {
+      "id": "cari_rumah",
+      "category": "work",
+      "audience": [
+        "recruiters_hiring_managers",
+        "freelance_clients"
+      ],
+      "keywords": [
+        "cari rumah",
+        "housemate",
+        "rental platform",
+        "room rental"
+      ],
+      "examples": [
+        "What is Cari Rumah?"
+      ],
+      "answer": "Cari Rumah is a self-initiated product concept — a trust-first housemate/room rental platform, prototyped in Lovable using the MUI Mantis design system.",
+      "quickReplies": [
+        {
+          "label": "See other projects",
+          "intentId": "portfolio_projects"
+        },
+        {
+          "label": "Contact him",
+          "intentId": "contact"
+        }
+      ]
+    },
+    {
+      "id": "mesiniaga_project",
+      "category": "work",
+      "audience": [
+        "recruiters_hiring_managers",
+        "freelance_clients"
+      ],
+      "keywords": [
+        "mesiniaga",
+        "ai suite",
+        "enterprise it project"
+      ],
+      "examples": [
+        "Tell me about the Mesiniaga project"
+      ],
+      "answer": "For Mesiniaga, a Malaysian enterprise IT company, Zahin worked on a unified visual identity system across their 7-product AI suite plus a website revamp — covering colour direction, illustration style, wireframes (lo-fi to hi-fi), and dev-ready design files.",
+      "quickReplies": [
+        {
+          "label": "See other projects",
+          "intentId": "portfolio_projects"
+        },
+        {
+          "label": "What services does he offer?",
+          "intentId": "services_offered"
+        }
+      ]
+    },
+    {
+      "id": "journals_blog",
+      "category": "content",
+      "audience": [
+        "recruiters_hiring_managers",
+        "freelance_clients"
+      ],
+      "keywords": [
+        "blog",
+        "journal",
+        "journals",
+        "articles",
+        "writing",
+        "posts"
+      ],
+      "examples": [
+        "Does he write about his process?",
+        "Where can I read his journals?"
+      ],
+      "answer": "Zahin documents select projects and process notes in his Journals section — e.g. the AI-native corporate design build. [Link to /journals]",
+      "quickReplies": [
+        {
+          "label": "See his projects",
+          "intentId": "portfolio_projects"
+        },
+        {
+          "label": "Contact him",
+          "intentId": "contact"
+        }
+      ]
+    },
+    {
+      "id": "faq_hiring_notice",
+      "category": "faq_hiring",
+      "audience": [
+        "recruiters_hiring_managers"
+      ],
+      "keywords": [
+        "notice period",
+        "resign",
+        "when can he start",
+        "start date"
+      ],
+      "examples": [
+        "What's his notice period?",
+        "When could he start a new role?"
+      ],
+      "answer": "[Fill in: current notice period / earliest possible start date, if actively open to new roles.]",
+      "quickReplies": [
+        {
+          "label": "What's his current role?",
+          "intentId": "current_role"
+        },
+        {
+          "label": "Contact him",
+          "intentId": "contact"
+        }
+      ]
+    },
+    {
+      "id": "faq_hiring_why_design",
+      "category": "faq_hiring",
+      "audience": [
+        "recruiters_hiring_managers"
+      ],
+      "keywords": [
+        "why design",
+        "how did you get into design",
+        "career switch",
+        "why ux"
+      ],
+      "examples": [
+        "How did you get into UX design?",
+        "Why did you choose this career?"
+      ],
+      "answer": "Zahin started in graphic design and branding, then moved into product/UX as he got more involved in building full digital products — running Designloka gave him early exposure to both the creative and business sides, which pulled him toward end-to-end product design.",
+      "quickReplies": [
+        {
+          "label": "See his experience",
+          "intentId": "experience_history"
+        },
+        {
+          "label": "What's Designloka?",
+          "intentId": "designloka"
+        }
+      ]
+    },
+    {
+      "id": "faq_hiring_remote",
+      "category": "faq_hiring",
+      "audience": [
+        "recruiters_hiring_managers"
+      ],
+      "keywords": [
+        "remote",
+        "onsite",
+        "hybrid",
+        "location work",
+        "work from home"
+      ],
+      "examples": [
+        "Is he open to remote work?",
+        "Does he work onsite?"
+      ],
+      "answer": "[Fill in: preference for remote / hybrid / onsite, and whether this varies for full-time vs freelance work.]",
+      "quickReplies": [
+        {
+          "label": "Where is he based?",
+          "intentId": "location"
+        },
+        {
+          "label": "Contact him",
+          "intentId": "contact"
+        }
+      ]
+    },
+    {
+      "id": "location",
+      "category": "about",
+      "audience": [
+        "recruiters_hiring_managers",
+        "freelance_clients"
+      ],
+      "keywords": [
+        "where based",
+        "location",
+        "malaysia",
+        "kuala lumpur",
+        "based in",
+        "timezone"
+      ],
+      "examples": [
+        "Where is Zahin based?",
+        "What timezone is he in?"
+      ],
+      "answer": "Zahin is based in Malaysia (GMT+8).",
+      "quickReplies": [
+        {
+          "label": "Is he open to remote work?",
+          "intentId": "faq_hiring_remote"
+        },
+        {
+          "label": "Contact him",
+          "intentId": "contact"
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "category": "contact",
+      "audience": [
+        "recruiters_hiring_managers",
+        "freelance_clients"
+      ],
+      "keywords": [
+        "contact",
+        "email",
+        "reach out",
+        "get in touch",
+        "message him",
+        "linkedin",
+        "connect"
+      ],
+      "examples": [
+        "How do I contact Zahin?",
+        "What's his email?",
+        "How can I reach him?"
+      ],
+      "answer": "Best way to reach Zahin: [Add email], LinkedIn: [linkedin.com/in/zahinsyahiran], or X: [@byzahin_]. For project inquiries, include a short brief of what you need and your timeline.",
+      "quickReplies": [
+        {
+          "label": "What services does he offer?",
+          "intentId": "services_offered"
+        },
+        {
+          "label": "Is he available for freelance?",
+          "intentId": "availability_freelance"
+        }
+      ]
+    },
+    {
+      "id": "socials",
+      "category": "contact",
+      "audience": [
+        "recruiters_hiring_managers",
+        "freelance_clients"
+      ],
+      "keywords": [
+        "social media",
+        "twitter",
+        "x",
+        "instagram",
+        "linkedin profile",
+        "behance"
+      ],
+      "examples": [
+        "Does he have a LinkedIn?",
+        "Where can I follow him?"
+      ],
+      "answer": "Zahin shares design content and updates on LinkedIn (Zahin Syahiran) and X (@byzahin_). [Add Instagram/Behance links if active.]",
+      "quickReplies": [
+        {
+          "label": "Contact him directly",
+          "intentId": "contact"
+        },
+        {
+          "label": "See his projects",
+          "intentId": "portfolio_projects"
+        }
+      ]
+    },
+    {
+      "id": "resume_download",
+      "category": "contact",
+      "audience": [
+        "recruiters_hiring_managers"
+      ],
+      "keywords": [
+        "resume",
+        "cv",
+        "download resume",
+        "pdf"
+      ],
+      "examples": [
+        "Can I download his resume?",
+        "Do you have a CV?"
+      ],
+      "answer": "[Add a direct link to a downloadable PDF resume/CV, if you want to offer one — the LinkedIn post mentioned this site exists partly so recruiters don't need a PDF, so this is optional.]",
+      "quickReplies": [
+        {
+          "label": "See his experience",
+          "intentId": "experience_history"
+        },
+        {
+          "label": "Contact him",
+          "intentId": "contact"
+        }
+      ]
+    },
+    {
+      "id": "thanks",
+      "category": "general",
+      "audience": [
+        "recruiters_hiring_managers",
+        "freelance_clients"
+      ],
+      "keywords": [
+        "thanks",
+        "thank you",
+        "appreciate it",
+        "cool thanks"
+      ],
+      "examples": [
+        "Thanks!",
+        "Thank you"
+      ],
+      "answer": "Anytime! Feel free to ask anything else, or reach out to Zahin directly if you'd like to talk further.",
+      "quickReplies": [
+        {
+          "label": "Contact him",
+          "intentId": "contact"
+        },
+        {
+          "label": "See his projects",
+          "intentId": "portfolio_projects"
+        }
+      ]
+    },
+    {
+      "id": "fallback",
+      "category": "general",
+      "audience": [
+        "recruiters_hiring_managers",
+        "freelance_clients"
+      ],
+      "keywords": [],
+      "examples": [],
+      "answer": "I don't have an answer for that yet — but you can reach Zahin directly and he'll get back to you. Try asking about his experience, skills, past projects, services, or how to get in touch.",
+      "quickReplies": [
+        {
+          "label": "What does Zahin do?",
+          "intentId": "who_is_zahin"
+        },
+        {
+          "label": "See his work",
+          "intentId": "portfolio_projects"
+        },
+        {
+          "label": "Contact him",
+          "intentId": "contact"
+        }
+      ]
+    }
+  ]
+}

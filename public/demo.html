@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>byzahin.com Chatbot — Demo</title>
+<style>
+  body { font-family: -apple-system, Helvetica, Arial, sans-serif; max-width: 480px; margin: 40px auto; background: #f7f6f3; }
+  #chat { background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; }
+  #messages { height: 420px; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+  .msg { padding: 10px 14px; border-radius: 14px; max-width: 80%; font-size: 14px; line-height: 1.4; }
+  .user { align-self: flex-end; background: #111; color: #fff; }
+  .bot { align-self: flex-start; background: #eee; color: #111; }
+  #quickReplies { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 16px 12px; }
+  .qr { border: 1px solid #ccc; background: #fff; border-radius: 999px; padding: 6px 12px; font-size: 12px; cursor: pointer; }
+  .qr:hover { background: #f0f0f0; }
+  #inputRow { display: flex; border-top: 1px solid #eee; }
+  #inputText { flex: 1; border: none; padding: 12px; font-size: 14px; outline: none; }
+  #sendBtn { border: none; background: #111; color: #fff; padding: 0 18px; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<h3>Chatbot demo (local test — not the final site widget)</h3>
+<div id="chat">
+  <div id="messages"></div>
+  <div id="quickReplies"></div>
+  <div id="inputRow">
+    <input id="inputText" placeholder="Ask about Zahin's work, skills, services..." />
+    <button id="sendBtn">Send</button>
+  </div>
+</div>
+
+<script type="module">
+  import { ChatbotEngine, loadKnowledgeBase } from "./chatbot-engine.js";
+
+  const messagesEl = document.getElementById("messages");
+  const quickRepliesEl = document.getElementById("quickReplies");
+  const inputEl = document.getElementById("inputText");
+  const sendBtn = document.getElementById("sendBtn");
+
+  let bot;
+
+  function addMessage(text, role) {
+    const div = document.createElement("div");
+    div.className = `msg ${role}`;
+    div.textContent = text;
+    messagesEl.appendChild(div);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  function renderQuickReplies(replies) {
+    quickRepliesEl.innerHTML = "";
+    replies.forEach((r) => {
+      const btn = document.createElement("button");
+      btn.className = "qr";
+      btn.textContent = r.label;
+      btn.onclick = () => handleQuickReply(r);
+      quickRepliesEl.appendChild(btn);
+    });
+  }
+
+  // Typed input still goes through keyword matching.
+  function handleUserInput(text) {
+    if (!text.trim()) return;
+    addMessage(text, "user");
+    const result = bot.ask(text);
+    addMessage(result.answer, "bot");
+    renderQuickReplies(result.quickReplies);
+    inputEl.value = "";
+  }
+
+  // Quick-reply buttons skip matching entirely — deterministic, always correct.
+  function handleQuickReply(quickReply) {
+    addMessage(quickReply.label, "user");
+    const result = bot.askByIntentId(quickReply.intentId);
+    addMessage(result.answer, "bot");
+    renderQuickReplies(result.quickReplies);
+  }
+
+  sendBtn.onclick = () => handleUserInput(inputEl.value);
+  inputEl.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") handleUserInput(inputEl.value);
+  });
+
+  loadKnowledgeBase("./knowledge-base.json").then((kb) => {
+    bot = new ChatbotEngine(kb);
+    const greeting = bot.ask("hi");
+    addMessage(greeting.answer, "bot");
+    renderQuickReplies(greeting.quickReplies);
+  });
+</script>
+
+</body>
+</html>
