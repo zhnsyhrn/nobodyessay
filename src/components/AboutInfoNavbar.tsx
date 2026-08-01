@@ -215,7 +215,7 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
                             />
                             <div>
                               <span className="font-semibold text-slate-900 text-sm">Justin Chen</span>
-                              <span className="text-slate-400 text-xs ml-1.5">• Hiring Manager & Product Leader</span>
+                              <span className="text-slate-400 text-xs ml-1.5">• Managing Partner, Adeve Digital Sdn Bhd</span>
                             </div>
                           </dt>
                           <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed pl-9.5">
