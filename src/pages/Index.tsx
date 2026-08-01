@@ -35,7 +35,6 @@ const portfolioImages = [
 
 const HERO_TITLES = [
   "Hey! Welcome to my space.",
-  "I am Zahin Syahiran.",
   "Entrepreneurship, Product Design & Branding."
 ];
 
@@ -181,7 +180,7 @@ const Index = () => {
                     title="Send question to AI"
                     className="p-2 sm:p-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition-colors group/btn shrink-0 flex items-center justify-center"
                   >
-                    <CornerDownLeft size={16} />
+                    <ArrowRight size={16} />
                   </button>
                 </div>
               </form>
