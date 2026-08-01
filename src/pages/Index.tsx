@@ -246,7 +246,7 @@ const Index = () => {
             <CarouselContent className="-ml-2 md:-ml-4">
               {galleryImages.map((item, index) => <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3">
                   <Link to={item.slug ? `/projects/${item.slug}` : "/studio"} className="block">
-                    <div className="group relative aspect-square overflow-hidden rounded-[10px] cursor-pointer">
+                    <div className="group relative aspect-[4/5] sm:aspect-square overflow-hidden rounded-[10px] cursor-pointer">
                       <LazyImage src={item.src} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" priority={index < 2}
                         preload={index < 3}
                         blurUp={true}
