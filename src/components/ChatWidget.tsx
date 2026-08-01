@@ -155,7 +155,7 @@ export default function ChatWidget() {
           <img 
             src="/Profile/photo_6233468766528409645_y.jpg_202607230735.jpeg" 
             alt="Zahin Syahiran" 
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            className="w-full h-full object-cover scale-[1.75] translate-y-[10%] transition-transform duration-500 group-hover:scale-[1.9]"
           />
         </div>
       </button>

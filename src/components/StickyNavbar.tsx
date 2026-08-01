@@ -68,7 +68,9 @@ const StickyNavbar = () => {
       <div className="max-w-6xl mx-auto">
         <div className="relative flex items-center justify-between rounded-full bg-white/60 dark:bg-[#1a1a1a]/80 backdrop-blur-xl border border-border/60 dark:border-white/10 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.6)] pl-4 sm:pl-5 pr-2 py-2 transition-all duration-300">
           <Link to="/" onClick={closeMenu} className="flex items-center space-x-2 sm:space-x-3 z-10">
-            <img src="/lovable-uploads/e058676f-a0f2-441a-983c-a931949d96b8.png" alt="byzahin" className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover" />
+            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full overflow-hidden shrink-0">
+              <img src="/Profile/photo_6233468766528409645_y.jpg_202607230735.jpeg" alt="byzahin" className="w-full h-full object-cover scale-[1.7] translate-y-[10%]" />
+            </div>
             <h1 className="font-display text-base sm:text-lg font-medium hover:text-muted-foreground transition-colors">byzahin</h1>
           </Link>
 
@@ -137,7 +139,9 @@ const StickyNavbar = () => {
             {/* Header with close button */}
             <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-gray-200">
               <Link to="/" onClick={closeMenu} className="flex items-center space-x-3">
-                <img src="/lovable-uploads/e058676f-a0f2-441a-983c-a931949d96b8.png" alt="byzahin" className="w-8 h-8 rounded-full object-cover" />
+                <div className="w-8 h-8 rounded-full overflow-hidden shrink-0">
+                  <img src="/Profile/photo_6233468766528409645_y.jpg_202607230735.jpeg" alt="byzahin" className="w-full h-full object-cover scale-[1.7] translate-y-[10%]" />
+                </div>
                 <h1 className="font-display text-lg sm:text-xl font-medium text-black">
                   byzahin
                 </h1>

@@ -65,7 +65,7 @@ export default function ChatOverlay() {
           <img 
             src="/Profile/photo_6233468766528409645_y.jpg_202607230735.jpeg" 
             alt="Zahin Syahiran" 
-            className="w-full h-full object-cover object-top" 
+            className="w-full h-full object-cover object-[center_20%] scale-[1.3]" 
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-80" />
           <div className="absolute bottom-4 left-0 right-0 flex justify-center">

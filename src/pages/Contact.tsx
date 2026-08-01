@@ -17,7 +17,7 @@ const Contact = () => {
             {/* Content Column */}
             <div className="space-y-6">
               <div className="space-y-4">
-                <h1 className="font-display sm:text-4xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight lg:text-4xl text-3xl">Hiring for a Product Design role or in search for someone to do design works?</h1>
+                <h1 className="font-display sm:text-4xl font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-tight lg:text-4xl text-3xl">Are you looking for designer? Let's have a coffee chat.</h1>
                 <p style={{
                 color: 'var(--body-text)'
               }} className="font-mono text-lg max-w-2xl leading-[27px] sm:leading-relaxed px-1 mb-6 sm:mb-8 sm:px-0 text-zinc-400 sm:text-sm">SEND ME A MESSAGE ON LINKEDIN OR AN EMAIL.</p>
@@ -39,7 +39,7 @@ const Contact = () => {
             {/* Image Column */}
             <div className="flex justify-center">
               <div className="w-full max-w-md aspect-square bg-muted overflow-hidden" style={{ borderRadius: '10px' }}>
-                <img src="/Profile/photo_6233468766528409645_y.jpg_202607230735.jpeg" alt="Zahin Syahiran profile photo" className="w-full h-full object-cover" />
+                <img src="/Profile/photo_6233468766528409645_y.jpg_202607230735.jpeg" alt="Zahin Syahiran profile photo" className="w-full h-full object-cover scale-[1.35] translate-y-[6%]" />
               </div>
             </div>
           </div>
