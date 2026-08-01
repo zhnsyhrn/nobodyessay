@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { X, Send, ArrowRight, RotateCcw, MessageCircle } from 'lucide-react';
+import { X, Send, ArrowRight, RotateCcw, MessageCircle, Minus } from 'lucide-react';
 import { useChat } from '../contexts/ChatContext';
 
 export default function ChatOverlay() {
@@ -34,11 +34,18 @@ export default function ChatOverlay() {
         <div className="flex items-center gap-1">
           <button
             onClick={resetChat}
-            className="flex items-center gap-1 px-2 py-1 mr-2 rounded-md hover:bg-black/5 text-slate-500 hover:text-slate-700 text-xs font-medium transition-colors"
+            className="flex items-center gap-1 px-2 py-1 mr-1 rounded-md hover:bg-black/5 text-slate-500 hover:text-slate-700 text-xs font-medium transition-colors"
             title="Reset Chat"
           >
             <RotateCcw className="w-3.5 h-3.5" />
             <span>Reset</span>
+          </button>
+          <button
+            onClick={closeChat}
+            className="p-1.5 rounded-full hover:bg-black/5 text-slate-500 transition-colors"
+            title="Minimize Chat"
+          >
+            <Minus className="w-4 h-4" />
           </button>
           <button
             onClick={closeChat}
