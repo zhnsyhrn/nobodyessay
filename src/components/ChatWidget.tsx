@@ -153,7 +153,7 @@ export default function ChatWidget() {
         <div className="absolute -inset-3 bg-blue-500/40 blur-xl transition-all duration-500 rounded-full group-hover:bg-cyan-400/60 group-hover:blur-2xl group-hover:[border-radius:40%_60%_70%_30%/40%_50%_60%_50%]" />
         <div className="w-full h-full overflow-hidden bg-slate-900 relative z-10 transition-all duration-500 rounded-full group-hover:[border-radius:40%_60%_70%_30%/40%_50%_60%_50%]">
           <img 
-            src="/lovable-uploads/zahin-profile.png" 
+            src="/Profile/photo_6233468766528409645_y.jpg_202607230735.jpeg" 
             alt="Zahin Syahiran" 
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />

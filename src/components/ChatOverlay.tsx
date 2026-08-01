@@ -63,7 +63,7 @@ export default function ChatOverlay() {
         {/* Prominent Image at the top of the chat */}
         <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden mb-2 shadow-sm border border-black/5 group">
           <img 
-            src="/lovable-uploads/zahin-profile.png" 
+            src="/Profile/photo_6233468766528409645_y.jpg_202607230735.jpeg" 
             alt="Zahin Syahiran" 
             className="w-full h-full object-cover object-top" 
           />
