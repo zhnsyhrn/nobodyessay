@@ -130,7 +130,8 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-muted-foreground font-mono;
+    @apply bg-background text-muted-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 14px;
   }
 
@@ -144,17 +145,14 @@ All colors MUST be HSL.
     }
   }
 
-  /* Typography classes for the writing portfolio */
-  .font-display, h1, h2, h3, h4, h5, h6 {
-    font-family: 'Basis Grotesque Pro', 'Cabinet Grotesk', 'Host Grotesk', 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Design System Typography Standards */
+  .font-display, .font-heading, .font-title, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Basis Grotesque Pro', 'Cabinet Grotesk', 'Host Grotesk', 'Space Grotesk', sans-serif;
     color: hsl(var(--foreground));
   }
 
-  .font-typewriter {
-    font-family: 'Inter', sans-serif;
-    letter-spacing: 0.02em;
-    color: hsl(var(--muted-foreground));
-    font-size: 14px;
+  .font-body, .font-subtitle, .font-jakarta, .font-typewriter, .font-mono, p, span, button, input, textarea, select {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   }
 
   /* Custom animations for subtle interactions */

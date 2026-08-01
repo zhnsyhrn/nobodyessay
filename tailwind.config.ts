@@ -19,11 +19,16 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'display': ['"Basis Grotesque Pro"', '"Cabinet Grotesk"', '"Host Grotesk"', '"Space Grotesk"', 'Inter', 'sans-serif'],
+				'display': ['"Basis Grotesque Pro"', '"Cabinet Grotesk"', '"Host Grotesk"', '"Space Grotesk"', 'sans-serif'],
+				'heading': ['"Basis Grotesque Pro"', '"Cabinet Grotesk"', '"Host Grotesk"', '"Space Grotesk"', 'sans-serif'],
+				'title': ['"Basis Grotesque Pro"', '"Cabinet Grotesk"', '"Host Grotesk"', '"Space Grotesk"', 'sans-serif'],
+				'body': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+				'subtitle': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
 				'typewriter': ['Inter', 'sans-serif'],
 				'mono': ['Inter', 'sans-serif'],
 				'lyon': ['Lyon Text', 'serif'],
-				'jakarta': ['"Basis Grotesque Pro"', '"Cabinet Grotesk"', '"Host Grotesk"', 'Inter', 'sans-serif'],
+				'jakarta': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+				'sans': ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
