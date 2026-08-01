@@ -212,7 +212,7 @@ export const ProjectInfoNavbar: React.FC<ProjectInfoNavbarProps> = ({
                             <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1">
                               {key}
                             </dt>
-                            <dd className={`font-display text-slate-900 leading-relaxed ${isLong ? "text-base sm:text-lg font-normal" : "text-xl sm:text-2xl font-normal"}`}>
+                            <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed">
                               {value}
                             </dd>
                           </motion.div>

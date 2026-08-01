@@ -141,7 +141,7 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
                           <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1">
                             Years of Experience
                           </dt>
-                          <dd className="font-display text-slate-900 text-xl sm:text-2xl font-normal">
+                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed">
                             6 Years (FinTech, InsurTech, Enterprise B2B Platforms)
                           </dd>
                         </div>
