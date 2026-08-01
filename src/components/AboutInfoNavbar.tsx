@@ -187,21 +187,21 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
                     {/* TAB 2: TESTIMONIALS */}
                     {activeTab === "TESTIMONIALS" && (
                       <div className="space-y-5 border-b border-slate-100 pb-6">
-                        {/* 1. Casimir Yong */}
+                        {/* 1. Tang Siew Wai */}
                         <div>
                           <dt className="font-sans text-[13px] text-slate-500 font-medium mb-1.5 flex items-center gap-2.5">
                             <img
-                              src="/Testimonials/CasimirYong.jpg"
-                              alt="Casimir Yong"
+                              src="/Testimonials/TangSiewWai.jpg"
+                              alt="Tang Siew Wai 邓少伟"
                               className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover border border-slate-200 shadow-sm shrink-0"
                             />
                             <div>
-                              <span className="font-semibold text-slate-900 text-sm">Casimir Yong</span>
-                              <span className="text-slate-400 text-xs ml-1.5">• CEO, Paperballad & Co.</span>
+                              <span className="font-semibold text-slate-900 text-sm">Tang Siew Wai 邓少伟</span>
+                              <span className="text-slate-400 text-xs ml-1.5">• Chief Digital Officer, PolicyStreet</span>
                             </div>
                           </dt>
                           <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed pl-9.5">
-                            "It's difficult to come across someone who is as passionate about design as Zahin. Two years ago, I had the pleasure of working with Zahin and learning from him on a number of entrepreneurship-related projects. I was always in awe of Zahin's ability to combine both critical thinking and creative thinking into his craft and design. No matter how challenging or minor the issue, Zahin gives his all and strives to find a lasting solution that pleases his devoted clientele. Any client would be lucky to work with Zahin and he has my highest recommendation as a designer."
+                            "Zahin Syahiran it has been a wonderful experience working together with you to revamp our website, improved the UI of our D2C site & claims portals, refreshed the PolicyStreet brand, enhanced the overall user experience, and many more interesting projects. You've made tons of significant contributions to PolicyStreet, and I'll always remember the milestones that you have achieved together with the team. I sincerely wish you all the best in your next adventure. I'm pretty sure you'll continue to do well. Keep in touch!"
                           </dd>
                         </div>
 
@@ -241,25 +241,7 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
                           </dd>
                         </div>
 
-                        {/* 4. Karu Khoo */}
-                        <div className="border-t border-slate-100/80 pt-4">
-                          <dt className="font-sans text-[13px] text-slate-500 font-medium mb-1.5 flex items-center gap-2.5">
-                            <img
-                              src="/Testimonials/KaruKhoo.png"
-                              alt="Karu Khoo"
-                              className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover border border-slate-200 shadow-sm shrink-0"
-                            />
-                            <div>
-                              <span className="font-semibold text-slate-900 text-sm">Karu Khoo</span>
-                              <span className="text-slate-400 text-xs ml-1.5">• Country Head / Commercial Director / People & Growth</span>
-                            </div>
-                          </dt>
-                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed pl-9.5">
-                            "Thinking ahead of the competition and creatively presenting yourself. Great work !! A rare gem. Go beyond never settle for just enough."
-                          </dd>
-                        </div>
-
-                        {/* 5. Winnie Chua */}
+                        {/* 4. Winnie Chua */}
                         <div className="border-t border-slate-100/80 pt-4">
                           <dt className="font-sans text-[13px] text-slate-500 font-medium mb-1.5 flex items-center gap-2.5">
                             <img
@@ -277,21 +259,39 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
                           </dd>
                         </div>
 
-                        {/* 6. Tang Siew Wai */}
+                        {/* 5. Casimir Yong */}
                         <div className="border-t border-slate-100/80 pt-4">
                           <dt className="font-sans text-[13px] text-slate-500 font-medium mb-1.5 flex items-center gap-2.5">
                             <img
-                              src="/Testimonials/TangSiewWai.jpg"
-                              alt="Tang Siew Wai 邓少伟"
+                              src="/Testimonials/CasimirYong.jpg"
+                              alt="Casimir Yong"
                               className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover border border-slate-200 shadow-sm shrink-0"
                             />
                             <div>
-                              <span className="font-semibold text-slate-900 text-sm">Tang Siew Wai 邓少伟</span>
-                              <span className="text-slate-400 text-xs ml-1.5">• Chief Digital Officer, PolicyStreet</span>
+                              <span className="font-semibold text-slate-900 text-sm">Casimir Yong</span>
+                              <span className="text-slate-400 text-xs ml-1.5">• CEO, Paperballad & Co.</span>
                             </div>
                           </dt>
                           <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed pl-9.5">
-                            "Zahin Syahiran it has been a wonderful experience working together with you to revamp our website, improved the UI of our D2C site & claims portals, refreshed the PolicyStreet brand, enhanced the overall user experience, and many more interesting projects. You've made tons of significant contributions to PolicyStreet, and I'll always remember the milestones that you have achieved together with the team. I sincerely wish you all the best in your next adventure. I'm pretty sure you'll continue to do well. Keep in touch!"
+                            "It's difficult to come across someone who is as passionate about design as Zahin. Two years ago, I had the pleasure of working with Zahin and learning from him on a number of entrepreneurship-related projects. I was always in awe of Zahin's ability to combine both critical thinking and creative thinking into his craft and design. No matter how challenging or minor the issue, Zahin gives his all and strives to find a lasting solution that pleases his devoted clientele. Any client would be lucky to work with Zahin and he has my highest recommendation as a designer."
+                          </dd>
+                        </div>
+
+                        {/* 6. Karu Khoo */}
+                        <div className="border-t border-slate-100/80 pt-4">
+                          <dt className="font-sans text-[13px] text-slate-500 font-medium mb-1.5 flex items-center gap-2.5">
+                            <img
+                              src="/Testimonials/KaruKhoo.png"
+                              alt="Karu Khoo"
+                              className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover border border-slate-200 shadow-sm shrink-0"
+                            />
+                            <div>
+                              <span className="font-semibold text-slate-900 text-sm">Karu Khoo</span>
+                              <span className="text-slate-400 text-xs ml-1.5">• Country Head / Commercial Director / People & Growth</span>
+                            </div>
+                          </dt>
+                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed pl-9.5">
+                            "Thinking ahead of the competition and creatively presenting yourself. Great work !! A rare gem. Go beyond never settle for just enough."
                           </dd>
                         </div>
                       </div>
