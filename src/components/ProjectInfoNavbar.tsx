@@ -55,49 +55,28 @@ export const ProjectInfoNavbar: React.FC<ProjectInfoNavbarProps> = ({
     return null;
   }
 
-  // Categorize projectInfo keys into sections
-  const keyFactsEntries: [string, string][] = [];
-  const peopleEntries: [string, string][] = [];
-  const creditsEntries: [string, string][] = [];
-
-  Object.entries(projectInfo).forEach(([key, value]) => {
-    const lowerKey = key.toLowerCase();
-    if (lowerKey.includes("credit")) {
-      creditsEntries.push([key, value]);
-    } else if (
-      lowerKey.includes("lead") ||
-      lowerKey.includes("manager") ||
-      lowerKey.includes("people") ||
-      lowerKey.includes("personnel")
-    ) {
-      peopleEntries.push([key, value]);
-    } else {
-      keyFactsEntries.push([key, value]);
-    }
-  });
-
-  // Always ensure robust fallbacks so no tab is ever empty
-  if (peopleEntries.length === 0) {
-    Object.entries(projectInfo).forEach(([key, value]) => {
-      if (key.toLowerCase().includes("role") || key.toLowerCase().includes("project")) {
-        peopleEntries.push([key, value]);
+  const getValue = (keys: string[]): string => {
+    for (const key of keys) {
+      const lowerTarget = key.toLowerCase().trim();
+      const match = Object.entries(projectInfo).find(([k, v]) => {
+        const lowerK = k.toLowerCase().trim();
+        return (
+          lowerK === lowerTarget ||
+          lowerK.includes(lowerTarget) ||
+          lowerTarget.includes(lowerK)
+        );
+      });
+      if (
+        match &&
+        match[1] &&
+        match[1].trim() !== "" &&
+        match[1].toLowerCase() !== "not available"
+      ) {
+        return match[1];
       }
-    });
-    if (peopleEntries.length === 0) {
-      peopleEntries.push(...Object.entries(projectInfo));
     }
-  }
-
-  if (creditsEntries.length === 0) {
-    Object.entries(projectInfo).forEach(([key, value]) => {
-      if (key.toLowerCase().includes("contribution") || key.toLowerCase().includes("added") || key.toLowerCase().includes("role")) {
-        creditsEntries.push([key, value]);
-      }
-    });
-    if (creditsEntries.length === 0) {
-      creditsEntries.push(...Object.entries(projectInfo));
-    }
-  }
+    return "N/A";
+  };
 
   const handleTabClick = (tab: TabType) => {
     if (activeTab === tab) {
@@ -108,16 +87,43 @@ export const ProjectInfoNavbar: React.FC<ProjectInfoNavbarProps> = ({
   };
 
   const getEntriesForActiveTab = (): [string, string][] => {
-    switch (activeTab) {
-      case "KEY FACTS":
-        return keyFactsEntries.length > 0 ? keyFactsEntries : Object.entries(projectInfo);
-      case "PEOPLE":
-        return peopleEntries.length > 0 ? peopleEntries : Object.entries(projectInfo);
-      case "CREDITS":
-        return creditsEntries.length > 0 ? creditsEntries : Object.entries(projectInfo);
-      default:
-        return Object.entries(projectInfo);
+    if (activeTab === "KEY FACTS") {
+      return [
+        ["Project / Company", getValue(["Project / Company", "Company", "Project"])],
+        ["Location", getValue(["Location"])],
+        ["Type", getValue(["Type", "Category"])],
+        ["Year", getValue(["Year", "Date"])],
+        ["Role / Project Ownership", getValue(["Role / Project Ownership", "Role", "Ownership"])],
+        ["Contribution", getValue(["Contribution"])],
+        ["Value Added", getValue(["Value Added", "Value"])],
+      ];
     }
+
+    if (activeTab === "PEOPLE") {
+      return [
+        [
+          "Project Lead / Product Manager",
+          getValue([
+            "Project Lead / Product Manager(s)",
+            "Project Lead / Product Manager",
+            "Project Lead",
+            "Product Manager",
+          ]),
+        ],
+        ["Product Designer", getValue(["Product Designer", "Designer", "Lead Designer"])],
+        ["Project Team", getValue(["Project Team", "Team"])],
+      ];
+    }
+
+    if (activeTab === "CREDITS") {
+      return [
+        ["Product Team", getValue(["Product Team", "Credits", "Design Team"])],
+        ["Engineering", getValue(["Engineering", "Developers"])],
+        ["Main Contractor", getValue(["Main Contractor", "Contractor"])],
+      ];
+    }
+
+    return [];
   };
 
   const currentEntries = getEntriesForActiveTab();
