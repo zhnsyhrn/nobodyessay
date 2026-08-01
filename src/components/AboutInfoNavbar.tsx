@@ -184,35 +184,35 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
 
                     {/* TAB 2: TESTIMONIALS */}
                     {activeTab === "TESTIMONIALS" && (
-                      <div className="space-y-6 border-b border-slate-100 pb-6">
-                        <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                          <div className="flex items-center gap-2 mb-2 text-slate-900 font-display font-medium text-sm sm:text-base">
-                            <Quote size={16} className="text-blue-600" />
+                      <div className="space-y-5 border-b border-slate-100 pb-6">
+                        <div>
+                          <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1 flex items-center gap-1.5">
+                            <Quote size={14} className="text-slate-500" />
                             Simon Goh — Director of Digital Experience Studio, GETB
-                          </div>
-                          <p className="font-sans text-xs sm:text-sm text-slate-600 leading-relaxed italic">
+                          </dt>
+                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed">
                             "Zahin brought exceptional UX strategy and customer insight to GETB's website overhaul, streamlining our digital touchpoints with speed and precision."
-                          </p>
+                          </dd>
                         </div>
 
-                        <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                          <div className="flex items-center gap-2 mb-2 text-slate-900 font-display font-medium text-sm sm:text-base">
-                            <Quote size={16} className="text-blue-600" />
+                        <div className="border-t border-slate-100/80 pt-4">
+                          <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1 flex items-center gap-1.5">
+                            <Quote size={14} className="text-slate-500" />
                             Shaun Choy — Product Owner, PolicyStreet
-                          </div>
-                          <p className="font-sans text-xs sm:text-sm text-slate-600 leading-relaxed italic">
+                          </dt>
+                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed">
                             "Zahin's design leadership transformed our car insurance purchasing funnel. His attention to component detail and user flows significantly boosted our conversion rates."
-                          </p>
+                          </dd>
                         </div>
 
-                        <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                          <div className="flex items-center gap-2 mb-2 text-slate-900 font-display font-medium text-sm sm:text-base">
-                            <Quote size={16} className="text-blue-600" />
+                        <div className="border-t border-slate-100/80 pt-4">
+                          <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1 flex items-center gap-1.5">
+                            <Quote size={14} className="text-slate-500" />
                             Shan Yi T. — Product Manager, MoneyX / Hextar Tech
-                          </div>
-                          <p className="font-sans text-xs sm:text-sm text-slate-600 leading-relaxed italic">
+                          </dt>
+                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed">
                             "Zahin delivered high-impact net worth simulation designs within tight timelines. A proactive product designer who seamlessly connects user needs with engineering specs."
-                          </p>
+                          </dd>
                         </div>
                       </div>
                     )}
