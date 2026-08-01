@@ -202,14 +202,15 @@ const Index = () => {
                 ].map((suggestion, idx) => (
                   <button 
                     key={idx}
-                    onClick={() => {
+                    type="button"
+                    onClick={(e) => {
+                      e.preventDefault();
                       openChat();
                       sendMessage(suggestion.full);
                     }}
-                    className="px-3 sm:px-4 py-1.5 rounded-full bg-white/50 dark:bg-card/50 hover:bg-white dark:hover:bg-card border border-border/40 hover:border-border/80 text-xs sm:text-[13px] font-medium text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-all shadow-sm hover:shadow-md"
+                    className="px-3 sm:px-4 py-1.5 rounded-full bg-white/50 dark:bg-card/50 hover:bg-white dark:hover:bg-card border border-border/40 hover:border-border/80 text-xs sm:text-[13px] font-medium text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-all shadow-sm hover:shadow-md touch-manipulation cursor-pointer"
                   >
-                    <span className="sm:hidden">{suggestion.short}</span>
-                    <span className="hidden sm:inline">{suggestion.full}</span>
+                    <span>{suggestion.full}</span>
                   </button>
                 ))}
               </div>
