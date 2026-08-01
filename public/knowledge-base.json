@@ -67,11 +67,13 @@
       ],
       "keywords": [
         "who is zahin",
+        "who is zahin?",
         "about zahin",
         "who are you",
         "tell me about yourself",
         "introduce",
-        "background"
+        "background",
+        "zahin"
       ],
       "examples": [
         "Who are you?",
@@ -231,6 +233,9 @@
       ],
       "keywords": [
         "skills",
+        "what are your skills",
+        "what are your skills?",
+        "your skills",
         "tools",
         "software",
         "figma",
@@ -402,7 +407,17 @@
       "keywords": [
         "projects",
         "portfolio",
+        "recent works",
+        "show me your recent works",
+        "show me recent works",
+        "recent work",
+        "recent project",
+        "recent projects",
         "work samples",
+        "works",
+        "work",
+        "past work",
+        "past works",
         "case study",
         "case studies",
         "show me your work",

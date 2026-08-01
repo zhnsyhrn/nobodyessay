@@ -32,10 +32,22 @@ export class ChatbotEngine {
       const keyword = this._normalize(rawKeyword);
       if (!keyword) continue;
 
-      if (normalizedUser.includes(` ${keyword} `) || normalizedUser.includes(keyword)) {
-        const phraseBonus = keyword.includes(" ") ? 1.5 : 1.0;
+      // Exact phrase match gets top score
+      if (userText === keyword || normalizedUser.includes(` ${keyword} `)) {
+        const phraseBonus = keyword.includes(" ") ? 3.0 : 2.0;
         matchedScore += phraseBonus;
         matchesCount++;
+      } else if (normalizedUser.includes(keyword)) {
+        matchedScore += 1.0;
+        matchesCount++;
+      } else {
+        // Simple plural/singular stemming check (e.g. work vs works, project vs projects)
+        const stemUser = normalizedUser.replace(/s\b/g, "");
+        const stemKeyword = keyword.replace(/s\b/g, "");
+        if (stemUser.includes(stemKeyword)) {
+          matchedScore += 1.5;
+          matchesCount++;
+        }
       }
     }
 
@@ -44,7 +56,7 @@ export class ChatbotEngine {
     const userCoverage = matchedScore / Math.max(1, userWords.length);
     const keywordRatio = matchedScore / intent.keywords.length;
 
-    return Math.max(userCoverage, keywordRatio * 2, matchesCount >= 1 ? 0.5 : 0);
+    return Math.max(userCoverage, keywordRatio * 2, matchesCount >= 1 ? 0.4 : 0);
   }
 
   /**
