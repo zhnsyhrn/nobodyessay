@@ -214,4 +214,23 @@ All colors MUST be HSL.
   .animate-float-mascot {
     animation: floatMascot 4s ease-in-out infinite;
   }
+
+  /* ZHA-style ultra-thin scrollbar for modal popovers */
+  .zha-scrollbar::-webkit-scrollbar {
+    width: 3px;
+  }
+  .zha-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .zha-scrollbar::-webkit-scrollbar-thumb {
+    background: #000000;
+    border-radius: 9999px;
+  }
+  .zha-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #333333;
+  }
+  .zha-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #000000 transparent;
+  }
 }

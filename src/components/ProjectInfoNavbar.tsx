@@ -147,7 +147,7 @@ export const ProjectInfoNavbar: React.FC<ProjectInfoNavbarProps> = ({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.97 }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="pointer-events-auto mb-4 w-[94vw] max-w-[960px] max-h-[80vh] overflow-y-auto bg-white text-slate-900 rounded-2xl p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.35)] border border-slate-200/80 relative origin-bottom"
+            className="pointer-events-auto mb-4 w-[94vw] max-w-[960px] max-h-[80vh] overflow-y-auto zha-scrollbar bg-white text-slate-900 rounded-2xl p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.35)] border border-slate-200/80 relative origin-bottom"
           >
             {/* Close Button */}
             <button
