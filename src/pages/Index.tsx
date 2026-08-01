@@ -170,6 +170,13 @@ const Index = () => {
                   type="text" 
                   value={searchValue}
                   onChange={(e) => setSearchValue(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      e.preventDefault();
+                      handleHeroSubmit(e);
+                    }
+                  }}
+                  enterKeyHint="send"
                   placeholder={t('hero.search_placeholder')}
                   className="flex-1 bg-transparent border-none focus:outline-none focus:ring-0 text-foreground font-jakarta text-[15px] placeholder:text-muted-foreground w-full outline-none"
                 />
@@ -178,7 +185,7 @@ const Index = () => {
                   <button 
                     type="submit" 
                     title="Send question to AI"
-                    className="p-2 sm:p-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition-colors group/btn shrink-0 flex items-center justify-center"
+                    className="p-2 sm:p-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition-colors group/btn shrink-0 flex items-center justify-center touch-manipulation"
                   >
                     <ArrowRight size={16} />
                   </button>
