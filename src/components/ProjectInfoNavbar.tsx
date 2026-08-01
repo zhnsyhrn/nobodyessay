@@ -17,7 +17,8 @@ export const ProjectInfoNavbar: React.FC<ProjectInfoNavbarProps> = ({
   websiteUrl,
   image,
 }) => {
-  const [activeTab, setActiveTab] = useState<TabType>(null);
+  // Default active tab to "KEY FACTS" open on load (like ZHA reference)
+  const [activeTab, setActiveTab] = useState<TabType>("KEY FACTS");
   const panelRef = useRef<HTMLDivElement>(null);
 
   // Close panel on click outside or Escape key
@@ -70,9 +71,27 @@ export const ProjectInfoNavbar: React.FC<ProjectInfoNavbarProps> = ({
     }
   });
 
-  // Fallback if people section is empty
-  if (peopleEntries.length === 0 && projectInfo["Role / Project Ownership"]) {
-    peopleEntries.push(["Role / Project Ownership", projectInfo["Role / Project Ownership"]]);
+  // Always ensure robust fallbacks so no tab is ever empty
+  if (peopleEntries.length === 0) {
+    Object.entries(projectInfo).forEach(([key, value]) => {
+      if (key.toLowerCase().includes("role") || key.toLowerCase().includes("project")) {
+        peopleEntries.push([key, value]);
+      }
+    });
+    if (peopleEntries.length === 0) {
+      peopleEntries.push(...Object.entries(projectInfo));
+    }
+  }
+
+  if (creditsEntries.length === 0) {
+    Object.entries(projectInfo).forEach(([key, value]) => {
+      if (key.toLowerCase().includes("contribution") || key.toLowerCase().includes("added") || key.toLowerCase().includes("role")) {
+        creditsEntries.push([key, value]);
+      }
+    });
+    if (creditsEntries.length === 0) {
+      creditsEntries.push(...Object.entries(projectInfo));
+    }
   }
 
   const handleTabClick = (tab: TabType) => {
@@ -92,15 +111,11 @@ export const ProjectInfoNavbar: React.FC<ProjectInfoNavbarProps> = ({
       case "CREDITS":
         return creditsEntries.length > 0 ? creditsEntries : Object.entries(projectInfo);
       default:
-        return [];
+        return Object.entries(projectInfo);
     }
   };
 
   const currentEntries = getEntriesForActiveTab();
-  // Separate entries into short key fields (for 2-col grid) vs longer text fields
-  const shortEntries = currentEntries.filter(([_, value]) => value.length <= 60);
-  const longEntries = currentEntries.filter(([_, value]) => value.length > 60);
-
   const tabs: TabType[] = ["KEY FACTS", "PEOPLE", "CREDITS"];
 
   const getSectionTitle = () => {
@@ -132,7 +147,7 @@ export const ProjectInfoNavbar: React.FC<ProjectInfoNavbarProps> = ({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.97 }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="pointer-events-auto mb-4 w-[94vw] max-w-[960px] max-h-[82vh] overflow-y-auto bg-white text-slate-900 rounded-2xl p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.35)] border border-slate-200/80 relative origin-bottom"
+            className="pointer-events-auto mb-4 w-[94vw] max-w-[960px] max-h-[80vh] overflow-y-auto bg-white text-slate-900 rounded-2xl p-6 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.35)] border border-slate-200/80 relative origin-bottom"
           >
             {/* Close Button */}
             <button
@@ -172,52 +187,31 @@ export const ProjectInfoNavbar: React.FC<ProjectInfoNavbarProps> = ({
                     transition={{ duration: 0.2 }}
                     className="space-y-6"
                   >
-                    {/* Short Key-Value Pairs in 2-Column Grid */}
-                    {shortEntries.length > 0 && (
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-6 border-b border-slate-100 pb-6">
-                        {shortEntries.map(([key, value], idx) => (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-6 border-b border-slate-100 pb-6">
+                      {currentEntries.map(([key, value], idx) => {
+                        const isLong = value.length > 50;
+                        return (
                           <motion.div
                             key={key}
                             initial={{ opacity: 0, y: 8 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.25, delay: idx * 0.04 }}
+                            className={isLong ? "sm:col-span-2 border-t border-slate-100/80 pt-4" : ""}
                           >
                             <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1">
                               {key}
                             </dt>
-                            <dd className="font-display text-xl sm:text-2xl font-normal text-black leading-snug">
+                            <dd className={`font-display text-slate-900 leading-relaxed ${isLong ? "text-base sm:text-lg font-normal" : "text-xl sm:text-2xl font-normal"}`}>
                               {value}
                             </dd>
                           </motion.div>
-                        ))}
-                      </div>
-                    )}
-
-                    {/* Longer Text Descriptions */}
-                    {longEntries.length > 0 && (
-                      <div className="space-y-5 pt-1">
-                        {longEntries.map(([key, value], idx) => (
-                          <motion.div
-                            key={key}
-                            initial={{ opacity: 0, y: 8 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.25, delay: (shortEntries.length + idx) * 0.04 }}
-                            className="border-b border-slate-100/80 pb-4 last:border-b-0 last:pb-0"
-                          >
-                            <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1">
-                              {key}
-                            </dt>
-                            <dd className="font-sans text-base sm:text-lg text-slate-800 leading-relaxed font-normal">
-                              {value}
-                            </dd>
-                          </motion.div>
-                        ))}
-                      </div>
-                    )}
+                        );
+                      })}
+                    </div>
 
                     {/* Footer link if website URL exists */}
                     {websiteUrl && (
-                      <div className="pt-4 border-t border-slate-100 flex justify-end">
+                      <div className="pt-2 flex justify-end">
                         <a
                           href={websiteUrl}
                           target="_blank"
