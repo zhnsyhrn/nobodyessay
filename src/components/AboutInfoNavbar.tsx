@@ -191,7 +191,7 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
                         <div>
                           <dt className="font-sans text-[13px] text-slate-500 font-medium mb-1.5 flex items-center gap-2.5">
                             <img
-                              src="/images/casimir-yong.png"
+                              src="/Testimonials/CasimirYong.jpg"
                               alt="Casimir Yong"
                               className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover border border-slate-200 shadow-sm shrink-0"
                             />
@@ -208,9 +208,11 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
                         {/* 2. Justin Chen */}
                         <div className="border-t border-slate-100/80 pt-4">
                           <dt className="font-sans text-[13px] text-slate-500 font-medium mb-1.5 flex items-center gap-2.5">
-                            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-100 border border-slate-200 text-slate-700 font-semibold flex items-center justify-center text-xs shrink-0">
-                              JC
-                            </div>
+                            <img
+                              src="/Testimonials/JustinChen.png"
+                              alt="Justin Chen"
+                              className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover border border-slate-200 shadow-sm shrink-0"
+                            />
                             <div>
                               <span className="font-semibold text-slate-900 text-sm">Justin Chen</span>
                               <span className="text-slate-400 text-xs ml-1.5">• Hiring Manager & Product Leader</span>
@@ -221,11 +223,11 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
                           </dd>
                         </div>
 
-                        {/* 2. Justin Wong */}
+                        {/* 3. Justin Wong */}
                         <div className="border-t border-slate-100/80 pt-4">
                           <dt className="font-sans text-[13px] text-slate-500 font-medium mb-1.5 flex items-center gap-2.5">
                             <img
-                              src="/images/justin-wong.png"
+                              src="/Testimonials/JustinWong.jpg"
                               alt="Justin Wong"
                               className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover border border-slate-200 shadow-sm shrink-0"
                             />
@@ -239,11 +241,11 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
                           </dd>
                         </div>
 
-                        {/* 2. Karu Khoo */}
+                        {/* 4. Karu Khoo */}
                         <div className="border-t border-slate-100/80 pt-4">
                           <dt className="font-sans text-[13px] text-slate-500 font-medium mb-1.5 flex items-center gap-2.5">
                             <img
-                              src="/images/karu-khoo.png"
+                              src="/Testimonials/KaruKhoo.png"
                               alt="Karu Khoo"
                               className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover border border-slate-200 shadow-sm shrink-0"
                             />
@@ -257,11 +259,11 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
                           </dd>
                         </div>
 
-                        {/* 2. Winnie Chua */}
+                        {/* 5. Winnie Chua */}
                         <div className="border-t border-slate-100/80 pt-4">
                           <dt className="font-sans text-[13px] text-slate-500 font-medium mb-1.5 flex items-center gap-2.5">
                             <img
-                              src="/images/winnie-chua.png"
+                              src="/Testimonials/WinnieChua.jpg"
                               alt="Winnie Chua 蔡沛宁"
                               className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover border border-slate-200 shadow-sm shrink-0"
                             />
@@ -275,11 +277,11 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
                           </dd>
                         </div>
 
-                        {/* 2. Tang Siew Wai */}
+                        {/* 6. Tang Siew Wai */}
                         <div className="border-t border-slate-100/80 pt-4">
                           <dt className="font-sans text-[13px] text-slate-500 font-medium mb-1.5 flex items-center gap-2.5">
                             <img
-                              src="/images/tang-siew-wai.png"
+                              src="/Testimonials/TangSiewWai.jpg"
                               alt="Tang Siew Wai 邓少伟"
                               className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover border border-slate-200 shadow-sm shrink-0"
                             />
