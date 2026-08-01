@@ -287,7 +287,7 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
                             />
                             <div>
                               <span className="font-semibold text-slate-900 text-sm">Karu Khoo</span>
-                              <span className="text-slate-400 text-xs ml-1.5">• Country Head / Commercial Director / People & Growth</span>
+                              <span className="text-slate-400 text-xs ml-1.5">• Country Managing Director, Creative Unicorn</span>
                             </div>
                           </dt>
                           <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed pl-9.5">
