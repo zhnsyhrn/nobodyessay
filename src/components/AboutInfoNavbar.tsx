@@ -205,6 +205,24 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
                           </dd>
                         </div>
 
+                        {/* 2. Karu Khoo */}
+                        <div className="border-t border-slate-100/80 pt-4">
+                          <dt className="font-sans text-[13px] text-slate-500 font-medium mb-1.5 flex items-center gap-2.5">
+                            <img
+                              src="/images/karu-khoo.png"
+                              alt="Karu Khoo"
+                              className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover border border-slate-200 shadow-sm shrink-0"
+                            />
+                            <div>
+                              <span className="font-semibold text-slate-900 text-sm">Karu Khoo</span>
+                              <span className="text-slate-400 text-xs ml-1.5">• Country Head / Commercial Director / People & Growth</span>
+                            </div>
+                          </dt>
+                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed pl-9.5">
+                            "Thinking ahead of the competition and creatively presenting yourself. Great work !! A rare gem. Go beyond never settle for just enough."
+                          </dd>
+                        </div>
+
                         {/* 2. Winnie Chua */}
                         <div className="border-t border-slate-100/80 pt-4">
                           <dt className="font-sans text-[13px] text-slate-500 font-medium mb-1.5 flex items-center gap-2.5">
