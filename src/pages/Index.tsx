@@ -9,7 +9,7 @@ import { getFeaturedEssays, essays } from "@/data/essays";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
-import { Instagram, Linkedin, X, ArrowRight, Mic, Search } from "lucide-react";
+import { Instagram, Linkedin, X, ArrowRight, Search, CornerDownLeft } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
@@ -86,6 +86,16 @@ const Index = () => {
   const heroRef = React.useRef<HTMLElement>(null);
   const galleryImages = portfolioImages;
   const { openChat, sendMessage } = useChat();
+  const [searchValue, setSearchValue] = React.useState("");
+
+  const handleHeroSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!searchValue.trim()) return;
+    const text = searchValue.trim();
+    setSearchValue("");
+    openChat();
+    sendMessage(text);
+  };
 
   // Preload carousel images intelligently
   useCarouselPreloader(galleryImages.map(g => g.src), current, 3);
@@ -150,27 +160,25 @@ const Index = () => {
               {/* Glowing Aura */}
               <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-300 dark:from-blue-500 dark:via-cyan-400 dark:to-blue-500 rounded-full blur-md opacity-20 dark:opacity-50 group-hover:opacity-50 dark:group-hover:opacity-100 transition duration-1000 group-hover:duration-300 animate-gradient bg-[length:200%_auto]"></div>
               
-              <div className="relative flex items-center w-full h-full bg-white dark:bg-card rounded-full p-2 pl-6 pr-3 shadow-sm transition-colors">
+              <form onSubmit={handleHeroSubmit} className="relative flex items-center w-full h-full bg-white dark:bg-card rounded-full p-2 pl-6 pr-3 shadow-sm transition-colors">
                 <input 
                   type="text" 
+                  value={searchValue}
+                  onChange={(e) => setSearchValue(e.target.value)}
                   placeholder={t('hero.search_placeholder')}
                   className="flex-1 bg-transparent border-none focus:outline-none focus:ring-0 text-foreground font-jakarta text-[15px] placeholder:text-muted-foreground w-full outline-none"
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' && e.currentTarget.value.trim()) {
-                      const text = e.currentTarget.value.trim();
-                      e.currentTarget.value = ''; // clear input
-                      openChat();
-                      sendMessage(text);
-                    }
-                  }}
                 />
                 
                 <div className="flex items-center gap-1 sm:gap-2 pl-2 sm:pl-4">
-                  <button className="p-2 sm:p-2.5 rounded-full hover:bg-slate-100 text-foreground transition-colors group/btn shrink-0">
-                    <Mic size={18} className="group-hover/btn:text-primary transition-colors" />
+                  <button 
+                    type="submit" 
+                    title="Send question to AI"
+                    className="p-2 sm:p-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition-colors group/btn shrink-0 flex items-center justify-center"
+                  >
+                    <CornerDownLeft size={16} />
                   </button>
                 </div>
-              </div>
+              </form>
             </div>
 
             {/* Search Suggestions */}
