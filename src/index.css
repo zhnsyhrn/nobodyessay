@@ -146,7 +146,7 @@ All colors MUST be HSL.
 
   /* Typography classes for the writing portfolio */
   .font-display, h1, h2, h3, h4, h5, h6 {
-    font-family: 'Basis Grotesque Pro', 'Basis Grotesque', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Basis Grotesque Pro', 'Cabinet Grotesk', 'Host Grotesk', 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
     color: hsl(var(--foreground));
   }
 

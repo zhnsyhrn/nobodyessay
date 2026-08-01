@@ -19,11 +19,11 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'display': ['Basis Grotesque Pro', 'Basis Grotesque', 'Inter', 'system-ui', 'sans-serif'],
+				'display': ['"Basis Grotesque Pro"', '"Cabinet Grotesk"', '"Host Grotesk"', '"Space Grotesk"', 'Inter', 'sans-serif'],
 				'typewriter': ['Inter', 'sans-serif'],
 				'mono': ['Inter', 'sans-serif'],
 				'lyon': ['Lyon Text', 'serif'],
-				'jakarta': ['Basis Grotesque Pro', 'Basis Grotesque', 'Inter', 'sans-serif'],
+				'jakarta': ['"Basis Grotesque Pro"', '"Cabinet Grotesk"', '"Host Grotesk"', 'Inter', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
