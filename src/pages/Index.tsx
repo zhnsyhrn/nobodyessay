@@ -163,7 +163,7 @@ const Index = () => {
       )}
 
       {/* Hero Section */}
-      <section ref={heroRef} className="relative py-8 sm:py-12 lg:py-20 px-4 sm:px-6 fade-in pb-4 sm:pb-6">
+      <section ref={heroRef} className={`relative ${latestAnnouncement ? 'pt-8 sm:pt-12' : 'pt-14 sm:pt-20 lg:pt-24'} pb-6 sm:pb-12 lg:pb-20 px-4 sm:px-6 fade-in`}>
         <div className="max-w-6xl mx-auto text-left lg:text-center relative z-10">
           <h2 className="font-display text-[36px] lg:text-[48px] font-medium mb-2 sm:mb-3 tracking-tight leading-[42px] lg:leading-[54px] min-h-[90px] sm:min-h-[80px] lg:min-h-[60px]">
             <TypewriterEffect />
