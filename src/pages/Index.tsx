@@ -51,17 +51,17 @@ const TypewriterEffect = () => {
       if (displayedText.length < currentText.length) {
         timer = setTimeout(() => {
           setDisplayedText(currentText.slice(0, displayedText.length + 1));
-        }, 28);
+        }, 40);
       } else {
         timer = setTimeout(() => {
           setIsDeleting(true);
-        }, 1600);
+        }, 2400);
       }
     } else {
       if (displayedText.length > 0) {
         timer = setTimeout(() => {
           setDisplayedText(currentText.slice(0, displayedText.length - 1));
-        }, 12);
+        }, 20);
       } else {
         setIsDeleting(false);
         setTextIndex((prev) => (prev + 1) % HERO_TITLES.length);
