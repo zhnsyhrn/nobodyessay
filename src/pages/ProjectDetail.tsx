@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import QuoteBlock from "@/components/QuoteBlock";
 import { ExternalLink, ArrowLeft, ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import { ProjectCard } from "@/components/ProjectCard";
 
 // Import gallery images
 import galleryImage1 from "@/assets/gallery-01.jpg";
@@ -798,40 +799,8 @@ const ProjectDetail = () => {
             
             return (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {recommendedProjects.map((project, index) => (
-                  <Link 
-                    key={project.slug}
-                    to={`/projects/${project.slug}`}
-                    className="cursor-pointer block"
-                  >
-                    <div className="rounded-[10px] overflow-hidden bg-white">
-                      <div className="aspect-video overflow-hidden bg-muted">
-                        <img 
-                          src={project.image} 
-                          alt={project.title}
-                          className="w-full h-full object-cover"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div className="p-2 sm:p-3" style={{
-                        backgroundColor: '#F5F5F5'
-                      }}>
-                        <div className="flex items-center justify-between">
-                          <div className="flex-1">
-                            <h3 className="font-display text-base font-medium text-black mb-1">
-                              {project.title}
-                            </h3>
-                             <p className="font-mono text-xs sm:text-[10px] text-gray-700 uppercase">
-                               {project.description}
-                             </p>
-                          </div>
-                          <div className="ml-4">
-                            <ArrowRight className="text-gray-600" size={20} />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
+                {recommendedProjects.map((proj) => (
+                  <ProjectCard key={proj.slug} project={proj} />
                 ))}
               </div>
             );
