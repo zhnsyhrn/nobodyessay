@@ -24,10 +24,10 @@ export default function ChatOverlay() {
   };
 
   return (
-    <div className="fixed top-1/2 -translate-y-1/2 right-6 z-[200] w-[calc(100vw-3rem)] sm:w-[380px] h-[650px] max-h-[calc(100vh-4rem)] bg-white/75 backdrop-blur-2xl shadow-2xl flex flex-col border border-white/50 rounded-[24px] animate-in slide-in-from-right-8 fade-in duration-300 overflow-hidden">
+    <div className="fixed top-1/2 -translate-y-1/2 right-6 z-[200] w-[calc(100vw-3rem)] sm:w-[380px] h-[650px] max-h-[calc(100vh-4rem)] bg-white shadow-2xl flex flex-col border border-slate-200 rounded-[24px] animate-in slide-in-from-right-8 fade-in duration-300 overflow-hidden">
       
       {/* Header */}
-      <div className="flex items-center justify-between px-5 py-4 border-b border-black/5 bg-white/40">
+      <div className="flex items-center justify-between px-5 py-4 border-b border-slate-100 bg-slate-50/50">
         <div className="flex items-center gap-2">
           <h3 className="font-semibold text-slate-800 text-[15px]">Zahin Syahiran <span className="text-slate-400 font-normal">AI</span></h3>
         </div>
@@ -62,7 +62,7 @@ export default function ChatOverlay() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-80" />
           <div className="absolute bottom-4 left-0 right-0 flex justify-center">
-            <div className="bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full text-xs font-medium text-slate-800 shadow-sm flex items-center gap-1.5 border border-white/50">
+            <div className="bg-white px-3 py-1.5 rounded-full text-xs font-medium text-slate-800 shadow-sm flex items-center gap-1.5 border border-slate-200">
               <Mic className="w-3 h-3 text-blue-500" /> Speak with Zahin
             </div>
           </div>
@@ -77,7 +77,7 @@ export default function ChatOverlay() {
               className={`max-w-[85%] rounded-[20px] px-4 py-3 text-[14px] leading-relaxed ${
                 msg.isUser
                   ? 'bg-blue-600 text-white rounded-br-sm shadow-md shadow-blue-500/20'
-                  : 'bg-white/80 text-slate-700 shadow-sm border border-black/5 rounded-bl-sm backdrop-blur-md'
+                  : 'bg-slate-100 text-slate-800 border border-slate-200/60 rounded-bl-sm'
               }`}
             >
               {msg.text}
@@ -88,7 +88,7 @@ export default function ChatOverlay() {
       </div>
 
       {/* Input & Presets Area */}
-      <div className="p-4 bg-white/60 border-t border-black/5 backdrop-blur-md flex flex-col gap-3">
+      <div className="p-4 bg-white border-t border-slate-100 flex flex-col gap-3">
         
         {/* Quick Replies */}
         {quickReplies && quickReplies.length > 0 && (
