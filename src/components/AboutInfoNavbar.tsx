@@ -187,8 +187,24 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
                     {/* TAB 2: TESTIMONIALS */}
                     {activeTab === "TESTIMONIALS" && (
                       <div className="space-y-5 border-b border-slate-100 pb-6">
-                        {/* 1. Justin Wong */}
+                        {/* 1. Justin Chen */}
                         <div>
+                          <dt className="font-sans text-[13px] text-slate-500 font-medium mb-1.5 flex items-center gap-2.5">
+                            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-100 border border-slate-200 text-slate-700 font-semibold flex items-center justify-center text-xs shrink-0">
+                              JC
+                            </div>
+                            <div>
+                              <span className="font-semibold text-slate-900 text-sm">Justin Chen</span>
+                              <span className="text-slate-400 text-xs ml-1.5">• Hiring Manager & Product Leader</span>
+                            </div>
+                          </dt>
+                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed pl-9.5">
+                            "One of the most impressive interviews I've ever conducted was with Zahin Syahiran for the role of a digital designer. He was still pursuing his degree, and as is often the case with interviews of fresh graduates, I did not expect much. What impressed me the most was when he entered the interview, instead of talking about his name and educational background, he had prepared a pitch deck on his background and his portfolio, and how he could provide the most value to the company. He made sure I knew that this was a mutual professional exchange."
+                          </dd>
+                        </div>
+
+                        {/* 2. Justin Wong */}
+                        <div className="border-t border-slate-100/80 pt-4">
                           <dt className="font-sans text-[13px] text-slate-500 font-medium mb-1.5 flex items-center gap-2.5">
                             <img
                               src="/images/justin-wong.png"
