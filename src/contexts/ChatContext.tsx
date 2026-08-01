@@ -85,12 +85,12 @@ export function parseMessageContent(content: ReactNode): ReactNode {
   );
 }
 
-const INITIAL_GREETING = "Hey, thanks for stopping by! I'm Zahin's site assistant. Ask me about his work experience, skills, past projects, availability for freelance, or how to get in touch. Explore [Services & Rates](/service), view [Projects](/projects), or read [About Zahin](/about).";
+const INITIAL_GREETING = "Hey, thanks for stopping by! I'm Zahin. Ask me about my work experience, skills, past projects, availability for freelance, or how to get in touch. Explore [Services & Rates](/service), view [Projects](/projects), or read [About Me](/about).";
 const INITIAL_QUICK_REPLIES: QuickReply[] = [
-  { label: "What does Zahin do?", intentId: "who_is_zahin" },
-  { label: "See his work", intentId: "portfolio_projects" },
-  { label: "Is he open for freelance?", intentId: "availability_freelance" },
-  { label: "How do I contact him?", intentId: "contact" }
+  { label: "What do you do?", intentId: "who_is_zahin" },
+  { label: "See my work", intentId: "portfolio_projects" },
+  { label: "Are you open for freelance?", intentId: "availability_freelance" },
+  { label: "How do I contact you?", intentId: "contact" }
 ];
 
 export function ChatProvider({ children }: { children: ReactNode }) {

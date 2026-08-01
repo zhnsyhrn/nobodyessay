@@ -120,7 +120,7 @@ export default function ChatOverlay() {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             disabled={!isBotReady}
-            placeholder={isBotReady ? "Ask Zahin a question" : "Connecting to AI..."}
+            placeholder={isBotReady ? "Ask me anything..." : "Connecting to AI..."}
             className="w-full pl-4 pr-12 py-3 bg-white border border-slate-200 rounded-lg text-[14px] text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all shadow-sm disabled:opacity-50 disabled:bg-slate-50"
           />
           <div className="absolute right-2 flex items-center gap-1">

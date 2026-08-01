@@ -1,13 +1,13 @@
 {
   "_meta": {
     "name": "byzahin.com Chatbot Knowledge Base",
-    "version": "1.2.0",
-    "description": "Keyword/intent-matching database for a client-side FAQ chatbot. Edit the 'answer' fields freely — the 'keywords' arrays are what the matcher scores against. Keep keywords lowercase.",
+    "version": "1.3.0",
+    "description": "First-person AI knowledge base for Zahin Syahiran's interactive chat.",
     "audience": [
       "recruiters_hiring_managers",
       "freelance_clients"
     ],
-    "how_to_edit": "Each object in 'intents' is one topic. 'keywords' = words/phrases that trigger it. 'examples' = sample real questions. 'answer' = what the bot replies. 'quickReplies' = optional buttons ({label, intentId}) shown after the answer."
+    "how_to_edit": "Each object in 'intents' is one topic. 'keywords' = words/phrases that trigger it. 'examples' = sample real questions. 'answer' = what the bot replies in first-person."
   },
   "settings": {
     "matchThreshold": 0.35,
@@ -38,22 +38,22 @@
         "hello there",
         "hey zahin"
       ],
-      "answer": "Hey, thanks for stopping by! I'm Zahin's site assistant. Ask me about his work experience, skills, past projects, availability for freelance, or how to get in touch. Explore [Services & Rates](/service), view [Projects](/projects), or read [About Zahin](/about).",
+      "answer": "Hey, thanks for stopping by! I'm Zahin. Ask me about my work experience, skills, past projects, availability for freelance, or how to get in touch. Explore [Services & Rates](/service), view [Projects](/projects), or read [About Me](/about).",
       "quickReplies": [
         {
-          "label": "What does Zahin do?",
+          "label": "What do you do?",
           "intentId": "who_is_zahin"
         },
         {
-          "label": "See his work",
+          "label": "See my work",
           "intentId": "portfolio_projects"
         },
         {
-          "label": "Is he open for freelance?",
+          "label": "Are you open for freelance?",
           "intentId": "availability_freelance"
         },
         {
-          "label": "How do I contact him?",
+          "label": "How do I contact you?",
           "intentId": "contact"
         }
       ]
@@ -74,22 +74,22 @@
         "background"
       ],
       "examples": [
-        "Who is Zahin?",
+        "Who are you?",
         "Tell me about yourself",
         "What's your background?"
       ],
-      "answer": "Zahin Syahiran is a UI/UX Designer and Brand Strategist based in Kuala Lumpur, Malaysia with about 8 years of experience spanning graphic design, brand identity, and product/UX design. He's currently a Senior UI/UX Designer at Gamuda Technologies, focusing on AI-native products, and also runs his own design practice for freelance and consultancy work. Read more on the [About Page](/about) or connect on [LinkedIn](https://www.linkedin.com/in/zahinsyahiran/).",
+      "answer": "I'm Zahin Syahiran, a UI/UX Designer and Brand Strategist based in Kuala Lumpur, Malaysia with about 8 years of experience spanning graphic design, brand identity, and product/UX design. I'm currently a Senior UI/UX Designer at Gamuda Technologies, focusing on AI-native products, and I also run my own design practice for freelance and consultancy work. Read more on the [About Page](/about) or connect with me on [LinkedIn](https://www.linkedin.com/in/zahinsyahiran/).",
       "quickReplies": [
         {
-          "label": "What's his current job?",
+          "label": "What's your current job?",
           "intentId": "current_role"
         },
         {
-          "label": "What services does he offer?",
+          "label": "What services do you offer?",
           "intentId": "services_offered"
         },
         {
-          "label": "Show me his skills",
+          "label": "Show me your skills",
           "intentId": "skills_tools"
         }
       ]
@@ -103,24 +103,24 @@
       "keywords": [
         "current job",
         "current role",
-        "where does he work",
+        "where do you work",
         "employer",
         "gamuda",
         "full time job",
         "day job"
       ],
       "examples": [
-        "Where does Zahin currently work?",
-        "What's his current position?"
+        "Where do you currently work?",
+        "What's your current position?"
       ],
-      "answer": "Zahin is currently a Senior UI/UX Designer at Gamuda Technologies, working on AI-focused product design. Before that, he built his experience across MoneyX, Borong Malaysia, PolicyStreet, Fixcolab, and Paperballad. Learn more about his journey on the [About Page](/about).",
+      "answer": "I'm currently a Senior UI/UX Designer at Gamuda Technologies, working on AI-focused product design. Before this, I built my experience across MoneyX, Borong Malaysia, PolicyStreet, Fixcolab, and Paperballad. Learn more about my journey on the [About Page](/about).",
       "quickReplies": [
         {
-          "label": "What's his design experience?",
+          "label": "What's your design experience?",
           "intentId": "experience_history"
         },
         {
-          "label": "Is he open to freelance too?",
+          "label": "Are you open to freelance?",
           "intentId": "availability_freelance"
         }
       ]
@@ -142,22 +142,22 @@
         "employment history"
       ],
       "examples": [
-        "What's his work experience?",
-        "Can I see his resume?",
-        "Where has he worked before?"
+        "What's your work experience?",
+        "Can I see your resume?",
+        "Where have you worked before?"
       ],
-      "answer": "Zahin has ~8 years of experience across graphic design, branding, and product/UX (including 5+ years in FinTech, InsurTech, and B2B SaaS). He founded Designloka (Malaysia's first subscription-based graphic design service) in 2019 while studying at Saito University College, then worked with MoneyX, Borong Malaysia, PolicyStreet, Fixcolab, and Paperballad, and is now Senior UI/UX Designer at Gamuda Technologies. Explore his background on the [About Page](/about) or contact him directly via [Contact](/contact).",
+      "answer": "I have ~8 years of experience across graphic design, branding, and product/UX (including 5+ years in FinTech, InsurTech, and B2B SaaS). I founded Designloka (Malaysia's first subscription-based graphic design service) in 2019 while studying at Saito University College, then worked with MoneyX, Borong Malaysia, PolicyStreet, Fixcolab, and Paperballad, and am now Senior UI/UX Designer at Gamuda Technologies. Explore my background on the [About Page](/about) or contact me directly via [Contact](/contact).",
       "quickReplies": [
         {
           "label": "Tell me about Designloka",
           "intentId": "designloka"
         },
         {
-          "label": "What's his education?",
+          "label": "What's your education?",
           "intentId": "education"
         },
         {
-          "label": "Download resume",
+          "label": "Get my resume",
           "intentId": "resume_download"
         }
       ]
@@ -178,16 +178,16 @@
       ],
       "examples": [
         "What is Designloka?",
-        "Did he run his own business?"
+        "Did you run your own business?"
       ],
-      "answer": "Designloka was Zahin's own venture — Malaysia's first subscription-based graphic design service, founded in 2019 while he was still studying. He ran it solo-to-small-team, handling business development, finance, and delivery, and worked with clients including IPG Mediabrands accounts and Grain Singapore. Read more about his journey on the [About Page](/about).",
+      "answer": "Designloka was my own venture — Malaysia's first subscription-based graphic design service, founded in 2019 while I was still studying. I ran it solo-to-small-team, handling business development, finance, and delivery, working with clients including IPG Mediabrands accounts and Grain Singapore. Read more about my journey on the [About Page](/about).",
       "quickReplies": [
         {
-          "label": "What services does he offer now?",
+          "label": "What services do you offer now?",
           "intentId": "services_offered"
         },
         {
-          "label": "See his other projects",
+          "label": "See my other projects",
           "intentId": "portfolio_projects"
         }
       ]
@@ -207,17 +207,17 @@
         "graduate"
       ],
       "examples": [
-        "What did he study?",
-        "Does he have a degree?"
+        "What did you study?",
+        "Do you have a degree?"
       ],
-      "answer": "Zahin holds an Honours degree in Graphic Design from Saito University College (2024). Read more about his background on the [About Page](/about).",
+      "answer": "I hold an Honours degree in Graphic Design from Saito University College (2024). Read more about my background on the [About Page](/about).",
       "quickReplies": [
         {
-          "label": "What's his work experience?",
+          "label": "What's your work experience?",
           "intentId": "experience_history"
         },
         {
-          "label": "What tools does he use?",
+          "label": "What tools do you use?",
           "intentId": "skills_tools"
         }
       ]
@@ -234,24 +234,24 @@
         "tools",
         "software",
         "figma",
-        "what can he do",
+        "what can you do",
         "expertise",
         "tech stack",
         "design tools"
       ],
       "examples": [
-        "What tools does Zahin use?",
-        "What are his design skills?",
-        "Does he use Figma?"
+        "What tools do you use?",
+        "What are your design skills?",
+        "Do you use Figma?"
       ],
-      "answer": "Core strengths: UI/UX design, design systems, brand identity, and product design. Tools include Figma (primary), Adobe Creative Cloud, plus AI-assisted / vibe-coding tools like Lovable, Antigravity, Cursor, ChatGPT, and Aura.build for rapid prototyping and shipping AI-native web builds. See these tools in action across his [Projects](/projects).",
+      "answer": "My core strengths: UI/UX design, design systems, brand identity, and product design. Tools I use include Figma (primary), Adobe Creative Cloud, plus AI-assisted / vibe-coding tools like Lovable, Antigravity, Cursor, ChatGPT, and Aura.build for rapid prototyping and shipping AI-native web builds. See these tools in action across my [Projects](/projects).",
       "quickReplies": [
         {
-          "label": "Show me his projects",
+          "label": "Show me your projects",
           "intentId": "portfolio_projects"
         },
         {
-          "label": "What services does he offer?",
+          "label": "What services do you offer?",
           "intentId": "services_offered"
         }
       ]
@@ -276,14 +276,14 @@
         "Can I hire you?",
         "Do you do freelance work?"
       ],
-      "answer": "Zahin offers UI/UX design, brand identity systems, website development, and design consultancy. Key services include Website Design & Development (RM5,300 for up to 7 pages with GEO setup & Google Antigravity dev), Brand Identity Packages (RM1,000–RM3,000), Logo Design (RM800), UI Design (RM450/page), and Social Media Visuals (RM110/visual). Explore full details on the [Services Page](/service).",
+      "answer": "I offer UI/UX design, brand identity systems, website development, and design consultancy. Key services include Website Design & Development (RM5,300 for up to 7 pages with GEO setup & Google Antigravity dev), Brand Identity Packages (RM1,000–RM3,000), Logo Design (RM800), UI Design (RM450/page), and Social Media Visuals (RM110/visual). Explore full details on the [Services Page](/service).",
       "quickReplies": [
         {
-          "label": "What's the process like?",
+          "label": "What's your process like?",
           "intentId": "process"
         },
         {
-          "label": "How much does it cost?",
+          "label": "How much do you charge?",
           "intentId": "pricing"
         },
         {
@@ -319,14 +319,14 @@
         "What's your rate?",
         "What's the budget for a project?"
       ],
-      "answer": "Rates range from RM110 per visual for social media design, RM150 for business cards, RM450/page for UI design, RM800 for logo design, up to RM5,300 for full website design & development with GEO setup. View the complete rate breakdown on the [Services Page](/service) or get in touch via [Contact](/contact).",
+      "answer": "My rates range from RM110 per visual for social media design, RM150 for business cards, RM450/page for UI design, RM800 for logo design, up to RM5,300 for full website design & development with GEO setup. View my complete rate breakdown on the [Services Page](/service) or get in touch via [Contact](/contact).",
       "quickReplies": [
         {
-          "label": "How do I contact him?",
+          "label": "How do I contact you?",
           "intentId": "contact"
         },
         {
-          "label": "What's the process like?",
+          "label": "What's your process like?",
           "intentId": "process"
         }
       ]
@@ -349,14 +349,14 @@
         "What's your design process?",
         "How does a project usually go?"
       ],
-      "answer": "Zahin's design process: 1. Understand the problem (stakeholder alignment & success metrics) → 2. Research & competitive benchmarking → 3. Ideation & flow sketching → 4. Hi-fi prototyping in Figma → 5. Usability testing & validation → 6. Developer handoff & iteration. Learn more on the [Services Page](/service).",
+      "answer": "My design process: 1. Understand the problem (stakeholder alignment & success metrics) → 2. Research & competitive benchmarking → 3. Ideation & flow sketching → 4. Hi-fi prototyping in Figma → 5. Usability testing & validation → 6. Developer handoff & iteration. Learn more on the [Services Page](/service).",
       "quickReplies": [
         {
-          "label": "What services does he offer?",
+          "label": "What services do you offer?",
           "intentId": "services_offered"
         },
         {
-          "label": "Contact him",
+          "label": "Contact me",
           "intentId": "contact"
         }
       ]
@@ -377,17 +377,17 @@
         "book"
       ],
       "examples": [
-        "Is he available for freelance?",
-        "Is he taking new clients?"
+        "Are you available for freelance?",
+        "Are you taking new clients?"
       ],
-      "answer": "Zahin works full-time at Gamuda Technologies but takes on select freelance and consultancy projects outside of work hours. Contact him via [Contact Page](/contact), email (muhammadzahien@gmail.com), or [WhatsApp](http://wasap.my/60183943519) with your project scope and timeline.",
+      "answer": "I work full-time at Gamuda Technologies but take on select freelance and consultancy projects outside of work hours. Contact me via [Contact Page](/contact), email (muhammadzahien@gmail.com), or [WhatsApp](http://wasap.my/60183943519) with your project scope and timeline.",
       "quickReplies": [
         {
-          "label": "How do I contact him?",
+          "label": "How do I contact you?",
           "intentId": "contact"
         },
         {
-          "label": "What services does he offer?",
+          "label": "What services do you offer?",
           "intentId": "services_offered"
         }
       ]
@@ -405,15 +405,15 @@
         "work samples",
         "case study",
         "case studies",
-        "show me his work",
+        "show me your work",
         "examples of work"
       ],
       "examples": [
-        "Can I see his projects?",
-        "What has he built?",
+        "Can I see your projects?",
+        "What have you built?",
         "Show me case studies"
       ],
-      "answer": "Recent project highlights include: Great Eastern Takaful (customer experience rearchitecture), MoneyX App (FinTech savings goals & referral design), PolicyStreet (InsurTech marketplace), Knock Knock Cafe (branding & art direction), and active side projects like Medigo (AI medical tourism marketplace). Explore all case studies on the [Projects Page](/projects).",
+      "answer": "My recent project highlights include: Great Eastern Takaful (customer experience rearchitecture), MoneyX App (FinTech savings goals & referral design), PolicyStreet (InsurTech marketplace), Knock Knock Cafe (branding & art direction), and active side projects like Medigo (AI medical tourism marketplace). Explore all case studies on the [Projects Page](/projects).",
       "quickReplies": [
         {
           "label": "Tell me about MoneyX",
@@ -444,16 +444,16 @@
       ],
       "examples": [
         "Tell me about the MoneyX project",
-        "What did Zahin do at MoneyX?"
+        "What did you do at MoneyX?"
       ],
-      "answer": "At MoneyX, Zahin designed key mobile app features including the Savings Goals manual entry flows, category selection, transaction edits, and the user acquisition Referral Program dashboard. Read the full case study on the [MoneyX Project Page](/projects/moneyx-savings-goals-manual-entry).",
+      "answer": "At MoneyX, I designed key mobile app features including the Savings Goals manual entry flows, category selection, transaction edits, and the user acquisition Referral Program dashboard. Read the full case study on the [MoneyX Project Page](/projects/moneyx-savings-goals-manual-entry).",
       "quickReplies": [
         {
           "label": "See other projects",
           "intentId": "portfolio_projects"
         },
         {
-          "label": "Contact him",
+          "label": "Contact me",
           "intentId": "contact"
         }
       ]
@@ -474,14 +474,14 @@
       "examples": [
         "Tell me about Knock Knock Cafe"
       ],
-      "answer": "Knock Knock Cafe is a branding and art direction project based in Kuala Terengganu, covering logo design, coffee packaging, merchandise, and storefront aesthetics. Read the full case study on the [Knock Knock Cafe Page](/projects/knock-knock-cafe-kuala-terengganu).",
+      "answer": "Knock Knock Cafe is a branding and art direction project I did in Kuala Terengganu, covering logo design, coffee packaging, merchandise, and storefront aesthetics. Read the full case study on the [Knock Knock Cafe Page](/projects/knock-knock-cafe-kuala-terengganu).",
       "quickReplies": [
         {
           "label": "See other projects",
           "intentId": "portfolio_projects"
         },
         {
-          "label": "What services does he offer?",
+          "label": "What services do you offer?",
           "intentId": "services_offered"
         }
       ]
@@ -503,14 +503,14 @@
         "What is Medigo?",
         "Tell me about Medigo"
       ],
-      "answer": "Medigo is an in-progress AI-powered medical tourism marketplace that connects patients with verified clinics across Malaysia, built using Lovable, Cursor, and ChatGPT. Explore all builds on the [Projects Page](/projects).",
+      "answer": "Medigo is my in-progress AI-powered medical tourism marketplace connecting patients with verified clinics across Malaysia, built using Lovable, Cursor, and ChatGPT. Explore all builds on the [Projects Page](/projects).",
       "quickReplies": [
         {
           "label": "See other projects",
           "intentId": "portfolio_projects"
         },
         {
-          "label": "Contact him",
+          "label": "Contact me",
           "intentId": "contact"
         }
       ]
@@ -532,14 +532,14 @@
         "Tell me about the Flaaah project",
         "What is Flaaah?"
       ],
-      "answer": "Zahin is leading the brand creative direction for Flaaah (flaaah.com), treating visual execution as a core business strategy to align their brand identity with their next stage of growth. Read the article in [Journals](/journals).",
+      "answer": "I am leading the brand creative direction for Flaaah (flaaah.com), treating visual execution as a core business strategy to align their brand identity with their next stage of growth. Read the article in [Journals](/journals).",
       "quickReplies": [
         {
           "label": "See other projects",
           "intentId": "portfolio_projects"
         },
         {
-          "label": "Contact him",
+          "label": "Contact me",
           "intentId": "contact"
         }
       ]
@@ -560,17 +560,17 @@
         "posts"
       ],
       "examples": [
-        "Does he write about his process?",
-        "Where can I read his journals?"
+        "Do you write about your process?",
+        "Where can I read your journals?"
       ],
-      "answer": "Zahin documents project announcements, design thoughts, and process notes in his Journals section — including articles on Flaaah's creative direction and platform updates. Read the articles on the [Journals Page](/journals).",
+      "answer": "I document project announcements, design thoughts, and process notes in my Journals section — including articles on Flaaah's creative direction and platform updates. Read the articles on the [Journals Page](/journals).",
       "quickReplies": [
         {
-          "label": "See his projects",
+          "label": "See my projects",
           "intentId": "portfolio_projects"
         },
         {
-          "label": "Contact him",
+          "label": "Contact me",
           "intentId": "contact"
         }
       ]
@@ -584,21 +584,21 @@
       "keywords": [
         "notice period",
         "resign",
-        "when can he start",
+        "when can you start",
         "start date"
       ],
       "examples": [
-        "What's his notice period?",
-        "When could he start a new role?"
+        "What's your notice period?",
+        "When could you start a new role?"
       ],
-      "answer": "Zahin has a standard 1 to 2 month notice period at his current role, but is open to discussing timelines for the right full-time product design opportunity. Reach out via the [Contact Page](/contact).",
+      "answer": "I have a standard 1 to 2 month notice period at my current role, but am open to discussing timelines for the right full-time product design opportunity. Reach out via the [Contact Page](/contact).",
       "quickReplies": [
         {
-          "label": "What's his current role?",
+          "label": "What's your current role?",
           "intentId": "current_role"
         },
         {
-          "label": "Contact him",
+          "label": "Contact me",
           "intentId": "contact"
         }
       ]
@@ -619,10 +619,10 @@
         "How did you get into UX design?",
         "Why did you choose this career?"
       ],
-      "answer": "Zahin started in graphic design and branding, then moved into product/UX as he got more involved in building full digital products — running Designloka gave him early exposure to both creative and business sides. Read more career FAQs on the [FAQ Page](/faq).",
+      "answer": "I started in graphic design and branding, then moved into product/UX as I got more involved in building full digital products — running Designloka gave me early exposure to both creative and business sides. Read more career FAQs on the [FAQ Page](/faq).",
       "quickReplies": [
         {
-          "label": "See his experience",
+          "label": "See my experience",
           "intentId": "experience_history"
         },
         {
@@ -645,17 +645,17 @@
         "work from home"
       ],
       "examples": [
-        "Is he open to remote work?",
-        "Does he work onsite?"
+        "Are you open to remote work?",
+        "Do you work onsite?"
       ],
-      "answer": "Zahin is open to hybrid or remote arrangements in the Kuala Lumpur / Selangor area for full-time roles, and fully remote or flexible arrangements for freelance/consultancy projects. Read more on the [FAQ Page](/faq).",
+      "answer": "I'm open to hybrid or remote arrangements in the Kuala Lumpur / Selangor area for full-time roles, and fully remote or flexible arrangements for freelance/consultancy projects. Read more on the [FAQ Page](/faq).",
       "quickReplies": [
         {
-          "label": "Where is he based?",
+          "label": "Where are you based?",
           "intentId": "location"
         },
         {
-          "label": "Contact him",
+          "label": "Contact me",
           "intentId": "contact"
         }
       ]
@@ -676,17 +676,17 @@
         "timezone"
       ],
       "examples": [
-        "Where is Zahin based?",
-        "What timezone is he in?"
+        "Where are you based?",
+        "What timezone are you in?"
       ],
-      "answer": "Zahin is based in Kuala Lumpur / Selangor, Malaysia (GMT+8). Get in touch via the [Contact Page](/contact).",
+      "answer": "I am based in Kuala Lumpur / Selangor, Malaysia (GMT+8). Get in touch via the [Contact Page](/contact).",
       "quickReplies": [
         {
-          "label": "Is he open to remote work?",
+          "label": "Are you open to remote work?",
           "intentId": "faq_hiring_remote"
         },
         {
-          "label": "Contact him",
+          "label": "Contact me",
           "intentId": "contact"
         }
       ]
@@ -703,23 +703,23 @@
         "email",
         "reach out",
         "get in touch",
-        "message him",
+        "message you",
         "linkedin",
         "connect"
       ],
       "examples": [
-        "How do I contact Zahin?",
-        "What's his email?",
-        "How can I reach him?"
+        "How do I contact you?",
+        "What's your email?",
+        "How can I reach you?"
       ],
-      "answer": "Best ways to reach Zahin: Email muhammadzahien@gmail.com, [WhatsApp](http://wasap.my/60183943519), [LinkedIn](https://www.linkedin.com/in/zahinsyahiran/), or X (@byzahin_). You can also send a direct message on the [Contact Page](/contact).",
+      "answer": "Best ways to reach me: Email muhammadzahien@gmail.com, [WhatsApp](http://wasap.my/60183943519), [LinkedIn](https://www.linkedin.com/in/zahinsyahiran/), or X (@byzahin_). You can also send a direct message on the [Contact Page](/contact).",
       "quickReplies": [
         {
-          "label": "What services does he offer?",
+          "label": "What services do you offer?",
           "intentId": "services_offered"
         },
         {
-          "label": "Is he available for freelance?",
+          "label": "Are you available for freelance?",
           "intentId": "availability_freelance"
         }
       ]
@@ -740,17 +740,17 @@
         "behance"
       ],
       "examples": [
-        "Does he have a LinkedIn?",
-        "Where can I follow him?"
+        "Do you have LinkedIn?",
+        "Where can I follow you?"
       ],
-      "answer": "Zahin shares design updates and content on [LinkedIn](https://www.linkedin.com/in/zahinsyahiran/), X (@byzahin_), and Instagram (@nobody.collective). Connect directly via the [Contact Page](/contact).",
+      "answer": "I share design updates and content on [LinkedIn](https://www.linkedin.com/in/zahinsyahiran/), X (@byzahin_), and Instagram (@nobody.collective). Connect directly via the [Contact Page](/contact).",
       "quickReplies": [
         {
-          "label": "Contact him directly",
+          "label": "Contact me directly",
           "intentId": "contact"
         },
         {
-          "label": "See his projects",
+          "label": "See my projects",
           "intentId": "portfolio_projects"
         }
       ]
@@ -768,17 +768,17 @@
         "pdf"
       ],
       "examples": [
-        "Can I download his resume?",
+        "Can I download your resume?",
         "Do you have a CV?"
       ],
-      "answer": "You can request Zahin's latest resume/CV directly by emailing muhammadzahien@gmail.com, sending a message on the [Contact Page](/contact), or connecting on [LinkedIn](https://www.linkedin.com/in/zahinsyahiran/).",
+      "answer": "You can request my latest resume/CV directly by emailing muhammadzahien@gmail.com, sending a message on the [Contact Page](/contact), or connecting on [LinkedIn](https://www.linkedin.com/in/zahinsyahiran/).",
       "quickReplies": [
         {
-          "label": "See his experience",
+          "label": "See my experience",
           "intentId": "experience_history"
         },
         {
-          "label": "Contact him",
+          "label": "Contact me",
           "intentId": "contact"
         }
       ]
@@ -800,14 +800,14 @@
         "Thanks!",
         "Thank you"
       ],
-      "answer": "Anytime! Feel free to ask anything else, explore [Services & Rates](/service), view [Projects](/projects), or reach out on the [Contact Page](/contact).",
+      "answer": "Anytime! Feel free to ask me anything else, explore [Services & Rates](/service), view [Projects](/projects), or reach out on the [Contact Page](/contact).",
       "quickReplies": [
         {
-          "label": "Contact him",
+          "label": "Contact me",
           "intentId": "contact"
         },
         {
-          "label": "See his projects",
+          "label": "See my projects",
           "intentId": "portfolio_projects"
         }
       ]
@@ -821,18 +821,18 @@
       ],
       "keywords": [],
       "examples": [],
-      "answer": "I don't have an answer for that yet — but you can reach Zahin directly at muhammadzahien@gmail.com or via the [Contact Page](/contact). Try exploring [Services & Rates](/service), [Projects](/projects), or read [About Zahin](/about).",
+      "answer": "I don't have an answer for that yet — but you can reach me directly at muhammadzahien@gmail.com or via the [Contact Page](/contact). Try asking about my experience, skills, past projects, services, or how to get in touch.",
       "quickReplies": [
         {
-          "label": "What does Zahin do?",
+          "label": "What do you do?",
           "intentId": "who_is_zahin"
         },
         {
-          "label": "See his work",
+          "label": "See my work",
           "intentId": "portfolio_projects"
         },
         {
-          "label": "Contact him",
+          "label": "Contact me",
           "intentId": "contact"
         }
       ]
