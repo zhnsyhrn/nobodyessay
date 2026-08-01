@@ -136,7 +136,7 @@ const Index = () => {
       </Helmet>
       
       <main className="flex-1 flex flex-col">
-      <div className="bg-[#f7f8fa] dark:bg-background transition-colors">
+      <div className="bg-background transition-colors">
       <h1 className="sr-only">Zahin Syahiran - Expert UI/UX Designer & Brand Strategist</h1>
       <StickyNavbar />
 

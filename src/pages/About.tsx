@@ -55,9 +55,9 @@ const About = () => {
             <div className="md:col-span-5">
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-lg border border-white/10 group">
                 <img 
-                  src="/Profile/photo_6233468766528409645_y.jpg_202607230735.jpeg" 
+                  src="/Profile/hiking_2.jpg" 
                   alt="Zahin Syahiran" 
-                  className="w-full h-full object-cover scale-[1.35] translate-y-[6%] transition-transform duration-500 group-hover:scale-[1.4]"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
             </div>
