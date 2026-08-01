@@ -187,32 +187,68 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
                     {/* TAB 2: TESTIMONIALS */}
                     {activeTab === "TESTIMONIALS" && (
                       <div className="space-y-5 border-b border-slate-100 pb-6">
+                        {/* 1. Tang Siew Wai */}
                         <div>
-                          <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1 flex items-center gap-1.5">
-                            <Quote size={14} className="text-slate-500" />
-                            Simon Goh — Director of Digital Experience Studio, GETB
+                          <dt className="font-sans text-[13px] text-slate-500 font-medium mb-1.5 flex items-center gap-2.5">
+                            <img
+                              src="/images/tang-siew-wai.png"
+                              alt="Tang Siew Wai 邓少伟"
+                              className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover border border-slate-200 shadow-sm shrink-0"
+                            />
+                            <div>
+                              <span className="font-semibold text-slate-900 text-sm">Tang Siew Wai 邓少伟</span>
+                              <span className="text-slate-400 text-xs ml-1.5">• Chief Digital Officer, PolicyStreet</span>
+                            </div>
                           </dt>
-                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed">
+                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed pl-9.5">
+                            "Zahin Syahiran it has been a wonderful experience working together with you to revamp our website, improved the UI of our D2C site & claims portals, refreshed the PolicyStreet brand, enhanced the overall user experience, and many more interesting projects. You've made tons of significant contributions to PolicyStreet, and I'll always remember the milestones that you have achieved together with the team. I sincerely wish you all the best in your next adventure. I'm pretty sure you'll continue to do well. Keep in touch!"
+                          </dd>
+                        </div>
+
+                        {/* 2. Simon Goh */}
+                        <div className="border-t border-slate-100/80 pt-4">
+                          <dt className="font-sans text-[13px] text-slate-500 font-medium mb-1.5 flex items-center gap-2.5">
+                            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-100 border border-slate-200 text-slate-700 font-semibold flex items-center justify-center text-xs shrink-0">
+                              SG
+                            </div>
+                            <div>
+                              <span className="font-semibold text-slate-900 text-sm">Simon Goh</span>
+                              <span className="text-slate-400 text-xs ml-1.5">• Director of Digital Experience Studio, GETB</span>
+                            </div>
+                          </dt>
+                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed pl-9.5">
                             "Zahin brought exceptional UX strategy and customer insight to GETB's website overhaul, streamlining our digital touchpoints with speed and precision."
                           </dd>
                         </div>
 
+                        {/* 3. Shaun Choy */}
                         <div className="border-t border-slate-100/80 pt-4">
-                          <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1 flex items-center gap-1.5">
-                            <Quote size={14} className="text-slate-500" />
-                            Shaun Choy — Product Owner, PolicyStreet
+                          <dt className="font-sans text-[13px] text-slate-500 font-medium mb-1.5 flex items-center gap-2.5">
+                            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-100 border border-slate-200 text-slate-700 font-semibold flex items-center justify-center text-xs shrink-0">
+                              SC
+                            </div>
+                            <div>
+                              <span className="font-semibold text-slate-900 text-sm">Shaun Choy</span>
+                              <span className="text-slate-400 text-xs ml-1.5">• Product Owner, PolicyStreet</span>
+                            </div>
                           </dt>
-                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed">
+                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed pl-9.5">
                             "Zahin's design leadership transformed our car insurance purchasing funnel. His attention to component detail and user flows significantly boosted our conversion rates."
                           </dd>
                         </div>
 
+                        {/* 4. Shan Yi T. */}
                         <div className="border-t border-slate-100/80 pt-4">
-                          <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1 flex items-center gap-1.5">
-                            <Quote size={14} className="text-slate-500" />
-                            Shan Yi T. — Product Manager, MoneyX / Hextar Tech
+                          <dt className="font-sans text-[13px] text-slate-500 font-medium mb-1.5 flex items-center gap-2.5">
+                            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-100 border border-slate-200 text-slate-700 font-semibold flex items-center justify-center text-xs shrink-0">
+                              SY
+                            </div>
+                            <div>
+                              <span className="font-semibold text-slate-900 text-sm">Shan Yi T.</span>
+                              <span className="text-slate-400 text-xs ml-1.5">• Product Manager, MoneyX / Hextar Tech</span>
+                            </div>
                           </dt>
-                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed">
+                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed pl-9.5">
                             "Zahin delivered high-impact net worth simulation designs within tight timelines. A proactive product designer who seamlessly connects user needs with engineering specs."
                           </dd>
                         </div>
