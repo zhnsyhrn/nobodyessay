@@ -19,11 +19,11 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'display': ['Inter', 'system-ui', 'sans-serif'],
+				'display': ['Basis Grotesque Pro', 'Basis Grotesque', 'Inter', 'system-ui', 'sans-serif'],
 				'typewriter': ['Inter', 'sans-serif'],
 				'mono': ['Inter', 'sans-serif'],
 				'lyon': ['Lyon Text', 'serif'],
-				'jakarta': ['Inter', 'sans-serif'],
+				'jakarta': ['Basis Grotesque Pro', 'Basis Grotesque', 'Inter', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
