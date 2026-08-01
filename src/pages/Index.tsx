@@ -34,7 +34,8 @@ const portfolioImages = [
 ];
 
 const HERO_TITLES = [
-  "Hey! Welcome to my space. I'm Zahin.",
+  "Hey! Welcome to my space.",
+  "I am Zahin Syahiran.",
   "Entrepreneurship, Product Design & Branding."
 ];
 
