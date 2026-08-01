@@ -19,11 +19,11 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'display': ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+				'display': ['Inter', 'system-ui', 'sans-serif'],
 				'typewriter': ['Inter', 'sans-serif'],
 				'mono': ['Inter', 'sans-serif'],
 				'lyon': ['Lyon Text', 'serif'],
-				'jakarta': ['Plus Jakarta Sans', 'sans-serif'],
+				'jakarta': ['Inter', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

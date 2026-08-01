@@ -146,7 +146,7 @@ All colors MUST be HSL.
 
   /* Typography classes for the writing portfolio */
   .font-display {
-    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     color: hsl(var(--foreground));
   }
 
