@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { X, Send, Mic, ArrowRight, RotateCcw } from 'lucide-react';
+import { X, Send, Mic, ArrowRight, RotateCcw, MessageCircle } from 'lucide-react';
 import { useChat } from '../contexts/ChatContext';
 
 export default function ChatOverlay() {
@@ -63,7 +63,7 @@ export default function ChatOverlay() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-80" />
           <div className="absolute bottom-4 left-0 right-0 flex justify-center">
             <div className="bg-white px-3 py-1.5 rounded-full text-xs font-medium text-slate-800 shadow-sm flex items-center gap-1.5 border border-slate-200">
-              <Mic className="w-3 h-3 text-blue-500" /> Speak with Zahin
+              <MessageCircle className="w-3.5 h-3.5 text-blue-500" /> Chat with Zahin
             </div>
           </div>
         </div>
