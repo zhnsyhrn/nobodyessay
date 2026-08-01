@@ -2,6 +2,7 @@ import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import StickyNavbar from "@/components/StickyNavbar";
 import Footer from "@/components/Footer";
+import { Helmet } from "react-helmet-async";
 
 type ServiceItem = {
   name: string;
@@ -35,41 +36,45 @@ const Service = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Design Services & Rates | Zahin Syahiran</title>
+        <meta name="description" content="View transparent design rates and service packages for UI/UX design, brand identity, and website design & development by Zahin Syahiran." />
+      </Helmet>
       <StickyNavbar />
       <main className="min-h-screen bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-20">
           <div className="space-y-8">
-            <div className="text-center space-y-4 mb-12">
-              <h1 className="font-display sm:text-4xl font-medium tracking-tight leading-tight lg:text-4xl text-3xl">
+            <div className="text-center space-y-3 mb-12">
+              <h1 className="font-display sm:text-4xl font-medium tracking-tight leading-tight lg:text-4xl text-3xl text-foreground">
                 Design Services & Rates
               </h1>
-              <p className="font-mono text-lg text-zinc-400 sm:text-sm">
-                PROFESSIONAL RATES (RM)
+              <p className="font-mono text-sm uppercase tracking-wider text-muted-foreground">
+                Professional Rates (RM)
               </p>
             </div>
 
-            <div className="bg-muted/50 rounded-2xl overflow-hidden border border-white/10">
+            <div className="bg-card rounded-2xl overflow-hidden border border-border shadow-sm">
               <div className="overflow-x-auto">
                 <table className="w-full text-left border-collapse">
                   <thead>
-                    <tr className="border-b border-white/10 bg-white/5">
-                      <th className="py-4 px-6 font-display font-medium text-lg">Design Service</th>
-                      <th className="py-4 px-6 font-display font-medium text-lg text-right">(RM)</th>
+                    <tr className="border-b border-border bg-muted/40">
+                      <th className="py-4 px-6 font-display font-medium text-lg text-foreground">Design Service</th>
+                      <th className="py-4 px-6 font-display font-medium text-lg text-foreground text-right">(RM)</th>
                     </tr>
                   </thead>
                   <tbody>
                     {services.map((service, index) => (
                       <tr 
                         key={index} 
-                        className="border-b border-white/5 last:border-0 hover:bg-white/5 transition-colors"
+                        className="border-b border-border/50 last:border-0 hover:bg-muted/30 transition-colors"
                       >
-                        <td className="py-4 px-6 font-mono text-zinc-300">
-                          <div>{service.name}</div>
+                        <td className="py-4 px-6 font-jakarta text-foreground">
+                          <div className="font-medium text-base text-foreground">{service.name}</div>
                           {service.breakdown && (
-                            <div className="text-sm text-zinc-500 mt-1 whitespace-pre-wrap">{service.breakdown}</div>
+                            <div className="text-sm text-muted-foreground mt-2 whitespace-pre-wrap leading-relaxed font-normal">{service.breakdown}</div>
                           )}
                         </td>
-                        <td className="py-4 px-6 font-mono text-zinc-300 text-right">{service.rate}</td>
+                        <td className="py-4 px-6 font-mono text-foreground font-medium text-right text-base">{service.rate}</td>
                       </tr>
                     ))}
                   </tbody>
