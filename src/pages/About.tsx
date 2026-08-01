@@ -47,12 +47,49 @@ const About = () => {
       <StickyNavbar />
 
       <main className="flex-1 flex flex-col">
-      {/* Speaking & Participation — Photo-forward hero */}
-      <section className="pt-20 sm:pt-28 pb-16 sm:pb-24 px-4 sm:px-6">
+      {/* Intro Hero Section — Image Left, Text Right */}
+      <section className="pt-20 sm:pt-28 pb-12 sm:pb-16 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
-          <h1 className="font-display text-3xl sm:text-4xl font-medium text-foreground mb-3 tracking-tight">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
+            {/* Left Image */}
+            <div className="md:col-span-5">
+              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-lg border border-white/10 group">
+                <img 
+                  src="/Profile/photo_6233468766528409645_y.jpg_202607230735.jpeg" 
+                  alt="Zahin Syahiran" 
+                  className="w-full h-full object-cover scale-[1.35] translate-y-[6%] transition-transform duration-500 group-hover:scale-[1.4]"
+                />
+              </div>
+            </div>
+
+            {/* Right Text Content */}
+            <div className="md:col-span-7 space-y-4">
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-[56px] font-medium text-foreground tracking-tight leading-tight">
+                Hey, I'm Zahin.
+              </h1>
+              <p className="font-jakarta text-base sm:text-lg text-muted-foreground leading-relaxed">
+                I'm currently designing AI-driven products at <span className="text-foreground font-medium">Gamuda Technologies Pte. Ltd.</span> Previously, I led product design for Insurance Claim Portals at <span className="text-foreground font-medium">PolicyStreet</span> and worked with <span className="text-foreground font-medium">Hextar Technologies Berhad</span> for financial app and SaaS platform.
+              </p>
+              <p className="font-jakarta text-base sm:text-lg text-muted-foreground leading-relaxed">
+                Other highlights include founded <span className="text-foreground font-medium">Designloka</span>, a subscription-based model for design service in 2018, did the UX Audit for <span className="text-foreground font-medium">Great Eastern Takaful Berhad</span> to restructure their main website including creative team operational setup and design hiring for <span className="text-foreground font-medium">Paperballad & Co.</span>
+              </p>
+              <p className="font-jakarta text-base sm:text-lg text-muted-foreground leading-relaxed">
+                Based near Singapore (inspired from The Network School positioning strategy), I also have given talks at various events and universities on design theories and hard-skills.
+              </p>
+              <p className="font-jakarta text-base sm:text-lg text-muted-foreground leading-relaxed">
+                When I'm not in Figma, I'm either wandering around in nature such as hiking, exploring AI tools, watching movies or analysing Malaysia's political scene.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Speaking & Participation — Photo-forward hero */}
+      <section className="pt-16 sm:pt-20 pb-16 sm:pb-24 px-4 sm:px-6">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="font-display text-3xl sm:text-4xl font-medium text-foreground mb-3 tracking-tight">
             {t('about.title')}
-          </h1>
+          </h2>
           <p className="font-jakarta text-base sm:text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed">
             {t('about.description')}
           </p>
