@@ -9,13 +9,8 @@ interface AboutInfoNavbarProps {
 }
 
 export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
-  // Auto-open "KEY FACTS" on desktop (>=768px), start closed on mobile
-  const [activeTab, setActiveTab] = useState<AboutTabType>(() => {
-    if (typeof window !== "undefined") {
-      return window.innerWidth >= 768 ? "KEY FACTS" : null;
-    }
-    return "KEY FACTS";
-  });
+  // Start closed by default on page load
+  const [activeTab, setActiveTab] = useState<AboutTabType>(null);
   const panelRef = useRef<HTMLDivElement>(null);
 
   // Close panel on click outside or Escape key
