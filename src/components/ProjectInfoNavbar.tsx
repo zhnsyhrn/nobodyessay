@@ -17,8 +17,13 @@ export const ProjectInfoNavbar: React.FC<ProjectInfoNavbarProps> = ({
   websiteUrl,
   image,
 }) => {
-  // Default active tab to "KEY FACTS" open on load (like ZHA reference)
-  const [activeTab, setActiveTab] = useState<TabType>("KEY FACTS");
+  // Auto-open on desktop (>=768px), start closed on mobile
+  const [activeTab, setActiveTab] = useState<TabType>(() => {
+    if (typeof window !== "undefined") {
+      return window.innerWidth >= 768 ? "KEY FACTS" : null;
+    }
+    return "KEY FACTS";
+  });
   const panelRef = useRef<HTMLDivElement>(null);
 
   // Close panel on click outside or Escape key
