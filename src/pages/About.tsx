@@ -50,7 +50,7 @@ const About = () => {
       {/* Speaking & Participation — Photo-forward hero */}
       <section className="pt-20 sm:pt-28 pb-16 sm:pb-24 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
-          <h1 className="font-display text-3xl sm:text-4xl font-semibold text-foreground mb-3 tracking-tight">
+          <h1 className="font-display text-3xl sm:text-4xl font-medium text-foreground mb-3 tracking-tight">
             {t('about.title')}
           </h1>
           <p className="font-jakarta text-base sm:text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed">
@@ -105,7 +105,7 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
             {/* Clients — 3 cols */}
             <div className="lg:col-span-3">
-              <h2 className="font-display text-3xl sm:text-4xl font-semibold text-foreground mb-8 tracking-tight">
+              <h2 className="font-display text-3xl sm:text-4xl font-medium text-foreground mb-8 tracking-tight">
                 {t('about.clients_title')}
               </h2>
 
@@ -133,7 +133,7 @@ const About = () => {
 
             {/* Side projects — 2 cols */}
             <div className="lg:col-span-2">
-              <h2 className="font-display text-3xl sm:text-4xl font-semibold text-foreground mb-8 tracking-tight">
+              <h2 className="font-display text-3xl sm:text-4xl font-medium text-foreground mb-8 tracking-tight">
                 {t('about.projects_title')}
               </h2>
 
