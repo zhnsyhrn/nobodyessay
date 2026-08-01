@@ -187,8 +187,26 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
                     {/* TAB 2: TESTIMONIALS */}
                     {activeTab === "TESTIMONIALS" && (
                       <div className="space-y-5 border-b border-slate-100 pb-6">
-                        {/* 1. Justin Chen */}
+                        {/* 1. Casimir Yong */}
                         <div>
+                          <dt className="font-sans text-[13px] text-slate-500 font-medium mb-1.5 flex items-center gap-2.5">
+                            <img
+                              src="/images/casimir-yong.png"
+                              alt="Casimir Yong"
+                              className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover border border-slate-200 shadow-sm shrink-0"
+                            />
+                            <div>
+                              <span className="font-semibold text-slate-900 text-sm">Casimir Yong</span>
+                              <span className="text-slate-400 text-xs ml-1.5">• CEO, Paperballad & Co.</span>
+                            </div>
+                          </dt>
+                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed pl-9.5">
+                            "It's difficult to come across someone who is as passionate about design as Zahin. Two years ago, I had the pleasure of working with Zahin and learning from him on a number of entrepreneurship-related projects. I was always in awe of Zahin's ability to combine both critical thinking and creative thinking into his craft and design. No matter how challenging or minor the issue, Zahin gives his all and strives to find a lasting solution that pleases his devoted clientele. Any client would be lucky to work with Zahin and he has my highest recommendation as a designer."
+                          </dd>
+                        </div>
+
+                        {/* 2. Justin Chen */}
+                        <div className="border-t border-slate-100/80 pt-4">
                           <dt className="font-sans text-[13px] text-slate-500 font-medium mb-1.5 flex items-center gap-2.5">
                             <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-100 border border-slate-200 text-slate-700 font-semibold flex items-center justify-center text-xs shrink-0">
                               JC
