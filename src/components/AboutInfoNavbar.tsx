@@ -126,14 +126,13 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
                     {/* TAB 1: KEY FACTS */}
                     {activeTab === "KEY FACTS" && (
                       <div className="space-y-5 border-b border-slate-100 pb-6">
-                        {/* 1. Education Background */}
+                        {/* 1. Education */}
                         <div>
-                          <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1 flex items-center gap-1.5">
-                            <GraduationCap size={14} className="text-slate-500" />
-                            Education Background
+                          <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1">
+                            Education
                           </dt>
                           <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed">
-                            Bachelor of Applied Science (Honours), Design & Technology — Universiti Malaysia Sabah (UMS)
+                            Bachelor of Design (Graphic Design)(Honours), Saito University College, Petaling Jaya, Selangor D.E.
                           </dd>
                         </div>
 
@@ -143,41 +142,43 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
                             Years of Experience
                           </dt>
                           <dd className="font-display text-slate-900 text-xl sm:text-2xl font-normal">
-                            6+ Years (FinTech, InsurTech, Enterprise SaaS & AI Platforms)
+                            6 Years (FinTech, InsurTech, Enterprise B2B Platforms)
                           </dd>
                         </div>
 
                         {/* 3. Certification */}
                         <div className="border-t border-slate-100/80 pt-4">
-                          <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1 flex items-center gap-1.5">
-                            <Award size={14} className="text-slate-500" />
+                          <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1">
                             Certification
                           </dt>
-                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed">
-                            Google UX Design Professional Certificate • Agile Product Ownership & Component Design Systems
+                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed space-y-1.5">
+                            <div>AI Vibe Coding & Prototyping, by AITraining2u (May, 2026)</div>
+                            <div>Sekolah Demokrasi, by Democratic Action Party (DAP), (Mar & Oct 2017)</div>
+                            <div>Cohort 5, University Entpreneurship Masterclass, by StartupMalaysia.org (Nov, 2018)</div>
                           </dd>
                         </div>
 
                         {/* 4. Professional Membership */}
                         <div className="border-t border-slate-100/80 pt-4">
-                          <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1 flex items-center gap-1.5">
-                            <Users size={14} className="text-slate-500" />
+                          <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1">
                             Professional Membership
                           </dt>
                           <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed">
-                            Interaction Design Foundation (IxDF) • Member of UX Malaysia Community & Design Circle
+                            MII Toastmasters Club
                           </dd>
                         </div>
 
                         {/* 5. Volunteers */}
                         <div className="border-t border-slate-100/80 pt-4">
-                          <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1 flex items-center gap-1.5">
-                            <HeartHandshake size={14} className="text-slate-500" />
+                          <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1">
                             Volunteers
                           </dt>
                           <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed">
-                            Design Speaker & Mentor at UM Createz Bootcamp, UMS Tech Community Workshops & StartupMalaysia Masterclasses
+                            MUDA Wangsa Maju Committee Team, Social Media Coordinator, Parti Sosialis Malaysia (PSM), Political Campaign for Dun Lanchang, Parti Keadilan Rakyat (PKR)
                           </dd>
+                          <p className="font-sans text-[11px] text-slate-400 italic mt-2">
+                            *Note: Reflects past voluntary initiatives, community service, and civic engagements.
+                          </p>
                         </div>
                       </div>
                     )}
