@@ -67,16 +67,16 @@ const About = () => {
               <h1 className="font-display text-4xl sm:text-5xl lg:text-[56px] font-medium text-foreground tracking-tight leading-tight">
                 Hey, I'm Zahin.
               </h1>
-              <p className="font-jakarta text-base sm:text-lg text-muted-foreground leading-relaxed">
-                I'm currently designing AI-driven products at <span className="text-foreground font-medium">Gamuda Technologies Pte. Ltd.</span> Previously, I led product design for Insurance Claim Portals at <span className="text-foreground font-medium">PolicyStreet</span> and worked with <span className="text-foreground font-medium">Hextar Technologies Berhad</span> for financial app and SaaS platform.
+              <p className="font-jakarta text-[16px] text-muted-foreground leading-[26px]">
+                I'm currently designing AI-driven products at <a href="https://gamuda.tech/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium underline underline-offset-4 decoration-muted-foreground/40 hover:decoration-foreground transition-colors">Gamuda Technologies Pte. Ltd.</a> Previously, I led product design for Insurance Claim Portals at <a href="https://group.policystreet.com/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium underline underline-offset-4 decoration-muted-foreground/40 hover:decoration-foreground transition-colors">PolicyStreet</a> and worked with <a href="https://hextartech.com/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium underline underline-offset-4 decoration-muted-foreground/40 hover:decoration-foreground transition-colors">Hextar Technologies Berhad</a> for financial app and SaaS platform.
               </p>
-              <p className="font-jakarta text-base sm:text-lg text-muted-foreground leading-relaxed">
-                Other highlights include founded <span className="text-foreground font-medium">Designloka</span>, a subscription-based model for design service in 2018, did the UX Audit for <span className="text-foreground font-medium">Great Eastern Takaful Berhad</span> to restructure their main website including creative team operational setup and design hiring for <span className="text-foreground font-medium">Paperballad & Co.</span>
+              <p className="font-jakarta text-[16px] text-muted-foreground leading-[26px]">
+                Other highlights include founded <span className="text-foreground font-medium">Designloka</span>, a subscription-based model for design service in 2018, did the UX Audit for <a href="https://www.greateasterntakaful.com/en/personal-takaful.html" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium underline underline-offset-4 decoration-muted-foreground/40 hover:decoration-foreground transition-colors">Great Eastern Takaful Berhad</a> to restructure their main website including creative team operational setup and design hiring for <a href="https://paperballad.com/company/about-us/" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium underline underline-offset-4 decoration-muted-foreground/40 hover:decoration-foreground transition-colors">Paperballad & Co.</a>
               </p>
-              <p className="font-jakarta text-base sm:text-lg text-muted-foreground leading-relaxed">
+              <p className="font-jakarta text-[16px] text-muted-foreground leading-[26px]">
                 Based near Singapore (inspired from The Network School positioning strategy), I also have given talks at various events and universities on design theories and hard-skills.
               </p>
-              <p className="font-jakarta text-base sm:text-lg text-muted-foreground leading-relaxed">
+              <p className="font-jakarta text-[16px] text-muted-foreground leading-[26px]">
                 When I'm not in Figma, I'm either wandering around in nature such as hiking, exploring AI tools, watching movies or analysing Malaysia's political scene.
               </p>
             </div>
