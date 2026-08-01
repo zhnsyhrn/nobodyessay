@@ -152,7 +152,7 @@ const Index = () => {
       {/* Hero Section */}
       <section ref={heroRef} className="relative py-8 sm:py-12 lg:py-20 px-4 sm:px-6 fade-in pb-4 sm:pb-6">
         <div className="max-w-6xl mx-auto text-left lg:text-center relative z-10">
-          <h2 className="font-display text-[30px] sm:text-[36px] lg:text-[48px] font-medium mb-2 sm:mb-3 tracking-tight leading-[36px] sm:leading-[40px] lg:leading-[54px] min-h-[110px] sm:min-h-[80px] lg:min-h-[60px]">
+          <h2 className="font-display text-[36px] lg:text-[48px] font-medium mb-2 sm:mb-3 tracking-tight leading-[42px] lg:leading-[54px] min-h-[90px] sm:min-h-[80px] lg:min-h-[60px]">
             <TypewriterEffect />
           </h2>
           <p style={{
