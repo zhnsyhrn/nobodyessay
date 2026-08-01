@@ -69,7 +69,7 @@ const StickyNavbar = () => {
         <div className="relative flex items-center justify-between rounded-full bg-white/60 dark:bg-[#1a1a1a]/80 backdrop-blur-xl border border-border/60 dark:border-white/10 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.6)] pl-4 sm:pl-5 pr-2 py-2 transition-all duration-300">
           <Link to="/" onClick={closeMenu} className="flex items-center space-x-2 sm:space-x-3 z-10">
             <img src="/lovable-uploads/e058676f-a0f2-441a-983c-a931949d96b8.png" alt="byzahin" className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover" />
-            <h1 className="font-display text-base sm:text-lg font-medium hover:text-muted-foreground transition-colors">Zahin Syahiran</h1>
+            <h1 className="font-display text-base sm:text-lg font-medium hover:text-muted-foreground transition-colors">byzahin</h1>
           </Link>
 
           {/* Desktop Navigation - absolutely centered */}
