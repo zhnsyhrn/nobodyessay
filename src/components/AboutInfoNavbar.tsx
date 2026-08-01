@@ -187,8 +187,26 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
                     {/* TAB 2: TESTIMONIALS */}
                     {activeTab === "TESTIMONIALS" && (
                       <div className="space-y-5 border-b border-slate-100 pb-6">
-                        {/* 1. Tang Siew Wai */}
+                        {/* 1. Winnie Chua */}
                         <div>
+                          <dt className="font-sans text-[13px] text-slate-500 font-medium mb-1.5 flex items-center gap-2.5">
+                            <img
+                              src="/images/winnie-chua.png"
+                              alt="Winnie Chua 蔡沛宁"
+                              className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover border border-slate-200 shadow-sm shrink-0"
+                            />
+                            <div>
+                              <span className="font-semibold text-slate-900 text-sm">Winnie Chua 蔡沛宁</span>
+                              <span className="text-slate-400 text-xs ml-1.5">• Co-founder, PolicyStreet & Principal Officer</span>
+                            </div>
+                          </dt>
+                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed pl-9.5">
+                            "A very important initiative. Kudos to you and the rest of growth team!"
+                          </dd>
+                        </div>
+
+                        {/* 2. Tang Siew Wai */}
+                        <div className="border-t border-slate-100/80 pt-4">
                           <dt className="font-sans text-[13px] text-slate-500 font-medium mb-1.5 flex items-center gap-2.5">
                             <img
                               src="/images/tang-siew-wai.png"
