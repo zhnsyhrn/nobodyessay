@@ -17,10 +17,10 @@ const Contact = () => {
             {/* Content Column */}
             <div className="space-y-6">
               <div className="space-y-4">
-                <h1 className="font-display text-3xl sm:text-4xl lg:text-[48px] font-medium mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-tight lg:leading-[56px]">Are you looking for designer? Let's have a coffee chat.</h1>
+                <h1 className="font-display text-[38px] sm:text-4xl lg:text-[48px] font-medium mb-4 sm:mb-6 tracking-tight leading-[44px] sm:leading-tight lg:leading-[56px]">Are you looking for designer? Let's have a coffee chat.</h1>
                 <p style={{
                 color: 'var(--body-text)'
-              }} className="font-mono text-lg max-w-2xl leading-[27px] sm:leading-relaxed px-1 mb-6 sm:mb-8 sm:px-0 text-zinc-400 sm:text-sm">SEND ME A MESSAGE ON LINKEDIN OR AN EMAIL.</p>
+              }} className="font-mono text-[14px] sm:text-sm max-w-2xl leading-[22px] sm:leading-relaxed px-1 mb-6 sm:mb-8 sm:px-0 text-zinc-400">SEND ME A MESSAGE ON LINKEDIN OR AN EMAIL.</p>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 px-1 sm:px-2">
