@@ -151,10 +151,12 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
                           <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1">
                             Certification
                           </dt>
-                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed space-y-1.5">
-                            <div>AI Vibe Coding & Prototyping, by AITraining2u (May, 2026)</div>
-                            <div>Sekolah Demokrasi, by Democratic Action Party (DAP), (Mar & Oct 2017)</div>
-                            <div>Cohort 5, University Entpreneurship Masterclass, by StartupMalaysia.org (Nov, 2018)</div>
+                          <dd>
+                            <ul className="list-disc list-outside pl-5 space-y-1 font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed">
+                              <li>AI Vibe Coding & Prototyping, by AITraining2u (May, 2026)</li>
+                              <li>Sekolah Demokrasi, by Democratic Action Party (DAP), (Mar & Oct 2017)</li>
+                              <li>Cohort 5, University Entpreneurship Masterclass, by StartupMalaysia.org (Nov, 2018)</li>
+                            </ul>
                           </dd>
                         </div>
 
@@ -173,8 +175,12 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
                           <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1">
                             Volunteers
                           </dt>
-                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed">
-                            MUDA Wangsa Maju Committee Team, Social Media Coordinator, Parti Sosialis Malaysia (PSM), Political Campaign for Dun Lanchang, Parti Keadilan Rakyat (PKR)
+                          <dd>
+                            <ul className="list-disc list-outside pl-5 space-y-1 font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed">
+                              <li>MUDA Wangsa Maju Committee Team</li>
+                              <li>Social Media Coordinator, Parti Sosialis Malaysia (PSM)</li>
+                              <li>Political Campaign for Dun Lanchang, Parti Keadilan Rakyat (PKR)</li>
+                            </ul>
                           </dd>
                           <p className="font-sans text-[11px] text-slate-400 italic mt-2">
                             *Note: Reflects past voluntary initiatives, community service, and civic engagements.
