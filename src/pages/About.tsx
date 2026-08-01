@@ -1,3 +1,4 @@
+import React from "react";
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
@@ -6,9 +7,29 @@ import { ExternalLink, Mic, Briefcase, Rocket } from "lucide-react";
 import { LazyImage } from "@/components/ui/lazy-image";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const About = () => {
   const { t } = useTranslation();
+  const [carouselApi, setCarouselApi] = React.useState<CarouselApi>();
+  const [currentSlide, setCurrentSlide] = React.useState(0);
+  const [totalSlides, setTotalSlides] = React.useState(0);
+
+  React.useEffect(() => {
+    if (!carouselApi) return;
+    setTotalSlides(carouselApi.scrollSnapList().length);
+    setCurrentSlide(carouselApi.selectedScrollSnap());
+    carouselApi.on("select", () => {
+      setCurrentSlide(carouselApi.selectedScrollSnap());
+    });
+  }, [carouselApi]);
+
+  const bannerImages = [
+    { src: "/Profile/whiteguy.jpg", alt: "Collaboration Session" },
+    { src: "/Profile/Cheeuh-81.jpg", alt: "Design Work & Layouts" },
+    { src: "/Profile/client_1.jpg", alt: "Client Collaboration" },
+  ];
   const clients = [
     { name: "Grain Singapore", logo: "/lovable-uploads/3c96f375-d885-4200-93e7-d6c296d99beb.png", url: "https://grain.com.sg/" },
     { name: "Great Eastern Takaful Berhad", logo: "/lovable-uploads/27f41456-e5d7-44d0-b7c9-cd34256d208c.png", url: "https://www.greateasterntakaful.com/en/personal-takaful.html" },
@@ -81,6 +102,61 @@ const About = () => {
                 When I'm not in Figma, I'm either wandering around in nature such as hiking, exploring AI tools, watching movies or analysing Malaysia's political scene.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 16:9 Image Carousel Section */}
+      <section className="pt-8 sm:pt-12 pb-8 sm:pb-12 px-4 sm:px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="relative group">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 4000,
+                  stopOnInteraction: true,
+                }),
+              ]}
+              setApi={setCarouselApi}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-0">
+                {bannerImages.map((image, index) => (
+                  <CarouselItem key={index} className="pl-0">
+                    <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden shadow-sm border border-slate-200/80 dark:border-white/10">
+                      <LazyImage
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-full object-cover"
+                        priority={index === 0}
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-4 bg-white/80 dark:bg-black/60 backdrop-blur-md border-none text-foreground hover:bg-white dark:hover:bg-black hidden sm:flex opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20" />
+              <CarouselNext className="right-4 bg-white/80 dark:bg-black/60 backdrop-blur-md border-none text-foreground hover:bg-white dark:hover:bg-black hidden sm:flex opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20" />
+            </Carousel>
+
+            {/* Pagination Dots */}
+            {totalSlides > 1 && (
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/10">
+                {Array.from({ length: totalSlides }).map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => carouselApi?.scrollTo(i)}
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                      currentSlide === i ? "w-6 bg-white" : "w-2 bg-white/50 hover:bg-white/80"
+                    }`}
+                    aria-label={`Go to slide ${i + 1}`}
+                  />
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </section>

@@ -61,6 +61,18 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
     }
   };
 
+  const getSectionImage = () => {
+    switch (activeTab) {
+      case "EXPERTISE":
+        return "/Profile/laptop.jpg";
+      case "TESTIMONIALS":
+        return "/Profile/zahin_ps.jpg";
+      case "KEY FACTS":
+      default:
+        return "/Profile/Cheeuh-81.jpg";
+    }
+  };
+
   return (
     <div
       ref={panelRef}
@@ -94,16 +106,16 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
               <div className="md:col-span-5 flex flex-col">
                 <div className="aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-100 border border-slate-200/60 shadow-sm">
                   <img
-                    src="/Profile/hiking_2.jpg"
+                    src={getSectionImage()}
                     alt="Zahin Syahiran"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-opacity duration-300"
                   />
                 </div>
                 <h2 className="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-black mt-4">
                   {getSectionTitle()}
                 </h2>
                 <p className="font-sans text-xs text-slate-500 mt-1">
-                  Zahin Syahiran — Product Designer & Design Lead
+                  Zahin Syahiran
                 </p>
               </div>
 
@@ -301,8 +313,7 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
                     {activeTab === "EXPERTISE" && (
                       <div className="space-y-5 border-b border-slate-100 pb-6">
                         <div>
-                          <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1 flex items-center gap-1.5">
-                            <Wrench size={14} className="text-slate-500" />
+                          <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1">
                             Core Competencies
                           </dt>
                           <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed">
@@ -315,7 +326,7 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
                             Design Tools & Technologies
                           </dt>
                           <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed">
-                            Figma, Adobe Creative Cloud, Framer, Webflow, React, Tailwind CSS, HTML5/CSS3, VS Code
+                            Figma, Adobe Creative Cloud, Framer
                           </dd>
                         </div>
 
