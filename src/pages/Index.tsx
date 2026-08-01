@@ -139,7 +139,7 @@ const Index = () => {
       {/* Hero Section */}
       <section ref={heroRef} className="relative py-8 sm:py-12 lg:py-20 px-4 sm:px-6 fade-in pb-4 sm:pb-6">
         <div className="max-w-6xl mx-auto text-left lg:text-center relative z-10">
-          <h2 className="font-display text-[30px] sm:text-[36px] font-medium mb-2 sm:mb-3 tracking-tight leading-[36px] sm:leading-[40px] min-h-[110px] sm:min-h-[80px] lg:min-h-[48px]"><TypewriterEffect text="Entrepreneurship, Product Design & Branding." /></h2>
+          <h2 className="font-display text-[30px] sm:text-[36px] lg:text-[48px] font-medium mb-2 sm:mb-3 tracking-tight leading-[36px] sm:leading-[40px] lg:leading-[54px] min-h-[110px] sm:min-h-[80px] lg:min-h-[60px]"><TypewriterEffect text="Entrepreneurship, Product Design & Branding." /></h2>
           <p style={{
           color: 'var(--body-text)'
         }} className="font-jakarta text-[14px] sm:text-[16px] max-w-2xl lg:mx-auto leading-[25px] sm:leading-[29px] px-1 mb-6 sm:mb-8 sm:px-0">{t('hero.subtitle')}</p>
