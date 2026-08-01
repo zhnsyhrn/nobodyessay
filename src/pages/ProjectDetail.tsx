@@ -419,6 +419,20 @@ const ProjectDetail = () => {
     }
   }, [slug]);
 
+  const getProjectCoverImage = () => {
+    const matched = availableProjects.find(p => p.slug === slug);
+    if (matched?.image) return matched.image;
+    if (slug === 'moneyx-savings-goals-manual-entry') return moneyxImages[0];
+    if (slug === 'knock-knock-cafe-kuala-terengganu') return knockKnockImages[0];
+    if (slug === 'policystreet-car-insurance-platform') return policyStreetImages[0];
+    if (slug === 'spark-parking-app') return sparkImages[0];
+    if (slug === 'moneyx-moneyxbiz-referral-program') return referralProgramImages[0];
+    if (slug === 'great-eastern-takaful-malaysia') return greatEasternTakafulImages[0];
+    if (slug === 'verdant-solar-my') return verdantSolarImages[0];
+    if (slug === 'aqa-group-of-companies') return "/lovable-uploads/685158de-18a9-4c06-8b43-5214ae7a89a9.png";
+    return undefined;
+  };
+
   // Get smart recommendations for two projects
   const getRecommendedProjects = () => {
     const viewedProjects = JSON.parse(localStorage.getItem('viewedProjects') || '[]');
