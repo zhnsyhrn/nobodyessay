@@ -33,45 +33,43 @@ const portfolioImages = [
   { src: "/lovable-uploads/b4c83dca-133b-41b0-9c28-44746d3f650f.png", title: "Coffee Packaging", type: "Branding", slug: "knock-knock-cafe-kuala-terengganu" },
 ];
 
-const TypewriterEffect = ({ text }: { text: string }) => {
+const TypewriterEffect = ({ texts }: { texts: string[] }) => {
+  const [textIndex, setTextIndex] = React.useState(0);
   const [displayedText, setDisplayedText] = React.useState("");
-  const [index, setIndex] = React.useState(0);
+  const [charIndex, setCharIndex] = React.useState(0);
   const [isDeleting, setIsDeleting] = React.useState(false);
+
+  const currentText = texts[textIndex % texts.length];
 
   React.useEffect(() => {
     let timeout: NodeJS.Timeout;
 
-    if (!isDeleting && index < text.length) {
-      // Typing
+    if (!isDeleting && charIndex < currentText.length) {
       timeout = setTimeout(() => {
-        setDisplayedText((prev) => prev + text.charAt(index));
-        setIndex((prev) => prev + 1);
-      }, 50);
-    } else if (!isDeleting && index === text.length) {
-      // Pause at the end before deleting
+        setDisplayedText((prev) => prev + currentText.charAt(charIndex));
+        setCharIndex((prev) => prev + 1);
+      }, 45);
+    } else if (!isDeleting && charIndex === currentText.length) {
       timeout = setTimeout(() => {
         setIsDeleting(true);
-      }, 3500); // 3.5 seconds pause
-    } else if (isDeleting && index > 0) {
-      // Deleting
+      }, 3200);
+    } else if (isDeleting && charIndex > 0) {
       timeout = setTimeout(() => {
         setDisplayedText((prev) => prev.slice(0, -1));
-        setIndex((prev) => prev - 1);
-      }, 30);
-    } else if (isDeleting && index === 0) {
-      // Pause before typing again
-      timeout = setTimeout(() => {
-        setIsDeleting(false);
-      }, 500);
+        setCharIndex((prev) => prev - 1);
+      }, 20);
+    } else if (isDeleting && charIndex === 0) {
+      setIsDeleting(false);
+      setTextIndex((prev) => (prev + 1) % texts.length);
     }
 
     return () => clearTimeout(timeout);
-  }, [index, isDeleting, text]);
+  }, [charIndex, isDeleting, textIndex, currentText, texts]);
 
   return (
     <>
       {displayedText}
-      <span className={`${index === text.length || index === 0 ? 'animate-pulse' : ''} ml-1 inline-block w-[3px] h-[0.8em] bg-gradient-to-t from-blue-600 to-cyan-400 align-middle`}></span>
+      <span className={`${charIndex === currentText.length || charIndex === 0 ? 'animate-pulse' : ''} ml-1 inline-block w-[3px] h-[0.8em] bg-gradient-to-t from-blue-600 to-cyan-400 align-middle`}></span>
     </>
   );
 };
@@ -149,7 +147,12 @@ const Index = () => {
       {/* Hero Section */}
       <section ref={heroRef} className="relative py-8 sm:py-12 lg:py-20 px-4 sm:px-6 fade-in pb-4 sm:pb-6">
         <div className="max-w-6xl mx-auto text-left lg:text-center relative z-10">
-          <h2 className="font-display text-[30px] sm:text-[36px] lg:text-[48px] font-medium mb-2 sm:mb-3 tracking-tight leading-[36px] sm:leading-[40px] lg:leading-[54px] min-h-[110px] sm:min-h-[80px] lg:min-h-[60px]"><TypewriterEffect text="Entrepreneurship, Product Design & Branding." /></h2>
+          <h2 className="font-display text-[30px] sm:text-[36px] lg:text-[48px] font-medium mb-2 sm:mb-3 tracking-tight leading-[36px] sm:leading-[40px] lg:leading-[54px] min-h-[110px] sm:min-h-[80px] lg:min-h-[60px]">
+            <TypewriterEffect texts={[
+              "Hey! Welcome to my space. I'm Zahin.",
+              "Entrepreneurship, Product Design & Branding."
+            ]} />
+          </h2>
           <p style={{
           color: 'var(--body-text)'
         }} className="font-jakarta text-[14px] sm:text-[16px] max-w-2xl lg:mx-auto leading-[25px] sm:leading-[29px] px-1 mb-6 sm:mb-8 sm:px-0">{t('hero.subtitle')}</p>
