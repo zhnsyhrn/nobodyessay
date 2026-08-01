@@ -1,6 +1,7 @@
 import StickyNavbar from "@/components/StickyNavbar";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import Footer from "@/components/Footer";
+import AboutInfoNavbar from "@/components/AboutInfoNavbar";
 import { ExternalLink, Mic, Briefcase, Rocket } from "lucide-react";
 import { LazyImage } from "@/components/ui/lazy-image";
 import { useTranslation } from "react-i18next";
@@ -220,6 +221,7 @@ const About = () => {
       </section>
 
       </main>
+      <AboutInfoNavbar />
       <Footer />
       <ScrollToTopButton />
     </div>

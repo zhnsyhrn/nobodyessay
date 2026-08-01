@@ -1,0 +1,307 @@
+import React, { useState, useEffect, useRef } from "react";
+import { Plus, Minus, X, ExternalLink, GraduationCap, Award, Users, HeartHandshake, Quote, Wrench } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+
+type AboutTabType = "KEY FACTS" | "TESTIMONIALS" | "EXPERTISE" | null;
+
+interface AboutInfoNavbarProps {
+  customFacts?: Record<string, string>;
+}
+
+export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
+  // Auto-open "KEY FACTS" on desktop (>=768px), start closed on mobile
+  const [activeTab, setActiveTab] = useState<AboutTabType>(() => {
+    if (typeof window !== "undefined") {
+      return window.innerWidth >= 768 ? "KEY FACTS" : null;
+    }
+    return "KEY FACTS";
+  });
+  const panelRef = useRef<HTMLDivElement>(null);
+
+  // Close panel on click outside or Escape key
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (panelRef.current && !panelRef.current.contains(event.target as Node)) {
+        setActiveTab(null);
+      }
+    };
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setActiveTab(null);
+      }
+    };
+
+    if (activeTab) {
+      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [activeTab]);
+
+  const handleTabClick = (tab: AboutTabType) => {
+    if (activeTab === tab) {
+      setActiveTab(null);
+    } else {
+      setActiveTab(tab);
+    }
+  };
+
+  const tabs: AboutTabType[] = ["KEY FACTS", "TESTIMONIALS", "EXPERTISE"];
+
+  const getSectionTitle = () => {
+    switch (activeTab) {
+      case "KEY FACTS":
+        return "About Key Facts";
+      case "TESTIMONIALS":
+        return "Recommendations & Praise";
+      case "EXPERTISE":
+        return "Skills & Capabilities";
+      default:
+        return "About Information";
+    }
+  };
+
+  return (
+    <div
+      ref={panelRef}
+      className="fixed bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center max-w-[96vw] pointer-events-none z-40"
+    >
+      {/* Floating Expanded Pure White Information Card (Matching ZHA Reference) */}
+      <AnimatePresence>
+        {activeTab && (
+          <motion.div
+            key="panel"
+            initial={{ opacity: 0, y: 24, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 16, scale: 0.97 }}
+            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+            data-lenis-prevent="true"
+            onWheel={(e) => e.stopPropagation()}
+            className="pointer-events-auto mb-4 w-[94vw] max-w-[960px] max-h-[calc(100vh-170px)] sm:max-h-[calc(100vh-190px)] overflow-y-auto zha-scrollbar bg-white text-slate-900 rounded-2xl p-5 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.35)] border border-slate-200/90 relative origin-bottom"
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setActiveTab(null)}
+              className="absolute top-4 right-4 sm:top-5 sm:right-5 p-2 rounded-full text-slate-400 hover:text-black hover:bg-slate-100 transition-colors z-10"
+              aria-label="Close"
+            >
+              <X size={20} />
+            </button>
+
+            {/* Split Layout: Left Column (Profile & Title) | Right Column (Tab Content) */}
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-start">
+              {/* Left Column: Profile Cover Image + Section Title */}
+              <div className="md:col-span-5 flex flex-col">
+                <div className="aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-100 border border-slate-200/60 shadow-sm">
+                  <img
+                    src="/Profile/hiking_2.jpg"
+                    alt="Zahin Syahiran"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h2 className="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-black mt-4">
+                  {getSectionTitle()}
+                </h2>
+                <p className="font-sans text-xs text-slate-500 mt-1">
+                  Zahin Syahiran — Product Designer & Design Lead
+                </p>
+              </div>
+
+              {/* Right Column: Tab Content */}
+              <div className="md:col-span-7 pt-1">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={activeTab}
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -8 }}
+                    transition={{ duration: 0.2 }}
+                    className="space-y-6"
+                  >
+                    {/* TAB 1: KEY FACTS */}
+                    {activeTab === "KEY FACTS" && (
+                      <div className="space-y-5 border-b border-slate-100 pb-6">
+                        {/* 1. Education Background */}
+                        <div>
+                          <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1 flex items-center gap-1.5">
+                            <GraduationCap size={14} className="text-slate-500" />
+                            Education Background
+                          </dt>
+                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed">
+                            Bachelor of Applied Science (Honours), Design & Technology — Universiti Malaysia Sabah (UMS)
+                          </dd>
+                        </div>
+
+                        {/* 2. Years of Experience */}
+                        <div className="border-t border-slate-100/80 pt-4">
+                          <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1">
+                            Years of Experience
+                          </dt>
+                          <dd className="font-display text-slate-900 text-xl sm:text-2xl font-normal">
+                            6+ Years (FinTech, InsurTech, Enterprise SaaS & AI Platforms)
+                          </dd>
+                        </div>
+
+                        {/* 3. Certification */}
+                        <div className="border-t border-slate-100/80 pt-4">
+                          <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1 flex items-center gap-1.5">
+                            <Award size={14} className="text-slate-500" />
+                            Certification
+                          </dt>
+                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed">
+                            Google UX Design Professional Certificate • Agile Product Ownership & Component Design Systems
+                          </dd>
+                        </div>
+
+                        {/* 4. Professional Membership */}
+                        <div className="border-t border-slate-100/80 pt-4">
+                          <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1 flex items-center gap-1.5">
+                            <Users size={14} className="text-slate-500" />
+                            Professional Membership
+                          </dt>
+                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed">
+                            Interaction Design Foundation (IxDF) • Member of UX Malaysia Community & Design Circle
+                          </dd>
+                        </div>
+
+                        {/* 5. Volunteers */}
+                        <div className="border-t border-slate-100/80 pt-4">
+                          <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1 flex items-center gap-1.5">
+                            <HeartHandshake size={14} className="text-slate-500" />
+                            Volunteers
+                          </dt>
+                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed">
+                            Design Speaker & Mentor at UM Createz Bootcamp, UMS Tech Community Workshops & StartupMalaysia Masterclasses
+                          </dd>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* TAB 2: TESTIMONIALS */}
+                    {activeTab === "TESTIMONIALS" && (
+                      <div className="space-y-6 border-b border-slate-100 pb-6">
+                        <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                          <div className="flex items-center gap-2 mb-2 text-slate-900 font-display font-medium text-sm sm:text-base">
+                            <Quote size={16} className="text-blue-600" />
+                            Simon Goh — Director of Digital Experience Studio, GETB
+                          </div>
+                          <p className="font-sans text-xs sm:text-sm text-slate-600 leading-relaxed italic">
+                            "Zahin brought exceptional UX strategy and customer insight to GETB's website overhaul, streamlining our digital touchpoints with speed and precision."
+                          </p>
+                        </div>
+
+                        <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                          <div className="flex items-center gap-2 mb-2 text-slate-900 font-display font-medium text-sm sm:text-base">
+                            <Quote size={16} className="text-blue-600" />
+                            Shaun Choy — Product Owner, PolicyStreet
+                          </div>
+                          <p className="font-sans text-xs sm:text-sm text-slate-600 leading-relaxed italic">
+                            "Zahin's design leadership transformed our car insurance purchasing funnel. His attention to component detail and user flows significantly boosted our conversion rates."
+                          </p>
+                        </div>
+
+                        <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                          <div className="flex items-center gap-2 mb-2 text-slate-900 font-display font-medium text-sm sm:text-base">
+                            <Quote size={16} className="text-blue-600" />
+                            Shan Yi T. — Product Manager, MoneyX / Hextar Tech
+                          </div>
+                          <p className="font-sans text-xs sm:text-sm text-slate-600 leading-relaxed italic">
+                            "Zahin delivered high-impact net worth simulation designs within tight timelines. A proactive product designer who seamlessly connects user needs with engineering specs."
+                          </p>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* TAB 3: EXPERTISE */}
+                    {activeTab === "EXPERTISE" && (
+                      <div className="space-y-5 border-b border-slate-100 pb-6">
+                        <div>
+                          <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1 flex items-center gap-1.5">
+                            <Wrench size={14} className="text-slate-500" />
+                            Core Competencies
+                          </dt>
+                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed">
+                            End-to-End Product Design, Mobile App UX/UI, Enterprise SaaS, UX Auditing, Design Systems & Rapid Prototyping
+                          </dd>
+                        </div>
+
+                        <div className="border-t border-slate-100/80 pt-4">
+                          <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1">
+                            Design Tools & Technologies
+                          </dt>
+                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed">
+                            Figma, Adobe Creative Cloud, Framer, Webflow, React, Tailwind CSS, HTML5/CSS3, VS Code
+                          </dd>
+                        </div>
+
+                        <div className="border-t border-slate-100/80 pt-4">
+                          <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1">
+                            Industry Domains
+                          </dt>
+                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed">
+                            FinTech & Personal Finance, InsurTech, AI-Driven Construction Tech (Gamuda Tech), Brand Identity & Education
+                          </dd>
+                        </div>
+
+                        <div className="border-t border-slate-100/80 pt-4">
+                          <dt className="font-sans text-[13px] text-slate-400 font-normal mb-1">
+                            Languages
+                          </dt>
+                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal">
+                            English (Professional), Bahasa Malaysia (Native)
+                          </dd>
+                        </div>
+                      </div>
+                    )}
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Obvious Glassmorphism ZHA Floating Navigation Pill Bar */}
+      <div className="pointer-events-auto flex items-center gap-1 sm:gap-3 bg-white/60 dark:bg-black/60 backdrop-blur-2xl backdrop-saturate-180 backdrop-contrast-125 border border-white/80 dark:border-white/20 px-3.5 sm:px-6 py-2 sm:py-2.5 rounded-full shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_12px_36px_rgba(0,0,0,0.2)] dark:shadow-[inset_0_1px_1px_rgba(255,255,255,0.25),0_16px_40px_rgba(0,0,0,0.6)] text-slate-900 dark:text-white">
+        {tabs.map((tab, idx) => (
+          <React.Fragment key={tab}>
+            {idx > 0 && <span className="text-slate-400/40 dark:text-white/30 select-none">|</span>}
+            <button
+              onClick={() => handleTabClick(tab)}
+              className={`relative flex items-center gap-1 sm:gap-1.5 px-3 py-1.5 rounded-full font-mono text-[10px] sm:text-[11px] uppercase tracking-wider whitespace-nowrap transition-colors duration-200 ${
+                activeTab === tab
+                  ? "text-white font-semibold"
+                  : "text-slate-800 dark:text-white/85 hover:text-black dark:hover:text-white hover:bg-black/10 dark:hover:bg-white/15"
+              }`}
+            >
+              {activeTab === tab && (
+                <motion.div
+                  layoutId="activePillBgAbout"
+                  className="absolute inset-0 bg-slate-900 text-white dark:bg-white dark:text-slate-900 rounded-full shadow-md"
+                  transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                />
+              )}
+              <span className={`relative z-10 ${activeTab === tab ? "text-white dark:text-slate-900 font-semibold" : ""}`}>
+                {tab}
+              </span>
+              <motion.span
+                animate={{ rotate: activeTab === tab ? 180 : 0 }}
+                transition={{ duration: 0.25, ease: "easeInOut" }}
+                className={`relative z-10 inline-block ${activeTab === tab ? "text-white dark:text-slate-900" : ""}`}
+              >
+                {activeTab === tab ? <Minus size={12} /> : <Plus size={12} />}
+              </motion.span>
+            </button>
+          </React.Fragment>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default AboutInfoNavbar;
