@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { X, Send, Mic, ArrowRight, RotateCcw, MessageCircle } from 'lucide-react';
+import { X, Send, ArrowRight, RotateCcw, MessageCircle } from 'lucide-react';
 import { useChat } from '../contexts/ChatContext';
 
 export default function ChatOverlay() {
@@ -114,12 +114,9 @@ export default function ChatOverlay() {
             onChange={(e) => setInputValue(e.target.value)}
             disabled={!isBotReady}
             placeholder={isBotReady ? "Ask Zahin a question" : "Connecting to AI..."}
-            className="w-full pl-4 pr-20 py-3 bg-white border border-slate-200 rounded-lg text-[14px] text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all shadow-sm disabled:opacity-50 disabled:bg-slate-50"
+            className="w-full pl-4 pr-12 py-3 bg-white border border-slate-200 rounded-lg text-[14px] text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all shadow-sm disabled:opacity-50 disabled:bg-slate-50"
           />
           <div className="absolute right-2 flex items-center gap-1">
-            <button type="button" className="p-2 text-slate-400 hover:text-slate-600 transition-colors">
-              <Mic className="w-4 h-4" />
-            </button>
             <button
               type="submit"
               disabled={!inputValue.trim() || !isBotReady}
