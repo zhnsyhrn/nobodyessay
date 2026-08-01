@@ -187,8 +187,26 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
                     {/* TAB 2: TESTIMONIALS */}
                     {activeTab === "TESTIMONIALS" && (
                       <div className="space-y-5 border-b border-slate-100 pb-6">
-                        {/* 1. Winnie Chua */}
+                        {/* 1. Justin Wong */}
                         <div>
+                          <dt className="font-sans text-[13px] text-slate-500 font-medium mb-1.5 flex items-center gap-2.5">
+                            <img
+                              src="/images/justin-wong.png"
+                              alt="Justin Wong"
+                              className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover border border-slate-200 shadow-sm shrink-0"
+                            />
+                            <div>
+                              <span className="font-semibold text-slate-900 text-sm">Justin Wong</span>
+                              <span className="text-slate-400 text-xs ml-1.5">• Ex-Uber | Founder @ RedSquare & JomeInvoice</span>
+                            </div>
+                          </dt>
+                          <dd className="font-display text-slate-900 text-base sm:text-lg font-normal leading-relaxed pl-9.5">
+                            "Connected with Zahin Syahiran from PolicyStreet to talk about creative, branding, startup, marketing, partnership and NFT. He founded a '1-monthly price for unlimited designs', Designloka back in 2018 with an innovative business model to the market back then. Love his passion in branding & design! Looking forward to your work in PolicyStreet. 🎨"
+                          </dd>
+                        </div>
+
+                        {/* 2. Winnie Chua */}
+                        <div className="border-t border-slate-100/80 pt-4">
                           <dt className="font-sans text-[13px] text-slate-500 font-medium mb-1.5 flex items-center gap-2.5">
                             <img
                               src="/images/winnie-chua.png"
