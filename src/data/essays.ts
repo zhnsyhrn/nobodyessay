@@ -7,6 +7,7 @@ export interface Essay {
   excerpt: string;
   metaDescription: string;
   date: string;
+  isoDate?: string;
   readTime: string;
   category: string;
   content: string;
@@ -20,6 +21,7 @@ export const essays: Essay[] = [
     excerpt: "I will soon be leading the brand creative direction for Flaaah. Here is why creative direction is a business strategy, not just design.",
     metaDescription: "An upcoming brand creative direction project with Flaaah, focusing on the business value of design.",
     date: "June 2026",
+    isoDate: "2026-06-15",
     readTime: "1 min read",
     category: "Announcement",
     coverImage: "/byzahin_flaaah.png",

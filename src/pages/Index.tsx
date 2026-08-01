@@ -82,7 +82,20 @@ const TypewriterEffect = () => {
 const Index = () => {
   const { t } = useTranslation();
   const featuredJournals = getFeaturedEssays();
-  const latestAnnouncement = essays.find((e) => e.category === "Announcement");
+  const latestAnnouncement = React.useMemo(() => {
+    const found = essays.find((e) => e.category === "Announcement");
+    if (!found) return null;
+
+    const announcementDate = new Date(found.isoDate || found.date);
+    if (isNaN(announcementDate.getTime())) return null;
+
+    const diffInDays = (new Date().getTime() - announcementDate.getTime()) / (1000 * 60 * 60 * 24);
+    // Only display announcements that are 14 days old or newer
+    if (diffInDays >= 0 && diffInDays <= 14) {
+      return found;
+    }
+    return null;
+  }, []);
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
   const [count, setCount] = React.useState(0);
