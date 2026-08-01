@@ -9,6 +9,7 @@ import QuoteBlock from "@/components/QuoteBlock";
 import { ExternalLink, ArrowLeft, ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { ProjectCard } from "@/components/ProjectCard";
+import ProjectInfoNavbar from "@/components/ProjectInfoNavbar";
 
 // Import gallery images
 import galleryImage1 from "@/assets/gallery-01.jpg";
@@ -536,33 +537,8 @@ const ProjectDetail = () => {
           </a>
         </div>
 
-        {/* Project Information */}
-        <div className="border-t border-border/60 pt-8">
-          <h2
-            className="font-typewriter uppercase text-[11px] mb-5"
-            style={{ color: 'var(--body-text)', letterSpacing: "0.08em" }}
-          >
-            Project Information
-          </h2>
-          <dl className="grid grid-cols-1 sm:grid-cols-12 gap-y-4">
-            {Object.entries(project.projectInfo).map(([key, value]) => (
-              <React.Fragment key={key}>
-                <dt
-                  className="sm:col-span-4 font-jakarta text-[13px]"
-                  style={{ color: 'var(--meta-text)' }}
-                >
-                  {key}
-                </dt>
-                <dd
-                  className="sm:col-span-8 font-jakarta text-[15px]"
-                  style={{ color: 'var(--body-text)', lineHeight: 1.7 }}
-                >
-                  {value}
-                </dd>
-              </React.Fragment>
-            ))}
-          </dl>
-        </div>
+        {/* Divider */}
+        <div className="border-t border-border/60 mt-8 mb-4"></div>
 
         {/* Verdant Solar Image Slider - Only for verdant-solar-my */}
         {slug === 'verdant-solar-my' && <VerdantSolarImageSlider />}
@@ -820,6 +796,12 @@ const ProjectDetail = () => {
         </div>
       </div>
       </main>
+      <ProjectInfoNavbar
+        projectInfo={project.projectInfo as Record<string, string>}
+        title={project.title}
+        websiteUrl={project.websiteUrl}
+        image={getProjectCoverImage()}
+      />
       <Footer />
       <ScrollToTopButton />
     </div>;

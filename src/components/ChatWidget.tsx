@@ -125,7 +125,7 @@ export default function ChatWidget() {
   if (isOpen) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 z-[150] flex items-end gap-3">
+    <div className="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 z-[150] flex items-end gap-3">
       {/* Smart tip bubble */}
       {tipVisible && tip && (
         <div
