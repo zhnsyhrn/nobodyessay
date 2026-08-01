@@ -24,7 +24,7 @@ const About = () => {
   ];
 
   const sideProjects = [
-    { name: "Dealn", url: "https://dealn.app/", description: "Deal Experience Platform (DXP)", active: true },
+    { name: "Dealn", url: "https://dealn.app/", description: "Deal Experience Platform (DXP)", active: false },
     { name: "Nobody Collective", url: "https://www.instagram.com/nobody.collective/", description: "Design Education Contents", active: true },
     { name: "Designloka", url: null, description: "Unlimited Design Subscription", active: false },
   ];
@@ -50,7 +50,7 @@ const About = () => {
       {/* Speaking & Participation — Photo-forward hero */}
       <section className="pt-20 sm:pt-28 pb-16 sm:pb-24 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
-          <h1 className="font-jakarta text-3xl sm:text-4xl font-semibold text-foreground mb-3 tracking-tight">
+          <h1 className="font-display text-3xl sm:text-4xl font-semibold text-foreground mb-3 tracking-tight">
             {t('about.title')}
           </h1>
           <p className="font-jakarta text-base sm:text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed">
@@ -89,7 +89,7 @@ const About = () => {
                 className="group rounded-xl bg-white dark:bg-white/[0.03] border border-transparent dark:border-white/10 p-5 hover:shadow-sm dark:hover:bg-white/[0.06] transition-all duration-300"
               >
                 <span className="font-mono text-xs text-muted-foreground">{event.year}</span>
-                <h3 className="font-jakarta font-medium text-foreground mt-1.5 text-[15px] leading-snug">
+                <h3 className="font-display font-medium text-foreground mt-1.5 text-[15px] leading-snug">
                   {event.title}
                 </h3>
                 <p className="font-jakarta text-sm text-muted-foreground mt-1">{event.org}</p>
@@ -105,7 +105,7 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
             {/* Clients — 3 cols */}
             <div className="lg:col-span-3">
-              <h2 className="font-jakarta text-3xl sm:text-4xl font-semibold text-foreground mb-8 tracking-tight">
+              <h2 className="font-display text-3xl sm:text-4xl font-semibold text-foreground mb-8 tracking-tight">
                 {t('about.clients_title')}
               </h2>
 
@@ -133,7 +133,7 @@ const About = () => {
 
             {/* Side projects — 2 cols */}
             <div className="lg:col-span-2">
-              <h2 className="font-jakarta text-3xl sm:text-4xl font-semibold text-foreground mb-8 tracking-tight">
+              <h2 className="font-display text-3xl sm:text-4xl font-semibold text-foreground mb-8 tracking-tight">
                 {t('about.projects_title')}
               </h2>
 
