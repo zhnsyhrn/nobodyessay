@@ -33,43 +33,48 @@ const portfolioImages = [
   { src: "/lovable-uploads/b4c83dca-133b-41b0-9c28-44746d3f650f.png", title: "Coffee Packaging", type: "Branding", slug: "knock-knock-cafe-kuala-terengganu" },
 ];
 
-const TypewriterEffect = ({ texts }: { texts: string[] }) => {
+const HERO_TITLES = [
+  "Hey! Welcome to my space. I'm Zahin.",
+  "Entrepreneurship, Product Design & Branding."
+];
+
+const TypewriterEffect = () => {
   const [textIndex, setTextIndex] = React.useState(0);
   const [displayedText, setDisplayedText] = React.useState("");
-  const [charIndex, setCharIndex] = React.useState(0);
   const [isDeleting, setIsDeleting] = React.useState(false);
 
-  const currentText = texts[textIndex % texts.length];
-
   React.useEffect(() => {
-    let timeout: NodeJS.Timeout;
+    const currentText = HERO_TITLES[textIndex % HERO_TITLES.length];
+    let timer: NodeJS.Timeout;
 
-    if (!isDeleting && charIndex < currentText.length) {
-      timeout = setTimeout(() => {
-        setDisplayedText((prev) => prev + currentText.charAt(charIndex));
-        setCharIndex((prev) => prev + 1);
-      }, 45);
-    } else if (!isDeleting && charIndex === currentText.length) {
-      timeout = setTimeout(() => {
-        setIsDeleting(true);
-      }, 3200);
-    } else if (isDeleting && charIndex > 0) {
-      timeout = setTimeout(() => {
-        setDisplayedText((prev) => prev.slice(0, -1));
-        setCharIndex((prev) => prev - 1);
-      }, 20);
-    } else if (isDeleting && charIndex === 0) {
-      setIsDeleting(false);
-      setTextIndex((prev) => (prev + 1) % texts.length);
+    if (!isDeleting) {
+      if (displayedText.length < currentText.length) {
+        timer = setTimeout(() => {
+          setDisplayedText(currentText.slice(0, displayedText.length + 1));
+        }, 50);
+      } else {
+        timer = setTimeout(() => {
+          setIsDeleting(true);
+        }, 2800);
+      }
+    } else {
+      if (displayedText.length > 0) {
+        timer = setTimeout(() => {
+          setDisplayedText(currentText.slice(0, displayedText.length - 1));
+        }, 25);
+      } else {
+        setIsDeleting(false);
+        setTextIndex((prev) => (prev + 1) % HERO_TITLES.length);
+      }
     }
 
-    return () => clearTimeout(timeout);
-  }, [charIndex, isDeleting, textIndex, currentText, texts]);
+    return () => clearTimeout(timer);
+  }, [displayedText, isDeleting, textIndex]);
 
   return (
     <>
       {displayedText}
-      <span className={`${charIndex === currentText.length || charIndex === 0 ? 'animate-pulse' : ''} ml-1 inline-block w-[3px] h-[0.8em] bg-gradient-to-t from-blue-600 to-cyan-400 align-middle`}></span>
+      <span className="ml-1 inline-block w-[3px] h-[0.8em] bg-gradient-to-t from-blue-600 to-cyan-400 align-middle animate-pulse"></span>
     </>
   );
 };
@@ -148,10 +153,7 @@ const Index = () => {
       <section ref={heroRef} className="relative py-8 sm:py-12 lg:py-20 px-4 sm:px-6 fade-in pb-4 sm:pb-6">
         <div className="max-w-6xl mx-auto text-left lg:text-center relative z-10">
           <h2 className="font-display text-[30px] sm:text-[36px] lg:text-[48px] font-medium mb-2 sm:mb-3 tracking-tight leading-[36px] sm:leading-[40px] lg:leading-[54px] min-h-[110px] sm:min-h-[80px] lg:min-h-[60px]">
-            <TypewriterEffect texts={[
-              "Hey! Welcome to my space. I'm Zahin.",
-              "Entrepreneurship, Product Design & Branding."
-            ]} />
+            <TypewriterEffect />
           </h2>
           <p style={{
           color: 'var(--body-text)'
