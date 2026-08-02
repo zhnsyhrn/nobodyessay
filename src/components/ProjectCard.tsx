@@ -38,29 +38,29 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
 
       <div className={`p-2.5 sm:p-3.5 transition-colors mt-auto relative overflow-hidden ${
-        showBlobBackground ? "bg-[#0a0a0a] text-white border-t border-white/10" : "bg-white dark:bg-transparent"
+        showBlobBackground ? "bg-background dark:bg-[#0a0a0a] text-foreground dark:text-white border-t border-border dark:border-white/10" : "bg-white dark:bg-transparent"
       }`}>
-        {/* Animated ZHA Canvas Blob background ONLY inside title area */}
+        {/* Animated ZHA Canvas Blob background ONLY inside title area — dark mode only */}
         {showBlobBackground && <ZHABlobBackground />}
 
         <div className="flex items-center justify-between relative z-10">
           <div className="flex-1">
             <h3 className={`font-display text-base font-medium mb-1 transition-colors ${
-              showBlobBackground ? "text-white" : "text-black dark:text-white"
+              showBlobBackground ? "text-foreground dark:text-white" : "text-black dark:text-white"
             }`}>
               {project.title}
             </h3>
             <p className={`font-mono text-xs sm:text-[10px] uppercase transition-colors ${
-              showBlobBackground ? "text-white/70" : "text-gray-700 dark:text-gray-300"
+              showBlobBackground ? "text-muted-foreground dark:text-white/70" : "text-gray-700 dark:text-gray-300"
             }`}>
               {project.description}
             </p>
           </div>
           <div className="ml-4">
             <div className={`w-10 h-10 rounded-full flex items-center justify-center shadow-sm transition-colors ${
-              showBlobBackground ? "bg-white/15 hover:bg-white/25 border border-white/20" : "bg-white dark:bg-white/10"
+              showBlobBackground ? "bg-black/5 dark:bg-white/15 hover:bg-black/10 dark:hover:bg-white/25 border border-black/10 dark:border-white/20" : "bg-white dark:bg-white/10"
             }`}>
-              <ArrowRight className={showBlobBackground ? "text-white" : "text-black dark:text-white"} size={20} />
+              <ArrowRight className={showBlobBackground ? "text-foreground dark:text-white" : "text-black dark:text-white"} size={20} />
             </div>
           </div>
         </div>
