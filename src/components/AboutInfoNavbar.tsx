@@ -76,7 +76,7 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
   return (
     <div
       ref={panelRef}
-      className="fixed bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center max-w-[96vw] pointer-events-none z-40"
+      className="fixed bottom-4 sm:bottom-6 top-[72px] sm:top-[80px] left-1/2 -translate-x-1/2 flex flex-col items-end justify-end max-w-[96vw] pointer-events-none z-40"
     >
       {/* Floating Expanded Pure White Information Card (Matching ZHA Reference) */}
       <AnimatePresence>
@@ -89,7 +89,7 @@ export const AboutInfoNavbar: React.FC<AboutInfoNavbarProps> = () => {
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
             data-lenis-prevent="true"
             onWheel={(e) => e.stopPropagation()}
-            className="pointer-events-auto mb-4 w-[94vw] max-w-[960px] max-h-[calc(100vh-170px)] sm:max-h-[calc(100vh-190px)] overflow-y-auto zha-scrollbar bg-white text-slate-900 rounded-2xl p-5 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.35)] border border-slate-200/90 relative origin-bottom"
+            className="pointer-events-auto mb-4 w-[94vw] max-w-[960px] max-h-[calc(100svh-140px)] sm:max-h-[calc(100vh-160px)] overflow-y-auto zha-scrollbar bg-white text-slate-900 rounded-2xl p-5 sm:p-8 shadow-[0_25px_60px_rgba(0,0,0,0.35)] border border-slate-200/90 relative origin-bottom"
           >
             {/* Close Button */}
             <button
