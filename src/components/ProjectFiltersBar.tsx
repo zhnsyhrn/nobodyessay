@@ -254,8 +254,8 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
         </div>
       </div>
 
-      {/* ZHA Bottom Divider & Readout Row (CLEAR ALL on left, X PROJECTS on right) */}
-      <div className="flex items-center justify-between pt-4 mt-4 border-t border-white/20 font-mono text-[11px] uppercase tracking-widest">
+      {/* ZHA Bottom Divider & Readout Row (CLEAR ALL on left, X PROJECTS on right on mobile; inline next to each other on desktop) */}
+      <div className="flex items-center justify-between sm:justify-start sm:gap-5 pt-4 mt-4 border-t border-white/20 font-mono text-[11px] uppercase tracking-widest">
         {hasActiveFilters ? (
           <button
             type="button"
