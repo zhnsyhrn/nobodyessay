@@ -535,7 +535,7 @@ const ProjectDetail = () => {
             {/* Right: Overview + link */}
             <div className="flex flex-col justify-start pt-1 lg:pt-3">
               <p
-                className="font-jakarta text-[16px] sm:text-[18px] text-white/75 leading-relaxed"
+                className="font-jakarta text-[14px] sm:text-[18px] text-white/75 leading-relaxed"
               >
                 {project.overview}
               </p>
