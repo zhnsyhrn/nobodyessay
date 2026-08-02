@@ -1,5 +1,5 @@
 import React from "react";
-import { ChevronDown, X } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,18 +8,23 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 interface ProjectFiltersBarProps {
-  selectedType: string;
-  onTypeChange: (value: string) => void;
+  selectedExpertise: string;
+  onExpertiseChange: (value: string) => void;
+  selectedTypology: string;
+  onTypologyChange: (value: string) => void;
   selectedStatus: string;
   onStatusChange: (value: string) => void;
   selectedCountry: string;
   onCountryChange: (value: string) => void;
+  selectedRegion: string;
+  onRegionChange: (value: string) => void;
   onClearAll: () => void;
   totalCount: number;
-  availableTypes: string[];
+  availableExpertise: string[];
+  availableTypologies: string[];
 }
 
-export const PROJECT_STATUS_OPTIONS = [
+export const STATUS_OPTIONS = [
   "Complete",
   "Under Development",
   "Planning",
@@ -34,93 +39,148 @@ export const COUNTRY_OPTIONS = [
   "Philippines",
 ];
 
+export const REGION_OPTIONS = [
+  "Southeast Asia",
+  "Asia Pacific",
+  "Global",
+];
+
+/**
+ * ZHA (Zaha Hadid Architects) Exact Replica Project Filters Bar.
+ * Reference: https://www.zha.com/projects
+ */
 export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
-  selectedType,
-  onTypeChange,
+  selectedExpertise,
+  onExpertiseChange,
+  selectedTypology,
+  onTypologyChange,
   selectedStatus,
   onStatusChange,
   selectedCountry,
   onCountryChange,
+  selectedRegion,
+  onRegionChange,
   onClearAll,
   totalCount,
-  availableTypes,
+  availableExpertise,
+  availableTypologies,
 }) => {
   const hasActiveFilters =
-    selectedType !== "all" ||
+    selectedExpertise !== "all" ||
+    selectedTypology !== "all" ||
     selectedStatus !== "all" ||
-    selectedCountry !== "all";
+    selectedCountry !== "all" ||
+    selectedRegion !== "all";
 
   return (
-    <div className="w-full mb-8 space-y-4">
-      {/* ZHA-Style Minimalist Dropdown Filters Bar */}
-      <div className="flex flex-wrap items-center gap-3">
-        {/* 1. PROJECT TYPE */}
+    <div className="w-full mb-8 space-y-4 font-mono">
+      {/* 5-Dropdown Filter Row matching ZHA.com/projects */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-3">
+        {/* 1. EXPERTISE */}
         <DropdownMenu modal={false}>
           <DropdownMenuTrigger
-            className={`group font-mono text-xs uppercase tracking-wider px-4 py-2.5 rounded-[4px] border flex items-center justify-between gap-3 transition-all duration-200 focus:outline-none min-w-[180px] sm:min-w-[200px] ${
-              selectedType !== "all"
+            className={`group font-mono text-[11px] sm:text-xs uppercase tracking-wider px-3.5 sm:px-4 py-2.5 rounded-[3px] border flex items-center justify-between gap-2 transition-all duration-200 focus:outline-none w-full ${
+              selectedExpertise !== "all"
                 ? "border-blue-500 bg-blue-600 text-white shadow-sm"
                 : "border-white/20 bg-[#111111] text-white hover:border-white/50 hover:bg-[#181818]"
             }`}
           >
             <span className="truncate">
-              {selectedType !== "all" ? selectedType : "PROJECT TYPE"}
+              {selectedExpertise !== "all" ? selectedExpertise : "EXPERTISE"}
             </span>
-            <ChevronDown size={14} className="shrink-0 opacity-70 transition-transform duration-300 group-data-[state=open]:rotate-180" />
+            <ChevronDown size={13} className="shrink-0 opacity-70 transition-transform duration-300 group-data-[state=open]:rotate-180" />
           </DropdownMenuTrigger>
           <DropdownMenuContent
             align="start"
-            className="min-w-[200px] bg-[#141414] text-white border border-white/20 p-1.5 shadow-2xl rounded-[8px] font-mono text-xs duration-300 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-3"
+            className="min-w-[200px] bg-[#141414] text-white border border-white/20 p-1.5 shadow-2xl rounded-[6px] font-mono text-xs duration-300 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-3"
           >
             <DropdownMenuItem
-              onClick={() => onTypeChange("all")}
-              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-[4px] transition-colors py-2 px-3"
+              onClick={() => onExpertiseChange("all")}
+              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-[3px] transition-colors py-2 px-3"
             >
-              ALL TYPES
+              ALL EXPERTISE
             </DropdownMenuItem>
-            {availableTypes.map((type) => (
+            {availableExpertise.map((exp) => (
               <DropdownMenuItem
-                key={type}
-                onClick={() => onTypeChange(type)}
-                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 rounded-[4px] transition-colors py-2 px-3 ${
-                  selectedType === type ? "font-bold text-blue-400" : "text-white/90"
+                key={exp}
+                onClick={() => onExpertiseChange(exp)}
+                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 rounded-[3px] transition-colors py-2 px-3 ${
+                  selectedExpertise === exp ? "font-bold text-blue-400" : "text-white/90"
                 }`}
               >
-                {type}
+                {exp}
               </DropdownMenuItem>
             ))}
           </DropdownMenuContent>
         </DropdownMenu>
 
-        {/* 2. PROJECT STATUS */}
+        {/* 2. TYPOLOGIES */}
         <DropdownMenu modal={false}>
           <DropdownMenuTrigger
-            className={`group font-mono text-xs uppercase tracking-wider px-4 py-2.5 rounded-[4px] border flex items-center justify-between gap-3 transition-all duration-200 focus:outline-none min-w-[190px] sm:min-w-[210px] ${
+            className={`group font-mono text-[11px] sm:text-xs uppercase tracking-wider px-3.5 sm:px-4 py-2.5 rounded-[3px] border flex items-center justify-between gap-2 transition-all duration-200 focus:outline-none w-full ${
+              selectedTypology !== "all"
+                ? "border-blue-500 bg-blue-600 text-white shadow-sm"
+                : "border-white/20 bg-[#111111] text-white hover:border-white/50 hover:bg-[#181818]"
+            }`}
+          >
+            <span className="truncate">
+              {selectedTypology !== "all" ? selectedTypology : "TYPOLOGIES"}
+            </span>
+            <ChevronDown size={13} className="shrink-0 opacity-70 transition-transform duration-300 group-data-[state=open]:rotate-180" />
+          </DropdownMenuTrigger>
+          <DropdownMenuContent
+            align="start"
+            className="min-w-[200px] bg-[#141414] text-white border border-white/20 p-1.5 shadow-2xl rounded-[6px] font-mono text-xs duration-300 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-3"
+          >
+            <DropdownMenuItem
+              onClick={() => onTypologyChange("all")}
+              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-[3px] transition-colors py-2 px-3"
+            >
+              ALL TYPOLOGIES
+            </DropdownMenuItem>
+            {availableTypologies.map((typ) => (
+              <DropdownMenuItem
+                key={typ}
+                onClick={() => onTypologyChange(typ)}
+                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 rounded-[3px] transition-colors py-2 px-3 ${
+                  selectedTypology === typ ? "font-bold text-blue-400" : "text-white/90"
+                }`}
+              >
+                {typ}
+              </DropdownMenuItem>
+            ))}
+          </DropdownMenuContent>
+        </DropdownMenu>
+
+        {/* 3. CONSTRUCTION STATUS */}
+        <DropdownMenu modal={false}>
+          <DropdownMenuTrigger
+            className={`group font-mono text-[11px] sm:text-xs uppercase tracking-wider px-3.5 sm:px-4 py-2.5 rounded-[3px] border flex items-center justify-between gap-2 transition-all duration-200 focus:outline-none w-full ${
               selectedStatus !== "all"
                 ? "border-blue-500 bg-blue-600 text-white shadow-sm"
                 : "border-white/20 bg-[#111111] text-white hover:border-white/50 hover:bg-[#181818]"
             }`}
           >
             <span className="truncate">
-              {selectedStatus !== "all" ? selectedStatus : "PROJECT STATUS"}
+              {selectedStatus !== "all" ? selectedStatus : "CONSTRUCTION STATUS"}
             </span>
-            <ChevronDown size={14} className="shrink-0 opacity-70 transition-transform duration-300 group-data-[state=open]:rotate-180" />
+            <ChevronDown size={13} className="shrink-0 opacity-70 transition-transform duration-300 group-data-[state=open]:rotate-180" />
           </DropdownMenuTrigger>
           <DropdownMenuContent
             align="start"
-            className="min-w-[210px] bg-[#141414] text-white border border-white/20 p-1.5 shadow-2xl rounded-[8px] font-mono text-xs duration-300 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-3"
+            className="min-w-[210px] bg-[#141414] text-white border border-white/20 p-1.5 shadow-2xl rounded-[6px] font-mono text-xs duration-300 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-3"
           >
             <DropdownMenuItem
               onClick={() => onStatusChange("all")}
-              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-[4px] transition-colors py-2 px-3"
+              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-[3px] transition-colors py-2 px-3"
             >
               ALL STATUSES
             </DropdownMenuItem>
-            {PROJECT_STATUS_OPTIONS.map((status) => (
+            {STATUS_OPTIONS.map((status) => (
               <DropdownMenuItem
                 key={status}
                 onClick={() => onStatusChange(status)}
-                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 rounded-[4px] transition-colors py-2 px-3 ${
+                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 rounded-[3px] transition-colors py-2 px-3 ${
                   selectedStatus === status ? "font-bold text-blue-400" : "text-white/90"
                 }`}
               >
@@ -130,10 +190,10 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           </DropdownMenuContent>
         </DropdownMenu>
 
-        {/* 3. COUNTRY */}
+        {/* 4. COUNTRY */}
         <DropdownMenu modal={false}>
           <DropdownMenuTrigger
-            className={`group font-mono text-xs uppercase tracking-wider px-4 py-2.5 rounded-[4px] border flex items-center justify-between gap-3 transition-all duration-200 focus:outline-none min-w-[160px] sm:min-w-[180px] ${
+            className={`group font-mono text-[11px] sm:text-xs uppercase tracking-wider px-3.5 sm:px-4 py-2.5 rounded-[3px] border flex items-center justify-between gap-2 transition-all duration-200 focus:outline-none w-full ${
               selectedCountry !== "all"
                 ? "border-blue-500 bg-blue-600 text-white shadow-sm"
                 : "border-white/20 bg-[#111111] text-white hover:border-white/50 hover:bg-[#181818]"
@@ -142,15 +202,15 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
             <span className="truncate">
               {selectedCountry !== "all" ? selectedCountry : "COUNTRY"}
             </span>
-            <ChevronDown size={14} className="shrink-0 opacity-70 transition-transform duration-300 group-data-[state=open]:rotate-180" />
+            <ChevronDown size={13} className="shrink-0 opacity-70 transition-transform duration-300 group-data-[state=open]:rotate-180" />
           </DropdownMenuTrigger>
           <DropdownMenuContent
             align="start"
-            className="min-w-[180px] bg-[#141414] text-white border border-white/20 p-1.5 shadow-2xl rounded-[8px] font-mono text-xs duration-300 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-3"
+            className="min-w-[180px] bg-[#141414] text-white border border-white/20 p-1.5 shadow-2xl rounded-[6px] font-mono text-xs duration-300 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-3"
           >
             <DropdownMenuItem
               onClick={() => onCountryChange("all")}
-              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-[4px] transition-colors py-2 px-3"
+              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-[3px] transition-colors py-2 px-3"
             >
               ALL COUNTRIES
             </DropdownMenuItem>
@@ -158,7 +218,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
               <DropdownMenuItem
                 key={country}
                 onClick={() => onCountryChange(country)}
-                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 rounded-[4px] transition-colors py-2 px-3 ${
+                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 rounded-[3px] transition-colors py-2 px-3 ${
                   selectedCountry === country ? "font-bold text-blue-400" : "text-white/90"
                 }`}
               >
@@ -167,26 +227,65 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
             ))}
           </DropdownMenuContent>
         </DropdownMenu>
+
+        {/* 5. REGION */}
+        <DropdownMenu modal={false}>
+          <DropdownMenuTrigger
+            className={`group font-mono text-[11px] sm:text-xs uppercase tracking-wider px-3.5 sm:px-4 py-2.5 rounded-[3px] border flex items-center justify-between gap-2 transition-all duration-200 focus:outline-none w-full ${
+              selectedRegion !== "all"
+                ? "border-blue-500 bg-blue-600 text-white shadow-sm"
+                : "border-white/20 bg-[#111111] text-white hover:border-white/50 hover:bg-[#181818]"
+            }`}
+          >
+            <span className="truncate">
+              {selectedRegion !== "all" ? selectedRegion : "REGION"}
+            </span>
+            <ChevronDown size={13} className="shrink-0 opacity-70 transition-transform duration-300 group-data-[state=open]:rotate-180" />
+          </DropdownMenuTrigger>
+          <DropdownMenuContent
+            align="start"
+            className="min-w-[180px] bg-[#141414] text-white border border-white/20 p-1.5 shadow-2xl rounded-[6px] font-mono text-xs duration-300 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-3"
+          >
+            <DropdownMenuItem
+              onClick={() => onRegionChange("all")}
+              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-[3px] transition-colors py-2 px-3"
+            >
+              ALL REGIONS
+            </DropdownMenuItem>
+            {REGION_OPTIONS.map((reg) => (
+              <DropdownMenuItem
+                key={reg}
+                onClick={() => onRegionChange(reg)}
+                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 rounded-[3px] transition-colors py-2 px-3 ${
+                  selectedRegion === reg ? "font-bold text-blue-400" : "text-white/90"
+                }`}
+              >
+                {reg}
+              </DropdownMenuItem>
+            ))}
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
 
-      {/* Action & Status Indicator Bar */}
-      <div className="flex items-center gap-6 pt-1">
+      {/* Action & Status Indicator Bar (Exact ZHA reference layout) */}
+      <div className="flex items-center gap-4 pt-1.5 font-mono text-[11px] sm:text-xs">
         {hasActiveFilters ? (
           <button
             type="button"
             onClick={onClearAll}
-            className="font-mono text-xs uppercase tracking-wider underline underline-offset-4 text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1 cursor-pointer font-medium"
+            className="uppercase tracking-wider underline underline-offset-4 text-blue-400 hover:text-blue-300 transition-colors cursor-pointer font-medium"
           >
             CLEAR ALL
           </button>
         ) : (
-          <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground/50 border-b border-muted-foreground/20 pb-0.5">
+          <span className="uppercase tracking-wider text-muted-foreground/40 border-b border-muted-foreground/20 pb-0.5">
             CLEAR ALL
           </span>
         )}
 
-        <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
-          <strong className="text-foreground font-semibold">{totalCount}</strong> PROJECTS
+        <span className="uppercase tracking-wider text-muted-foreground/80">
+          <strong className="text-blue-500 font-bold mr-1">{totalCount}</strong>
+          PROJECTS
         </span>
       </div>
     </div>

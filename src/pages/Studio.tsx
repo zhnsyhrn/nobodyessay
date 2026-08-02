@@ -25,31 +25,42 @@ const Studio = () => {
   // Coming soon dialog state
   const [comingSoonDialog, setComingSoonDialog] = useState({ open: false, title: "" });
   
-  // ZHA-Style Filter states
-  const [selectedType, setSelectedType] = useState("all");
+  // ZHA 5-Filter states
+  const [selectedExpertise, setSelectedExpertise] = useState("all");
+  const [selectedTypology, setSelectedTypology] = useState("all");
   const [selectedStatus, setSelectedStatus] = useState("all");
   const [selectedCountry, setSelectedCountry] = useState("all");
+  const [selectedRegion, setSelectedRegion] = useState("all");
   
-  // Get unique project types dynamically from data
-  const projectTypes = useMemo(() => {
-    const types = new Set(projects.map(p => p.type));
-    return Array.from(types).sort();
+  // Get unique options dynamically from data
+  const availableExpertise = useMemo(() => {
+    const set = new Set(projects.map(p => p.expertise || p.type));
+    return Array.from(set).sort();
+  }, []);
+
+  const availableTypologies = useMemo(() => {
+    const set = new Set(projects.map(p => p.typology));
+    return Array.from(set).sort();
   }, []);
   
-  // Filter projects by type, status, and country
+  // Filter projects by all 5 ZHA criteria
   const filteredProjects = useMemo(() => {
     return projects.filter(project => {
-      if (selectedType !== "all" && project.type !== selectedType) return false;
+      if (selectedExpertise !== "all" && (project.expertise || project.type) !== selectedExpertise) return false;
+      if (selectedTypology !== "all" && project.typology !== selectedTypology) return false;
       if (selectedStatus !== "all" && project.status !== selectedStatus) return false;
       if (selectedCountry !== "all" && project.country !== selectedCountry) return false;
+      if (selectedRegion !== "all" && project.region !== selectedRegion) return false;
       return true;
     });
-  }, [selectedType, selectedStatus, selectedCountry]);
+  }, [selectedExpertise, selectedTypology, selectedStatus, selectedCountry, selectedRegion]);
 
   const handleClearAll = () => {
-    setSelectedType("all");
+    setSelectedExpertise("all");
+    setSelectedTypology("all");
     setSelectedStatus("all");
     setSelectedCountry("all");
+    setSelectedRegion("all");
   };
 
   // Carousel setup
@@ -74,17 +85,22 @@ const Studio = () => {
       {/* Projects Grid + ZHA Filter Bar */}
       <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-12 xl:px-16 md:pt-8">
         <div className="w-full">
-          {/* ZHA-Style Filters Bar */}
+          {/* ZHA-Style 5-Dropdown Filters Bar */}
           <ProjectFiltersBar 
-            selectedType={selectedType}
-            onTypeChange={setSelectedType}
+            selectedExpertise={selectedExpertise}
+            onExpertiseChange={setSelectedExpertise}
+            selectedTypology={selectedTypology}
+            onTypologyChange={setSelectedTypology}
             selectedStatus={selectedStatus}
             onStatusChange={setSelectedStatus}
             selectedCountry={selectedCountry}
             onCountryChange={setSelectedCountry}
+            selectedRegion={selectedRegion}
+            onRegionChange={setSelectedRegion}
             onClearAll={handleClearAll}
             totalCount={filteredProjects.length}
-            availableTypes={projectTypes}
+            availableExpertise={availableExpertise}
+            availableTypologies={availableTypologies}
           />
 
           {/* Animated ZHA Grid Container */}
