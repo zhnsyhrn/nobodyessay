@@ -87,11 +87,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           {/* 1. EXPERTISE */}
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger
-              className={`group font-mono text-[11px] uppercase tracking-widest px-4 py-3 sm:py-2.5 rounded-none border flex items-center justify-between gap-2.5 transition-all duration-200 focus:outline-none w-full bg-black text-white hover:border-white/50 hover:bg-white/5 ${
-                selectedExpertise !== "all"
-                  ? "border-blue-500/70"
-                  : "border-white/20"
-              }`}
+              className="group font-mono text-[11px] uppercase tracking-widest px-4 py-3 sm:py-2.5 rounded-none border border-white/20 flex items-center justify-between gap-2.5 transition-all duration-200 focus:outline-none w-full bg-black text-white hover:border-white/50 hover:bg-white/5"
             >
               <span className="truncate">
                 {selectedExpertise !== "all" ? selectedExpertise : "EXPERTISE"}
@@ -133,11 +129,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           {/* 2. COMPANY NAME */}
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger
-              className={`group font-mono text-[11px] uppercase tracking-widest px-4 py-3 sm:py-2.5 rounded-none border flex items-center justify-between gap-2.5 transition-all duration-200 focus:outline-none w-full bg-black text-white hover:border-white/50 hover:bg-white/5 ${
-                selectedCompany !== "all"
-                  ? "border-blue-500/70"
-                  : "border-white/20"
-              }`}
+              className="group font-mono text-[11px] uppercase tracking-widest px-4 py-3 sm:py-2.5 rounded-none border border-white/20 flex items-center justify-between gap-2.5 transition-all duration-200 focus:outline-none w-full bg-black text-white hover:border-white/50 hover:bg-white/5"
             >
               <span className="truncate">
                 {selectedCompany !== "all" ? selectedCompany : "COMPANY NAME"}
@@ -179,11 +171,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           {/* 3. PROJECT STATUS */}
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger
-              className={`group font-mono text-[11px] uppercase tracking-widest px-4 py-3 sm:py-2.5 rounded-none border flex items-center justify-between gap-2.5 transition-all duration-200 focus:outline-none w-full bg-black text-white hover:border-white/50 hover:bg-white/5 ${
-                selectedStatus !== "all"
-                  ? "border-blue-500/70"
-                  : "border-white/20"
-              }`}
+              className="group font-mono text-[11px] uppercase tracking-widest px-4 py-3 sm:py-2.5 rounded-none border border-white/20 flex items-center justify-between gap-2.5 transition-all duration-200 focus:outline-none w-full bg-black text-white hover:border-white/50 hover:bg-white/5"
             >
               <span className="truncate">
                 {selectedStatus !== "all" ? selectedStatus : "PROJECT STATUS"}
@@ -225,11 +213,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           {/* 4. COUNTRY */}
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger
-              className={`group font-mono text-[11px] uppercase tracking-widest px-4 py-3 sm:py-2.5 rounded-none border flex items-center justify-between gap-2.5 transition-all duration-200 focus:outline-none w-full bg-black text-white hover:border-white/50 hover:bg-white/5 ${
-                selectedCountry !== "all"
-                  ? "border-blue-500/70"
-                  : "border-white/20"
-              }`}
+              className="group font-mono text-[11px] uppercase tracking-widest px-4 py-3 sm:py-2.5 rounded-none border border-white/20 flex items-center justify-between gap-2.5 transition-all duration-200 focus:outline-none w-full bg-black text-white hover:border-white/50 hover:bg-white/5"
             >
               <span className="truncate">
                 {selectedCountry !== "all" ? selectedCountry : "COUNTRY"}
