@@ -86,7 +86,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           >
             <DropdownMenuItem
               onClick={() => onExpertiseChange("all")}
-              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-none transition-colors py-2 px-3"
+              className="cursor-pointer text-[11px] font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-none transition-colors py-2 px-3"
             >
               ALL EXPERTISE
             </DropdownMenuItem>
@@ -94,7 +94,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
               <DropdownMenuItem
                 key={exp}
                 onClick={() => onExpertiseChange(exp)}
-                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 rounded-none transition-colors py-2 px-3 ${
+                className={`cursor-pointer text-[11px] hover:bg-white/10 focus:bg-white/10 rounded-none transition-colors py-2 px-3 ${
                   selectedExpertise === exp ? "font-bold text-blue-400 bg-white/10" : "text-white/90"
                 }`}
               >
@@ -125,7 +125,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           >
             <DropdownMenuItem
               onClick={() => onCompanyChange("all")}
-              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-none transition-colors py-2 px-3"
+              className="cursor-pointer text-[11px] font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-none transition-colors py-2 px-3"
             >
               ALL COMPANIES
             </DropdownMenuItem>
@@ -133,7 +133,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
               <DropdownMenuItem
                 key={comp}
                 onClick={() => onCompanyChange(comp)}
-                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 rounded-none transition-colors py-2 px-3 ${
+                className={`cursor-pointer text-[11px] hover:bg-white/10 focus:bg-white/10 rounded-none transition-colors py-2 px-3 ${
                   selectedCompany === comp ? "font-bold text-blue-400 bg-white/10" : "text-white/90"
                 }`}
               >
@@ -164,7 +164,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           >
             <DropdownMenuItem
               onClick={() => onStatusChange("all")}
-              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-none transition-colors py-2 px-3"
+              className="cursor-pointer text-[11px] font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-none transition-colors py-2 px-3"
             >
               ALL STATUSES
             </DropdownMenuItem>
@@ -172,7 +172,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
               <DropdownMenuItem
                 key={status}
                 onClick={() => onStatusChange(status)}
-                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 rounded-none transition-colors py-2 px-3 ${
+                className={`cursor-pointer text-[11px] hover:bg-white/10 focus:bg-white/10 rounded-none transition-colors py-2 px-3 ${
                   selectedStatus === status ? "font-bold text-blue-400 bg-white/10" : "text-white/90"
                 }`}
               >
@@ -203,7 +203,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           >
             <DropdownMenuItem
               onClick={() => onCountryChange("all")}
-              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-none transition-colors py-2 px-3"
+              className="cursor-pointer text-[11px] font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-none transition-colors py-2 px-3"
             >
               ALL COUNTRIES
             </DropdownMenuItem>
@@ -211,7 +211,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
               <DropdownMenuItem
                 key={country}
                 onClick={() => onCountryChange(country)}
-                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 rounded-none transition-colors py-2 px-3 ${
+                className={`cursor-pointer text-[11px] hover:bg-white/10 focus:bg-white/10 rounded-none transition-colors py-2 px-3 ${
                   selectedCountry === country ? "font-bold text-blue-400 bg-white/10" : "text-white/90"
                 }`}
               >
@@ -220,6 +220,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
             ))}
           </DropdownMenuContent>
         </DropdownMenu>
+
       </div>
 
       {/* Action & Status Indicator Bar */}
