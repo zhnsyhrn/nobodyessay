@@ -498,15 +498,19 @@ const ProjectDetail = () => {
         <meta property="og:title" content={`${project.title} | UI/UX Design Case Study`} />
         <meta property="og:description" content={project.overview.substring(0, 160)} />
       </Helmet>
-      <StickyNavbar />
-      
+
       <main className="flex-1 flex flex-col">
-      {/* ZHA-Style Project Hero — Full Bleed Dark */}
-      <section className="w-full bg-[#0a0a0a] text-white pt-20 sm:pt-28 pb-0 relative overflow-hidden">
+      {/* ZHA-Style Project Hero — Full Bleed Dark extending all the way to top */}
+      <section className="w-full bg-[#0a0a0a] text-white pt-0 pb-0 relative overflow-hidden">
+        {/* Sticky Navbar inside dark hero header */}
+        <div className="relative z-50">
+          <StickyNavbar />
+        </div>
+
         {/* Active 60fps Canvas Blob Animation with mouse interaction */}
         <ZHABlobBackground />
 
-        <div className="max-w-[1200px] mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
+        <div className="max-w-[1200px] mx-auto px-6 sm:px-10 lg:px-16 pt-8 sm:pt-12 relative z-10">
 
           {/* Back Navigation */}
           <div className="mb-10 sm:mb-14">
