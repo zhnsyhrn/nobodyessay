@@ -511,7 +511,7 @@ const ProjectDetail = () => {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10 lg:px-16 pt-8 sm:pt-12 relative z-10">
 
           {/* Back Navigation */}
-          <div className="mb-10 sm:mb-14">
+          <div className="mb-5 sm:mb-14">
             <Link
               to="/studio"
               className="group inline-flex items-center gap-2 font-jakarta text-sm text-white/50 hover:text-white transition-colors"
@@ -522,7 +522,7 @@ const ProjectDetail = () => {
           </div>
 
           {/* Title + Overview — split layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-16 items-start pb-10 sm:pb-14">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6 lg:gap-16 items-start pb-10 sm:pb-14">
             {/* Left: Large Title */}
             <div>
               <h1
