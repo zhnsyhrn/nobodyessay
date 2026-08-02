@@ -55,7 +55,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
       {/* ZHA-Style Minimalist Dropdown Filters Bar */}
       <div className="flex flex-wrap items-center gap-3">
         {/* 1. PROJECT TYPE */}
-        <DropdownMenu>
+        <DropdownMenu modal={false}>
           <DropdownMenuTrigger
             className={`font-mono text-xs uppercase tracking-wider px-4 py-2.5 rounded-[4px] border flex items-center justify-between gap-3 transition-colors focus:outline-none min-w-[180px] sm:min-w-[200px] ${
               selectedType !== "all"
@@ -93,7 +93,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
         </DropdownMenu>
 
         {/* 2. PROJECT STATUS */}
-        <DropdownMenu>
+        <DropdownMenu modal={false}>
           <DropdownMenuTrigger
             className={`font-mono text-xs uppercase tracking-wider px-4 py-2.5 rounded-[4px] border flex items-center justify-between gap-3 transition-colors focus:outline-none min-w-[190px] sm:min-w-[210px] ${
               selectedStatus !== "all"
@@ -131,7 +131,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
         </DropdownMenu>
 
         {/* 3. COUNTRY */}
-        <DropdownMenu>
+        <DropdownMenu modal={false}>
           <DropdownMenuTrigger
             className={`font-mono text-xs uppercase tracking-wider px-4 py-2.5 rounded-[4px] border flex items-center justify-between gap-3 transition-colors focus:outline-none min-w-[160px] sm:min-w-[180px] ${
               selectedCountry !== "all"
