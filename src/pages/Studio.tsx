@@ -14,7 +14,7 @@ import { projects } from "@/data/projects";
 import { motion, AnimatePresence } from "framer-motion";
 import { ProjectFiltersBar } from "@/components/ProjectFiltersBar";
 import { ProjectCard } from "@/components/ProjectCard";
-import { Helmet } from "react-helmet-async";
+import { ZHABlobBackground } from "@/components/ZHABlobBackground";
 
 const Studio = () => {
   // Carousel state
@@ -78,15 +78,22 @@ const Studio = () => {
       <StickyNavbar />
 
       <main className="flex-1 flex flex-col">
-      {/* Projects Grid + ZHA Filter Bar */}
-      <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-12 xl:px-16 md:pt-8">
-        <div className="w-full">
-          {/* Visible Page Title */}
-          <div className="mb-6 sm:mb-8">
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-foreground">
+        {/* Projects Page Hero Header with Animated ZHA Blob Background */}
+        <div className="relative overflow-hidden bg-[#0a0a0a] text-white -mt-[68px] sm:-mt-[76px] pt-[90px] sm:pt-[110px] pb-10 sm:pb-14 px-4 sm:px-6 lg:px-12 xl:px-16 border-b border-white/10 mb-6 sm:mb-8">
+          <ZHABlobBackground />
+          <div className="relative z-10 w-full max-w-full">
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-white mb-2 sm:mb-3">
               Projects
             </h1>
+            <p className="font-jakarta text-sm sm:text-base text-white/70 max-w-2xl leading-relaxed">
+              Explore my latest UI/UX design, app design, and branding projects.
+            </p>
           </div>
+        </div>
+
+        {/* Projects Grid + Filter Bar Section */}
+        <section className="pb-8 sm:pb-12 px-4 sm:px-6 lg:px-12 xl:px-16">
+          <div className="w-full">
 
           {/* ZHA-Style 4-Dropdown Filters Bar */}
           <ProjectFiltersBar 
