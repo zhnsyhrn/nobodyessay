@@ -15,6 +15,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ProjectFiltersBar } from "@/components/ProjectFiltersBar";
 import { ProjectCard } from "@/components/ProjectCard";
 import { ZHABlobBackground } from "@/components/ZHABlobBackground";
+import { Helmet } from "react-helmet-async";
 
 const Studio = () => {
   // Carousel state
