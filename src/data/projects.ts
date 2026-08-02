@@ -4,12 +4,11 @@ export interface Project {
   description: string;
   image: string;
   hasDetails: boolean;
-  type: string;        // mapped to expertise for backward compatibility
+  type: string;
   expertise: string;
-  typology: string;
+  company: string;
   status: string;
   country: string;
-  region: string;
   date?: string;
 }
 
@@ -22,10 +21,9 @@ export const projects: Project[] = [
     hasDetails: true,
     type: "UX/UI Design",
     expertise: "UX/UI Design",
-    typology: "InsurTech",
+    company: "Great Eastern Takaful",
     status: "Complete",
     country: "Malaysia",
-    region: "Southeast Asia",
     date: "2024"
   },
   {
@@ -36,10 +34,9 @@ export const projects: Project[] = [
     hasDetails: true,
     type: "App Design",
     expertise: "App Design",
-    typology: "Fintech",
+    company: "MoneyX (Hextar Tech)",
     status: "Complete",
     country: "Malaysia",
-    region: "Southeast Asia",
     date: "2024"
   },
   {
@@ -50,10 +47,9 @@ export const projects: Project[] = [
     hasDetails: true,
     type: "UX/UI Design",
     expertise: "UX/UI Design",
-    typology: "InsurTech",
+    company: "PolicyStreet",
     status: "Complete",
     country: "Malaysia",
-    region: "Southeast Asia",
     date: "2023"
   },
   {
@@ -64,10 +60,9 @@ export const projects: Project[] = [
     hasDetails: true,
     type: "Branding",
     expertise: "Branding",
-    typology: "Hospitality & F&B",
+    company: "Knock Knock Cafe",
     status: "Complete",
     country: "Malaysia",
-    region: "Southeast Asia",
     date: "2023"
   },
   {
@@ -78,10 +73,9 @@ export const projects: Project[] = [
     hasDetails: false,
     type: "Product Design",
     expertise: "Product Design",
-    typology: "Enterprise SaaS",
+    company: "DXP SaaS",
     status: "Design",
     country: "Singapore",
-    region: "Southeast Asia",
     date: "2023"
   },
   {
@@ -92,10 +86,9 @@ export const projects: Project[] = [
     hasDetails: true,
     type: "App Design",
     expertise: "App Design",
-    typology: "Mobility",
+    company: "SPARK Mobility",
     status: "Experimental / Design R&D",
     country: "Malaysia",
-    region: "Southeast Asia",
     date: "2022"
   },
   {
@@ -106,10 +99,9 @@ export const projects: Project[] = [
     hasDetails: true,
     type: "Graphic Design",
     expertise: "Graphic Design",
-    typology: "CleanTech",
+    company: "Verdant Solar",
     status: "Complete",
     country: "Malaysia",
-    region: "Southeast Asia",
     date: "2022"
   },
   {
@@ -120,10 +112,9 @@ export const projects: Project[] = [
     hasDetails: true,
     type: "Web Design",
     expertise: "Web Design",
-    typology: "Corporate",
+    company: "AQA Group",
     status: "Complete",
     country: "Malaysia",
-    region: "Southeast Asia",
     date: "2022"
   },
   {
@@ -134,10 +125,9 @@ export const projects: Project[] = [
     hasDetails: false,
     type: "Product Design",
     expertise: "Product Design",
-    typology: "E-Commerce",
+    company: "Babyborong",
     status: "Under Development",
     country: "Singapore",
-    region: "Southeast Asia",
     date: "2021"
   },
   {
@@ -148,10 +138,9 @@ export const projects: Project[] = [
     hasDetails: true,
     type: "UX/UI Design",
     expertise: "UX/UI Design",
-    typology: "Fintech",
+    company: "MoneyX (Hextar Tech)",
     status: "Complete",
     country: "Malaysia",
-    region: "Southeast Asia",
     date: "2023"
   },
   {
@@ -162,10 +151,9 @@ export const projects: Project[] = [
     hasDetails: false,
     type: "Branding",
     expertise: "Branding",
-    typology: "Corporate",
+    company: "CH Phoon & Associates",
     status: "Concept",
     country: "Malaysia",
-    region: "Southeast Asia",
     date: "2021"
   }
 ];
