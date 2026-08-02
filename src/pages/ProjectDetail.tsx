@@ -499,14 +499,12 @@ const ProjectDetail = () => {
         <meta property="og:description" content={project.overview.substring(0, 160)} />
       </Helmet>
 
-      <main className="flex-1 flex flex-col">
-      {/* ZHA-Style Project Hero — Full Bleed Dark extending all the way to top */}
-      <section className="w-full bg-[#0a0a0a] text-white pt-0 pb-0 relative overflow-hidden">
-        {/* Sticky Navbar inside dark hero header */}
-        <div className="relative z-50">
-          <StickyNavbar />
-        </div>
+      {/* Root Sticky Navbar — remains sticky for entire page scroll */}
+      <StickyNavbar />
 
+      <main className="flex-1 flex flex-col">
+      {/* ZHA-Style Project Hero — Full Bleed Dark extending up behind sticky navbar */}
+      <section className="w-full bg-[#0a0a0a] text-white -mt-[68px] sm:-mt-[76px] pt-[84px] sm:pt-[100px] pb-0 relative overflow-hidden">
         {/* Active 60fps Canvas Blob Animation with mouse interaction */}
         <ZHABlobBackground />
 
