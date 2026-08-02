@@ -170,7 +170,7 @@ const Index = () => {
         {/* Hero Section */}
         <section ref={heroRef} className={`relative z-10 ${latestAnnouncement ? 'pt-8 sm:pt-12' : 'pt-14 sm:pt-20 lg:pt-24'} pb-10 sm:pb-16 lg:pb-24 px-4 sm:px-6 fade-in`}>
           <div className="max-w-6xl mx-auto text-left lg:text-center relative z-10">
-            <h2 className="font-display text-[36px] lg:text-[48px] font-medium mb-2 sm:mb-3 tracking-tight leading-[42px] lg:leading-[54px] min-h-[90px] sm:min-h-[80px] lg:min-h-[60px] text-white">
+            <h2 className="font-display text-[36px] lg:text-[54px] font-medium mb-2 sm:mb-3 tracking-tight leading-[42px] lg:leading-[62px] min-h-[90px] sm:min-h-[80px] lg:min-h-[70px] text-white">
               <TypewriterEffect />
             </h2>
             <p className="font-jakarta text-[14px] sm:text-[16px] max-w-2xl lg:mx-auto leading-[25px] sm:leading-[29px] px-1 mb-6 sm:mb-8 sm:px-0 text-white/70">
