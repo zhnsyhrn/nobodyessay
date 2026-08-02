@@ -226,7 +226,7 @@ const Index = () => {
                       openChat();
                       sendMessage(suggestion.full);
                     }}
-                    className="px-3 sm:px-4 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-xs sm:text-[13px] font-medium text-white/80 hover:text-white transition-all shadow-sm hover:shadow-md touch-manipulation cursor-pointer"
+                    className="px-3 sm:px-4 py-1.5 rounded-full bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/20 border border-black/10 dark:border-white/15 text-xs sm:text-[13px] font-medium text-foreground/80 dark:text-white/80 hover:text-foreground dark:hover:text-white transition-all shadow-sm hover:shadow-md touch-manipulation cursor-pointer"
                   >
                     <span className="sm:hidden">{suggestion.short}</span>
                     <span className="hidden sm:inline">{suggestion.full}</span>
