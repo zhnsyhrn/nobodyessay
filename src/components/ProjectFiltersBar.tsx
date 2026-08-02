@@ -63,12 +63,12 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
 
   return (
     <div className="w-full mb-8 space-y-4 font-mono">
-      {/* 4-Dropdown Filter Row */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3">
+      {/* 4-Dropdown Filter Row — ZHA Touch Scrollable Mobile Bar */}
+      <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-3 sm:pb-0">
         {/* 1. EXPERTISE */}
         <DropdownMenu modal={false}>
           <DropdownMenuTrigger
-            className={`group font-mono text-[11px] uppercase tracking-widest px-4 py-2.5 rounded-none border flex items-center justify-between gap-3 transition-all duration-200 focus:outline-none w-full ${
+            className={`group font-mono text-[11px] uppercase tracking-widest px-4 py-2.5 rounded-none border flex items-center justify-between gap-3 transition-all duration-200 focus:outline-none shrink-0 w-auto sm:w-full min-w-[145px] sm:min-w-0 ${
               selectedExpertise !== "all"
                 ? "border-blue-500 bg-blue-600 text-white shadow-sm"
                 : "border-white/20 bg-black text-white hover:border-white/50 hover:bg-white/5"
@@ -82,7 +82,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           <DropdownMenuContent
             align="start"
             sideOffset={4}
-            className="!z-40 w-[var(--radix-dropdown-menu-trigger-width)] min-w-[var(--radix-dropdown-menu-trigger-width)] bg-[#0a0a0a] text-white border border-white/20 p-1 shadow-2xl rounded-none font-mono text-[11px] uppercase tracking-wider duration-250 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:slide-out-to-top-1"
+            className="!z-40 min-w-[180px] sm:min-w-0 w-auto sm:w-[var(--radix-dropdown-menu-trigger-width)] bg-[#0a0a0a] text-white border border-white/20 p-1 shadow-2xl rounded-none font-mono text-[11px] uppercase tracking-wider duration-250 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:slide-out-to-top-1"
           >
             <DropdownMenuItem
               onClick={() => onExpertiseChange("all")}
@@ -107,7 +107,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
         {/* 2. COMPANY NAME */}
         <DropdownMenu modal={false}>
           <DropdownMenuTrigger
-            className={`group font-mono text-[11px] uppercase tracking-widest px-4 py-2.5 rounded-none border flex items-center justify-between gap-3 transition-all duration-200 focus:outline-none w-full ${
+            className={`group font-mono text-[11px] uppercase tracking-widest px-4 py-2.5 rounded-none border flex items-center justify-between gap-3 transition-all duration-200 focus:outline-none shrink-0 w-auto sm:w-full min-w-[155px] sm:min-w-0 ${
               selectedCompany !== "all"
                 ? "border-blue-500 bg-blue-600 text-white shadow-sm"
                 : "border-white/20 bg-black text-white hover:border-white/50 hover:bg-white/5"
@@ -121,7 +121,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           <DropdownMenuContent
             align="start"
             sideOffset={4}
-            className="!z-40 w-[var(--radix-dropdown-menu-trigger-width)] min-w-[var(--radix-dropdown-menu-trigger-width)] bg-[#0a0a0a] text-white border border-white/20 p-1 shadow-2xl rounded-none font-mono text-[11px] uppercase tracking-wider duration-250 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:slide-out-to-top-1"
+            className="!z-40 min-w-[190px] sm:min-w-0 w-auto sm:w-[var(--radix-dropdown-menu-trigger-width)] bg-[#0a0a0a] text-white border border-white/20 p-1 shadow-2xl rounded-none font-mono text-[11px] uppercase tracking-wider duration-250 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:slide-out-to-top-1"
           >
             <DropdownMenuItem
               onClick={() => onCompanyChange("all")}
@@ -143,10 +143,10 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           </DropdownMenuContent>
         </DropdownMenu>
 
-        {/* 3. CONSTRUCTION STATUS */}
+        {/* 3. PROJECT STATUS */}
         <DropdownMenu modal={false}>
           <DropdownMenuTrigger
-            className={`group font-mono text-[11px] uppercase tracking-widest px-4 py-2.5 rounded-none border flex items-center justify-between gap-3 transition-all duration-200 focus:outline-none w-full ${
+            className={`group font-mono text-[11px] uppercase tracking-widest px-4 py-2.5 rounded-none border flex items-center justify-between gap-3 transition-all duration-200 focus:outline-none shrink-0 w-auto sm:w-full min-w-[165px] sm:min-w-0 ${
               selectedStatus !== "all"
                 ? "border-blue-500 bg-blue-600 text-white shadow-sm"
                 : "border-white/20 bg-black text-white hover:border-white/50 hover:bg-white/5"
@@ -160,7 +160,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           <DropdownMenuContent
             align="start"
             sideOffset={4}
-            className="!z-40 w-[var(--radix-dropdown-menu-trigger-width)] min-w-[var(--radix-dropdown-menu-trigger-width)] bg-[#0a0a0a] text-white border border-white/20 p-1 shadow-2xl rounded-none font-mono text-[11px] uppercase tracking-wider duration-250 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:slide-out-to-top-1"
+            className="!z-40 min-w-[200px] sm:min-w-0 w-auto sm:w-[var(--radix-dropdown-menu-trigger-width)] bg-[#0a0a0a] text-white border border-white/20 p-1 shadow-2xl rounded-none font-mono text-[11px] uppercase tracking-wider duration-250 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:slide-out-to-top-1"
           >
             <DropdownMenuItem
               onClick={() => onStatusChange("all")}
@@ -185,7 +185,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
         {/* 4. COUNTRY */}
         <DropdownMenu modal={false}>
           <DropdownMenuTrigger
-            className={`group font-mono text-[11px] uppercase tracking-widest px-4 py-2.5 rounded-none border flex items-center justify-between gap-3 transition-all duration-200 focus:outline-none w-full ${
+            className={`group font-mono text-[11px] uppercase tracking-widest px-4 py-2.5 rounded-none border flex items-center justify-between gap-3 transition-all duration-200 focus:outline-none shrink-0 w-auto sm:w-full min-w-[130px] sm:min-w-0 ${
               selectedCountry !== "all"
                 ? "border-blue-500 bg-blue-600 text-white shadow-sm"
                 : "border-white/20 bg-black text-white hover:border-white/50 hover:bg-white/5"
@@ -199,7 +199,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           <DropdownMenuContent
             align="start"
             sideOffset={4}
-            className="!z-40 w-[var(--radix-dropdown-menu-trigger-width)] min-w-[var(--radix-dropdown-menu-trigger-width)] bg-[#0a0a0a] text-white border border-white/20 p-1 shadow-2xl rounded-none font-mono text-[11px] uppercase tracking-wider duration-250 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:slide-out-to-top-1"
+            className="!z-40 min-w-[160px] sm:min-w-0 w-auto sm:w-[var(--radix-dropdown-menu-trigger-width)] bg-[#0a0a0a] text-white border border-white/20 p-1 shadow-2xl rounded-none font-mono text-[11px] uppercase tracking-wider duration-250 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:slide-out-to-top-1"
           >
             <DropdownMenuItem
               onClick={() => onCountryChange("all")}
