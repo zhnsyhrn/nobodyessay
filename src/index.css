@@ -233,4 +233,30 @@ All colors MUST be HSL.
     scrollbar-width: thin;
     scrollbar-color: #000000 transparent;
   }
+
+  /* ZHA-style hero blob animations */
+  @keyframes blobDrift1 {
+    0%   { transform: translate(0px,   0px)   scale(1); }
+    25%  { transform: translate(60px, -40px)  scale(1.08); }
+    50%  { transform: translate(30px,  70px)  scale(0.95); }
+    75%  { transform: translate(-50px, 30px)  scale(1.05); }
+    100% { transform: translate(0px,   0px)   scale(1); }
+  }
+  @keyframes blobDrift2 {
+    0%   { transform: translate(0px,  0px)   scale(1); }
+    25%  { transform: translate(-70px, 50px)  scale(1.1); }
+    50%  { transform: translate(40px, -60px) scale(0.9); }
+    75%  { transform: translate(60px,  20px) scale(1.06); }
+    100% { transform: translate(0px,  0px)   scale(1); }
+  }
+  @keyframes blobDrift3 {
+    0%   { transform: translate(0px,  0px)  scale(1); }
+    33%  { transform: translate(50px, 60px) scale(1.12); }
+    66%  { transform: translate(-40px,-50px) scale(0.92); }
+    100% { transform: translate(0px,  0px)  scale(1); }
+  }
+
+  .blob-1 { animation: blobDrift1 18s ease-in-out infinite; }
+  .blob-2 { animation: blobDrift2 22s ease-in-out infinite; }
+  .blob-3 { animation: blobDrift3 16s ease-in-out infinite; }
 }

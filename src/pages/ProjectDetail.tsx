@@ -500,59 +500,84 @@ const ProjectDetail = () => {
       <StickyNavbar />
       
       <main className="flex-1 flex flex-col">
+      {/* ZHA-Style Project Hero — Full Bleed Dark */}
+      <section className="w-full bg-[#0a0a0a] text-white pt-20 sm:pt-28 pb-0 relative overflow-hidden">
+
+        {/* Animated blob lights */}
+        <div className="blob-1 absolute top-[-10%] left-[-5%] w-[55vw] h-[55vw] max-w-[700px] max-h-[700px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(56,116,186,0.22)_0%,transparent_70%)] blur-[80px] pointer-events-none" />
+        <div className="blob-2 absolute bottom-[-20%] right-[-5%] w-[50vw] h-[50vw] max-w-[650px] max-h-[650px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(20,160,130,0.18)_0%,transparent_70%)] blur-[90px] pointer-events-none" />
+        <div className="blob-3 absolute top-[30%] left-[35%] w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(100,60,180,0.12)_0%,transparent_70%)] blur-[70px] pointer-events-none" />
+
+        <div className="max-w-[1200px] mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
+
+          {/* Back Navigation */}
+          <div className="mb-10 sm:mb-14">
+            <Link
+              to="/studio"
+              className="group inline-flex items-center gap-2 font-jakarta text-sm text-white/50 hover:text-white transition-colors"
+            >
+              <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-0.5" />
+              Back to projects
+            </Link>
+          </div>
+
+          {/* Title + Overview — split layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start pb-10 sm:pb-14">
+            {/* Left: Large Title */}
+            <div>
+              <h1
+                className="font-display font-medium tracking-tight text-[40px] sm:text-[56px] lg:text-[68px] leading-[1.0] text-white"
+              >
+                {project.title}
+              </h1>
+            </div>
+
+            {/* Right: Overview + link */}
+            <div className="flex flex-col justify-start pt-1 lg:pt-3">
+              <p
+                className="font-jakarta text-[15px] sm:text-[16px] text-white/70 leading-relaxed"
+              >
+                {project.overview}
+              </p>
+              <a
+                href={project.websiteUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-2 font-jakarta text-[13px] font-medium text-white border-b border-white/30 hover:border-white pb-0.5 transition-colors mt-6 w-fit"
+              >
+                Visit website
+                <ExternalLink className="h-3 w-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Metadata row */}
+          <div className="border-t border-white/10 py-5 flex flex-wrap gap-x-12 gap-y-3">
+            {(project.projectInfo as Record<string, string>)?.["Type"] && (
+              <div>
+                <span className="font-jakarta text-[11px] uppercase tracking-widest text-white/35 block mb-1">Type</span>
+                <span className="font-jakarta text-[13px] text-white/70">{(project.projectInfo as Record<string, string>)["Type"]}</span>
+              </div>
+            )}
+            {(project.projectInfo as Record<string, string>)?.["Role / Project Ownership"] && (
+              <div>
+                <span className="font-jakarta text-[11px] uppercase tracking-widest text-white/35 block mb-1">Role</span>
+                <span className="font-jakarta text-[13px] text-white/70">{(project.projectInfo as Record<string, string>)["Role / Project Ownership"]}</span>
+              </div>
+            )}
+            {(project.projectInfo as Record<string, string>)?.["Project / Company"] && (
+              <div>
+                <span className="font-jakarta text-[11px] uppercase tracking-widest text-white/35 block mb-1">Company</span>
+                <span className="font-jakarta text-[13px] text-white/70">{(project.projectInfo as Record<string, string>)["Project / Company"]}</span>
+              </div>
+            )}
+          </div>
+
+        </div>
+      </section>
+
       {/* Main Content */}
       <div className="max-w-[740px] mx-auto px-6 pt-10 sm:pt-12 pb-8">
-        {/* Back Navigation */}
-        <div className="mb-10 sm:mb-14">
-          <Link
-            to="/studio"
-            className="group inline-flex items-center gap-2 font-jakarta text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-0.5" />
-            Back to projects
-          </Link>
-        </div>
-
-        {/* Header Section */}
-        <div className="mb-10 sm:mb-12">
-          {(project.projectInfo as Record<string, string>)?.["Type"] && (
-            <div className="mt-2 mb-4">
-              <span
-                className="inline-block font-typewriter uppercase text-[11px] rounded-full border border-border px-2.5 py-1"
-                style={{ color: 'var(--body-text)' }}
-              >
-                {(project.projectInfo as Record<string, string>)["Type"]}
-              </span>
-            </div>
-          )}
-
-          <h1
-            className="font-display font-medium tracking-tight text-[22px] sm:text-[26px]"
-            style={{ lineHeight: 1.3 }}
-          >
-            {project.title}
-          </h1>
-
-          <p
-            className="font-jakarta mt-3"
-            style={{ color: 'var(--body-text)', fontSize: "16px", lineHeight: 1.6 }}
-          >
-            {project.overview}
-          </p>
-
-          <a
-            href={project.websiteUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 font-jakarta text-[13px] font-medium text-foreground border-b border-foreground/30 hover:border-foreground pb-0.5 transition-colors mt-6"
-          >
-            Visit website
-            <ExternalLink className="h-3 w-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
-        </div>
-
-        {/* Divider */}
-        <div className="border-t border-border/60 mt-8 mb-4"></div>
 
         {/* Verdant Solar Image Slider - Only for verdant-solar-my */}
         {slug === 'verdant-solar-my' && <VerdantSolarImageSlider />}
