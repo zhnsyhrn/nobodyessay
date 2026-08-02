@@ -11,20 +11,10 @@ import Autoplay from "embla-carousel-autoplay";
 import { ArrowRight } from "lucide-react";
 import { LazyImage } from "@/components/ui/lazy-image";
 import { projects } from "@/data/projects";
-import { ProjectFilters } from "@/components/ProjectFilters";
+import { ProjectFiltersBar } from "@/components/ProjectFiltersBar";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Helmet } from "react-helmet-async";
 
-// Sample project images - you can replace these with actual project images
-import galleryImage1 from "@/assets/gallery-01.jpg";
-import galleryImage2 from "@/assets/gallery-02.jpg";
-import galleryImage3 from "@/assets/gallery-03.jpg";
-import galleryImage4 from "@/assets/gallery-04.jpg";
-import galleryImage5 from "@/assets/gallery-05.jpg";
-import galleryImage6 from "@/assets/gallery-06.jpg";
-import galleryImage7 from "@/assets/gallery-07.jpg";
-import galleryImage8 from "@/assets/gallery-08.jpg";
-import galleryImage9 from "@/assets/gallery-09.jpg";
 const Studio = () => {
   // Carousel state
   const [api, setApi] = useState<CarouselApi>();
@@ -34,51 +24,32 @@ const Studio = () => {
   // Coming soon dialog state
   const [comingSoonDialog, setComingSoonDialog] = useState({ open: false, title: "" });
   
-  // Filter states
-  const [searchQuery, setSearchQuery] = useState("");
+  // ZHA-Style Filter states
   const [selectedType, setSelectedType] = useState("all");
-  const [sortBy, setSortBy] = useState<"date" | "alphabetical">("date");
+  const [selectedStatus, setSelectedStatus] = useState("all");
+  const [selectedCountry, setSelectedCountry] = useState("all");
   
-  // Get unique project types
+  // Get unique project types dynamically from data
   const projectTypes = useMemo(() => {
     const types = new Set(projects.map(p => p.type));
     return Array.from(types).sort();
   }, []);
   
-  // Filter and sort projects
+  // Filter projects by type, status, and country
   const filteredProjects = useMemo(() => {
-    let filtered = projects;
-    
-    // Apply search filter
-    if (searchQuery) {
-      filtered = filtered.filter(project =>
-        project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        project.description.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-    }
-    
-    // Apply type filter
-    if (selectedType !== "all") {
-      filtered = filtered.filter(project => project.type === selectedType);
-    }
-    
-    // Apply sorting
-    const sorted = [...filtered];
-    if (sortBy === "alphabetical") {
-      sorted.sort((a, b) => a.title.localeCompare(b.title));
-    } else {
-      sorted.sort((a, b) => {
-        const dateA = a.date || "0";
-        const dateB = b.date || "0";
-        return dateB.localeCompare(dateA);
-      });
-    }
-    
-    return sorted;
-  }, [searchQuery, selectedType, sortBy]);
+    return projects.filter(project => {
+      if (selectedType !== "all" && project.type !== selectedType) return false;
+      if (selectedStatus !== "all" && project.status !== selectedStatus) return false;
+      if (selectedCountry !== "all" && project.country !== selectedCountry) return false;
+      return true;
+    });
+  }, [selectedType, selectedStatus, selectedCountry]);
 
-  // All gallery images
-  const allImages = [galleryImage1, galleryImage2, galleryImage3, galleryImage4, galleryImage5, galleryImage6, galleryImage7, galleryImage8, galleryImage9];
+  const handleClearAll = () => {
+    setSelectedType("all");
+    setSelectedStatus("all");
+    setSelectedCountry("all");
+  };
 
   // Carousel setup
   useEffect(() => {
@@ -89,6 +60,7 @@ const Studio = () => {
       setCurrent(api.selectedScrollSnap() + 1);
     });
   }, [api]);
+
   return <div className="min-h-screen flex flex-col bg-background">
       <Helmet>
         <title>Portfolio | UI/UX & Branding Design Projects by Zahin Syahiran</title>
@@ -98,9 +70,21 @@ const Studio = () => {
       <StickyNavbar />
 
       <main className="flex-1 flex flex-col">
-      {/* Projects Grid */}
+      {/* Projects Grid + ZHA Filter Bar */}
       <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-12 xl:px-16 md:pt-8">
         <div className="w-full">
+          {/* ZHA-Style Filters Bar */}
+          <ProjectFiltersBar 
+            selectedType={selectedType}
+            onTypeChange={setSelectedType}
+            selectedStatus={selectedStatus}
+            onStatusChange={setSelectedStatus}
+            selectedCountry={selectedCountry}
+            onCountryChange={setSelectedCountry}
+            onClearAll={handleClearAll}
+            totalCount={filteredProjects.length}
+            availableTypes={projectTypes}
+          />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] lg:grid-flow-dense">
             {filteredProjects.map((project, index) => {
               const isFirstBento = index === 0 && filteredProjects.length >= 3;
