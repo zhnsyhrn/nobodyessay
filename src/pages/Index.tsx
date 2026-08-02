@@ -18,6 +18,7 @@ import { useCarouselPreloader } from "@/hooks/useImagePreloader";
 import { projects } from "@/data/projects";
 import { useChat } from "@/contexts/ChatContext";
 import { useTranslation } from "react-i18next";
+import ZHABlobBackground from "@/components/ZHABlobBackground";
 
 // Portfolio design images - Your latest design portfolio work
 const portfolioImages = [
@@ -136,77 +137,78 @@ const Index = () => {
       </Helmet>
       
       <main className="flex-1 flex flex-col">
-      <div className="bg-background transition-colors">
-      <h1 className="sr-only">Zahin Syahiran - Expert UI/UX Designer & Brand Strategist</h1>
-      <StickyNavbar />
+      {/* Homepage Hero with ZHA Blob Animation */}
+      <div className="bg-[#0a0a0a] text-white relative overflow-hidden -mt-[68px] sm:-mt-[76px] pt-[68px] sm:pt-[76px] transition-colors">
+        <ZHABlobBackground />
+        <h1 className="sr-only">Zahin Syahiran - Expert UI/UX Designer & Brand Strategist</h1>
 
-      {/* Announcement banner */}
-      {latestAnnouncement && (
-        <div className="pt-10 sm:pt-14 px-4 sm:px-6 flex justify-center fade-in">
-          <Link
-            to={`/journals/${latestAnnouncement.slug}`}
-            className="group relative inline-flex items-center justify-center gap-2.5 rounded-full border border-slate-200/50 dark:border-white/10 bg-white/60 dark:bg-white/5 backdrop-blur-md px-4 py-2 transition-all hover:bg-white/90 dark:hover:bg-white/10 hover:shadow-sm max-w-full"
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 dark:bg-blue-300 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500 dark:bg-blue-400"></span>
-            </span>
-            <span className="font-jakarta text-[12px] sm:text-[13px] text-slate-700 dark:text-slate-200 font-medium truncate">
-              {latestAnnouncement.title}
-            </span>
-            <ArrowRight
-              size={14}
-              className="shrink-0 text-slate-400 dark:text-slate-500 transition-transform group-hover:translate-x-1 group-hover:text-slate-700 dark:group-hover:text-slate-200"
-            />
-          </Link>
-        </div>
-      )}
+        {/* Announcement banner */}
+        {latestAnnouncement && (
+          <div className="pt-8 sm:pt-12 px-4 sm:px-6 flex justify-center fade-in relative z-10">
+            <Link
+              to={`/journals/${latestAnnouncement.slug}`}
+              className="group relative inline-flex items-center justify-center gap-2.5 rounded-full border border-white/15 bg-white/10 backdrop-blur-md px-4 py-2 transition-all hover:bg-white/20 hover:shadow-sm max-w-full"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-400"></span>
+              </span>
+              <span className="font-jakarta text-[12px] sm:text-[13px] text-white/90 font-medium truncate">
+                {latestAnnouncement.title}
+              </span>
+              <ArrowRight
+                size={14}
+                className="shrink-0 text-white/50 transition-transform group-hover:translate-x-1 group-hover:text-white"
+              />
+            </Link>
+          </div>
+        )}
 
-      {/* Hero Section */}
-      <section ref={heroRef} className={`relative ${latestAnnouncement ? 'pt-8 sm:pt-12' : 'pt-14 sm:pt-20 lg:pt-24'} pb-6 sm:pb-12 lg:pb-20 px-4 sm:px-6 fade-in`}>
-        <div className="max-w-6xl mx-auto text-left lg:text-center relative z-10">
-          <h2 className="font-display text-[36px] lg:text-[48px] font-medium mb-2 sm:mb-3 tracking-tight leading-[42px] lg:leading-[54px] min-h-[90px] sm:min-h-[80px] lg:min-h-[60px]">
-            <TypewriterEffect />
-          </h2>
-          <p style={{
-          color: 'var(--body-text)'
-        }} className="font-jakarta text-[14px] sm:text-[16px] max-w-2xl lg:mx-auto leading-[25px] sm:leading-[29px] px-1 mb-6 sm:mb-8 sm:px-0">{t('hero.subtitle')}</p>
-          
-          {/* AI Search Bar */}
-          <div className="flex flex-col items-center px-1 sm:px-2 mt-8 lg:mt-12 relative z-10 group">
-            <div className="relative w-full max-w-2xl">
-              {/* Glowing Aura */}
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-300 dark:from-blue-500 dark:via-cyan-400 dark:to-blue-500 rounded-full blur-md opacity-20 dark:opacity-50 group-hover:opacity-50 dark:group-hover:opacity-100 transition duration-1000 group-hover:duration-300 animate-gradient bg-[length:200%_auto]"></div>
-              
-              <form onSubmit={handleHeroSubmit} className="relative flex items-center w-full h-full bg-white dark:bg-card rounded-full p-2 pl-6 pr-3 shadow-sm transition-colors">
-                <input 
-                  type="text" 
-                  value={searchValue}
-                  onChange={(e) => setSearchValue(e.target.value)}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter') {
-                      e.preventDefault();
-                      handleHeroSubmit(e);
-                    }
-                  }}
-                  enterKeyHint="send"
-                  placeholder={t('hero.search_placeholder')}
-                  className="flex-1 bg-transparent border-none focus:outline-none focus:ring-0 text-foreground font-jakarta text-[15px] placeholder:text-muted-foreground w-full outline-none"
-                />
+        {/* Hero Section */}
+        <section ref={heroRef} className={`relative z-10 ${latestAnnouncement ? 'pt-8 sm:pt-12' : 'pt-14 sm:pt-20 lg:pt-24'} pb-10 sm:pb-16 lg:pb-24 px-4 sm:px-6 fade-in`}>
+          <div className="max-w-6xl mx-auto text-left lg:text-center relative z-10">
+            <h2 className="font-display text-[36px] lg:text-[48px] font-medium mb-2 sm:mb-3 tracking-tight leading-[42px] lg:leading-[54px] min-h-[90px] sm:min-h-[80px] lg:min-h-[60px] text-white">
+              <TypewriterEffect />
+            </h2>
+            <p className="font-jakarta text-[14px] sm:text-[16px] max-w-2xl lg:mx-auto leading-[25px] sm:leading-[29px] px-1 mb-6 sm:mb-8 sm:px-0 text-white/70">
+              {t('hero.subtitle')}
+            </p>
+            
+            {/* AI Search Bar */}
+            <div className="flex flex-col items-center px-1 sm:px-2 mt-8 lg:mt-12 relative z-10 group">
+              <div className="relative w-full max-w-2xl">
+                {/* Glowing Aura */}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 rounded-full blur-md opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-300 animate-gradient bg-[length:200%_auto]"></div>
                 
-                <div className="flex items-center gap-1 sm:gap-2 pl-2 sm:pl-4">
-                  <button 
-                    type="submit" 
-                    title="Send question to AI"
-                    className="p-2 sm:p-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition-colors group/btn shrink-0 flex items-center justify-center touch-manipulation"
-                  >
-                    <ArrowRight size={16} />
-                  </button>
-                </div>
-              </form>
-            </div>
+                <form onSubmit={handleHeroSubmit} className="relative flex items-center w-full h-full bg-white dark:bg-card rounded-full p-2 pl-6 pr-3 shadow-sm transition-colors">
+                  <input 
+                    type="text" 
+                    value={searchValue}
+                    onChange={(e) => setSearchValue(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') {
+                        e.preventDefault();
+                        handleHeroSubmit(e);
+                      }
+                    }}
+                    enterKeyHint="send"
+                    placeholder={t('hero.search_placeholder')}
+                    className="flex-1 bg-transparent border-none focus:outline-none focus:ring-0 text-foreground font-jakarta text-[15px] placeholder:text-muted-foreground w-full outline-none"
+                  />
+                  
+                  <div className="flex items-center gap-1 sm:gap-2 pl-2 sm:pl-4">
+                    <button 
+                      type="submit" 
+                      title="Send question to AI"
+                      className="p-2 sm:p-2.5 rounded-full bg-blue-600 hover:bg-blue-700 text-white transition-colors group/btn shrink-0 flex items-center justify-center touch-manipulation"
+                    >
+                      <ArrowRight size={16} />
+                    </button>
+                  </div>
+                </form>
+              </div>
 
-            {/* Search Suggestions */}
+              {/* Search Suggestions */}
               <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mt-4 sm:mt-5">
                 {[
                   { full: t('search_suggestions.who_is_zahin.full'), short: t('search_suggestions.who_is_zahin.short') },
@@ -221,16 +223,16 @@ const Index = () => {
                       openChat();
                       sendMessage(suggestion.full);
                     }}
-                    className="px-3 sm:px-4 py-1.5 rounded-full bg-white/50 dark:bg-card/50 hover:bg-white dark:hover:bg-card border border-border/40 hover:border-border/80 text-xs sm:text-[13px] font-medium text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-all shadow-sm hover:shadow-md touch-manipulation cursor-pointer"
+                    className="px-3 sm:px-4 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 text-xs sm:text-[13px] font-medium text-white/80 hover:text-white transition-all shadow-sm hover:shadow-md touch-manipulation cursor-pointer"
                   >
                     <span className="sm:hidden">{suggestion.short}</span>
                     <span className="hidden sm:inline">{suggestion.full}</span>
                   </button>
                 ))}
               </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
       </div>
 
       {/* Gallery Slider */}
