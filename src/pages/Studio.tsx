@@ -11,6 +11,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { ArrowRight } from "lucide-react";
 import { LazyImage } from "@/components/ui/lazy-image";
 import { projects } from "@/data/projects";
+import { motion, AnimatePresence } from "framer-motion";
 import { ProjectFiltersBar } from "@/components/ProjectFiltersBar";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Helmet } from "react-helmet-async";
@@ -85,37 +86,74 @@ const Studio = () => {
             totalCount={filteredProjects.length}
             availableTypes={projectTypes}
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] lg:grid-flow-dense">
-            {filteredProjects.map((project, index) => {
-              const isFirstBento = index === 0 && filteredProjects.length >= 3;
 
-              return (
-                <ProjectCard 
-                  key={project.slug} 
-                  project={project} 
-                  priority={index < 3}
-                  preload={index < 5}
-                  showBlobBackground={isFirstBento}
-                  className={
-                    isFirstBento 
-                      ? "lg:col-span-2 lg:row-span-2" 
-                      : "lg:col-span-1 lg:row-span-1"
-                  }
-                  imageContainerClassName={
-                    isFirstBento 
-                      ? "flex-1 min-h-[240px] sm:min-h-[320px] lg:min-h-[440px]" 
-                      : "aspect-video"
-                  }
-                  onClick={(e) => {
-                    if (!project.hasDetails) {
-                      e.preventDefault();
-                      setComingSoonDialog({ open: true, title: project.title });
+          {/* Animated ZHA Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] lg:grid-flow-dense">
+            <AnimatePresence mode="popLayout">
+              {filteredProjects.map((project, index) => {
+                const isFirstBento = index === 0 && filteredProjects.length >= 3;
+
+                return (
+                  <motion.div
+                    key={project.slug}
+                    layout
+                    initial={{ opacity: 0, scale: 0.94, y: 20 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.9, y: -15 }}
+                    transition={{
+                      duration: 0.35,
+                      ease: [0.25, 0.1, 0.25, 1],
+                      delay: Math.min(index * 0.03, 0.2),
+                    }}
+                    className={
+                      isFirstBento 
+                        ? "lg:col-span-2 lg:row-span-2" 
+                        : "lg:col-span-1 lg:row-span-1"
                     }
-                  }}
-                />
-              );
-            })}
+                  >
+                    <ProjectCard 
+                      project={project} 
+                      priority={index < 3}
+                      preload={index < 5}
+                      showBlobBackground={isFirstBento}
+                      className="h-full"
+                      imageContainerClassName={
+                        isFirstBento 
+                          ? "flex-1 min-h-[240px] sm:min-h-[320px] lg:min-h-[440px]" 
+                          : "aspect-video"
+                      }
+                      onClick={(e) => {
+                        if (!project.hasDetails) {
+                          e.preventDefault();
+                          setComingSoonDialog({ open: true, title: project.title });
+                        }
+                      }}
+                    />
+                  </motion.div>
+                );
+              })}
+            </AnimatePresence>
           </div>
+
+          {/* Empty state when no projects match filter */}
+          {filteredProjects.length === 0 && (
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="py-16 text-center font-mono"
+            >
+              <p className="text-muted-foreground text-xs uppercase tracking-wider mb-4">
+                No projects match the selected criteria.
+              </p>
+              <button
+                type="button"
+                onClick={handleClearAll}
+                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-[4px] text-xs uppercase tracking-wider transition-colors cursor-pointer"
+              >
+                Clear Filters
+              </button>
+            </motion.div>
+          )}
         </div>
       </section>
 
