@@ -111,6 +111,7 @@ const Studio = () => {
                   project={project} 
                   priority={index < 3}
                   preload={index < 5}
+                  showBlobBackground={isFirstBento}
                   className={
                     isFirstBento 
                       ? "lg:col-span-2 lg:row-span-2" 
