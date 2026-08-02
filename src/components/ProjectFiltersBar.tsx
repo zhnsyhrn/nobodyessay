@@ -93,7 +93,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           <DropdownMenuContent
             align="start"
             sideOffset={4}
-            className="min-w-[200px] bg-[#0a0a0a] text-white border border-white/20 p-1 shadow-2xl rounded-none font-mono text-[11px] uppercase tracking-wider duration-250 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:slide-out-to-top-1"
+            className="!z-40 min-w-[200px] bg-[#0a0a0a] text-white border border-white/20 p-1 shadow-2xl rounded-none font-mono text-[11px] uppercase tracking-wider duration-250 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:slide-out-to-top-1"
           >
             <DropdownMenuItem
               onClick={() => onExpertiseChange("all")}
@@ -132,7 +132,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           <DropdownMenuContent
             align="start"
             sideOffset={4}
-            className="min-w-[200px] bg-[#0a0a0a] text-white border border-white/20 p-1 shadow-2xl rounded-none font-mono text-[11px] uppercase tracking-wider duration-250 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:slide-out-to-top-1"
+            className="!z-40 min-w-[200px] bg-[#0a0a0a] text-white border border-white/20 p-1 shadow-2xl rounded-none font-mono text-[11px] uppercase tracking-wider duration-250 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:slide-out-to-top-1"
           >
             <DropdownMenuItem
               onClick={() => onTypologyChange("all")}
@@ -171,7 +171,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           <DropdownMenuContent
             align="start"
             sideOffset={4}
-            className="min-w-[210px] bg-[#0a0a0a] text-white border border-white/20 p-1 shadow-2xl rounded-none font-mono text-[11px] uppercase tracking-wider duration-250 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:slide-out-to-top-1"
+            className="!z-40 min-w-[210px] bg-[#0a0a0a] text-white border border-white/20 p-1 shadow-2xl rounded-none font-mono text-[11px] uppercase tracking-wider duration-250 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:slide-out-to-top-1"
           >
             <DropdownMenuItem
               onClick={() => onStatusChange("all")}
@@ -210,7 +210,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           <DropdownMenuContent
             align="start"
             sideOffset={4}
-            className="min-w-[180px] bg-[#0a0a0a] text-white border border-white/20 p-1 shadow-2xl rounded-none font-mono text-[11px] uppercase tracking-wider duration-250 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:slide-out-to-top-1"
+            className="!z-40 min-w-[180px] bg-[#0a0a0a] text-white border border-white/20 p-1 shadow-2xl rounded-none font-mono text-[11px] uppercase tracking-wider duration-250 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:slide-out-to-top-1"
           >
             <DropdownMenuItem
               onClick={() => onCountryChange("all")}
@@ -249,7 +249,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           <DropdownMenuContent
             align="start"
             sideOffset={4}
-            className="min-w-[180px] bg-[#0a0a0a] text-white border border-white/20 p-1 shadow-2xl rounded-none font-mono text-[11px] uppercase tracking-wider duration-250 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:slide-out-to-top-1"
+            className="!z-40 min-w-[180px] bg-[#0a0a0a] text-white border border-white/20 p-1 shadow-2xl rounded-none font-mono text-[11px] uppercase tracking-wider duration-250 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:slide-out-to-top-1"
           >
             <DropdownMenuItem
               onClick={() => onRegionChange("all")}

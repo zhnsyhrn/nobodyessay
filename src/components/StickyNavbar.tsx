@@ -64,7 +64,7 @@ const StickyNavbar = () => {
     if (path === '/contact' && location.pathname === '/contact') return true;
     return false;
   };
-  return <nav ref={navRef} className="sticky top-3 sm:top-4 z-50 px-3 sm:px-6 pt-1">
+  return <nav ref={navRef} className="sticky top-3 sm:top-4 z-[100] px-3 sm:px-6 pt-1">
       <div className="max-w-6xl mx-auto">
         <div className="relative flex items-center justify-between rounded-full bg-white/60 dark:bg-[#1a1a1a]/80 backdrop-blur-xl border border-border/60 dark:border-white/10 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.6)] pl-4 sm:pl-5 pr-2 py-2 transition-all duration-300">
           <Link to="/" onClick={closeMenu} className="flex items-center space-x-2 sm:space-x-3 z-10">
