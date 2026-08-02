@@ -75,13 +75,19 @@ const Studio = () => {
         <title>Portfolio | UI/UX & Branding Design Projects by Zahin Syahiran</title>
         <meta name="description" content="Explore my latest UI/UX design, app design, and branding projects. See how I solve complex business problems through intuitive design." />
       </Helmet>
-      <h1 className="sr-only">UI/UX and Branding Design Portfolio</h1>
       <StickyNavbar />
 
       <main className="flex-1 flex flex-col">
       {/* Projects Grid + ZHA Filter Bar */}
       <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-12 xl:px-16 md:pt-8">
         <div className="w-full">
+          {/* Visible Page Title */}
+          <div className="mb-6 sm:mb-8">
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-foreground">
+              Projects
+            </h1>
+          </div>
+
           {/* ZHA-Style 4-Dropdown Filters Bar */}
           <ProjectFiltersBar 
             selectedExpertise={selectedExpertise}
