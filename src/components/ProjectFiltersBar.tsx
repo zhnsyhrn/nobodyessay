@@ -59,8 +59,8 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           <DropdownMenuTrigger
             className={`font-mono text-xs uppercase tracking-wider px-4 py-2.5 rounded-[4px] border flex items-center justify-between gap-3 transition-colors focus:outline-none min-w-[180px] sm:min-w-[200px] ${
               selectedType !== "all"
-                ? "border-foreground bg-foreground text-background"
-                : "border-border/80 dark:border-white/20 bg-background dark:bg-card text-foreground hover:border-foreground/50"
+                ? "border-blue-500 bg-blue-600 text-white shadow-sm"
+                : "border-white/20 bg-[#111111] text-white hover:border-white/50 hover:bg-[#181818]"
             }`}
           >
             <span className="truncate">
@@ -70,11 +70,11 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           </DropdownMenuTrigger>
           <DropdownMenuContent
             align="start"
-            className="min-w-[200px] bg-background dark:bg-card border border-border dark:border-white/15 p-1 shadow-lg rounded-[6px] font-mono text-xs"
+            className="min-w-[200px] bg-[#141414] text-white border border-white/20 p-1 shadow-xl rounded-[6px] font-mono text-xs"
           >
             <DropdownMenuItem
               onClick={() => onTypeChange("all")}
-              className="cursor-pointer font-medium uppercase hover:bg-accent"
+              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white"
             >
               ALL TYPES
             </DropdownMenuItem>
@@ -82,8 +82,8 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
               <DropdownMenuItem
                 key={type}
                 onClick={() => onTypeChange(type)}
-                className={`cursor-pointer hover:bg-accent ${
-                  selectedType === type ? "font-bold text-blue-600 dark:text-blue-400" : ""
+                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 ${
+                  selectedType === type ? "font-bold text-blue-400" : "text-white/90"
                 }`}
               >
                 {type}
@@ -97,8 +97,8 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           <DropdownMenuTrigger
             className={`font-mono text-xs uppercase tracking-wider px-4 py-2.5 rounded-[4px] border flex items-center justify-between gap-3 transition-colors focus:outline-none min-w-[190px] sm:min-w-[210px] ${
               selectedStatus !== "all"
-                ? "border-foreground bg-foreground text-background"
-                : "border-border/80 dark:border-white/20 bg-background dark:bg-card text-foreground hover:border-foreground/50"
+                ? "border-blue-500 bg-blue-600 text-white shadow-sm"
+                : "border-white/20 bg-[#111111] text-white hover:border-white/50 hover:bg-[#181818]"
             }`}
           >
             <span className="truncate">
@@ -108,11 +108,11 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           </DropdownMenuTrigger>
           <DropdownMenuContent
             align="start"
-            className="min-w-[210px] bg-background dark:bg-card border border-border dark:border-white/15 p-1 shadow-lg rounded-[6px] font-mono text-xs"
+            className="min-w-[210px] bg-[#141414] text-white border border-white/20 p-1 shadow-xl rounded-[6px] font-mono text-xs"
           >
             <DropdownMenuItem
               onClick={() => onStatusChange("all")}
-              className="cursor-pointer font-medium uppercase hover:bg-accent"
+              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white"
             >
               ALL STATUSES
             </DropdownMenuItem>
@@ -120,8 +120,8 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
               <DropdownMenuItem
                 key={status}
                 onClick={() => onStatusChange(status)}
-                className={`cursor-pointer hover:bg-accent ${
-                  selectedStatus === status ? "font-bold text-blue-600 dark:text-blue-400" : ""
+                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 ${
+                  selectedStatus === status ? "font-bold text-blue-400" : "text-white/90"
                 }`}
               >
                 {status}
@@ -135,8 +135,8 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           <DropdownMenuTrigger
             className={`font-mono text-xs uppercase tracking-wider px-4 py-2.5 rounded-[4px] border flex items-center justify-between gap-3 transition-colors focus:outline-none min-w-[160px] sm:min-w-[180px] ${
               selectedCountry !== "all"
-                ? "border-foreground bg-foreground text-background"
-                : "border-border/80 dark:border-white/20 bg-background dark:bg-card text-foreground hover:border-foreground/50"
+                ? "border-blue-500 bg-blue-600 text-white shadow-sm"
+                : "border-white/20 bg-[#111111] text-white hover:border-white/50 hover:bg-[#181818]"
             }`}
           >
             <span className="truncate">
@@ -146,11 +146,11 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           </DropdownMenuTrigger>
           <DropdownMenuContent
             align="start"
-            className="min-w-[180px] bg-background dark:bg-card border border-border dark:border-white/15 p-1 shadow-lg rounded-[6px] font-mono text-xs"
+            className="min-w-[180px] bg-[#141414] text-white border border-white/20 p-1 shadow-xl rounded-[6px] font-mono text-xs"
           >
             <DropdownMenuItem
               onClick={() => onCountryChange("all")}
-              className="cursor-pointer font-medium uppercase hover:bg-accent"
+              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white"
             >
               ALL COUNTRIES
             </DropdownMenuItem>
@@ -158,8 +158,8 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
               <DropdownMenuItem
                 key={country}
                 onClick={() => onCountryChange(country)}
-                className={`cursor-pointer hover:bg-accent ${
-                  selectedCountry === country ? "font-bold text-blue-600 dark:text-blue-400" : ""
+                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 ${
+                  selectedCountry === country ? "font-bold text-blue-400" : "text-white/90"
                 }`}
               >
                 {country}
@@ -175,18 +175,18 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           <button
             type="button"
             onClick={onClearAll}
-            className="font-mono text-xs uppercase tracking-wider underline underline-offset-4 text-foreground hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-1 cursor-pointer"
+            className="font-mono text-xs uppercase tracking-wider underline underline-offset-4 text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1 cursor-pointer font-medium"
           >
             CLEAR ALL
           </button>
         ) : (
-          <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground/60 border-b border-muted-foreground/30 pb-0.5">
+          <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground/50 border-b border-muted-foreground/20 pb-0.5">
             CLEAR ALL
           </span>
         )}
 
         <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
-          <strong className="text-foreground">{totalCount}</strong> PROJECTS
+          <strong className="text-foreground font-semibold">{totalCount}</strong> PROJECTS
         </span>
       </div>
     </div>
