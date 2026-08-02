@@ -9,6 +9,8 @@ interface ProjectCardProps {
   priority?: boolean;
   preload?: boolean;
   onClick?: (e: React.MouseEvent) => void;
+  className?: string;
+  imageContainerClassName?: string;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -16,10 +18,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   priority = false,
   preload = false,
   onClick,
+  className = "",
+  imageContainerClassName = "",
 }) => {
   const CardContent = () => (
     <div className="rounded-[10px] overflow-hidden bg-white dark:bg-white/[0.03] border border-transparent dark:border-white/10 hover:shadow-sm dark:hover:bg-white/[0.06] transition-all duration-300 h-full flex flex-col">
-      <div className="aspect-video overflow-hidden bg-muted">
+      <div className={`overflow-hidden bg-muted ${imageContainerClassName || "aspect-video"}`}>
         <LazyImage 
           src={project.image} 
           alt={project.title} 
@@ -29,7 +33,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           blurUp={true}
         />
       </div>
-      <div className="p-2 sm:p-3 bg-white dark:bg-transparent transition-colors">
+      <div className="p-2 sm:p-3 bg-white dark:bg-transparent transition-colors mt-auto">
         <div className="flex items-center justify-between">
           <div className="flex-1">
             <h3 className="font-display text-base font-medium text-black dark:text-white mb-1 transition-colors">
@@ -51,14 +55,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 
   if (project.hasDetails !== false) {
     return (
-      <Link to={`/projects/${project.slug}`} className="group cursor-pointer h-full block">
+      <Link to={`/projects/${project.slug}`} className={`group cursor-pointer h-full block ${className}`}>
         <CardContent />
       </Link>
     );
   }
 
   return (
-    <div onClick={onClick} className="group cursor-pointer h-full block">
+    <div onClick={onClick} className={`group cursor-pointer h-full block ${className}`}>
       <CardContent />
     </div>
   );
