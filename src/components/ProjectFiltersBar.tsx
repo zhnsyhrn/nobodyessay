@@ -55,7 +55,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
   availableExpertise,
   availableCompanies,
 }) => {
-  const [isMobileOpen, setIsMobileOpen] = useState(true);
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   const hasActiveFilters =
     selectedExpertise !== "all" ||
