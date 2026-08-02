@@ -504,9 +504,27 @@ const ProjectDetail = () => {
       <section className="w-full bg-[#0a0a0a] text-white pt-20 sm:pt-28 pb-0 relative overflow-hidden">
 
         {/* Animated blob lights */}
-        <div className="blob-1 absolute top-[-10%] left-[-5%] w-[55vw] h-[55vw] max-w-[700px] max-h-[700px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(56,116,186,0.22)_0%,transparent_70%)] blur-[80px] pointer-events-none" />
-        <div className="blob-2 absolute bottom-[-20%] right-[-5%] w-[50vw] h-[50vw] max-w-[650px] max-h-[650px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(20,160,130,0.18)_0%,transparent_70%)] blur-[90px] pointer-events-none" />
-        <div className="blob-3 absolute top-[30%] left-[35%] w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(100,60,180,0.12)_0%,transparent_70%)] blur-[70px] pointer-events-none" />
+        <div className="blob-1" style={{
+          position: 'absolute', top: '-10%', left: '-5%',
+          width: '55vw', height: '55vw', maxWidth: '700px', maxHeight: '700px',
+          borderRadius: '50%', pointerEvents: 'none',
+          background: 'radial-gradient(ellipse at center, rgba(56,116,186,0.35) 0%, transparent 70%)',
+          filter: 'blur(60px)',
+        }} />
+        <div className="blob-2" style={{
+          position: 'absolute', bottom: '-20%', right: '-5%',
+          width: '50vw', height: '50vw', maxWidth: '650px', maxHeight: '650px',
+          borderRadius: '50%', pointerEvents: 'none',
+          background: 'radial-gradient(ellipse at center, rgba(20,160,130,0.30) 0%, transparent 70%)',
+          filter: 'blur(70px)',
+        }} />
+        <div className="blob-3" style={{
+          position: 'absolute', top: '30%', left: '35%',
+          width: '40vw', height: '40vw', maxWidth: '500px', maxHeight: '500px',
+          borderRadius: '50%', pointerEvents: 'none',
+          background: 'radial-gradient(ellipse at center, rgba(120,60,200,0.22) 0%, transparent 70%)',
+          filter: 'blur(55px)',
+        }} />
 
         <div className="max-w-[1200px] mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
 
