@@ -30,8 +30,8 @@ export const ZHABlobBackground: React.FC = () => {
 
     // Helper to calculate appropriate blob size for mobile and desktop
     const getBaseRadius = (factor: number) => {
-      const dim = Math.max(width, height);
-      const minRadius = isMobile ? 220 : 280;
+      const dim = Math.min(width, height);
+      const minRadius = isMobile ? 130 : 175;
       return Math.max(dim * factor, minRadius);
     };
 
@@ -44,31 +44,31 @@ export const ZHABlobBackground: React.FC = () => {
           y: height * 0.35,
           vx: 0.8,
           vy: 0.5,
-          radius: getBaseRadius(0.55),
-          baseRadius: getBaseRadius(0.55),
+          radius: getBaseRadius(0.35),
+          baseRadius: getBaseRadius(0.35),
           color: "rgba(16, 165, 135, 0.55)", // ZHA Vivid Emerald Teal
           pulseSpeed: 0.002,
           phase: 0,
         },
         {
           x: width * 0.5,
-          y: height * 0.75,
+          y: height * 0.7,
           vx: -0.6,
           vy: -0.6,
-          radius: getBaseRadius(0.48),
-          baseRadius: getBaseRadius(0.48),
-          color: "rgba(145, 50, 240, 0.35)", // Electric Violet
+          radius: getBaseRadius(0.30),
+          baseRadius: getBaseRadius(0.30),
+          color: "rgba(145, 50, 240, 0.40)", // Electric Violet
           pulseSpeed: 0.0018,
           phase: Math.PI / 1.5,
         },
         {
-          x: width * 0.8,
+          x: width * 0.78,
           y: height * 0.4,
           vx: -0.5,
           vy: 0.4,
-          radius: getBaseRadius(0.45),
-          baseRadius: getBaseRadius(0.45),
-          color: "rgba(0, 200, 230, 0.40)", // Bright Cyan Highlight
+          radius: getBaseRadius(0.28),
+          baseRadius: getBaseRadius(0.28),
+          color: "rgba(0, 200, 230, 0.45)", // Bright Cyan Highlight
           pulseSpeed: 0.003,
           phase: Math.PI,
         },
