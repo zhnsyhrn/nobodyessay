@@ -40,8 +40,8 @@ export const ZHABlobBackground: React.FC = () => {
     const initBlobs = () => {
       blobs = [
         {
-          x: width * 0.2,
-          y: height * 0.3,
+          x: width * 0.25,
+          y: height * 0.35,
           vx: 0.8,
           vy: 0.5,
           radius: getBaseRadius(0.55),
@@ -51,34 +51,23 @@ export const ZHABlobBackground: React.FC = () => {
           phase: 0,
         },
         {
-          x: width * 0.8,
-          y: height * 0.25,
-          vx: -0.7,
-          vy: 0.6,
-          radius: getBaseRadius(0.5),
- baseRadius: getBaseRadius(0.5),
-          color: "rgba(35, 110, 255, 0.45)", // Vivid Sapphire Blue
-          pulseSpeed: 0.0025,
-          phase: Math.PI / 3,
-        },
-        {
-          x: width * 0.4,
+          x: width * 0.5,
           y: height * 0.75,
-          vx: 0.6,
-          vy: -0.7,
-          radius: getBaseRadius(0.45),
-          baseRadius: getBaseRadius(0.45),
+          vx: -0.6,
+          vy: -0.6,
+          radius: getBaseRadius(0.48),
+          baseRadius: getBaseRadius(0.48),
           color: "rgba(145, 50, 240, 0.35)", // Electric Violet
           pulseSpeed: 0.0018,
           phase: Math.PI / 1.5,
         },
         {
-          x: width * 0.85,
-          y: height * 0.8,
+          x: width * 0.8,
+          y: height * 0.4,
           vx: -0.5,
-          vy: -0.4,
-          radius: getBaseRadius(0.4),
-          baseRadius: getBaseRadius(0.4),
+          vy: 0.4,
+          radius: getBaseRadius(0.45),
+          baseRadius: getBaseRadius(0.45),
           color: "rgba(0, 200, 230, 0.40)", // Bright Cyan Highlight
           pulseSpeed: 0.003,
           phase: Math.PI,
