@@ -136,6 +136,9 @@ const Index = () => {
         <meta name="twitter:description" content="Hire Zahin Syahiran, a UI/UX designer and branding expert specializing in enterprise software, SaaS, and premium tech company profiles." />
       </Helmet>
       
+      {/* Root Sticky Navbar */}
+      <StickyNavbar />
+
       <main className="flex-1 flex flex-col">
       {/* Homepage Hero with ZHA Blob Animation */}
       <div className="bg-[#0a0a0a] text-white relative overflow-hidden -mt-[68px] sm:-mt-[76px] pt-[68px] sm:pt-[76px] transition-colors">
