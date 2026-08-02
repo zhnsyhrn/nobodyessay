@@ -5,7 +5,7 @@ import {
   DialogContent,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Clock, Sparkles } from "lucide-react";
+
 
 interface ComingSoonDialogProps {
   open: boolean;
@@ -29,13 +29,7 @@ const ComingSoonDialog = ({ open, onOpenChange, projectTitle }: ComingSoonDialog
 
           <div className="relative z-10 px-8 pt-10 pb-8 flex flex-col items-center text-center gap-5">
 
-            {/* Icon badge */}
-            <div className="relative flex items-center justify-center w-16 h-16 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 shadow-inner">
-              <Clock className="w-7 h-7 text-blue-500 dark:text-blue-400" strokeWidth={1.5} />
-              <span className="absolute -top-1.5 -right-1.5">
-                <Sparkles className="w-4 h-4 text-violet-500 dark:text-violet-400" />
-              </span>
-            </div>
+
 
             {/* Labels */}
             <div className="space-y-1.5">
