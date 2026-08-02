@@ -522,7 +522,7 @@ const ProjectDetail = () => {
           </div>
 
           {/* Title + Overview — split layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start pb-10 sm:pb-14">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-16 items-start pb-10 sm:pb-14">
             {/* Left: Large Title */}
             <div>
               <h1
