@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, Check } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -38,8 +38,8 @@ export const COUNTRY_OPTIONS = [
 ];
 
 /**
- * ZHA-Style Project Filters Bar with Mobile Collapsible Accordion.
- * Desktop: 4-Column Grid | Mobile: Collapsible Full-Width Vertical Stack
+ * ZHA-Style Project Filters Bar.
+ * Active filter indicators use a clean blue checkmark icon instead of solid blue fills.
  */
 export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
   selectedExpertise,
@@ -87,16 +87,21 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           {/* 1. EXPERTISE */}
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger
-              className={`group font-mono text-[11px] uppercase tracking-widest px-4 py-3 sm:py-2.5 rounded-none border flex items-center justify-between gap-3 transition-all duration-200 focus:outline-none w-full ${
+              className={`group font-mono text-[11px] uppercase tracking-widest px-4 py-3 sm:py-2.5 rounded-none border flex items-center justify-between gap-2.5 transition-all duration-200 focus:outline-none w-full bg-black text-white hover:border-white/50 hover:bg-white/5 ${
                 selectedExpertise !== "all"
-                  ? "border-blue-500 bg-blue-600 text-white shadow-sm"
-                  : "border-white/20 bg-black text-white hover:border-white/50 hover:bg-white/5"
+                  ? "border-blue-500/70"
+                  : "border-white/20"
               }`}
             >
               <span className="truncate">
                 {selectedExpertise !== "all" ? selectedExpertise : "EXPERTISE"}
               </span>
-              <ChevronDown size={12} className="shrink-0 opacity-70 transition-transform duration-250 ease-out group-data-[state=open]:rotate-180" />
+              <div className="flex items-center gap-1.5 shrink-0">
+                {selectedExpertise !== "all" && (
+                  <Check size={13} className="text-blue-400 stroke-[2.5]" />
+                )}
+                <ChevronDown size={12} className="shrink-0 opacity-70 transition-transform duration-250 ease-out group-data-[state=open]:rotate-180" />
+              </div>
             </DropdownMenuTrigger>
             <DropdownMenuContent
               align="start"
@@ -105,19 +110,21 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
             >
               <DropdownMenuItem
                 onClick={() => onExpertiseChange("all")}
-                className="cursor-pointer text-[11px] font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-none transition-colors py-2 px-3"
+                className="cursor-pointer text-[11px] flex items-center justify-between font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-none transition-colors py-2 px-3"
               >
-                ALL EXPERTISE
+                <span>ALL EXPERTISE</span>
+                {selectedExpertise === "all" && <Check size={12} className="text-blue-400 ml-2" />}
               </DropdownMenuItem>
               {availableExpertise.map((exp) => (
                 <DropdownMenuItem
                   key={exp}
                   onClick={() => onExpertiseChange(exp)}
-                  className={`cursor-pointer text-[11px] hover:bg-white/10 focus:bg-white/10 rounded-none transition-colors py-2 px-3 ${
+                  className={`cursor-pointer text-[11px] flex items-center justify-between hover:bg-white/10 focus:bg-white/10 rounded-none transition-colors py-2 px-3 ${
                     selectedExpertise === exp ? "font-bold text-blue-400 bg-white/10" : "text-white/90"
                   }`}
                 >
-                  {exp}
+                  <span>{exp}</span>
+                  {selectedExpertise === exp && <Check size={12} className="text-blue-400 ml-2" />}
                 </DropdownMenuItem>
               ))}
             </DropdownMenuContent>
@@ -126,16 +133,21 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           {/* 2. COMPANY NAME */}
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger
-              className={`group font-mono text-[11px] uppercase tracking-widest px-4 py-3 sm:py-2.5 rounded-none border flex items-center justify-between gap-3 transition-all duration-200 focus:outline-none w-full ${
+              className={`group font-mono text-[11px] uppercase tracking-widest px-4 py-3 sm:py-2.5 rounded-none border flex items-center justify-between gap-2.5 transition-all duration-200 focus:outline-none w-full bg-black text-white hover:border-white/50 hover:bg-white/5 ${
                 selectedCompany !== "all"
-                  ? "border-blue-500 bg-blue-600 text-white shadow-sm"
-                  : "border-white/20 bg-black text-white hover:border-white/50 hover:bg-white/5"
+                  ? "border-blue-500/70"
+                  : "border-white/20"
               }`}
             >
               <span className="truncate">
                 {selectedCompany !== "all" ? selectedCompany : "COMPANY NAME"}
               </span>
-              <ChevronDown size={12} className="shrink-0 opacity-70 transition-transform duration-250 ease-out group-data-[state=open]:rotate-180" />
+              <div className="flex items-center gap-1.5 shrink-0">
+                {selectedCompany !== "all" && (
+                  <Check size={13} className="text-blue-400 stroke-[2.5]" />
+                )}
+                <ChevronDown size={12} className="shrink-0 opacity-70 transition-transform duration-250 ease-out group-data-[state=open]:rotate-180" />
+              </div>
             </DropdownMenuTrigger>
             <DropdownMenuContent
               align="start"
@@ -144,19 +156,21 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
             >
               <DropdownMenuItem
                 onClick={() => onCompanyChange("all")}
-                className="cursor-pointer text-[11px] font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-none transition-colors py-2 px-3"
+                className="cursor-pointer text-[11px] flex items-center justify-between font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-none transition-colors py-2 px-3"
               >
-                ALL COMPANIES
+                <span>ALL COMPANIES</span>
+                {selectedCompany === "all" && <Check size={12} className="text-blue-400 ml-2" />}
               </DropdownMenuItem>
               {availableCompanies.map((comp) => (
                 <DropdownMenuItem
                   key={comp}
                   onClick={() => onCompanyChange(comp)}
-                  className={`cursor-pointer text-[11px] hover:bg-white/10 focus:bg-white/10 rounded-none transition-colors py-2 px-3 ${
+                  className={`cursor-pointer text-[11px] flex items-center justify-between hover:bg-white/10 focus:bg-white/10 rounded-none transition-colors py-2 px-3 ${
                     selectedCompany === comp ? "font-bold text-blue-400 bg-white/10" : "text-white/90"
                   }`}
                 >
-                  {comp}
+                  <span>{comp}</span>
+                  {selectedCompany === comp && <Check size={12} className="text-blue-400 ml-2" />}
                 </DropdownMenuItem>
               ))}
             </DropdownMenuContent>
@@ -165,16 +179,21 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           {/* 3. PROJECT STATUS */}
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger
-              className={`group font-mono text-[11px] uppercase tracking-widest px-4 py-3 sm:py-2.5 rounded-none border flex items-center justify-between gap-3 transition-all duration-200 focus:outline-none w-full ${
+              className={`group font-mono text-[11px] uppercase tracking-widest px-4 py-3 sm:py-2.5 rounded-none border flex items-center justify-between gap-2.5 transition-all duration-200 focus:outline-none w-full bg-black text-white hover:border-white/50 hover:bg-white/5 ${
                 selectedStatus !== "all"
-                  ? "border-blue-500 bg-blue-600 text-white shadow-sm"
-                  : "border-white/20 bg-black text-white hover:border-white/50 hover:bg-white/5"
+                  ? "border-blue-500/70"
+                  : "border-white/20"
               }`}
             >
               <span className="truncate">
                 {selectedStatus !== "all" ? selectedStatus : "PROJECT STATUS"}
               </span>
-              <ChevronDown size={12} className="shrink-0 opacity-70 transition-transform duration-250 ease-out group-data-[state=open]:rotate-180" />
+              <div className="flex items-center gap-1.5 shrink-0">
+                {selectedStatus !== "all" && (
+                  <Check size={13} className="text-blue-400 stroke-[2.5]" />
+                )}
+                <ChevronDown size={12} className="shrink-0 opacity-70 transition-transform duration-250 ease-out group-data-[state=open]:rotate-180" />
+              </div>
             </DropdownMenuTrigger>
             <DropdownMenuContent
               align="start"
@@ -183,19 +202,21 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
             >
               <DropdownMenuItem
                 onClick={() => onStatusChange("all")}
-                className="cursor-pointer text-[11px] font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-none transition-colors py-2 px-3"
+                className="cursor-pointer text-[11px] flex items-center justify-between font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-none transition-colors py-2 px-3"
               >
-                ALL STATUSES
+                <span>ALL STATUSES</span>
+                {selectedStatus === "all" && <Check size={12} className="text-blue-400 ml-2" />}
               </DropdownMenuItem>
               {STATUS_OPTIONS.map((status) => (
                 <DropdownMenuItem
                   key={status}
                   onClick={() => onStatusChange(status)}
-                  className={`cursor-pointer text-[11px] hover:bg-white/10 focus:bg-white/10 rounded-none transition-colors py-2 px-3 ${
+                  className={`cursor-pointer text-[11px] flex items-center justify-between hover:bg-white/10 focus:bg-white/10 rounded-none transition-colors py-2 px-3 ${
                     selectedStatus === status ? "font-bold text-blue-400 bg-white/10" : "text-white/90"
                   }`}
                 >
-                  {status}
+                  <span>{status}</span>
+                  {selectedStatus === status && <Check size={12} className="text-blue-400 ml-2" />}
                 </DropdownMenuItem>
               ))}
             </DropdownMenuContent>
@@ -204,16 +225,21 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
           {/* 4. COUNTRY */}
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger
-              className={`group font-mono text-[11px] uppercase tracking-widest px-4 py-3 sm:py-2.5 rounded-none border flex items-center justify-between gap-3 transition-all duration-200 focus:outline-none w-full ${
+              className={`group font-mono text-[11px] uppercase tracking-widest px-4 py-3 sm:py-2.5 rounded-none border flex items-center justify-between gap-2.5 transition-all duration-200 focus:outline-none w-full bg-black text-white hover:border-white/50 hover:bg-white/5 ${
                 selectedCountry !== "all"
-                  ? "border-blue-500 bg-blue-600 text-white shadow-sm"
-                  : "border-white/20 bg-black text-white hover:border-white/50 hover:bg-white/5"
+                  ? "border-blue-500/70"
+                  : "border-white/20"
               }`}
             >
               <span className="truncate">
                 {selectedCountry !== "all" ? selectedCountry : "COUNTRY"}
               </span>
-              <ChevronDown size={12} className="shrink-0 opacity-70 transition-transform duration-250 ease-out group-data-[state=open]:rotate-180" />
+              <div className="flex items-center gap-1.5 shrink-0">
+                {selectedCountry !== "all" && (
+                  <Check size={13} className="text-blue-400 stroke-[2.5]" />
+                )}
+                <ChevronDown size={12} className="shrink-0 opacity-70 transition-transform duration-250 ease-out group-data-[state=open]:rotate-180" />
+              </div>
             </DropdownMenuTrigger>
             <DropdownMenuContent
               align="start"
@@ -222,19 +248,21 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
             >
               <DropdownMenuItem
                 onClick={() => onCountryChange("all")}
-                className="cursor-pointer text-[11px] font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-none transition-colors py-2 px-3"
+                className="cursor-pointer text-[11px] flex items-center justify-between font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-none transition-colors py-2 px-3"
               >
-                ALL COUNTRIES
+                <span>ALL COUNTRIES</span>
+                {selectedCountry === "all" && <Check size={12} className="text-blue-400 ml-2" />}
               </DropdownMenuItem>
               {COUNTRY_OPTIONS.map((country) => (
                 <DropdownMenuItem
                   key={country}
                   onClick={() => onCountryChange(country)}
-                  className={`cursor-pointer text-[11px] hover:bg-white/10 focus:bg-white/10 rounded-none transition-colors py-2 px-3 ${
+                  className={`cursor-pointer text-[11px] flex items-center justify-between hover:bg-white/10 focus:bg-white/10 rounded-none transition-colors py-2 px-3 ${
                     selectedCountry === country ? "font-bold text-blue-400 bg-white/10" : "text-white/90"
                   }`}
                 >
-                  {country}
+                  <span>{country}</span>
+                  {selectedCountry === country && <Check size={12} className="text-blue-400 ml-2" />}
                 </DropdownMenuItem>
               ))}
             </DropdownMenuContent>
