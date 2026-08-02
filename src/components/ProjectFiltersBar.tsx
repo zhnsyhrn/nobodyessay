@@ -79,24 +79,25 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
         {/* 1. EXPERTISE */}
         <DropdownMenu modal={false}>
           <DropdownMenuTrigger
-            className={`group font-mono text-[11px] sm:text-xs uppercase tracking-wider px-3.5 sm:px-4 py-2.5 rounded-[3px] border flex items-center justify-between gap-2 transition-all duration-200 focus:outline-none w-full ${
+            className={`group font-mono text-[11px] uppercase tracking-widest px-4 py-2.5 rounded-none border flex items-center justify-between gap-3 transition-all duration-200 focus:outline-none w-full ${
               selectedExpertise !== "all"
                 ? "border-blue-500 bg-blue-600 text-white shadow-sm"
-                : "border-white/20 bg-[#111111] text-white hover:border-white/50 hover:bg-[#181818]"
+                : "border-white/20 bg-black text-white hover:border-white/50 hover:bg-white/5"
             }`}
           >
             <span className="truncate">
               {selectedExpertise !== "all" ? selectedExpertise : "EXPERTISE"}
             </span>
-            <ChevronDown size={13} className="shrink-0 opacity-70 transition-transform duration-300 group-data-[state=open]:rotate-180" />
+            <ChevronDown size={12} className="shrink-0 opacity-70 transition-transform duration-250 ease-out group-data-[state=open]:rotate-180" />
           </DropdownMenuTrigger>
           <DropdownMenuContent
             align="start"
-            className="min-w-[200px] bg-[#141414] text-white border border-white/20 p-1.5 shadow-2xl rounded-[6px] font-mono text-xs duration-300 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-3"
+            sideOffset={4}
+            className="min-w-[200px] bg-[#0a0a0a] text-white border border-white/20 p-1 shadow-2xl rounded-none font-mono text-[11px] uppercase tracking-wider duration-250 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:slide-out-to-top-1"
           >
             <DropdownMenuItem
               onClick={() => onExpertiseChange("all")}
-              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-[3px] transition-colors py-2 px-3"
+              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-none transition-colors py-2 px-3"
             >
               ALL EXPERTISE
             </DropdownMenuItem>
@@ -104,8 +105,8 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
               <DropdownMenuItem
                 key={exp}
                 onClick={() => onExpertiseChange(exp)}
-                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 rounded-[3px] transition-colors py-2 px-3 ${
-                  selectedExpertise === exp ? "font-bold text-blue-400" : "text-white/90"
+                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 rounded-none transition-colors py-2 px-3 ${
+                  selectedExpertise === exp ? "font-bold text-blue-400 bg-white/10" : "text-white/90"
                 }`}
               >
                 {exp}
@@ -117,24 +118,25 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
         {/* 2. TYPOLOGIES */}
         <DropdownMenu modal={false}>
           <DropdownMenuTrigger
-            className={`group font-mono text-[11px] sm:text-xs uppercase tracking-wider px-3.5 sm:px-4 py-2.5 rounded-[3px] border flex items-center justify-between gap-2 transition-all duration-200 focus:outline-none w-full ${
+            className={`group font-mono text-[11px] uppercase tracking-widest px-4 py-2.5 rounded-none border flex items-center justify-between gap-3 transition-all duration-200 focus:outline-none w-full ${
               selectedTypology !== "all"
                 ? "border-blue-500 bg-blue-600 text-white shadow-sm"
-                : "border-white/20 bg-[#111111] text-white hover:border-white/50 hover:bg-[#181818]"
+                : "border-white/20 bg-black text-white hover:border-white/50 hover:bg-white/5"
             }`}
           >
             <span className="truncate">
               {selectedTypology !== "all" ? selectedTypology : "TYPOLOGIES"}
             </span>
-            <ChevronDown size={13} className="shrink-0 opacity-70 transition-transform duration-300 group-data-[state=open]:rotate-180" />
+            <ChevronDown size={12} className="shrink-0 opacity-70 transition-transform duration-250 ease-out group-data-[state=open]:rotate-180" />
           </DropdownMenuTrigger>
           <DropdownMenuContent
             align="start"
-            className="min-w-[200px] bg-[#141414] text-white border border-white/20 p-1.5 shadow-2xl rounded-[6px] font-mono text-xs duration-300 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-3"
+            sideOffset={4}
+            className="min-w-[200px] bg-[#0a0a0a] text-white border border-white/20 p-1 shadow-2xl rounded-none font-mono text-[11px] uppercase tracking-wider duration-250 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:slide-out-to-top-1"
           >
             <DropdownMenuItem
               onClick={() => onTypologyChange("all")}
-              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-[3px] transition-colors py-2 px-3"
+              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-none transition-colors py-2 px-3"
             >
               ALL TYPOLOGIES
             </DropdownMenuItem>
@@ -142,8 +144,8 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
               <DropdownMenuItem
                 key={typ}
                 onClick={() => onTypologyChange(typ)}
-                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 rounded-[3px] transition-colors py-2 px-3 ${
-                  selectedTypology === typ ? "font-bold text-blue-400" : "text-white/90"
+                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 rounded-none transition-colors py-2 px-3 ${
+                  selectedTypology === typ ? "font-bold text-blue-400 bg-white/10" : "text-white/90"
                 }`}
               >
                 {typ}
@@ -155,24 +157,25 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
         {/* 3. CONSTRUCTION STATUS */}
         <DropdownMenu modal={false}>
           <DropdownMenuTrigger
-            className={`group font-mono text-[11px] sm:text-xs uppercase tracking-wider px-3.5 sm:px-4 py-2.5 rounded-[3px] border flex items-center justify-between gap-2 transition-all duration-200 focus:outline-none w-full ${
+            className={`group font-mono text-[11px] uppercase tracking-widest px-4 py-2.5 rounded-none border flex items-center justify-between gap-3 transition-all duration-200 focus:outline-none w-full ${
               selectedStatus !== "all"
                 ? "border-blue-500 bg-blue-600 text-white shadow-sm"
-                : "border-white/20 bg-[#111111] text-white hover:border-white/50 hover:bg-[#181818]"
+                : "border-white/20 bg-black text-white hover:border-white/50 hover:bg-white/5"
             }`}
           >
             <span className="truncate">
               {selectedStatus !== "all" ? selectedStatus : "CONSTRUCTION STATUS"}
             </span>
-            <ChevronDown size={13} className="shrink-0 opacity-70 transition-transform duration-300 group-data-[state=open]:rotate-180" />
+            <ChevronDown size={12} className="shrink-0 opacity-70 transition-transform duration-250 ease-out group-data-[state=open]:rotate-180" />
           </DropdownMenuTrigger>
           <DropdownMenuContent
             align="start"
-            className="min-w-[210px] bg-[#141414] text-white border border-white/20 p-1.5 shadow-2xl rounded-[6px] font-mono text-xs duration-300 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-3"
+            sideOffset={4}
+            className="min-w-[210px] bg-[#0a0a0a] text-white border border-white/20 p-1 shadow-2xl rounded-none font-mono text-[11px] uppercase tracking-wider duration-250 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:slide-out-to-top-1"
           >
             <DropdownMenuItem
               onClick={() => onStatusChange("all")}
-              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-[3px] transition-colors py-2 px-3"
+              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-none transition-colors py-2 px-3"
             >
               ALL STATUSES
             </DropdownMenuItem>
@@ -180,8 +183,8 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
               <DropdownMenuItem
                 key={status}
                 onClick={() => onStatusChange(status)}
-                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 rounded-[3px] transition-colors py-2 px-3 ${
-                  selectedStatus === status ? "font-bold text-blue-400" : "text-white/90"
+                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 rounded-none transition-colors py-2 px-3 ${
+                  selectedStatus === status ? "font-bold text-blue-400 bg-white/10" : "text-white/90"
                 }`}
               >
                 {status}
@@ -193,24 +196,25 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
         {/* 4. COUNTRY */}
         <DropdownMenu modal={false}>
           <DropdownMenuTrigger
-            className={`group font-mono text-[11px] sm:text-xs uppercase tracking-wider px-3.5 sm:px-4 py-2.5 rounded-[3px] border flex items-center justify-between gap-2 transition-all duration-200 focus:outline-none w-full ${
+            className={`group font-mono text-[11px] uppercase tracking-widest px-4 py-2.5 rounded-none border flex items-center justify-between gap-3 transition-all duration-200 focus:outline-none w-full ${
               selectedCountry !== "all"
                 ? "border-blue-500 bg-blue-600 text-white shadow-sm"
-                : "border-white/20 bg-[#111111] text-white hover:border-white/50 hover:bg-[#181818]"
+                : "border-white/20 bg-black text-white hover:border-white/50 hover:bg-white/5"
             }`}
           >
             <span className="truncate">
               {selectedCountry !== "all" ? selectedCountry : "COUNTRY"}
             </span>
-            <ChevronDown size={13} className="shrink-0 opacity-70 transition-transform duration-300 group-data-[state=open]:rotate-180" />
+            <ChevronDown size={12} className="shrink-0 opacity-70 transition-transform duration-250 ease-out group-data-[state=open]:rotate-180" />
           </DropdownMenuTrigger>
           <DropdownMenuContent
             align="start"
-            className="min-w-[180px] bg-[#141414] text-white border border-white/20 p-1.5 shadow-2xl rounded-[6px] font-mono text-xs duration-300 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-3"
+            sideOffset={4}
+            className="min-w-[180px] bg-[#0a0a0a] text-white border border-white/20 p-1 shadow-2xl rounded-none font-mono text-[11px] uppercase tracking-wider duration-250 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:slide-out-to-top-1"
           >
             <DropdownMenuItem
               onClick={() => onCountryChange("all")}
-              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-[3px] transition-colors py-2 px-3"
+              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-none transition-colors py-2 px-3"
             >
               ALL COUNTRIES
             </DropdownMenuItem>
@@ -218,8 +222,8 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
               <DropdownMenuItem
                 key={country}
                 onClick={() => onCountryChange(country)}
-                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 rounded-[3px] transition-colors py-2 px-3 ${
-                  selectedCountry === country ? "font-bold text-blue-400" : "text-white/90"
+                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 rounded-none transition-colors py-2 px-3 ${
+                  selectedCountry === country ? "font-bold text-blue-400 bg-white/10" : "text-white/90"
                 }`}
               >
                 {country}
@@ -231,24 +235,25 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
         {/* 5. REGION */}
         <DropdownMenu modal={false}>
           <DropdownMenuTrigger
-            className={`group font-mono text-[11px] sm:text-xs uppercase tracking-wider px-3.5 sm:px-4 py-2.5 rounded-[3px] border flex items-center justify-between gap-2 transition-all duration-200 focus:outline-none w-full ${
+            className={`group font-mono text-[11px] uppercase tracking-widest px-4 py-2.5 rounded-none border flex items-center justify-between gap-3 transition-all duration-200 focus:outline-none w-full ${
               selectedRegion !== "all"
                 ? "border-blue-500 bg-blue-600 text-white shadow-sm"
-                : "border-white/20 bg-[#111111] text-white hover:border-white/50 hover:bg-[#181818]"
+                : "border-white/20 bg-black text-white hover:border-white/50 hover:bg-white/5"
             }`}
           >
             <span className="truncate">
               {selectedRegion !== "all" ? selectedRegion : "REGION"}
             </span>
-            <ChevronDown size={13} className="shrink-0 opacity-70 transition-transform duration-300 group-data-[state=open]:rotate-180" />
+            <ChevronDown size={12} className="shrink-0 opacity-70 transition-transform duration-250 ease-out group-data-[state=open]:rotate-180" />
           </DropdownMenuTrigger>
           <DropdownMenuContent
             align="start"
-            className="min-w-[180px] bg-[#141414] text-white border border-white/20 p-1.5 shadow-2xl rounded-[6px] font-mono text-xs duration-300 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-3"
+            sideOffset={4}
+            className="min-w-[180px] bg-[#0a0a0a] text-white border border-white/20 p-1 shadow-2xl rounded-none font-mono text-[11px] uppercase tracking-wider duration-250 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:slide-out-to-top-1"
           >
             <DropdownMenuItem
               onClick={() => onRegionChange("all")}
-              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-[3px] transition-colors py-2 px-3"
+              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-none transition-colors py-2 px-3"
             >
               ALL REGIONS
             </DropdownMenuItem>
@@ -256,8 +261,8 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
               <DropdownMenuItem
                 key={reg}
                 onClick={() => onRegionChange(reg)}
-                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 rounded-[3px] transition-colors py-2 px-3 ${
-                  selectedRegion === reg ? "font-bold text-blue-400" : "text-white/90"
+                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 rounded-none transition-colors py-2 px-3 ${
+                  selectedRegion === reg ? "font-bold text-blue-400 bg-white/10" : "text-white/90"
                 }`}
               >
                 {reg}
