@@ -57,7 +57,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
         {/* 1. PROJECT TYPE */}
         <DropdownMenu modal={false}>
           <DropdownMenuTrigger
-            className={`font-mono text-xs uppercase tracking-wider px-4 py-2.5 rounded-[4px] border flex items-center justify-between gap-3 transition-colors focus:outline-none min-w-[180px] sm:min-w-[200px] ${
+            className={`group font-mono text-xs uppercase tracking-wider px-4 py-2.5 rounded-[4px] border flex items-center justify-between gap-3 transition-all duration-200 focus:outline-none min-w-[180px] sm:min-w-[200px] ${
               selectedType !== "all"
                 ? "border-blue-500 bg-blue-600 text-white shadow-sm"
                 : "border-white/20 bg-[#111111] text-white hover:border-white/50 hover:bg-[#181818]"
@@ -66,15 +66,15 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
             <span className="truncate">
               {selectedType !== "all" ? selectedType : "PROJECT TYPE"}
             </span>
-            <ChevronDown size={14} className="shrink-0 opacity-70" />
+            <ChevronDown size={14} className="shrink-0 opacity-70 transition-transform duration-300 group-data-[state=open]:rotate-180" />
           </DropdownMenuTrigger>
           <DropdownMenuContent
             align="start"
-            className="min-w-[200px] bg-[#141414] text-white border border-white/20 p-1 shadow-xl rounded-[6px] font-mono text-xs"
+            className="min-w-[200px] bg-[#141414] text-white border border-white/20 p-1.5 shadow-2xl rounded-[8px] font-mono text-xs duration-300 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-3"
           >
             <DropdownMenuItem
               onClick={() => onTypeChange("all")}
-              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white"
+              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-[4px] transition-colors py-2 px-3"
             >
               ALL TYPES
             </DropdownMenuItem>
@@ -82,7 +82,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
               <DropdownMenuItem
                 key={type}
                 onClick={() => onTypeChange(type)}
-                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 ${
+                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 rounded-[4px] transition-colors py-2 px-3 ${
                   selectedType === type ? "font-bold text-blue-400" : "text-white/90"
                 }`}
               >
@@ -95,7 +95,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
         {/* 2. PROJECT STATUS */}
         <DropdownMenu modal={false}>
           <DropdownMenuTrigger
-            className={`font-mono text-xs uppercase tracking-wider px-4 py-2.5 rounded-[4px] border flex items-center justify-between gap-3 transition-colors focus:outline-none min-w-[190px] sm:min-w-[210px] ${
+            className={`group font-mono text-xs uppercase tracking-wider px-4 py-2.5 rounded-[4px] border flex items-center justify-between gap-3 transition-all duration-200 focus:outline-none min-w-[190px] sm:min-w-[210px] ${
               selectedStatus !== "all"
                 ? "border-blue-500 bg-blue-600 text-white shadow-sm"
                 : "border-white/20 bg-[#111111] text-white hover:border-white/50 hover:bg-[#181818]"
@@ -104,15 +104,15 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
             <span className="truncate">
               {selectedStatus !== "all" ? selectedStatus : "PROJECT STATUS"}
             </span>
-            <ChevronDown size={14} className="shrink-0 opacity-70" />
+            <ChevronDown size={14} className="shrink-0 opacity-70 transition-transform duration-300 group-data-[state=open]:rotate-180" />
           </DropdownMenuTrigger>
           <DropdownMenuContent
             align="start"
-            className="min-w-[210px] bg-[#141414] text-white border border-white/20 p-1 shadow-xl rounded-[6px] font-mono text-xs"
+            className="min-w-[210px] bg-[#141414] text-white border border-white/20 p-1.5 shadow-2xl rounded-[8px] font-mono text-xs duration-300 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-3"
           >
             <DropdownMenuItem
               onClick={() => onStatusChange("all")}
-              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white"
+              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-[4px] transition-colors py-2 px-3"
             >
               ALL STATUSES
             </DropdownMenuItem>
@@ -120,7 +120,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
               <DropdownMenuItem
                 key={status}
                 onClick={() => onStatusChange(status)}
-                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 ${
+                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 rounded-[4px] transition-colors py-2 px-3 ${
                   selectedStatus === status ? "font-bold text-blue-400" : "text-white/90"
                 }`}
               >
@@ -133,7 +133,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
         {/* 3. COUNTRY */}
         <DropdownMenu modal={false}>
           <DropdownMenuTrigger
-            className={`font-mono text-xs uppercase tracking-wider px-4 py-2.5 rounded-[4px] border flex items-center justify-between gap-3 transition-colors focus:outline-none min-w-[160px] sm:min-w-[180px] ${
+            className={`group font-mono text-xs uppercase tracking-wider px-4 py-2.5 rounded-[4px] border flex items-center justify-between gap-3 transition-all duration-200 focus:outline-none min-w-[160px] sm:min-w-[180px] ${
               selectedCountry !== "all"
                 ? "border-blue-500 bg-blue-600 text-white shadow-sm"
                 : "border-white/20 bg-[#111111] text-white hover:border-white/50 hover:bg-[#181818]"
@@ -142,15 +142,15 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
             <span className="truncate">
               {selectedCountry !== "all" ? selectedCountry : "COUNTRY"}
             </span>
-            <ChevronDown size={14} className="shrink-0 opacity-70" />
+            <ChevronDown size={14} className="shrink-0 opacity-70 transition-transform duration-300 group-data-[state=open]:rotate-180" />
           </DropdownMenuTrigger>
           <DropdownMenuContent
             align="start"
-            className="min-w-[180px] bg-[#141414] text-white border border-white/20 p-1 shadow-xl rounded-[6px] font-mono text-xs"
+            className="min-w-[180px] bg-[#141414] text-white border border-white/20 p-1.5 shadow-2xl rounded-[8px] font-mono text-xs duration-300 ease-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-3"
           >
             <DropdownMenuItem
               onClick={() => onCountryChange("all")}
-              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white"
+              className="cursor-pointer font-medium uppercase hover:bg-white/10 text-white/80 focus:bg-white/10 focus:text-white rounded-[4px] transition-colors py-2 px-3"
             >
               ALL COUNTRIES
             </DropdownMenuItem>
@@ -158,7 +158,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
               <DropdownMenuItem
                 key={country}
                 onClick={() => onCountryChange(country)}
-                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 ${
+                className={`cursor-pointer hover:bg-white/10 focus:bg-white/10 rounded-[4px] transition-colors py-2 px-3 ${
                   selectedCountry === country ? "font-bold text-blue-400" : "text-white/90"
                 }`}
               >
