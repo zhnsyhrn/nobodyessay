@@ -195,7 +195,7 @@ export const ZHABlobBackground: React.FC = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 w-full h-full pointer-events-none z-0"
+      className="hidden dark:block absolute inset-0 w-full h-full pointer-events-none z-0"
       style={{ filter: "blur(32px)" }}
     />
   );

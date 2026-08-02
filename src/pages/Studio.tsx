@@ -80,13 +80,13 @@ const Studio = () => {
 
       <main className="flex-1 flex flex-col">
         {/* Projects Page Hero Header with Animated Home Blob Background */}
-        <div className="relative overflow-hidden bg-[#0a0a0a] text-white -mt-[68px] sm:-mt-[76px] pt-[115px] sm:pt-[135px] pb-12 sm:pb-16 px-4 sm:px-6 lg:px-12 xl:px-16 border-b border-white/10 mb-8 sm:mb-10">
+        <div className="relative overflow-hidden bg-background dark:bg-[#0a0a0a] text-foreground dark:text-white -mt-[68px] sm:-mt-[76px] pt-[115px] sm:pt-[135px] pb-12 sm:pb-16 px-4 sm:px-6 lg:px-12 xl:px-16 border-b border-border dark:border-white/10 mb-8 sm:mb-10 transition-colors">
           <HomeBlobBackground />
           <div className="relative z-10 w-full max-w-full pt-2 sm:pt-0">
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-white mb-2.5 sm:mb-3">
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-foreground dark:text-white mb-2.5 sm:mb-3">
               Projects
             </h1>
-            <p className="font-jakarta text-sm sm:text-base text-white/70 max-w-2xl leading-relaxed">
+            <p className="font-jakarta text-sm sm:text-base text-muted-foreground dark:text-white/70 max-w-2xl leading-relaxed">
               Explore my latest UI/UX design, app design, and branding projects.
             </p>
           </div>

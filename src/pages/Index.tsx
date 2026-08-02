@@ -141,7 +141,7 @@ const Index = () => {
 
       <main className="flex-1 flex flex-col">
       {/* Homepage Hero with Independent Home Blob Animation */}
-      <div className="bg-[#0a0a0a] text-[#0a0a0a] relative overflow-hidden -mt-[68px] sm:-mt-[76px] pt-[68px] sm:pt-[76px] transition-colors">
+      <div className="bg-background dark:bg-[#0a0a0a] text-foreground dark:text-white relative overflow-hidden -mt-[68px] sm:-mt-[76px] pt-[68px] sm:pt-[76px] transition-colors">
         <HomeBlobBackground />
         <h1 className="sr-only">Zahin Syahiran - Expert UI/UX Designer & Brand Strategist</h1>
 
@@ -150,18 +150,18 @@ const Index = () => {
           <div className="pt-8 sm:pt-12 px-4 sm:px-6 flex justify-center fade-in relative z-10">
             <Link
               to={`/journals/${latestAnnouncement.slug}`}
-              className="group relative inline-flex items-center justify-center gap-2.5 rounded-full border border-white/15 bg-white/10 backdrop-blur-md px-4 py-2 transition-all hover:bg-white/20 hover:shadow-sm max-w-full"
+              className="group relative inline-flex items-center justify-center gap-2.5 rounded-full border border-black/15 dark:border-white/15 bg-black/5 dark:bg-white/10 backdrop-blur-md px-4 py-2 transition-all hover:bg-black/10 dark:hover:bg-white/20 hover:shadow-sm max-w-full"
             >
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-400"></span>
               </span>
-              <span className="font-jakarta text-[12px] sm:text-[13px] text-white/90 font-medium truncate">
+              <span className="font-jakarta text-[12px] sm:text-[13px] text-foreground/90 dark:text-white/90 font-medium truncate">
                 {latestAnnouncement.title}
               </span>
               <ArrowRight
                 size={14}
-                className="shrink-0 text-white/50 transition-transform group-hover:translate-x-1 group-hover:text-white"
+                className="shrink-0 text-muted-foreground/60 dark:text-white/50 transition-transform group-hover:translate-x-1 group-hover:text-foreground dark:group-hover:text-white"
               />
             </Link>
           </div>
@@ -170,10 +170,10 @@ const Index = () => {
         {/* Hero Section */}
         <section ref={heroRef} className={`relative z-10 ${latestAnnouncement ? 'pt-8 sm:pt-12' : 'pt-14 sm:pt-20 lg:pt-24'} pb-10 sm:pb-16 lg:pb-24 px-4 sm:px-6 fade-in`}>
           <div className="max-w-6xl mx-auto text-left lg:text-center relative z-10">
-            <h2 className="font-display text-[36px] lg:text-[54px] font-medium mb-2 sm:mb-3 tracking-tight leading-[42px] lg:leading-[62px] min-h-[90px] sm:min-h-[80px] lg:min-h-[70px] text-white">
+            <h2 className="font-display text-[36px] lg:text-[54px] font-medium mb-2 sm:mb-3 tracking-tight leading-[42px] lg:leading-[62px] min-h-[90px] sm:min-h-[80px] lg:min-h-[70px] text-foreground dark:text-white">
               <TypewriterEffect />
             </h2>
-            <p className="font-jakarta text-[14px] sm:text-[16px] max-w-2xl lg:mx-auto leading-[25px] sm:leading-[29px] px-1 mb-6 sm:mb-8 sm:px-0 text-white/70">
+            <p className="font-jakarta text-[14px] sm:text-[16px] max-w-2xl lg:mx-auto leading-[25px] sm:leading-[29px] px-1 mb-6 sm:mb-8 sm:px-0 text-muted-foreground dark:text-white/70">
               {t('hero.subtitle')}
             </p>
             
