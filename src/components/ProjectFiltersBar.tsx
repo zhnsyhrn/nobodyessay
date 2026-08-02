@@ -153,7 +153,7 @@ export const ProjectFiltersBar: React.FC<ProjectFiltersBarProps> = ({
             }`}
           >
             <span className="truncate">
-              {selectedStatus !== "all" ? selectedStatus : "CONSTRUCTION STATUS"}
+              {selectedStatus !== "all" ? selectedStatus : "PROJECT STATUS"}
             </span>
             <ChevronDown size={12} className="shrink-0 opacity-70 transition-transform duration-250 ease-out group-data-[state=open]:rotate-180" />
           </DropdownMenuTrigger>
