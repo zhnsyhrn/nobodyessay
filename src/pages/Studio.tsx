@@ -14,7 +14,7 @@ import { projects } from "@/data/projects";
 import { motion, AnimatePresence } from "framer-motion";
 import { ProjectFiltersBar } from "@/components/ProjectFiltersBar";
 import { ProjectCard } from "@/components/ProjectCard";
-import { ZHABlobBackground } from "@/components/ZHABlobBackground";
+import { HomeBlobBackground } from "@/components/HomeBlobBackground";
 import { Helmet } from "react-helmet-async";
 
 const Studio = () => {
@@ -79,9 +79,9 @@ const Studio = () => {
       <StickyNavbar />
 
       <main className="flex-1 flex flex-col">
-        {/* Projects Page Hero Header with Animated ZHA Blob Background */}
+        {/* Projects Page Hero Header with Animated Home Blob Background */}
         <div className="relative overflow-hidden bg-[#0a0a0a] text-white -mt-[68px] sm:-mt-[76px] pt-[115px] sm:pt-[135px] pb-12 sm:pb-16 px-4 sm:px-6 lg:px-12 xl:px-16 border-b border-white/10 mb-8 sm:mb-10">
-          <ZHABlobBackground />
+          <HomeBlobBackground />
           <div className="relative z-10 w-full max-w-full pt-2 sm:pt-0">
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-white mb-2.5 sm:mb-3">
               Projects
