@@ -18,7 +18,7 @@ import { useCarouselPreloader } from "@/hooks/useImagePreloader";
 import { projects } from "@/data/projects";
 import { useChat } from "@/contexts/ChatContext";
 import { useTranslation } from "react-i18next";
-import ZHABlobBackground from "@/components/ZHABlobBackground";
+import HomeBlobBackground from "@/components/HomeBlobBackground";
 
 // Portfolio design images - Your latest design portfolio work
 const portfolioImages = [
@@ -140,9 +140,9 @@ const Index = () => {
       <StickyNavbar />
 
       <main className="flex-1 flex flex-col">
-      {/* Homepage Hero with ZHA Blob Animation */}
-      <div className="bg-[#0a0a0a] text-white relative overflow-hidden -mt-[68px] sm:-mt-[76px] pt-[68px] sm:pt-[76px] transition-colors">
-        <ZHABlobBackground />
+      {/* Homepage Hero with Independent Home Blob Animation */}
+      <div className="bg-[#0a0a0a] text-[#0a0a0a] relative overflow-hidden -mt-[68px] sm:-mt-[76px] pt-[68px] sm:pt-[76px] transition-colors">
+        <HomeBlobBackground />
         <h1 className="sr-only">Zahin Syahiran - Expert UI/UX Designer & Brand Strategist</h1>
 
         {/* Announcement banner */}
