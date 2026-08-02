@@ -503,8 +503,8 @@ const ProjectDetail = () => {
       <StickyNavbar />
 
       <main className="flex-1 flex flex-col">
-      {/* ZHA-Style Project Hero — Full Bleed Dark extending up behind sticky navbar */}
-      <section className="w-full bg-[#0a0a0a] text-white -mt-[68px] sm:-mt-[76px] pt-[84px] sm:pt-[100px] pb-0 relative overflow-hidden">
+        {/* ZHA-Style Project Hero — Full Bleed Header extending up behind sticky navbar */}
+        <section className="w-full bg-background dark:bg-[#0a0a0a] text-foreground dark:text-white -mt-[68px] sm:-mt-[76px] pt-[84px] sm:pt-[100px] pb-0 relative overflow-hidden transition-colors">
         {/* Active 60fps Canvas Blob Animation with mouse interaction */}
         <ZHABlobBackground />
 
@@ -514,7 +514,7 @@ const ProjectDetail = () => {
           <div className="mb-5 sm:mb-14">
             <Link
               to="/studio"
-              className="group inline-flex items-center gap-2 font-jakarta text-sm text-white/50 hover:text-white transition-colors"
+              className="group inline-flex items-center gap-2 font-jakarta text-sm text-muted-foreground dark:text-white/50 hover:text-foreground dark:hover:text-white transition-colors"
             >
               <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-0.5" />
               Back to projects
@@ -526,7 +526,7 @@ const ProjectDetail = () => {
             {/* Left: Large Title */}
             <div>
               <h1
-                className="font-display font-medium tracking-tight text-[40px] sm:text-[56px] lg:text-[68px] leading-[1.0] text-white"
+                className="font-display font-medium tracking-tight text-[40px] sm:text-[56px] lg:text-[68px] leading-[1.0] text-foreground dark:text-white"
               >
                 {project.title}
               </h1>
@@ -535,7 +535,7 @@ const ProjectDetail = () => {
             {/* Right: Overview + link */}
             <div className="flex flex-col justify-start pt-1 lg:pt-3">
               <p
-                className="font-jakarta text-[14px] sm:text-[18px] text-white/75 leading-relaxed"
+                className="font-jakarta text-[14px] sm:text-[18px] text-muted-foreground dark:text-white/75 leading-relaxed"
               >
                 {project.overview}
               </p>
@@ -543,7 +543,7 @@ const ProjectDetail = () => {
                 href={project.websiteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 font-jakarta text-[13px] font-medium text-white border-b border-white/30 hover:border-white pb-0.5 transition-colors mt-6 w-fit"
+                className="group inline-flex items-center gap-2 font-jakarta text-[13px] font-medium text-foreground dark:text-white border-b border-foreground/30 dark:border-white/30 hover:border-foreground dark:hover:border-white pb-0.5 transition-colors mt-6 w-fit"
               >
                 Visit website
                 <ExternalLink className="h-3 w-3 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -552,27 +552,26 @@ const ProjectDetail = () => {
           </div>
 
           {/* Metadata row */}
-          <div className="border-t border-white/10 py-5 flex flex-wrap gap-x-12 gap-y-3">
+          <div className="border-t border-border dark:border-white/10 py-5 flex flex-wrap gap-x-12 gap-y-3">
             {(project.projectInfo as Record<string, string>)?.["Type"] && (
               <div>
-                <span className="font-jakarta text-[11px] uppercase tracking-widest text-white/35 block mb-1">Type</span>
-                <span className="font-jakarta text-[13px] text-white/70">{(project.projectInfo as Record<string, string>)["Type"]}</span>
+                <span className="font-jakarta text-[11px] uppercase tracking-widest text-muted-foreground/60 dark:text-white/35 block mb-1">Type</span>
+                <span className="font-jakarta text-[13px] text-foreground/90 dark:text-white/70">{(project.projectInfo as Record<string, string>)["Type"]}</span>
               </div>
             )}
             {(project.projectInfo as Record<string, string>)?.["Role / Project Ownership"] && (
               <div>
-                <span className="font-jakarta text-[11px] uppercase tracking-widest text-white/35 block mb-1">Role</span>
-                <span className="font-jakarta text-[13px] text-white/70">{(project.projectInfo as Record<string, string>)["Role / Project Ownership"]}</span>
+                <span className="font-jakarta text-[11px] uppercase tracking-widest text-muted-foreground/60 dark:text-white/35 block mb-1">Role</span>
+                <span className="font-jakarta text-[13px] text-foreground/90 dark:text-white/70">{(project.projectInfo as Record<string, string>)["Role / Project Ownership"]}</span>
               </div>
             )}
             {(project.projectInfo as Record<string, string>)?.["Project / Company"] && (
               <div>
-                <span className="font-jakarta text-[11px] uppercase tracking-widest text-white/35 block mb-1">Company</span>
-                <span className="font-jakarta text-[13px] text-white/70">{(project.projectInfo as Record<string, string>)["Project / Company"]}</span>
+                <span className="font-jakarta text-[11px] uppercase tracking-widest text-muted-foreground/60 dark:text-white/35 block mb-1">Company</span>
+                <span className="font-jakarta text-[13px] text-foreground/90 dark:text-white/70">{(project.projectInfo as Record<string, string>)["Project / Company"]}</span>
               </div>
             )}
           </div>
-
         </div>
       </section>
 
