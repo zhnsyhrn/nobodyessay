@@ -71,7 +71,7 @@ const Studio = () => {
     });
   }, [api]);
 
-  return <div className="min-h-screen flex flex-col bg-background">
+  return <div className="min-h-screen flex flex-col bg-background dark:bg-[#0a0a0a]">
       <Helmet>
         <title>Portfolio | UI/UX & Branding Design Projects by Zahin Syahiran</title>
         <meta name="description" content="Explore my latest UI/UX design, app design, and branding projects. See how I solve complex business problems through intuitive design." />
@@ -93,7 +93,7 @@ const Studio = () => {
         </div>
 
         {/* Projects Grid + Filter Bar Section */}
-        <section className="pb-8 sm:pb-12 px-4 sm:px-6 lg:px-12 xl:px-16">
+        <section className="pb-8 sm:pb-12 px-4 sm:px-6 lg:px-12 xl:px-16 bg-background dark:bg-[#0a0a0a]">
           <div className="w-full">
 
           {/* ZHA-Style 4-Dropdown Filters Bar */}
@@ -142,6 +142,7 @@ const Studio = () => {
                         priority={index < 3}
                         preload={index < 5}
                         showBlobBackground={isFirstBento}
+                        badgeText={isFirstBento ? "LATEST PROJECT" : undefined}
                         className="h-full"
                         imageContainerClassName={
                           isFirstBento 

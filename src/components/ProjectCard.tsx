@@ -13,6 +13,7 @@ interface ProjectCardProps {
   className?: string;
   imageContainerClassName?: string;
   showBlobBackground?: boolean;
+  badgeText?: string;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -23,10 +24,19 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   className = "",
   imageContainerClassName = "",
   showBlobBackground = false,
+  badgeText,
 }) => {
   const CardContent = () => (
     <div className="rounded-[10px] overflow-hidden bg-white dark:bg-white/[0.03] border border-transparent dark:border-white/10 hover:shadow-sm dark:hover:bg-white/[0.06] transition-all duration-300 h-full flex flex-col">
-      <div className={`overflow-hidden bg-muted ${imageContainerClassName || "aspect-video"}`}>
+      <div className={`overflow-hidden bg-muted relative ${imageContainerClassName || "aspect-video"}`}>
+        {badgeText && (
+          <div className="absolute top-3.5 left-3.5 z-20 pointer-events-none">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full font-mono text-[10px] uppercase tracking-widest bg-black/65 dark:bg-black/75 backdrop-blur-md text-white border border-white/20 shadow-md">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
+              {badgeText}
+            </span>
+          </div>
+        )}
         <LazyImage 
           src={project.image} 
           alt={project.title} 
