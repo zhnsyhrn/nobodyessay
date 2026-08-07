@@ -817,19 +817,28 @@ const ProjectDetail = () => {
           </div> : slug === 'verdant-solar-my' ?
       // Special layout for Verdant Solar - only the grid in full-width section
       <VerdantSolarGridContent /> : slug === 'flaaah' ?
-      // Flaaah branding layout: GIFs at top in original size/ratio, then hero snapshots row + full grid of mockups
+      // Flaaah branding layout: First GIF -> 2 mockups (aa.png & ss.png) -> Second GIF -> Photo grid
       <div className="space-y-4">
-        {/* GIFs section - rendered at original size/ratio */}
-        <div className="space-y-4 mb-2">
-          {/* First GIF - Original size */}
-          <div className="w-full overflow-hidden rounded-[10px] bg-muted">
-            <img src="/Flaaah/Flaaah GIFS.gif" alt="Flaaah animated branding" className="w-full h-auto block" loading="lazy" />
+        {/* First GIF - Original size */}
+        <div className="w-full overflow-hidden rounded-[10px] bg-muted">
+          <img src="/Flaaah/Flaaah GIFS.gif" alt="Flaaah animated branding" className="w-full h-auto block" loading="lazy" />
+        </div>
+
+        {/* 2 Coffee & Carrier Mockups - Placed right after first GIF */}
+        <div className="grid grid-cols-2 gap-4">
+          <div className="aspect-square overflow-hidden rounded-[10px] bg-muted">
+            <img src="/Flaaah/aa.png" alt="Flaaah coffee espresso pouring" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
           </div>
-          {/* Second GIF */}
-          <div className="w-full overflow-hidden rounded-[10px] bg-muted">
-            <img src="/Flaaah/Untitled design (1).gif" alt="Flaaah logo animation" className="w-full h-auto block" loading="lazy" />
+          <div className="aspect-square overflow-hidden rounded-[10px] bg-muted">
+            <img src="/Flaaah/ss.png" alt="Flaaah coffee cup carrier" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
           </div>
         </div>
+
+        {/* Second GIF */}
+        <div className="w-full overflow-hidden rounded-[10px] bg-muted">
+          <img src="/Flaaah/Untitled design (1).gif" alt="Flaaah logo animation" className="w-full h-auto block" loading="lazy" />
+        </div>
+
         {/* Real photo snapshots - 2 images per row grid layout */}
         <div className="grid grid-cols-2 gap-4">
           {flaaahHeroImages.map((img, i) => (
@@ -838,16 +847,6 @@ const ProjectDetail = () => {
             </div>
           ))}
         </div>
-        {/* Brand mockups grid - 2 images per row */}
-        {flaaahImages.length > 0 && (
-          <div className="grid grid-cols-2 gap-4">
-            {flaaahImages.map((img, i) => (
-              <div key={i} className="aspect-square overflow-hidden rounded-[10px] bg-muted">
-                <img src={img} alt={`Flaaah branding ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
-              </div>
-            ))}
-          </div>
-        )}
       </div> :
       // Regular gallery for other projects
       <div className="grid grid-cols-1 gap-2 sm:gap-6">
