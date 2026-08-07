@@ -830,10 +830,10 @@ const ProjectDetail = () => {
             <img src="/Flaaah/Untitled design (1).gif" alt="Flaaah logo animation" className="w-full h-auto block" loading="lazy" />
           </div>
         </div>
-        {/* Real photo snapshots - horizontal scroll row */}
-        <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-none">
+        {/* Real photo snapshots - Grid Layout */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
           {flaaahHeroImages.map((img, i) => (
-            <div key={i} className="flex-none w-40 sm:w-52 aspect-[3/4] overflow-hidden rounded-xl bg-muted">
+            <div key={i} className="aspect-[3/4] overflow-hidden rounded-xl bg-muted">
               <img src={img} alt={`Flaaah photo ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
             </div>
           ))}
