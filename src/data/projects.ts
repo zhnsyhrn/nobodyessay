@@ -18,7 +18,7 @@ export const projects: Project[] = [
     slug: "flaaah",
     description: "Brand Creative Direction & Strategy",
     image: "/byzahin_flaaah.png",
-    hasDetails: false,
+    hasDetails: true,
     type: "Branding",
     expertise: "Branding",
     company: "Flaaah",

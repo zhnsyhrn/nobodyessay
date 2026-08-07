@@ -96,6 +96,31 @@ const verdantSolarImages = ["/lovable-uploads/1f6d4e2e-7b54-4f9c-ae30-fb04593a5d
 // Verdant Solar grid images (for two-column layout)
 const verdantSolarGridImages = ["/lovable-uploads/75b4d467-d07b-4a22-8523-6a9a556c5e2a.png", "/lovable-uploads/13a8a4c7-9cd9-478e-a490-d3a7722f360a.png", "/lovable-uploads/fc9707ef-ea3a-4b10-8e9d-c8d31441015b.png", "/lovable-uploads/bc558340-fdd3-4e28-964d-459e2f34bd20.png", "/lovable-uploads/bfa83407-2aa7-4d54-9719-7c2ae449a499.png", "/lovable-uploads/5686ffae-e247-45ab-add8-45cbc20b7546.png", "/lovable-uploads/8747297b-76ba-4837-a7d9-b5f45b56dcdf.png", "/lovable-uploads/6d87d690-731a-40f4-a0c9-220a616c8954.png"];
 
+// Flaaah project images
+const flaaahImages = [
+  "/Flaaah/flaaah-outlet-2.png",
+  "/Flaaah/flaaah-outlet-signange.png",
+  "/Flaaah/cup-sleeve-matcha-front.png",
+  "/Flaaah/iced-cup-matcha.png",
+  "/Flaaah/croissant-pastry-holder.png",
+  "/Flaaah/pastry-box-mockup.png",
+  "/Flaaah/pastry-takeout-box-isometric-cream.png",
+  "/Flaaah/aa.png",
+  "/Flaaah/ss.png",
+  "/Flaaah/Chef_dusting_croissants_in_kitchen_202607081205.jpeg",
+  "/Flaaah/Hands_pulling_croissant_apart_202607081152.jpeg",
+];
+
+const flaaahHeroImages = [
+  "/Flaaah/photo_6318765292313580318_w (1).jpg",
+  "/Flaaah/photo_6318765292313580319_y (1).jpg",
+  "/Flaaah/photo_6318765292313580320_y.jpg",
+  "/Flaaah/photo_6318765292313580332_y.jpg",
+  "/Flaaah/photo_6318765292313580337_x.jpg",
+  "/Flaaah/photo_6318765292313580342_x.jpg",
+  "/Flaaah/photo_6318765292313580343_x.jpg",
+];
+
 // Verdant Solar Image Slider Component (for title section)
 const VerdantSolarImageSlider = () => {
   const [api, setApi] = useState<CarouselApi>();
@@ -353,6 +378,20 @@ const projectsData = {
       "Value Added": "Complete user journey design from parking discovery to payment completion",
       "Credits": "Design exploration project"
     }
+  },
+  "flaaah": {
+    title: "Flaaah",
+    websiteUrl: "https://www.flaaah.com/",
+    overview: "Leading the brand creative direction for Flaaah — a croissant and specialty coffee concept. This project isn't just about making things look nice. It's a strategic brand move to match their identity to the next stage of growth.",
+    projectInfo: {
+      "Project / Company": "Flaaah, Malaysia",
+      "Type": "Brand Creative Direction, Brand Strategy",
+      "Role / Project Ownership": "Creative Director",
+      "Contribution": "Creative direction, brand identity, visual language, packaging, signage, art direction",
+      "Project Lead / Product Manager(s)": "Zahin Syahiran",
+      "Value Added": "Aligned the brand's visual identity with business growth strategy",
+      "Credits": "Flaaah team"
+    }
   }
 };
 // Available projects with their Studio page info
@@ -398,6 +437,12 @@ const availableProjects = [
     slug: "moneyx-moneyxbiz-referral-program",
     description: "Insurance marketplace platform",
     image: "/lovable-uploads/3203ca77-96ca-4347-9e77-4a9c89891bfb.png"
+  },
+  {
+    title: "Flaaah",
+    slug: "flaaah",
+    description: "Brand Creative Direction & Strategy",
+    image: "/byzahin_flaaah.png"
   }
 ];
 
@@ -431,6 +476,7 @@ const ProjectDetail = () => {
     if (slug === 'great-eastern-takaful-malaysia') return greatEasternTakafulImages[0];
     if (slug === 'verdant-solar-my') return verdantSolarImages[0];
     if (slug === 'aqa-group-of-companies') return "/lovable-uploads/685158de-18a9-4c06-8b43-5214ae7a89a9.png";
+    if (slug === 'flaaah') return flaaahImages[0];
     return undefined;
   };
 
@@ -779,7 +825,35 @@ const ProjectDetail = () => {
             <KnockKnockBrandingGridContent />
           </div> : slug === 'verdant-solar-my' ?
       // Special layout for Verdant Solar - only the grid in full-width section
-      <VerdantSolarGridContent /> :
+      <VerdantSolarGridContent /> : slug === 'flaaah' ?
+      // Flaaah branding layout: hero snapshots row + full grid of mockups
+      <div className="space-y-4">
+        {/* Real photo snapshots - horizontal scroll row */}
+        <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-none">
+          {flaaahHeroImages.map((img, i) => (
+            <div key={i} className="flex-none w-40 sm:w-52 aspect-[3/4] overflow-hidden rounded-xl bg-muted">
+              <img src={img} alt={`Flaaah photo ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+          ))}
+        </div>
+        {/* Brand mockups grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {flaaahImages.map((img, i) => (
+            <div key={i} className="aspect-square overflow-hidden rounded-[10px] bg-muted">
+              <img src={img} alt={`Flaaah branding ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+          ))}
+        </div>
+        {/* GIFs row */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
+          <div className="aspect-square overflow-hidden rounded-[10px] bg-muted">
+            <img src="/Flaaah/Flaaah GIFS.gif" alt="Flaaah animated branding" className="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div className="aspect-square overflow-hidden rounded-[10px] bg-muted">
+            <img src="/Flaaah/Untitled design (1).gif" alt="Flaaah logo animation" className="w-full h-full object-cover" loading="lazy" />
+          </div>
+        </div>
+      </div> :
       // Regular gallery for other projects
       <div className="grid grid-cols-1 gap-2 sm:gap-6">
             {(slug === 'moneyx-savings-goals-manual-entry' ? moneyxImages : 
@@ -788,6 +862,7 @@ const ProjectDetail = () => {
                slug === 'spark-parking-app' ? sparkImages :
                slug === 'moneyx-moneyxbiz-referral-program' ? referralProgramImages :
                slug === 'great-eastern-takaful-malaysia' ? greatEasternTakafulImages :
+               slug === 'flaaah' ? flaaahImages :
                slug === 'aqa-group-of-companies' ? [
                  "/lovable-uploads/685158de-18a9-4c06-8b43-5214ae7a89a9.png",
                  "/lovable-uploads/e9ff0741-ec96-470e-b68e-3443cd5dddd1.png", 
