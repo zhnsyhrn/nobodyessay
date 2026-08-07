@@ -824,8 +824,8 @@ const ProjectDetail = () => {
           <img src="/Flaaah/Flaaah GIFS.gif" alt="Flaaah animated branding" className="w-full h-auto block" loading="lazy" />
         </div>
 
-        {/* 2 Coffee & Carrier Mockups - Placed right after first GIF */}
-        <div className="grid grid-cols-2 gap-4">
+        {/* 2 Coffee & Carrier Mockups - Stacked on mobile, 2 per row on sm+ */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="aspect-square overflow-hidden rounded-[10px] bg-muted">
             <img src="/Flaaah/aa.png" alt="Flaaah coffee espresso pouring" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
           </div>
@@ -839,8 +839,8 @@ const ProjectDetail = () => {
           <img src="/Flaaah/Untitled design (1).gif" alt="Flaaah logo animation" className="w-full h-auto block" loading="lazy" />
         </div>
 
-        {/* Real photo snapshots - 2 images per row grid layout */}
-        <div className="grid grid-cols-2 gap-4">
+        {/* Real photo snapshots - Stacked on mobile, 2 per row on sm+ */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {flaaahHeroImages.map((img, i) => (
             <div key={i} className="aspect-[3/4] overflow-hidden rounded-xl bg-muted">
               <img src={img} alt={`Flaaah photo ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
