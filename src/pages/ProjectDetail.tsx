@@ -103,7 +103,6 @@ const flaaahImages = [
   "/Flaaah/pastry-takeout-box-isometric-cream.png",
   "/Flaaah/aa.png",
   "/Flaaah/ss.png",
-  "/Flaaah/Chef_dusting_croissants_in_kitchen_202607081205.jpeg",
 ];
 
 const flaaahHeroImages = [
