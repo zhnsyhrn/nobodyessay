@@ -830,22 +830,24 @@ const ProjectDetail = () => {
             <img src="/Flaaah/Untitled design (1).gif" alt="Flaaah logo animation" className="w-full h-auto block" loading="lazy" />
           </div>
         </div>
-        {/* Real photo snapshots - Grid Layout */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        {/* Real photo snapshots - 2 images per row grid layout */}
+        <div className="grid grid-cols-2 gap-4">
           {flaaahHeroImages.map((img, i) => (
             <div key={i} className="aspect-[3/4] overflow-hidden rounded-xl bg-muted">
               <img src={img} alt={`Flaaah photo ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
             </div>
           ))}
         </div>
-        {/* Brand mockups grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {flaaahImages.map((img, i) => (
-            <div key={i} className="aspect-square overflow-hidden rounded-[10px] bg-muted">
-              <img src={img} alt={`Flaaah branding ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
-            </div>
-          ))}
-        </div>
+        {/* Brand mockups grid - 2 images per row */}
+        {flaaahImages.length > 0 && (
+          <div className="grid grid-cols-2 gap-4">
+            {flaaahImages.map((img, i) => (
+              <div key={i} className="aspect-square overflow-hidden rounded-[10px] bg-muted">
+                <img src={img} alt={`Flaaah branding ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+              </div>
+            ))}
+          </div>
+        )}
       </div> :
       // Regular gallery for other projects
       <div className="grid grid-cols-1 gap-2 sm:gap-6">
