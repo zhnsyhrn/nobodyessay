@@ -826,8 +826,17 @@ const ProjectDetail = () => {
           </div> : slug === 'verdant-solar-my' ?
       // Special layout for Verdant Solar - only the grid in full-width section
       <VerdantSolarGridContent /> : slug === 'flaaah' ?
-      // Flaaah branding layout: hero snapshots row + full grid of mockups
+      // Flaaah branding layout: GIFs row at top, then hero snapshots row + full grid of mockups
       <div className="space-y-4">
+        {/* GIFs row - at top */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-2">
+          <div className="aspect-square overflow-hidden rounded-[10px] bg-muted">
+            <img src="/Flaaah/Flaaah GIFS.gif" alt="Flaaah animated branding" className="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div className="aspect-square overflow-hidden rounded-[10px] bg-muted">
+            <img src="/Flaaah/Untitled design (1).gif" alt="Flaaah logo animation" className="w-full h-full object-cover" loading="lazy" />
+          </div>
+        </div>
         {/* Real photo snapshots - horizontal scroll row */}
         <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-none">
           {flaaahHeroImages.map((img, i) => (
@@ -843,15 +852,6 @@ const ProjectDetail = () => {
               <img src={img} alt={`Flaaah branding ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
             </div>
           ))}
-        </div>
-        {/* GIFs row */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
-          <div className="aspect-square overflow-hidden rounded-[10px] bg-muted">
-            <img src="/Flaaah/Flaaah GIFS.gif" alt="Flaaah animated branding" className="w-full h-full object-cover" loading="lazy" />
-          </div>
-          <div className="aspect-square overflow-hidden rounded-[10px] bg-muted">
-            <img src="/Flaaah/Untitled design (1).gif" alt="Flaaah logo animation" className="w-full h-full object-cover" loading="lazy" />
-          </div>
         </div>
       </div> :
       // Regular gallery for other projects
