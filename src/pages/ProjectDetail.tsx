@@ -817,15 +817,17 @@ const ProjectDetail = () => {
           </div> : slug === 'verdant-solar-my' ?
       // Special layout for Verdant Solar - only the grid in full-width section
       <VerdantSolarGridContent /> : slug === 'flaaah' ?
-      // Flaaah branding layout: GIFs row at top, then hero snapshots row + full grid of mockups
+      // Flaaah branding layout: GIFs at top in original size/ratio, then hero snapshots row + full grid of mockups
       <div className="space-y-4">
-        {/* GIFs row - at top */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-2">
-          <div className="aspect-square overflow-hidden rounded-[10px] bg-muted">
-            <img src="/Flaaah/Flaaah GIFS.gif" alt="Flaaah animated branding" className="w-full h-full object-cover" loading="lazy" />
+        {/* GIFs section - rendered at original size/ratio */}
+        <div className="space-y-4 mb-2">
+          {/* First GIF - Original size */}
+          <div className="w-full overflow-hidden rounded-[10px] bg-muted">
+            <img src="/Flaaah/Flaaah GIFS.gif" alt="Flaaah animated branding" className="w-full h-auto block" loading="lazy" />
           </div>
-          <div className="aspect-square overflow-hidden rounded-[10px] bg-muted">
-            <img src="/Flaaah/Untitled design (1).gif" alt="Flaaah logo animation" className="w-full h-full object-cover" loading="lazy" />
+          {/* Second GIF */}
+          <div className="w-full overflow-hidden rounded-[10px] bg-muted">
+            <img src="/Flaaah/Untitled design (1).gif" alt="Flaaah logo animation" className="w-full h-auto block" loading="lazy" />
           </div>
         </div>
         {/* Real photo snapshots - horizontal scroll row */}
