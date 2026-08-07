@@ -14,6 +14,19 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Flaaah",
+    slug: "flaaah",
+    description: "Brand Creative Direction & Strategy",
+    image: "/byzahin_flaaah.png",
+    hasDetails: false,
+    type: "Branding",
+    expertise: "Branding",
+    company: "Flaaah",
+    status: "Upcoming",
+    country: "Malaysia",
+    date: "2026"
+  },
+  {
     title: "Rearchitecting the Customer Experience for Great Eastern Takaful Website",
     slug: "great-eastern-takaful-malaysia",
     description: "UX Audit, Design-led Initiative",
