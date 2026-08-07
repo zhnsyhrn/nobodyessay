@@ -104,7 +104,6 @@ const flaaahImages = [
   "/Flaaah/aa.png",
   "/Flaaah/ss.png",
   "/Flaaah/Chef_dusting_croissants_in_kitchen_202607081205.jpeg",
-  "/Flaaah/Hands_pulling_croissant_apart_202607081152.jpeg",
 ];
 
 const flaaahHeroImages = [
