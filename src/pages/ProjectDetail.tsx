@@ -98,8 +98,6 @@ const verdantSolarGridImages = ["/lovable-uploads/75b4d467-d07b-4a22-8523-6a9a55
 
 // Flaaah project images
 const flaaahImages = [
-  "/Flaaah/flaaah-outlet-2.png",
-  "/Flaaah/flaaah-outlet-signange.png",
   "/Flaaah/pastry-takeout-box-isometric-cream.png",
   "/Flaaah/aa.png",
   "/Flaaah/ss.png",
