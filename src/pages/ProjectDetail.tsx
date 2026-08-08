@@ -106,10 +106,25 @@ const flaaahHeroImages = [
   "/Flaaah/photo_6318765292313580318_w (1).jpg",
   "/Flaaah/photo_6318765292313580319_y (1).jpg",
   "/Flaaah/photo_6318765292313580320_y.jpg",
+  "/Flaaah/photo_6318765292313580321_y.jpg",
   "/Flaaah/photo_6318765292313580332_y.jpg",
   "/Flaaah/photo_6318765292313580337_x.jpg",
   "/Flaaah/photo_6318765292313580342_x.jpg",
   "/Flaaah/photo_6318765292313580343_x.jpg",
+  "/Flaaah/photo_6318765292313580344_y.jpg",
+];
+
+const flaaahIgImages = [
+  "/Flaaah/1.png",
+  "/Flaaah/2.png",
+  "/Flaaah/3.png",
+  "/Flaaah/4.png",
+  "/Flaaah/5.png",
+  "/Flaaah/6.png",
+  "/Flaaah/7.png",
+  "/Flaaah/8.png",
+  "/Flaaah/9.png",
+  "/Flaaah/10.png",
 ];
 
 // Verdant Solar Image Slider Component (for title section)
@@ -844,6 +859,15 @@ const ProjectDetail = () => {
           {flaaahHeroImages.map((img, i) => (
             <div key={i} className="aspect-[3/4] overflow-hidden rounded-xl bg-muted">
               <img src={img} alt={`Flaaah photo ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+          ))}
+        </div>
+
+        {/* IG Brand Post Mockups - Stacked on mobile, 2 per row on sm+ */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {flaaahIgImages.map((img, i) => (
+            <div key={i} className="aspect-square overflow-hidden rounded-[10px] bg-muted">
+              <img src={img} alt={`Flaaah brand graphic ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
             </div>
           ))}
         </div>
